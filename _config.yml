@@ -2,7 +2,7 @@
 title: "MIR Lab"
 email: your-email@domain.com
 description: "Multimodal Laboratory, Yonsei University"
-baseurl: "MIRLAB_home" # the subpath of your site, e.g. /blog/
+baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "https://mir.yonsei.ac.kr" # the base hostname & protocol for your site
 favicon: /images/favicon.png
 
