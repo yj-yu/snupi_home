@@ -1,0 +1,57 @@
+---
+layout: default
+title: Teachings
+section_id: teachings
+count_year_max: 2023
+count_year_min: 2023
+---
+
+<div class='full parallax' style='padding-top: 50px;'>
+  <div class='row'>
+    <div class='twelve columns'>
+      {% include section-header.html title="Teaching" color="#464646" tagline=" " class="big" %}
+    </div>
+  </div>
+  <div class='spacing'></div>
+</div>
+<div class='full no-padding'>
+    {% for y in (page.count_year_min..page.count_year_max) reversed %}
+    <div class='row'>
+      <div class='medium-12 columns'>
+        <h2>{{y}}</h2>
+      </div>
+    </div>
+      {% for teaching in site.teachings reversed %}
+        
+        {% if teaching.year == y %}
+        
+        <div class='row'>
+
+            <div class='small-8 medium-10 columns'>
+              <div class='mod modIconText'>
+                <h3 style="margin-bottom: 0.3rem;">
+                    {{teaching.code}},
+                    {{teaching.name}}
+                    (for {{teaching.student}} students)
+                </h3>
+
+                <p style="margin-bottom: 0.3rem;">
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class='spacing'></div>
+        {% endif %}
+      {% endfor %}
+    <div class='spacing'></div>
+    {% endfor %}
+  </div>
+<div class='four spacing'></div>
+
+<!--
+{% for social in member.social %}
+  {% if social.title == "home" %}
+    {% assign homeurl = social.url %}
+  {% endif %}
+{% endfor %}
+-->

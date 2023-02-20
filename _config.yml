@@ -1,0 +1,43 @@
+# Site settings
+title: "MIR Lab"
+email: your-email@domain.com
+description: "Multimodal Laboratory, Yonsei University"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://vision.snu.ac.kr" # the base hostname & protocol for your site
+favicon: /images/favicon.png
+
+include: ['_people', '_projects', '_teachings', '_gallery']
+collections:
+  people:
+    output: false
+  publications:
+    output: false
+  teachings:
+    output: false
+  gallery:
+    output: false
+# Lab Info.
+# Postal address (add as many lines as necessary)
+address:
+  - line: Vision and Learning Lab. Department of Computer Science and Engineering Seoul National University
+  - line: 1 Gwanak-ro, Gwanak-gu Seoul 08826 Republic of Korea
+  - line: Room 319, 302 Building
+  - line: "TEL: +82-02-880-7289"
+
+github_username:  SNUVL
+
+# Build settings
+markdown: kramdown
+
+# Gems
+gems: [jekyll-paginate]
+
+# Jekyll pagination
+paginate: 8
+paginate_path: "news/page:num"
+
+defaults: 
+  - scope:
+      path: "people/dongjookim.html"
+    values:
+      sitemap: false

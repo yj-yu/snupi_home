@@ -1,0 +1,32 @@
+- name: Home
+  path:
+  section_id: home
+- name: People
+  path: people.html
+  section_id: people
+- name: Publications
+  path: publications.html
+  section_id: publications
+- name: Teaching
+  path: teaching.html
+  section_id: teachings
+- name: Gallery
+  path: gallery.html
+  section_id: gallery
+# - name: Services
+#   path: services.html
+#   section_id: services
+# - name: Portfolio
+#   path: portfolio.html
+#   section_id: portfolio
+#   children:
+#     - name: Portfolio
+#       path: portfolio.html
+#     - name: Portfolio item
+#       path: portfolio-item.html
+# - name: Contact
+#   path: contact
+#   section_id: contact
+# - name: Blog
+#   path: blog/
+#   section_id: blog

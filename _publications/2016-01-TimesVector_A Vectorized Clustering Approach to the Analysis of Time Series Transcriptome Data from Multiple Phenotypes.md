@@ -1,0 +1,24 @@
+---
+layout: publications
+section-type: publications
+name: "TimesVector_A Vectorized Clustering Approach to the Analysis of Time Series Transcriptome Data from Multiple Phenotypes"
+
+year: 2016
+author:
+  - name: "Inuk Jung"
+  - name: "Kyuri Jo"
+  - name: "Hyejin Kang"
+  - name: "Hongryul Ahn"
+  - name: "Youngjae Yu"
+  - name: "Sun Kim"
+
+
+
+img: /images/papers/TimesVector.png
+external:
+  - title: PDF
+    url: https://watermark.silverchair.com/bioinformatics_33_23_3827.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAvYwggLyBgkqhkiG9w0BBwagggLjMIIC3wIBADCCAtgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMuaVhC6YkJnNT1WQcAgEQgIICqdiYEs9v9A2DaGARMw6m_MGsMrVOKvxq42Q6P1gO3jwQVeUZPuOqdH6QZMANvuoiXNyLFmbyY4Y7S9ATsaE7w7XCuHDKmxEq6IQYyXUawABIJvTVCGS1_NoM-MNMCWhbQeuXIPUBI53ndhi08MfL1xD5_ZT19R-Z9QwZ4le76xpmtbmI0cUi2DiR0ZluaLh_CO9X6MX57eaPTZgFPJpd7gicbihZWDPmjgb2ch8VFGw2DHwlrV844YoGbIgAgkypSNb_57vWOLr0EUseyMSWVCKFgg6y60PLHtzz5zKpweN-nHsjpUKaA7OjRY14gvAZoIsHkrjvdYmiLXwF32BACxBTJB-zgWHKq5FdqqpGK6pM7a2HA1dFwDCZ0gUojUDqKnitK2cgEzZKi_qytWjrIQw4jEFZaqXnPSJ9U95vqMzVTUaBYQXfAGceVfIbpbYTaQyGg1xcFzgr58Gc5sdieRKGJdHBMtmgstT-v-rG83KGFPeBpyIjyGzDVHAHDSsKV1prAv1pwvxDS57ItrZrEspG8I3IUb1u93siafeFCJmNgtHSyfqSk8_fY5bDA_5Wu5bljcSrnXlEkjGt5_9SRjvqSrVRewBCBwX5bKq74c74RHLFihDhZEZLErbvL1sZrzBvZDEs-p0XSTxxgNl1cz70xaNp7iniErWFC9bqa3SC6OGpLkQYnx2Pkra0iuYQHwRePdYsiyqZNTDZNtH_V6y7FZ3j1kp1YV4OFxG0cME1D_vIQfYlJZd8gqODmVQ7l_DuVksHjfI8z1z9PlMssT16EKuKrRQ9f8aSlb6-zggmNEtmHl6am8R1GjkioDaY52Pb2QMEHXDLIOKR9K-38eVO4GXs2J32iT32P13NRKaz2fKPIyM-ckArsds14Uj29fzodZA38L6SjA
+  
+---
+
+

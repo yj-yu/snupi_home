@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </script>
+  <title>Improving Occlusion and Hard Negative Handling for Single-Stage Pedestrian Detectors</title>
+  <link rel="stylesheet" type="text/css" href="../style/style.css" media="screen">
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async>
+  </script>
+</head>
+<body>
+  <!--<div class="center">-->
+  <!--This page uses a template from the <a href="http://hi.cs.waseda.ac.jp/~iizuka/projects/completion/">project page</a> of Satoshi Iizuka et al, <i>"Globally and Locally Consistent Image Completion"</i>.-->
+  <!--</div>-->
+  <div class="content">
+    <h1>Improving Occlusion and Hard Negative Handling<br>for Single-Stage Pedestrian Detectors</h1>
+    <p id="authors">
+      <a href="http://vision.snu.ac.kr/junhyug">Junhyug Noh</a> &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://vision.snu.ac.kr/people/soochanlee.html">Soochan Lee</a> &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://shuuki4.github.io/myself/">Beomsu Kim</a> &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://vision.snu.ac.kr/gunhee/">Gunhee Kim</a> &nbsp;&nbsp;&nbsp;&nbsp;
+      <br><br>
+      <a href="http://vision.snu.ac.kr/">Vision and Learning Lab</a>
+      <br>
+      <a href="http://cse.snu.ac.kr/en/">Computer Science and Engineering</a>
+      <br>
+      <a href="http://en.snu.ac.kr/">Seoul National University</a>, Seoul, Korea
+      <br><br>
+      <a href="http://cvpr2018.thecvf.com/">CVPR 2018</a>
+    </p>
+    <img src="../img/overview.png" width="600" border="0" class="center">
+    <br><br>
+    <div class="center">
+      <a class="button" href="../data/noh_2018.pdf">Paper (4.7MB)</a>
+      <a class="button" href="../data/noh_2018_supp.pdf">Supplementary (1.8MB)</a>
+      <a class="button" href="../data/noh_2018_poster.pdf">Poster (6.8MB)</a>
+      <a class="button" href="../data/noh_2018.bib">BibTex</a><br><br>
+    </div>
+  </div>
+  <div class="content">
+    <h2>Abstract</h2>
+    <p>We propose methods of addressing two critical issues of pedestrian detection:
+    (i) occlusion of target objects as false negative failure,
+    and (ii) confusion with hard negative examples like vertical structures as false positive
+    failure. Our solutions to these two problems are general and flexible enough to be
+    applicable to any single-stage detection models.
+    Specifically, our two solutions are as follows. For better occlusion handling,
+    we update the output tensors of single-stage models so that they include the prediction
+    of part confidence scores, from which we compute a final occlusion-aware detection score.
+    For reducing confusion with hard negative examples, we introduce average grid classifiers
+    as post-refinement classifiers, trainable in an end-to-end fashion with little memory and
+    time overhead.</p>
+    <!--<a class="button" href="../data/noh_2018.pdf">Paper (4.7MB)</a>-->
+    <!--<a class="button" href="../data/noh_2018_supp.pdf">Supplemental (1.8MB)</a>-->
+    <!--<a class="button" href="../data/noh_2018_poster.pdf">Poster (15.6MB)</a>-->
+    <!--<a class="button" href="../data/noh_2018.bib">BibTex</a><br><br>-->
+  </div>
+  <div class="content">
+    <h2>Background and Rationale</h2><br>
+    <h3>Two Critical Issues of Pedestrian Detection</h3>
+    <p>Among many error sources of pedestrian detection, we are interested in two critical
+    issues: (i) occlusion of target objects (as false negative failure cases), and
+    (ii) confusion with hard negative examples (as false positive failures).
+    First, occlusion is one of key practical difficulties in pedestrian detection,
+    because real world scenes like street are often crowded with many people and various objects;
+    thus observation with occlusion is much more common than that without occlusion.
+    Second, in the scenes for pedestrian detection, there are many hard negative examples
+    like vertical structures, trees, and traffic lights, because of which,
+    models detect a lot of false positives, and they amount to a large portion of overall errors.
+    </p>
+    <table class='extra' border="0" cellpadding="1">
+      <col span="2">
+      <tr valign="top">
+        <td style="padding:0 15px 0 15px;">
+          <a><img src="../img/occlusion_examples.png" height="160" border="0" vspace="0">
+          <br>(a) Occlusion examples</a>
+        </td>
+        <td style="padding:0 15px 0 15px;">
+          <a><img src="../img/hard_negative_examples.png" height="160" border="0" vspace="0">
+          <br>(b) Hard negative examples</a>
+        </td>
+      </tr>
+    </table>
+
+    <h3>Existing Single Stage Object Detector</h3>
+    <p> The single-stage models formulates the two stages of region proposal and classification
+    into a single-stage regression problem to detect objects extremely fast. Starting from YOLO,
+    more advanced models are emerging, including SqueezeDet+, YOLOv2, SSD, and DSSD.
+    They all use a convolutional predictor to generate the final output tensor which contains
+    values about box coordinates and class probabilities.
+    </p>
+    <table class='extra' border="0" cellpadding="1">
+      <col span="2">
+      <tr valign="top">
+        <td>
+          <a><img src="../img/output_tensor_1.png" width="360" border="0" vspace="0">
+          <br>(a) Structure of the output tensor</a>
+        </td>
+        <td>
+          <a><img src="../img/output_tensor_2.png" width="360" border="0" vspace="0">
+          <br>(b) Output formats of four methods per anchor</a>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+  <div class="content">
+    <h2>The Causes of the Problems and Our Solutions</h2>
+    <p>Our solution is to add auxiliary modules and corresponding tasks.
+    Therefore, our solution can be integrated with virtually any kind of single-stage detectors
+    and is trainable end-to-end. Also, the auxiliary modules require little overhead
+    in terms of memory and computation time.
+    </p>
+    <h3>1) Occlusion Handling Method</h3>
+    <!--<p>Our key idea for occlusion handling is to divide the prediction confidence by parts-->
+    <!--rather than expressing it as a single value that existing single-stage networks do.-->
+    <!--While normal single-stage networks are likely to assign a low confidence to an-->
+    <!--occluded person due to the hidden parts, our model can leverage the confidences of-->
+    <!--visible parts of a body to correct the final detection confidence of a person.-->
+    <p>The first task is specifically aimed at occlusion handling. We found that detectors
+    tend to assign low confidence for occluded pedestrians. To handle this issue, our
+    additional module predicts multiple confidence scores for each part instead of a
+    single confidence score. We divide the bounding box area to \(6 \times 3\) grid and
+    train our module to predict whether each region is a visible area of a pedestrian.
+    But this objective requires visible area annotations, in addition to the ordinary
+    bounding boxes. Luckily, Caltech Pedestrian Dataset and CityPersons Dataset contain
+    exactly that kind of annotations, so we used those datasets.
+    </p><br>
+    <figure>
+      <img src="../img/occlusion_process.png" width="540" border="0" class="center"><br>
+      <figcaption>The overview of our occlusion handling method</figcaption>
+    </figure>
+    <p> We further process this part confidence map with some part score generator to build
+    <i>part score</i> and use the geometric mean of the initial confidence and part score as
+    the final confidence. We tested two types of part score: <i>max part score</i> and
+    <i>soft part score</i>.
+    The first one simply max pool the part confidences. The intuition is that if some part
+    seems to be a pedestrian, it is an occluded pedestrian and therefore, the score should
+    be high. But max pooling might be too simple to utilize the patterns of occlusion.
+    So, the second method is to pass the grid through a multi-layer perceptron with a single
+    hidden layer and let it capture the plausible occlusion pattern. After we get this
+    part score, we use it to refine the initial confidence.
+    </p><br>
+    <figure>
+      <img src="../img/soft_part_generator.png" width="540" border="0" class="center"><br>
+      <figcaption>The generator module for the soft part score</figcaption>
+    </figure>
+    <h3>2) Hard Negative Handling Method</h3>
+    <p>The second task is about handling hard negatives. We add multiple classification
+    layers to the lower layers with different resolutions. In each grid cell, the
+    classifiers predict whether the grid area belongs to a pedestrian or not.
+    In some sense, it is like segmentation task with chunky labels. The results of the
+    grid classifications are called grid confidence map. To use these grid confidence maps
+    to refine detection results, we first upsample each confidence map to the pixel level
+    and average the confidence maps. Then, for each bounding box \(k\), the confidences in
+    the bounding box area are averaged to build confidence score \(s_k\).
+    Finally, we adjust the initial confidence by taking the geometric mean of initial
+    confidence and confidence score \(s_k\).
+    </p>
+    <figure>
+      <img src="../img/grid_pixel_process.png" width="540" border="0" class="center"><br>
+      <figcaption>The overview of our hard negative handling method</figcaption>
+    </figure>
+  </div>
+
+  <div class="content">
+    <h3>Acknowledgements</h3>
+    <p>The authors would like to thank <a href="https://yunseokjang.github.io/" rel="nofollow">Yunseok Jang</a> and
+    <a href="http://juyongkim.com/" rel="nofollow">Juyong Kim</a> for helpful discussions,
+    as well as Sukyung Jeong for assisting to draw the figures in the paper.
+    This work was supported by Samsung Research Funding Center of Samsung Electronics under Project Number SRFC-TC1603-01.
+    Gunhee Kim is the corresponding author.</p>
+  </div>
+
+  <div class="content">
+    <h3>Publication</h3>
+    Junhyug Noh, Soochan Lee, Beomsu Kim and Gunhee Kim.<br>
+    <i>"Improving Occlusion and Hard Negative Handling for Single-Stage Pedestrian Detectors."</i><br>
+    The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018.<br>
+    <code>@inproceedings{Noh:2018:PartGridNet,<br>
+      &nbsp;&nbsp;author = {Noh, Junhyug and Lee, Soochan and Kim, Beomsu and Kim, Gunhee},<br>
+      &nbsp;&nbsp;title = {{Improving Occlusion and Hard Negative Handling for Single-Stage Pedestrian Detectors}},<br>
+      &nbsp;&nbsp;booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},<br>
+      &nbsp;&nbsp;month = {June},<br>
+      &nbsp;&nbsp;year = {2018}<br>
+    }</code>
+  </div>
+  <div class="center">
+  This page uses a template from the <a href="http://hi.cs.waseda.ac.jp/~iizuka/projects/completion/">project page</a> of Satoshi Iizuka et al, <i>"Globally and Locally Consistent Image Completion"</i>.
+  </div>
+</body>
+</html>

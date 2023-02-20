@@ -1,0 +1,97 @@
+---
+layout: default
+title: People
+section_id: people
+---
+
+<div class='full parallax' style='padding-top: 50px;'>
+  <div class='row'>
+    <div class='twelve columns'>
+      {% include section-header.html title="PEOPLE" color="#464646" tagline=" " class="big" %}
+    </div>
+  </div>
+  <div class='spacing'></div>
+</div>
+
+<div class="full no-padding">
+  <div class="row">
+    <div class="medium-9 columns">
+      <h1 style="display: inline-block;">{{page.fullname}}</h1>
+      <h3 style="display: inline-block;"> - {{page.position}}</h3>
+      {% if page.cv-filename %}
+        <a href='/cv/{{page.cv-filename}}'>
+          <i class='fa fa-file'></i>
+        </a>
+    {% endif %}
+      {% if page.introduction %}
+        <h2>Introduction</h2>
+        <p>
+        {% for e in page.introduction %}
+          {{e}}<br/>
+        {% endfor %}
+        </p>
+      {% endif %}
+
+
+      <h2>Contact</h2>
+      <p>{{page.email}}</p>
+      {% if page.social %}
+        <div class='mod modTeamMember'>
+          <ul class='socials'>
+            {% for social in page.social %}
+              <li>
+                <a href='{{social.url}}'>
+                  <i class='fa fa-{{social.title}}'></i>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="spacing"></div>
+      {% endif %}
+
+      {% if page.education %}
+        <h2>Education</h2>
+        <p>
+        {% for e in page.education %}
+          {{e}}<br/>
+        {% endfor %}
+        </p>
+      {% endif %}
+    </div>
+
+    <div class="medium-3 columns">
+      <img class="avatar" alt="" src="/images/people/{{page.img-filename}}" />
+      <div class="spacing"></div>
+    </div>
+
+    <div class="medium-12 columns">
+      <h2>Publication</h2>
+      <ul>
+      {% for paper in site.publications reversed %}
+        {% assign temp = false %}
+        {% for a in paper.author %}
+          {% if a.name == page.fullname %}
+            {% assign temp = true %}
+          {% endif %}
+        {% endfor %}
+        {% if temp %}
+          <li>
+            {% if paper.author %}
+              {% for member in paper.author %}
+                {% if member.name == page.fullname %}<b>{% endif %}{{member.name}}{% if member.name == page.fullname %}</b>{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex != 2 %}, {% endif %}{% if forloop.rindex == 2 %} and {% endif %}
+              {% endfor %}
+            {% endif %}
+            {{paper.name}}, {{paper.book}}. <!--, {{paper.year}}.-->
+          </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+
+
+  </div>
+</div>
+
+
+<div class='four spacing'></div>

@@ -1,0 +1,213 @@
+---
+layout: default
+title: People
+section_id: people
+permalink: people.html
+active_positions:
+  - Professor
+  - Ph.D. Student
+  - Master Student
+  - Undergraduate Intern
+---
+
+<div class='full parallax' style='padding-top: 50px;'>
+  <div class='row'>
+    <div class='twelve columns'>
+      {% include section-header.html title="PEOPLE" color="#464646" tagline=" " class="big" %}
+    </div>
+  </div>
+  <div class='spacing'></div>
+</div>
+
+<div class='full no-padding'>
+  <!-- Members except alumni -->
+  {% for p in page.active_positions %}
+  <div class='row'>
+    {% if p == "Professor"  %}
+      <div class='medium-12 columns'>
+        <h2>{{p}}</h2>
+      </div>
+    {% endif %}
+    {% if p == "Postdoctoral Researcher" or p == "Master Student" or p == "Ph.D. Student" or p == "Research Associate" or p == "Undergraduate Intern" %}
+      <div class='medium-12 columns'>
+        <h2>{{p}}s</h2>
+      </div>
+    {% endif %}
+
+    {% for member in site.people %}
+      {% if member.position == p %}
+      <div class='small-4 medium-2 large-2 columns'>
+        <div class='mod modTeamMember'>
+          <div class='member'>
+            {% assign homeurl = member.permalink %}
+
+
+            {% for social in member.social %}
+              {% if social.title == "home" %}
+                {% assign homeurl = social.url %}
+              {% endif %}
+            {% endfor %}
+
+
+            <a href="{{homeurl}}">
+              <img class="avatar" alt="" src="/images/people/{{member.img-filename}}" />
+            </a>
+            {% comment %}
+            <div class='overlay'>
+              <div class='intro'>
+                <h3>{{member.fullname}}</h3>
+                <p>{{member.position}}</p>
+                <ul class='socials'>
+                  {% for social in member.social %}
+                    <li>
+                      <a href='{{social.url}}'>
+                        <i class='fa fa-{{social.title}}'></i>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            {% endcomment %}
+          </div>
+          <a href="{{homeurl}}">
+            <p class='centered-text' style="color: #222; height: 45px; font-size: 1.1rem;">{{member.fullname}}</p>
+          </a>
+          {% comment %}<div class='spacing'></div>{% endcomment %}
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+    <div></div>
+  </div>
+  <div class='spacing'></div>
+  {% endfor %}
+
+
+
+
+  <!-- Members On Leave -->
+  <div class='row'>
+    <div class='medium-12 columns'>
+      <h2>On Leave</h2>
+        <!-- Ph.D. alumni -->
+        {% for member in site.people reversed %}
+          {% if member.position == "On Leave"  %}
+            <p style="margin-bottom: 0px;">
+            {% assign temp = false %}
+            {% for social in member.social %}
+              {% if social.title == "home" %}
+                {% assign temp = true %}
+                {% assign homeurl = social.url %}
+              {% endif %}
+            {% endfor %}
+            {% if temp %}
+              <a href="{{homeurl}}">
+            {% else %}
+              <a href="{{member.permalink}}">
+            {% endif %}
+              {{member.fullname}}
+            </a>
+            {{member.past}}
+              {% if member.current %}
+                - {{member.current}}
+              {% endif %}
+          {% endif %}
+        {% endfor %}
+      <br/><br/>
+    </div>
+    <div></div>
+  </div>
+  <!-- Members alumni -->
+  <div class='row'>
+    <div class='medium-12 columns'>
+      <h2>Alumni</h2>
+      <h3>Graduate Students</h3>
+        <!-- Ph.D. alumni -->
+        {% for member in site.people reversed %}
+          {% if member.position == "Alumni" and member.pastposition == "Ph.D. Student" %}
+            <p style="margin-bottom: 0px;">
+            {% assign temp = false %}
+            {% for social in member.social %}
+              {% if social.title == "home" %}
+                {% assign temp = true %}
+                {% assign homeurl = social.url %}
+              {% endif %}
+            {% endfor %}
+            {% if temp %}
+              <a href="{{homeurl}}">
+            {% else %}
+              <a href="{{member.permalink}}">
+            {% endif %}
+              {{member.fullname}}
+            </a>
+            {{member.past}}
+              {% if member.current %}
+                - {{member.current}}
+              {% endif %}
+          {% endif %}
+        {% endfor %}
+        <!-- Master alumni -->
+        {% for member in site.people reversed %}
+          {% if member.position == "Alumni" and member.pastposition == "Master Student" %}
+            <p style="margin-bottom: 0px;">
+            {% assign temp = false %}
+            {% for social in member.social %}
+              {% if social.title == "home" %}
+                {% assign temp = true %}
+                {% assign homeurl = social.url %}
+              {% endif %}
+            {% endfor %}
+            {% if temp %}
+              <a href="{{homeurl}}">
+            {% else %}
+              <a href="{{member.permalink}}">
+            {% endif %}
+              {{member.fullname}}
+            </a>
+            {{member.past}}
+              {% if member.current %}
+                - {{member.current}}
+              {% endif %}
+          {% endif %}
+        {% endfor %}
+      <br/><br/>
+      <h3>Undergraduate Students</h3>
+        {% for member in site.people reversed %}
+          {% if member.position == "Alumni" and member.pastposition == "Undergraduate Student" %}
+            <p style="margin-bottom: 0px;">
+            {% assign temp = false %}
+            {% for social in member.social %}
+              {% if social.title == "home" %}
+                {% assign temp = true %}
+                {% assign homeurl = social.url %}
+              {% endif %}
+            {% endfor %}
+            {% if temp %}
+              <a href="{{homeurl}}">
+            {% else %}
+              <a href="{{member.permalink}}">
+            {% endif %}
+              {{member.fullname}}
+            </a>
+            {{member.past}}
+              {% if member.current %}
+                - {{member.current}}
+              {% endif %}
+          {% endif %}
+        {% endfor %}
+    </div>
+    <div></div>
+  </div>
+
+</div>
+
+<div class='four spacing'></div>
+
+<!--
+{% for social in member.social %}
+  {% if social.title == "home" %}
+    {% assign homeurl = social.url %}
+  {% endif %}
+{% endfor %}
+-->
