@@ -37,7 +37,7 @@ count_year_min: 2016
               {% assign img_link = "" %}
               {% if proj_link.size > 0 %} {% assign img_link = proj_link %} {% elsif pdf_link.size > 0 %} {% assign img_link = pdf_link %} {% endif %}
               {% if img_link.size > 0 %}<a href="{{img_link}}">{% endif %}
-                <img src="{{paper.img}}" style="max-width: 100%;"/>
+                <img src=".{{paper.img}}" style="max-width: 100%;"/>
               {% if img_link.size > 0 %}</a>{% endif %}
             {% endif %}
           </div>
