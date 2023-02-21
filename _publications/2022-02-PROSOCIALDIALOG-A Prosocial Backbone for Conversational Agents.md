@@ -3,9 +3,10 @@ layout: publications
 section-type: publications
 name: "PROSOCIALDIALOG:A Prosocial Backbone for Conversational Agents"
 year: 2022
+conference: EMNLP 2022
 author:
-  - name: "Hyunwoo Kim"
-  - name: "Youngjae Yu"
+  - name: "Youngjae Yu *"
+  - name: "Hyunwoo Kim *"
   - name: "Liwei Jiang"
   - name: "Ximing Lu"
   - name: "Daniel Khashabi"
