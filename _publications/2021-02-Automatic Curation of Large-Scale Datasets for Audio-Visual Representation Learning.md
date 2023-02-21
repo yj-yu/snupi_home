@@ -3,6 +3,7 @@ layout: publications
 section-type: publications
 name: "Automatic Curation of Large-Scale Datasets for Audio-Visual Representation Learning"
 year: 2021
+conference: ICCV2021
 author:
   - name: "Sangho Lee"
   - name: "Jiwan Chung"

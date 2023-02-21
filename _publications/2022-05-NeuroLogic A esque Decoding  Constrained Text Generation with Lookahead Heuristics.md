@@ -3,6 +3,7 @@ layout: publications
 section-type: publications
 name: "NeuroLogic A* esque Decoding: Constrained Text Generation with Lookahead Heuristics"
 year: 2022
+conference: NAACL2022
 author:
   - name: "Ximing Lu"
   - name: "Sean Welleck"

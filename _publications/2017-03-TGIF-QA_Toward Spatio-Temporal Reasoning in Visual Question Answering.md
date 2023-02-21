@@ -3,6 +3,7 @@ layout: publications
 section-type: publications
 name: "TGIF-QA: Toward Spatio-Temporal Reasoning in Visual Question Answering"
 year: 2017
+conference: CVPR2017 (Spotlight)
 author:
   - name: "Yunseok Jang"
   - name: "Yale Song"

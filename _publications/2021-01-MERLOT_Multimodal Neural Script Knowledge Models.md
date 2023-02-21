@@ -3,6 +3,7 @@ layout: publications
 section-type: publications
 name: "MERLOT: Multimodal Neural Script Knowledge Models"
 year: 2021
+conference: NeurIPS2021
 author:
   - name: "Rowan Zellers"
   - name: "Ximing Lu"

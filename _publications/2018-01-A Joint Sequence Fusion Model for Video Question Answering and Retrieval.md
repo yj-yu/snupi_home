@@ -3,6 +3,7 @@ layout: publications
 section-type: publications
 name: "A Joint Sequence Fusion Model for Video Question Answering and Retrieval"
 year: 2018
+conference: ECCV2018
 author:
   - name: "Youngjae Yu"
   - name: "Jongseok Kim"

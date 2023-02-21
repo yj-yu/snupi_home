@@ -3,6 +3,7 @@ layout: publications
 section-type: publications
 name: "Supervising Neural Attention Models for Video Captioning by Human Gaze Data"
 year: 2017
+conference: CVPR2017
 author:
   - name: "Youngjae Yu"
   - name: "Jongwook Choi"

@@ -4,6 +4,7 @@ section-type: publications
 name: "TimesVector_A Vectorized Clustering Approach to the Analysis of Time Series Transcriptome Data from Multiple Phenotypes"
 
 year: 2016
+conference: GIW2016
 author:
   - name: "Inuk Jung"
   - name: "Kyuri Jo"

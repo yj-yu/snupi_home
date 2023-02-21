@@ -3,6 +3,7 @@ layout: publications
 section-type: publications
 name: "Pano-AVQA: Grounded Audio-Visual Question Answering on 360° Videos"
 year: 2021
+conference: ICCV2021
 author:
   - name: "Heeseung Yun"
   - name: "Youngjae Yu"

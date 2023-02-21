@@ -3,6 +3,7 @@ layout: publications
 section-type: publications
 name: "A Deep Ranking Model for Spatio-Temporal Highlight Detection from a 360° Video"
 year: 2018
+conference: AAAI2018
 author:
   - name: "Youngjae Yu"
   - name: "Sangho Lee"

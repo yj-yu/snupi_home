@@ -3,6 +3,7 @@ layout: publications
 section-type: publications
 name: "A Memory Network Approach for Story-based Temporal Summarization of 360° Videos"
 year: 2018
+conference: CVPR2018
 author:
   - name: "Sangho Lee"
   - name: "Jinyoung Sung"

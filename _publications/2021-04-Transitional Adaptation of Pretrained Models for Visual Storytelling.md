@@ -3,6 +3,7 @@ layout: publications
 section-type: publications
 name: "Transitional Adaptation of Pretrained Models for Visual Storytelling"
 year: 2021
+conference: CVPR2021
 author:
   - name: "Youngjae Yu"
   - name: "Jiwan Chung"

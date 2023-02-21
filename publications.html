@@ -17,11 +17,16 @@ count_year_min: 2016
 
 <div class='full no-padding'>
   {% for y in (page.count_year_min..page.count_year_max) reversed %}
-  <div class='row'>
-    <div class='medium-12 columns'>
-      <h2>{{y}}</h2>
-    </div>
-  </div>
+    {% for paper in site.publications reversed %}
+      {% if paper.year == y %}
+        <div class='row'>
+          <div class='medium-12 columns'>
+            <h2>{{y}}</h2>
+          </div>
+        </div>
+        {% break %}
+      {% endif %}
+    {% endfor %}
     {% for paper in site.publications reversed %}
       {% if paper.year == y %}
       <div class='row'>
@@ -30,7 +35,9 @@ count_year_min: 2016
             {% if paper.img %}
               {% assign proj_link = "" %}
               {% assign pdf_link = "" %}
+              
               {% for item in paper.external %}
+                
                 {% if item.title == "Project" %} {% assign proj_link = item.url %} {% endif %}
                 {% if item.title == "PDF" %} {% assign pdf_link = item.url %} {% endif %}
               {% endfor %}
@@ -44,6 +51,8 @@ count_year_min: 2016
         </div>
         <div class='small-8 medium-10 columns'>
           <div class='mod modIconText'>
+            
+            {% if paper.conference %}<p class='bubble'>{{paper.conference}}</p>{% endif %}
             <h3 style="margin-bottom: 0.3rem;">{{paper.name}}</h3>
             <p style="margin-bottom: 0.3rem;">
               {% if paper.author %}
@@ -55,7 +64,7 @@ count_year_min: 2016
                 {% endif%}
                 <br/>
               {% endif %}
-              {{paper.book}}
+              {{paper.book}}<div class='mod modIconText'></div>
               {% for item in paper.external %}
                 <a href="{{item.url}}">{{item.title}}</a>
               {% endfor %}
