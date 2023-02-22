@@ -8,4 +8,11 @@ permalink: people/junhyeok.html
 email: hotpoem@gmail.com
 
 social:
+
+fields:
+    - name : image captioning
+    - name : reinforce learning
+    - name : video segmentation
+    - name : reasoning
+
 ---
