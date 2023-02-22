@@ -4241,3 +4241,54 @@ img {
   text-transform: none;
   color:white;
 }
+
+
+/*https://kuaicv.com/student-2/?theme=pub/antoniau0026hide_banners=true*/
+
+.wp-block-coblocks-author {
+  align-items: flex-start;
+  background: hsla(240,5%,57%,.1);
+  display: flex;
+  padding: 30px 25px;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.wp-block-coblocks-author figure.wp-block-coblocks-author__avatar, .wp-block-coblocks-author__avatar {
+  border-radius: 100%;
+  flex: 0 0 auto;
+  height: 200px;
+  margin: 0 25px 0 0;
+  position: relative;
+  width: 200px;
+
+}
+
+.wp-block-coblocks-author__content {
+  flex: 1 1 auto;
+}
+
+.wp-block-coblocks-author__content>.wp-block-coblocks-author__name {
+  display: block;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.wp-block-coblocks-author__content>.wp-block-coblocks-author__biography:last-of-type {
+  margin-bottom: 0;
+}
+
+.wp-block-coblocks-author__avatar-img {
+  border-radius: 100%;
+  display: inline-block;
+  height: 100%!important;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  vertical-align: middle;
+  width: 100%;
+}

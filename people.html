@@ -38,52 +38,37 @@ active_positions:
       
       {% if member.position == p %}
       
-      <div class='small-4 medium-2 large-2 columns'>
-        <div class='mod modTeamMember'>
-          <div class='member'>
-            {% assign homeurl = member.permalink %}
 
 
-            {% for social in member.social %}
-              {% if social.title == "home" %}
-                {% assign homeurl = social.url %}
-              {% endif %}
-            {% endfor %}
+      <div class="small-10 medium-5 large-5 columns wp-block-coblocks-author" style="font-size:15px">
+        {% assign homeurl = member.permalink %}
 
 
-            <a href="{{homeurl}}">
-              <img class="avatar" alt="" src="./images/people/{{member.img-filename}}" />
-            </a>
-            {% comment %}
-            <div class='overlay'>
-              <div class='intro'>
-                <h3>{{member.fullname}}</h3>
-                <p>{{member.position}}</p>
-                <ul class='socials'>
-                  {% for social in member.social %}
-                    <li>
-                      <a href='{{social.url}}'>
-                        <i class='fa fa-{{social.title}}'></i>
-                      </a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-            {% endcomment %}
-            
-          </div>
-          
+        {% for social in member.social %}
+          {% if social.title == "home" %}
+            {% assign homeurl = social.url %}
+          {% endif %}
+        {% endfor %}
+
+        <figure class="wp-block-coblocks-author__avatar">
           <a href="{{homeurl}}">
-            <p class='centered-text' style="color: #222; height: 45px; font-size: 1.1rem;">{{member.fullname}}</p>
-
+            <img  alt="<strong><strong>Gyeongrok Oh</strong></strong>" class="wp-block-coblocks-author__avatar-img" src="./images/people/{{member.img-filename}}" width="150" height="150">
           </a>
+        </figure>
+        <div class="wp-block-coblocks-author__content">
+        <span class="wp-block-coblocks-author__name">
+        <strong><strong>{{member.fullname}}</strong></strong></span><br>
+        <p class="wp-block-coblocks-author__biography">Interested in..<br><br>
           {% for field in member.fields %}
-              * {{field.name}} <br>
+          <span style="font-size:0.9em; font-weight: 1000; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: rgba(245, 224, 204);">&nbsp;&nbsp;&nbsp;{{field.name}}&nbsp;&nbsp;&nbsp;</span >
           {% endfor %}
-          {% comment %}<div class='spacing'></div>{% endcomment %}
+
+          
+        </p>
         </div>
       </div>
+
+
       {% endif %}
     {% endfor %}
     <div></div>
