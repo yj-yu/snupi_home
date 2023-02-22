@@ -3,6 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Youngjae Yu"
 img-filename: yu_youngjae.png
+emoji: 😃
 position: "Professor"
 permalink: people/gunheekim.html
 email: gunhee@snu.ac.kr

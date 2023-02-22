@@ -8,6 +8,16 @@ active_positions:
   - Ph.D. Student
   - Master Student
   - Undergraduate Intern
+
+
+color_list:
+  - rgba(245, 224, 204)
+  - rgba(255, 255, 179)
+  - rgba(179, 255, 179)
+  - rgba(179, 255, 255)
+  - rgba(179, 179, 255)
+  - rgba(255, 179, 255)
+  - rgba(0, 144, 202)
 ---
 
 <div class='full parallax' style='padding-top: 50px;'>
@@ -57,12 +67,17 @@ active_positions:
         </figure>
         <div class="wp-block-coblocks-author__content">
         <span class="wp-block-coblocks-author__name">
-        <strong><strong>{{member.fullname}}</strong></strong></span><br>
+          <a style="color:black;" href="{{homeurl}}">
+            <strong><strong>{{member.emoji}}&nbsp; {{member.fullname}}</strong></strong>
+          </a>
+          </span>
+          <br>
+
         <p class="wp-block-coblocks-author__biography">Interested in..<br><br>
           {% for field in member.fields %}
-          <span style="font-size:0.9em; font-weight: 1000; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: rgba(245, 224, 204);">&nbsp;&nbsp;&nbsp;{{field.name}}&nbsp;&nbsp;&nbsp;</span >
+          {% assign color = page.color_list[forloop.index0] %}
+          <span style="font-size:0.9em; font-weight: 1000; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}};">&nbsp;&nbsp;&nbsp;{{field.name}}&nbsp;&nbsp;&nbsp;</span >
           {% endfor %}
-
           
         </p>
         </div>
