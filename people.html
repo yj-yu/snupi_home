@@ -71,10 +71,16 @@ active_positions:
               </div>
             </div>
             {% endcomment %}
+            
           </div>
+          
           <a href="{{homeurl}}">
             <p class='centered-text' style="color: #222; height: 45px; font-size: 1.1rem;">{{member.fullname}}</p>
+
           </a>
+          {% for field in member.fields %}
+              * {{field.name}} <br>
+          {% endfor %}
           {% comment %}<div class='spacing'></div>{% endcomment %}
         </div>
       </div>
