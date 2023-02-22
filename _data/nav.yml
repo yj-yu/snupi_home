@@ -1,7 +1,7 @@
 - name: Home
   path:
   section_id: home
-- name: People
+- name: Member
   path: people.html
   section_id: people
 - name: Publications
