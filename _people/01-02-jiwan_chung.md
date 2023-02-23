@@ -3,11 +3,11 @@ layout: people-detail
 section-type: people
 fullname: "Jiwan Chung"
 img-filename: chung_jiwan.png
-emoji: 🔥
+emoji: 🐾
 
 position: "Ph.D. Student"
-permalink: people/jiwanchung.html
-email: hotpoem@gmail.com
+permalink: https://jiwanchung.github.io/
+email: jiwan.chung.research@gmail.com
 publications:
     - name: Youngjae Yu, Jiwan Chung, Heeseung Yun, Jack Hessel, Jae Sung Park, Ximing Lu, Prithviraj Ammanabrolu, Rowan Zellers, Ronan Le Bras, Gunhee Kim and Yejin Choi, Multimodal Knowledge Alignment with Reinforcement Learning, .
     - name: Youngjae Yu, Jiwan Chung, Jongseok Kim, Heeseung Yun and Gunhee Kim, Transitional Adaptation of Pretrained Models for Visual Storytelling, .
@@ -15,8 +15,8 @@ publications:
     - name: Youngjae Yu, Jongseok Kim, Heeseung Yun, Jiwan Chung and Gunhee Kim, Character Grounding and Re-Identification in Story of Videos and Text Descriptions, .
 
 fields:
-    - name : image captioning
-    - name : reinforce learning
+    - name : multimodal learning
+    - name : LM analysis
 
 
 social:

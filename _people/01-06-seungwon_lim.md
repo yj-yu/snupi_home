@@ -5,7 +5,13 @@ fullname: "Seungwon Lim"
 img-filename: lim_seungwon.png
 position: "Master Student"
 permalink: people/seungwon.html
-email: hotpoem@gmail.com
+email: dlatmddnjs20@gmail.com
+
+fields:
+    - name : Text-to-Image generation
+    - name : Image Captioning
+    - name : text generation
+
 
 social:
 ---
