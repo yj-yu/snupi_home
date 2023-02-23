@@ -4104,7 +4104,19 @@ img {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(255, 255, 255);
 }
+.index_welcome {
+  font-weight: bolder !important;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 600px){
+  /* 모바일에 최적화된 예외 CSS 코드*/
+  .index_welcome{
 
+    font-size:1.8rem;
+  
+  }
+}
 .leads {
   
   font-size:20px;
@@ -4303,6 +4315,7 @@ img {
   position: absolute;
   top: 0;
   vertical-align: middle;
+  margin: auto;  
   width: 100%;
 }
 @media (max-width: 768px) {
@@ -4385,4 +4398,21 @@ svg:not(:root) {
 
 .slide__overlay path {
   opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+/* iframe resize*/
+
+@media only screen and (max-width: 640px) {
+  iframe {
+    height: 300px;
+  }
 }
