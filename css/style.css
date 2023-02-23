@@ -4267,15 +4267,17 @@ img {
   width: 200px;
 
 }
-@media (max-width: 580px) {
+
+@media screen and (max-width: 600px){
   /* 모바일에 최적화된 예외 CSS 코드*/
   .wp-block-coblocks-author__avatar{
-    height: 100px;
-    width: 100px;
 
+    height:100px!important;
+
+    width: 100px!important;
+  
   }
 }
-
 
 .wp-block-coblocks-author__content {
   flex: 1 1 auto;
