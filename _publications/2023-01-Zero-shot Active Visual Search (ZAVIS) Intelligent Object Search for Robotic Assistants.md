@@ -12,7 +12,7 @@ author:
   - name: "Sungjoon Choi"
 
 
-img: /images/papers/zavis.jpeg
+img: /images/papers/zavis.jpg
 external:
   - title: PDF
     url: image.png
