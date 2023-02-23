@@ -482,6 +482,31 @@ slides:
       {% include section-header.html title="Our Latest Work" %}
     </div>
   </div>
+
+
+
+
+
+
+
+
+  <iframe width="1500" height="600" src="test.html" title="내용"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
   <div class='row'>
     <div class='large-12 columns'>
       <div class='mod modBoxedSlider'>
@@ -490,7 +515,9 @@ slides:
           <div class='slide'>
             <img alt="{{slide.title.text}}" src="{{slide.bg}}"/>
             <div class='caption' style="left: 0px;">
-
+              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                        </svg>
               {% for button in slide.buttons.items %}
                 <a class='button' href="{{button.link_to}}" style="text-transform: none; margin-bottom: 0;">{{button.text}}</a>
               {% endfor %}
