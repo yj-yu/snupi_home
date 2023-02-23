@@ -10,7 +10,5 @@ email: hotpoem@gmail.com
 social:
 
 fields:
-    - name : summarization
-    - name : machine translation
 
 ---

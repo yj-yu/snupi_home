@@ -4267,6 +4267,15 @@ img {
   width: 200px;
 
 }
+@media (max-width: 580px) {
+  /* 모바일에 최적화된 예외 CSS 코드*/
+  .wp-block-coblocks-author__avatar{
+    height: 100px;
+    width: 100px;
+
+  }
+}
+
 
 .wp-block-coblocks-author__content {
   flex: 1 1 auto;
@@ -4294,13 +4303,12 @@ img {
   vertical-align: middle;
   width: 100%;
 }
-
-.section-title {
-  color: #231f20;
+@media (max-width: 768px) {
+  /* 모바일에 최적화된 예외 CSS 코드*/
+  .wp-block-coblocks-author__avatar-img{
+    height:50%;
+  }
 }
-
-
-
 
 
 

@@ -52,7 +52,23 @@
             user-select: none;
     cursor: all-scroll;
   }
-  
+
+  .bubble_publication_conference
+  {
+  position: relative;
+  font-size:2rem;
+  width: 135px;
+  height: 32px;
+  padding: 0px;
+  text-align: center;
+  color:black;
+  font-weight:800;
+  background: rgb(255, 236, 200);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  }
+
   .slider-control {
     z-index: 2;
     position: absolute;
@@ -96,7 +112,7 @@
     height: 2rem;
     margin: 0 0.5rem;
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 2px solid #4e4e4e;
     cursor: pointer;
   }
   .slider-pagi__elem:before {
@@ -106,7 +122,7 @@
     top: 50%;
     width: 1.2rem;
     height: 1.2rem;
-    background: #fff;
+    background: #4e4e4e;
     border-radius: 50%;
     transition: transform 0.3s;
     transform: translate(-50%, -50%) scale(0);
@@ -155,14 +171,14 @@
   }
   .slide:nth-child(1) .slide__bg {
     left: 0;
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-3.jpg");
+    background-image: url("/images/slides/esper.jpg");
   }
   .slide:nth-child(1) .slide__overlay-path {
-    fill: #e99c7e;
+    fill: rgb(33, 90, 151);
   }
   @media (max-width: 991px) {
     .slide:nth-child(1) .slide__text {
-      background-color: rgba(233, 156, 126, 0.8);
+      background-color: rgb(33, 90, 151);
     }
   }
   .slide:nth-child(2) {
@@ -170,14 +186,14 @@
   }
   .slide:nth-child(2) .slide__bg {
     left: -50%;
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-2.jpg");
+    background-image: url("images/slides/connecting the dots.jpg");
   }
   .slide:nth-child(2) .slide__overlay-path {
-    fill: #e1ccae;
+    fill: rgb(33, 90, 151);
   }
   @media (max-width: 991px) {
     .slide:nth-child(2) .slide__text {
-      background-color: rgba(225, 204, 174, 0.8);
+      background-color:rgb(33, 90, 151);
     }
   }
   .slide:nth-child(3) {
@@ -185,14 +201,14 @@
   }
   .slide:nth-child(3) .slide__bg {
     left: -100%;
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-1.jpg");
+    background-image: url("images/slides/aaai21_dcnet.jpeg");
   }
   .slide:nth-child(3) .slide__overlay-path {
-    fill: #adc5cd;
+    fill: rgb(33, 90, 151);
   }
   @media (max-width: 991px) {
     .slide:nth-child(3) .slide__text {
-      background-color: rgba(173, 197, 205, 0.8);
+      background-color: rgb(33, 90, 151);
     }
   }
   .slide:nth-child(4) {
@@ -200,14 +216,60 @@
   }
   .slide:nth-child(4) .slide__bg {
     left: -150%;
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-4.jpg");
+    background-image: url("images/slides/cvpr21-tapm.png");
   }
   .slide:nth-child(4) .slide__overlay-path {
-    fill: #cbc6c3;
+    fill: rgb(33, 90, 151);
   }
   @media (max-width: 991px) {
     .slide:nth-child(4) .slide__text {
-      background-color: rgba(203, 198, 195, 0.8);
+      background-color:rgb(33, 90, 151);
+    }
+  }
+
+  .slide:nth-child(5) {
+    left: 400%;
+  }
+  .slide:nth-child(5) .slide__bg {
+    left: -200%;
+    background-image: url("images/slides/emnlp22-prodia.png");
+  }
+  .slide:nth-child(5) .slide__overlay-path {
+    fill: rgb(33, 90, 151);
+  }
+  @media (max-width: 991px) {
+    .slide:nth-child(5) .slide__text {
+      background-color:rgb(33, 90, 151);
+    }
+  }
+  .slide:nth-child(6) {
+    left: 500%;
+  }
+  .slide:nth-child(6) .slide__bg {
+    left: -250%;
+    background-image: url("images/slides/iccv21_ACAV100M.jpeg");
+  }
+  .slide:nth-child(6) .slide__overlay-path {
+    fill: rgb(33, 90, 151);
+  }
+  @media (max-width: 991px) {
+    .slide:nth-child(6) .slide__text {
+      background-color:rgb(33, 90, 151);
+    }
+  }
+  .slide:nth-child(7) {
+    left: 600%;
+  }
+  .slide:nth-child(7) .slide__bg {
+    left: -300%;
+    background-image: url("images/slides/iccv21_PanoAVQA.jpeg");
+  }
+  .slide:nth-child(7) .slide__overlay-path {
+    fill: rgb(33, 90, 151);
+  }
+  @media (max-width: 991px) {
+    .slide:nth-child(7) .slide__text {
+      background-color:rgb(33, 90, 151);
     }
   }
   .slide__content {
@@ -240,7 +302,7 @@
     position: absolute;
     width: 25%;
     bottom: 15%;
-    left: 12%;
+    left: 5%;
     color: #fff;
     transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
     will-change: transform, opacity;
@@ -260,20 +322,22 @@
     }
   }
   .slide__text-heading {
-    font-family: "Polar", Helvetica, Arial, sans-serif;
-    font-size: 5rem;
+    text-align: left;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 3rem;
     margin-bottom: 2rem;
   }
   @media (max-width: 991px) {
     .slide__text-heading {
       line-height: 20rem;
-      font-size: 3.5rem;
+      font-size: 2.1rem;
     }
   }
   .slide__text-desc {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.9rem;
+    
   }
   @media (max-width: 991px) {
     .slide__text-desc {
@@ -313,7 +377,6 @@
     transform: rotateX(0);
   }
   </style>
-  <script src="./test.js"></script>
     <script>
     window.console = window.console || function(t) {};
   </script>
@@ -466,11 +529,11 @@
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
               </svg>
               <div class="slide__text">
-                <h2 class="slide__text-heading">Project name 1</h2>
-                <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                <h2 style="display:inline" class="slide__text-heading">Multimodal Knowledge Alignment with Reinforcement Learning</h2>
+                <p class="slide__text-desc">Youngjae Yu*, Jiwan Chung*, Heeseung Yun, Jack Hessel, Jae Sung Park, Ximing Lu, Prithviraj Ammanabrolu, Rowan Zellers, Ronan Le Bras, Gunhee Kim, Yejin Choi (* equal contribution)</p>
                 <a class="slide__text-link">Project link</a>
               </div>
             </div>
@@ -479,12 +542,11 @@
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
               </svg>
               <div class="slide__text">
-                <h2 class="slide__text-heading">Project name 2</h2>
-                <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
-                <a class="slide__text-link">Project link</a>
+                <h2 class="slide__text-heading">Connecting the Dots between Audio and Text without Parallel Data through Visual Knowledge Transfer</h2>
+                <p class="slide__text-desc">Yanpeng Zhao, Jack Hessel, Youngjae Yu, Ximing Lu, Rowan Zellers and Yejin Choi</p>
               </div>
             </div>
           </div>
@@ -492,12 +554,13 @@
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
               </svg>
               <div class="slide__text">
-                <h2 class="slide__text-heading">Project name 3</h2>
-                <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
-                <a class="slide__text-link">Project link</a>
+                <p class="bubble_publication_conference">AAAI2021</p>
+                <h2 class="slide__text-heading">Dual Compositional Learning in Interactive Image Retrieval</h2>
+
+                <p class="slide__text-desc">Jongseok Kim, Youngjae Yu, Hoeseong Kim and Gunhee Kim</p>
               </div>
             </div>
           </div>
@@ -505,12 +568,53 @@
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
               </svg>
               <div class="slide__text">
-                <h2 class="slide__text-heading">Project name 4</h2>
-                <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
-                <a class="slide__text-link">Project link</a>
+                <p class="bubble_publication_conference">CVPR2021</p>
+                <h2 class="slide__text-heading">Transitional Adaptation of Pretrained Models for Visual Storytelling</h2>
+
+                <p class="slide__text-desc">Youngjae Yu*, Jiwan Chung*, Jongseok Kim, Heeseung Yun and Gunhee Kim (* equal contribution)</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide slide-4">
+            <div class="slide__bg"></div>
+            <div class="slide__content">
+              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
+              </svg>
+              <div class="slide__text">
+                <p></p>
+                <p  class="bubble_publication_conference">EMNLP2022</p>
+                <h2 class="slide__text-heading">ProsocialDialog: A Prosocial Backbone for Conversational Agents</h2>
+                <p class="slide__text-desc">Hyunwoo Kim, Youngjae Yu, Liwei Jiang, Ximing Lu, Daniel Khashabi, Gunhee Kim, Yejin Choi and Maarten Sap</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide slide-5">
+            <div class="slide__bg"></div>
+            <div class="slide__content">
+              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
+              </svg>
+              <div class="slide__text">
+                <p class="bubble_publication_conference">ICCV2021</p>
+                <h2 style="display:inline" class="slide__text-heading">ACAV100M: Automatic Curation of Large-Scale Datasets for Audio-Visual Video Representation Learning</h2>
+                <p class="slide__text-desc">Sangho Lee*, Jiwan Chung*, Youngjae Yu, Gunhee Kim, Thomas Breuel (NVIDIA), Gal Chechik (NVIDIA) and Yale Song (Microsoft) (* equal contribution)</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide slide-6">
+            <div class="slide__bg"></div>
+            <div class="slide__content">
+              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
+              </svg>
+              <div class="slide__text">
+                <p class="bubble_publication_conference">ICCV2021</p>
+                <h2 class="slide__text-heading">Pano-AVQA: Grounded Audio-Visual Question Answering on 360° Videos</h2>
+                <p class="slide__text-desc">Heeseung Yun, Youngjae Yu, Wonsuk Yang (Oxford University), Kangil Lee (Hyundai Motors) and Gunhee Kim</p>
               </div>
             </div>
           </div>
