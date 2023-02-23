@@ -171,7 +171,7 @@
   }
   .slide:nth-child(1) .slide__bg {
     left: 0;
-    background-image: url("/images/slides/esper.jpg");
+    background-image: url("/images/slides/zavis.jpg");
   }
   .slide:nth-child(1) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -186,7 +186,7 @@
   }
   .slide:nth-child(2) .slide__bg {
     left: -50%;
-    background-image: url("images/slides/connecting the dots.jpg");
+    background-image: url("images/slides/esper.jpg");
   }
   .slide:nth-child(2) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -201,7 +201,7 @@
   }
   .slide:nth-child(3) .slide__bg {
     left: -100%;
-    background-image: url("images/slides/aaai21_dcnet.jpeg");
+    background-image: url("images/slides/connecting the dots.jpeg");
   }
   .slide:nth-child(3) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -216,7 +216,7 @@
   }
   .slide:nth-child(4) .slide__bg {
     left: -150%;
-    background-image: url("images/slides/cvpr21-tapm.png");
+    background-image: url("images/slides/aaai21_dcnet.png");
   }
   .slide:nth-child(4) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -231,8 +231,8 @@
     left: 400%;
   }
   .slide:nth-child(5) .slide__bg {
-    left: -200%;
-    background-image: url("images/slides/emnlp22-prodia.png");
+    left: -200%;cvpr21-tapm
+    background-image: url("images/slides/cvpr21-tapm.png");
   }
   .slide:nth-child(5) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -247,7 +247,7 @@
   }
   .slide:nth-child(6) .slide__bg {
     left: -250%;
-    background-image: url("images/slides/iccv21_ACAV100M.jpeg");
+    background-image: url("images/slides/emnlp22-prodia.jpeg");
   }
   .slide:nth-child(6) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -262,13 +262,29 @@
   }
   .slide:nth-child(7) .slide__bg {
     left: -300%;
-    background-image: url("images/slides/iccv21_PanoAVQA.jpeg");
+    background-image: url("images/slides/iccv21_ACAV100M.jpeg");
   }
   .slide:nth-child(7) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
   @media (max-width: 991px) {
     .slide:nth-child(7) .slide__text {
+      background-color:rgb(33, 90, 151);
+    }
+  }
+
+  .slide:nth-child(8) {
+    left: 600%;
+  }
+  .slide:nth-child(8) .slide__bg {
+    left: -300%;
+    background-image: url("images/slides/iccv21_PanoAVQA.jpeg");
+  }
+  .slide:nth-child(8) .slide__overlay-path {
+    fill: rgb(33, 90, 151);
+  }
+  @media (max-width: 991px) {
+    .slide:nth-child(8) .slide__text {
       background-color:rgb(33, 90, 151);
     }
   }
@@ -525,7 +541,23 @@
         <div class="slider-control right"></div>
         <ul class="slider-pagi"></ul>
         <div class="slider">
+
+
           <div class="slide slide-0 active">
+            <div class="slide__bg"></div>
+            <div class="slide__content">
+              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
+              </svg>
+              <div class="slide__text">
+                <br>
+                <h2 style="display:inline" class="slide__text-heading">Zero-shot Active Visual Search (ZAVIS): Intelligent Object Search for Robotic Assistants
+                </h2>
+                <p class="slide__text-desc">Jeongeun Park, Taerim Yoon, Jejoon Hong, Youngjae Yu, Matthew Pan, Sungjoon Choi</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide slide-1 active">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -535,11 +567,10 @@
                 <br>
                 <h2 style="display:inline" class="slide__text-heading">Multimodal Knowledge Alignment with Reinforcement Learning</h2>
                 <p class="slide__text-desc">Youngjae Yu*, Jiwan Chung*, Heeseung Yun, Jack Hessel, Jae Sung Park, Ximing Lu, Prithviraj Ammanabrolu, Rowan Zellers, Ronan Le Bras, Gunhee Kim, Yejin Choi (* equal contribution)</p>
-                <a class="slide__text-link">Project link</a>
               </div>
             </div>
           </div>
-          <div class="slide slide-1 ">
+          <div class="slide slide-2 ">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -552,7 +583,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-2">
+          <div class="slide slide-3">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -568,7 +599,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-3">
+          <div class="slide slide-4">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -583,7 +614,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-4">
+          <div class="slide slide-5">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -598,7 +629,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-5">
+          <div class="slide slide-6">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -613,7 +644,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-6">
+          <div class="slide slide-7">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
