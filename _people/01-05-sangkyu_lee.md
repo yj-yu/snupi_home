@@ -12,7 +12,7 @@ social:
 fields:
     - name : Visual Reasoning
 
-    - name : Conditional Generative Models
+    - name : Diffusion model
 
     - name : Video Understanding
 
