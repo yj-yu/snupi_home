@@ -8,7 +8,7 @@ permalink: people/seungwon.html
 email: dlatmddnjs20@gmail.com
 
 fields:
-    - name : Text-to-Image generation
+    - name : Continual Learning
     - name : Image Captioning
     - name : text generation
 
