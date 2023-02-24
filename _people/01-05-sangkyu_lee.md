@@ -10,5 +10,10 @@ email: hotpoem@gmail.com
 social:
 
 fields:
+    - name : Visual Reasoning
+
+    - name : Conditional Generative Models
+
+    - name : Video Understanding
 
 ---
