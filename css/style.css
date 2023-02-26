@@ -4263,7 +4263,7 @@ img {
   align-items: flex-start;
   background: hsla(240,5%,57%,.1);
   display: flex;
-  padding: 30px 25px;
+  padding: 30px 10px;
   position: relative;
   margin-left: 10px;
   margin-right: 10px;
@@ -4274,7 +4274,7 @@ img {
   border-radius: 100%;
   flex: 0 0 auto;
   height: 200px;
-  margin: 0 25px 0 0;
+  margin: 10% 25px 0 0;
   position: relative;
   width: 200px;
 
@@ -4285,7 +4285,6 @@ img {
   .wp-block-coblocks-author__avatar{
 
     height:100px!important;
-
     width: 100px!important;
   
   }
@@ -4297,9 +4296,15 @@ img {
 
 .wp-block-coblocks-author__content>.wp-block-coblocks-author__name {
   display: block;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   margin: 0;
   padding: 0;
+}
+@media screen and (max-width: 600px){
+  /* 모바일에 최적화된 예외 CSS 코드*/
+  .wp-block-coblocks-author__content>.wp-block-coblocks-author__name {
+    font-size:1.2rem;
+  }
 }
 
 .wp-block-coblocks-author__content>.wp-block-coblocks-author__biography:last-of-type {
