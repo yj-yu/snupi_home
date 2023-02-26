@@ -5,8 +5,8 @@ fullname: "Youngjae Yu"
 img-filename: yu_youngjae.png
 emoji: 😃
 position: "Professor"
-permalink: people/gunheekim.html
-email: gunhee@snu.ac.kr
+permalink: people/youngjae.html
+email: yjy@yonsei.ac.kr
 social:
   - title: home
     url: https://yj-yu.github.io/home/
