@@ -6,7 +6,7 @@ img-filename: chung_jiwan.png
 emoji: 🐾
 
 position: "Ph.D. Student"
-permalink: https://jiwanchung.github.io/
+permalink: people/jiwan.html
 email: jiwan.chung.research@gmail.com
 publications:
     - name: Youngjae Yu, Jiwan Chung, Heeseung Yun, Jack Hessel, Jae Sung Park, Ximing Lu, Prithviraj Ammanabrolu, Rowan Zellers, Ronan Le Bras, Gunhee Kim and Yejin Choi, Multimodal Knowledge Alignment with Reinforcement Learning, .

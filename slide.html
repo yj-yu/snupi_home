@@ -121,7 +121,7 @@
       width: 1rem!important;
       height: 1rem!important;
       margin: 0 0.25rem!important;
-      border-radius: 20%!important;
+      border-radius: 50%!important;
       border: 1px solid #4e4e4e!important;  }
   }
   .slider-pagi__elem:before {
@@ -138,8 +138,8 @@
   }
   @media only screen and (max-width: 640px) {
     .slider-pagi__elem:before {
-      left: 25%!important;
-      top: 25%!important;
+      left: 50%!important;
+      top: 50%!important;
       width: 0.6rem!important;
       height: 0.6rem!important;
       background: #4e4e4e!important;
@@ -194,11 +194,7 @@
   .slide:nth-child(1) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
-  @media (max-width: 991px) {
-    .slide:nth-child(1) .slide__text {
-      background-color: rgb(33, 90, 151);
-    }
-  }
+
   .slide:nth-child(2) {
     left: 100%;
   }
@@ -209,11 +205,7 @@
   .slide:nth-child(2) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
-  @media (max-width: 991px) {
-    .slide:nth-child(2) .slide__text {
-      background-color:rgb(33, 90, 151);
-    }
-  }
+
   .slide:nth-child(3) {
     left: 200%;
   }
@@ -224,11 +216,7 @@
   .slide:nth-child(3) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
-  @media (max-width: 991px) {
-    .slide:nth-child(3) .slide__text {
-      background-color: rgb(33, 90, 151);
-    }
-  }
+
   .slide:nth-child(4) {
     left: 300%;
   }
@@ -239,12 +227,6 @@
   .slide:nth-child(4) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
-  @media (max-width: 991px) {
-    .slide:nth-child(4) .slide__text {
-      background-color:rgb(33, 90, 151);
-    }
-  }
-
   .slide:nth-child(5) {
     left: 400%;
   }
@@ -255,11 +237,7 @@
   .slide:nth-child(5) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
-  @media (max-width: 991px) {
-    .slide:nth-child(5) .slide__text {
-      background-color:rgb(33, 90, 151);
-    }
-  }
+
   .slide:nth-child(6) {
     left: 500%;
   }
@@ -270,11 +248,7 @@
   .slide:nth-child(6) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
-  @media (max-width: 991px) {
-    .slide:nth-child(6) .slide__text {
-      background-color:rgb(33, 90, 151);
-    }
-  }
+
   .slide:nth-child(7) {
     left: 600%;
   }
@@ -285,12 +259,6 @@
   .slide:nth-child(7) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
-  @media (max-width: 991px) {
-    .slide:nth-child(7) .slide__text {
-      background-color:rgb(33, 90, 151);
-    }
-  }
-
   .slide:nth-child(8) {
     left: 700%;
   }
@@ -300,11 +268,6 @@
   }
   .slide:nth-child(8) .slide__overlay-path {
     fill: rgb(33, 90, 151);
-  }
-  @media (max-width: 991px) {
-    .slide:nth-child(8) .slide__text {
-      background-color:rgb(33, 90, 151);
-    }
   }
   .slide__content {
     position: absolute;
@@ -324,18 +287,14 @@
     transform: translate3d(-20%, 0, 0);
     opacity: 0;
   }
-  @media (max-width: 991px) {
-    .slide__overlay {
-      display: none;
-    }
-  }
+
   .slide__overlay path {
     opacity: 0.8;
   }
   .slide__text {
     position: absolute;
-    width: 25%;
-    bottom: 15%;
+    width: 300;
+    bottom: 30%;
     left: 5%;
     color: #fff;
     transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
@@ -345,14 +304,15 @@
   }
   @media (max-width: 991px) {
     .slide__text {
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 20rem;
-      text-align: center;
-      transform: translateY(50%);
-      transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
-      padding: 0 1rem;
+      position: absolute;
+      width: 300;
+      bottom: 30%;
+      left: 5%;
+      color: #fff;
+      transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
+      will-change: transform, opacity;
+      transform: translateY(-50%);
+      opacity: 0;
     }
   }
   .slide__text-heading {
@@ -361,12 +321,7 @@
     font-size: 3rem;
     margin-bottom: 2rem;
   }
-  @media (max-width: 991px) {
-    .slide__text-heading {
-      line-height: 3rem;
-      font-size: 2.1rem;
-    }
-  }
+
   .slide__text-desc {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 1.5rem;

@@ -4,7 +4,7 @@ section-type: people
 fullname: "Yejin Son"
 img-filename: son_yejin.jpg
 position: "Undergraduate Intern"
-permalink: https://ozzaney.github.io/
+permalink: people/yejin_son.html
 email: yejinson@yonsei.ac.kr 
 fields:
     - name : text generation

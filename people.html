@@ -4,11 +4,11 @@ title: People
 section_id: people
 permalink: people.html
 active_positions:
-  - Professor
   - Ph.D. Student
   - Master Student
-  - Undergraduate Intern
 
+  - Undergraduate Intern
+  - Professor
 
 color_list:
   - rgba(245, 224, 204)
@@ -73,7 +73,7 @@ color_list:
           </span>
           <br>
 
-        <p class="wp-block-coblocks-author__biography">Interested in..<br><br>
+        <p class="wp-block-coblocks-author__biography">Interested in 👇<br><br>
           {% for field in member.fields %}
           {% assign color = page.color_list[forloop.index0] %}
           <span style="font-size:0.9em; font-weight: 1000; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}};">&nbsp;&nbsp;&nbsp;{{field.name}}&nbsp;&nbsp;&nbsp;</span >
@@ -95,10 +95,10 @@ color_list:
 
 
   <!-- Members On Leave -->
+  <!--
   <div class='row'>
     <div class='medium-12 columns'>
       <h2>On Leave</h2>
-        <!-- Ph.D. alumni -->
         {% for member in site.people reversed %}
           {% if member.position == "On Leave"  %}
             <p style="margin-bottom: 0px;">
@@ -126,6 +126,7 @@ color_list:
     </div>
     <div></div>
   </div>
+  -->
   <!-- Members alumni -->
   <div class='row'>
     <div class='medium-12 columns'>
