@@ -19,6 +19,7 @@ fields:
     - name : LM analysis
 
 
-social:
+  - title: home
+    url: https://jiwanchung.github.io/
 
 ---

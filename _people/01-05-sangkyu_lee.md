@@ -12,8 +12,8 @@ social:
 fields:
     - name : Visual Reasoning
 
-    - name : Diffusion model
+    - name : Text-to-Image Generation
 
-    - name : Video Understanding
+    - name : Commonsense Reasoning
 
 ---
