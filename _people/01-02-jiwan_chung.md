@@ -13,12 +13,10 @@ publications:
     - name: Youngjae Yu, Jiwan Chung, Jongseok Kim, Heeseung Yun and Gunhee Kim, Transitional Adaptation of Pretrained Models for Visual Storytelling, .
     - name: Sangho Lee, Jiwan Chung, Youngjae Yu, Gunhee Kim, Thomas Breuel, Gal Chechik and Yale Song, Automatic Curation of Large-Scale Datasets for Audio-Visual Representation Learning, .
     - name: Youngjae Yu, Jongseok Kim, Heeseung Yun, Jiwan Chung and Gunhee Kim, Character Grounding and Re-Identification in Story of Videos and Text Descriptions, .
-
 fields:
     - name : multimodal learning
     - name : LM analysis
-
-
+social:
   - title: home
     url: https://jiwanchung.github.io/
 
