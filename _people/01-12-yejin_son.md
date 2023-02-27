@@ -9,8 +9,6 @@ permalink: people/yejin_son.html
 email: yejinson@yonsei.ac.kr 
 fields:
     - name : text generation
-
-
   - title: home
     url: https://ozzaney.github.io/
 
