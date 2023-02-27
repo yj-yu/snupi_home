@@ -2,6 +2,7 @@
 layout: publications
 section-type: publications
 name: "Zero-shot Active Visual Search (ZAVIS): Intelligent Object Search for Robotic Assistants"
+conference: ICRA2023
 year: 2023
 author:
   - name: "Jeongeun Park"
