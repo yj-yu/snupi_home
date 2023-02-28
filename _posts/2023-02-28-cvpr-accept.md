@@ -1,6 +1,6 @@
 ---
 layout: news-detail
-title: CVPR accept
+title: Congratulations! Paper Accepted at CVPR 2023
 emoji: 🎉
 date: 2023-02-24
 summary: "유영재 교수님과 정지완 박사님께서 공동으로 작성하신 논문이 CVPR2023에 accept되었습니다."
