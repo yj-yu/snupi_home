@@ -15,39 +15,30 @@ count_year_min: 2023
   <div class='spacing'></div>
 </div>
 <div class='full no-padding'>
-    {% for y in (page.count_year_min..page.count_year_max) reversed %}
-    <div class='row'>
-      <div class='medium-12 columns'>
-        <h2>{{y}}</h2>
+  <div class="child-page-listing">
+
+    
+    <div class="row">
+      <div class="grid-container">
+        {% for photo in site.gallery reversed %}
+        <article id="3685" class="location-listing">
+    
+          <div class="location-title" href="#" >
+            {{photo.description}}           </div>
+    
+          <div class="location-image">
+            <img class="avatar" src="images/gallery/{{photo.img-filename}}" alt="{{photo.description}}">
+    
+          </div>
+    
+        </article>
+        {% endfor %}
+    
       </div>
-    </div>
-      {% for photo in site.gallery reversed %}
-        
-        {% if photo.year == y %}
-        
-        <div class='row'>
-          <div class='small-12 medium-6 columns'>
-            <div class='mod modIconText'>
-              <img class="avatar" alt="" src="images/gallery/{{photo.img-filename}}" style="width: 800px; height: auto;"/>
-            </div>
-          </div>
-
-
-          <div class='small-8 medium-10 columns'>
-            <div class='mod modIconText'>
-              <h1 style="margin-bottom: 0.3rem; text-align: left;">{{photo.title}}</h1>
-              <h3 style="margin-bottom: 0.3rem;">
-                {{photo.description}}
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class='spacing'></div>
-        {% endif %}
-      {% endfor %}
-    <div class='spacing'></div>
-    {% endfor %}
+      <!-- end grid container -->
   </div>
+  </div>
+</div>
 <div class='four spacing'></div>
 
 <!--
