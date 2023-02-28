@@ -10,10 +10,8 @@ emoji: 🤔
 social:
 
 fields:
-    - name : Visual Reasoning
-
+    - name : Commonsence Reasoning
     - name : Text-to-Image Generation
-
-    - name : Commonsense Reasoning
+    - name : Video Understanding
 
 ---
