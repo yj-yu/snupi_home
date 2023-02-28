@@ -185,22 +185,21 @@
     will-change: transform;
   }
   .slide:nth-child(1) {
-    left: 0;
+    left: 0%;
   }
   .slide:nth-child(1) .slide__bg {
-    left: 0;
-    background-image: url("/images/slides/zavis.jpg");
+    left: 0%;
+    background-image: url("images/slides/esper.jpg");
   }
   .slide:nth-child(1) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
-
   .slide:nth-child(2) {
     left: 100%;
   }
   .slide:nth-child(2) .slide__bg {
     left: -50%;
-    background-image: url("images/slides/esper.jpg");
+    background-image: url("/images/slides/zavis.jpg");
   }
   .slide:nth-child(2) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -211,7 +210,7 @@
   }
   .slide:nth-child(3) .slide__bg {
     left: -100%;
-    background-image: url("images/slides/connecting the dots.jpg");
+    background-image: url("images/slides/esper.jpg");
   }
   .slide:nth-child(3) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -222,28 +221,28 @@
   }
   .slide:nth-child(4) .slide__bg {
     left: -150%;
-    background-image: url("images/slides/aaai21_dcnet.jpeg");
+    background-image: url("images/slides/connecting the dots.jpg");
   }
   .slide:nth-child(4) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
+
   .slide:nth-child(5) {
     left: 400%;
   }
   .slide:nth-child(5) .slide__bg {
     left: -200%;
-    background-image: url("images/slides/cvpr21-tapm.png");
+    background-image: url("images/slides/aaai21_dcnet.jpeg");
   }
   .slide:nth-child(5) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
-
   .slide:nth-child(6) {
     left: 500%;
   }
   .slide:nth-child(6) .slide__bg {
     left: -250%;
-    background-image: url("images/slides/emnlp22-prodia.png");
+    background-image: url("images/slides/cvpr21-tapm.png");
   }
   .slide:nth-child(6) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -254,19 +253,30 @@
   }
   .slide:nth-child(7) .slide__bg {
     left: -300%;
-    background-image: url("images/slides/iccv21_ACAV100M.jpeg");
+    background-image: url("images/slides/emnlp22-prodia.png");
   }
   .slide:nth-child(7) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
+
   .slide:nth-child(8) {
     left: 700%;
   }
   .slide:nth-child(8) .slide__bg {
     left: -350%;
-    background-image: url("images/slides/iccv21_PanoAVQA.jpeg");
+    background-image: url("images/slides/iccv21_ACAV100M.jpeg");
   }
   .slide:nth-child(8) .slide__overlay-path {
+    fill: rgb(33, 90, 151);
+  }
+  .slide:nth-child(9) {
+    left: 800%;
+  }
+  .slide:nth-child(9) .slide__bg {
+    left: -400%;
+    background-image: url("images/slides/iccv21_PanoAVQA.jpeg");
+  }
+  .slide:nth-child(9) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
   .slide__content {
@@ -515,8 +525,23 @@
         <ul class="slider-pagi"></ul>
         <div class="slider">
 
-
           <div class="slide slide-0 active">
+            <div class="slide__bg"></div>
+            <div class="slide__content">
+              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
+              </svg>
+              <div class="slide__text">
+                <br>
+                <p class="bubble_publication_conference">CVPR2023</p>
+                <br>
+                <h2 style="display:inline" class="slide__text-heading">Fusing Pre-trained Language Models with Multimodal Prompts through Reinforcement Learning
+                </h2>
+                <p class="slide__text-desc">Youngjae Yu, Jiwan Chung, Heeseung Yun, Jack Hessel, Jae Sung Park, Ximing Lu, Prithviraj Ammanabrolu, Rowan Zellers, Ronan Le Bras, Gunhee Kim and Yejin Choii</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide slide-1">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -530,7 +555,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-1 active">
+          <div class="slide slide-2">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -543,7 +568,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-2 ">
+          <div class="slide slide-3">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -556,7 +581,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-3">
+          <div class="slide slide-4">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -572,7 +597,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-4">
+          <div class="slide slide-5">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -587,7 +612,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-5">
+          <div class="slide slide-6">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -602,7 +627,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-6">
+          <div class="slide slide-7">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -617,7 +642,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-7">
+          <div class="slide slide-8">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
