@@ -7,6 +7,12 @@ emoji: 😃
 position: "Professor"
 permalink: people/youngjae.html
 email: yjy@yonsei.ac.kr
+
+
+fields:
+    - name : Perception ∩ Language
+    - name : Commonsense reasoning
+    - name : Multimodal perception for AI (Video, Speech, Embodied AI, VR/MR)
 social:
   - title: home
     url: https://yj-yu.github.io/home/
