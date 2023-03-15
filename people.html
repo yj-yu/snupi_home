@@ -72,12 +72,21 @@ color_list:
           </span>
           <br>
         
-        {% if p != "Professor"  %}
-        <p class="wp-block-coblocks-author__biography">Interested in..<br><br>
-        {% endif %}
+        
+        <p class="wp-block-coblocks-author__biography">Interested in..
+
           {% for field in member.fields %}
           {% assign color = page.color_list[forloop.index0] %}
-          <span style="font-size:0.9em; font-weight: 1000; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}};">&nbsp;&nbsp;&nbsp;{{field.name}}&nbsp;&nbsp;&nbsp;</span >
+            {% if field.name == "Multimodal perception for AI" %}
+            <div style="margin-bottom:0%;">
+            {% else %}
+            <div style="margin-bottom:3.5%;">
+            {% endif %}
+          <span style="font-size:0.9em; font-weight: 1000; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}};">&nbsp;&nbsp;&nbsp;{{field.name}}&nbsp;&nbsp;&nbsp;</span> 
+          </div>
+            {% if field.name == "Multimodal perception for AI" %}
+            <span style="font-size:0.6em; font-weight: 600; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}};">&nbsp;&nbsp;&nbsp;(Video, Speech, Embodied AI, VR/MR)&nbsp;&nbsp;&nbsp;</span>
+            {% endif %}
           {% endfor %}
           
         </p>
