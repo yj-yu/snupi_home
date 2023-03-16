@@ -16,7 +16,12 @@ author:
 img: /images/papers/zavis.jpg
 external:
   - title: PDF
-    url: image.png
+    url: https://arxiv.org/pdf/2209.08803.pdf
+
+keywords:
+  - name: Computer Vision
+  - name: Robotics
+  - name: Object Detection
 ---
 
 

@@ -15,7 +15,10 @@ img: /images/papers/iclr21-cvr_300x150.jpg
 external:
   - title: PDF
     url: https://openreview.net/pdf?id=jMPcEkJpdD
-
+keywords:
+  - name: Computer Vision
+  - name: Self-Supervised Learning
+  - name: Video Recognition
 ---
 
 

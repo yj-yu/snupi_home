@@ -21,6 +21,10 @@ external:
   - title: PDF
     url: https://arxiv.org/pdf/2205.12630.pdf
 
+keywords:
+  - name: Multimodal
+  - name: Reinforcement Learning
+  - name: Zero-shot
 ---
 
 

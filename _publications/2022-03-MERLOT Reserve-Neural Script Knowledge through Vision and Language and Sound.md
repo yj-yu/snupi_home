@@ -22,6 +22,12 @@ img: /images/papers/merlot reserve.png
 external:
   - title: PDF
     url: https://arxiv.org/pdf/2201.02639.pdf
+
+
+keywords:
+  - name: Multimodal
+  - name: Commonsense Reasoning
+  - name: Audio Pretraining
 ---
 
 

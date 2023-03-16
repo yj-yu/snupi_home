@@ -3,7 +3,7 @@ layout: publications
 section-type: publications
 name: "Character Grounding and Re-Identification in Story of Videos and Text Descriptions"
 year: 2020
-conference: ECCV2020 (Spotlight)
+conference: ECCV2020
 author:
   - name: "Youngjae Yu"
   - name: "Jongseok Kim"
@@ -20,6 +20,11 @@ external:
     url: https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123500528.pdf
   - title: Project
     url: https://github.com/yj-yu/CiSIN/
+
+keywords:
+  - name: Multimodal
+  - name: Character-in-Story Identification
+  - name: Vision&Language alignment
 ---
 
 

@@ -20,7 +20,13 @@ external:
   - title: PDF
     url: https://arxiv.org/pdf/2012.04124.pdf
   - title: Code
-    url: https://github.com/sangho-vision/avbert  
+    url: https://github.com/sangho-vision/avbert
+
+keywords:
+  - name: Multimodal
+  - name: Model Lightweighting
+  - name: Transformer
+
 ---
 
 

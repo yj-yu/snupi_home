@@ -21,7 +21,12 @@ external:
   - title: PDF
     url: https://arxiv.org/pdf/2106.02636.pdf
   - title: Code
-    url: https://github.com/rowanz/merlot   
+    url: https://github.com/rowanz/merlot  
+    
+keywords:
+  - name: Multimodal
+  - name: Visual Commonsense Reasoning
+  - name: Video QA
 ---
 
 

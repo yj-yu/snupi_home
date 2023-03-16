@@ -19,6 +19,12 @@ external:
     url: https://ojs.aaai.org/index.php/AAAI/article/view/16271
   - title: Code
     url: https://github.com/ozmig77/dcnet  
+
+
+keywords:
+  - name: Multimodal
+  - name: Image Retrieval
+  - name: Composition Network
 ---
 
 

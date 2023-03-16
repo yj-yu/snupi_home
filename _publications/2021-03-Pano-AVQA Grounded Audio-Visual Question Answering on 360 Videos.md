@@ -13,9 +13,14 @@ author:
 img: /images/papers/iccv21_PanoAVQA-300x150.jpeg
 external:
   - title: PDF
-    url: https://arxiv.org/pdf/2106.02636.pdf
+    url: https://arxiv.org/pdf/2110.05122.pdf
   - title: Code
-    url: https://github.com/hs-yn/PanoAVQA   
+    url: https://github.com/hs-yn/PanoAVQA
+
+keywords:
+  - name: Computer Vision
+  - name: Panoramic Video
+  - name: QA
 ---
 
 

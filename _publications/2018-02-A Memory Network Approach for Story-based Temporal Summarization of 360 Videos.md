@@ -17,7 +17,12 @@ external:
   - title: PDF
     url: https://arxiv.org/pdf/1805.02838.pdf
   - title: Project
-    url: https://github.com/rowanz/merlot   
+    url: https://github.com/rowanz/merlot
+    
+keywords:
+  - name: Computer Vision
+  - name: Panoramic Video
+  - name: Story-based Temporal Summarization 
 ---
 
 

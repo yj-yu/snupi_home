@@ -16,7 +16,13 @@ external:
   - title: PDF
     url: https://arxiv.org/pdf/1808.02559.pdf
   - title: Project
-    url: https://github.com/yj-yu/lsmdc  
+    url: https://github.com/yj-yu/lsmdc
+
+
+keywords:
+  - name: Multimodal Retrieval
+  - name: Semantic Similarity
+  - name: Video QA 
 ---
 
 

@@ -18,6 +18,12 @@ img: /images/papers/Connecting the Dots between Audio and Text.png
 external:
   - title: PDF
     url: https://arxiv.org/pdf/2112.08995.pdf
+
+
+keywords:
+  - name: Multimodal
+  - name: Audio-Text Alignment
+  - name: Zero-shot
 ---
 
 

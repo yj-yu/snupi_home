@@ -18,6 +18,10 @@ external:
   - title: PDF
     url: https://arxiv.org/pdf/1707.06029.pdf
 
+keywords:
+  - name: Computer Vision
+  - name: Gaze Encoding Attention Network 
+  - name: Video Captioning
 ---
 
 
