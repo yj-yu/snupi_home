@@ -21,6 +21,7 @@ external:
 
 
 keywords:
+  - name: NLP
   - name: Multimodal
   - name: Audio-Text Alignment
   - name: Zero-shot

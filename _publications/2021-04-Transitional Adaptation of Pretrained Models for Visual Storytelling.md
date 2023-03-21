@@ -20,7 +20,8 @@ external:
     url: https://github.com/JiwanChung/tapm/
 
 keywords:
-  - name: Multimodal
+  - name: NLP
+  - name: Computer Vision
   - name: Vision&Language Harmonization
   - name: Visual Storytelling
 ---

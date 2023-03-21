@@ -22,7 +22,8 @@ external:
     url: https://github.com/yj-yu/CiSIN/
 
 keywords:
-  - name: Multimodal
+  - name: NLP
+  - name: Computer Vision
   - name: Character-in-Story Identification
   - name: Vision&Language alignment
 ---

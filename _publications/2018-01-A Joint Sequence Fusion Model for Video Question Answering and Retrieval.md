@@ -20,6 +20,7 @@ external:
 
 
 keywords:
+  - name: NLP
   - name: Multimodal Retrieval
   - name: Semantic Similarity
   - name: Video QA 

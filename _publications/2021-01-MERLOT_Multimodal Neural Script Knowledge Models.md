@@ -24,7 +24,8 @@ external:
     url: https://github.com/rowanz/merlot  
     
 keywords:
-  - name: Multimodal
+  - name: NLP
+  - name: Computer Vision
   - name: Visual Commonsense Reasoning
   - name: Video QA
 ---

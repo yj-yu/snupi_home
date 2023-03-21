@@ -25,7 +25,8 @@ external:
 
 
 keywords:
-  - name: Multimodal
+  - name: NLP
+  - name: Computer Vision
   - name: Commonsense Reasoning
   - name: Audio Pretraining
 ---

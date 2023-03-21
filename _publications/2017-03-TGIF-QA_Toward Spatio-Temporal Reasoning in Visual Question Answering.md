@@ -20,7 +20,8 @@ external:
     url: https://github.com/YunseokJANG/tgif-qa
 
 keywords:
-  - name: Multimodal
+  - name: NLP
+  - name: Computer Vision
   - name: Spatio-Temporal Reasoning
   - name: Video QA
 ---

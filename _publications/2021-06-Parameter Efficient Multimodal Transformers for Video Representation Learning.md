@@ -23,7 +23,8 @@ external:
     url: https://github.com/sangho-vision/avbert
 
 keywords:
-  - name: Multimodal
+  - name: NLP
+  - name: Computer Vision
   - name: Model Lightweighting
   - name: Transformer
 

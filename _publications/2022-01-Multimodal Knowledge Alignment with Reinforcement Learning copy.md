@@ -22,7 +22,8 @@ external:
     url: https://arxiv.org/pdf/2205.12630.pdf
 
 keywords:
-  - name: Multimodal
+  - name: NLP
+  - name: Computer Vision
   - name: Reinforcement Learning
   - name: Zero-shot
 ---

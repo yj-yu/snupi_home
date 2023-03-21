@@ -22,7 +22,8 @@ external:
 
 
 keywords:
-  - name: Multimodal
+  - name: NLP
+  - name: Computer Vision
   - name: Image Retrieval
   - name: Composition Network
 ---
