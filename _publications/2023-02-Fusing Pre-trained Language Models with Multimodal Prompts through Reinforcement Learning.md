@@ -24,7 +24,7 @@ external:
 
 keywords:
   - name: NLP
-  - name: Multimodal
+  - name: Computer Vision
   - name: Reinforcement Learning
   - name: Zero-shot
 ---

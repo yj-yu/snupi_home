@@ -22,7 +22,7 @@ external:
 
 keywords:
   - name: NLP
-  - name: Multimodal
+  - name: Computer Vision
   - name: Audio-Text Alignment
   - name: Zero-shot
 ---
