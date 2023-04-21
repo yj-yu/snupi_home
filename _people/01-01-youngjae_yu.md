@@ -3,7 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Youngjae Yu"
 img-filename: yu_youngjae.png
-emoji: 😃
+emoji: 🏀
 position: "Professor"
 permalink: people/youngjae.html
 email: yjy@yonsei.ac.kr

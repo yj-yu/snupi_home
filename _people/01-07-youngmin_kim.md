@@ -3,7 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Youngmin Kim"
 img-filename: kim_youngmin.png
-emoji: 🔥
+emoji: 🌎
 position: "Undergraduate Intern"
 permalink: people/youngmin.html
 email:  winston121497@gmail.com
