@@ -10,9 +10,8 @@ email: hotpoem@gmail.com
 social:
 
 fields:
-    - name : image captioning
-    - name : reinforcement learning
-    - name : video segmentation
-    - name : reasoning
+    - name : visual commonsense reasoning
+    - name : multimodal pretraining
+    - name : vision+language
 
 ---
