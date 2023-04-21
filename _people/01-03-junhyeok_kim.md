@@ -11,7 +11,7 @@ social:
 
 fields:
     - name : image captioning
-    - name : reinforce learning
+    - name : reinforcement learning
     - name : video segmentation
     - name : reasoning
 

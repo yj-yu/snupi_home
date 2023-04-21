@@ -8,8 +8,8 @@ permalink: people/seungwon.html
 email: dlatmddnjs20@gmail.com
 emoji: 🤗
 fields:
-    - name : Continual Learning
-    - name : Image Captioning
+    - name : VL model
+    - name : Commonsense Reasoning
     - name : text generation
 
 
