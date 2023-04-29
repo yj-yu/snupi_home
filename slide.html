@@ -184,33 +184,36 @@
     background-size: cover;
     will-change: transform;
   }
+
+
+
   .slide:nth-child(1) {
     left: 0%;
   }
   .slide:nth-child(1) .slide__bg {
     left: 0%;
-    background-image: url("images/slides/esper.jpg");
+    background-image: url("images/slides/23_mmc4.png");
   }
   .slide:nth-child(1) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
+
   .slide:nth-child(2) {
     left: 100%;
   }
   .slide:nth-child(2) .slide__bg {
     left: -50%;
-    background-image: url("/images/slides/zavis.jpg");
+    background-image: url("images/slides/esper.jpg");
   }
   .slide:nth-child(2) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
-
   .slide:nth-child(3) {
     left: 200%;
   }
   .slide:nth-child(3) .slide__bg {
     left: -100%;
-    background-image: url("images/slides/esper.jpg");
+    background-image: url("/images/slides/zavis.jpg");
   }
   .slide:nth-child(3) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -221,7 +224,7 @@
   }
   .slide:nth-child(4) .slide__bg {
     left: -150%;
-    background-image: url("images/slides/connecting the dots.jpg");
+    background-image: url("images/slides/esper.jpg");
   }
   .slide:nth-child(4) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -232,28 +235,28 @@
   }
   .slide:nth-child(5) .slide__bg {
     left: -200%;
-    background-image: url("images/slides/aaai21_dcnet.jpeg");
+    background-image: url("images/slides/connecting the dots.jpg");
   }
   .slide:nth-child(5) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
+
   .slide:nth-child(6) {
     left: 500%;
   }
   .slide:nth-child(6) .slide__bg {
     left: -250%;
-    background-image: url("images/slides/cvpr21-tapm.png");
+    background-image: url("images/slides/aaai21_dcnet.jpeg");
   }
   .slide:nth-child(6) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
-
   .slide:nth-child(7) {
     left: 600%;
   }
   .slide:nth-child(7) .slide__bg {
     left: -300%;
-    background-image: url("images/slides/emnlp22-prodia.png");
+    background-image: url("images/slides/cvpr21-tapm.png");
   }
   .slide:nth-child(7) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -264,19 +267,30 @@
   }
   .slide:nth-child(8) .slide__bg {
     left: -350%;
-    background-image: url("images/slides/iccv21_ACAV100M.jpeg");
+    background-image: url("images/slides/emnlp22-prodia.png");
   }
   .slide:nth-child(8) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
+
   .slide:nth-child(9) {
     left: 800%;
   }
   .slide:nth-child(9) .slide__bg {
     left: -400%;
-    background-image: url("images/slides/iccv21_PanoAVQA.jpeg");
+    background-image: url("images/slides/iccv21_ACAV100M.jpeg");
   }
   .slide:nth-child(9) .slide__overlay-path {
+    fill: rgb(33, 90, 151);
+  }
+  .slide:nth-child(10) {
+    left: 900%;
+  }
+  .slide:nth-child(10) .slide__bg {
+    left: -450%;
+    background-image: url("images/slides/iccv21_PanoAVQA.jpeg");
+  }
+  .slide:nth-child(10) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
   .slide__content {
@@ -524,8 +538,24 @@
         <div class="slider-control right"></div>
         <ul class="slider-pagi"></ul>
         <div class="slider">
-
           <div class="slide slide-0 active">
+            <div class="slide__bg"></div>
+            <div class="slide__content">
+              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
+              </svg>
+              <div class="slide__text">
+
+                <h2 style="display:inline" class="slide__text-heading">Multimodal C4: An Open, Billion-scale Corpus of Images Interleaved With Text
+                  
+                </h2>
+                <p class="slide__text-desc">Wanrong Zhu, Jack Hessel, Anas Awadalla, Samir Yitzhak Gadre, Jesse Dodge, Alex Fang, Youngjae Yu, Ludwig Schmidt, William Yang Wang, Yejin Choi</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="slide slide-1">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -542,7 +572,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-1">
+          <div class="slide slide-2">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -556,7 +586,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-2">
+          <div class="slide slide-3">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -569,7 +599,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-3">
+          <div class="slide slide-4">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -582,7 +612,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-4">
+          <div class="slide slide-5">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -598,7 +628,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-5">
+          <div class="slide slide-6">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -613,7 +643,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-6">
+          <div class="slide slide-7">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -628,7 +658,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-7">
+          <div class="slide slide-8">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -643,7 +673,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-8">
+          <div class="slide slide-9">
             <div class="slide__bg"></div>
             <div class="slide__content">
               <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
