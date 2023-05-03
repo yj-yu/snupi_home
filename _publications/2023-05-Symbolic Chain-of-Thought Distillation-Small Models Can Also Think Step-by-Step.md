@@ -1,8 +1,8 @@
 ---
 layout: publications
 section-type: publications
-name: "Symbolic Chain-of-Thought Distillation: Small Models Can Also "Think" Step-by-Step"
-conference:
+name: 'Symbolic Chain-of-Thought Distillation: Small Models Can Also "Think" Step-by-Step'
+conference: ACL2023
 year: 2023
 author:
   - name: "Liunian Harold Li"
@@ -14,7 +14,7 @@ author:
 
 
 img: /images/papers/white.jpeg
-external:
+
 
 keywords:
   - name: NLP
