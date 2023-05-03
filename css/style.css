@@ -3858,7 +3858,18 @@ background: rgb(255, 236, 200);
 -moz-border-radius: 5px;
 border-radius: 5px;
 }
-
+.bubble_publication_conference_long
+{
+position: relative;
+width: 120px;
+height: 30px;
+padding: 5px;
+text-align: center;
+background: rgb(255, 236, 200);
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
 .bubble:after
 {
 content: '';

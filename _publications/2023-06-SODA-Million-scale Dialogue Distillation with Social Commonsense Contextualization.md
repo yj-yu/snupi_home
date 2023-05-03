@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "SODA: Million-scale Dialogue Distillation with Social Commonsense Contextualization"
-conference: ACL2023 Findings
+conference: ACL2023
 year: 2023
 author:
   - name: "Hyunwoo Kim"
