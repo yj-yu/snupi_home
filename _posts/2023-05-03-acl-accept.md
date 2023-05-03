@@ -1,6 +1,6 @@
 ---
 layout: news-detail
-title: Congratulations! 2 Paper Accepted at ACL 2023
+title: Congratulations! 2 Papers Accepted at ACL 2023
 emoji: 🎉
 date: 2023-05-03
 summary: "유영재 교수님이 참여하신 논문 두 편이 ACL2023에 accept되었습니다."
