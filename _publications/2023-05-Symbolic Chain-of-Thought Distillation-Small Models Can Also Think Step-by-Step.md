@@ -13,7 +13,7 @@ author:
   - name : "Yejin Choi"
 
 
-img: /images/papers/white.jpeg
+img: /images/papers/symbolic knowledge distillation.png
 
 
 keywords:
