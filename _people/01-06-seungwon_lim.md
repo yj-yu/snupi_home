@@ -5,7 +5,7 @@ fullname: "Seungwon Lim"
 img-filename: lim_seungwon.png
 position: "Master Student"
 permalink: people/seungwon.html
-email: dlatmddnjs20@gmail.com
+email: sngwon@yonsei.ac.kr
 emoji: 🤗
 fields:
     - name : VL model
