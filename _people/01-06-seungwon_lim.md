@@ -14,4 +14,6 @@ fields:
 
 
 social:
+  - title: home
+    url: https://github.com/pull-ups
 ---
