@@ -8,8 +8,8 @@ permalink: people/seungwon.html
 email: sngwon@yonsei.ac.kr
 emoji: 🤗
 fields:
-    - name : VL model
-    - name : Commonsense Reasoning
+    - name : VL understanding
+    - name : LLM
     - name : text generation
 
 
