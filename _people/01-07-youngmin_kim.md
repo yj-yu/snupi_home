@@ -4,7 +4,7 @@ section-type: people
 fullname: "Youngmin Kim"
 img-filename: kim_youngmin.png
 emoji: 🌎
-position: "Undergraduate Intern"
+position: "Master Student"
 permalink: people/youngmin.html
 email:  winston121497@gmail.com
 
