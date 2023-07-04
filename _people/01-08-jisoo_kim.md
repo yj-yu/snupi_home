@@ -12,9 +12,9 @@ social:
 
 
 fields:
-    - name : generative model
-    - name : language&vision
-
+    - name : 3D vision
+    - name : virtual human
+  
 publications:
     - name: J. S. Kim, M. S. Kim, J. H. Kim, J. H. Yang, S. E. Cho, and J. E. Nah, “System to Encourage Safe Driving of Personal Mobile Devices Based on Image Recognition and IoT,” Proceedings of the Korea Information Processing Society Conference, pp. 860–862, Nov. 2022.
 ---
