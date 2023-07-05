@@ -9,8 +9,9 @@ permalink: people/yejin_choi.html
 email: yejinchoi012@naver.com
 
 fields:
-    - name : Image generation
-    - name : Diffusion model
+    - name : Multimodal Synthesis
+    - name : Multimodal Editing
+    - name : LLM
 
 social:
 ---
