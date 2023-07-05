@@ -9,7 +9,7 @@ permalink: people/yejin_son.html
 email: yejinson@yonsei.ac.kr 
 fields:
     - name : text generation
+    - name : text generation
+    - name : commonsense reasoning
 social:
-  - title: home
-    url: https://ozzaney.github.io/
 ---
