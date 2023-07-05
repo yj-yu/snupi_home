@@ -3,7 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Jiwon Shin"
 img-filename: shin_jiwon.jpg
-emoji: 
+emoji: 🏃‍♀️
 position: "Undergraduate Intern"
 permalink: people/jiwon.html
 email: shinlama@yonsei.ac.kr
