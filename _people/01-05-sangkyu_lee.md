@@ -10,7 +10,7 @@ emoji: 🤔
 social:
 
 fields:
-    - name : Commonsence Reasoning
+    - name : Commonsense Reasoning
     - name : Text-to-Image Generation
     - name : Video Understanding
 
