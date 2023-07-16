@@ -1,8 +1,8 @@
 ---
 layout: news-detail
-title: Congratulations! Paper Accepted at CVPR 2023
+title: Congratulations! Paper Accepted at ICCV 2023
 emoji: 🎉
-date: 2023-02-24
+date: 2023-07-14
 summary: "한승주 학생의 논문이 ICCV2023에 accept되었습니다."
 body: "
 <br>
