@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "CHAMPAGNE: Learning Real-world Conversation from Large-Scale Web Videos"
-conference:
+conference: ICCV2023
 year: 2023
 author:
   - name: "Seungju Han"
