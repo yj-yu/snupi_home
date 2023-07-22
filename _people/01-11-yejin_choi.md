@@ -9,9 +9,7 @@ permalink: people/yejin_choi.html
 email: yejinchoi012@naver.com
 
 fields:
-    - name : Multimodal Synthesis
-    - name : Multimodal Editing
-    - name : LLM
+    - name : Multimodal Learning
 
 social:
 ---
