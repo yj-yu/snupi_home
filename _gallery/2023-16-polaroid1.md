@@ -1,8 +1,8 @@
 ---
 layout: people-detail
 section-type: gallery
-title: "poloaroid1"
+title: "polaroid1"
 description: "MIRlab polaroid photo"
-img-filename: poloaroid1.png
+img-filename: polaroid1.png
 year: 2023
 ---
