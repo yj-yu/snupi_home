@@ -8,10 +8,10 @@ author:
   - name: "Jiwan Chung"
   - name: "Youngjae Yu"
 
-img: /images/papers/bmvc_lss.png
+img: /images/papers/bmvc_lss.PNG
 
 keywords:
   - name: VideoQA
   - name: multimodal
-
+display: True
 ---
