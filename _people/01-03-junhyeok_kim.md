@@ -6,6 +6,7 @@ img-filename: kim_junhyeok.png
 position: "Ph.D. Student"
 permalink: people/junhyeok.html
 email: hotpoem@gmail.com
+emoji: ✌️
 
 social:
 
