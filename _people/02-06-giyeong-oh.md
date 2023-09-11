@@ -14,7 +14,7 @@ social:
 
 
 fields:
-    - name : Parameter Effecient Fine-Tuning
+    - name : Parameter Efficient Fine-Tuning
     - name : Diffusion Model
 publications:
 
