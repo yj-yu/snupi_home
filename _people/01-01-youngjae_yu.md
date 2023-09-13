@@ -2,7 +2,7 @@
 layout: people-detail
 section-type: people
 fullname: "Youngjae Yu"
-img-filename: yu_youngjae.png
+img-filename: yu_youngjae.jpg
 emoji: 🏀
 position: "Professor"
 permalink: people/youngjae.html
