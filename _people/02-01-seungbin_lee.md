@@ -4,7 +4,7 @@ section-type: people
 fullname: "Seungbeen Lee"
 img-filename: lee_seungbeen.jpg
 emoji: 🍧
-position: "Undergraduate Intern"
+position: "Master Student"
 permalink: people/seungbeen.html
 email: iyy1112@yonsei.ac.kr
 
