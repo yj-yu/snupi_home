@@ -1,8 +1,8 @@
 ---
 layout: teachings
 section-type: teachings
-name: "Multimodal Deeplearning"
-code: AAI5010
+name: "Advanced Video Processing"
+code: AAI5012
 year: 2023
 student: "graduate"
 
