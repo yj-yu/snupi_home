@@ -2,7 +2,7 @@
 layout: people-detail
 section-type: people
 fullname: "Sumin Shim"
-img-filename: shim_sumin.png
+img-filename: shim_sumin.jpg
 emoji: 😊
 position: "Undergraduate Intern"
 permalink: people/sumin.html
