@@ -10,7 +10,7 @@ email: wade3han@snu.ac.kr
 
 social:
   - title: home
-    url: seungjuhan.me
+    url: https://seungjuhan.me/
 
 
 fields:
