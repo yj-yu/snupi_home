@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Multimodal C4: An Open, Billion-scale Corpus of Images Interleaved With Text"
-conference:
+conference: NeurIPS2023
 year: 2023
 author:
   - name: "Wanrong Zhu"
