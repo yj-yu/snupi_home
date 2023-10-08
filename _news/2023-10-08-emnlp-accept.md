@@ -1,6 +1,8 @@
 ---
 layout: news-detail
 title: Congratulations! 4 Papers Accepted at EMNLP2023
+subtitle: emnlp-accept
+type: papers
 emoji: 🎉
 year: 2023
 date: 2023-10-08

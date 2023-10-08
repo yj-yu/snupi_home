@@ -1,0 +1,53 @@
+---
+layout: news
+title: News
+section_id: news
+count_year_max: 2023
+count_year_min: 2023
+---
+
+{% for paper in site.news %}
+asd
+{% endfor %}
+
+
+
+<div class='full no-padding'>
+  {% for y in (page.count_year_min..page.count_year_max) reversed %}
+    {% for paper in site.news reversed %}
+      {% if paper.year == y %}
+        <div class='row'>
+          <div class='medium-12 columns'>
+            <h2>{{y}}</h2>
+          </div>
+        </div>
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% for paper in site.news reversed %}
+      {% if paper.year == y %}
+      <div class='row'>
+
+        <div class='small-16 medium-20 columns' style="margin-left: 0;">
+          <div class='mod modIconText' style='position: relative; font-size: 20px; padding: 10px; border: 1px solid #ccc; background-color: #f9f9f9;'>
+            <div style='font-weight: bold;'>{{paper.title}}</div>
+            <div style='font-size: 16px; color: #888;'>{{paper.date | date: "%Y-%m-%d"}}</div>
+            
+            <!-- Add the button here -->
+            
+            <a href="../news/{{paper.type}}/{{paper.date | date: '%Y'}}/{{paper.date | date: '%m'}}/{{paper.date | date: '%d'}}/{{paper.subtitle}}.html" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); padding: 5px 10px; background-color: #383838; color: #fff; text-decoration: none;">></a>
+            
+            <!-- <a href="{{paper.url}}" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); padding: 5px 10px; background-color: #383838; color: #fff; text-decoration: none;">></a> -->
+          </div>
+        </div>
+
+      </div>
+      <div class='spacing'></div>
+      {% endif %}
+    {% endfor %}
+  <div class='spacing'></div>
+</div>
+{% endfor %}
+<div class='four spacing'></div>
+
+

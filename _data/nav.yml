@@ -13,6 +13,9 @@
 - name: Gallery
   path: gallery.html
   section_id: gallery
+- name: News
+  path: news.html
+  section_id: news
 # - name: Services
 #   path: services.html
 #   section_id: services
