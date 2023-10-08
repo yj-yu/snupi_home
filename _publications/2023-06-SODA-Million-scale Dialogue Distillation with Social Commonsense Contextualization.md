@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "SODA: Million-scale Dialogue Distillation with Social Commonsense Contextualization"
-conference: 
+conference: EMNLP2023
 year: 2023
 author:
   - name: "Hyunwoo Kim"
