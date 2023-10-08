@@ -14,7 +14,7 @@ author:
   - name: "Yejin Choi"
   - name: "Youngjae Yu"
 
-img: /images/papers/normlense.PNG
+img: /images/papers/normlense.png
 
 keywords:
   - name: multimodal
