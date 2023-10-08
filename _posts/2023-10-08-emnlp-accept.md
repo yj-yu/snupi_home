@@ -2,7 +2,7 @@
 layout: news-detail
 title: Congratulations! 4 Papers Accepted at EMNLP2023
 emoji: 🎉
-date: 2023-08-22
+date: 2023-10-08
 summary: "정지완, 한승주 학생의 논문이 EMNLP 2023에 accept되었습니다."
 body: "
 <br>
