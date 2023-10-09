@@ -9,7 +9,7 @@ author:
   - name: "Youngjae Yu"
 
 
-img: /images/papers/white.jpeg
+img: /images/papers/vlis.png
 
 keywords:
   - name: multimodal

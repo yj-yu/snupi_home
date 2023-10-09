@@ -534,13 +534,17 @@ slides:
     <!-- News for papers -->
     <div class='medium-6 columns'>
     {% assign post_count = 0 %}
-    {% for post in site.posts %}
+    {% for post in site.news reversed %}
       {% if post_count >= 5 %}
         {% break %}
       {% endif %}
       {% for c in post.categories %}
         {% if 'papers' == c %}
-        <p><a style="color:black;" href="{{post.url}}">- {{post.title}} ({{post.date | date: "%Y-%m-%d" }})</a><br/>
+        
+        <p><a style="color:black;" href="news/{{post.type}}/{{post.date | date: '%Y'}}/{{post.date | date: '%m'}}/{{post.date | date: '%d'}}/{{post.subtitle}}.html">
+          - {{post.title}} ({{post.date | date: "%Y-%m-%d" }})
+          </a>
+          <br/>
           {{post.excerpt}}</p>
           {% assign post_count = post_count | plus: 1 %}
           {% break %}
@@ -552,7 +556,7 @@ slides:
     <!-- News for lab -->
     <div class='medium-6 columns'>
     {% assign post_count = 0 %}
-    {% for post in site.posts %}
+    {% for post in site.news reversed %}
       {% if post_count >= 4 %}
         {% break %}
       {% endif %}

@@ -16,7 +16,7 @@ author:
   - name: "Jinyoung Yeo"
   
 
-img: /images/papers/white.jpeg
+img: /images/papers/coming_soon.png
 
 keywords:
   
