@@ -16,7 +16,7 @@ author:
   - name: "Jinyoung Yeo"
   
 
-img: /images/papers/coming_soon.png
+img: /images/papers/dialog_COT_distillation.png
 
 keywords:
   - name: NLP
