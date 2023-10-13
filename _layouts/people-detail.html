@@ -36,17 +36,7 @@ section_id: people
       <h2>Contact</h2>
       <p>{{page.email}}</p>
       {% if page.social %}
-        <div class='mod modTeamMember'>
-          <ul class='socials'>
-            {% for social in page.social %}
-              <li>
-                <a href='{{social.url}}'>
-                  <i class='fa fa-{{social.title}}'></i>
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
+
         <div class="spacing"></div>
       {% endif %}
 

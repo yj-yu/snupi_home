@@ -12,4 +12,6 @@ fields:
     - name : Multimodal learning
 
 social:
+  - title: home
+    url: people/saejin.html
 ---

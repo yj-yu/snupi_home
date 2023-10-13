@@ -13,4 +13,6 @@ fields:
     - name : ai safety
     - name : alignment research
 social:
+  - title: home
+    url: people/yejin_son.html
 ---

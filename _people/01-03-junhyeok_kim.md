@@ -8,11 +8,11 @@ permalink: people/junhyeok.html
 email: hotpoem@gmail.com
 emoji: ✌️
 
-social:
-
 fields:
     - name : visual commonsense reasoning
     - name : multimodal pretraining
     - name : vision+language
-
+social:
+  - title: home
+    url: people/junhyeok.html
 ---

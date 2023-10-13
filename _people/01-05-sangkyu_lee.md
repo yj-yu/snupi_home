@@ -13,5 +13,7 @@ fields:
     - name : Commonsense Reasoning
     - name : Text-to-Image Generation
     - name : Video Understanding
-
+social:
+  - title: home
+    url: people/sangkyu.html
 ---
