@@ -19,7 +19,7 @@ author:
   - name: "Qiuyuan Huang"
   
 
-img: /images/papers/comming_soon.png
+img: /images/papers/coming_soon.png
 
 keywords:
   - name: multimodal
