@@ -3849,14 +3849,11 @@ border-radius: 5px;
 .bubble_publication_conference
 {
 position: relative;
-
-font-size:2rem;
+height: 30px;
 width : fit-content;
 padding-right: 10px;
 padding-left: 10px;
 padding-top: 5px;
-
-height: 30px;
 text-align: center;
 background: rgb(255, 236, 200);
 -webkit-border-radius: 5px;
@@ -3866,9 +3863,11 @@ border-radius: 5px;
 .bubble_publication_conference_long
 {
 position: relative;
-width: 120px;
+width : fit-content;
+padding-right: 10px;
+padding-left: 10px;
+padding-top: 5px;
 height: 30px;
-padding: 5px;
 text-align: center;
 background: rgb(255, 236, 200);
 -webkit-border-radius: 5px;
