@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Reading Books is Great, But Not if You Are Driving! Visually Grounded Reasoning about Defeasible Commonsense Norms"
-conference: EMNLP2023
+conference: EMNLP2023 (Oral)
 year: 2023
 author:
   - name: "Seungju Han"

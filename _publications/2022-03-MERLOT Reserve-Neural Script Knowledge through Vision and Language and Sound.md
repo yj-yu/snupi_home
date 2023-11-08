@@ -3,7 +3,7 @@ layout: publications
 section-type: publications
 name: "MERLOT Reserve: Neural Script Knowledge through Vision and Language and Sound"
 year: 2022
-conference: CVPR2022
+conference: CVPR2022 (Oral)
 
 author:
   - name: "Rowan Zellers"
