@@ -2,7 +2,7 @@
 layout: people-detail
 section-type: people
 fullname: "Seungwon Lim"
-img-filename: lim_seungwon.png
+img-filename: lim_seungwon.jpg
 position: "Master Student"
 permalink: people/seungwon.html
 email: sngwon@yonsei.ac.kr
