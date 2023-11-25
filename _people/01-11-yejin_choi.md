@@ -10,6 +10,7 @@ email: yejinchoi012@naver.com
 
 fields:
     - name : Multimodal Learning
+    - name : Multimodal Retrieval
     - name : AI-driven Design
 
 social:

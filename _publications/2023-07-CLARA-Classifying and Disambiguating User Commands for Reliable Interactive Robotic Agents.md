@@ -2,10 +2,9 @@
 layout: publications
 section-type: publications
 name: "CLARA: Classifying and Disambiguating User Commands for Reliable Interactive Robotic Agents"
-conference: 
+conference: RA-L/ICRA2024
 year: 2023
 author:
-
   - name: "Jeongeun Park"
   - name: "Seungwon Lim"
   - name: "Joonhyung Lee"
@@ -13,6 +12,8 @@ author:
   - name: "Minsuk Chang"
   - name: "Youngjae Yu"
   - name: "Sungjoon Choi"
+
+
 img: /images/papers/CLARA.png
 external:
   - title: PDF
@@ -23,4 +24,5 @@ keywords:
   - name: NLP
   - name: uncertainty estimation
 
+display: True
 ---
