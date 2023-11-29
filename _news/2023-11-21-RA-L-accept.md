@@ -1,8 +1,7 @@
 ---
-
 layout: news-detail
 title: Congratulations! Paper Accepted at RA-L/ICRA2024
-subtitle: RA-L/ICRA-accept
+subtitle: RA-L-accept
 type: papers
 
 emoji: 🎉
@@ -14,6 +13,7 @@ body: "
 
 CLARA: Classifying and Disambiguating User Commands for Reliable
 Interactive Robotic Agents
+
 이 RA-L/ICRA2024에 accept되었습니다. 진심으로 축하드립니다!🥳🥳🥳👍
 
   "
