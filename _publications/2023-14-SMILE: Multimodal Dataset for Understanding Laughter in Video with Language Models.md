@@ -5,7 +5,7 @@ name: "SMILE: Multimodal Dataset for Understanding Laughter in Video with Langua
 conference: 
 year: 2023
 author:
-  - name: "Lee Hyun"
+  - name: "Hyun Lee"
   - name: "Kim Sung-Bin"
   - name: "Seungju Han"
   - name: "Youngjae Yu"
