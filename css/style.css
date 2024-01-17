@@ -4263,7 +4263,7 @@ img {
 }
 
 .member-profile h3 {
-  font-size: 22px; /* Larger Font Size for Member's Name */
+  font-size: 18px; /* Larger Font Size for Member's Name */
   font-weight: bold; /* Bold for Member's Name */
   color: #000000; /* Color for Member's Name */
 }
@@ -4271,6 +4271,11 @@ img {
 .member-profile p {
   font-size: 14px; /* Smaller Font Size for Explanation */
   font-weight: normal; /* Normal Weight for Explanation */
+  color: #6e6d6d; /* Color for Explanation */
+}
+.member-profile p p{
+  font-size: 14px; /* Smaller Font Size for Explanation */
+  font-weight: bold; /* Normal Weight for Explanation */
   color: #6e6d6d; /* Color for Explanation */
 }
 

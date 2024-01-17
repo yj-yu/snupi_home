@@ -121,11 +121,11 @@ color_list:
               <div class="member-profile">
                 <a><h3 style="margin-bottom:0;">&nbsp;&nbsp;{{member.emoji}}  {{member.fullname}}</h3></a>
                 <p style="margin-bottom:0;">
-                  (Interested in
+                  Interested in
                   {% for field in member.fields %}
                     {{ field.name }}{% unless forloop.last %}, {% endunless %}
                   {% endfor %}
-                )
+                
               </p>
               </div>
             {% else %}
