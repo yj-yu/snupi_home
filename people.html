@@ -7,9 +7,7 @@ active_positions:
   - Professor
   - Visiting Scholar
   - Ph.D. Student
-  - Master Student
-  - Undergraduate Intern
-  
+  - Master Student  
 
 color_list:
   - rgba(245, 224, 204)
@@ -20,7 +18,7 @@ color_list:
   - rgba(255, 179, 255)
   - rgba(0, 144, 202)
 ---
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <div class='full parallax' style='padding-top: 50px;'>
   <div class='row'>
     <div class='twelve columns'>
@@ -39,7 +37,7 @@ color_list:
         <h2>{{p}}</h2>
       </div>
     {% endif %}
-    {% if p == "Visiting Scholar" or p == "Master Student" or p == "Ph.D. Student" or p == "Research Associate" or p == "Undergraduate Intern" %}
+    {% if p == "Visiting Scholar" or p == "Master Student" or p == "Ph.D. Student" or p == "Research Associate"%}
       <div class='medium-12 columns'>
         <h2>{{p}}s</h2>
       </div>
@@ -48,9 +46,6 @@ color_list:
     {% for member in site.people %}
       
       {% if member.position == p %}
-      
-
-
       <div class="small-10 medium-5 large-5 columns wp-block-coblocks-author" style="font-size:15px">
         {% assign homeurl = member.permalink %}
 
@@ -102,7 +97,54 @@ color_list:
   <div class='spacing'></div>
   {% endfor %}
 
+  <div class='row'>
+    <div class='medium-12 columns'>
+      <h2>Undergraduate Interns</h2>
+    </div>
+    <div class='medium-12 columns'>
+      
+    
+      {% for member in site.people %}
+        {% if member.position == "Undergraduate Intern" %}
+          <p style="margin-bottom: 5px;">
 
+
+          
+            {% assign temp = false %}
+            {% for social in member.social %}
+              {% if social.title == "home" %}
+                {% assign temp = true %}
+                {% assign homeurl = social.url %}
+              {% endif %}
+            {% endfor %}
+            {% if temp %}
+              <div class="member-profile">
+                <a><h3 style="margin-bottom:0;">&nbsp;&nbsp;{{member.emoji}}  {{member.fullname}}</h3></a>
+                <p style="margin-bottom:0;">
+                  (Interested in
+                  {% for field in member.fields %}
+                    {{ field.name }}{% unless forloop.last %}, {% endunless %}
+                  {% endfor %}
+                )
+              </p>
+              </div>
+            {% else %}
+              <div class="member-profile">
+                <h3 style="margin-bottom:0;">&nbsp;&nbsp;{{member.emoji}}  {{member.fullname}}</h3>
+                <p style="margin-bottom:0;">
+                  (Interested in
+                  {% for field in member.fields %}
+                    {{ field.name }}{% unless forloop.last %}, {% endunless %}
+                  {% endfor %}
+                )
+              </p>
+              </div>
+            {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
 
 
   <!-- Members On Leave -->
@@ -139,13 +181,15 @@ color_list:
   </div>
   -->
   <!-- Members alumni -->
+  <div class='four spacing'></div>
+  
   <div class='row'>
     <div class='medium-12 columns'>
       <h2>Alumni</h2>
       <h3>Graduate Students</h3>
         <!-- Ph.D. alumni -->
         {% for member in site.people reversed %}
-          {% if member.position == "Alumni" and member.pastposition == "Ph.D. Student" %}
+          {% if member.position == "Alumni" %}
             <p style="margin-bottom: 0px;">
             {% assign temp = false %}
             {% for social in member.social %}

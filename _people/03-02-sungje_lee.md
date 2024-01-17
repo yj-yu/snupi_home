@@ -8,5 +8,9 @@ position: "Master Student"
 permalink: people/sungje.html
 email: hotpoem@gmail.com
 
+fields:
+    - name : Multimodal learning
+
+
 social:
 ---
