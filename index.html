@@ -539,12 +539,10 @@ slides:
         {% break %}
       {% endif %}
       {% for c in post.categories %}
-        {% if 'papers' == c %}
-        
+        {% if 'papers' == c %} 
         <p><a style="color:black;" href="news/{{post.type}}/{{post.date | date: '%Y'}}/{{post.date | date: '%m'}}/{{post.date | date: '%d'}}/{{post.subtitle}}.html">
           - {{post.title}} ({{post.date | date: "%Y-%m-%d" }})
-          </a>
-          <br/>
+        </a><br/>
           {{post.excerpt}}</p>
           {% assign post_count = post_count | plus: 1 %}
           {% break %}
@@ -562,7 +560,9 @@ slides:
       {% endif %}
       {% for c in post.categories %}
         {% if 'others' == c %}
-          <p><a style="color:black;" href="{{post.url}}">- {{post.title}} ({{post.date | date: "%Y-%m-%d" }})</a><br/>
+        <p><a style="color:black;" href="news/{{post.type}}/{{post.date | date: '%Y'}}/{{post.date | date: '%m'}}/{{post.date | date: '%d'}}/{{post.subtitle}}.html">
+        - {{post.title}} ({{post.date | date: "%Y-%m-%d" }})
+        </a><br/>
           {{post.excerpt}}</p>
           {% assign post_count = post_count | plus: 1 %}
           {% break %}
