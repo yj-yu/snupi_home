@@ -12,7 +12,7 @@ social:
 
 
 fields:
-    - name : machine learning and systems
+    - name : Machine Learning and Systems
 
 publications:
 social:

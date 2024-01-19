@@ -14,8 +14,8 @@ social:
 
 
 fields:
-    - name : multimodal learning
-    - name : alignment research
+    - name : Multimodal Learning
+    - name : Alignment Research
 publications:
 
 ---

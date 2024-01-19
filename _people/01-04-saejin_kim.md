@@ -9,7 +9,7 @@ email: jerry0110@yonsei.ac.kr
 emoji: 😭
 fields:
     - name : Visual Reasoning
-    - name : Multimodal learning
+    - name : Multimodal Learning
 
 social:
   - title: home

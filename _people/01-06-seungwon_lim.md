@@ -8,9 +8,9 @@ permalink: people/seungwon.html
 email: sngwon@yonsei.ac.kr
 emoji: 🤗
 fields:
-    - name : VL understanding
+    - name : VL Understanding
     - name : LLM
-    - name : text generation
+    - name : Robotics
 
 
 social:

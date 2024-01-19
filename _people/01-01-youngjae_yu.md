@@ -11,8 +11,8 @@ email: yjy@yonsei.ac.kr
 
 fields:
     - name : Perception ∩ Language
-    - name : Commonsense reasoning
-    - name : Multimodal perception for AI
+    - name : Commonsense Reasoning
+    - name : Multimodal Perception for AI
 
 social:
   - title: home

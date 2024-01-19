@@ -13,9 +13,9 @@ social:
     url: younghanstark.github.io
 
 fields:
-    - name : vision-language model
-    - name : representation learning
-    - name : quantization
+    - name : Vision-Language Model
+    - name : Representation Learning
+    - name : Quantization
  
 
 publications:

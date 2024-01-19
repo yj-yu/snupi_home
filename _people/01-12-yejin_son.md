@@ -8,10 +8,10 @@ position: "Master Student"
 permalink: people/yejin_son.html
 email: yejinson@yonsei.ac.kr
 fields:
-    - name : commonsense reasoning
-    - name : multimodal learning
-    - name : ai safety
-    - name : alignment research
+    - name : Commonsense reasoning
+    - name : Multimodal learning
+    - name : AI safety
+    - name : Alignment research
 social:
   - title: home
     url: people/yejin_son.html

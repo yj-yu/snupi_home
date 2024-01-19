@@ -9,7 +9,7 @@ permalink: people/sungje.html
 email: hotpoem@gmail.com
 
 fields:
-    - name : Multimodal learning
+    - name : Multimodal Learning
 
 
 social:
