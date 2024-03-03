@@ -1,8 +1,8 @@
 ---
 layout: people-detail
 section-type: gallery
-title: "dinner3"
-description: dinner party
-img-filename: dinner3.jpg
+title: "Christmas"
+description: 🎄Merry Christmas🎄
+img-filename: christmas.jpg
 year: 2023
 ---
