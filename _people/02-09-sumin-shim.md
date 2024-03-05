@@ -4,7 +4,7 @@ section-type: people
 fullname: "Sumin Shim"
 img-filename: shim_sumin.jpg
 emoji: 😊
-position: "Undergraduate Intern"
+position: "Intern"
 permalink: people/sumin.html
 
 social:

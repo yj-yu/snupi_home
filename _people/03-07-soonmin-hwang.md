@@ -4,7 +4,7 @@ section-type: people
 fullname: "Soonmin Hwang"
 img-filename: 
 emoji: 🐉
-position: "Undergraduate Intern"
+position: "Intern"
 permalink: people/soonmin.html
 email: smsm0307@yonsei.ac.kr
 

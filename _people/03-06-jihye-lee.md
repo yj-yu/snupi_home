@@ -4,7 +4,7 @@ section-type: people
 fullname: "Jihye Lee"
 img-filename: 
 emoji: 🐈
-position: "Undergraduate Intern"
+position: "Intern"
 permalink: people/jihye.html
 email: 1109penguin@gmail.com
 

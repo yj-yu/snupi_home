@@ -2,10 +2,10 @@
 layout: people-detail
 section-type: people
 fullname: "Sungwoong Kim"
-img-filename: 
+img-filename: kim_sungwoong.jpg
 emoji: 🥁
-position: "Undergraduate Intern"
-permalink: people/chanyoung.html
+position: "Master Student"
+permalink: people/sungwoong.html
 email: sukim961@gmail.com
 
 social:

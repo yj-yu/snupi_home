@@ -4,7 +4,7 @@ section-type: people
 fullname: "Seungju Han"
 img-filename: han_seungju.jpg
 emoji: 🤸
-position: "Undergraduate Intern"
+position: "Intern"
 permalink: people/seungju.html
 email: wade3han@snu.ac.kr
 

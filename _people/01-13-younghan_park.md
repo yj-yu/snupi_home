@@ -4,7 +4,7 @@ section-type: people
 fullname: "Younghan Park"
 img-filename: park_younghan.png
 emoji: 🐸
-position: "Undergraduate Intern"
+position: "Intern"
 permalink: people/younghan.html
 email: younghanpark@yonsei.ac.kr
 
