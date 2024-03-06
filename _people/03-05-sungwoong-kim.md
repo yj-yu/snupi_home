@@ -2,7 +2,7 @@
 layout: people-detail
 section-type: people
 fullname: "Sungwoong Kim"
-img-filename: kim_sungwoong.jpg
+img-filename: kim_sungwoong.png
 emoji: 🥁
 position: "Master Student"
 permalink: people/sungwoong.html
