@@ -10,6 +10,10 @@ author:
   - name: "Seungju Han"
   - name: "Youngjae Yu"
   - name: "Tae-Hyun Oh"
+external:
+  - title: PDF
+    url: https://arxiv.org/abs/2312.09818
+
 
 img: /images/papers/smile.png
 

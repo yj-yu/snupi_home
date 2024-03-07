@@ -14,7 +14,9 @@ author:
   - name: "Dongha Lee"
   - name: "Dongyeop Kang"
   - name: "Jinyoung Yeo"
-  
+external:
+  - title: PDF
+    url: https://arxiv.org/abs/2310.09343
 
 img: /images/papers/dialog_COT_distillation.png
 

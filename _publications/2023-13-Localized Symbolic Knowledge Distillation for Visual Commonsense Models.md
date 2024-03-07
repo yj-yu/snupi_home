@@ -17,7 +17,11 @@ author:
   - name: "Ali Farhadi"
   - name: "Yejin Choi"
   - name: "Qiuyuan Huang"
-  
+
+external:
+  - title: PDF
+    url: https://arxiv.org/abs/2312.04837
+
 
 img: /images/papers/mmsymkd.png
 

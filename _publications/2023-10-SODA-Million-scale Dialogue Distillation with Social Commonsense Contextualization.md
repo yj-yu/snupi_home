@@ -21,7 +21,7 @@ author:
 img: /images/papers/soda.png
 external:
   - title: PDF
-    url: https://arxiv.org/pdf/2212.10465.pdf
+    url: https://arxiv.org/abs/2212.10465
 keywords:
   - name: NLP
   - name: Commonsense Knowledge

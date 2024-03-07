@@ -11,7 +11,10 @@ author:
   - name: "Bernard B W Yang"
   - name: "Giyeong Oh"
   - name: "Yanmin Gong"
-  
+external:
+  - title: PDF
+    url: https://arxiv.org/abs/2309.14859
+
 
 img: /images/papers/LyCORIS.png
 
