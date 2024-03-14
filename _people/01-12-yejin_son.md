@@ -6,7 +6,7 @@ emoji: 🔥
 img-filename: son_yejin.jpg
 position: "Master Student"
 permalink: people/yejin_son.html
-email: yejinson@yonsei.ac.kr
+email: yejinhand@yonsei.ac.kr
 fields:
     - name : Commonsense reasoning
     - name : Multimodal learning
