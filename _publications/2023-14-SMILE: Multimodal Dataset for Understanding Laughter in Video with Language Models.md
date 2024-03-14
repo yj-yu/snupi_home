@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "SMILE: Multimodal Dataset for Understanding Laughter in Video with Language Models"
-conference: 
+conference: NAACL2024
 year: 2023
 author:
   - name: "Hyun Lee"
