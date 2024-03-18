@@ -2,7 +2,7 @@
 layout: teachings
 section-type: teachings
 name: "Advanced Video Processing"
-code: ICD6001
+code: AAI5012
 year: 2023
 student: "graduate"
 
