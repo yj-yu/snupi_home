@@ -2,7 +2,7 @@
 layout: teachings
 section-type: teachings
 name: "Recent advances in AI"
-code: AAI5010
+code: ICD6001
 year: 2024
 student: "graduate"
 
