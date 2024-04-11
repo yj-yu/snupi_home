@@ -15,7 +15,7 @@ author:
 
 img: /images/papers/zavis.jpg
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/pdf/2209.08803.pdf
 
 keywords:

@@ -15,7 +15,7 @@ author:
 
 img: /images/papers/aaai18_vrsumm_300x122.jpg
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/pdf/1801.10312.pdf
 keywords:
   - name: Computer Vision

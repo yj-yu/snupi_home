@@ -19,7 +19,7 @@ author:
 
 img: /images/papers/esper.png
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/pdf/2205.12630.pdf
 
 keywords:

@@ -20,7 +20,7 @@ author:
 
 img: /images/papers/soda.png
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/abs/2212.10465
 keywords:
   - name: NLP

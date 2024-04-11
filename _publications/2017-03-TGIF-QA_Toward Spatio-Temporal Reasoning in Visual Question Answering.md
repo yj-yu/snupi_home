@@ -14,7 +14,7 @@ author:
 
 img: /images/papers/cvpr17_tgifqa_top-300x226.gif
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/pdf/1704.04497.pdf
   - title: Project
     url: https://github.com/YunseokJANG/tgif-qa

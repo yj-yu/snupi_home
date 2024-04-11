@@ -8,7 +8,7 @@ author:
   - name: "Jiwan Chung"
   - name: "Youngjae Yu"
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/abs/2310.09767
 
 

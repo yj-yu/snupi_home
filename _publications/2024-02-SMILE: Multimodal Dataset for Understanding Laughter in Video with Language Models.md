@@ -11,7 +11,7 @@ author:
   - name: "Youngjae Yu"
   - name: "Tae-Hyun Oh"
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/abs/2312.09818
 
 

@@ -16,7 +16,7 @@ author:
 img: /images/papers/symbolic knowledge distillation.png
 
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/pdf/2306.14050.pdf
 keywords:
   - name: NLP

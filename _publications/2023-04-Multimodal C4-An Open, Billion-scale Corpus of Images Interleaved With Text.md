@@ -18,7 +18,7 @@ author:
 
 img: /images/papers/mmc4.jpg
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/pdf/2304.06939.pdf
 keywords:
   - name: Computer Vision

@@ -17,7 +17,7 @@ author:
 
 img: /images/papers/TimesVector.png
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://pubmed.ncbi.nlm.nih.gov/28096084/
 
 keywords:

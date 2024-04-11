@@ -12,7 +12,7 @@ author:
   - name: "Giyeong Oh"
   - name: "Yanmin Gong"
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/abs/2309.14859
 
 

@@ -62,9 +62,17 @@ count_year_min: 2016
             <h3 style="margin-bottom: 0.3rem;">{{paper.name}}</h3>
             <p style="margin-bottom: 0.3rem;">
               {% if paper.author %}
-                {% for member in paper.author %}
-                  {% assign temp = false %}{% if member.link %}<a href="{{member.link}}">{% else %}{% for member2 in site.people %}{% if member.name == member2.fullname %}{% for social in member2.social %}{% if social.title == "home" %}{% assign temp = true %}<a href="{{social.url}}">{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}{{member.name}}{% if member.link or temp %}</a>{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 2 %}, {% endif %}{% if forloop.rindex == 2 %} and {% endif %}
-                {% endfor %}
+                {% if paper.name == "HyperCLOVA X Technical Report" %}
+                  
+                  {% for member in paper.author %}
+                    {% assign temp = false %}{% if member.link %}<a href="{{member.link}}">{% else %}{% for member2 in site.people %}{% if member.name == member2.fullname %}{% for social in member2.social %}{% if social.title == "home" %}{% assign temp = true %}<a href="{{social.url}}">{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}{{member.name}}{% if member.link or temp %}</a>{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 2 %}, {% endif %}{% if forloop.rindex == 2 %} and {% endif %}
+                  {% endfor %}
+                  contributed.
+                {% else %}
+                  {% for member in paper.author %}
+                    {% assign temp = false %}{% if member.link %}<a href="{{member.link}}">{% else %}{% for member2 in site.people %}{% if member.name == member2.fullname %}{% for social in member2.social %}{% if social.title == "home" %}{% assign temp = true %}<a href="{{social.url}}">{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}{{member.name}}{% if member.link or temp %}</a>{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 2 %}, {% endif %}{% if forloop.rindex == 2 %} and {% endif %}
+                  {% endfor %}
+                {% endif %}
                 {% if paper.equal %}
                   (* equal contribution)
                 {% endif%}
