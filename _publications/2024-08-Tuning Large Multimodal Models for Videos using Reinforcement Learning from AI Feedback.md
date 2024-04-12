@@ -8,7 +8,6 @@ author:
   - name: "Daechul Ahn"
   - name: "Yura Choi"
   - name: "Youngjae Yu"
-  - name: "Minjoon Seo"
   - name: "Dongyeop Kang"
   - name: "Jonghyun Choi"
 
