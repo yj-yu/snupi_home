@@ -23,8 +23,8 @@ external:
 img: /images/papers/emotional.png
 
 keywords:
-  - name: korean-LLM
-  - name: Naver 
+  - name: NLP
+  - name: Conversation 
 
 display: False
 ---

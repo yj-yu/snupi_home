@@ -23,8 +23,8 @@ img: /images/papers/dpo.png
 
 keywords:
   - name: NLP
-  - name: LLM
-  - name: Conversation
+  - name: Reward Modeling
+  
   
 
 display: False
