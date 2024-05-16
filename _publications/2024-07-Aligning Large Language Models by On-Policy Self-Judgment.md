@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Aligning Large Language Models by On-Policy Self-Judgment"
-conference: 
+conference: ACL2024
 year: 2024
 author:
   - name: "Sangkyu Lee"

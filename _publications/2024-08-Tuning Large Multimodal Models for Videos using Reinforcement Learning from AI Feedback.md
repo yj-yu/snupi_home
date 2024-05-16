@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Tuning Large Multimodal Models for Videos using Reinforcement Learning from AI Feedback"
-conference: 
+conference: ACL2024
 year: 2024
 author:
   - name: "Daechul Ahn"

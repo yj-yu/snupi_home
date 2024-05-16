@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Can Large Language Models be Good Emotional Supporter? Mitigating Preference Bias on Emotional Support Conversation"
-conference: 
+conference: ACL2024
 year: 2024
 author:
   - name: "Dongjin Kang"
