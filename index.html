@@ -537,7 +537,7 @@ slides:
     <div class='medium-6 columns'>
     {% assign post_count = 0 %}
     {% for post in site.news reversed %}
-      {% if post_count >= 5 %}
+      {% if post_count >= 10 %}
         {% break %}
       {% endif %}
       {% for c in post.categories %}
@@ -557,11 +557,12 @@ slides:
     <div class='medium-6 columns'>
     {% assign post_count = 0 %}
     {% for post in site.news reversed %}
-      {% if post_count >= 4 %}
+      {% if post_count >= 10 %}
         {% break %}
       {% endif %}
       {% for c in post.categories %}
         {% if 'others' == c %}
+        
         <p><a style="color:black;" href="news/{{post.type}}/{{post.date | date: '%Y'}}/{{post.date | date: '%m'}}/{{post.date | date: '%d'}}/{{post.subtitle}}.html">
         - {{post.title}} ({{post.date | date: "%Y-%m-%d" }})
         </a><br/>
