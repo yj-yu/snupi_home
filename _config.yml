@@ -18,6 +18,7 @@ collections:
     output: false
   news:
     output: false
+
 # Lab Info.
 # Postal address (add as many lines as necessary)
 address:
