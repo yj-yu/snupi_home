@@ -8,8 +8,9 @@ position: "Intern"
 permalink: people/minseo.html
 email: min99830@yonsei.ac.kr
 
-
-
+social:
+  - title: home
+    url: people/minseo.html
 
 fields:
     - name : Vision-language

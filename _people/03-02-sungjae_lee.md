@@ -13,4 +13,6 @@ fields:
 
 
 social:
+  - title: home
+    url: people/sungjae.html
 ---

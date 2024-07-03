@@ -57,14 +57,14 @@ section_id: people
 
     <div class="medium-12 columns">
       <h2>Publication</h2>
-      <ul>
+      <!-- <ul>
       {% for publication in page.publications reserved %}
         <li>{{publication.name}}</li>
       {% endfor %}
-      </ul>
+      </ul> -->
 
 
-      <!--
+      
       <ul>
       {% for paper in site.publications reversed %}
         {% assign temp = false %}
@@ -75,17 +75,19 @@ section_id: people
         {% endfor %}
         {% if temp %}
           <li>
+            
+            {{paper.name}} <br>
             {% if paper.author %}
               {% for member in paper.author %}
                 {% if member.name == page.fullname %}<b>{% endif %}{{member.name}}{% if member.name == page.fullname %}</b>{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex != 2 %}, {% endif %}{% if forloop.rindex == 2 %} and {% endif %}
               {% endfor %}
             {% endif %}
-            {{paper.name}}, {{paper.book}}. 
+            
           </li>
         {% endif %}
       {% endfor %}
       </ul>
-      -->
+     
     </div>
 
 

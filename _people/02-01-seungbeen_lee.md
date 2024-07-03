@@ -9,7 +9,8 @@ permalink: people/seungbeen.html
 email: iyy1112@yonsei.ac.kr
 
 social:
-
+  - title: home
+    url: people/seungbeen.html
 
 fields:
     - name : NLP
