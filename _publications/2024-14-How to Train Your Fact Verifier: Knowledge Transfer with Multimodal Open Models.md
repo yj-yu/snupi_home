@@ -1,7 +1,7 @@
 ---
 layout: publications
 section-type: publications
-name: "ActionSwitch: Class-agnostic Detection of Simultaneous Actions in Streaming Videos"
+name: "How to Train Your Fact Verifier: Knowledge Transfer with Multimodal Open Models"
 conference: 
 year: 2024
 author:
