@@ -12,7 +12,8 @@ social:
 
 
 fields:
-    - name : Machine Learning and Systems
+    - name : Safe AI
+    - name : Interpretability
 
 publications:
 social:
