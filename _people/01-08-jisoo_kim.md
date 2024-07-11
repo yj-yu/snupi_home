@@ -3,7 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Jisoo Kim"
 img-filename: kim_jisoo.png
-emoji: 👀
+emoji: 👑
 position: "Master Student"
 permalink: people/jisoo.html
 email: jisoo6687@yonsei.ac.kr

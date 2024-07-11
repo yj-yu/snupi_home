@@ -10,7 +10,9 @@ email: iyy1112@yonsei.ac.kr
 
 social:
   - title: home
-    url: people/seungbeen.html
+    url: https://seunbite.github.io/
+
+
 
 fields:
     - name : NLP
