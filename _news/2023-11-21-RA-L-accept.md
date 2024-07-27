@@ -1,5 +1,4 @@
 ---
-
 layout: news-detail
 title: Congratulations! Paper Accepted at RA-L/ICRA2024
 subtitle: RA-L/ICRA-accept
