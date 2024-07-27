@@ -23,7 +23,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2407.09779
 
-img: /images/papers/layoutandretouch.jpg
+img: /images/papers/layoutandretouch.png
 
 keywords:
   - name: Image Generation
