@@ -70,8 +70,10 @@ section_id: people
         {% assign temp = false %}
         {% for a in paper.author %}
           {% if a.name == page.fullname %}
-            {% assign temp = true %}
-          {% endif %}
+          {% if a.name != "Yejin Choi" %}
+              {% assign temp = true %}
+            {% endif %}
+            {% endif %}
         {% endfor %}
         {% if temp %}
           <li>
