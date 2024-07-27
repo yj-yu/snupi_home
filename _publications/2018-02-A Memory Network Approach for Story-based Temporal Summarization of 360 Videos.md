@@ -14,7 +14,7 @@ author:
 
 img: /images/papers/cvpr18_pfmn-300x150.png
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/pdf/1805.02838.pdf
   - title: Project
     url: https://github.com/rowanz/merlot

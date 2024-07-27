@@ -9,9 +9,9 @@ email: junhyeok@yonsei.ac.kr
 emoji: ✌️
 
 fields:
-    - name : visual commonsense reasoning
-    - name : multimodal pretraining
-    - name : vision+language
+    - name : Visual Commonsense Reasoning
+    - name : Multimodal Pretraining
+    - name : Vision+Language
 social:
   - title: home
     url: people/junhyeok.html

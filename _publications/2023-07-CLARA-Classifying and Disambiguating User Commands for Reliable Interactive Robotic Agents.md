@@ -16,7 +16,7 @@ author:
 
 img: /images/papers/CLARA.png
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/abs/2306.10376
 
 keywords:

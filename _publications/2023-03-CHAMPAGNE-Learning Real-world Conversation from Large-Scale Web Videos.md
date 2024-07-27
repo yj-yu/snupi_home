@@ -13,7 +13,7 @@ author:
 
 img: /images/papers/CHAMPAGNE.png
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/pdf/2303.09713.pdf
 
 keywords:

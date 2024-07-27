@@ -15,7 +15,7 @@ author:
 
 img: /images/papers/cvpr17_gazecap_top-300x218.gif
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/pdf/1707.06029.pdf
 
 keywords:

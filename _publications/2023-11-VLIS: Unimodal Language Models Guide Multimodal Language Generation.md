@@ -7,6 +7,9 @@ year: 2023
 author:
   - name: "Jiwan Chung"
   - name: "Youngjae Yu"
+external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2310.09767
 
 
 img: /images/papers/vlis.png

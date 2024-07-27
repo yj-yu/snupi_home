@@ -4,7 +4,7 @@ section-type: people
 fullname: "Seungju Han"
 img-filename: han_seungju.jpg
 emoji: 🤸
-position: "Undergraduate Intern"
+position: "Intern"
 permalink: people/seungju.html
 email: wade3han@snu.ac.kr
 
@@ -14,8 +14,8 @@ social:
 
 
 fields:
-    - name : multimodal learning
-    - name : alignment research
+    - name : Multimodal Learning
+    - name : Alignment Research
 publications:
 
 ---

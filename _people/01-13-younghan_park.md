@@ -4,7 +4,7 @@ section-type: people
 fullname: "Younghan Park"
 img-filename: park_younghan.png
 emoji: 🐸
-position: "Undergraduate Intern"
+position: "Intern"
 permalink: people/younghan.html
 email: younghanpark@yonsei.ac.kr
 
@@ -13,9 +13,9 @@ social:
     url: younghanstark.github.io
 
 fields:
-    - name : vision-language model
-    - name : representation learning
-    - name : quantization
+    - name : Vision-Language Model
+    - name : Representation Learning
+    - name : Quantization
  
 
 publications:

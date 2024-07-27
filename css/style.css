@@ -4252,6 +4252,59 @@ img {
   color: #fed136;
 }
 
+.member-profile {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.2;
+  color: #333333; /* Primary Text Color */
+  background-color: #ffffff; /* Light Background */
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+
+.member-profile h3 {
+  font-size: 18px; /* Larger Font Size for Member's Name */
+  font-weight: bold; /* Bold for Member's Name */
+  color: #000000; /* Color for Member's Name */
+}
+
+.member-profile p {
+  font-size: 14px; /* Smaller Font Size for Explanation */
+  font-weight: normal; /* Normal Weight for Explanation */
+  color: #6e6d6d; /* Color for Explanation */
+}
+.member-profile p p{
+  font-size: 14px; /* Smaller Font Size for Explanation */
+  font-weight: bold; /* Normal Weight for Explanation */
+  color: #6e6d6d; /* Color for Explanation */
+}
+
+.member-profile a {
+  color: #000000; /* Link Color */
+  text-decoration: none;
+  font-weight: 500; /* Medium Bold for Links */
+}
+
+.member-profile a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .member-profile {
+      padding: 15px;
+  }
+
+  .member-profile h3 {
+      font-size: 20px; /* Adjust Font Size for Smaller Screens */
+  }
+
+  .member-profile p {
+      font-size: 14px; /* Adjust Font Size for Smaller Screens */
+  }
+}
+
+
+
 .fa-stack {
   position: relative;
   display: inline-block;

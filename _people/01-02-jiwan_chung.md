@@ -15,8 +15,8 @@ publications:
     - name: Youngjae Yu, Jongseok Kim, Heeseung Yun, Jiwan Chung and Gunhee Kim, Character Grounding and Re-Identification in Story of Videos and Text Descriptions, .
 
 fields:
-    - name : multimodal learning
-    - name : LM analysis
+    - name : Multimodal Learning
+    - name : LM Analysis
 social:
   - title: home
     url: https://jiwanchung.github.io/

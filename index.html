@@ -429,7 +429,9 @@ slides:
   <header class="bg-primary bg-gradient header-padding text-white">
     <div class="container px-4 text-center">
         <h1 class="index_welcome">Welcome to MIR Lab!</h1>
-        We mainly focus on <b>Computer Vision,</b> <b>Natural Language Processing.</b> <a href="publications.html">See more</a> about our research topics. 
+        We mainly focus on <b>Computer Vision,</b> <b>Natural Language Processing,</b> and <b>Multimodal Intelligence for Robot, Embodied AI. </b><br>
+        
+        <a href="publications.html">See more</a> about our research topics. 
         <!--
         <p class="leads">We are looking for passionate researcher. <br>Feel free to contact us youngjae4yu@gmail.com </p>
         -->
@@ -535,16 +537,14 @@ slides:
     <div class='medium-6 columns'>
     {% assign post_count = 0 %}
     {% for post in site.news reversed %}
-      {% if post_count >= 5 %}
+      {% if post_count >= 10 %}
         {% break %}
       {% endif %}
       {% for c in post.categories %}
-        {% if 'papers' == c %}
-        
+        {% if 'papers' == c %} 
         <p><a style="color:black;" href="news/{{post.type}}/{{post.date | date: '%Y'}}/{{post.date | date: '%m'}}/{{post.date | date: '%d'}}/{{post.subtitle}}.html">
           - {{post.title}} ({{post.date | date: "%Y-%m-%d" }})
-          </a>
-          <br/>
+        </a><br/>
           {{post.excerpt}}</p>
           {% assign post_count = post_count | plus: 1 %}
           {% break %}
@@ -557,12 +557,15 @@ slides:
     <div class='medium-6 columns'>
     {% assign post_count = 0 %}
     {% for post in site.news reversed %}
-      {% if post_count >= 4 %}
+      {% if post_count >= 10 %}
         {% break %}
       {% endif %}
       {% for c in post.categories %}
         {% if 'others' == c %}
-          <p><a style="color:black;" href="{{post.url}}">- {{post.title}} ({{post.date | date: "%Y-%m-%d" }})</a><br/>
+        
+        <p><a style="color:black;" href="news/{{post.type}}/{{post.date | date: '%Y'}}/{{post.date | date: '%m'}}/{{post.date | date: '%d'}}/{{post.subtitle}}.html">
+        - {{post.title}} ({{post.date | date: "%Y-%m-%d" }})
+        </a><br/>
           {{post.excerpt}}</p>
           {% assign post_count = post_count | plus: 1 %}
           {% break %}

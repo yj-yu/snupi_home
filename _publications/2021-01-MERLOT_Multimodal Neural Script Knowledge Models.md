@@ -18,7 +18,7 @@ author:
 
 img: /images/papers/merlot.png
 external:
-  - title: PDF
+  - title: Arxiv
     url: https://arxiv.org/pdf/2106.02636.pdf
   - title: Code
     url: https://github.com/rowanz/merlot  

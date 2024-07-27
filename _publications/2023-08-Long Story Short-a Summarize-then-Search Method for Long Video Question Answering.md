@@ -9,7 +9,9 @@ author:
   - name: "Youngjae Yu"
 
 img: /images/papers/bmvc_lss.PNG
-
+external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2311.01233
 keywords:
   - name: VideoQA
   - name: multimodal

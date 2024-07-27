@@ -2,7 +2,7 @@
 layout: default
 title: Publications
 section_id: publications
-count_year_max: 2023
+count_year_max: 2024
 count_year_min: 2016
 ---
 
@@ -62,9 +62,32 @@ count_year_min: 2016
             <h3 style="margin-bottom: 0.3rem;">{{paper.name}}</h3>
             <p style="margin-bottom: 0.3rem;">
               {% if paper.author %}
-                {% for member in paper.author %}
-                  {% assign temp = false %}{% if member.link %}<a href="{{member.link}}">{% else %}{% for member2 in site.people %}{% if member.name == member2.fullname %}{% for social in member2.social %}{% if social.title == "home" %}{% assign temp = true %}<a href="{{social.url}}">{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}{{member.name}}{% if member.link or temp %}</a>{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 2 %}, {% endif %}{% if forloop.rindex == 2 %} and {% endif %}
-                {% endfor %}
+                <!--하이퍼클로버만 조금 다르게-->
+                {% if paper.name == "HyperCLOVA X Technical Report" %}
+                  {% for member in paper.author %}
+                    {% assign temp = false %}{% if member.link %}<a href="{{member.link}}">{% else %}{% for member2 in site.people %}{% if member.name == member2.fullname %}{% for social in member2.social %}{% if social.title == "home" %}{% assign temp = true %}<a href="{{social.url}}">{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}{{member.name}}{% if member.link or temp %}</a>{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 1 %}, {% endif %}
+                  {% endfor %}
+                  contributed.
+                <!--하이퍼클로버 외의 정상적인 상황-->
+                {% else %}
+                  {% for member in paper.author %}
+                    {% assign temp = false %}
+                    {% if member.link %}<a href="{{member.link}}"></a>
+                    {% else %}
+                      {% for member2 in site.people %}
+                        {% if member.name == member2.fullname %}
+                        {% for social in member2.social %}
+                          {% if social.title == "home" %}
+                          {% assign temp = true %}<a href="{{social.url}}">
+                          {% endif %}
+                        {% endfor %}
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}{{member.name}}
+                    
+                    {% if member.link or temp %}</a>{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 1 %}, {% endif %}
+                  {% endfor %}
+                {% endif %}
                 {% if paper.equal %}
                   (* equal contribution)
                 {% endif%}
