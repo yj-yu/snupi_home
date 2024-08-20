@@ -8,7 +8,9 @@ position: "Intern"
 permalink: people/wooseok.html
 email: justin_seo@yonsei.ac.kr
 
-
+social:
+  - title: home
+    url: people/wooseok.html
 
 
 fields:

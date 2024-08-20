@@ -83,9 +83,7 @@ count_year_min: 2016
                         {% endfor %}
                         {% endif %}
                       {% endfor %}
-                    {% endif %}{{member.name}}
-                    
-                    {% if member.link or temp %}</a>{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 1 %}, {% endif %}
+                    {% endif %}{{member.name}}{% if member.link or temp %}</a>{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 1 %}, {% endif %}
                   {% endfor %}
                 {% endif %}
                 {% if paper.equal %}
