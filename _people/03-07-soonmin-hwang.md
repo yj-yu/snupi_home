@@ -9,6 +9,9 @@ permalink: people/soonmin.html
 email: smsm0307@yonsei.ac.kr
 
 social:
+  - title: home
+    url: people/soonmin.html
+
 
  
 fields:

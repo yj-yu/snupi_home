@@ -1,0 +1,26 @@
+---
+layout: news-detail
+title: Congratulations! 4 Papers Accepted at ACL2024
+subtitle: ACL-accept2
+type: papers
+
+emoji: 🎉
+year: 2024
+date: 2024-05-16
+summary: "이상규 학생이 참여한 논문이 ACL2024에 accept되었습니다."
+body: "
+<br>
+Tuning Large Multimodal Models for Videos using Reinforcement Learning from AI Feedback
+
+Aligning Large Language Models by On-Policy Self-Judgment
+
+Pearl: A Review-driven Persona-Knowledge Grounded Conversational Recommendation Dataset
+
+Can Large Language Models be Good Emotional Supporter? Mitigating Preference Bias on Emotional Support Conversation
+
+이 ACL2024에 accept되었습니다. 진심으로 축하드립니다!
+
+  "
+excerpt: >
+categories: news papers
+---
