@@ -4,7 +4,7 @@ section-type: people
 fullname: "Taeyong Lee"
 img-filename: lee_taeyong.png
 emoji: ♻️
-position: "Visiting Scholar"
+position: "Intern"
 permalink: people/taeyong.html
 email: aksu7677@gmail.com
 
