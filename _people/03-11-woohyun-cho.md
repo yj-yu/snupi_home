@@ -2,7 +2,7 @@
 layout: people-detail
 section-type: people
 fullname: "Woohyun Cho"
-img-filename: 
+img-filename: cho_woohyun.jpg
 emoji: 🤔
 position: "Ph.D. Student"
 permalink: people/woohyun.html
