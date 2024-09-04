@@ -10,7 +10,7 @@ email: yejinchoi@yonsei.ac.kr
 
 fields:
     - name : Multimodal Learning
-    - name : HCI
+    - name : AI driven Design
 
 social:
 ---

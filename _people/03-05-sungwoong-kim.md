@@ -12,8 +12,9 @@ social:
 
 
 fields:
-    - name : Computer Vision
     - name : Multimodal Learning
+    - name : Robotics
+    - name : Visual Representation
 publications:
 
 ---
