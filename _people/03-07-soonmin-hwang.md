@@ -2,9 +2,9 @@
 layout: people-detail
 section-type: people
 fullname: "Soonmin Hwang"
-img-filename: 
-emoji: 🐉
-position: "Intern"
+img-filename: hwang_soonmin.jpg
+emoji: 📘
+position: "Master Student"
 permalink: people/soonmin.html
 email: smsm0307@yonsei.ac.kr
 
@@ -16,8 +16,8 @@ social:
  
 fields:
     - name : Multimodal Learning
-    - name : Representation Learning
-        
+    - name : Virtual Human
+    - name : 3D
 publications:
 
 ---
