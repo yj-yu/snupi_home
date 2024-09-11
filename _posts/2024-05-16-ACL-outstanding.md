@@ -8,8 +8,7 @@ body: "
 <br>
 Can Large Language Models be Good Emotional Supporter? Mitigating Preference Bias on Emotional Support Conversation <br>
 
-유영재 교수님이 참여지도한 논문이 ACL2024에서 Outstanding Paper에 선정되었습니다. <br>
-이로써 유영재 교수님은 NLP 분야의 최고 권위의 학회인 ACL, NAACL, EMNLP 에서 모두 Outstanding Paper를 수상하게 되었습니다!
+유영재 교수님이 참여지도한 논문이 ACL2024에서 Outstanding Paper에 선정되었습니다. 축하드립니다!<br>
 
   "
 excerpt: >
