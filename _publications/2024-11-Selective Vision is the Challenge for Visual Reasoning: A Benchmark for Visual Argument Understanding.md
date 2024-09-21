@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Selective Vision is the Challenge for Visual Reasoning: A Benchmark for Visual Argument Understanding"
-conference: 
+conference: EMNLP2024
 year: 2024
 author:
   - name: "Jiwan Chung"

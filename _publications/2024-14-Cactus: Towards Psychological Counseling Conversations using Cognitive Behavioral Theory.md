@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "CACTUS: Towards Psychological Counseling Conversations using Cognitive Behavioral Theory"
-conference: 
+conference: EMNLP2024 (findings)
 year: 2024
 author:
   - name: "Suyeon Lee"

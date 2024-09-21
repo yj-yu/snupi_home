@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Language Models as Compilers: Simulating Pseudocode Execution Improves Algorithmic Reasoning in Language Models"
-conference: 
+conference: EMNLP2024
 year: 2024
 author:
   - name: "Hyungjoo Chae"
