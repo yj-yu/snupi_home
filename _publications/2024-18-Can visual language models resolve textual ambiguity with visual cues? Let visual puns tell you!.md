@@ -17,7 +17,7 @@ author:
   
 external:
   
-img: /images/papers/comingsoon.jpg
+img: /images/papers/visualpun.png
 
 keywords:
   - name: Multimodal

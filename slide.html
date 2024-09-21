@@ -190,7 +190,6 @@
     background-size: cover;
     will-change: transform;
   }
-  
   .slide:nth-child(1) {
     left: 0%;
   }
@@ -201,46 +200,58 @@
   .slide:nth-child(1) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
-  
 
+  
   .slide:nth-child(2) {
     left: 100%;
   }
   .slide:nth-child(2) .slide__bg {
     left: -50%;
-    background-image: url("images/slides/vlis.png");
+    background-image: url("images/slides/normlense.png");
   }
   .slide:nth-child(2) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
+
+
+
+
+
+
+
+
+
   .slide:nth-child(3) {
     left: 200%;
   }
   .slide:nth-child(3) .slide__bg {
     left: -100%;
-    background-image: url("/images/slides/esper.jpg");
+    background-image: url("images/slides/normlense.png");
   }
   .slide:nth-child(3) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
+  
 
   .slide:nth-child(4) {
     left: 300%;
   }
   .slide:nth-child(4) .slide__bg {
     left: -150%;
-    background-image: url("images/slides/champagne.png");
+    background-image: url("images/slides/vlis.png");
   }
   .slide:nth-child(4) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
+
+
 
   .slide:nth-child(5) {
     left: 400%;
   }
   .slide:nth-child(5) .slide__bg {
     left: -200%;
-    background-image: url("images/slides/23_mmc4.png");
+    background-image: url("/images/slides/esper.jpg");
   }
   .slide:nth-child(5) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -251,17 +262,18 @@
   }
   .slide:nth-child(6) .slide__bg {
     left: -250%;
-    background-image: url("images/slides/longvid.png");
+    background-image: url("images/slides/champagne.png");
   }
   .slide:nth-child(6) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
+
   .slide:nth-child(7) {
     left: 600%;
   }
   .slide:nth-child(7) .slide__bg {
     left: -300%;
-    background-image: url("images/slides/symbolicCOT.png");
+    background-image: url("images/slides/23_mmc4.png");
   }
   .slide:nth-child(7) .slide__overlay-path {
     fill: rgb(33, 90, 151);
@@ -272,22 +284,23 @@
   }
   .slide:nth-child(8) .slide__bg {
     left: -350%;
-    background-image: url("images/slides/soda.png");
+    background-image: url("images/slides/longvid.png");
   }
   .slide:nth-child(8) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
-
   .slide:nth-child(9) {
     left: 800%;
   }
   .slide:nth-child(9) .slide__bg {
     left: -400%;
-    background-image: url("images/slides/emnlp22-prodia.png");
+    background-image: url("images/slides/symbolicCOT.png");
   }
   .slide:nth-child(9) .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
+
+
   .slide__content {
     position: absolute;
     top: 0;
@@ -527,177 +540,229 @@
   
   </head>
   
-  <body translate="no">
+  <body>
     <div class="slider-container">
         <div class="slider-control left inactive"></div>
         <div class="slider-control right"></div>
         <ul class="slider-pagi"></ul>
         <div class="slider">
-          
-
-
-          <div class="slide slide-0 active">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
-              </svg>
-              <div class="slide__text">
-                <br>
-                <p class="bubble_publication_conference">EMNLP2023 </p>
-                <br>
-                
-                <h2 style="display:inline" class="slide__text-heading">Reading Books is Great, But Not if You Are Driving! Visually Grounded Reasoning about Defeasible Commonsense Norms
-                </h2>
-                <p class="slide__text-desc">Seungju Han, Junhyeok Kim, Jack Hessel, Liwei Jiang, Jiwan Chung, Yejin Son, Yejin Choi and Youngjae Yu</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="slide slide-1">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
-              </svg>
-              <div class="slide__text">
-                <br>
-                <p class="bubble_publication_conference">EMNLP2023</p>
-                <br>
-                
-                <h2 style="display:inline" class="slide__text-heading">VLIS: Unimodal Language Models Guide Multimodal Language Generation
-                </h2>
-                <p class="slide__text-desc">Jiwan Chung and Youngjae Yu</p>
-              </div>
-            </div>
-          </div>
-
-
-
-          
-          <div class="slide slide-2">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
-              </svg>
-              <div class="slide__text">
-                <br>
-                <p class="bubble_publication_conference">CVPR2023</p>
-                <br>
-                
-                <h2 style="display:inline" class="slide__text-heading">Fusing Pre-trained Language Models with Multimodal Prompts through Reinforcement Learning
-                </h2>
-                <p class="slide__text-desc">Youngjae Yu, Jiwan Chung, Heeseung Yun, Jack Hessel, Jae Sung Park, Ximing Lu, Prithviraj Ammanabrolu, Rowan Zellers, Ronan Le Bras, Gunhee Kim and Yejin Choi</p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="slide slide-3">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
-              </svg>
-              <div class="slide__text">
-                <br>
-                <p class="bubble_publication_conference">ICCV2023</p>
-                <br>
-                
-                <h2 style="display:inline" class="slide__text-heading">CHAMPAGNE: Learning Real-world Conversation from Large-Scale Web Videos
-                </h2>
-                <p class="slide__text-desc">Seungju Han, Jack Hessel, Nouha Dziri, Yejin Choi and Youngjae Yu</p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="slide slide-4">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
-              </svg>
-              <div class="slide__text">
-                <br>
-                <p class="bubble_publication_conference">NeurIPS2023</p>
-                <br>
-
-                
-                <h2 style="display:inline" class="slide__text-heading">Multimodal C4: An Open, Billion-scale Corpus of Images Interleaved with Text</h2>
-                <p class="slide__text-desc">JWanrong Zhu, Jack Hessel, Anas Awadalla, Samir Yitzhak Gadre, Jesse Dodge, Youngjae Yu, Ludwig Schmidt, William Yang Wang and Yejin Choi</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="slide slide-5">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
-              </svg>
-              <div class="slide__text">
-                <br>
-                <p class="bubble_publication_conference">BMVC2023</p>
-                <br>
-
-                
-                <h2 style="display:inline" class="slide__text-heading">Long Story Short: a Summarize-then-Search Method for Long Video Question Answering</h2>
-                <p class="slide__text-desc">Jiwan Chung and Youngjae Yu</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="slide slide-6">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
-              </svg>
-              <div class="slide__text">
-                <br>
-                <p class="bubble_publication_conference">ACL2023</p>
-                <br>
-                <h2 class="slide__text-heading">Symbolic Chain-of-Thought Distillation: Small Models Can Also "Think" Step-by-Step</h2>
-                <p class="slide__text-desc">Liunian Harold Li, Jack Hessel, Youngjae Yu, Xiang Ren, Kai-Wei Chang and Yejin Choi</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="slide slide-7">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
-              </svg>
-              <div class="slide__text">
-                <br>
-                <p class="bubble_publication_conference">EMNLP2023</p>
-                <br>
-                <h2 class="slide__text-heading">SODA: Million-scale Dialogue Distillation with Social Commonsense Contextualization</h2>
-                <p class="slide__text-desc">Hyunwoo Kim, Jack Hessel, Liwei Jiang, Peter West, Ximing Lu, Youngjae Yu, Pei Zhou, Ronan Le Bras, Malihe Alikhani, Gunhee Kim, Maarten Sap and Yejin Choi</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="slide slide-8">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
-              </svg>
-              <div class="slide__text">
-                <br>
-                <p  class="bubble_publication_conference">EMNLP2022</p>
-                <br>
-                <h2 class="slide__text-heading">ProsocialDialog: A Prosocial Backbone for Conversational Agents</h2>
-                <p class="slide__text-desc">Hyunwoo Kim, Youngjae Yu, Liwei Jiang, Ximing Lu, Daniel Khashabi, Gunhee Kim, Yejin Choi and Maarten Sap</p>
-              </div>
-            </div>
-          </div>
+            <!-- Slides will be dynamically inserted here -->
         </div>
-      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Define the slides data
+        const slidesData = [
+        {
+          conference: "EMNLP2024",
+          title: "Can visual language models resolve textual ambiguity with visual cues? Let visual puns tell you!",
+          authors: "Jiwan Chung, Seungwon Lim, Jaehyun Jeon, Seungbeen Lee, Youngjae Yu",
+          bgImage: "images/slides/visualpun.png"
+        },
+        {
+            conference: "EMNLP2024",
+            title: "Selective Vision is the Challenge for Visual Reasoning: A Benchmark for Visual Argument Understanding",
+            authors: "Jiwan Chung, Sungjae Lee, Minseo Kim, Seungju Han, Ashkan Yousefpour, Jack Hessel, Youngjae Yu",
+            bgImage: "images/slides/visarg.png"
+        },
+        {
+            conference: "ACL2024",
+            title: "Aligning Large Language Models by On-Policy Self-Judgment",
+            authors: "Sangkyu Lee, Sungdong Kim, Ashkan Yousefpour, Minjoon Seo, Kang Min Yoo and Youngjae Yu",
+            bgImage: "images/slides/dpo.png"
+        },
+        {
+            conference: "EMNLP2023",
+            title: "Reading Books is Great, But Not if You Are Driving! Visually Grounded Reasoning about Defeasible Commonsense Norms",
+            authors: "Seungju Han, Junhyeok Kim, Jack Hessel, Liwei Jiang, Jiwan Chung, Yejin Son, Yejin Choi and Youngjae Yu",
+            bgImage: "images/slides/normlense.png"
+        },
+        {
+            conference: "EMNLP2023",
+            title: "VLIS: Unimodal Language Models Guide Multimodal Language Generation",
+            authors: "Jiwan Chung and Youngjae Yu",
+            bgImage: "images/slides/vlis.png"
+        },
+        {
+            conference: "CVPR2023",
+            title: "Fusing Pre-trained Language Models with Multimodal Prompts through Reinforcement Learning",
+            authors: "Youngjae Yu, Jiwan Chung, Heeseung Yun, Jack Hessel, Jae Sung Park, Ximing Lu, Prithviraj Ammanabrolu, Rowan Zellers, Ronan Le Bras, Gunhee Kim and Yejin Choi",
+            bgImage: "images/slides/esper.jpg"
+        },
+        {
+            conference: "ICCV2023",
+            title: "CHAMPAGNE: Learning Real-world Conversation from Large-Scale Web Videos",
+            authors: "Seungju Han, Jack Hessel, Nouha Dziri, Yejin Choi and Youngjae Yu",
+            bgImage: "images/slides/champagne.png"
+        },
+        {
+            conference: "NeurIPS2023",
+            title: "Multimodal C4: An Open, Billion-scale Corpus of Images Interleaved with Text",
+            authors: "JWanrong Zhu, Jack Hessel, Anas Awadalla, Samir Yitzhak Gadre, Jesse Dodge, Youngjae Yu, Ludwig Schmidt, William Yang Wang and Yejin Choi",
+            bgImage: "images/slides/23_mmc4.png"
+        },
+        {
+            conference: "BMVC2023",
+            title: "Long Story Short: a Summarize-then-Search Method for Long Video Question Answering",
+            authors: "Jiwan Chung and Youngjae Yu",
+            bgImage: "images/slides/longvid.png"
+        },
+    ];
+
+        // Function to generate slide HTML
+        function generateSlideHTML(slide, index) {
+            return `
+                <div class="slide slide-${index}">
+                    <div class="slide__bg" style="background-image: url('${slide.bgImage}');"></div>
+                    <div class="slide__content">
+                        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                            <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
+                        </svg>
+                        <div class="slide__text">
+                            <br>
+                            <p class="bubble_publication_conference">${slide.conference}</p>
+                            <br>
+                            <h2 style="display:inline" class="slide__text-heading">${slide.title}</h2>
+                            <p class="slide__text-desc">${slide.authors}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Generate and insert slides
+        const $slider = $(".slider");
+        slidesData.forEach((slide, index) => {
+            $slider.append(generateSlideHTML(slide, index));
+        });
+
+        // Set the first slide as active
+        $(".slide").first().addClass("active");
+
+        // The rest of your existing JavaScript code...
+        var $slideBGs = $(".slide__bg"),
+            diff = 0,
+            curSlide = 0,
+            numOfSlides = $(".slide").length-1,
+            animating = false,
+            animTime = 500,
+            autoSlideTimeout,
+            autoSlideDelay = 6000,
+            $pagination = $(".slider-pagi");
+
+        // ... (keep all the existing JavaScript functions and event listeners) ...
+        function createBullets() {
+          for (var i = 0; i < numOfSlides+1; i++) {
+          var $li = $("<li class='slider-pagi__elem'></li>");
+          $li.addClass("slider-pagi__elem-"+i).data("page", i);
+          if (!i) $li.addClass("active");
+          $pagination.append($li);
+          }
+      };
       
-   
-  </body></html>
+      createBullets();
+      
+      function manageControls() {
+          $(".slider-control").removeClass("inactive");
+          if (!curSlide) $(".slider-control.left").addClass("inactive");
+          if (curSlide === numOfSlides) $(".slider-control.right").addClass("inactive");
+      };
+      
+      function autoSlide() {
+          autoSlideTimeout = setTimeout(function() {
+          curSlide++;
+          if (curSlide > numOfSlides) curSlide = 0;
+          changeSlides();
+          }, autoSlideDelay);
+      };
+      
+      autoSlide();
+      
+      function changeSlides(instant) {
+          if (!instant) {
+          animating = true;
+          manageControls();
+          $slider.addClass("animating");
+          $slider.css("top");
+          $(".slide").removeClass("active");
+          $(".slide-"+curSlide).addClass("active");
+          setTimeout(function() {
+              $slider.removeClass("animating");
+              animating = false;
+          }, animTime);
+          }
+          window.clearTimeout(autoSlideTimeout);
+          $(".slider-pagi__elem").removeClass("active");
+          $(".slider-pagi__elem-"+curSlide).addClass("active");
+          $slider.css("transform", "translate3d("+ -curSlide*100 +"%,0,0)");
+          $slideBGs.css("transform", "translate3d("+ curSlide*50 +"%,0,0)");
+          diff = 0;
+          autoSlide();
+      }
+
+      function navigateLeft() {
+          if (animating) return;
+          if (curSlide > 0) curSlide--;
+          changeSlides();
+      }
+
+      function navigateRight() {
+          if (animating) return;
+          if (curSlide < numOfSlides) curSlide++;
+          changeSlides();
+      }
+
+      $(document).on("mousedown touchstart", ".slider", function(e) {
+          if (animating) return;
+          window.clearTimeout(autoSlideTimeout);
+          var startX = e.pageX || e.originalEvent.touches[0].pageX,
+              winW = $(window).width();
+          diff = 0;
+          
+          $(document).on("mousemove touchmove", function(e) {
+          var x = e.pageX || e.originalEvent.touches[0].pageX;
+          diff = (startX - x) / winW * 70;
+          if ((!curSlide && diff < 0) || (curSlide === numOfSlides && diff > 0)) diff /= 2;
+          $slider.css("transform", "translate3d("+ (-curSlide*100 - diff) +"%,0,0)");
+          $slideBGs.css("transform", "translate3d("+ (curSlide*50 + diff/2) +"%,0,0)");
+          });
+      });
+      
+      $(document).on("mouseup touchend", function(e) {
+          $(document).off("mousemove touchmove");
+          if (animating) return;
+          if (!diff) {
+          changeSlides(true);
+          return;
+          }
+          if (diff > -8 && diff < 8) {
+          changeSlides();
+          return;
+          }
+          if (diff <= -8) {
+          navigateLeft();
+          }
+          if (diff >= 8) {
+          navigateRight();
+          }
+      });
+      
+      $(document).on("click", ".slider-control", function() {
+          if ($(this).hasClass("left")) {
+          navigateLeft();
+          } else {
+          navigateRight();
+          }
+      });
+      
+      $(document).on("click", ".slider-pagi__elem", function() {
+          curSlide = $(this).data("page");
+          changeSlides();
+      });
+      
+    });
+    </script>
+</body>
+</html>
