@@ -2,9 +2,9 @@
 layout: people-detail
 section-type: people
 fullname: "Dongjun Min"
-img-filename: 
+img-filename: min_dongjun.jpg
 emoji: ⭐
-position: "Intern"
+position: "Ph.D. Student"
 permalink: people/dongjun.html
 email: mdjkoc1412@gmail.com
 

@@ -17,5 +17,4 @@ fields:
     - name : Alignment Research
     - name : Embodied AI
 
-social:
 ---
