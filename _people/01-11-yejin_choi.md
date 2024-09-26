@@ -14,4 +14,7 @@ fields:
     - name : AI driven Design
 
 social:
+  - title: home
+    url: people/yejin_choi.html
+
 ---
