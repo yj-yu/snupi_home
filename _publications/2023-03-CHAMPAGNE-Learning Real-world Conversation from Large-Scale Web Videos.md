@@ -8,7 +8,7 @@ author:
   - name: "Seungju Han"
   - name: "Jack Hessel"
   - name: "Nouha Dziri"
-  - name: "Yejin Choi"
+  - name: "Yejin Choi_"
   - name: "Youngjae Yu"
 
 img: /images/papers/CHAMPAGNE.png

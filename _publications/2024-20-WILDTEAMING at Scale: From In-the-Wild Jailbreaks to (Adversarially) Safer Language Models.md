@@ -13,7 +13,7 @@ author:
   - name: "Niloofar Mireshghallah"
   - name: "Ximing Lu"
   - name: "Marteen Sap"
-  - name: "Yejin Choi"
+  - name: "Yejin Choi_"
   - name: "Nouha Dziri"
   
 

@@ -11,7 +11,7 @@ author:
   - name: "Youngjae Yu"
   - name: "Ximing Lu"
   - name: "Rowan Zellers"
-  - name: "Yejin Choi"
+  - name: "Yejin Choi_"
 
 
 img: /images/papers/Connecting the Dots between Audio and Text.png

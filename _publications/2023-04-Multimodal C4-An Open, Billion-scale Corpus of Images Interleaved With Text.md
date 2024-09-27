@@ -13,7 +13,7 @@ author:
   - name : "Youngjae Yu"
   - name : "Ludwig Schmidt"
   - name : "William Yang Wang"
-  - name : "Yejin Choi"
+  - name : "Yejin Choi_"
 
 
 img: /images/papers/mmc4.jpg

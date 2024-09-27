@@ -13,7 +13,7 @@ author:
   - name: "Liwei Jiang"
   - name: "Bill Yuchen Lin"
   - name: "Nathan Lambert"
-  - name: "Yejin Choi"
+  - name: "Yejin Choi_"
   - name: "Nouha Dziri"
   
 

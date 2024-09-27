@@ -8,7 +8,6 @@ position: "Ph.D. Student"
 permalink: people/jisoo.html
 email: jisoo6687@yonsei.ac.kr
 
-social:
 
 
 fields:
@@ -20,5 +19,5 @@ publications:
 
 social:
   - title: home
-    url: jisoo6687@yonsei.ac.kr
+    url: people/jisoo.html
 ---

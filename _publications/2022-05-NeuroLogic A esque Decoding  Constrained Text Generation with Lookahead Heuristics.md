@@ -17,7 +17,7 @@ author:
   - name: "Youngjae Yu"
   - name: "Rowan Zellers"
   - name: "Noah A Smith"
-  - name: "Yejin Choi"
+  - name: "Yejin Choi_"
 
 
 

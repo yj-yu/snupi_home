@@ -11,7 +11,7 @@ author:
   - name: "Liwei Jiang"
   - name: "Jiwan Chung"
   - name: "Yejin Son"
-  - name: "Yejin Choi"
+  - name: "Yejin Choi_"
   - name: "Youngjae Yu"
 
 img: /images/papers/normlense.png

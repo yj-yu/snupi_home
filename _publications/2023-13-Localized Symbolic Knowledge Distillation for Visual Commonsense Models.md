@@ -15,7 +15,7 @@ author:
   - name: "Peter West"
   - name: "Jianfeng Gao"
   - name: "Ali Farhadi"
-  - name: "Yejin Choi"
+  - name: "Yejin Choi_"
   - name: "Qiuyuan Huang"
 
 external:

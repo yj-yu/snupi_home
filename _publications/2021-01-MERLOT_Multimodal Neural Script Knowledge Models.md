@@ -12,7 +12,7 @@ author:
   - name: "Jae Sung Park"
   - name: "Jize Cao"
   - name: "Ali Farhadi"
-  - name: "Yejin Choi"
+  - name: "Yejin Choi_"
 
 
 

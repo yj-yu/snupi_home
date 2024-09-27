@@ -16,7 +16,7 @@ author:
   - name: "Malihe Alikhani"
   - name: "Gunhee Kim"
   - name: "Maarten Sap"
-  - name : "Yejin Choi"
+  - name : "Yejin Choi_"
 
 img: /images/papers/soda.png
 external:

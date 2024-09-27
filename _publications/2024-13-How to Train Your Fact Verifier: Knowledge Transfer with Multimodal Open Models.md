@@ -11,7 +11,7 @@ author:
   - name: "Faeze Brahman"
   - name: "Youngjae Yu"
   - name: "Yonatan Bisk"
-  - name: "Yejin Choi"
+  - name: "Yejin Choi_"
   - name: "Saadia Gabriel"
   
   
