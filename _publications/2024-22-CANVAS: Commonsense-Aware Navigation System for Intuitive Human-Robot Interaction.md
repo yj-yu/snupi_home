@@ -30,6 +30,7 @@ img: /images/papers/canvas.png
 
 keywords:
   - name: Embodied AI
+  - name: Robotics
   - name: Navigation
   
 display: False
