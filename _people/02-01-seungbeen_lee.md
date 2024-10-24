@@ -16,9 +16,8 @@ social:
 
 fields:
     - name : NLP
-    - name : Commonsense Reasoning
-    - name : Persona-Dialogue
-    - name : Virtual Human
+    - name : Psychology
+    - name : Multi-agent Problem 
 publications:
 
 ---
