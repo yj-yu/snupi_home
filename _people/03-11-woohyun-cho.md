@@ -4,7 +4,7 @@ section-type: people
 fullname: "Woohyun Cho"
 img-filename: cho_woohyun.jpg
 emoji: 🤔
-position: "Ph.D. Student"
+position: "Master Student"
 permalink: people/woohyun.html
 email:  k106419@yonsei.ac.kr
 

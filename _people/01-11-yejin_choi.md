@@ -4,7 +4,7 @@ section-type: people
 fullname: "Yejin Choi"
 emoji: 🖼️
 img-filename: choi_yejin.png
-position: "Ph.D. Student"
+position: "Master Student"
 permalink: people/yejin_choi.html
 email: yejinchoi@yonsei.ac.kr
 

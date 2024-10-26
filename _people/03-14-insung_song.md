@@ -4,7 +4,7 @@ section-type: people
 fullname: "Insung Song"
 img-filename: song_insung.jpg
 emoji: 💪
-position: "Ph.D. Student"
+position: "Master Student"
 permalink: people/insung.html
 email: insungsong@yonsei.ac.kr
 

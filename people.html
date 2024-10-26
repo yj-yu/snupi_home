@@ -44,48 +44,45 @@ color_list:
     {% endif %}
 
     {% for member in site.people %}
-      
       {% if member.position == p %}
-      <div class="small-10 small-10 large-5 columns wp-block-coblocks-author" style="font-size:15px">
+      <div class="small-6 small-6 large-3 columns wp-block-coblocks-author" 
+           style="font-size:15px; text-align: center; display: flex; flex-direction: column; align-items: center; margin: 0; height: 400px; margin-bottom: 100px; background-color: #ffffff; box-shadow: none;">
         {% assign homeurl = member.permalink %}
-
-
         {% for social in member.social %}
           {% if social.title == "home" %}
             {% assign homeurl = social.url %}
           {% endif %}
         {% endfor %}
-        <figure class="wp-block-coblocks-author__avatar">
-          <a href="{{homeurl}}">
-            <img class="wp-block-coblocks-author__avatar-img" src="./images/people/{{member.img-filename}}">
+        
+        <figure class="wp-block-coblocks-author__avatar" style="margin-bottom: 20px; width: 100%; display: flex; justify-content: center;">
+          <a href="{{homeurl}}" style="width: 100%; display: flex; justify-content: center;">
+            <img class="wp-block-coblocks-author__avatar-img" src="./images/people/{{member.img-filename}}" 
+                 style="margin: auto; display: block; width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
           </a>
         </figure>
-        <div class="wp-block-coblocks-author__content">
-        <span class="wp-block-coblocks-author__name">
-          <a style="color:black;" href="{{homeurl}}">
-            <strong><strong>{{member.emoji}}&nbsp; {{member.fullname}}</strong></strong>
-          </a>
+        
+        <div class="wp-block-coblocks-author__content" style="width: 100%;">
+          <span class="wp-block-coblocks-author__name">
+            <a style="color:black;" href="{{homeurl}}">
+              <strong><strong>{{member.emoji}}&nbsp; {{member.fullname}}</strong></strong>
+            </a>
           </span>
-          <br>
-        
-        
-        <p class="wp-block-coblocks-author__biography">Interested in..
-
-          {% for field in member.fields %}
-          {% assign color = page.color_list[forloop.index0] %}
-            {% if field.name == "Multimodal perception for AI" %}
-            <div style="margin-bottom:-3%;">
-            {% else %}
-            <div style="margin-bottom:3.5%;">
-            {% endif %}
-          <span style="font-size:0.9em; font-weight: 1000; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}};">&nbsp;&nbsp;&nbsp;{{field.name}}&nbsp;&nbsp;&nbsp;</span> 
-          </div>
-            {% if field.name == "Multimodal perception for AI" %}
-            <span style="font-size:0.6em; font-weight: 600; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}};">&nbsp;&nbsp;&nbsp;(Video, Speech, Embodied AI, VR/MR)&nbsp;&nbsp;&nbsp;</span>
-            {% endif %}
-          {% endfor %}
           
-        </p>
+          <p class="wp-block-coblocks-author__biography" style="margin-top: 5px;">  <!-- Added margin-top here -->
+            {% for field in member.fields %}
+            {% assign color = page.color_list[forloop.index0] %}
+              {% if field.name == "Multimodal perception for AI" %}
+              <div style="margin-bottom:-3%;">
+              {% else %}
+              <div style="margin-bottom:3.5%;">
+              {% endif %}
+            <span style="font-size:0.9em; font-weight: 300; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}}; color: black;">&nbsp;&nbsp;&nbsp;{{field.name}}&nbsp;&nbsp;&nbsp;</span> 
+            </div>
+              {% if field.name == "Multimodal perception for AI" %}
+              <span style="font-size:0.6em; font-weight: 600; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}};">&nbsp;&nbsp;&nbsp;(Video, Speech, Embodied AI, VR/MR)&nbsp;&nbsp;&nbsp;</span>
+              {% endif %}
+            {% endfor %}
+          </p>
         </div>
       </div>
 
@@ -94,7 +91,7 @@ color_list:
     {% endfor %}
     <div></div>
   </div>
-  <div class='spacing'></div>
+
   {% endfor %}
 
 
@@ -105,7 +102,6 @@ color_list:
       <h2>Interns</h2>
     </div>
     <div class='medium-12 columns'>
-      
     
       {% for member in site.people %}
         {% if member.position == "Intern" %}

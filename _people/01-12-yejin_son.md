@@ -4,7 +4,7 @@ section-type: people
 fullname: "Yejin Son"
 emoji: 🔥
 img-filename: son_yejin.jpg
-position: "Ph.D. Student"
+position: "Master Student"
 permalink: people/yejin_son.html
 email: yejinhand@yonsei.ac.kr
 fields:
