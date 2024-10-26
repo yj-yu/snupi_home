@@ -42,7 +42,7 @@ color_list:
         <h2>{{p}}s</h2>
       </div>
     {% endif %}
-    {% if p == "Master Student" or p == "Ph.D. Student"%}
+    {% if p contains "Student" %}
       <div class='medium-12 columns'>
         <h2>Students</h2>
       </div>
