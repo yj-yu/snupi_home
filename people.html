@@ -6,8 +6,8 @@ permalink: people.html
 active_positions:
   - Professor
   - Visiting Scholar
-  - Ph.D. Student
-  - Master Student  
+  - Student
+
 
 color_list:
   - rgba(245, 224, 204)
@@ -37,14 +37,19 @@ color_list:
         <h2>{{p}}</h2>
       </div>
     {% endif %}
-    {% if p == "Visiting Scholar" or p == "Master Student" or p == "Ph.D. Student" or p == "Research Associate"%}
+    {% if p == "Visiting Scholar"%}
       <div class='medium-12 columns'>
         <h2>{{p}}s</h2>
       </div>
     {% endif %}
+    {% if p == "Master Student" or p == "Ph.D. Student"%}
+      <div class='medium-12 columns'>
+        <h2>Students</h2>
+      </div>
+    {% endif %}
 
     {% for member in site.people %}
-      {% if member.position == p %}
+      {% if member.position contains p %}
       <div class="small-6 small-6 large-3 columns wp-block-coblocks-author" 
            style="font-size:15px; text-align: center; display: flex; flex-direction: column; align-items: center; margin: 0; height: 400px; margin-bottom: 100px; background-color: #ffffff; box-shadow: none;">
         {% assign homeurl = member.permalink %}
@@ -67,7 +72,11 @@ color_list:
               <strong><strong>{{member.emoji}}&nbsp; {{member.fullname}}</strong></strong>
             </a>
           </span>
-          
+          <span class="wp-block-coblocks-author__name"></span>
+            <a style="color:black;">
+              <span style="color: #666666; font-size: 0.9em; font-style: italic;">{{member.position}}</span>
+            </a>
+          </span>
           <p class="wp-block-coblocks-author__biography" style="margin-top: 5px;">  <!-- Added margin-top here -->
             {% for field in member.fields %}
             {% assign color = page.color_list[forloop.index0] %}
