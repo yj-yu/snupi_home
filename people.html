@@ -7,7 +7,7 @@ active_positions:
   - Professor
   - Visiting Scholar
   - Student
-
+  - Collaborator
 
 color_list:
   - rgba(245, 224, 204)
@@ -42,6 +42,12 @@ color_list:
         <h2>{{p}}s</h2>
       </div>
     {% endif %}
+    {% if p == "Collaborator"%}
+    <div class='medium-12 columns'>
+      <h2>{{p}}s</h2>
+      </div>
+    {% endif %}
+
     {% if p contains "Student" %}
       <div class='medium-12 columns'>
         <h2>Students</h2>
@@ -73,10 +79,18 @@ color_list:
             </a>
           </span>
           <span class="wp-block-coblocks-author__name"></span>
-            <a style="color:black;">
+            <span style="color:black;">
               <span style="color: #666666; font-size: 0.9em; font-style: italic;">{{member.position}}</span>
-            </a>
+            </span>
           </span>
+          <div>
+          {% if member.fullname contains "Dongha" %}
+            <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://diyonsei.notion.site/Data-Language-Intelligence-Lab-Yonsei-University-7e121249362f42c2bdd1328aeaeb5f4b">  DLI Lab.</a></i>
+          {% endif %}
+          {% if member.fullname contains "Jinyoung" %}
+            <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://jinyeo.weebly.com/">  ACL Lab.</a></i>
+          {% endif %}
+          </div>
           <p class="wp-block-coblocks-author__biography" style="margin-top: 5px;">  <!-- Added margin-top here -->
             {% for field in member.fields %}
             {% assign color = page.color_list[forloop.index0] %}
