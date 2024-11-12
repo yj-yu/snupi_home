@@ -11,8 +11,8 @@ author:
   - name: "Seungjun Moon"
   - name: "Hyunsouk Cho"
   - name: "Youngjae Yu"
-  - name: "Dongha Lee"
-  - name: "Jinyoung Yeo"
+  - name: "Dongha Lee_"
+  - name: "Jinyoung Yeo_"
 
 
 external:

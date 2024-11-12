@@ -11,7 +11,7 @@ author:
   - name: "Sangbeom Park"
   - name: "Minsuk Chang"
   - name: "Youngjae Yu"
-  - name: "Sungjoon Choi"
+  - name: "Sungjoon Choi_"
 
 
 img: /images/papers/CLARA.png

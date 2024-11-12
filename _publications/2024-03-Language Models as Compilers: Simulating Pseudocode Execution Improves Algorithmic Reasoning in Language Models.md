@@ -14,7 +14,7 @@ author:
   - name: "Taeyoon Kwon"
   - name: "Jiwan Chung"
   - name: "Youngjae Yu"
-  - name: "Jinyoung Yeo"
+  - name: "Jinyoung Yeo_"
 
 
 external:

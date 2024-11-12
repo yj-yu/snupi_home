@@ -17,8 +17,8 @@ author:
   - name: "Seungbeen Lee"
   - name: "Kyoung-Mee Chung"
   - name: "Youngjae Yu"
-  - name: "Dongha Lee"
-  - name: "Jinyoung Yeo"
+  - name: "Dongha Lee_"
+  - name: "Jinyoung Yeo_"
   
   
   

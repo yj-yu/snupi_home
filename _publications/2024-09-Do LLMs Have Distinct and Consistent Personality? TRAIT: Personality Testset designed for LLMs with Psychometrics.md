@@ -12,8 +12,8 @@ author:
   - name: "Jiwan Chung"
   - name: "Minju Kim"
   - name: "Yeonsoo Lee"
-  - name: "Dongha Lee"
-  - name: "Jinyoung Yeo"
+  - name: "Dongha Lee_"
+  - name: "Jinyoung Yeo_"
   - name: "Youngjae Yu"
 
 external:

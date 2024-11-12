@@ -85,7 +85,7 @@ count_year_min: 2016
                       {% endfor %}
                     {% endif %}
                     {% assign name = member.name %}
-                    {% if name contains "Yejin Choi_" %}
+                    {% if name contains "_" %}
                       {% assign name = name | remove: "_" %}
                     {% endif %}
                   {{ name }}{% if member.link or temp %}</a>{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 1 %}, {% endif %}
