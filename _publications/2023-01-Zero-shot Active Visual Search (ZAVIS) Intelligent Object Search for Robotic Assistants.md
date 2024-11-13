@@ -10,7 +10,7 @@ author:
   - name: "Jejoon Hong"
   - name: "Youngjae Yu"
   - name: "Matthew Pan"
-  - name: "Sungjoon Choi"
+  - name: "Sungjoon Choi_"
 
 
 img: /images/papers/zavis.jpg
