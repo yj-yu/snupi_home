@@ -173,7 +173,7 @@ color_list:
 
 
   <!-- Members On Leave -->
-  <!--
+  
   <div class='row'>
     <div class='medium-12 columns'>
       <h2>On Leave</h2>
@@ -187,11 +187,6 @@ color_list:
                 {% assign homeurl = social.url %}
               {% endif %}
             {% endfor %}
-            {% if temp %}
-              <a href="{{homeurl}}">
-            {% else %}
-              <a href="{{member.permalink}}">
-            {% endif %}
               {{member.fullname}}
             </a>
             {{member.past}}
@@ -204,7 +199,7 @@ color_list:
     </div>
     <div></div>
   </div>
-  -->
+ 
   <!-- Members alumni -->
   <div class='four spacing'></div>
   
