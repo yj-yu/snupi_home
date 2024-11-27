@@ -37,4 +37,77 @@
   {% if site.favicon %}
     <link rel="shortcut icon" href="{{site.baseurl}}{{site.favicon}}"/>
   {% endif %}
+  <canvas id="snow" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 1000;"></canvas>
+  <script>
+    window.onload = function() {
+      let canvas = document.getElementById("snow");
+      let ctx = canvas.getContext("2d");
+      
+      // Canvas 크기를 화면 크기에 맞게 설정
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      window.onresize = resizeCanvas;
+      resizeCanvas();
+      
+      // 눈송이 객체 배열
+      let snowflakes = [];
+      
+      // 눈송이 생성
+      function createSnowflakes() {
+        const flake = {
+          x: Math.random() * canvas.width,
+          y: 0,
+          radius: Math.random() * 3 + 1,
+          speed: Math.random() * 1 + 0.5,
+          wind: Math.random() * 0.5 - 0.25,
+          opacity: Math.random() * 0.5 + 0.5
+        };
+        snowflakes.push(flake);
+      }
+      
+      // 눈송이 애니메이션
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        if (snowflakes.length < 100) {
+          createSnowflakes();
+        }
+        
+        snowflakes.forEach((flake, index) => {
+          // 그라데이션 효과 생성
+          let gradient = ctx.createRadialGradient(
+            flake.x, flake.y, 0,
+            flake.x, flake.y, flake.radius
+          );
+          gradient.addColorStop(0, `rgba(200, 200, 255, ${flake.opacity})`);
+          gradient.addColorStop(1, `rgba(150, 150, 255, ${flake.opacity * 0.2})`);
+          
+          // 그림자 효과 추가
+          ctx.shadowColor = 'rgba(0, 0, 0, 0.1)';
+          ctx.shadowBlur = 2;
+          ctx.shadowOffsetX = 1;
+          ctx.shadowOffsetY = 1;
+          
+          ctx.beginPath();
+          ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+          ctx.fillStyle = gradient;
+          ctx.fill();
+          
+          // 눈송이 이동
+          flake.y += flake.speed;
+          flake.x += flake.wind;
+          
+          if (flake.y > canvas.height) {
+            snowflakes.splice(index, 1);
+          }
+        });
+        
+        requestAnimationFrame(animate);
+      }
+      
+      animate();
+    };
+  </script>
 </head>
