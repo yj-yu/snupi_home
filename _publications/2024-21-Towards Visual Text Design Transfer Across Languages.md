@@ -17,7 +17,8 @@ author:
   
   
 external:
-  
+  - title: Arxiv
+    url: https://arxiv.org/abs/2410.18823v1
 img: /images/papers/sigil_congratulation.png
 
 keywords:

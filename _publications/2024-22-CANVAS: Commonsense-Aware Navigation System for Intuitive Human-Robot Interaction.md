@@ -25,7 +25,9 @@ author:
   
   
 external:
-  
+  - title: Arxiv
+    url: https://arxiv.org/abs/2410.01273
+    
 img: /images/papers/canvas.png
 
 keywords:

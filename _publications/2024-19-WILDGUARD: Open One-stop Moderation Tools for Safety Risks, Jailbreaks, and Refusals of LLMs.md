@@ -19,8 +19,11 @@ author:
 
 
   
-  
 external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2406.18495v1
+    
+
   
 img: /images/papers/wildguard.png
 

@@ -21,6 +21,8 @@ author:
   
   
 external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2406.18510
   
 img: /images/papers/wildbench.png
 

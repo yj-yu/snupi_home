@@ -17,6 +17,8 @@ author:
   
   
 external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2411.08127
   
 img: /images/papers/tipo.png
 

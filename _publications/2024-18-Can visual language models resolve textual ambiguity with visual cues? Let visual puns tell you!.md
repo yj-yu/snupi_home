@@ -14,8 +14,10 @@ author:
   
   
   
-  
 external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2410.01023
+
   
 img: /images/papers/visualpun.png
 
