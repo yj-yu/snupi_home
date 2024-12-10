@@ -22,7 +22,7 @@ img: /images/papers/i-SRT.png
 
 keywords:
   - name: Multimodal
-  - name: Video LMM
+  - name: Video LLM
   - name: Preference
   
 display: False
