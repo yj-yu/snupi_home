@@ -16,7 +16,9 @@ author:
   - name: "Tae-Hyun Oh"
   - name: "Youngjae Yu"
   
-
+equal_contributor_idx:
+  - 0
+  - 1
 
   
   

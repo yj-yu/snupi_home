@@ -16,6 +16,9 @@ author:
   - name: "Jinyoung Yeo_"
   - name: "Youngjae Yu"
 
+equal_contributor_idx:
+  - 0
+  - 1
 external:
   - title: Arxiv
     url: https://arxiv.org/abs/2406.14703
