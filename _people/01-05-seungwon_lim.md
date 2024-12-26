@@ -8,9 +8,10 @@ permalink: people/seungwon.html
 email: sngwon@yonsei.ac.kr
 emoji: 🤗
 fields:
-    - name : VL Understanding
-    - name : LLM
-    - name : Robotics
+    - name : Human-Agent Interaction
+    - name : Social AI
+    - name : Embodied AI
+    - name : Multimodel Perception
 
 
 social:
