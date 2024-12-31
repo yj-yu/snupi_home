@@ -11,7 +11,7 @@ author:
   - name: "Ximing Lu"
   - name: "Daniel Khashabi"
   - name: "Gunhee Kim"
-  - name: "Yejin Choi"
+  - name: "Yejin Choi_"
   - name: "Maarten Sap"
 img: /images/papers/emnlp22-prodia-300x150.png
 external:

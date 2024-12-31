@@ -12,6 +12,9 @@ author:
   - name: "Youngjae Yu"
   - name: "Junhyug Noh"
   
+equal_contributor_idx:
+  - 0
+  - 1
 external:
   - title: Arxiv
     url: https://arxiv.org/abs/2406.17254

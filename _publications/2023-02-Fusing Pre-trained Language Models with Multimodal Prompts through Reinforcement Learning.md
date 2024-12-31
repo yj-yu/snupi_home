@@ -15,7 +15,7 @@ author:
   - name: "Rowan Zellers"
   - name: "Ronan Le Bras"
   - name: "Gunhee Kim"
-  - name: "Yejin Choi"
+  - name: "Yejin Choi_"
 
 img: /images/papers/esper.png
 external:

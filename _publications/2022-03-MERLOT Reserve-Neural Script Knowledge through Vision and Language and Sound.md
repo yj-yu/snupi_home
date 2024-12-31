@@ -15,7 +15,7 @@ author:
   - name: "Aditya Kusupati"
   - name: "Jack Hessel"
   - name: "Ali Farhadi"
-  - name: "Yejin Choi"
+  - name: "Yejin Choi_"
 
 
 img: /images/papers/merlot reserve.png

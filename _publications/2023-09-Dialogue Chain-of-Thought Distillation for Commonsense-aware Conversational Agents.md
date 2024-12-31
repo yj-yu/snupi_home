@@ -11,9 +11,9 @@ author:
   - name: "Taeyoon Kwon"
   - name: "Minjin Kim"
   - name: "Youngjae Yu"
-  - name: "Dongha Lee"
+  - name: "Dongha Lee_"
   - name: "Dongyeop Kang"
-  - name: "Jinyoung Yeo"
+  - name: "Jinyoung Yeo_"
 external:
   - title: Arxiv
     url: https://arxiv.org/abs/2310.09343

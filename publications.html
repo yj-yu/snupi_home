@@ -2,7 +2,7 @@
 layout: default
 title: Publications
 section_id: publications
-count_year_max: 2024
+count_year_max: 2025
 count_year_min: 2016
 ---
 
@@ -62,7 +62,7 @@ count_year_min: 2016
             <h3 style="margin-bottom: 0.3rem;">{{paper.name}}</h3>
             <p style="margin-bottom: 0.3rem;">
               {% if paper.author %}
-                <!--하이퍼클로버만 조금 다르게-->
+                <!--하이퍼클버만 조금 다르게-->
                 {% if paper.name == "HyperCLOVA X Technical Report" %}
                   {% for member in paper.author %}
                     {% assign temp = false %}{% if member.link %}<a href="{{member.link}}">{% else %}{% for member2 in site.people %}{% if member.name == member2.fullname %}{% for social in member2.social %}{% if social.title == "home" %}{% assign temp = true %}<a href="{{social.url}}">{% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}{{member.name}}{% if member.link or temp %}</a>{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 1 %}, {% endif %}
@@ -72,18 +72,23 @@ count_year_min: 2016
                 {% else %}
                   {% for member in paper.author %}
                     {% assign temp = false %}
-                    {% if member.link %}<a href="{{member.link}}"></a>
-                    {% else %}
+                    {% if member.link %}<a href="{{member.link}}">{% endif %}
+                    {% if member.link == nil %}
                       {% for member2 in site.people %}
                         {% if member.name == member2.fullname %}
-                        {% for social in member2.social %}
-                          {% if social.title == "home" %}
-                          {% assign temp = true %}<a href="{{social.url}}">
-                          {% endif %}
-                        {% endfor %}
+                          {% for social in member2.social %}
+                            {% if social.title == "home" %}
+                              {% assign temp = true %}<a href="{{social.url}}">
+                            {% endif %}
+                          {% endfor %}
                         {% endif %}
                       {% endfor %}
-                    {% endif %}{{member.name}}{% if member.link or temp %}</a>{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 1 %}, {% endif %}
+                    {% endif %}
+                    {% assign name = member.name %}
+                    {% if name contains "_" %}
+                      {% assign name = name | remove: "_" %}
+                    {% endif %}
+                    {{ name }}{% if member.link or temp %}</a>{% endif %}{% if paper.equal_contributor_idx contains forloop.index0 %}*{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 1 %}, {% endif %}
                   {% endfor %}
                 {% endif %}
                 {% if paper.equal %}

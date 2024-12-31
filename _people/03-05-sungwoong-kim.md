@@ -9,6 +9,8 @@ permalink: people/sungwoong.html
 email: sukim961@gmail.com
 
 social:
+  - title: home
+    url: people/sungwoong.html
 
 
 fields:

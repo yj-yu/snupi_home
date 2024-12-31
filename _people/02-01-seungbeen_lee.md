@@ -4,7 +4,7 @@ section-type: people
 fullname: "Seungbeen Lee"
 img-filename: lee_seungbeen.jpg
 emoji: 🍧
-position: "Ph.D. Student"
+position: "Master Student"
 permalink: people/seungbeen.html
 email: iyy1112@yonsei.ac.kr
 
@@ -16,9 +16,8 @@ social:
 
 fields:
     - name : NLP
-    - name : Commonsense Reasoning
-    - name : Persona-Dialogue
-    - name : Virtual Human
+    - name : Psychology
+    - name : Multi-agent Problem 
 publications:
 
 ---

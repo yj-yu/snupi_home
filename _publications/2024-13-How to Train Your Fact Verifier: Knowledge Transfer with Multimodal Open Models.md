@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "How to Train Your Fact Verifier: Knowledge Transfer with Multimodal Open Models"
-conference: 
+conference: EMNLP2024 (findings)
 year: 2024
 author:
   - name: "Jaeyoung Lee"
@@ -11,7 +11,7 @@ author:
   - name: "Faeze Brahman"
   - name: "Youngjae Yu"
   - name: "Yonatan Bisk"
-  - name: "Yejin Choi"
+  - name: "Yejin Choi_"
   - name: "Saadia Gabriel"
   
   

@@ -4,14 +4,14 @@ section-type: people
 fullname: "Youngmin Kim"
 img-filename: kim_youngmin.png
 emoji: 🌎
-position: "Ph.D. Student"
+position: "Master Student"
 permalink: people/youngmin.html
 email:  winston121497@gmail.com
 
 fields:
-    - name : Story Visualization
-    - name : Text-to-Image generation
-    - name : Image Captioning
+    - name : Video understanding
+    - name : Multimodal conversation
+    
 
 
 publications:

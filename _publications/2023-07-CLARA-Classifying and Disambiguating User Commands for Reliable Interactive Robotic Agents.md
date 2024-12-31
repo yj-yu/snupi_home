@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "CLARA: Classifying and Disambiguating User Commands for Reliable Interactive Robotic Agents"
-conference: RA-L/ICRA2024
+conference: ICRA2024
 year: 2023
 author:
   - name: "Jeongeun Park"
@@ -11,7 +11,7 @@ author:
   - name: "Sangbeom Park"
   - name: "Minsuk Chang"
   - name: "Youngjae Yu"
-  - name: "Sungjoon Choi"
+  - name: "Sungjoon Choi_"
 
 
 img: /images/papers/CLARA.png

@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "CACTUS: Towards Psychological Counseling Conversations using Cognitive Behavioral Theory"
-conference: 
+conference: EMNLP2024 (findings)
 year: 2024
 author:
   - name: "Suyeon Lee"
@@ -17,8 +17,8 @@ author:
   - name: "Seungbeen Lee"
   - name: "Kyoung-Mee Chung"
   - name: "Youngjae Yu"
-  - name: "Dongha Lee"
-  - name: "Jinyoung Yeo"
+  - name: "Dongha Lee_"
+  - name: "Jinyoung Yeo_"
   
   
   

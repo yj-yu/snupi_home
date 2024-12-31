@@ -14,8 +14,8 @@ author:
   - name: "Hyunseo Kim"
   - name: "SeongKu Kang"
   - name: "Youngjae Yu"
-  - name: "Jinyoung Yeo"
-  - name: "Dongha Lee"
+  - name: "Jinyoung Yeo_"
+  - name: "Dongha Lee_"
 
 
 external:

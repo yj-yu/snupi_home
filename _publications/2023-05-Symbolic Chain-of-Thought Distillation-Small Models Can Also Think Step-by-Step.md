@@ -10,7 +10,7 @@ author:
   - name: "Youngjae Yu"
   - name: "Xiang Ren"
   - name: "Kai-Wei Chang"
-  - name : "Yejin Choi"
+  - name : "Yejin Choi_"
 
 
 img: /images/papers/symbolic knowledge distillation.png
