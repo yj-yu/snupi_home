@@ -21,7 +21,10 @@ section_id: home
         We mainly focus on <b>Natural Language Processing</b>, <b>Vision and Language</b>, and <b>Multimodal Intelligence for Robot/Embodied AI</b>.<br>
 
         <a href="publications.html">See more</a> about our research topics.<br>
-       
+        <!-- <p class="index_welcome_content">We mainly focus on <b>Natural Language Processing</b>, <b>Vision and Language</b>, and <b>Multimodal Intelligence for Robot/Embodied AI</b>.</p>
+
+        <a class="index_welcome_content" href="publications.html">See more</a> about our research topics.<br>
+               -->
 
     </div>
     
@@ -67,7 +70,7 @@ section_id: home
         {% endif %}
         {% for c in post.categories %}
           {% if 'papers' == c %} 
-          <p><a style="color:black;" href="news/{{post.type}}/{{post.date | date: '%Y'}}/{{post.date | date: '%m'}}/{{post.date | date: '%d'}}/{{post.subtitle}}.html">
+          <p><a style="color:black; font-family: 'Spoqa Han Sans Neo', Times ,serif, 'Times New Roman';" href="news/{{post.type}}/{{post.date | date: '%Y'}}/{{post.date | date: '%m'}}/{{post.date | date: '%d'}}/{{post.subtitle}}.html">
             - {{post.title}} ({{post.date | date: "%Y-%m-%d" }})
           </a><br/>
             {{post.excerpt}}</p>
@@ -88,7 +91,7 @@ section_id: home
       {% for c in post.categories %}
         {% if 'others' == c %}
         
-        <p><a style="color:black;" href="news/{{post.type}}/{{post.date | date: '%Y'}}/{{post.date | date: '%m'}}/{{post.date | date: '%d'}}/{{post.subtitle}}.html">
+        <p><a style="color:black; font-family: 'Spoqa Han Sans Neo', Times ,serif, 'Times New Roman';" href="news/{{post.type}}/{{post.date | date: '%Y'}}/{{post.date | date: '%m'}}/{{post.date | date: '%d'}}/{{post.subtitle}}.html">
         - {{post.title}} ({{post.date | date: "%Y-%m-%d" }})
         </a><br/>
           {{post.excerpt}}</p>

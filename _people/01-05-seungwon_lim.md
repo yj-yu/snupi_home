@@ -11,7 +11,7 @@ fields:
     - name : Human-Agent Interaction
     - name : Social AI
     - name : Embodied AI
-    - name : Multimodal Perception
+    - name : Multimodel Perception
 
 
 social:

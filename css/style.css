@@ -4121,17 +4121,31 @@ img {
 }
 .index_welcome {
   font-weight: bolder !important;
-  font-family: Arial, Helvetica, sans-serif;
+  /**font-family: Arial, Helvetica, sans-serif;**/
+  font-family: sans-serif;
   color: rgb(255, 255, 255);
 }
 @media screen and (max-width: 600px){
   /* 모바일에 최적화된 예외 CSS 코드*/
   .index_welcome{
-
     font-size:1.8rem;
-  
   }
 }
+
+/* .index_welcome_content {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+
+.index_welcome_content:hover {
+  color: #254381;
+  text-decoration: underline;
+} */
+
+
+
 .leads {
   
   font-size:20px;

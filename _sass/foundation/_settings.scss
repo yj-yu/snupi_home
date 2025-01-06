@@ -90,7 +90,9 @@ $row-width: rem-calc(1120);
 
 // We use these to define default font stacks
 
-$font-family-sans-serif: Raleway, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+// $font-family-sans-serif: Raleway, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+// $font-family-sans-serif: sans-serif;
  // $font-family-sans-serif: Futura, "BD Supper", Sofia Pro, Avenir;
 
 
@@ -1398,12 +1400,17 @@ $topbar-height: rem-calc(100);
 // $topbar-title-font-size: rem-calc(17);
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: #999;
+// $topbar-link-color: #999;
+// $topbar-link-color-hover: #888;
+// $topbar-link-color-active: #888;
+// $topbar-link-color-active-hover: #888;
+$topbar-link-color: #888;
 $topbar-link-color-hover: #888;
-$topbar-link-color-active: #888;
-$topbar-link-color-active-hover: #888;
+$topbar-link-color-active: #000000; 
+$topbar-link-color-active-hover: #000000;
+
 // $topbar-link-weight: $font-weight-normal;
-$topbar-link-font-size: rem-calc(14);
+$topbar-link-font-size: rem-calc(16);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
 $topbar-link-bg-hover: #f9f9f9;
@@ -1411,7 +1418,7 @@ $topbar-link-bg-hover: #f9f9f9;
 $topbar-link-bg-active: #f9f9f9;
 $topbar-link-bg-active-hover: scale-color(#f9f9f9, $lightness: -3%);
 // $topbar-link-font-family: $body-font-family;
-$topbar-link-text-transform: uppercase;
+// $topbar-link-text-transform: uppercase;
 $topbar-link-padding: ($topbar-height / 5);
 // $topbar-back-link-size: rem-calc(18);
 // $topbar-link-dropdown-padding: rem-calc(20);

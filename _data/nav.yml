@@ -15,6 +15,10 @@
 - name: Gallery
   path: gallery.html
   section_id: gallery
+
+
+
+
 # - name: Services
 #   path: services.html
 #   section_id: services
