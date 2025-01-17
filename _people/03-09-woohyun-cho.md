@@ -9,8 +9,10 @@ permalink: people/woohyun.html
 email:  k106419@yonsei.ac.kr
 
 social:
+  - title: home
+    url: people/woohyun.html
 
- 
+    
 fields:
     - name : Image Diffusion
         
