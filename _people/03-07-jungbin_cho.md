@@ -10,8 +10,8 @@ email: Whwjdqls99@yonsei.ac.kr
 
 social:
   - title: home
-    url: https://github.com/whwjdqls
-
+    url: https://whwjdqls.github.io/jb-info/
+    
 
 fields:
     - name : 3D
