@@ -14,8 +14,7 @@ social:
 
 
 fields:
-    - name : Multimodal Learning
-    - name : Alignment Research
+    - name : Large Language Model
 
 works: NVIDIA.png
 
