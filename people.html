@@ -82,6 +82,14 @@ color_list:
               <span style="color: #666666; font-size: 0.9em; font-style: italic;">{{member.position}}</span>
             </span>
           </span>
+          <br>
+          {% if member.fullname contains "Seungju Han" %}
+          <div style="margin-top: 5px; display: inline-block;">
+            <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship in</span> 
+            <img src="./images/works/{{member.works}}" alt="NVIDIA" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
+          </div>
+          {% endif %}
+
           <div>
           {% if member.fullname contains "Dongha" %}
             <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://diyonsei.notion.site/Data-Language-Intelligence-Lab-Yonsei-University-7e121249362f42c2bdd1328aeaeb5f4b">  DLI Lab.</a></i>

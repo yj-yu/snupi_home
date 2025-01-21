@@ -16,6 +16,10 @@ social:
 fields:
     - name : Multimodal Learning
     - name : Alignment Research
+
+works: NVIDIA.png
+
+
 publications:
 
 ---
