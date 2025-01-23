@@ -13,7 +13,6 @@ author:
   - name: "Soonmin Hwang"
   - name: "Da Eun Kim"
   - name: "Geon Kim"
-
   - name: "Youngjae Yu"
 equal_contributor_idx:
   - 0
