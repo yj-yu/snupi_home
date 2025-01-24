@@ -14,6 +14,9 @@ publications:
     - name: Sangho Lee, Jiwan Chung, Youngjae Yu, Gunhee Kim, Thomas Breuel, Gal Chechik and Yale Song, Automatic Curation of Large-Scale Datasets for Audio-Visual Representation Learning, .
     - name: Youngjae Yu, Jongseok Kim, Heeseung Yun, Jiwan Chung and Gunhee Kim, Character Grounding and Re-Identification in Story of Videos and Text Descriptions, .
 
+works: microsoft.jpg
+
+
 fields:
     - name : Multimodal Learning
     - name : LM Analysis
