@@ -2,8 +2,8 @@
 layout: publications
 section-type: publications
 name: "CANVAS: Commonsense-Aware Navigation System for Intuitive Human-Robot Interaction"
-conference: 
-year: 2024
+conference: ICRA2025
+year: 2025
 
 
 author:

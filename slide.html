@@ -300,6 +300,27 @@
     fill: rgb(33, 90, 151);
   }
 
+  .slide:nth-child(10) {
+    left: 900%;
+  }
+  .slide:nth-child(10) .slide__bg {
+    left: -450%;
+    background-image: url("images/slides/your_image_10.png");
+  }
+  .slide:nth-child(10) .slide__overlay-path {
+    fill: rgb(33, 90, 151);
+  }
+
+  .slide:nth-child(11) {
+    left: 1000%;
+  }
+  .slide:nth-child(11) .slide__bg {
+    left: -500%;
+    background-image: url("images/slides/your_image_11.png");
+  }
+  .slide:nth-child(11) .slide__overlay-path {
+    fill: rgb(33, 90, 151);
+  }
 
   .slide__content {
     position: absolute;
@@ -326,7 +347,7 @@
   .slide__text {
     position: absolute;
     width: 300;
-    bottom: 10%;
+    top: 20%;
     left: 5%;
     color: #fff;
     transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
@@ -556,15 +577,33 @@
         // Define the slides data
         const slidesData = [
         {
+          conference: "NAACL2025",
+          title: "C^2 : Scalable Auto-Feedback for LLM-based Chart Generation",
+          authors: "Woosung Koh*, Janghan Yoon*, Minhyung Lee, Youngjin Song, Jaegwan Cho, Jaehyun Kang, Taehyeon Kim, Seyoung Yun, Youngjae Yu, Bongshin Lee",
+          bgImage: "images/slides/c2.png"
+        },
+        {
+          conference: "NAACL2025(findings)",
+          title: "Do LLMs Have Distinct and Consistent Personality? TRAIT: Personality Testset designed for LLMs with Psychometrics",
+          authors: "Seungbeen Lee*, Seungwon Lim*, Seungju Han, Giyeong Oh, Jiwan Chung, Minju Kim, Yeonsoo Lee, Dongha Lee, Jinyoung Yeo, Youngjae Yu",
+          bgImage: "images/slides/trait.png"
+        },
+        {
+          conference: "NAACL2025(findings)",
+          title: "EgoSpeak: Learning When to Speak for Egocentric Conversational Agents in the Wild",
+          authors: "Junhyeok Kim, Minsoo Kim, Jiwan Chung, Jungbin Cho, Jisoo Kim, Sungwoong Kim, Gyeongbo Sim, Youngjae Yu",
+          bgImage: "images/slides/egospeak.png"
+        },
+        {
           conference: "AAAI2025",
           title: "DEEPTalk: Dynamic Emotion Embedding for Probabilistic Speech-Driven 3D Face Animation",
-          authors: "Jisoo Kim, Jungbin Cho, Joonho Park, Soonmin Hwang, Da Eun Kim, Geon Kim, Youngjae Yu",
+          authors: "Jisoo Kim*, Jungbin Cho*, Joonho Park, Soonmin Hwang, Da Eun Kim, Geon Kim, Youngjae Yu",
           bgImage: "images/slides/aaai25_deeptalk.png"
         },
         {
           conference: "Neurips2024",
           title: "Towards Visual Text Design Transfer Across Languages",
-          authors: "Yejin Choi, Jiwan Chung, Sumin Shim, Giyeong Oh and Youngjae Yu",
+          authors: "Yejin Choi*, Jiwan Chung*, Sumin Shim, Giyeong Oh and Youngjae Yu",
           bgImage: "images/slides/sigil_congratulation.png"
         },
         {
@@ -576,7 +615,7 @@
         {
             conference: "EMNLP2024",
             title: "Selective Vision is the Challenge for Visual Reasoning: A Benchmark for Visual Argument Understanding",
-            authors: "Jiwan Chung, Sungjae Lee, Minseo Kim, Seungju Han, Ashkan Yousefpour, Jack Hessel and Youngjae Yu",
+            authors: "Jiwan Chung*, Sungjae Lee*, Minseo Kim, Seungju Han, Ashkan Yousefpour, Jack Hessel and Youngjae Yu",
             bgImage: "images/slides/visarg.png"
         },
         {
@@ -602,13 +641,7 @@
             title: "CHAMPAGNE: Learning Real-world Conversation from Large-Scale Web Videos",
             authors: "Seungju Han, Jack Hessel, Nouha Dziri, Yejin Choi and Youngjae Yu",
             bgImage: "images/slides/champagne.png"
-        },
-        {
-          conference: "BMVC2023",
-          title: "Long Story Short: a Summarize-then-Search Method for Long Video Question Answering",
-          authors: "Jiwan Chung and Youngjae Yu",
-          bgImage: "images/slides/longvid.png"
-      },
+        }
     ];
 
         // Function to generate slide HTML

@@ -3,7 +3,7 @@ layout: publications
 section-type: publications
 name: "CLARA: Classifying and Disambiguating User Commands for Reliable Interactive Robotic Agents"
 conference: ICRA2024
-year: 2023
+year: 2024
 author:
   - name: "Jeongeun Park"
   - name: "Seungwon Lim"

@@ -18,7 +18,7 @@ author:
 
 external:
 
-img: /images/papers/coming_soon.png
+img: /images/papers/egospeak.png
 
 keywords:
   - name: Multimodal
