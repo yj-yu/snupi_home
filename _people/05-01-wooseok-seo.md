@@ -4,7 +4,7 @@ section-type: people
 fullname: "Wooseok Seo"
 img-filename: seo_wooseok.jpg
 emoji: 😎
-position: "Intern"
+position: "Master Student"
 permalink: people/wooseok.html
 email: justin_seo@yonsei.ac.kr
 
@@ -14,8 +14,6 @@ social:
 
 
 fields:
-    - name : Representation Learning
-    - name : Text-to-Image Generation
-    - name : Vision-Language
+    - name : Alignment Research
 publications:
 ---
