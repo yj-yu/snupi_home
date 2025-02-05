@@ -8,10 +8,15 @@
   path: publications.html
   section_id: publications
 
-- name: Teaching
-  path: teaching.html
-  section_id: teachings
-  
+# - name: Teaching
+#   path: teaching.html
+#   section_id: teachings
+
+- name: Cooperations
+  path: cooperation.html
+  section_id: cooperation
+
+
 - name: Gallery
   path: gallery.html
   section_id: gallery
