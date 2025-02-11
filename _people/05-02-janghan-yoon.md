@@ -17,9 +17,5 @@ fields:
     - name: "Multimodal Learning"
     - name: "Applicable AI"
 
-
-
-
-
 publications:
 ---
