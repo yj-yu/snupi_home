@@ -9,6 +9,9 @@ email: oddqueue@gmail.com
 emoji: 🤔
 social:
 
+
+works: lgai.png
+
 fields:
     - name : Commonsense Reasoning
     - name : Text-to-Image Generation
