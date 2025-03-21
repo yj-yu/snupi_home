@@ -8,9 +8,9 @@ permalink: people/seungwon.html
 email: sngwon@yonsei.ac.kr
 emoji: 🤗
 fields:
-    - name : Human-Agent Interaction
-    - name : Social AI
+    - name : Action Decision
     - name : Embodied AI
+    - name : Social AI
     - name : Multimodal Perception
 
 
@@ -18,3 +18,4 @@ social:
   - title: home
     url: https://github.com/pull-ups
 ---
+

@@ -14,8 +14,10 @@ social:
 
     
 fields:
+    - name : Multimodal LLM
     - name : Image Diffusion
-        
+    - name : TTS, ASR
+
 publications:
 
 ---
