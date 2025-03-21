@@ -10,8 +10,10 @@ email: jisoo6687@yonsei.ac.kr
 
 
 
+
 fields:
-    - name : 3D Vision
+    - name : Embodied AI
+    - name : Human Alignment Research
     - name : Virtual Human
   
 publications:
@@ -19,5 +21,5 @@ publications:
 
 social:
   - title: home
-    url: people/jisoo.html
+    url: https://jiiiisoo.github.io/
 ---
