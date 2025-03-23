@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "EgoSpeak: Learning When to Speak for Egocentric Conversational Agents in the Wild"
-conference: NAACL2025 (findings)
+conference: NAACL2025 (Findings)
 year: 2025
 
 author:

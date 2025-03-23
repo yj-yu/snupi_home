@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Do LLMs Have Distinct and Consistent Personality? TRAIT: Personality Testset designed for LLMs with Psychometrics"
-conference: NAACL2025 (findings)
+conference: NAACL2025 (Findings)
 year: 2025
 author:
   - name: "Seungbeen Lee"

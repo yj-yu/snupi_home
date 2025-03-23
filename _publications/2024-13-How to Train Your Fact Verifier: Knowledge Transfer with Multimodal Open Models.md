@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "How to Train Your Fact Verifier: Knowledge Transfer with Multimodal Open Models"
-conference: EMNLP2024 (findings)
+conference: EMNLP2024 (Findings)
 year: 2024
 author:
   - name: "Jaeyoung Lee"

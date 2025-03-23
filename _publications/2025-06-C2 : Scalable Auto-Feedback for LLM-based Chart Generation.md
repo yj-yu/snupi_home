@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "C^2 : Scalable Auto-Feedback for LLM-based Chart Generation"
-conference: NAACL2025 Oral
+conference: NAACL2025 (Oral)
 year: 2025
 author:
   - name: "Woosung Koh"
