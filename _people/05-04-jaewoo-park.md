@@ -10,7 +10,7 @@ email: jaewoo.park@yonsei.ac.kr
 
 social:
   - title: home
-    url: people/jaewoo.html
+    url: https://www.jerife.org/cv
 
 
 fields:

@@ -18,7 +18,10 @@ author:
   - name: "Youngjae Yu"
 
   
-  
+equal_contributor_idx:
+  - 0
+  - 1
+
 external:
   - title: Arxiv
     url: https://arxiv.org/abs/2503.12844

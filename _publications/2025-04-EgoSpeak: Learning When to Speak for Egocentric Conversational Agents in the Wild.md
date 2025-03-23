@@ -15,8 +15,12 @@ author:
   - name: "Gyeongbo Sim"
   - name: "Youngjae Yu"
 
-
 external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2502.14892
+
+
+
 
 img: /images/papers/egospeak.png
 
