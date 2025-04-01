@@ -18,14 +18,109 @@ color_list:
   - rgba(0, 144, 202)
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+<style>
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 15px;
+}
+
+.toggle-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  color: #2196F3;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+</style>
+
 <div class='full parallax' style='padding-top: 50px;'>
   <div class='row'>
     <div class='twelve columns'>
       {% include section-header.html title="Member" color="#464646" tagline=" " class="big" %}
     </div>
   </div>
+  <div class='toggle-container'>
+    <span class="toggle-text">It's April Fool's Day! Toggle for your fun!</span>
+    <label class="switch">
+      <input type="checkbox" id="imageToggle" checked>
+      <span class="slider"></span>
+    </label>
+  </div>
   <div class='spacing'></div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('imageToggle');
+  const images = document.querySelectorAll('.wp-block-coblocks-author__avatar-img');
+  
+  // Initialize images with fool mode path on page load
+  images.forEach(img => {
+    const currentSrc = img.getAttribute('src');
+    img.setAttribute('src', currentSrc.replace('/people/', '/people_fool/'));
+  });
+  
+  toggle.addEventListener('change', function() {
+    images.forEach(img => {
+      const currentSrc = img.getAttribute('src');
+      if (toggle.checked) {
+        img.setAttribute('src', currentSrc.replace('/people/', '/people_fool/'));
+      } else {
+        img.setAttribute('src', currentSrc.replace('/people_fool/', '/people/'));
+      }
+    });
+  });
+});
+</script>
 
 <div class='full no-padding'>
   <!-- Members except alumni -->
