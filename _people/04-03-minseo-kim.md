@@ -2,7 +2,7 @@
 layout: people-detail
 section-type: people
 fullname: "Minseo Kim"
-img-filename: kim_minseo.JPG
+img-filename: kim_minseo.jpg
 emoji: 🏀
 position: "Master Student"
 permalink: people/minseo.html
