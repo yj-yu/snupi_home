@@ -25,8 +25,9 @@ color_list:
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin: 30px 0;
   gap: 15px;
+  min-height: 70px;
 }
 
 .toggle-text {
@@ -37,6 +38,7 @@ color_list:
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
   letter-spacing: 0.5px;
+  line-height: 1.8;
 }
 
 .switch {
@@ -85,7 +87,7 @@ input:checked + .slider:before {
 }
 </style>
 
-<div class='full parallax' style='padding-top: 50px;'>
+<div class='full parallax' style='padding: 50px 0;'>
   <div class='row'>
     <div class='twelve columns'>
       {% include section-header.html title="Member" color="#464646" tagline=" " class="big" %}
