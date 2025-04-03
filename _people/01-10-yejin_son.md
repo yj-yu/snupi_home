@@ -8,7 +8,7 @@ position: "Master Student"
 permalink: people/yejin_son.html
 email: yejinhand@yonsei.ac.kr
 fields:
-    - name : Commonsense reasoning
+    - name : Cross-culture AI
     - name : Multimodal learning
     - name : AI safety
     - name : Alignment research
