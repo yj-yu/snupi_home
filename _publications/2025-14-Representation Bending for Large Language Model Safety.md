@@ -15,6 +15,10 @@ author:
   - name: "Youngjae Yu"
   - name: "Jonghyun Choi"
 
+equal_contributor_idx:
+  - 0
+  - 1
+
 external:
   - title: Arxiv
     url: https://arxiv.org/abs/2504.01550
