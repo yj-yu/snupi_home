@@ -4,3 +4,4 @@ _site
 .idea
 .jekyll-cache
 _config.yml
+.DS_Store
