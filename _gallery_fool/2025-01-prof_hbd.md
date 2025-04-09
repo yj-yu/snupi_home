@@ -3,6 +3,6 @@ layout: people-detail
 section-type: gallery
 title: "prof_hbd"
 description: Happy Birthday, Professor!! 🥳🥳
-img-filename: prof_hbd.jpg
+img-filename: hbd_prof_.png
 year: 2025
 ---
