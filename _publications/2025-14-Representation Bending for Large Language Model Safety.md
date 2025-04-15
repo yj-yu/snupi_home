@@ -9,6 +9,7 @@ author:
   - name: "Ashkan Yousefpour"
   - name: "Taeheon Kim"
   - name: "Ryan S. Kwon"
+  - name: "Seungbeen Lee"
   - name: "Wonje Jeung"
   - name: "Seungju Han"
   - name: "Harrison Ngan"
