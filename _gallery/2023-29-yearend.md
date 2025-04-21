@@ -2,7 +2,7 @@
 layout: people-detail
 section-type: gallery
 title: "year-end"
-description: End of the year
-img-filename: year-end.jpg
+description: Happy Birthday, Januaries! 🎂
+img-filename: hbd_jan.jpg
 year: 2023
 ---
