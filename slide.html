@@ -576,28 +576,40 @@
     $(document).ready(function() {
         // Define the slides data
         const slidesData = [
-         {
+        {
+          conference: "ACL2025",
+          title: "Speaking Beyond Language: A Large-Scale Multimodal Dataset for Learning Nonverbal Cues from Video-Grounded Dialogues",
+          authors: "Youngmin Kim, Jiwan Chung, Jisoo Kim, sunghyun lee, Sangkyu Lee, Junhyeok Kim, Cheoljong Yang and Youngjae Yu",
+          bgImage: "images/slides/speaking.png"
+        },
+        {
+          conference: "ACL2025",
+          title: "Persona Dynamics: Unveiling the Impact of Persona Traits on Agents in Text-Based Games",
+          authors: "Seungwon Lim, Seungbeen Lee, Dongjun Min and Youngjae Yu",
+          bgImage: "images/slides/panda.png"
+        },
+        {
            conference: "NAACL2025",
            title: "C^2 : Scalable Auto-Feedback for LLM-based Chart Generation",
-           authors: "Woosung Koh*, Janghan Yoon*, Minhyung Lee, Youngjin Song, Jaegwan Cho, Jaehyun Kang, Taehyeon Kim, Seyoung Yun, Youngjae Yu, Bongshin Lee",
+           authors: "Woosung Koh*, Janghan Yoon*, Minhyung Lee, Youngjin Song, Jaegwan Cho, Jaehyun Kang, Taehyeon Kim, Seyoung Yun and Youngjae Yu, Bongshin Lee",
            bgImage: "images/slides/c2.png"
          },
          {
            conference: "NAACL2025(findings)",
            title: "Do LLMs Have Distinct and Consistent Personality? TRAIT: Personality Testset designed for LLMs with Psychometrics",
-           authors: "Seungbeen Lee*, Seungwon Lim*, Seungju Han, Giyeong Oh, Jiwan Chung, Minju Kim, Yeonsoo Lee, Dongha Lee, Jinyoung Yeo, Youngjae Yu",
+           authors: "Seungbeen Lee*, Seungwon Lim*, Seungju Han, Giyeong Oh, Jiwan Chung, Minju Kim, Yeonsoo Lee, Dongha Lee, Jinyoung Yeo and Youngjae Yu",
            bgImage: "images/slides/trait.png"
          },
          {
            conference: "NAACL2025(findings)",
            title: "EgoSpeak: Learning When to Speak for Egocentric Conversational Agents in the Wild",
-           authors: "Junhyeok Kim, Minsoo Kim, Jiwan Chung, Jungbin Cho, Jisoo Kim, Sungwoong Kim, Gyeongbo Sim, Youngjae Yu",
+           authors: "Junhyeok Kim, Minsoo Kim, Jiwan Chung, Jungbin Cho, Jisoo Kim, Sungwoong Kim, Gyeongbo Sim and Youngjae Yu",
            bgImage: "images/slides/egospeak.png"
          },
          {
            conference: "AAAI2025",
            title: "DEEPTalk: Dynamic Emotion Embedding for Probabilistic Speech-Driven 3D Face Animation",
-           authors: "Jisoo Kim*, Jungbin Cho*, Joonho Park, Soonmin Hwang, Da Eun Kim, Geon Kim, Youngjae Yu",
+           authors: "Jisoo Kim*, Jungbin Cho*, Joonho Park, Soonmin Hwang, Da Eun Kim, Geon Kim and Youngjae Yu",
            bgImage: "images/slides/aaai25_deeptalk.png"
          },
          {
@@ -633,19 +645,19 @@
              bgImage: "images/slides/normlense.png"
            
          },
-         {
-             conference: "EMNLP2023",
-             title: "VLIS: Unimodal Language Models Guide Multimodal Language Generation",
-             authors: "Jiwan Chung and Youngjae Yu",
-             bgImage: "images/slides/vlis.png"
+         //{
+         //    conference: "EMNLP2023",
+         //    title: "VLIS: Unimodal Language Models Guide Multimodal Language Generation",
+         //    authors: "Jiwan Chung and Youngjae Yu",
+         //    bgImage: "images/slides/vlis.png"
            
-         },
-         {
-             conference: "ICCV2023",
-             title: "CHAMPAGNE: Learning Real-world Conversation from Large-Scale Web Videos",
-             authors: "Seungju Han, Jack Hessel, Nouha Dziri, Yejin Choi and Youngjae Yu",
-             bgImage: "images/slides/champagne.png"
-         }
+         //},
+         //{
+         //    conference: "ICCV2023",
+         //    title: "CHAMPAGNE: Learning Real-world Conversation from Large-Scale Web Videos",
+         //    authors: "Seungju Han, Jack Hessel, Nouha Dziri, Yejin Choi and Youngjae Yu",
+         //    bgImage: "images/slides/champagne.png"
+         //}
          ];
 
         // Function to generate slide HTML
