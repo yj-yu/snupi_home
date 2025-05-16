@@ -3,7 +3,7 @@ layout: publications
 section-type: publications
 name: "TimesVector: a vectorized clustering approach to the analysis of time series transcriptome data from multiple phenotypes"
 conference: Bioinformatics
-year: 2025
+year: 2017
 
 
 author:
