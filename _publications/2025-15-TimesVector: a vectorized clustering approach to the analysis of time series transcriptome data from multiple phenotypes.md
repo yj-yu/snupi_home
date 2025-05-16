@@ -17,7 +17,7 @@ author:
 
   
 
-img: /images/papers/timesvector.png
+img: /images/papers/TimesVector.png
 
 keywords:
   - name: Biomedical
