@@ -88,15 +88,7 @@ count_year_min: 2016
                     {% if name contains "_" %}
                       {% assign name = name | remove: "_" %}
                     {% endif %}
-                    <!-- {% if paper.name == "Representation Bending for Large Language Model Safety" %}
-                      {% if name == "Youngjae Yu" %}
-                        {% assign name = "Youngjae Yu<sup>†</sup>" %}
-                      {% endif %}
-                      {{ name }}{% if member.link or temp %}</a>{% endif %}{% if paper.equal_contributor_idx contains forloop.index0 %}*{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 1 %}, {% endif %}{% if forloop.rindex == 1 %}<sup>†</sup>{% endif %}
-                    {% else %}
-                      {{ name }}{% if member.link or temp %}</a>{% endif %}{% if paper.equal_contributor_idx contains forloop.index0 %}*{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 1 %}, {% endif %}{% if forloop.rindex == 1 %}<sup>†</sup>{% endif %}
-                      -->
-                      {{ name }}{% if member.link or temp %}</a>{% endif %}{% if paper.equal_contributor_idx contains forloop.index0 %}*{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 1 %}, {% endif %}
+                      {{ name }}{% if member.link or temp %}</a>{% endif %}{% if paper.equal_contributor_idx contains forloop.index0 %}*{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 1 %}, 
                     {% endif %}
                   {% endfor %}
                 {% endif %}
