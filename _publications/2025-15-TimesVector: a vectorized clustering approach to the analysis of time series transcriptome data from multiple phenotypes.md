@@ -15,7 +15,6 @@ author:
   - name: "Sun Kim"
   
 
-external:
   
 
 img: /images/papers/timesvector.png
