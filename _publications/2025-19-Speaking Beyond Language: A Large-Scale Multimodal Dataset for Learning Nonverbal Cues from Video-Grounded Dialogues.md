@@ -9,13 +9,15 @@ year: 2025
 
 
 author:
+  - name: "Youngmin Kim"
   - name: "Jiwan Chung"
-  - name: "Janghan Yoon"
-  - name: "Junhyeong Park"
-  - name: "Sangeyl Lee"
-  - name: "Joowon Yang"
-  - name: "Sooyeon Park"
+  - name: "Jisoo Kim"
+  - name: "Sunghyun Lee"
+  - name: "Sangkyu Lee"
+  - name: "Junhyeok Kim"
+  - name: "Cheoljong Yang"
   - name: "Youngjae Yu"
+
 
 
 external:
