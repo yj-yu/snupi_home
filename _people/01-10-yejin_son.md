@@ -14,5 +14,5 @@ fields:
     - name : Alignment research
 social:
   - title: home
-    url: people/yejin_son.html
+    url: https://ozzaney.github.io/
 ---
