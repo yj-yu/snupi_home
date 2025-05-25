@@ -30,6 +30,7 @@ $topbar-link-color-hover: $white !default;
 $topbar-link-color-active: $white !default;
 $topbar-link-color-active-hover: $white !default;
 $topbar-link-weight: $font-weight-normal !default;
+// $topbar-link-weight: $font-weight-bold !default;
 $topbar-link-font-size: rem-calc(13) !default;
 $topbar-link-hover-lightness: -10% !default; // Darken by 10%
 $topbar-link-bg: $topbar-bg !default;
@@ -37,7 +38,8 @@ $topbar-link-bg-hover: $oil !default;
 $topbar-link-bg-color-hover: $charcoal !default;
 $topbar-link-bg-active: $primary-color !default;
 $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%) !default;
-$topbar-link-font-family: $body-font-family !default;
+// $topbar-link-font-family: $body-font-family !default;
+$topbar-link-font-family: "Palatino Linotype" !default;
 $topbar-link-text-transform: none !default;
 $topbar-link-padding: ($topbar-height / 3) !default;
 $topbar-back-link-size: rem-calc(18) !default;
@@ -146,6 +148,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         .top-bar-section {
           z-index: 98;
           margin-top: $topbar-height;
+          text-decoration: none;
         }
       }
     }
@@ -316,12 +319,14 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
       ul li {
         background: $topbar-dropdown-bg;
         & > a {
+          text-decoration: none;
           display: block;
           width: 100%;
           color: $topbar-link-color;
           padding: 12px 0 12px 0;
           padding-#{$default-float}: $topbar-link-padding;
           font-family: $topbar-link-font-family;
+          
           font-size: $topbar-link-font-size;
           font-weight: $topbar-link-weight;
           text-transform: $topbar-link-text-transform;
@@ -357,6 +362,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
             background: $topbar-link-bg-hover;
           }
           color: $topbar-link-color-hover;
+          font-weight: $topbar-link-weight-hover;
         }
 
         // Apply the active link color when it has that class
@@ -510,6 +516,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
                 background: $topbar-link-bg-hover;
               }
               color: $topbar-link-color-hover;
+              font-weight: $topbar-link-weight-hover;
             }
           }
           &:not(.has-form) {
@@ -671,6 +678,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
               background: $topbar-link-bg-hover;
             }
             color: $topbar-link-color-hover;
+            font-weight: $topbar-link-weight-hover;
           }
 
           // Apply the active link color when it has that class

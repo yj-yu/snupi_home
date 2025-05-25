@@ -561,7 +561,6 @@ $button-border-color: $primary-color;
 // $f-dropdown-font-size: rem-calc(14);
 // $f-dropdown-list-padding: rem-calc(5, 10);
 // $f-dropdown-line-height: rem-calc(18);
-// $f-dropdown-list-hover-bg: $smoke;
 // $dropdown-mobile-default-float: 0;
 
 // We use this to control the styles for when the dropdown has custom content.
@@ -1400,62 +1399,29 @@ $topbar-height: rem-calc(100);
 // $topbar-title-font-size: rem-calc(17);
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #999;
-// $topbar-link-color-hover: #888;
-// $topbar-link-color-active: #888;
-// $topbar-link-color-active-hover: #888;
 $topbar-link-color: #888;
-$topbar-link-color-hover: #888;
-$topbar-link-color-active: #000000; 
-$topbar-link-color-active-hover: #000000;
-
-// $topbar-link-weight: $font-weight-normal;
+$topbar-link-color-hover: #272A6A;
+$topbar-link-color-active: #272A6A;
+$topbar-link-color-active-hover: #272A6A;
 $topbar-link-font-size: rem-calc(16);
-// $topbar-link-hover-lightness: -10%; // Darken by 10%
-// $topbar-link-bg: $topbar-bg;
-$topbar-link-bg-hover: #f9f9f9;
-// $topbar-link-bg-color-hover: $charcoal;
-$topbar-link-bg-active: #f9f9f9;
-$topbar-link-bg-active-hover: scale-color(#f9f9f9, $lightness: -3%);
-// $topbar-link-font-family: $body-font-family;
-// $topbar-link-text-transform: uppercase;
+$topbar-link-weight: normal;
+$topbar-link-weight-hover: bold;
+$topbar-link-bg-hover: transparent;
+$topbar-link-bg-active: transparent;
+$topbar-link-bg-active-hover: transparent;
 $topbar-link-padding: ($topbar-height / 5);
-// $topbar-back-link-size: rem-calc(18);
-// $topbar-link-dropdown-padding: rem-calc(20);
-// $topbar-button-font-size: 0.75rem;
-// $topbar-button-top: 7px;
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
 $topbar-dropdown-link-color: #ccc;
 $topbar-dropdown-link-color-hover: #fff;
-// $topbar-dropdown-link-bg: $oil;
 $topbar-dropdown-link-bg-hover: #444;
-// $topbar-dropdown-link-weight: $font-weight-normal;
-// $topbar-dropdown-toggle-size: 5px;
 $topbar-dropdown-toggle-color: #999;
-// $topbar-dropdown-toggle-alpha: 0.4;
-
-// $topbar-dropdown-label-color: $monsoon;
-// $topbar-dropdown-label-text-transform: uppercase;
-// $topbar-dropdown-label-font-weight: $font-weight-bold;
-// $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: $oil;
 
 // Top menu icon styles
-// $topbar-menu-link-transform: uppercase;
-// $topbar-menu-link-font-size: rem-calc(13);
-// $topbar-menu-link-weight: $font-weight-bold;
 $topbar-menu-link-color: #999;
 $topbar-menu-icon-color: #999;
-// $topbar-menu-link-color-toggled: $jumbo;
-// $topbar-menu-icon-color-toggled: $jumbo;
-// $topbar-menu-icon-position: $opposite-direction; // Change to $default-float for a left menu icon
 
 // Transitions and breakpoint styles
-// $topbar-transition-speed: 300ms;
-// Using rem-calc for the below breakpoint causes issues with top bar
-// $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
 $topbar-media-query: "#{$screen} and (min-width:960px)";
 
 
