@@ -13,8 +13,8 @@
 #   section_id: teachings
 
 - name: Cooperations
-  path: cooperation.html
-  section_id: cooperation
+  path: cooperations.html
+  section_id: cooperations
 
 
 - name: Gallery

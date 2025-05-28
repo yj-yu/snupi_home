@@ -38,6 +38,8 @@ $topbar-link-bg-hover: $oil !default;
 $topbar-link-bg-color-hover: $charcoal !default;
 $topbar-link-bg-active: $primary-color !default;
 $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%) !default;
+$topbar-link-weight-hover: bold;
+$topbar-link-weight-active: bold;
 // $topbar-link-font-family: $body-font-family !default;
 $topbar-link-font-family: "Palatino Linotype" !default;
 $topbar-link-text-transform: none !default;
@@ -121,7 +123,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
     .contain-to-grid {
       width: 100%;
       background: $topbar-bg;
-
+      height: 80px;
       .top-bar { margin-bottom: $topbar-margin-bottom; }
     }
 
@@ -142,6 +144,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         .title-area {
           position: fixed;
           width: 100%;
+          height: 80%;
           z-index: 99;
         }
         // Ensure you can scroll the menu on small screens
@@ -197,6 +200,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
       // Title Area
       .title-area {
         position: relative;
+        height: 80%;
         margin: 0;
       }
 
@@ -289,6 +293,16 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
             }
           }
         }
+
+        .top-bar-section {
+          ul li.active > a {
+            border-bottom: none;
+            padding-bottom: 12px; // Reset padding, as border is removed
+            &:hover {
+              border-bottom: none;
+            }
+          }
+        }
       }
     }
 
@@ -356,7 +370,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         }
 
         // Apply the hover link color when it has that class
-        &:hover:not(.has-form) > a {
+        &:hover:not(.has-form):not(.active) > a {
           background-color: $topbar-link-bg-color-hover;
           @if ($topbar-link-bg-hover) {
             background: $topbar-link-bg-hover;
@@ -369,9 +383,18 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         &.active > a {
           background: $topbar-link-bg-active;
           color: $topbar-link-color-active;
+          font-weight: $topbar-link-weight-active;
+          background: $white;
+          color: $primary-color;
+          font-weight: $topbar-link-weight; // or $topbar-link-weight-active if defined and different
+          border-bottom: 3px solid $primary-color;
+          padding-bottom: calc(12px - 3px); // Adjust padding to maintain height
           &:hover {
-            background: $topbar-link-bg-active-hover;
-            color: $topbar-link-color-active-hover;
+            // background: $topbar-link-bg-active-hover;
+            // color: $topbar-link-color-active-hover;
+            background: darken($white, 5%);
+            color: darken($primary-color, 10%);
+            border-bottom: 3px solid darken($primary-color, 10%);
           }
         }
       }
@@ -489,6 +512,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
 
       .contain-to-grid .top-bar {
         max-width: $row-width;
+        height: 80px;
         margin: 0 auto;
         margin-bottom: $topbar-margin-bottom;
       }
@@ -509,7 +533,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         }
 
         li {
-          &.hover {
+          &.hover:not(.active) {
             > a:not(.button) {
               background-color: $topbar-link-bg-color-hover;
               @if ($topbar-link-bg-hover) {
@@ -519,7 +543,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
               font-weight: $topbar-link-weight-hover;
             }
           }
-          &:not(.has-form) {
+          &:not(.has-form):not(.active) {
             a:not(.button) {
               padding: 0 $topbar-link-padding;
               line-height: $topbar-height;
@@ -535,12 +559,20 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
           &.active:not(.has-form) {
             a:not(.button) {
               padding: 0 $topbar-link-padding;
-              line-height: $topbar-height;
-              color: $topbar-link-color-active;
-              background: $topbar-link-bg-active;
+              // line-height: $topbar-height;
+              // color: $topbar-link-color-active;
+              // background: $topbar-link-bg-active;
+              line-height: calc(#{$topbar-height} - 3px); // Adjust line-height to maintain height
+              color: $primary-color;
+              background: $white;
+              border-bottom: 3px solid $primary-color;
+              font-weight: $topbar-link-weight-active;
               &:hover {
-                background: $topbar-link-bg-active-hover;
-                color: $topbar-link-color-active-hover;
+                // background: $topbar-link-bg-active-hover;
+                // color: $topbar-link-color-active-hover;
+                background: darken($white, 5%);
+                color: darken($primary-color, 10%);
+                border-bottom: 3px solid darken($primary-color, 10%);
               }
             }
           }

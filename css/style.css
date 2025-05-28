@@ -810,9 +810,9 @@ ul.shortcode-list i {
 }
 
 .contain-to-grid {
-  -moz-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.1);
 }
 .contain-to-grid .top-bar-section .dropdown li:not(.has-form) a:not(.button) {
   height: 60px;
@@ -834,7 +834,8 @@ ul.shortcode-list i {
 }
 
 .contain-to-grid {
-  height: 100px;
+  /* height: 100px; */
+  height: 80px;
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
@@ -861,7 +862,8 @@ ul.shortcode-list i {
   transition-duration: 0.2s;
 }
 .contain-to-grid .top-bar-section li:not(.has-form) a:not(.button) {
-  height: 100px;
+  /* height: 100px; */
+  height: 80px;
 }
 .contain-to-grid .top-bar-section .has-dropdown > a:after {
   -moz-transition-property: all;
@@ -875,8 +877,10 @@ ul.shortcode-list i {
   top: 3.57143rem;
 }
 .contain-to-grid .title-area, .contain-to-grid .title-area li, .contain-to-grid .title-area a {
-  height: 100px;
-  line-height: 100px;
+  /* height: 100px;
+  line-height: 100px; */
+  height: 80px;
+  line-height: 80px;
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
