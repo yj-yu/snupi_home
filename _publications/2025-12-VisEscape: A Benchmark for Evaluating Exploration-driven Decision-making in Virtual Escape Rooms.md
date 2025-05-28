@@ -15,7 +15,10 @@ author:
   - name: "Jiwan Chung"
   - name: "Youngjae Yu"
 
-  
+external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2503.14427
+
   
 
 img: /images/papers/visescape.png
