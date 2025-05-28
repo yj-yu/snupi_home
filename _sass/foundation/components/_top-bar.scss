@@ -41,7 +41,7 @@ $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%) !def
 $topbar-link-weight-hover: bold;
 $topbar-link-weight-active: bold;
 // $topbar-link-font-family: $body-font-family !default;
-$topbar-link-font-family: "Palatino Linotype" !default;
+$topbar-link-font-family: "Palatino Linotype", Helvetica !default;
 $topbar-link-text-transform: none !default;
 $topbar-link-padding: ($topbar-height / 3) !default;
 $topbar-back-link-size: rem-calc(18) !default;
