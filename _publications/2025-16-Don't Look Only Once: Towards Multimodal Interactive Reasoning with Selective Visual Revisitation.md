@@ -10,7 +10,7 @@ author:
   - name: "Junhyeok Kim"
   - name: "Siyeol Kim"
   - name: "Jaeyoung Lee"
-  - name: "Min Soo Kim"
+  - name: "Minsoo Kim"
   - name: "Youngjae Yu"
 
 
