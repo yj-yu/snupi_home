@@ -3,7 +3,7 @@ layout: publications
 section-type: publications
 name: "Pearl: A Review-driven Persona-Knowledge Grounded Conversational Recommendation Dataset
 "
-conference: ACL2024
+conference: ACL2024(Findings)
 year: 2024
 author:
   - name: "Minjin Kim"

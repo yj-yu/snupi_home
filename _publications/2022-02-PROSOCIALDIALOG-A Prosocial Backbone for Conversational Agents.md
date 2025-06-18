@@ -5,8 +5,8 @@ name: "PROSOCIALDIALOG:A Prosocial Backbone for Conversational Agents"
 year: 2022
 conference: EMNLP2022
 author:
-  - name: "Youngjae Yu *"
-  - name: "Hyunwoo Kim *"
+  - name: "Youngjae Yu"
+  - name: "Hyunwoo Kim"
   - name: "Liwei Jiang"
   - name: "Ximing Lu"
   - name: "Daniel Khashabi"
@@ -18,6 +18,9 @@ external:
   - title: Arxiv
     url: https://arxiv.org/pdf/2205.12688.pdf
 
+equal_contributor_idx:
+  - 0
+  - 1
 
 keywords:
   - name: NLP
