@@ -19,7 +19,7 @@ author:
 external:
   
 
-img: /images/papers/comingsoon.jpg
+img: /images/papers/acon.png
 
 keywords:
   - name: Multimodal
