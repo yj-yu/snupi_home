@@ -2,8 +2,8 @@
 layout: publications
 section-type: publications
 name: "Scalp Diagnostic System With Label-Free Segmentation and Training-Free Image Translation"
-conference: 
-year: 2024
+conference: MICCAI2025
+year: 2025
 
 author:
   - name: "Youngmin Kim"

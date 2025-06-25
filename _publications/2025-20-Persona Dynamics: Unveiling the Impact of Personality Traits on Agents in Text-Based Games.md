@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Persona Dynamics: Unveiling the Impact of Personality Traits on Agents in Text-Based Games"
-conference: ACL2025
+conference: ACL2025(Oral)
 year: 2025
 
 
