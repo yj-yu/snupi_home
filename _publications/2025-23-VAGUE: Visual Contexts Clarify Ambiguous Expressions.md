@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "VAGUE: Visual Contexts Clarify Ambiguous Expressions"
-conference:  
+conference: ICCV2025
 year: 2025
 
 

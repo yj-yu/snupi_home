@@ -190,135 +190,8 @@
     background-size: cover;
     will-change: transform;
   }
-  .slide:nth-child(1) {
-    left: 0%;
-  }
-  .slide:nth-child(1) .slide__bg {
-    left: 0%;
-    background-image: url("images/slides/normlense.png");
-  }
-  .slide:nth-child(1) .slide__overlay-path {
-    fill: rgb(33, 90, 151);
-  }
-
   
-  .slide:nth-child(2) {
-    left: 100%;
-  }
-  .slide:nth-child(2) .slide__bg {
-    left: -50%;
-    background-image: url("images/slides/normlense.png");
-  }
-  .slide:nth-child(2) .slide__overlay-path {
-    fill: rgb(33, 90, 151);
-  }
-
-
-
-
-
-
-
-
-
-  .slide:nth-child(3) {
-    left: 200%;
-  }
-  .slide:nth-child(3) .slide__bg {
-    left: -100%;
-    background-image: url("images/slides/normlense.png");
-  }
-  .slide:nth-child(3) .slide__overlay-path {
-    fill: rgb(33, 90, 151);
-  }
-  
-
-  .slide:nth-child(4) {
-    left: 300%;
-  }
-  .slide:nth-child(4) .slide__bg {
-    left: -150%;
-    background-image: url("images/slides/vlis.png");
-  }
-  .slide:nth-child(4) .slide__overlay-path {
-    fill: rgb(33, 90, 151);
-  }
-
-
-
-  .slide:nth-child(5) {
-    left: 400%;
-  }
-  .slide:nth-child(5) .slide__bg {
-    left: -200%;
-    background-image: url("/images/slides/esper.jpg");
-  }
-  .slide:nth-child(5) .slide__overlay-path {
-    fill: rgb(33, 90, 151);
-  }
-
-  .slide:nth-child(6) {
-    left: 500%;
-  }
-  .slide:nth-child(6) .slide__bg {
-    left: -250%;
-    background-image: url("images/slides/champagne.png");
-  }
-  .slide:nth-child(6) .slide__overlay-path {
-    fill: rgb(33, 90, 151);
-  }
-
-  .slide:nth-child(7) {
-    left: 600%;
-  }
-  .slide:nth-child(7) .slide__bg {
-    left: -300%;
-    background-image: url("images/slides/23_mmc4.png");
-  }
-  .slide:nth-child(7) .slide__overlay-path {
-    fill: rgb(33, 90, 151);
-  }
-
-  .slide:nth-child(8) {
-    left: 700%;
-  }
-  .slide:nth-child(8) .slide__bg {
-    left: -350%;
-    background-image: url("images/slides/longvid.png");
-  }
-  .slide:nth-child(8) .slide__overlay-path {
-    fill: rgb(33, 90, 151);
-  }
-  .slide:nth-child(9) {
-    left: 800%;
-  }
-  .slide:nth-child(9) .slide__bg {
-    left: -400%;
-    background-image: url("images/slides/symbolicCOT.png");
-  }
-  .slide:nth-child(9) .slide__overlay-path {
-    fill: rgb(33, 90, 151);
-  }
-
-  .slide:nth-child(10) {
-    left: 900%;
-  }
-  .slide:nth-child(10) .slide__bg {
-    left: -450%;
-    background-image: url("images/slides/your_image_10.png");
-  }
-  .slide:nth-child(10) .slide__overlay-path {
-    fill: rgb(33, 90, 151);
-  }
-
-  .slide:nth-child(11) {
-    left: 1000%;
-  }
-  .slide:nth-child(11) .slide__bg {
-    left: -500%;
-    background-image: url("images/slides/your_image_11.png");
-  }
-  .slide:nth-child(11) .slide__overlay-path {
+  .slide__overlay-path {
     fill: rgb(33, 90, 151);
   }
 
@@ -577,6 +450,24 @@
         // Define the slides data
         const slidesData = [
         {
+          conference: "ICCV2025",
+          title: "V.I.P.: Iterative Online Preference Distillation for Efficient Video Diffusion Models",
+          authors: "Jisoo Kim, Wooseok Seo, Junwan Kim, Seungho Park, Sooyeon Park, Youngjae Yu",
+          bgImage: "images/slides/vip.png"
+        },
+        {
+          conference: "ICCV2025",
+          title: "DisCoRD: Discrete Tokens to Continuous Motion via Rectified Flow Decoding",
+          authors: "Jungbin Cho*, Junwan Kim*, Jisoo Kim, Minseo Kim, Mingu Kang, Sungeun Hong, Tae-Hyun Oh, Youngjae Yu",
+          bgImage: "images/slides/discord.png"
+        },
+        {
+          conference: "MICCAI2025",
+          title: "Scalp Diagnostic System With Label-Free Segmentation and Training-Free Image Translation",
+          authors: "Youngmin Kim*, Saejin Kim*, Hoyeon Moon, Youngjae Yu, Junhyug Noh",
+          bgImage: "images/slides/scalp.png"
+        },
+        {
           conference: "ACL2025",
           title: "Speaking Beyond Language: A Large-Scale Multimodal Dataset for Learning Nonverbal Cues from Video-Grounded Dialogues",
           authors: "Youngmin Kim, Jiwan Chung, Jisoo Kim, sunghyun lee, Sangkyu Lee, Junhyeok Kim, Cheoljong Yang and Youngjae Yu",
@@ -595,13 +486,13 @@
            bgImage: "images/slides/c2.png"
          },
          {
-           conference: "NAACL2025(findings)",
+           conference: "NAACL2025",
            title: "Do LLMs Have Distinct and Consistent Personality? TRAIT: Personality Testset designed for LLMs with Psychometrics",
            authors: "Seungbeen Lee*, Seungwon Lim*, Seungju Han, Giyeong Oh, Jiwan Chung, Minju Kim, Yeonsoo Lee, Dongha Lee, Jinyoung Yeo and Youngjae Yu",
            bgImage: "images/slides/trait.png"
          },
          {
-           conference: "NAACL2025(findings)",
+           conference: "NAACL2025",
            title: "EgoSpeak: Learning When to Speak for Egocentric Conversational Agents in the Wild",
            authors: "Junhyeok Kim, Minsoo Kim, Jiwan Chung, Jungbin Cho, Jisoo Kim, Sungwoong Kim, Gyeongbo Sim and Youngjae Yu",
            bgImage: "images/slides/egospeak.png"
@@ -643,21 +534,20 @@
              title: "Reading Books is Great, But Not if You Are Driving! Visually Grounded Reasoning about Defeasible Commonsense Norms",
              authors: "Seungju Han, Junhyeok Kim, Jack Hessel, Liwei Jiang, Jiwan Chung, Yejin Son, Yejin Choi and Youngjae Yu",
              bgImage: "images/slides/normlense.png"
-           
          },
-         //{
-         //    conference: "EMNLP2023",
-         //    title: "VLIS: Unimodal Language Models Guide Multimodal Language Generation",
-         //    authors: "Jiwan Chung and Youngjae Yu",
-         //    bgImage: "images/slides/vlis.png"
-           
-         //},
-         //{
-         //    conference: "ICCV2023",
-         //    title: "CHAMPAGNE: Learning Real-world Conversation from Large-Scale Web Videos",
-         //    authors: "Seungju Han, Jack Hessel, Nouha Dziri, Yejin Choi and Youngjae Yu",
-         //    bgImage: "images/slides/champagne.png"
-         //}
+         {
+             conference: "EMNLP2023",
+             title: "VLIS: Unimodal Language Models Guide Multimodal Language Generation",
+             authors: "Jiwan Chung and Youngjae Yu",
+             bgImage: "images/slides/vlis.png"
+         
+         },
+         {
+             conference: "ICCV2023",
+             title: "CHAMPAGNE: Learning Real-world Conversation from Large-Scale Web Videos",
+             authors: "Seungju Han, Jack Hessel, Nouha Dziri, Yejin Choi and Youngjae Yu",
+             bgImage: "images/slides/champagne.png"
+         }
          ];
 
         // Function to generate slide HTML
@@ -685,6 +575,12 @@
         const $slider = $(".slider");
         slidesData.forEach((slide, index) => {
             $slider.append(generateSlideHTML(slide, index));
+        });
+
+        // Set positions for each slide dynamically
+        $(".slide").each(function(index) {
+            $(this).css("left", (index * 100) + "%");
+            $(this).find(".slide__bg").css("left", (-index * 50) + "%");
         });
 
         // Set the first slide as active

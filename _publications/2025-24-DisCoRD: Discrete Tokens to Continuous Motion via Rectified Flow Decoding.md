@@ -2,8 +2,8 @@
 layout: publications
 section-type: publications
 name: "DisCoRD: Discrete Tokens to Continuous Motion via Rectified Flow Decoding"
-conference: 
-year: 2024
+conference: ICCV2025
+year: 2025
 
 
 author:
