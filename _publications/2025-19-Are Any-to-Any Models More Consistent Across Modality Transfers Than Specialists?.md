@@ -17,7 +17,8 @@ author:
 
 
 external:
-  
+- title: Arxiv
+    url: https://arxiv.org/abs/2505.24211
 
 img: /images/papers/acon.png
 
