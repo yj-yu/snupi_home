@@ -26,12 +26,10 @@ external:
 
 img: /images/papers/factverifier.png
 
-
-
 keywords:
-  - name: Multimodal
-  - name: Safety
-  - name: Societal Implications
+  - name: NLP
+  - name: Fact Verification
+
 
   
 display: False
