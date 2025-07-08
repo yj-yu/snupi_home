@@ -21,9 +21,12 @@ author:
 
 img: /images/papers/glyphdecode.png
 
+
 keywords:
-  - name: NLP
-  - name: Fact Verification
+  - name: Multimodal
+  - name: Safety
+  - name: Societal Implications
+
   
 display: False
 ---
