@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Verifying the Verifiers: Unveiling Pitfalls and Potentials in Fact Verifiers"
-conference: 
+conference: COLM2025
 year: 2025
 
 
@@ -26,9 +26,13 @@ external:
 
 img: /images/papers/factverifier.png
 
+
+
 keywords:
-  - name: NLP
-  - name: Fact Verification
+  - name: Multimodal
+  - name: Safety
+  - name: Societal Implications
+
   
 display: False
 ---
