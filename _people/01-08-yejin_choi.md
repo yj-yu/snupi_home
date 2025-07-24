@@ -5,7 +5,7 @@ fullname: "Yejin Choi"
 emoji: 🖼️
 img-filename: choi_yejin.png
 position: "Master Student"
-permalink: https://yejinc00.github.io/
+permalink: people/yejin_choi.html
 
 email: yejinchoi@yonsei.ac.kr
 
@@ -15,6 +15,5 @@ fields:
 
 social:
   - title: home
-    url: people/yejin_choi.html
-
+    url: https://yejinc00.github.io/
 ---
