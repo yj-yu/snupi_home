@@ -7,11 +7,13 @@ position: "Ph.D. Student"
 permalink: people/seungwon.html
 email: sngwon@yonsei.ac.kr
 emoji: 🤗
+
+works: lgai.png
+
 fields:
     - name : Action Decision
     - name : Embodied AI
     - name : Social AI
-    - name : Multimodal Perception
 
 
 social:
