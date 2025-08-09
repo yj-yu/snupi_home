@@ -12,11 +12,12 @@ author:
   - name: "Youngjae Yu"
   - name: "Dongha Lee_"
 
+    
+external:
+  - title: Arxiv
+    url: https://www.arxiv.org/abs/2507.16873
 
-
-  
-
-img: /images/papers/comingsoon.jpg
+img: /images/papers/hippo.png
 
 keywords:
   - name: Multimodal

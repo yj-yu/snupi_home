@@ -1,7 +1,7 @@
 ---
 layout: publications
 section-type: publications
-name: "G-FOCUS: Towards a Robust Method for Assessing UI Design Persuasiveness"
+name: "Do MLLMs Capture How Interfaces Guide User Behavior? A Benchmark for Multimodal UI/UX Design Understanding"
 conference:  
 year: 2025
 
@@ -9,16 +9,13 @@ year: 2025
 
 author:
   - name: "Jaehyun Jeon"
-  - name: "Janghan Yoon"
   - name: "Minsoo Kim"
+  - name: "Janghan Yoon"
   - name: "Sumin Shim"
   - name: "Yejin Choi"
   - name: "Hanbin Kim"
   - name: "Youngjae Yu"
 
-equal_contributor_idx:
-  - 0
-  - 1
 
 external:
   - title: Arxiv
