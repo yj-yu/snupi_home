@@ -1,0 +1,29 @@
+---
+layout: publications
+section-type: publications
+name: "MAVL: A Multilingual Audio-Video Lyrics Dataset for Animated Song Translation"
+conference:  
+year: 2025
+
+   
+author:
+  - name: "Woohyun Cho"
+  - name: "Youngmin Kim"
+  - name: "Sunghyun Lee"
+  - name: "Youngjae Yu"
+  
+
+external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2505.18614
+  
+
+img: /images/papers/mavl.png
+
+keywords:
+  - name: Multimodal
+  - name: Audio
+  - name: Video
+  
+display: False
+---

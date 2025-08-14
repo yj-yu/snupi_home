@@ -9,6 +9,7 @@ permalink: people/jisoo.html
 email: jisoo6687@yonsei.ac.kr
 
 
+works: lgai.png
 
 
 fields:
