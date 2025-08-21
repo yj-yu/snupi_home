@@ -18,6 +18,10 @@ author:
   - name: "Yejin Choi_"
   - name: "Youngjae Yu"
 
+  
+equal_contributor_idx:
+  - 0
+  - 1
 
 external:
   - title: Arxiv

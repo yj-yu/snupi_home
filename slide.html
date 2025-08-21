@@ -109,6 +109,7 @@
     transform: translateX(-50%);
     font-size: 0;
     list-style-type: none;
+    white-space: nowrap;
   }
   .slider-pagi__elem {
     position: relative;
@@ -449,6 +450,37 @@
     $(document).ready(function() {
         // Define the slides data
         const slidesData = [
+        {
+          conference: "EMNLP2025",
+          title: "VisEscape: A Benchmark for Evaluating Exploration-driven Decision-making in Virtual Escape Rooms",
+          authors: "Seungwon Lim, Sungwoong Kim, Jihwan Yu, Sungjae Lee, Jiwan Chung, Youngjae Yu",
+          bgImage: "images/slides/visescape.png"
+        },
+        {
+          conference: "EMNLP2025",
+          title: "Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safety of LLMs for Embodied Decision Making",
+          authors: "Yejin Son*, Minseo Kim*, Sungwoong Kim, Seungju Han, Jian Kim, Dongju Jang, Youngjae Yu, Chanyoung Park",
+          bgImage: "images/slides/safel.png"
+        },
+        {
+          conference: "EMNLP2025",
+          title: "Zero-shot Multimodal Document Retrieval via Cross-modal Question Generation",
+          authors: "Yejin Choi*, Jaewoo Park*, Janghan Yoon, Saejin Kim, Jaehyun Jeon, Youngjae Yu",
+          bgImage: "images/slides/premir.png"
+        },
+                {
+          conference: "EMNLP2025",
+          title: "MAVL: A Multilingual Audio-Video Lyrics Dataset for Animated Song Translation",
+          authors: "Woohyun Cho, Youngmin Kim, Sunghyun Lee, Youngjae Yu",
+          bgImage: "images/slides/mavl.png"
+        },
+        {
+          conference: "EMNLP2025 (Findings)",
+          title: "Multimodal UNcommonsense: From Odd to Ordinary and Ordinary to Odd",
+          authors: "Yejin Son*, Saejin Kim*, Dongjun Min, Youngjae Yu",
+          bgImage: "images/slides/mun.png"
+        },
+
         {
           conference: "COLM2025",
           title: "G1yphD3c0de: Towards Safer Language Models on Visually Perturbed Texts",

@@ -2,10 +2,10 @@
 layout: publications
 section-type: publications
 name: "MAVL: A Multilingual Audio-Video Lyrics Dataset for Animated Song Translation"
-conference: EMNLP 2025
+conference: EMNLP2025
 year: 2025
 
-   
+
 author:
   - name: "Woohyun Cho"
   - name: "Youngmin Kim"

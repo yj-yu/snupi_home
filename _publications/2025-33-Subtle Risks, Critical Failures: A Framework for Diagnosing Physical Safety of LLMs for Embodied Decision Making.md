@@ -5,7 +5,6 @@ name: "Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safe
 conference:  EMNLP 2025
 year: 2025
 
-
 author:
   - name: "Yejin Son"
   - name: "Minseo Kim"
