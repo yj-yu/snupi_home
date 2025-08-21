@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safety of LLMs for Embodied Decision Making"
-conference:  
+conference:  EMNLP 2025
 year: 2025
 
 

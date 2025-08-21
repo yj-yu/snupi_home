@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "VisEscape: A Benchmark for Evaluating Exploration-driven Decision-making in Virtual Escape Rooms"
-conference:  
+conference: EMNLP 2025  
 year: 2025
 
 
