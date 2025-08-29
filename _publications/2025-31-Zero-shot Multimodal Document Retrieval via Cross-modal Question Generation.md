@@ -19,9 +19,9 @@ equal_contributor_idx:
   - 0
   - 1
 
-# external:
-#   - title: Arxiv
-#     url: https://arxiv.org/abs/2505.18614
+external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2508.17079
   
 
 img: /images/papers/premir.png
