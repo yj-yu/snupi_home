@@ -4,7 +4,7 @@ section-type: people
 fullname: "Soonmin Hwang"
 img-filename: hwang_soonmin.jpg
 emoji: 📘
-position: "Visiting Scholar"
+position: "alumni"
 permalink: people/soonmin.html
 email: smsm0307@yonsei.ac.kr
 

@@ -207,6 +207,12 @@ document.addEventListener('DOMContentLoaded', function() {
             <img src="./images/works/{{member.works}}" alt="LG AI Research" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
           </div>
           {% endif %}
+          {% if member.fullname contains "Wooseok Seo" %}
+          <div style="margin-top: 5px; display: inline-block;">
+            <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
+            <img src="./images/works/{{member.works}}" alt="LG AI Research" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
+          </div>
+          {% endif %}
           {% if member.fullname contains "Jisoo Kim" %}
           <div style="margin-top: 5px; display: inline-block;">
             <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
@@ -317,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   <!-- Members On Leave -->
-  
+<!--   
   <div class='row'>
     <div class='medium-12 columns'>
       <h2>On Leave</h2>
@@ -342,16 +348,16 @@ document.addEventListener('DOMContentLoaded', function() {
       <br/><br/>
     </div>
     <div></div>
-  </div>
+  </div> -->
  
   <!-- Members alumni -->
-  <div class='four spacing'></div>
+  <!-- <div class='four spacing'></div>
   
   <div class='row'>
     <div class='medium-12 columns'>
       <h2>Alumni</h2>
       <h3>Graduate Students</h3>
-        <!-- Ph.D. alumni -->
+        
         {% for member in site.people reversed %}
           {% if member.position == "Alumni" %}
             <p style="margin-bottom: 0px;">
@@ -375,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
               {% endif %}
           {% endif %}
         {% endfor %}
-        <!-- Master alumni -->
+        
         {% for member in site.people reversed %}
           {% if member.position == "Alumni" and member.pastposition == "Master Student" %}
             <p style="margin-bottom: 0px;">
@@ -426,9 +432,9 @@ document.addEventListener('DOMContentLoaded', function() {
         {% endfor %}
     </div>
     <div></div>
-  </div>
+  </div> -->
 
-</div>
+<!-- </div> -->
 
 <div class='four spacing'></div>
 
