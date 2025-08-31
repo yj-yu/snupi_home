@@ -3,7 +3,7 @@ title: "SNU PI Lab"
 email: your-email@domain.com
 description: "SNUPI Laboratory, Seoul National University"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https:/https://yj-yu.github.io/snupi_home" # the base hostname & protocol for your site
+url: "https://yj-yu.github.io/snupi_home" # the base hostname & protocol for your site
 favicon: /images/favicon.png
 
 include: ['_people', '_projects', '_teachings', '_gallery', '_news']
