@@ -4,7 +4,7 @@ section-type: people
 fullname: "Dongjun Min"
 img-filename: min_dongjun.jpg
 emoji: ⭐
-position: "Master Student"
+position: "Alumni"
 permalink: people/dongjun.html
 email: mdjkoc1412@gmail.com
 

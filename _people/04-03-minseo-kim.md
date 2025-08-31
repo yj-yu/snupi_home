@@ -4,7 +4,7 @@ section-type: people
 fullname: "Minseo Kim"
 img-filename: kim_minseo.jpg
 emoji: 🏀
-position: "Master Student"
+position: "Visiting Scholar"
 permalink: people/minseo.html
 email: min99830@yonsei.ac.kr
 

@@ -4,7 +4,7 @@ section-type: people
 fullname: "Janghan Yoon"
 img-filename: yoon_janghan.png
 emoji: ☕
-position: "Intern"
+position: "Visiting Scholar"
 permalink: people/janghan.html
 email: janghan.yoon@yonsei.ac.kr
 

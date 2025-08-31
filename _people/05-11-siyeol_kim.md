@@ -2,9 +2,9 @@
 layout: people-detail
 section-type: people
 fullname: "Siyeol Kim"
-img-filename: siyeol_kim.png
+img-filename: kim_siyeol.jpeg
 emoji: 😎
-position: "Intern"
+position: "Visiting Scholar"
 permalink: people/siyeol.html
 email: 
 

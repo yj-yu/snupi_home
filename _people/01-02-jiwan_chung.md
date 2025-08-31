@@ -5,7 +5,8 @@ fullname: "Jiwan Chung"
 img-filename: chung_jiwan.png
 emoji: 🐾
 
-position: "Ph.D. Student"
+position: "Visiting Scholar"
+
 permalink: people/jiwan.html
 email: jiwan.chung.research@gmail.com
 publications:

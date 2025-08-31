@@ -4,7 +4,7 @@ section-type: people
 fullname: "Sungjae Lee"
 img-filename: lee_sungje.png
 emoji: 🌊
-position: "Master Student"
+position: "Alumni"
 permalink: people/sungjae.html
 email: hotpoem@gmail.com
 

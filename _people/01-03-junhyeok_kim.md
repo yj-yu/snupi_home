@@ -3,7 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Junhyeok Kim"
 img-filename: kim_junhyeok.png
-position: "Ph.D. Student"
+position: "Visiting Scholar"
 permalink: people/junhyeok.html
 email: junhyeok@yonsei.ac.kr
 emoji: ✌️

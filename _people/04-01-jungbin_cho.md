@@ -4,7 +4,7 @@ section-type: people
 fullname: "Jungbin Cho"
 img-filename: cho_jungbin.png
 emoji: 🐖
-position: "Master Student"
+position: "Visiting Scholar"
 permalink: people/jungbin.html
 email: Whwjdqls99@yonsei.ac.kr
 

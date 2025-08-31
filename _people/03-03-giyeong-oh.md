@@ -4,7 +4,7 @@ section-type: people
 fullname: "Giyeong Oh"
 img-filename: oh_giyeong.jpg
 emoji: 🤔
-position: "Master Student"
+position: "Alumni"
 permalink: people/giyeong.html
 email: hard2251@yonsei.ac.kr
 
