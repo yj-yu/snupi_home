@@ -1,9 +1,9 @@
 # Site settings
-title: "MIR Lab"
+title: "SNU PI Lab"
 email: your-email@domain.com
-description: "Multimodal Laboratory, Yonsei University"
+description: "SNUPI Laboratory, Seoul National University"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://mir.yonsei.ac.kr" # the base hostname & protocol for your site
+url: "https:/https://yj-yu.github.io/snupi_home" # the base hostname & protocol for your site
 favicon: /images/favicon.png
 
 include: ['_people', '_projects', '_teachings', '_gallery', '_news']
@@ -22,9 +22,9 @@ collections:
 # Lab Info.
 # Postal address (add as many lines as necessary)
 address:
-  - line: MIR Lab. Department of AI Yonsei University
+  - line: SNUPI Lab. Computer Science and Engineering, Seoul National University
   - line: (address), Republic of Korea
-  - line: Room 427, Engineering Park Building
+  - line: Room 419, 302 Building
   - line: "TEL: +82-02-880-xxxx"
 
 github_username:  yjyu
