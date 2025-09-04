@@ -1,9 +1,17 @@
 - name: Home
   path:
   section_id: home
+
+# - name: About PILAB
+#   path: about.html
+#   section_id: about
+
+
+
 - name: Team
   path: people.html
   section_id: people
+
 - name: Publications
   path: publications.html
   section_id: publications
