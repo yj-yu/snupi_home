@@ -1,7 +1,7 @@
 - name: Home
   path:
   section_id: home
-- name: Member
+- name: Team
   path: people.html
   section_id: people
 - name: Publications
@@ -12,9 +12,9 @@
 #   path: teaching.html
 #   section_id: teachings
 
-- name: Cooperations
-  path: cooperations.html
-  section_id: cooperations
+# - name: Cooperations
+#   path: cooperations.html
+#   section_id: cooperations
 
 
 - name: Gallery
