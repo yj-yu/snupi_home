@@ -3,7 +3,7 @@ title: "SNU PI Lab"
 email: your-email@domain.com
 description: "SNUPI Laboratory, Seoul National University"
 baseurl: "/snupi_home" # the subpath of your site, e.g. /blog/
-url: "https://yj-yu.github.io/snupi_home" # the base hostname & protocol for your site
+url: "https://pi.snu.ac.kr" # the base hostname & protocol for your site
 favicon: /images/favicon.png
 
 include: ['_people', '_projects', '_teachings', '_gallery', '_news']
@@ -24,8 +24,8 @@ collections:
 address:
   - line: SNUPI Lab. Computer Science and Engineering, Seoul National University
   - line: (address), Republic of Korea
-  - line: Room 419, 302 Building
-  - line: "TEL: +82-02-880-xxxx"
+  - line: Room 319, 302 Building
+  - line: "TEL: +82-02-880-8455"
 
 github_username:  yjyu
 
