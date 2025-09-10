@@ -11,10 +11,10 @@ emoji: 🤗
 works: lgai.png
 
 fields:
-    - name : Action Decision
-    - name : Embodied AI
-    - name : Social AI
-
+    - name : LLM Agent
+    - name : Function Calling LLM
+    - name : Reasoning
+    
 
 social:
   - title: home

@@ -13,7 +13,11 @@ social:
     url: https://www.jerife.org/cv
 
 
+
 fields:
+    - name: "Multimodal Learning"
+    - name: "Visual Reasoning"
     
+
 publications:
 ---
