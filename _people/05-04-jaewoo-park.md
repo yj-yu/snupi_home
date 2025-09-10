@@ -3,7 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Jaewoo Park"
 img-filename: park_jaewoo.jpeg
-emoji: 😎
+emoji: 👀
 position: "Visiting Scholar"
 permalink: people/jaewoo.html
 email: jaewoo.park@yonsei.ac.kr
