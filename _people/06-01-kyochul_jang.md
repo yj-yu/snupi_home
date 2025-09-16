@@ -4,7 +4,7 @@ section-type: people
 fullname: "Kyochul Jang"
 img-filename: jang_kyochul.png
 emoji: 🔥
-position: "Visiting Scholar"
+position: "Ph.D. Student"
 permalink: people/kyochul_jang.html
 email: kyochul@snu.ac.kr
 
