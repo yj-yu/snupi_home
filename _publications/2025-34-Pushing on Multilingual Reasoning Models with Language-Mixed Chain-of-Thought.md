@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Pushing on Multilingual Reasoning Models with Language-Mixed Chain-of-Thought"
-conference:  EMNLP 2025
+conference:  EMNLP2025
 year: 2025
 
 

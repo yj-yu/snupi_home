@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Revisiting Residual Connections: Orthogonal Updates for Stable and Efficient Deep Networks"
-conference:  
+conference: Neurips2025
 year: 2025
 
 
@@ -11,7 +11,7 @@ author:
   - name: "Woohyun Cho"
   - name: "Siyeol Kim"
   - name: "Suhwan Choi"
-  - name: "Younjae Yu"
+  - name: "Youngjae Yu"
   
 
 

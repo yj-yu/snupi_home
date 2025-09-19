@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "KL Penalty Control via Perturbation for Direct Preference Optimization"
-conference:  
+conference: Neurips2025
 year: 2025
 
 
