@@ -1,6 +1,6 @@
 ---
 layout: people-detail
-section-type: people
+section-type: intern
 fullname: "Giyeong Oh"
 img-filename: oh_giyeong.jpg
 emoji: 🤔
