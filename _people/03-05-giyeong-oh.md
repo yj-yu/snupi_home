@@ -1,10 +1,10 @@
 ---
 layout: people-detail
-section-type: intern
+section-type: people
 fullname: "Giyeong Oh"
 img-filename: oh_giyeong.jpg
 emoji: 🤔
-position: "Ph.D. Student"
+position: "intern"
 permalink: people/giyeong.html
 email: hard2251@yonsei.ac.kr
 
