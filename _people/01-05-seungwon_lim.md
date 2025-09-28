@@ -3,7 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Seungwon Lim"
 img-filename: lim_seungwon.jpg
-position: "Ph.D. Student"
+position: "MS Student"
 permalink: people/seungwon.html
 email: sngwon@yonsei.ac.kr
 emoji: 🤗
