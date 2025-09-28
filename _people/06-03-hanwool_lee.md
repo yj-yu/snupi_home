@@ -4,7 +4,7 @@ section-type: people
 fullname: "Hanwool Lee"
 img-filename: lee_hanwool.jpg
 emoji: 🔥
-position: "Visiting Scholar"
+position: "MS/Ph.D. Student"
 permalink: people/hanwool_lee.html
 email: 
 
