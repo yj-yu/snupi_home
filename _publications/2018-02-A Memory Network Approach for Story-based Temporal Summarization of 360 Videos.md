@@ -12,7 +12,7 @@ author:
 
 
 
-img: /images/papers/cvpr18_pfmn-300x150.png
+img: cvpr18_pfmn-300x150.png
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/1805.02838.pdf

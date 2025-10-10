@@ -13,7 +13,7 @@ author:
 
 
 
-img: /images/papers/aaai21_dcnet-300x150.jpeg
+img: aaai21_dcnet-300x150.jpeg
 external:
   - title: Arxiv
     url: https://ojs.aaai.org/index.php/AAAI/article/view/16271

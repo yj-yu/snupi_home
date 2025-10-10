@@ -9,7 +9,7 @@ year: 2025
 date: 2025-06-26
 summary: "세 편의 논문이 ICCV2025에 accept되었습니다."
 body: "
-<br>
+
 V.I.P.: Iterative Online Preference Distillation for Efficient Video Diffusion Models
 
 - Jisoo Kim, Wooseok Seo, Junwan Kim, Seungho Park, Sooyeon Park, Youngjae Yu

@@ -71,7 +71,7 @@ section_id: home
         {% endif %}
         {% for c in post.categories %}
           {% if 'papers' == c %} 
-          <p><a style="color:black; font-family: 'Spoqa Han Sans Neo', Times ,serif, 'Times New Roman';" href="news/{{post.type}}/{{post.date | date: '%Y'}}/{{post.date | date: '%m'}}/{{post.date | date: '%d'}}/{{post.subtitle}}.html">
+          <p><a style="color:black; font-family: 'Spoqa Han Sans Neo', Times ,serif, 'Times New Roman';" href="{{post.url}}">
             - {{post.title}} ({{post.date | date: "%Y-%m-%d" }})
           </a><br/>
             {{post.excerpt}}</p>
@@ -92,7 +92,7 @@ section_id: home
       {% for c in post.categories %}
         {% if 'others' == c %}
         
-        <p><a style="color:black; font-family: 'Spoqa Han Sans Neo', Times ,serif, 'Times New Roman';" href="news/{{post.type}}/{{post.date | date: '%Y'}}/{{post.date | date: '%m'}}/{{post.date | date: '%d'}}/{{post.subtitle}}.html">
+        <p><a style="color:black; font-family: 'Spoqa Han Sans Neo', Times ,serif, 'Times New Roman';" href="{{post.url}}">
         - {{post.title}} ({{post.date | date: "%Y-%m-%d" }})
         </a><br/>
           {{post.excerpt}}</p>

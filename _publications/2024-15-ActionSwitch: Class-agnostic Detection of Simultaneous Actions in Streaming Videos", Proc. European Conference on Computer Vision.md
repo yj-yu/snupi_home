@@ -18,7 +18,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2407.12987
 
-img: /images/papers/actionswitch.png
+img: actionswitch.png
 
 keywords:
   - name: Multimodal

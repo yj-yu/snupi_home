@@ -22,7 +22,7 @@ external:
 
 
 
-img: /images/papers/egospeak.png
+img: egospeak.png
 
 keywords:
   - name: Multimodal

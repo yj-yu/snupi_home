@@ -11,7 +11,7 @@ author:
   - name: "Yejin Choi_"
   - name: "Youngjae Yu"
 
-img: /images/papers/CHAMPAGNE.png
+img: CHAMPAGNE.png
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/2303.09713.pdf

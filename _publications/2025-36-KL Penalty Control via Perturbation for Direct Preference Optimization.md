@@ -21,7 +21,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2502.13177
 
-img: /images/papers/kl.png
+img: kl.png
 
 keywords:
   - name: LLM

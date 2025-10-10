@@ -28,7 +28,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2410.01273
     
-img: /images/papers/canvas.png
+img: canvas.png
 
 keywords:
   - name: Embodied AI

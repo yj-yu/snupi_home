@@ -21,7 +21,7 @@ external:
 
   
 
-img: /images/papers/visescape.png
+img: visescape.png
 
 keywords:
   - name: Multimodal

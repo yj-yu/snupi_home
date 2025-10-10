@@ -22,7 +22,7 @@ external:
     url: https://arxiv.org/abs/2505.05026
   
 
-img: /images/papers/gfocus.png
+img: gfocus.png
 
 keywords:
   - name: Multimodal

@@ -27,7 +27,7 @@ external:
     url: https://arxiv.org/abs/2407.03103
 
 
-img: /images/papers/cactus.png
+img: cactus.png
 
 keywords:
   - name: NLP

@@ -25,7 +25,7 @@ external:
     
 
   
-img: /images/papers/wildguard.png
+img: wildguard.png
 
 
 keywords:

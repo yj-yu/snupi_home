@@ -18,7 +18,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2406.11280
 
-img: /images/papers/i-SRT.png
+img: i-SRT.png
 
 keywords:
   - name: Multimodal

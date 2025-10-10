@@ -17,7 +17,7 @@ author:
   - name: "Gunhee Kim"
   - name: "Yejin Choi_"
 
-img: /images/papers/esper.png
+img: esper.png
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/2205.12630.pdf

@@ -11,7 +11,7 @@ author:
 
 
 
-img: /images/papers/eccv18_lsmdc-300x150.png
+img: eccv18_lsmdc-300x150.png
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/1808.02559.pdf

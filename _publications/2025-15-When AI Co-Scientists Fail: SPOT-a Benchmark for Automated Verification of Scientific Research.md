@@ -27,7 +27,7 @@ external:
     url: https://arxiv.org/abs/2505.11855
   
 
-img: /images/papers/spot.png
+img: spot.png
 
 keywords:
   - name: multimodal

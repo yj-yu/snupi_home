@@ -22,7 +22,7 @@ external:
     url: https://arxiv.org/abs/2407.00369
 
 
-img: /images/papers/fact.png
+img: fact.png
 
 keywords:
   - name: Multimodal

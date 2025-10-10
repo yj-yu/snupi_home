@@ -22,7 +22,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2501.09284
 
-img: /images/papers/seal.png
+img: seal.png
 
 keywords:
   - name: LLM

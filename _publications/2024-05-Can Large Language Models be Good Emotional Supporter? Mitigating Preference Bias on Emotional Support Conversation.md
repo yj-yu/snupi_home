@@ -20,7 +20,7 @@ external:
     url: https://arxiv.org/abs/2402.13211
 
 
-img: /images/papers/emotional.png
+img: emotional.png
 
 keywords:
   - name: NLP

@@ -18,7 +18,7 @@ external:
     url: https://arxiv.org/abs/2504.06868
   
 
-img: /images/papers/panda.png
+img: panda.png
 
 keywords:
   - name: NLP

@@ -26,7 +26,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2503.12844
 
-img: /images/papers/guidedog.png
+img: guidedog.png
 
 keywords:
   - name: Multimodal

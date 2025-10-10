@@ -16,7 +16,7 @@ author:
 
 
 
-img: /images/papers/merlot.png
+img: merlot.png
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/2106.02636.pdf

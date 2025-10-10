@@ -30,7 +30,7 @@ section_id: news
           </p>
           <h3><a href="{{page.url}}">{{page.emoji}}&nbsp; {{page.title}}</a></h3>
           <div style="color: black; background: #e4e4e4e1; text-align: center; border-radius: 5px;">{{page.summary}}</div>
-          {{ page.body }}
+          {{ page.body | newline_to_br }}
         </div>
       </div>
       <div class='two spacing'></div>

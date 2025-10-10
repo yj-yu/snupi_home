@@ -28,7 +28,7 @@ external:
     url: https://arxiv.org/abs/2506.13342
   
 
-img: /images/papers/factverifier.png
+img: factverifier.png
 
 keywords:
   - name: NLP

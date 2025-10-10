@@ -14,7 +14,7 @@ author:
   - name: "Yejin Choi_"
 
 
-img: /images/papers/Connecting the Dots between Audio and Text.png
+img: Connecting the Dots between Audio and Text.png
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/2112.08995.pdf

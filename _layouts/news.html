@@ -19,6 +19,8 @@ layout: default
       <!--content에, news.html 내용 다 들어감-->
       {{content}}
 
+      <!-- Paginator disabled - using site.news collection directly in news.html -->
+      {% comment %}
       {% if paginator %}
         <div class="pager">
           {% if paginator.next_page %}
@@ -37,6 +39,7 @@ layout: default
           {% endif %}
         </div>
       {% endif %}
+      {% endcomment %}
 
       <div class='four spacing'></div>
     </div>

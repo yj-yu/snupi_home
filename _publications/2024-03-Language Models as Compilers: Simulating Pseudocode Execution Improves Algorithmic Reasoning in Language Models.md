@@ -22,7 +22,7 @@ external:
     url: https://arxiv.org/abs/2404.02575
 
 
-img: /images/papers/thinkandexecute.png
+img: thinkandexecute.png
 
 keywords:
   - name: NLP

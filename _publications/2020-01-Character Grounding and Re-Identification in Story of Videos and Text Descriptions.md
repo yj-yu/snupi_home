@@ -14,7 +14,7 @@ author:
 
 
 
-img: /images/papers/eccv20_mabas-300x150.png
+img: eccv20_mabas-300x150.png
 external:
   - title: Arxiv
     url: https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123500528.pdf

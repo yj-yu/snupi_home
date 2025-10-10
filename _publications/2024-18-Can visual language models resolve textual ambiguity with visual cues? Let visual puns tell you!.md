@@ -19,7 +19,7 @@ external:
     url: https://arxiv.org/abs/2410.01023
 
   
-img: /images/papers/visualpun.png
+img: visualpun.png
 
 keywords:
   - name: Multimodal

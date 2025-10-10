@@ -23,7 +23,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2406.14703
 
-img: /images/papers/trait.png
+img: trait.png
 
 keywords:
   - name: NLP

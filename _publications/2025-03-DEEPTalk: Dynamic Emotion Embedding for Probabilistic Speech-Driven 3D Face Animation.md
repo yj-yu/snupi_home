@@ -23,7 +23,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2408.06010
 
-img: /images/papers/deeptalk.png
+img: deeptalk.png
 
 keywords:
   - name: 3D

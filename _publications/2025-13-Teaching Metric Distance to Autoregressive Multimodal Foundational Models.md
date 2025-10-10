@@ -20,7 +20,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2503.02379
 
-img: /images/papers/dist.png
+img: dist.png
 
 keywords:
   - name: Multimodal

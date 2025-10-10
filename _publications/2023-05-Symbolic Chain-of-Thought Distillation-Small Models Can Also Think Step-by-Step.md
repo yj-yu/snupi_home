@@ -13,7 +13,7 @@ author:
   - name : "Yejin Choi_"
 
 
-img: /images/papers/symbolic knowledge distillation.png
+img: symbolic knowledge distillation.png
 
 external:
   - title: Arxiv

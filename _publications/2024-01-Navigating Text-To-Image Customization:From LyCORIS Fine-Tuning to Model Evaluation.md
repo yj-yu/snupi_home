@@ -16,7 +16,7 @@ external:
     url: https://arxiv.org/abs/2309.14859
 
 
-img: /images/papers/LyCORIS.png
+img: LyCORIS.png
 
 keywords:
   - name: Text-to-Image

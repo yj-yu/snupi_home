@@ -17,7 +17,7 @@ external:
   - title: Arxiv
     url: https://www.arxiv.org/abs/2507.16873
 
-img: /images/papers/hippo.png
+img: hippo.png
 
 keywords:
   - name: Multimodal

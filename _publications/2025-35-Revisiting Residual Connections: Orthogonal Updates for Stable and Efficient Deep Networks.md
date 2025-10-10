@@ -20,7 +20,7 @@ external:
     url: https://arxiv.org/abs/2505.11881
   
 
-img: /images/papers/orthogonal.png
+img: orthogonal.png
 
 keywords:
   - name: Computer Vision

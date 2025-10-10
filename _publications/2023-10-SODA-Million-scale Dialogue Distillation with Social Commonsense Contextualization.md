@@ -18,7 +18,7 @@ author:
   - name: "Maarten Sap"
   - name : "Yejin Choi_"
 
-img: /images/papers/soda.png
+img: soda.png
 external:
   - title: Arxiv
     url: https://arxiv.org/abs/2212.10465

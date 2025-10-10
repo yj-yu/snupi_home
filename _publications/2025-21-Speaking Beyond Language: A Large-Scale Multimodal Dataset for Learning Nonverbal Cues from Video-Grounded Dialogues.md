@@ -27,7 +27,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2506.00958
 
-img: /images/papers/speaking.png
+img: speaking.png
 
 keywords:
   - name: Multimodal

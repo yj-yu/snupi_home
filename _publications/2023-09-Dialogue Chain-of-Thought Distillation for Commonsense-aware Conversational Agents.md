@@ -18,7 +18,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2310.09343
 
-img: /images/papers/dialog_COT_distillation.png
+img: dialog_COT_distillation.png
 
 keywords:
   - name: NLP

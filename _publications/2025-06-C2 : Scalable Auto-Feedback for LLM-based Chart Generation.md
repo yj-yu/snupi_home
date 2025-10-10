@@ -23,7 +23,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2410.18652
 
-img: /images/papers/c2.png
+img: c2.png
 
 keywords:
   - name: Multimodal

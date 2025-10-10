@@ -21,7 +21,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2406.18925
 
-img: /images/papers/visarg.png
+img: visarg.png
 
 keywords:
   - name: Multimodal Understanding

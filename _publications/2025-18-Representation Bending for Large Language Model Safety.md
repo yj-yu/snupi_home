@@ -25,7 +25,7 @@ external:
     url: https://arxiv.org/abs/2504.01550
   
 
-img: /images/papers/bend.png
+img: bend.png
 
 keywords:
   - name: NLP

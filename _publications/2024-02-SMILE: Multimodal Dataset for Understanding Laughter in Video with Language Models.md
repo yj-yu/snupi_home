@@ -15,7 +15,7 @@ external:
     url: https://arxiv.org/abs/2312.09818
 
 
-img: /images/papers/smile.png
+img: smile.png
 
 keywords:
   - name: multimodal

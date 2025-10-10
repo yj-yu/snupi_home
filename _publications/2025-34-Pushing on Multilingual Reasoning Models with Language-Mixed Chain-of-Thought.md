@@ -26,7 +26,7 @@ author:
 
   
 
-img: /images/papers/comingsoon.jpg
+img: comingsoon.jpg
 
 keywords:
   - name: Embodied AI

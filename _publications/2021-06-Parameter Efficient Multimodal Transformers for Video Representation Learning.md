@@ -15,7 +15,7 @@ author:
 
 
 
-img: /images/papers/iclr21-mt-vrl_300x150.jpg
+img: iclr21-mt-vrl_300x150.jpg
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/2012.04124.pdf

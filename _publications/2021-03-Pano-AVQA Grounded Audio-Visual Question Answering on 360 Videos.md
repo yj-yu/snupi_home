@@ -10,7 +10,7 @@ author:
   - name: "Wonsuk Yang"
   - name: "Gunhee Kim"
 
-img: /images/papers/iccv21_PanoAVQA-300x150.jpeg
+img: iccv21_PanoAVQA-300x150.jpeg
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/2110.05122.pdf

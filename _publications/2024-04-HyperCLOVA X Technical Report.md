@@ -15,7 +15,7 @@ external:
     url: https://arxiv.org/abs/2404.01954
 
 
-img: /images/papers/hyperclova.png
+img: hyperclova.png
 
 keywords:
   - name: korean-LLM

@@ -23,7 +23,7 @@ external:
     url: https://neurips.cc/virtual/2025/poster/118018
   
 
-img: /images/papers/comingsoon.jpg
+img: comingsoon.jpg
 
 keywords:
   - name: Computer Vision

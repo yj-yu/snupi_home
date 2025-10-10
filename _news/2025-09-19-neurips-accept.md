@@ -9,7 +9,7 @@ year: 2025
 date: 2025-09-19
 summary: "세 편의 논문이 Neurips2025 accept되었습니다."
 body: "
-<br>
+
 KL Penalty Control via Perturbation for Direct Preference Optimization
 
 - Sangkyu Lee, Janghoon Han, Hosung Song, Stanley Jungkyu Choi, Honglak Lee, Youngjae Yu

@@ -9,7 +9,7 @@ year: 2024
 date: 2024-09-21
 summary: "다섯 편의 논문이 EMNLP2024에 accept되었습니다."
 body: "
-<br>
+
 Can visual language models resolve textual ambiguity with visual cues? Let visual puns tell you!
 
 Selective Vision is the Challenge for Visual Reasoning: A Benchmark for Visual Argument Understanding

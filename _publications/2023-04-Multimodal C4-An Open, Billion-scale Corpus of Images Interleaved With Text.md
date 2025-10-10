@@ -16,7 +16,7 @@ author:
   - name : "Yejin Choi_"
 
 
-img: /images/papers/mmc4.jpg
+img: mmc4.jpg
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/2304.06939.pdf

@@ -19,7 +19,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2406.17254
 
-img: /images/papers/scalp.png
+img: scalp.png
 
 keywords:
   - name: Computer Vision

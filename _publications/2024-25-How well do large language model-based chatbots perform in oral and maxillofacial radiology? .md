@@ -16,7 +16,7 @@ external:
   - title: Paper
     url: https://academic.oup.com/dmfr/article/53/6/390/7689681?login=true
 
-img: /images/papers/radiology.png
+img: radiology.png
 
 keywords:
   - name: LLM

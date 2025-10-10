@@ -23,7 +23,7 @@ external:
     url: https://arxiv.org/abs/2403.04460
 
 
-img: /images/papers/pearl.png
+img: pearl.png
 
 keywords:
   - name: NLP

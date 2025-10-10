@@ -16,7 +16,7 @@ external:
     url: https://arxiv.org/abs/2402.03746
 
 
-img: /images/papers/video_rlaif.png
+img: video_rlaif.png
 
 keywords:
   - name: Multimodal

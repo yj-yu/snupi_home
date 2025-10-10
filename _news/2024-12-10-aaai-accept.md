@@ -9,7 +9,7 @@ year: 2024
 date: 2024-12-10
 summary: "세 편의 논문이 AAAI2025에 accept되었습니다."
 body: "
-<br>
+
 DEEPTalk: Dynamic Emotion Embedding for Probabilistic Speech-Driven 3D Face Animation
  - Jisoo Kim, Jungbin Cho, Joonho Park, Soonmin Hwang, Da Eun Kim, Geon Kim, Youngjae Yu
 

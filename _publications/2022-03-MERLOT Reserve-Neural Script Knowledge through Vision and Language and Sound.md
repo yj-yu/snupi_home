@@ -18,7 +18,7 @@ author:
   - name: "Yejin Choi_"
 
 
-img: /images/papers/merlot reserve.png
+img: merlot reserve.png
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/2201.02639.pdf

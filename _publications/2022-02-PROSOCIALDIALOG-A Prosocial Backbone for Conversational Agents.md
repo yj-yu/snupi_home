@@ -13,7 +13,7 @@ author:
   - name: "Gunhee Kim"
   - name: "Yejin Choi_"
   - name: "Maarten Sap"
-img: /images/papers/emnlp22-prodia-300x150.png
+img: emnlp22-prodia-300x150.png
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/2205.12688.pdf

@@ -9,7 +9,7 @@ year: 2025
 date: 2025-05-16
 summary: "네 편의 논문이 ACL2025에 accept되었습니다."
 body: "
-<br>
+
 Speaking Beyond Language: A Large-Scale Multimodal Dataset for Learning Nonverbal Cues from Video-Grounded Dialogues
 
 - Youngmin Kim, Jiwan Chung, Jisoo Kim, sunghyun lee, Sangkyu Lee, Junhyeok Kim, Cheoljong Yang, Youngjae Yu

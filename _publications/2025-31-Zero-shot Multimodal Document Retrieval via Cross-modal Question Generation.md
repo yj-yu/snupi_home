@@ -24,7 +24,7 @@ external:
     url: https://arxiv.org/abs/2508.17079
   
 
-img: /images/papers/premir.png
+img: premir.png
 
 keywords:
   - name: Multimodal

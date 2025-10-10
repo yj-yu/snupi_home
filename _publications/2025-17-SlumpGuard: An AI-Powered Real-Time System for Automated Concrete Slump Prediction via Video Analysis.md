@@ -22,7 +22,7 @@ external:
     url: https://arxiv.org/abs/2507.10171
   
 
-img: /images/papers/slump.png
+img: slump.png
 
 
 keywords:

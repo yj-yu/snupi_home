@@ -14,7 +14,7 @@ author:
   - name: "Yale Song"
 
 
-img: /images/papers/iccv21_ACAV100M-300x150.jpeg
+img: iccv21_ACAV100M-300x150.jpeg
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/2101.10803.pdf

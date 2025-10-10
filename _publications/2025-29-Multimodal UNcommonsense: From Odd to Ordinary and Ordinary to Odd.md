@@ -23,7 +23,7 @@ equal_contributor_idx:
 #     url: https://arxiv.org/abs/2506.13342
   
 
-img: /images/papers/mun.png
+img: mun.png
 
 
 keywords:

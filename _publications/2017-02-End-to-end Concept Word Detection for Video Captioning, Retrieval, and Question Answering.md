@@ -11,7 +11,7 @@ author:
   - name: "Gunhee Kim"
 
 
-img: /images/papers/cvpr17_lsmdc_top-300x185.gif
+img: cvpr17_lsmdc_top-300x185.gif
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/1610.02947v1.pdf

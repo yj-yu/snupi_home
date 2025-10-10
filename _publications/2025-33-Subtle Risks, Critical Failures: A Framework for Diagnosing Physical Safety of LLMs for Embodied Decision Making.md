@@ -26,7 +26,7 @@ external:
     url: https://arxiv.org/abs/2505.19933
   
 
-img: /images/papers/safel.png
+img: safel.png
 
 keywords:
   - name: Embodied AI

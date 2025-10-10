@@ -26,7 +26,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2411.19527
     
-img: /images/papers/discord.png
+img: discord.png
 
 keywords:
   - name: 3D

@@ -9,7 +9,7 @@ year: 2025
 date: 2025-06-18
 summary: "김영민, 김세진 학생의 논문이 MICCAI2025에 accept되었습니다."
 body: "
-<br>
+
 Scalp Diagnostic System With Label-Free Segmentation and Training-Free Image Translation
 
 - Youngmin Kim*, Saejin Kim*, Hoyeon Moon, Youngjae Yu, Junhyug Noh

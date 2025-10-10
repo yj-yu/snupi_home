@@ -19,7 +19,7 @@ author:
 #     url: https://arxiv.org/abs/2506.13342
   
 
-img: /images/papers/glyphdecode.png
+img: glyphdecode.png
 
 
 keywords:

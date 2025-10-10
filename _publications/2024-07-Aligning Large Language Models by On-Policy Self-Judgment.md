@@ -19,7 +19,7 @@ external:
     url: https://arxiv.org/abs/2402.11253
 
 
-img: /images/papers/dpo.png
+img: dpo.png
 
 keywords:
   - name: NLP

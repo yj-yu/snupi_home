@@ -9,7 +9,7 @@ year: 2025
 date: 2025-08-21
 summary: "다섯 편의 논문이 EMNLP2025에 accept되었습니다."
 body: "
-<br>
+
 Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safety of LLMs for Embodied Decision Making
 
 - Yejin Son*, Minseo Kim*, Sungwoong Kim, Seungju Han, Jian Kim, Dongju Jang, Youngjae Yu, Chanyoung Park

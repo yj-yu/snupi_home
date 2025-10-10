@@ -25,7 +25,7 @@ external:
     url: https://arxiv.org/abs/2505.18842
   
 
-img: /images/papers/v1.png
+img: v1.png
 
 keywords:
   - name: Multimodal

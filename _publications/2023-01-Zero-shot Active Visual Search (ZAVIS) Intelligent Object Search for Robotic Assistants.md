@@ -13,7 +13,7 @@ author:
   - name: "Sungjoon Choi_"
 
 
-img: /images/papers/zavis.jpg
+img: zavis.jpg
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/2209.08803.pdf

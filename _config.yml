@@ -17,7 +17,8 @@ collections:
   gallery:
     output: false
   news:
-    output: false
+    output: true
+    permalink: /news/:categories/:year/:month/:day/:slug.html
 
 # Lab Info.
 # Postal address (add as many lines as necessary)
@@ -35,9 +36,10 @@ markdown: kramdown
 # Gems
 gems: [jekyll-paginate]
 
-# Jekyll pagination
-paginate: 8
-paginate_path: "news/page:num"
+# Jekyll pagination (Note: jekyll-paginate only works with _posts, not custom collections like _news)
+# Currently not used - news.html uses site.news collection instead
+# paginate: 8
+# paginate_path: "news/page:num"
 
 defaults: 
   - scope:

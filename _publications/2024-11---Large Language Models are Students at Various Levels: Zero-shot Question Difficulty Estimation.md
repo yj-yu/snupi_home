@@ -19,7 +19,7 @@ external:
   - title: Arxiv
     url: https://aclanthology.org/2024.findings-emnlp.477/
 
-img: /images/papers/llasa.png
+img: llasa.png
 
 keywords:
   - name: NLP

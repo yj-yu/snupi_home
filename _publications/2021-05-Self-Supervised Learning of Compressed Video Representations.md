@@ -11,7 +11,7 @@ author:
   - name: "Yale Song"
 
 
-img: /images/papers/iclr21-cvr_300x150.jpg
+img: iclr21-cvr_300x150.jpg
 external:
   - title: Arxiv
     url: https://openreview.net/pdf?id=jMPcEkJpdD

@@ -14,7 +14,7 @@ author:
   - name: "Sungjoon Choi_"
 
 
-img: /images/papers/CLARA.png
+img: CLARA.png
 external:
   - title: Arxiv
     url: https://arxiv.org/abs/2306.10376

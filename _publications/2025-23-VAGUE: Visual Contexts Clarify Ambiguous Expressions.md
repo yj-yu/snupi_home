@@ -20,7 +20,7 @@ external:
   - title: Arxiv
     url: https://arxiv.org/abs/2411.14137
 
-img: /images/papers/vague.png
+img: vague.png
 
 keywords:
   - name: Multimodal

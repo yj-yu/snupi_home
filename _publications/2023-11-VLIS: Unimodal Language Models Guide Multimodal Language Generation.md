@@ -12,7 +12,7 @@ external:
     url: https://arxiv.org/abs/2310.09767
 
 
-img: /images/papers/vlis.png
+img: vlis.png
 
 keywords:
   - name: multimodal

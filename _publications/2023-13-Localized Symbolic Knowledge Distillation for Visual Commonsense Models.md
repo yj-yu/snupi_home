@@ -23,7 +23,7 @@ external:
     url: https://arxiv.org/abs/2312.04837
 
 
-img: /images/papers/mmsymkd.png
+img: mmsymkd.png
 
 keywords:
   - name: multimodal

@@ -25,7 +25,7 @@ external:
     url: https://arxiv.org/abs/2504.03197
   
 
-img: /images/papers/mathexplain.png
+img: mathexplain.png
 
 keywords:
   - name: NLP

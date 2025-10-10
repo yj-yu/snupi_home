@@ -17,7 +17,7 @@ external:
     url: https://arxiv.org/abs/2501.11469
 
 
-img: /images/papers/mass.png
+img: mass.png
 keywords:
   - name: Multimodal
   - name: Debiasing

@@ -13,7 +13,7 @@ author:
   - name: "Gunhee Kim"
 
 
-img: /images/papers/cvpr17_gazecap_top-300x218.gif
+img: cvpr17_gazecap_top-300x218.gif
 external:
   - title: Arxiv
     url: https://arxiv.org/pdf/1707.06029.pdf

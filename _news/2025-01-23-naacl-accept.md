@@ -9,7 +9,7 @@ year: 2025
 date: 2025-01-23
 summary: "세 편의 논문이 NAACL2025에 accept되었습니다."
 body: "
-<br>
+
 Do LLMs Have Distinct and Consistent Personality? TRAIT: Personality Testset designed for LLMs with Psychometrics
  - Seungbeen Lee*, Seungwon Lim*, Seungju Han, Giyeong Oh, Hyungjoo Chae, Jiwan Chung, Minju Kim, Beong-woo Kwak, Yeonsoo Lee, Dongha Lee, Jinyoung Yeo, Youngjae Yu
 
