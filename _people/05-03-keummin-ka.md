@@ -4,7 +4,7 @@ section-type: people
 fullname: "Keummin Ka"
 img-filename: ka_keummin.png
 emoji: 🎹
-position: "Intern"
+position: "Visiting Scholar"
 permalink: people/keummin.html
 email: keummin.kim@yonsei.ac.kr
 
