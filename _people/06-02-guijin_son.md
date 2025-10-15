@@ -13,6 +13,8 @@ social:
   - title: home
     url: people/guijin_son.html
 
+fields:
+    - name: "NLP"
 
 publications:
 ---
