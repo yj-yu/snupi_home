@@ -3,7 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Sangkyu Lee"
 img-filename: lee_sangkyu.png
-position: "Alumni"
+position: "Visiting Scholar"
 permalink: people/sangkyu.html
 email: oddqueue@gmail.com
 emoji: 🤔
