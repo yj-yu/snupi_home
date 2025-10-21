@@ -4,7 +4,7 @@ section-type: people
 fullname: "Ashkan Yousefpour"
 img-filename: Ashkan_Yousefpour.png
 emoji: 🌱
-position: "Visiting Scholar"
+position: "Alumni"
 
 permalink: people/ashkan.html
 
