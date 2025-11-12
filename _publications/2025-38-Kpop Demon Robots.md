@@ -2,12 +2,12 @@
 layout: publications
 section-type: publications
 name: "K-pop Demon Robots"
-conference: HUMANOIDS 2025
+conference: HUMANOIDS 2025 (Workshop)
 year: 2025
 
 author:
-  - name: "Minseo Kim"
   - name: "Sungwoong Kim"
+  - name: "Minseo Kim"
   - name: "Siyeol Kim"
   - name: "Hwasup Lim"
   - name: "Youngjae Yu"
