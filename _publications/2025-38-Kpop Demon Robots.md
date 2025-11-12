@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "K-pop Demon Robots"
-conference: HUMANOIDS 2025 (Workshop)
+conference: Humanoids 2025 (Workshop)
 year: 2025
 
 author:
