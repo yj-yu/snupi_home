@@ -14,7 +14,12 @@ author:
 
 
 
-img: comingsoon.jpg
+external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2511.10045
+  
+
+img: sound symbolism.png
 
 keywords:
   - name: Multimodal
