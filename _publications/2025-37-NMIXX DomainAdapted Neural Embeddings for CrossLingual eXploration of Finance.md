@@ -18,7 +18,7 @@ author:
 
 external:
   - title: Arxiv
-    url: https://arxiv.org/abs/2504.03197
+    url: https://arxiv.org/abs/2507.09601
   
 
 img: comingsoon.jpg
