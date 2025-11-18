@@ -28,7 +28,7 @@ external:
     url: https://arxiv.org/abs/2504.03197
   
 
-img: me2.jpg
+img: me2_intro.png
 
 keywords:
   - name: Multimodal
