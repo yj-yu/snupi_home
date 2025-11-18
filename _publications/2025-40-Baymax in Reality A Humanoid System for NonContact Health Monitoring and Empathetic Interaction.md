@@ -16,7 +16,7 @@ author:
 
 
 
-img: comingsoon.jpg
+img: baymax.gif
 
 keywords:
   - name: Robotics
