@@ -28,7 +28,7 @@ external:
     url: https://arxiv.org/abs/2504.03197
   
 
-img: comingsoon.jpg
+img: me2.jpg
 
 keywords:
   - name: Multimodal
