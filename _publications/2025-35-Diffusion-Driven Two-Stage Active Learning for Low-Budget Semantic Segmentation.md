@@ -23,7 +23,7 @@ external:
     url: https://neurips.cc/virtual/2025/poster/118018
   
 
-img: comingsoon.jpg
+img: low budget semantic seg.png
 
 keywords:
   - name: Computer Vision
