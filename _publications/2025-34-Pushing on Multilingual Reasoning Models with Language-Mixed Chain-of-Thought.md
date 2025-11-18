@@ -24,6 +24,9 @@ author:
 
 
 
+external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2510.04230
   
 
 img: multilingual CoT.png
