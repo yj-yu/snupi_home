@@ -26,7 +26,7 @@ author:
 
   
 
-img: comingsoon.jpg
+img: multilingual CoT.png
 
 keywords:
   - name: Embodied AI
