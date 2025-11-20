@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Do Language Models Associate Sound with Meaning? A Multimodal Study of Sound Symbolism"
-conference: AAAI2026
+conference: AAAI2026 (Oral)
 year: 2026
 
 author:
@@ -12,7 +12,9 @@ author:
   - name: "Seonah Han"
   - name: "Youngjae Yu"
 
-
+equal_contributor_idx:
+  - 0
+  - 1
 
 external:
   - title: Arxiv
