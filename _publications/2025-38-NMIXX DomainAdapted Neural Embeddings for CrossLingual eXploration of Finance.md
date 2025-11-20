@@ -21,7 +21,7 @@ external:
     url: https://arxiv.org/abs/2507.09601
   
 
-img: comingsoon.jpg
+img: nmixx.png
 
 keywords:
   - name: Cross-lingual

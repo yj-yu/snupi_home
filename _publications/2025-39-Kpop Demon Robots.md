@@ -14,7 +14,7 @@ author:
 
 
 
-img: comingsoon.jpg
+img: kpop demon.gif
 
 keywords:
   - name: Robotics
