@@ -4,7 +4,7 @@ section-type: people
 fullname: "Jinhong Jeong"
 img-filename: jeong_jinhong.jpg
 emoji: 🐌
-position: "Visiting Scholar"
+position: "MS Student"
 permalink: people/jinhong_jeong.html
 email: jjhsnail0822@yonsei.ac.kr
 
