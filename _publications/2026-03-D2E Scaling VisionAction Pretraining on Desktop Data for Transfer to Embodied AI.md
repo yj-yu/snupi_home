@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI"
-year: 2025
+year: 2026
 
 author:
   - name: "Suwhan Choi"
