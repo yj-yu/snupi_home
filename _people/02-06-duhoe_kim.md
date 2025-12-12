@@ -10,7 +10,7 @@ email: dhkimm@snu.ac.kr
 
 social:
   - title: home
-    url: dubae.github.io
+    url: https://dubae.github.io/
 
 
 fields:

@@ -10,7 +10,7 @@ email: seohyun423@snu.ac.kr
 
 social:
   - title: home
-    url: eainx.github.io
+    url: https://eainx.github.io/
 
 
 fields:
