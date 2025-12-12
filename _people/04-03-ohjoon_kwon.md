@@ -8,6 +8,8 @@ position: "Ph.D. Student"
 permalink: people/ohjoon.html
 email: ohjoon1209@snu.ac.kr
 
+works: naver.png
+
 
 fields:
     - name : Large Language Model
