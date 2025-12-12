@@ -4,7 +4,7 @@ section-type: people
 fullname: "Derpy"
 img-filename: derpy.jpg
 emoji: 🐯
-position: "MS Student"
+position: "Lab Robot"
 permalink: people/derpy.html
 email: derpy@snu.ac.kr
 

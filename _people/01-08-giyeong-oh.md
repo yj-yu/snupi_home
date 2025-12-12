@@ -3,19 +3,19 @@ layout: people-detail
 section-type: people
 fullname: "Giyeong Oh"
 img-filename: oh_giyeong.jpg
-emoji: 🤔
+emoji: 🚀
 position: "Ph.D. Student"
 permalink: people/giyeong.html
-email: hard2251@yonsei.ac.kr
+email: hard2251@snu.ac.kr
 
 social:
   - title: home
-    url: https://github.com/BootsofLagrangian
+    url: https://scholar.google.com/citations?user=LzzcroEAAAAJ
 
 
 fields:
-    - name : Parameter Efficient Fine-Tuning
-    - name : Diffusion Model
+    - name : Representation Learning
+    - name : Neural Architectures & Dynamics
 publications:
 
 ---
