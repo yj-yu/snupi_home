@@ -3,7 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Guijin Son"
 img-filename: guijinson.jpeg
-emoji: 🔥
+emoji: 👻
 position: "MS/Ph.D. Student"
 permalink: people/guijin_son.html
 email: 
@@ -11,10 +11,12 @@ email:
 
 social:
   - title: home
-    url: people/guijin_son.html
+    url: https://guijinson.github.io/
 
 fields:
-    - name: "NLP"
+    - name : LLMs For Science
+    - name : Reasoning
+    - name : Benchmarks
 
 publications:
 ---

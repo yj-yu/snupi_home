@@ -4,7 +4,7 @@ section-type: people
 fullname: "Seohyeon Park"
 img-filename: park_seohyeon.jpg
 emoji: 🤖
-position: "MS Student"
+position: "MS/Ph.D. Student"
 permalink: people/seohyeon.html
 email: seohyun423@snu.ac.kr
 

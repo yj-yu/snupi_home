@@ -4,7 +4,7 @@ section-type: people
 fullname: "Duhoe Kim"
 img-filename: kim_duhoe.JPG
 emoji: 🎯
-position: "MS Student"
+position: "MS/Ph.D. Student"
 permalink: people/duhoe.html
 email: dhkimm@snu.ac.kr
 
