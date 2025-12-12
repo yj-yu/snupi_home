@@ -15,9 +15,8 @@ social:
 
 
 fields:
-    - name: "GUI Agent"
-    - name: "Embodied AI"
-    - name: "AI Safety"
+    - name : On-Device sVLM
+    - name : Visual Grounding
 
 publications:
 ---

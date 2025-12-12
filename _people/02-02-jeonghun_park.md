@@ -6,7 +6,12 @@ img-filename: park_jeonghun.jpg
 emoji: ⛷️
 position: "MS/Ph.D. Student"
 permalink: people/jeonghun.html
-email: jeonghunpark@snu.ac.kr
+email: top321902@snu.ac.kr
+
+social:
+  - title: home
+    url: https://pjh6029.github.io/
+
 
 
 fields:

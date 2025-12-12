@@ -3,7 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Youna Park"
 img-filename: park_youna.jpg
-emoji: 🌿
+emoji: 🌟
 position: "MS/Ph.D. Student"
 permalink: people/youna.html
 email: youna0720@snu.ac.kr

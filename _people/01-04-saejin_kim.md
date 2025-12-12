@@ -10,8 +10,9 @@ emoji: 😭
 fields:
     - name : Visual Reasoning
     - name : Multimodal Learning
+    - name : Document Comprehension
 
 social:
   - title: home
-    url: people/saejin.html
+    url: https://0110tpwls.github.io/
 ---
