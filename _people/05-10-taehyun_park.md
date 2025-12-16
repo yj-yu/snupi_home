@@ -14,6 +14,8 @@ fields:
     - name : Time Perception
     - name : Alignment Research
 
+remarks: "Industry-Affiliated Students"
+
 publications:
 
 ---

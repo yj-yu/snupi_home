@@ -13,6 +13,8 @@ fields:
     - name : Multimodal Learning
     - name : Robotics
 
+remarks: "Industry-Affiliated Students"
+
 publications:
 
 ---
