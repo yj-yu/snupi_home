@@ -4,7 +4,7 @@ section-type: people
 fullname: "Jongcheol Shin"
 img-filename: shin_jongcheol.jpg
 emoji: 🤖
-position: "MS Student"
+position: "Ph.D. Student"
 permalink: people/jongcheol.html
 email: jongcheol.shin@snu.ac.kr
 
