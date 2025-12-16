@@ -6,6 +6,7 @@ permalink: people.html
 active_positions:
   - Professor
   - Student
+  - Industry-Affiliated Students
   - Visiting Scholar
 
 color_list:
@@ -154,7 +155,9 @@ document.addEventListener('DOMContentLoaded', function() {
     {% endif %}
 
     {% for member in site.people %}
-      {% if member.position contains p %}
+      {% assign in_position = member.position contains p %}
+      {% assign in_remarks  = member.remarks and member.remarks contains p %}
+      {% if (in_position or in_remarks) and not (in_position and in_remarks) %}
       <div class="small-6 small-6 large-3 columns wp-block-coblocks-author" 
            style="font-size:15px; text-align: center; display: flex; flex-direction: column; align-items: center; margin: 0; height: 400px; margin-bottom: 100px; background-color: #ffffff; box-shadow: none;">
         {% assign homeurl = member.permalink %}
