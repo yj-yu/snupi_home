@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     {% endif %}
 
-    {% if p == "Industry-Affiliated Students"%}
+    {% if p == "Industry-Affiliated Student"%}
     <div class='medium-12 columns'>
       <h2>{{p}}s</h2>
       </div>
@@ -205,16 +205,16 @@ document.addEventListener('DOMContentLoaded', function() {
       {% comment %} 
          중복 방지
          1. 현재 섹션(p)이 "Student": remarks "industry-affiliated" skip
-         2. 현재 섹션(p)이 "Industry-Affiliated Students" remarks "Industry-Affiliated Students"인 경우 show
+         2. 현재 섹션(p)이 "Industry-Affiliated Student" remarks "Industry-Affiliated Student"인 경우 show
       {% endcomment %}
       
       {% assign show_member = false %}
       {% if p == "Student" %}
-        {% if member.position contains "Student" and member.remarks != "Industry-Affiliated Students" %}
+        {% if member.position contains "Student" and member.remarks != "Industry-Affiliated Student" %}
           {% assign show_member = true %}
         {% endif %}
-      {% elsif p == "Industry-Affiliated Students" %}
-        {% if member.remarks == "Industry-Affiliated Students" %}
+      {% elsif p == "Industry-Affiliated Student" %}
+        {% if member.remarks == "Industry-Affiliated Student" %}
           {% assign show_member = true %}
         {% endif %}
       {% else %}

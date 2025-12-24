@@ -8,14 +8,14 @@ position: "Ph.D. Student"
 permalink: people/jongcheol.html
 email: jongcheol.shin@snu.ac.kr
 
-works: lgai.png
+works: lg_electronics.png
 
 
 fields:
     - name : Multimodal Learning
     - name : Robotics
 
-remarks: "Industry-Affiliated Students"
+remarks: "Industry-Affiliated Student"
 
 publications:
 

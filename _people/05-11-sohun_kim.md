@@ -8,13 +8,15 @@ position: "MS Student"
 permalink: people/sohun.html
 email: snu14ksh@snu.ac.kr
 
+works: samsung_electronics.png
+
 
 fields:
     - name : Embodied AI
     - name : Robotics
     - name : Multimodal Learning
 
-remarks: "Industry-Affiliated Students"
+remarks: "Industry-Affiliated Student"
 
 publications:
 

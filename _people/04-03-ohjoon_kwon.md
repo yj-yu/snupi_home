@@ -15,7 +15,7 @@ fields:
     - name : Large Language Model
     - name : Agentic RL
 
-remarks: "Industry-Affiliated Students"
+remarks: "Industry-Affiliated Student"
 
 publications:
 
