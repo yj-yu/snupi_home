@@ -98,9 +98,11 @@ input:checked + .slider:before {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-.people-grid .wp-block-coblocks-author {
+.wp-block-coblocks-author {
   position: static !important;
   transform: none !important;
+  top: auto !important;
+  left: auto !important;
   width: 100%;
   margin: 0;
 }
@@ -187,8 +189,6 @@ document.addEventListener('DOMContentLoaded', function() {
              display:flex;
              flex-direction:column;
              align-items:center;
-             height:400px;
-             margin-bottom:100px;
            ">
         {% assign homeurl = member.permalink %}
         {% for social in member.social %}
