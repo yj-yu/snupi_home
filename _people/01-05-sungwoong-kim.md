@@ -3,10 +3,10 @@ layout: people-detail
 section-type: people
 fullname: "Sungwoong Kim"
 img-filename: kim_sungwoong.jpg
-emoji: 🥁
+emoji: 🏀
 position: "Ph.D. Student"
 permalink: people/sungwoong.html
-email: sukim961@gmail.com
+email: sukim961@snu.ac.kr
 
 social:
   - title: home
@@ -14,9 +14,9 @@ social:
 
 
 fields:
-    - name : Multimodal Learning
+    - name : Vision-Language-Action Models
     - name : Robotics
-    - name : Visual Representation
+    - name : Action Representation
 publications:
 
 ---
