@@ -13,7 +13,7 @@ works: aim_intelligence.png
 
 social:
   - title: home
-    url: www.linkedin.com/in/hanwoolalbert
+    url: https://www.linkedin.com/in/hanwoolalbert/?locale=en_US
 
 fields:
     - name: "Safety"

@@ -18,5 +18,6 @@ fields:
     - name : Video Understanding
 social:
   - title: home
-    url: people/sangkyu.html
+    url: https://just1nseo.github.io/ 
 ---
+

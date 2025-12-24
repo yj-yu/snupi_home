@@ -10,7 +10,7 @@ email: justin_seo@yonsei.ac.kr
 works: lgai.png
 social:
   - title: home
-    url: people/wooseok.html
+    url: https://just1nseo.github.io/
 
 
 fields:
