@@ -6,7 +6,11 @@ permalink: people.html
 active_positions:
   - Professor
   - Student
+  - Industry-Affiliated Students
   - Visiting Scholar
+  - Administrative Staff
+
+
 
 color_list:
   - rgba(245, 224, 204)
@@ -180,14 +184,47 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     {% endif %}
 
-    {% if p contains "Student" %}
+    {% if p == "Student" %}
       <div class='medium-12 columns'>
         <h2>Students</h2>
       </div>
     {% endif %}
 
+    {% if p == "Industry-Affiliated Students"%}
+    <div class='medium-12 columns'>
+      <h2>{{p}}s</h2>
+      </div>
+    {% endif %}
+
+    {% if p == "Administrative Staff"%}
+    <div class='medium-12 columns'>
+      <h2>{{p}}s</h2>
+      </div>
+    {% endif %}
     {% for member in site.people %}
-      {% if member.position contains p %}
+      {% comment %} 
+         중복 방지
+         1. 현재 섹션(p)이 "Student": remarks "industry-affiliated" skip
+         2. 현재 섹션(p)이 "Industry-Affiliated Students" remarks "Industry-Affiliated Students"인 경우 show
+      {% endcomment %}
+      
+      {% assign show_member = false %}
+      {% if p == "Student" %}
+        {% if member.position contains "Student" and member.remarks != "Industry-Affiliated Students" %}
+          {% assign show_member = true %}
+        {% endif %}
+      {% elsif p == "Industry-Affiliated Students" %}
+        {% if member.remarks == "Industry-Affiliated Students" %}
+          {% assign show_member = true %}
+        {% endif %}
+      {% else %}
+        {% if member.position contains p %}
+          {% assign show_member = true %}
+        {% endif %}
+      {% endif %}
+
+
+      {% if show_member %}
       <div class="small-6 medium-4 large-custom-5 columns wp-block-coblocks-author member-card" 
      	   style="font-size:15px; text-align: center; display: flex; flex-direction: column; align-items: center; margin: 0; height: 400px; margin-bottom: 100px; background-color: #ffffff; box-shadow: none;">
  
