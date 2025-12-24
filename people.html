@@ -85,6 +85,49 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(26px);
 }
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .people-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .people-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.person-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.person-card-inner {
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.person-card-inner.wp-block-coblocks-author {
+  position: static !important;
+  transform: none !important;
+  top: auto !important;
+  left: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  width: 100%;
+}
 
 </style>
 
@@ -154,124 +197,122 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     {% endif %}
 
-    {% for member in site.people %}
-      {% if member.position contains p %}
-      <div class="small-6 small-6 large-3 columns wp-block-coblocks-author"
-           style="font-size:15px; text-align: center; display: flex; flex-direction: column; align-items: center; margin: 0; height: 400px; margin-bottom: 100px; background-color: #ffffff; box-shadow: none;">
-        {% assign homeurl = member.permalink %}
-        {% for social in member.social %}
-          {% if social.title == "home" %}
-            {% assign homeurl = social.url %}
-          {% endif %}
-        {% endfor %}
-        
-        <figure class="wp-block-coblocks-author__avatar" style="margin-left: 30px; margin-bottom: 20px; width: 100%; display: flex; justify-content: center;">
-          <a href="{{homeurl}}" style="width: 100%; display: flex; justify-content: center;">
-            <img class="wp-block-coblocks-author__avatar-img" src="./images/people/{{member.img-filename}}" 
-                 style="margin: auto; display: block; width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-          </a>
-        </figure>
-        
-        <div class="wp-block-coblocks-author__content" style="width: 100%;">
-          <span class="wp-block-coblocks-author__name">
-            <a style="color:black;" href="{{homeurl}}">
-              <strong><strong>{{member.emoji}}&nbsp; {{member.fullname}}</strong></strong>
-            </a>
-          </span>
-          <span class="wp-block-coblocks-author__name"></span>
-            <span style="color:black;">
-              <span style="color: #666666; font-size: 0.9em; font-style: italic;">{{member.position}}</span>
-            </span>
-          </span>
-          <br>
-          {% if member.fullname contains "Seungju Han" %}
-          <div style="margin-top: 5px; display: inline-block;">
-            <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
-            <img src="./images/works/{{member.works}}" alt="NVIDIA" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
-          </div>
-          {% endif %}
-          {% if member.fullname contains "Jiwan Chung" %}
-          <div style="margin-top: 5px; display: inline-block;">
-            <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
-            <img src="./images/works/{{member.works}}" alt="Microsoft Research" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
-          </div>
-          {% endif %}
-          {% if member.fullname contains "Sangkyu Lee" %}
-          <div style="margin-top: 5px; display: inline-block;">
-            <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
-            <img src="./images/works/{{member.works}}" alt="LG AI Research" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
-          </div>
-          {% endif %}
-          {% if member.fullname contains "Seungwon Lim" %}
-          <div style="margin-top: 5px; display: inline-block;">
-            <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
-            <img src="./images/works/{{member.works}}" alt="LG AI Research" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
-          </div>
-          {% endif %}
-          {% if member.fullname contains "Wooseok Seo" %}
-          <div style="margin-top: 5px; display: inline-block;">
-            <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
-            <img src="./images/works/{{member.works}}" alt="LG AI Research" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
-          </div>
-          {% endif %}
-          {% if member.fullname contains "Jisoo Kim" %}
-          <div style="margin-top: 5px; display: inline-block;">
-            <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
-            <img src="./images/works/{{member.works}}" alt="LG AI Research" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
-          </div>
-          {% endif %}
-          {% if member.fullname contains "Seungbeen Lee" %}
-          <div style="margin-top: 5px; display: inline-block;">
-            <span style="color: #666666; font-size: 0.9em; font-style: italic;">Visiting Scholar at</span> 
-            <img src="./images/works/{{member.works}}" alt="Carnegie Mellon University" style="width: 80px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
-          </div>
-          {% endif %}
-          {% if member.fullname contains "Jungbin Cho" %}
-          <div style="margin-top: 5px; display: inline-block;">
-            <span style="color: #666666; font-size: 0.9em; font-style: italic;">Visiting Scholar at</span> 
-            <img src="./images/works/{{member.works}}" alt="Carnegie Mellon University" style="width: 80px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
-          </div>
-          {% endif %}
-          
-
-          <div>
-          {% if member.fullname contains "Dongha" %}
-            <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://diyonsei.notion.site/Data-Language-Intelligence-Lab-Yonsei-University-7e121249362f42c2bdd1328aeaeb5f4b">  DLI Lab.</a></i>
-          {% endif %}
-          {% if member.fullname contains "Jinyoung" %}
-            <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://jinyeo.weebly.com/">  GLI Lab.</a></i>
-          {% endif %}
-          {% if member.fullname contains "Sungjoon" %}
-            <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://sites.google.com/view/sungjoon-choi/home">  RI Lab.</a></i>
-          {% endif %}
-          </div>
-          <p class="wp-block-coblocks-author__biography" style="margin-top: 5px;">  <!-- Added margin-top here -->
-            {% for field in member.fields %}
-            {% assign color = page.color_list[forloop.index0] %}
-              {% if field.name == "Multimodal perception for AI" %}
-              <div style="margin-bottom:-3%;">
-              {% else %}
-              <div style="margin-bottom:3.5%;">
-              {% endif %}
-            <span style="font-size:0.9em; font-weight: 300; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}}; color: black;">&nbsp;&nbsp;&nbsp;{{field.name}}&nbsp;&nbsp;&nbsp;</span> 
-            </div>
-              {% if field.name == "Multimodal perception for AI" %}
-              <span style="font-size:0.6em; font-weight: 600; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}};">&nbsp;&nbsp;&nbsp;(Video, Speech, Embodied AI, VR/MR)&nbsp;&nbsp;&nbsp;</span>
+    <div class="people-grid">
+      {% for member in site.people %}
+        {% if member.position contains p %}
+        <div class="person-card">
+          <div class="person-card-inner wp-block-coblocks-author">
+            {% assign homeurl = member.permalink %}
+            {% for social in member.social %}
+              {% if social.title == "home" %}
+                {% assign homeurl = social.url %}
               {% endif %}
             {% endfor %}
-          </p>
-        </div>
-      </div>
+            
+            <figure class="wp-block-coblocks-author__avatar" style="margin-left: 30px; margin-bottom: 20px; width: 100%; display: flex; justify-content: center;">
+              <a href="{{homeurl}}" style="width: 100%; display: flex; justify-content: center;">
+                <img class="wp-block-coblocks-author__avatar-img" src="./images/people/{{member.img-filename}}" 
+                     style="margin: auto; display: block; width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+              </a>
+            </figure>
+            
+            <div class="wp-block-coblocks-author__content" style="width: 100%;">
+              <span class="wp-block-coblocks-author__name">
+                <a style="color:black;" href="{{homeurl}}">
+                  <strong>{{member.emoji}}&nbsp; {{member.fullname}}</strong>
+                </a>
+              </span>
+              <br>
+              <span style="color: #666666; font-size: 0.9em; font-style: italic;">
+                {{member.position}}
+              </span>
+              <br>
 
+              {% if member.fullname contains "Seungju Han" %}
+              <div style="margin-top: 5px; display: inline-block;">
+                <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
+                <img src="./images/works/{{member.works}}" alt="NVIDIA" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
+              </div>
+              {% endif %}
+              {% if member.fullname contains "Jiwan Chung" %}
+              <div style="margin-top: 5px; display: inline-block;">
+                <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
+                <img src="./images/works/{{member.works}}" alt="Microsoft Research" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
+              </div>
+              {% endif %}
+              {% if member.fullname contains "Sangkyu Lee" %}
+              <div style="margin-top: 5px; display: inline-block;">
+                <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
+                <img src="./images/works/{{member.works}}" alt="LG AI Research" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
+              </div>
+              {% endif %}
+              {% if member.fullname contains "Seungwon Lim" %}
+              <div style="margin-top: 5px; display: inline-block;">
+                <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
+                <img src="./images/works/{{member.works}}" alt="LG AI Research" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
+              </div>
+              {% endif %}
+              {% if member.fullname contains "Wooseok Seo" %}
+              <div style="margin-top: 5px; display: inline-block;">
+                <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
+                <img src="./images/works/{{member.works}}" alt="LG AI Research" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
+              </div>
+              {% endif %}
+              {% if member.fullname contains "Jisoo Kim" %}
+              <div style="margin-top: 5px; display: inline-block;">
+                <span style="color: #666666; font-size: 0.9em; font-style: italic;">Internship at</span> 
+                <img src="./images/works/{{member.works}}" alt="LG AI Research" style="width: 120px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
+              </div>
+              {% endif %}
+              {% if member.fullname contains "Seungbeen Lee" %}
+              <div style="margin-top: 5px; display: inline-block;">
+                <span style="color: #666666; font-size: 0.9em; font-style: italic;">Visiting Scholar at</span> 
+                <img src="./images/works/{{member.works}}" alt="Carnegie Mellon University" style="width: 80px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
+              </div>
+              {% endif %}
+              {% if member.fullname contains "Jungbin Cho" %}
+              <div style="margin-top: 5px; display: inline-block;">
+                <span style="color: #666666; font-size: 0.9em; font-style: italic;">Visiting Scholar at</span> 
+                <img src="./images/works/{{member.works}}" alt="Carnegie Mellon University" style="width: 80px; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
+              </div>
+              {% endif %}
 
-      {% endif %}
-    {% endfor %}
-    <div></div>
+              <div>
+              {% if member.fullname contains "Dongha" %}
+                <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://diyonsei.notion.site/Data-Language-Intelligence-Lab-Yonsei-University-7e121249362f42c2bdd1328aeaeb5f4b">  DLI Lab.</a></i>
+              {% endif %}
+              {% if member.fullname contains "Jinyoung" %}
+                <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://jinyeo.weebly.com/">  GLI Lab.</a></i>
+              {% endif %}
+              {% if member.fullname contains "Sungjoon" %}
+                <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://sites.google.com/view/sungjoon-choi/home">  RI Lab.</a></i>
+              {% endif %}
+              </div>
+
+              <p class="wp-block-coblocks-author__biography" style="margin-top: 5px;">
+                {% for field in member.fields %}
+                  {% assign color = page.color_list[forloop.index0] %}
+                  {% if field.name == "Multimodal perception for AI" %}
+                  <div style="margin-bottom:-3%;">
+                  {% else %}
+                  <div style="margin-bottom:3.5%;">
+                  {% endif %}
+                    <span style="font-size:0.9em; font-weight: 300; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}}; color: black;">&nbsp;&nbsp;&nbsp;{{field.name}}&nbsp;&nbsp;&nbsp;</span> 
+                  </div>
+                  {% if field.name == "Multimodal perception for AI" %}
+                    <span style="font-size:0.6em; font-weight: 600; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}};">&nbsp;&nbsp;&nbsp;(Video, Speech, Embodied AI, VR/MR)&nbsp;&nbsp;&nbsp;</span>
+                  {% endif %}
+                {% endfor %}
+              </p>
+            </div>
+          </div> <!-- .person-card-inner -->
+        </div>   <!-- .person-card -->
+        {% endif %}
+      {% endfor %}
+    </div> <!-- .people-grid -->
+    <!-- 🔹 여기까지 5-grid -->
   </div>
-
   {% endfor %}
-</div>
-
 
   <!-- remove interns -->
   <!-- <div class='row'>
