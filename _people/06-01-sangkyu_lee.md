@@ -18,6 +18,6 @@ fields:
     - name : Video Understanding
 social:
   - title: home
-    url: https://just1nseo.github.io/ 
+    url: https://oddqueue.github.io/
 ---
 
