@@ -8,7 +8,7 @@ position: "MS/Ph.D. Student"
 permalink: people/hanwool_lee.html
 email: 
 
-works: aim_intelligence.png
+works: aim_intelligence.jpg
 
 
 social:

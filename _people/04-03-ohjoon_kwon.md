@@ -8,7 +8,7 @@ position: "Ph.D. Student"
 permalink: people/ohjoon.html
 email: ohjoon1209@snu.ac.kr
 
-works: naver.png
+works: naver.jpg
 
 
 fields:

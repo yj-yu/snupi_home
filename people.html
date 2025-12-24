@@ -123,6 +123,13 @@ input:checked + .slider:before {
     max-width: 50% !important;
   }
 }
+
+.medium-12.columns h2 {
+  margin-top: 80px; /* 원하는 만큼 간격 조절 */
+  margin-bottom: 40px; 
+  border-bottom: 1px solid #eee; /* 선택사항: 구분선 추가 */
+  padding-bottom: 10px;
+}
 </style>
 
 <div class='full parallax' style='padding: 50px 0;'>
@@ -196,7 +203,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <h2>{{p}}s</h2>
       </div>
     {% endif %}
-    {% if p == "Lab Robot"%}
+ 
+   {% if p == "Lab Robot"%}
     <div class='medium-12 columns'>
       <h2>{{p}}s</h2>
       </div>
