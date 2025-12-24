@@ -130,17 +130,23 @@ input:checked + .slider:before {
     overflow-x: hidden !important;
     position: relative;
   }
+  .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+  }
   .member-card {
     flex: 0 0 50% !important;
     max-width: 50% !important;
     padding: 0 5px !important;
     height: auto !important;
-    display: block !important; 
+    display: flex !important; 
+    flex-diretion: column !important;
+    align-items: center !important;
     margin-bottom: 30px !important;
-    box-sizing: border-box !important;
   }
   .wp-block-coblocks-author__avatar {
-    margin-left: 0 !important; 
+    margin: 0 auto 15px auto !important; 
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
