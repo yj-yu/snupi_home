@@ -86,31 +86,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-.people-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 2rem;
-  justify-items: center;
-}
-
-@media (max-width: 640px) {
-  .people-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-.wp-block-coblocks-author {
-  position: static !important;
-  transform: none !important;
-  top: auto !important;
-  left: auto !important;
-  width: 100%;
-  margin: 0;
-}
-.full.no-padding {
-  background: transparent;
-
-}
-
 </style>
 
 <div class='full parallax' style='padding: 50px 0;'>
@@ -179,17 +154,10 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     {% endif %}
 
-    <div class="people-grid">
     {% for member in site.people %}
       {% if member.position contains p %}
-      <div class="wp-block-coblocks-author"
-           style="
-             font-size:15px;
-             text-align:center;
-             display:flex;
-             flex-direction:column;
-             align-items:center;
-           ">
+      <div class="small-6 small-6 large-3 columns wp-block-coblocks-author"
+           style="font-size:15px; text-align: center; display: flex; flex-direction: column; align-items: center; margin: 0; height: 400px; margin-bottom: 100px; background-color: #ffffff; box-shadow: none;">
         {% assign homeurl = member.permalink %}
         {% for social in member.social %}
           {% if social.title == "home" %}
