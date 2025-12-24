@@ -85,6 +85,20 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(26px);
 }
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+@media (max-width: 640px) {
+  .people-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 </style>
 
 <div class='full parallax' style='padding: 50px 0;'>
@@ -153,14 +167,11 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     {% endif %}
 
-    <div class="people-grid"
-       style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start;">
+    <div class="people-grid">
     {% for member in site.people %}
-      {% if member.position contains p %}   ==
+      {% if member.position contains p %}
       <div class="wp-block-coblocks-author"
            style="
-             width: 20%;
-             min-width: 240px;
              font-size:15px;
              text-align:center;
              display:flex;
