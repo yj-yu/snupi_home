@@ -126,19 +126,28 @@ input:checked + .slider:before {
 
 /* 모바일 화면 (2명씩) */
 @media only screen and (max-width: 640px) {
+  html, body {
+    overflow-x: hidden !important;
+    position: relative;
+  }
   .member-card {
     flex: 0 0 50% !important;
     max-width: 50% !important;
     padding: 0 5px !important;
     height: auto !important;
+    display: block !important; 
+    margin-bottom: 30px !important;
+    box-sizing: border-box !important;
   }
   .wp-block-coblocks-author__avatar {
     margin-left: 0 !important; 
     width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
   }
   .wp-block-coblocks-author__avatar-img {
-    width: 130px !important;  
-    height: 130px !important; 
+    width: 120px !important;  
+    height: 120px !important; 
     border-radius: 50% !important; 
     object-fit: cover !important;
   }
