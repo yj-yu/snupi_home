@@ -87,7 +87,7 @@ input:checked + .slider:before {
 }
 
 
-/* PC 화면 (해상도가 넓을 때) */
+/* 1. PC 화면 (1024px 이상): 5명씩 + 넓은 간격 */
 @media only screen and (min-width: 1024px) {
   .row {
     display: flex;
@@ -99,10 +99,11 @@ input:checked + .slider:before {
     /* 100% / 5 = 20% 이지만 여백을 위해 약간 조절하거나 정확히 20% 부여 */
     flex: 0 0 20% !important;
     max-width: 20% !important;
+    padding: 0 30px;
   }
 }
 
-/* 태블릿 화면 (선택 사항: 3명씩) */
+/* 2. 태블릿 화면 (641px ~ 1023px): 3명씩 + 중간 간격 */
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .member-card {
     flex: 0 0 33.33% !important;
