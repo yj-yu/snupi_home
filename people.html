@@ -153,10 +153,22 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     {% endif %}
 
+    <div class="people-grid"
+       style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start;">
     {% for member in site.people %}
-      {% if member.position contains p %}
-      <div class="small-6 small-6 large-3 columns wp-block-coblocks-author" 
-           style="font-size:15px; text-align: center; display: flex; flex-direction: column; align-items: center; margin: 0; height: 400px; margin-bottom: 100px; background-color: #ffffff; box-shadow: none;">
+      {% if member.position contains p %}   ==
+      <div class="wp-block-coblocks-author"
+           style="
+             width: 20%;
+             min-width: 240px;
+             font-size:15px;
+             text-align:center;
+             display:flex;
+             flex-direction:column;
+             align-items:center;
+             height:400px;
+             margin-bottom:100px;
+           ">
         {% assign homeurl = member.permalink %}
         {% for social in member.social %}
           {% if social.title == "home" %}
@@ -269,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   {% endfor %}
-
+</div>
 
 
   <!-- remove interns -->
