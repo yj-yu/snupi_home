@@ -104,7 +104,7 @@ input:checked + .slider:before {
     /* 100% / 5 = 20% 이지만 여백을 위해 약간 조절하거나 정확히 20% 부여 */
     flex: 0 0 20% !important;
     max-width: 20% !important;
-    padding: 0 30px;
+    padding: 0 10px !important;
   }
 }
 
@@ -125,8 +125,8 @@ input:checked + .slider:before {
 }
 
 .medium-12.columns h2 {
-  margin-top: 80px !important; /* 위 섹션과  간격 조절 */
-  margin-bottom: 50px !important; /* 아래쪽 멤버 카드와의 간격 */
+  margin-top: 60px !important; /* 위 섹션과  간격 조절 */
+  margin-bottom: 30px !important; /* 아래쪽 멤버 카드와의 간격 */
   border-bottom: none !important; /* 선택사항: 구분선 추가 */
   padding-bottom: 0;
 }
@@ -134,14 +134,17 @@ input:checked + .slider:before {
 /* 2. 이름 줄바꿈 방지 및 글자 크기 최적화 */
 .wp-block-coblocks-author__name {
   white-space: nowrap;        /* 이름이 길어도 한 줄로 유지 */
-  font-size: 0.95em;          /* 이름이 칸을 넘치지 않게 아주 살짝 축소 */
   display: block;
-  overflow: hidden;           /* 혹시라도 넘치면 가림 */
+  width: 100%;
 }
 
+.wp-block-coblocks-author__name a strong {
+  font-size: 14px;                 /* 글자 크기를 아주 살짝 조절하여 잘림 방지 */
+  letter-spacing: -0.5px;          /* 자간을 줄여 더 많은 글자 표시 */
+}
 /* 첫 번째 섹션 상단 간격 조정 */
 .row:first-of-type .medium-12.columns h2 {
-  margin-top: 30px !important;
+  margin-top: 20px !important;
 }
 
 </style>
