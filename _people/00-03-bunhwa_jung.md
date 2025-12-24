@@ -3,7 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Bunhwa Jung"
 img-filename: administrative.png
-position: "Collaborator"
+position: "Administrative Staff"
 permalink: people/bunhwa.html
 email: bhjung@snu.ac.kr
 
