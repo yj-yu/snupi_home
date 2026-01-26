@@ -2,11 +2,8 @@
 layout: publications
 section-type: publications
 name: "Pushing on Multilingual Reasoning Models with Language-Mixed Chain-of-Thought"
-conference:  EMNLP2025
-year: 2025
-
-
-
+conference: ICLR2026
+year: 2026
 
 author:
   - name: "Guijin Son"
@@ -14,10 +11,10 @@ author:
   - name: "Hitesh Laxmichand Patel"
   - name: "Amit Agarwal"
   - name: "Hyunwoo Ko"
-  - name: "Chanuk Lim"
+  - name: "Chanuk lim"
   - name: "Srikant Panda"
   - name: "Minhyuk Kim"
-  - name: "Nikunj Drolia"
+  - name: "Nikunj drolia"
   - name: "Dasol Choi"
   - name: "Kyong-Ha Lee"
   - name: "Youngjae Yu"
@@ -32,9 +29,10 @@ external:
 img: multilingual CoT.png
 
 keywords:
-  - name: Embodied AI
-  - name: LLM
-  - name: Safety
-  
+  - name: NLP
+  - name: Multilingual
+  - name: CoT
+
 display: False
 ---
+

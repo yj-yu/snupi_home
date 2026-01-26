@@ -2,8 +2,8 @@
 layout: publications
 section-type: publications
 name: "TIPO: Text to Image with Text Presampling for Prompt Optimization"
-conference: 
-year: 2024
+conference: ICLR2026
+year: 2026
 
 author:
   - name: "Shih-Ying Yeh"

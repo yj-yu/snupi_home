@@ -2,8 +2,8 @@
 layout: publications
 section-type: publications
 name: "Teaching Metric Distance to Autoregressive Multimodal Foundational Models"
-conference:  
-year: 2025
+conference: ICLR2026 
+year: 2026
 
 
 author:
