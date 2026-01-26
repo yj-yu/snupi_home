@@ -1,6 +1,6 @@
 ---
 layout: news-detail
-title: Congratulations! 4 Papers Accepted at ICLR2026 (2026-01-26)
+title: Congratulations! 4 Papers Accepted at ICLR2026
 subtitle: iclr-accept
 type: papers
 emoji: 🎉
