@@ -2,6 +2,7 @@
 layout: publications
 section-type: publications
 name: "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI"
+conference: ICLR2026
 year: 2026
 
 author:
