@@ -6,7 +6,7 @@ img-filename: kim_sungwoong.jpg
 emoji: 🏀
 position: "Ph.D. Student"
 permalink: people/sungwoong.html
-email: sukim961@snu.ac.kr
+email: sukim96@snu.ac.kr
 
 social:
   - title: home
