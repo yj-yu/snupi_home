@@ -44,11 +44,15 @@
 - **Image filename**: 프로필 이미지 파일명 (예: lee_seungbeen.jpg)
 - **Position**: 직책 선택
   - Ph.D. Student
+  - MS/Ph.D. Student
   - MS Student
+  - Ph.D. Student (IAR)
+  - MS Student (IAR)
   - Visiting Scholar
   - Alumni
   - Intern
   - Collaborator
+  - Alumni
 - **Email**: 이메일 주소
 - **Fields**: 연구 분야 (쉼표로 구분, 예: NLP, LLM, Robotics)
 

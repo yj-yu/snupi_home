@@ -34,20 +34,26 @@ read -r img_filename
 # 필수 필드: position
 echo -e "${GREEN}[필수]${NC} Position을 선택하세요:"
 echo "  1) Ph.D. Student"
-echo "  2) MS Student"
-echo "  3) Visiting Scholar"
-echo "  4) Alumni"
-echo "  5) Intern"
-echo "  6) Collaborator"
+echo "  2) Ph.D./MS Student"
+echo "  3) MS Student"
+echo "  4) Ph.D. Student(IAR)"
+echo "  5) MS Student(IAR)"
+echo "  6) Visiting Scholar"
+echo "  7) Alumni"
+echo "  8) Intern"
+echo "  9) Collaborator"
 read -r position_choice
 
 case $position_choice in
     1) position="Ph.D. Student"; prefix="01";;
-    2) position="MS Student"; prefix="01";;
-    3) position="Visiting Scholar"; prefix="02";;
-    4) position="Alumni"; prefix="03";;
-    5) position="Intern"; prefix="04";;
-    6) position="Collaborator"; prefix="00";;
+    2) position="Ph.D./MS Student"; prefix="02";;
+    2) position="MS Student"; prefix="03";;
+    2) position="Ph.D. Student(IAR)"; prefix="04";;
+    2) position="MS Student(IAR)"; prefix="05";;
+    3) position="Visiting Scholar"; prefix="06";;
+    4) position="Alumni"; prefix="07";;
+    5) position="Intern"; prefix="08";;
+    6) position="Collaborator"; prefix="09";;
     *) echo "잘못된 선택입니다."; exit 1;;
 esac
 
