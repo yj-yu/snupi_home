@@ -8,7 +8,7 @@ position: "MS Student"
 permalink: people/sohun.html
 email: snu14ksh@snu.ac.kr
 
-works: samsung_sdi.png
+works: samsung_sdi.jpg
 
 
 fields:
