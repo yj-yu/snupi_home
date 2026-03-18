@@ -47,13 +47,13 @@ read -r position_choice
 case $position_choice in
     1) position="Ph.D. Student"; prefix="01";;
     2) position="Ph.D./MS Student"; prefix="02";;
-    2) position="MS Student"; prefix="03";;
-    2) position="Ph.D. Student(IAR)"; prefix="04";;
-    2) position="MS Student(IAR)"; prefix="05";;
-    3) position="Visiting Scholar"; prefix="06";;
-    4) position="Alumni"; prefix="07";;
-    5) position="Intern"; prefix="08";;
-    6) position="Collaborator"; prefix="09";;
+    3) position="MS Student"; prefix="03";;
+    4) position="Ph.D. Student(IAR)"; prefix="04";;
+    5) position="MS Student(IAR)"; prefix="05";;
+    6) position="Visiting Scholar"; prefix="06";;
+    7) position="Alumni"; prefix="07";;
+    8) position="Intern"; prefix="08";;
+    9) position="Collaborator"; prefix="09";;
     *) echo "잘못된 선택입니다."; exit 1;;
 esac
 
