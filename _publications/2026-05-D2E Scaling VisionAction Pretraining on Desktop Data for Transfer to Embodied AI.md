@@ -17,6 +17,12 @@ author:
   - name: "Youngjae Yu"
   - name: "Yunsung Lee"
 
+equal_contributor_idx:
+  - 0
+  - 1
+  - 2
+
+
 
 
 external:

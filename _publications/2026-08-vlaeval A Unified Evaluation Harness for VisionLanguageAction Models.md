@@ -23,9 +23,10 @@ external:
 img: vla-eval.png
 
 keywords:
-  - name: VLA
-  - name: Evaluation
-  - name: Robotics
+  - name: Vision-Language-Action
+  - name: Evaluation Harness
+  - name: Robotic
+
 
 display: False
 ---
