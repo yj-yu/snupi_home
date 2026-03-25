@@ -4659,33 +4659,76 @@ svg:not(:root) {
 @media only screen and (max-width: 768px) {
     .publication-card {
         flex-direction: column !important;
-        padding: 0 !important; /* 이미지와 테두리 사이 틈 제거 */
-        align-items: center !important;
+        padding: 0 !important; /* 부모 박스 전체 테두리까지 꽉 채움 */
+        align-items: flex-start !important; /* 텍스트는 왼쪽 정렬 */
     }
 
     .publication-card img {
-        /* [해결] 모바일에서 사진이 크게 나오고 상단에 밀착 */
+        /* [해결] 모바일에서 사진이 크게 나오고 상단에 밀착 (이전과 동일) */
         width: 100% !important;
         height: auto !important;
         max-height: 220px !important;
         margin-right: 0 !important;
-        margin-bottom: 15px !important;
+        margin-bottom: 0px !important; /* [수정] 이미지 바로 아래 텍스트가 붙도록 */
+        /* [수정] 위쪽 모서리만 둥글게, 부모 박스에 딱 맞춤 */
         border-radius: 10px 10px 0 0 !important;
+        object-fit: cover !important;
     }
 
-    /* 텍스트 영역에만 좌우 여백 확보 */
-    .publication-card h3, 
-    .publication-card p, 
+    /* [핵심 수정] 텍스트 전체 영역에 안쪽 여백 부여 (박스에 꽉 차게 보이게 함) */
+    .publication-card-content {
+        /* 이 가상의 클래스가 없다면 아래 h3, p, a를 이 범위에 적용 */
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 15px !important; /* [수정] 글씨와 테두리 사이의 예쁜 여백 */
+    }
+
+    /* 기존에 width와 margin을 강제하던 부분을 초기화하고 패딩만 적용하도록 */
+    .publication-card h3,
+    .publication-card p,
     .publication-card a,
     .bubble_publication_conference {
-        width: calc(100% - 30px) !important; /* 텍스트 너비 조정 */
-        margin-left: 15px !important;
-        margin-right: 15px !important;
-        text-align: left !important; /* 글자는 왼쪽 정렬 */
+        width: 100% !important; /* [해결] 텍스트가 박스 너비에 꽉 참 */
+        margin-left: 0px !important;  /* [해결] 왼쪽 여백 제거 */
+        margin-right: 0px !important; /* [해결] 오른쪽 여백 제거 */
+        text-align: left !important;
+        box-sizing: border-box !important;
     }
-    
+
+    /* [비율 수정] 모바일 Conference 태그 비율 조정 */
+    .bubble_publication_conference {
+        /* [해결] 밑이 길어 보이는 비율 수정: line-height 증가 */
+        line-height: 1.6 !important;
+        /* 패딩을 세로 대칭으로 조정하여 비율을 맞춤 */
+        padding: 6px 14px !important;
+        font-size: 0.85rem !important; /* 가독성을 위해 살짝 키움 */
+        display: inline-block !important; /* inline-block 유지 (블록 채우지 않음) */
+        vertical-align: middle !important;
+    }
+
+    /* 개별 요소별 모바일 마진 미세 조정 */
+    .publication-card img {
+        margin-bottom: 0 !important;
+    }
+
+    /* 이미지와 태그 사이 */
+    .bubble_publication_conference {
+        margin-top: 15px !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* 제목 아래 마진 */
+    .publication-card h3 {
+        margin-top: 0 !important;
+        margin-bottom: 10px !important;
+        font-size: 1.15rem !important; /* 모바일 제목 크기 조정 */
+    }
+
+    /* 링크 아래 마진 */
     .publication-card a {
+        margin-top: 10px !important;
         margin-bottom: 15px !important;
         display: inline-block !important;
     }
 }
+
