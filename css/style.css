@@ -4603,15 +4603,15 @@ svg:not(:root) {
 
 /* 3. 학회 태그 (요구사항 1: 파란 배경에 흰색 글자 강제 고정) */
 .bubble_publication_conference {
-    background: #337ab7 !important; /* 사이트 메인 블루 */
+    background: #3b82f6 !important; /* 사이트 메인 블루 */
     color: #ffffff !important;      /* [해결] 무조건 흰색 */
     -webkit-text-fill-color: #ffffff !important; /* 사파리/모바일용 강제 흰색 */
-    padding: 3px 12px !important;
-    border-radius: 4px !important;
-    font-size: 0.75rem !important;
-    font-weight: 700 !important;
+    padding: 4px 12px !important;
+    border-radius: 20px !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
     display: inline-block !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 12px !important;
     line-height: 1.2 !important;
     border: none !important;
 }
@@ -4629,20 +4629,20 @@ svg:not(:root) {
 }
 
 /* 5. 텍스트 영역 */
+/* 논문 제목 스타일 */
 .publication-card h3 {
-    font-family: 'Inter', 'Noto Sans KR', sans-serif !important;
-    font-size: 1.1rem !important;
+    font-family: 'Inter', sans-serif !important;
     font-weight: 700 !important;
-    color: #1a202c !important;
-    margin: 0 0 4px 0 !important;
-    line-height: 1.3 !important;
-    word-break: keep-all !important;
+    color: #1e293b !important;
+    margin-top: 10px !important;
+    font-size: 1.25rem !important;
+    letter-spacing: -0.02em !important;
 }
 
 .publication-card p {
     font-family: 'Inter', 'Noto Sans KR', sans-serif !important;
-    color: #555 !important;
-    font-size: 0.9rem !important;
+    color: #475569 !important;
+    font-size: 0.95rem !important;
     margin: 0 !important;
 }
 
@@ -4660,15 +4660,14 @@ svg:not(:root) {
     .publication-card {
         flex-direction: column !important;
         padding: 0 !important; /* 이미지와 테두리 사이 틈 제거 */
-        align-items: flex-start !important;
-        width: 95% !important;
+        align-items: center !important;
     }
 
     .publication-card img {
         /* [해결] 모바일에서 사진이 크게 나오고 상단에 밀착 */
         width: 100% !important;
         height: auto !important;
-        max-height: 200px !important;
+        max-height: 220px !important;
         margin-right: 0 !important;
         margin-bottom: 15px !important;
         border-radius: 10px 10px 0 0 !important;
@@ -4679,8 +4678,10 @@ svg:not(:root) {
     .publication-card p, 
     .publication-card a,
     .bubble_publication_conference {
+        width: calc(100% - 30px) !important; /* 텍스트 너비 조정 */
         margin-left: 15px !important;
         margin-right: 15px !important;
+        text-align: left !important; /* 글자는 왼쪽 정렬 */
     }
     
     .publication-card a {
