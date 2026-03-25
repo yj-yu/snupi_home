@@ -4572,3 +4572,118 @@ svg:not(:root) {
     filter: blur(2px);
   }
 }
+
+
+/* 1. 구글 폰트 불러오기 (Inter와 Noto Sans KR) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* 2. 전체 폰트 적용 */
+.publication-card, .publication-card h3, .publication-card p, .publication-card span {
+    font-family: 'Inter', 'Noto Sans KR', sans-serif !important;
+}
+/* --- Publications Custom Design --- */
+
+/* 2. 카드 레이아웃 (요구사항 2: 사이트 전체 틀 1100px에 맞춤) */
+.publication-card {
+    background: #ffffff !important;
+    border: 1px solid #e1e4e8 !important;
+    border-radius: 10px !important;
+    padding: 10px 15px !important; 
+    margin: 0 auto 15px auto !important; /* 중앙 정렬 */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+    display: flex !important;
+    align-items: center !important; 
+    
+    /* [해결] 기존 사이트 nav/footer 폭에 맞춰 1100px로 제한 */
+    width: 90% !important;
+    max-width: 1100px !important; 
+    box-sizing: border-box !important;
+    cursor: default !important;
+}
+
+/* 3. 학회 태그 (요구사항 1: 파란 배경에 흰색 글자 강제 고정) */
+.bubble_publication_conference {
+    background: #337ab7 !important; /* 사이트 메인 블루 */
+    color: #ffffff !important;      /* [해결] 무조건 흰색 */
+    -webkit-text-fill-color: #ffffff !important; /* 사파리/모바일용 강제 흰색 */
+    padding: 2px 8px !important;
+    border-radius: 4px !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    display: inline-block !important;
+    margin-bottom: 6px !important;
+    line-height: 1.2 !important;
+    border: none !important;
+}
+
+/* 4. 이미지 설정 (요구사항 3: 박스 높이 고정 및 그림 맞춤) */
+.publication-card img {
+    /* [해결] 이미지 크기를 고정하여 박스 높이가 들쭉날쭉해지는 것 방지 */
+    width: 170px !important;  
+    height: 110px !important; 
+    object-fit: cover !important; /* 박스에 꽉 차게 그림을 맞춤 */
+    border-radius: 6px !important;
+    margin-right: 20px !important;
+    flex-shrink: 0 !important;
+}
+
+/* 5. 텍스트 영역 */
+.publication-card h3 {
+    font-family: 'Inter', 'Noto Sans KR', sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #1a202c !important;
+    margin: 0 0 4px 0 !important;
+    line-height: 1.3 !important;
+    word-break: keep-all !important;
+}
+
+.publication-card p {
+    font-family: 'Inter', 'Noto Sans KR', sans-serif !important;
+    color: #555 !important;
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+}
+
+.publication-card a {
+    color: #337ab7 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    font-size: 0.85rem !important;
+}
+
+/* ------------------------------------------------------------
+   6. 모바일 대응 (요구사항 4: VLL 스타일 - 이미지 상단 꽉 채움)
+   ------------------------------------------------------------ */
+@media only screen and (max-width: 768px) {
+    .publication-card {
+        flex-direction: column !important;
+        padding: 0 !important; /* 이미지와 테두리 사이 틈 제거 */
+        align-items: flex-start !important;
+        width: 95% !important;
+    }
+
+    .publication-card img {
+        /* [해결] 모바일에서 사진이 크게 나오고 상단에 밀착 */
+        width: 100% !important;
+        height: auto !important;
+        max-height: 200px !important;
+        margin-right: 0 !important;
+        margin-bottom: 15px !important;
+        border-radius: 10px 10px 0 0 !important;
+    }
+
+    /* 텍스트 영역에만 좌우 여백 확보 */
+    .publication-card h3, 
+    .publication-card p, 
+    .publication-card a,
+    .bubble_publication_conference {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
+    
+    .publication-card a {
+        margin-bottom: 15px !important;
+        display: inline-block !important;
+    }
+}
