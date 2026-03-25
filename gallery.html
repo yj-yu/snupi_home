@@ -7,11 +7,24 @@ count_year_min: 2023
 ---
 
 <style>
-  /* 1. 모바일 : 사진 아래에 설명이 항상 보임 */
+  /* -----------------------------------------------------------
+     1. 전역 설정 및 레이아웃 유지 (PC/모바일 공통)
+  ----------------------------------------------------------- */
+  .grid-container {
+    display: grid;
+    gap: 20px; /* 아이템 간 간격 증가 */
+    padding: 10px;
+  }
+
+  /* 기존의 3열/1열 구조를 유지하는 클래스가 있다고 가정하고 내부 아이템 스타일만 정의 */
   .location-listing {
     position: relative;
     display: block;
-    margin-bottom: 30px; /* 아이템 간 간격 */
+    background: #fff; /* 카드 배경색 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    overflow: hidden; /* 이미지가 넘치지 않도록 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 은은한 그림자 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
   }
 
@@ -21,44 +34,89 @@ count_year_min: 2023
     transition: filter 0.3s ease;
   }
 
-  .location-title {
-    position: relative !important; /* 이미지 위가 아니라 아래에 배치 */
-    opacity: 1 !important;         /* 항상 보이게 */
-    visibility: visible !important;
-    background: transparent !important; 
-    color: #333 !important;        /* 글자 색상 (배경이 밝을 때) */
-    padding: 10px 0 !important;
-    text-align: center;
-    font-weight: bold;
-    font-size: 14px;
-    height: auto !important;
-    transform: none !important;
+  /* -----------------------------------------------------------
+     2. 모바일 디자인 (기본): 타이틀을 예쁘고 크게, 사진 블러 없음
+  ----------------------------------------------------------- */
+  
+  /* 모바일에서는 hover 시 블러 효과 완전 제거 */
+  .location-listing:hover .location-image img {
+    filter: none !important;
   }
 
-  /* 2. PC (768px 이상): 기존처럼 마우스 올릴 때만 설명 표시 */
+  .location-title {
+    /* [위치 고정] 이미지 아래에 항상 표시 */
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    top: auto !important;
+    transform: none !important;
+    display: block !important;
+    height: auto !important;
+    width: 100% !important;
+
+    /* [디자인 변경] 단순 텍스트가 아닌 디자인된 영역처럼 설정 */
+    background: #fdfdfd !important; /* 아주 밝은 회색 배경 */
+    color: #333 !important;        /* 진한 글자색 */
+    padding: 20px 15px 10px !important; /* 여백 증가 */
+    border-top: 1px solid #eee;    /* 이미지와 구분선 */
+    text-align: center;
+    
+    /* [타이틀 크기 및 서체] 더 크고 돋보이게 */
+    font-size: 20px !important;
+    font-weight: 700 !important;   /* 아주 굵게 */
+    letter-spacing: -0.5px;        /* 자간 좁혀서 세련되게 */
+    line-height: 1.3;
+    
+    /* [장식 요소] 타이틀 아래에 작은 강조선 추가 */
+    border-bottom: 3px solid #34495e !important; /* 포인트 색상 (조정 가능) */
+  }
+
+  /* -----------------------------------------------------------
+     3. PC 디자인 (768px 이상): 기존의 고급스러운 호버 효과 유지
+  ----------------------------------------------------------- */
   @media (min-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr); /* 3열로 변경 */
+    }
+
+    .location-listing:hover {
+      transform: translateY(-5px); /* 살짝 위로 떠오르는 효과 */
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* 그림자 강화 */
+    }
+
     .location-title {
-      position: absolute !important; /* 다시 이미지 위로 띄움 */
+      /* [위치 변경] 다시 이미지 위로 올림 */
+      position: absolute !important;
       top: 0 !important;
       left: 0;
-      width: 100%;
+      width: 100% !important;
       height: 100% !important;
       display: flex !important;
       align-items: center;
       justify-content: center;
-      opacity: 0 !important;         /* 평소엔 투명 */
-      background: rgba(0, 0, 0, 0.5) !important; /* 검정 반투명 배경 */
-      color: white !important;       /* 글자 색상 화이트로 변경 */
+      
+      /* [초기 상태] 숨김 */
+      opacity: 0 !important;
+      background: rgba(0, 0, 0, 0.6) !important; /* 검정 반투명 배경 */
+      color: white !important;       /* 글자색 화이트 */
       transition: opacity 0.3s ease;
-      pointer-events: none;          /* 마우스 이벤트 방해 금지 */
+      pointer-events: none;
+      
+      /* [PC 전용 스타일] 모바일 장식 제거 */
+      border-top: none !important;
+      border-bottom: none !important;
+      padding: 20px !important;
+      font-size: 24px !important;    /* PC에서는 조금 더 크게 */
     }
 
     .location-listing:hover .location-title {
-      opacity: 1 !important;         /* 호버 시 나타남 */
+      /* [호버 상태] 나타남 */
+      opacity: 1 !important;
     }
 
     .location-listing:hover .location-image img {
-      filter: blur(4px);             /* 호버 시 블러 처리 */
+      /* [호버 상태] 이미지 블러 처리 */
+      filter: blur(4px);
     }
   }
 </style>
