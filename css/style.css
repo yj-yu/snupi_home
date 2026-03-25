@@ -4606,25 +4606,26 @@ svg:not(:root) {
     background: #337ab7 !important; /* 사이트 메인 블루 */
     color: #ffffff !important;      /* [해결] 무조건 흰색 */
     -webkit-text-fill-color: #ffffff !important; /* 사파리/모바일용 강제 흰색 */
-    padding: 2px 8px !important;
+    padding: 3px 12px !important;
     border-radius: 4px !important;
     font-size: 0.75rem !important;
     font-weight: 700 !important;
     display: inline-block !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 8px !important;
     line-height: 1.2 !important;
     border: none !important;
 }
 
 /* 4. 이미지 설정 (요구사항 3: 박스 높이 고정 및 그림 맞춤) */
 .publication-card img {
-    /* [해결] 이미지 크기를 고정하여 박스 높이가 들쭉날쭉해지는 것 방지 */
-    width: 170px !important;  
-    height: 110px !important; 
-    object-fit: cover !important; /* 박스에 꽉 차게 그림을 맞춤 */
+    /* [해결] PC에서 그림을 시원하게 키움 */
+    width: 220px !important;  
+    height: 140px !important; 
+    object-fit: cover !important; /* [해결] 비율 유지하며 꽉 채움 */
     border-radius: 6px !important;
-    margin-right: 20px !important;
+    margin-right: 25px !important;
     flex-shrink: 0 !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
 }
 
 /* 5. 텍스트 영역 */
