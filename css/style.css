@@ -4600,19 +4600,14 @@ body {
     background: #ffffff !important;
     border: 1px solid #e1e4e8 !important;
     border-radius: 12px !important;
-    padding: 30px 20px !important;
-    margin-bottom: 25px !important;
+    padding: 20px 10px !important;
+    margin-bottom: 10px !important;
     transition: all 0.3s ease !important;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
     display: flex !important; /* 가로 정렬 보정 */
     align-items: flex-start !important;
 }
 
-.publication-card:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 12px 24px rgba(0,0,0,0.1) !important;
-    border-color: #3b82f6 !important;
-}
 
 /* 이미지 모서리 둥글게 */
 .publication-card img {
