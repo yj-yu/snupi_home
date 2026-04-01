@@ -23,7 +23,7 @@ color_list:
   - rgba(0, 144, 202)
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" integrity="sha384-aOWnvw9TtWkHQMWKx0JNgVWwMBH/3G4V3I2K3oMJEJkZWOWxBQSqXz5k5qxFzT6m" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
 <style>
 .toggle-container {
@@ -36,14 +36,19 @@ color_list:
 }
 
 .toggle-text {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Dancing Script', cursive;
   font-size: 28px;
-  background: linear-gradient(45deg, #2196F3, #03a9f4);
+  background: linear-gradient(135deg, #6e8efb, #a7a7af);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-  letter-spacing: 0.5px;
-  line-height: 1.8;
+  font-weight: bold;
+  display: inline-block;
+  animation: gentle-wave 2s ease-in-out infinite;  
+}
+
+@keyframes gentle-wave {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-5px) rotate(1deg); }
 }
 
 .switch {
@@ -186,9 +191,9 @@ input:checked + .slider:before {
       {% include section-header.html title="Member" color="#464646" tagline=" " class="big" %}
     </div>
   </div>
-  <div class='toggle-container'>
-    <span class="toggle-text">It's April Fool's Day! Toggle for your fun!</span>
-    <label class="switch">
+  <div class='toggle-container' style="flex-direction: column; text-align: center;">
+    <span class="toggle-text">Wait, who are these babies? 👶</span>
+    <label class="switch" style="margin-top: 10px;">>
       <input type="checkbox" id="imageToggle" checked>
       <span class="slider"></span>
     </label>
