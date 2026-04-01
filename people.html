@@ -186,16 +186,16 @@ input:checked + .slider:before {
       {% include section-header.html title="Member" color="#464646" tagline=" " class="big" %}
     </div>
   </div>
-  <!-- <div class='toggle-container'>
+  <div class='toggle-container'>
     <span class="toggle-text">It's April Fool's Day! Toggle for your fun!</span>
     <label class="switch">
       <input type="checkbox" id="imageToggle" checked>
       <span class="slider"></span>
     </label>
-  </div> -->
+  </div>
   <div class='spacing'></div>
 </div>
-<!-- 
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const toggle = document.getElementById('imageToggle');
@@ -204,21 +204,21 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize images with fool mode path on page load
   images.forEach(img => {
     const currentSrc = img.getAttribute('src');
-    img.setAttribute('src', currentSrc.replace('/people/', '/people_fool/'));
+    img.setAttribute('src', currentSrc.replace('/people/', '/people_fool2/'));
   });
   
   toggle.addEventListener('change', function() {
     images.forEach(img => {
       const currentSrc = img.getAttribute('src');
       if (toggle.checked) {
-        img.setAttribute('src', currentSrc.replace('/people/', '/people_fool/'));
+        img.setAttribute('src', currentSrc.replace('/people/', '/people_fool2/'));
       } else {
-        img.setAttribute('src', currentSrc.replace('/people_fool/', '/people/'));
+        img.setAttribute('src', currentSrc.replace('/people_fool2/', '/people/'));
       }
     });
   });
 });
-</script> -->
+</script>
 
 <div class='full no-padding'>
   <!-- Members except alumni -->
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         <figure class="wp-block-coblocks-author__avatar" style="margin-left: 30px; margin-bottom: 20px; width: 100%; display: flex; justify-content: center;">
           <a href="{{homeurl}}" style="width: 100%; display: flex; justify-content: center;">
-            <img class="wp-block-coblocks-author__avatar-img" src="./images/people_fool2/{{member.img-filename}}" 
+            <img class="wp-block-coblocks-author__avatar-img" src="./images/people/{{member.img-filename}}" 
                  style="margin: auto; display: block; width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
           </a>
         </figure>
