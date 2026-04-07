@@ -3829,7 +3829,7 @@ body {
   .modSectionHeader.big h2 {
     font-size: 2rem;
   }
-
+o
   .modFullscreenSlider .fullscreen_slideshow .video_image_touch {
     display: block;
   }
@@ -3859,6 +3859,7 @@ padding-right: 10px;
 padding-left: 10px;
 padding-top: 5px;
 text-align: center;
+color: #fff !important;
 background: rgb(255, 236, 200);
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
