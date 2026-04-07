@@ -25,12 +25,12 @@ external:
     url: https://arxiv.org/abs/2512.00311
   
 
-img: math_proficiency_overview.png
+img: math_proficiency_tracing_overview.png
 
 keywords:
-  - name: Math
+  - name: LLM
+  - name: Knowledge Tracing
   - name: Education
-  - name: Problem-solving
 
 display: False
 ---
