@@ -4617,7 +4617,7 @@ body {
 
 /* 학회 태그 디자인 (파란색 알약 모양) */
 .bubble_publication_conference {
-    background: #3b82f6 !important;
+    background: #60a5fa !important;
     color: #fff !important;
     padding: 4px 12px !important;
     border-radius: 20px !important;
