@@ -12,7 +12,7 @@ author:
 
 
 
-img: comingsoong.jpg
+img: comingsoon.jpg
 
 keywords:
   - name: NLP
