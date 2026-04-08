@@ -12,7 +12,8 @@ author:
 
 
 
-img: comingsoon.jpg
+img: right_at_my_level.png
+
 
 keywords:
   - name: NLP

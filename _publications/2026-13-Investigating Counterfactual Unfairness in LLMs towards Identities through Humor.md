@@ -22,7 +22,7 @@ equal_contributor_idx:
   - 0
   - 1
 
-img: comingsoon.jpg
+img: humor_bias.png
 
 keywords:
   - name: LLM
