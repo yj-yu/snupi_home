@@ -8,7 +8,7 @@ year: 2026
 author:
   - name: "Jinhong Jeong"
   - name: "Junghun Park"
-  - name: "Duhoe Kim" 
+  - name: "Youna Park" 
   - name: "Youngjae Yu"
 
 
