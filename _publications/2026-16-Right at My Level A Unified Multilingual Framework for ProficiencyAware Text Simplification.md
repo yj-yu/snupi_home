@@ -5,10 +5,7 @@ name: "Right at My Level: A Unified Multilingual Framework for Proficiency-Aware
 conference: ACL2026
 year: 2026
 
-author:
-  - name: "Jinhong Jeong"
-  - name: "Junghun Park"
-  - name: "Youngjae Yu"
+author:n  - name: "Jinhong Jeong"n  - name: "Junghun Park"n  - name: "Duhoe Kim"n  - name: "Youngjae Yu"n
 
 
 
