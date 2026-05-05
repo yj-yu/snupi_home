@@ -2,10 +2,8 @@
 layout: publications
 section-type: publications
 name: "GuideDog: A Real-World Egocentric Multimodal Dataset for Blind and Low-Vision Accessibility-Aware Guidance"
-conference:  
-year: 2025
-
-
+conference: ACL2026
+year: 2026
 
 author:
   - name: "Junhyeok Kim"
@@ -17,7 +15,8 @@ author:
   - name: "Ji Hoon Joung"
   - name: "Youngjae Yu"
 
-  
+
+
 equal_contributor_idx:
   - 0
   - 1
@@ -25,6 +24,7 @@ equal_contributor_idx:
 external:
   - title: Arxiv
     url: https://arxiv.org/abs/2503.12844
+  
 
 img: guidedog.png
 
@@ -32,6 +32,7 @@ keywords:
   - name: Multimodal
   - name: Video
   - name: Egocentric
-  
+
 display: False
 ---
+
