@@ -7,7 +7,7 @@
 
 :root {
   --site-font-family: "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --site-display-font-family: "Sora", "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-display-font-family: "Raleway", "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 html,
@@ -29,8 +29,9 @@ body :not(i):not([class^="fa"]):not([class*=" fa-"]):not([class^="icon-"]):not([
 .modSectionHeader .section-title,
 .modSectionHeader .special-title h2 {
   font-family: var(--site-display-font-family) !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.02em;
+  font-weight: 900 !important;
+  letter-spacing: 0.055em;
+  color: #3f4248;
 }
 @font-face {
   font-family: "Steelfish";
@@ -4589,6 +4590,11 @@ svg:not(:root) {
 /* hover styles */
 .location-listing {
   position: relative;
+  border: 1px solid rgba(209, 220, 235, 0.85);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(31, 56, 88, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
 .location-image {
@@ -4598,8 +4604,8 @@ svg:not(:root) {
 
 .location-image img {
   filter: blur(0px);
-  transition: filter 0.3s ease-in;
-  transform: scale(1.1);
+  transition: filter 0.28s ease, transform 0.28s ease;
+  transform: scale(1);
 }
 
 .location-title {
@@ -4614,9 +4620,12 @@ svg:not(:root) {
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity .5s;
-  background: rgba(4, 31, 152, 0.4);
-  color: white;
+  transition: opacity 0.28s ease;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(239, 246, 255, 0.82));
+  color: #18345c;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
   
   /* position the text in t’ middle*/
   display: flex;
@@ -4629,7 +4638,8 @@ svg:not(:root) {
 }
 
 .location-listing:hover .location-image img {
-  filter: blur(2px);
+  filter: saturate(0.94) brightness(1.04);
+  transform: scale(1.035);
 }
 
 
@@ -4639,7 +4649,7 @@ svg:not(:root) {
     opacity: 1;
   }
   .location-image img {
-    filter: blur(2px);
+    filter: none;
   }
 }
 

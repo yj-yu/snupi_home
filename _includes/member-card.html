@@ -52,14 +52,14 @@
       {% for field in member.fields %}
       {% assign color = color_list[forloop.index0] %}
         {% if field.name == "Multimodal perception for AI" %}
-        <div style="margin-bottom:-3%;">
+        <div class="member-field" style="margin-bottom:-3%;">
         {% else %}
-        <div style="margin-bottom:3.5%;">
+        <div class="member-field" style="margin-bottom:3.5%;">
         {% endif %}
-      <span style="font-size:0.9em; font-weight: 300; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}}; color: black;">&nbsp;&nbsp;&nbsp;{{field.name}}&nbsp;&nbsp;&nbsp;</span>
+      <span class="member-interest-tag" style="background-color: {{color}};">{{field.name}}</span>
       </div>
         {% if field.name == "Multimodal perception for AI" %}
-        <span style="font-size:0.6em; font-weight: 600; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}};">&nbsp;&nbsp;&nbsp;(Video, Speech, Embodied AI, VR/MR)&nbsp;&nbsp;&nbsp;</span>
+        <span class="member-interest-tag member-interest-note">(Video, Speech, Embodied AI, VR/MR)</span>
         {% endif %}
       {% endfor %}
     </p>

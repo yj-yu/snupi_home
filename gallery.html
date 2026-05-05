@@ -12,7 +12,7 @@ count_year_min: 2023
   ----------------------------------------------------------- */
   .grid-container {
     display: grid;
-    gap: 20px; /* 아이템 간 간격 증가 */
+    gap: 22px; /* 아이템 간 간격 증가 */
     padding: 10px;
   }
 
@@ -21,17 +21,18 @@ count_year_min: 2023
     position: relative;
     display: block;
     background: #fff; /* 카드 배경색 */
-    border-radius: 8px; /* 모서리 둥글게 */
+    border: 1px solid rgba(209, 220, 235, 0.85);
+    border-radius: 12px; /* 모서리 둥글게 */
     overflow: hidden; /* 이미지가 넘치지 않도록 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 은은한 그림자 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 24px rgba(31, 56, 88, 0.06); /* 은은한 그림자 */
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
     text-decoration: none;
   }
 
   .location-image img {
     width: 100%;
     display: block;
-    transition: filter 0.3s ease;
+    transition: filter 0.28s ease, transform 0.28s ease;
   }
 
   /* -----------------------------------------------------------
@@ -56,7 +57,7 @@ count_year_min: 2023
 
     /* [디자인 변경] 단순 텍스트가 아닌 디자인된 영역처럼 설정 */
     background: #fdfdfd !important; /* 아주 밝은 회색 배경 */
-    color: #333 !important;        /* 진한 글자색 */
+    color: #21395f !important;        /* 진한 글자색 */
     padding: 20px 15px 10px !important; /* 여백 증가 */
     border-top: 1px solid #eee;    /* 이미지와 구분선 */
     text-align: center;
@@ -78,7 +79,8 @@ count_year_min: 2023
 
     .location-listing:hover {
       transform: translateY(-5px); /* 살짝 위로 떠오르는 효과 */
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* 그림자 강화 */
+      border-color: rgba(147, 197, 253, 0.9);
+      box-shadow: 0 18px 42px rgba(31, 56, 88, 0.12); /* 그림자 강화 */
     }
 
     .location-title {
@@ -94,16 +96,20 @@ count_year_min: 2023
       
       /* [초기 상태] 숨김 */
       opacity: 0 !important;
-      background: rgba(0, 0, 0, 0.6) !important; /* 검정 반투명 배경 */
-      color: white !important;       /* 글자색 화이트 */
-      transition: opacity 0.3s ease;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(239, 246, 255, 0.82)) !important;
+      color: #18345c !important;
+      transition: opacity 0.28s ease;
       pointer-events: none;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       
       /* [PC 전용 스타일] 모바일 장식 제거 */
       border-top: none !important;
       border-bottom: none !important;
-      padding: 20px !important;
-      font-size: 24px !important;    /* PC에서는 조금 더 크게 */
+      padding: 24px !important;
+      font-size: 22px !important;    /* PC에서는 조금 더 크게 */
+      line-height: 1.25;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
     }
 
     .location-listing:hover .location-title {
@@ -112,8 +118,8 @@ count_year_min: 2023
     }
 
     .location-listing:hover .location-image img {
-      /* [호버 상태] 이미지 블러 처리 */
-      filter: blur(4px);
+      filter: saturate(0.94) brightness(1.04);
+      transform: scale(1.035);
     }
   }
 </style>
