@@ -840,26 +840,29 @@ ul.shortcode-list i {
   -o-transition-property: all;
   -webkit-transition-property: all;
   transition-property: all;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -moz-transition-duration: 0.32s;
+  -o-transition-duration: 0.32s;
+  -webkit-transition-duration: 0.32s;
+  transition-duration: 0.32s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 .contain-to-grid .top-bar {
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -moz-transition-duration: 0.32s;
+  -o-transition-duration: 0.32s;
+  -webkit-transition-duration: 0.32s;
+  transition-duration: 0.32s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 .contain-to-grid .top-bar .top-bar-section li:not(.has-form) a:not(.button) {
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
   transition-property: all;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -moz-transition-duration: 0.32s;
+  -o-transition-duration: 0.32s;
+  -webkit-transition-duration: 0.32s;
+  transition-duration: 0.32s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 .contain-to-grid .top-bar-section li:not(.has-form) a:not(.button) {
   /* height: 100px; */
@@ -885,59 +888,69 @@ ul.shortcode-list i {
   -o-transition-property: all;
   -webkit-transition-property: all;
   transition-property: all;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -moz-transition-duration: 0.32s;
+  -o-transition-duration: 0.32s;
+  -webkit-transition-duration: 0.32s;
+  transition-duration: 0.32s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 .contain-to-grid .title-area img, .contain-to-grid .title-area li img, .contain-to-grid .title-area a img {
-  height: 100%;
+  max-height: 62px !important;
+  height: auto !important;
+  margin-top: 9px;
+  vertical-align: top;
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
   transition-property: all;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -moz-transition-duration: 0.32s;
+  -o-transition-duration: 0.32s;
+  -webkit-transition-duration: 0.32s;
+  transition-duration: 0.32s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .f-topbar-fixed.shrink .contain-to-grid {
-  height: 60px;
+  height: 68px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 .f-topbar-fixed.shrink .top-bar {
-  height: 60px;
-  line-height: 60px;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  height: 68px;
+  line-height: 68px;
+  -moz-transition-duration: 0.32s;
+  -o-transition-duration: 0.32s;
+  -webkit-transition-duration: 0.32s;
+  transition-duration: 0.32s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 .f-topbar-fixed.shrink .top-bar .top-bar-section li:not(.has-form) a:not(.button) {
-  height: 60px;
-  line-height: 60px;
+  height: 68px;
+  line-height: 68px;
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
   transition-property: all;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -moz-transition-duration: 0.32s;
+  -o-transition-duration: 0.32s;
+  -webkit-transition-duration: 0.32s;
+  transition-duration: 0.32s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 .f-topbar-fixed.shrink .top-bar .top-bar-section .has-dropdown > a:after {
-  top: 2.14286rem;
+  top: 2.42rem;
 }
 .f-topbar-fixed.shrink .top-bar .top-bar-section .dropdown li:not(.has-form) a:not(.button) {
-  height: 60px;
-  line-height: 60px;
+  height: 68px;
+  line-height: 68px;
 }
 .f-topbar-fixed.shrink .top-bar .title-area, .f-topbar-fixed.shrink .top-bar .title-area li, .f-topbar-fixed.shrink .top-bar .title-area a {
-  height: 60px;
-  line-height: 60px;
+  height: 68px;
+  line-height: 68px;
 }
 .f-topbar-fixed.shrink .top-bar .title-area img, .f-topbar-fixed.shrink .top-bar .title-area li img, .f-topbar-fixed.shrink .top-bar .title-area a img {
-  height: 100%;
+  max-height: 52px !important;
+  height: auto !important;
+  margin-top: 8px;
 }
 
 .contain-to-grid.fullwidth .top-bar {
@@ -4514,6 +4527,14 @@ svg:not(:root) {
   background: #f6f8fb;
 }
 
+@media only screen and (max-width: 640px) {
+  .latest-work-frame {
+    height: 300px;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  }
+}
+
 
 
 
@@ -4594,20 +4615,6 @@ svg:not(:root) {
 /* 1. 최상단에 구글 폰트 불러오기 추가 */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
 
-/* 2. 기존 body 설정을 아래처럼 변경 (약 161번 줄 근처) */
-body {
-  background: #fff;
-  color: #464646;
-  font-family: 'Inter', 'Noto Sans KR', sans-serif !important; /* 이 부분 수정 */
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 1.857142857142857;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
 /* 논문 카드 스타일 */
 .publication-card {
     background: #ffffff !important;
@@ -4630,23 +4637,28 @@ body {
 
 /* 학회 태그 디자인 (파란색 알약 모양) */
 .bubble_publication_conference {
-    background: #60a5fa !important;
-    color: #fff !important;
-    padding: 4px 12px !important;
+    background: rgba(13, 110, 253, 0.11) !important;
+    color: #0d6efd !important;
+    border: 1px solid rgba(13, 110, 253, 0.32) !important;
+    padding: 5px 12px !important;
     border-radius: 20px !important;
     font-size: 0.8rem !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     display: inline-block !important;
     margin-bottom: 12px !important;
     height: auto !important;
     line-height: 1 !important;
 }
 
+.publication-card .bubble_publication_conference {
+    color: #0d6efd !important;
+}
+
 /* 논문 제목 스타일 */
 .publication-card h3 {
     font-family: 'Inter', sans-serif !important;
     font-weight: 700 !important;
-    color: #1e293b !important;
+    color: #263b5e !important;
     margin-top: 10px !important;
     font-size: 1.25rem !important;
     letter-spacing: -0.02em !important;
@@ -4655,12 +4667,16 @@ body {
 /* 저자 및 링크 스타일 */
 .publication-card p {
     font-family: 'Inter', 'Noto Sans KR', sans-serif !important;
-    color: #475569 !important;
+    color: #526173 !important;
     font-size: 0.95rem !important;
 }
 
+.publication-card span {
+    color: #6f7c8d !important;
+}
+
 .publication-card a {
-    color: #3b82f6 !important;
+    color: #0d6efd !important;
     font-weight: 600 !important;
     text-decoration: none !important;
 }

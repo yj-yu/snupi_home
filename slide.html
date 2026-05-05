@@ -70,13 +70,13 @@
   margin-bottom: 1.6rem;
   padding: 0.7rem 1.1rem 0.65rem;
   text-align: center;
-  color: #1d4ed8;
   font-size: 1.2rem;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 800;
   letter-spacing: 0;
-  background: rgba(219, 234, 254, 0.95);
-  border: 1px solid rgba(147, 197, 253, 0.85);
+  color: #0d6efd;
+  background: rgba(13, 110, 253, 0.11);
+  border: 1px solid rgba(13, 110, 253, 0.32);
   border-radius: 999px;
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12);
   }
@@ -85,26 +85,77 @@
     z-index: 2;
     position: absolute;
     top: 0;
-    width: 12%;
+    width: 10%;
     height: 100%;
-    transition: opacity 0.3s;
+    transition: opacity 0.25s ease;
     will-change: opacity;
-    opacity: 0;
+    opacity: 1;
+  }
+  .slider-control:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 50%;
+    background: rgba(219, 234, 254, 0.82);
+    border: 1px solid rgba(147, 197, 253, 0.72);
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.12);
+    backdrop-filter: blur(10px);
+    transform: translateY(-50%);
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  }
+  .slider-control:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 0.78rem;
+    height: 0.78rem;
+    border-top: 3px solid #0d6efd;
+    border-right: 3px solid #0d6efd;
+    transition: transform 0.2s ease;
   }
   .slider-control.inactive:hover {
     cursor: auto;
   }
   .slider-control:not(.inactive):hover {
-    opacity: 1;
     cursor: pointer;
+  }
+  .slider-control:not(.inactive):hover:before {
+    background: rgba(219, 234, 254, 0.96);
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.18);
   }
   .slider-control.left {
     left: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 100%);
+    background: none;
   }
   .slider-control.right {
     right: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.18) 100%);
+    background: none;
+  }
+  .slider-control.left:before {
+    left: 1.8rem;
+  }
+  .slider-control.right:before {
+    right: 1.8rem;
+  }
+  .slider-control.left:after {
+    left: 3.05rem;
+    transform: translateY(-50%) rotate(-135deg);
+  }
+  .slider-control.right:after {
+    right: 3.05rem;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .slider-control.left:not(.inactive):hover:before {
+    transform: translate(-0.18rem, -50%);
+  }
+  .slider-control.right:not(.inactive):hover:before {
+    transform: translate(0.18rem, -50%);
+  }
+  .slider-control.inactive {
+    opacity: 0.28;
+    pointer-events: none;
   }
   
   .slider-pagi {
@@ -139,9 +190,9 @@
   
   @media only screen and (max-width: 640px) {
     .slider-pagi__elem {
-      width: 1rem!important;
-      height: 1rem!important;
-      margin: 0 0.25rem!important;
+      width: 1.35rem!important;
+      height: 1.35rem!important;
+      margin: 0 0.16rem!important;
       border-radius: 50%!important;
     border: 0!important;  }
   }
@@ -161,8 +212,8 @@
     .slider-pagi__elem:before {
       left: 50%!important;
       top: 50%!important;
-      width: 0.6rem!important;
-      height: 0.6rem!important;
+      width: 0.85rem!important;
+      height: 0.85rem!important;
       background: #2563eb!important;
     }
   }
@@ -212,8 +263,10 @@
     left: -50%;
     width: 100%;
     height: 100%;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
+    background-color: #ffffff;
     will-change: transform;
   }
   
@@ -227,14 +280,27 @@
     left: 0;
     width: 100%;
     height: 100%;
+    display: block;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .slide__content:hover,
+  .slide__content:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+  .slide__content:focus-visible {
+    outline: 3px solid rgba(13, 110, 253, 0.55);
+    outline-offset: -6px;
   }
   .slide__content:before {
     content: "";
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(90deg, rgba(248, 250, 252, 0.96) 0%, rgba(248, 250, 252, 0.86) 34%, rgba(248, 250, 252, 0.28) 58%, rgba(248, 250, 252, 0.02) 100%),
-      linear-gradient(0deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
+      linear-gradient(90deg, rgba(248, 250, 252, 0.88) 0%, rgba(248, 250, 252, 0.68) 34%, rgba(248, 250, 252, 0.24) 58%, rgba(248, 250, 252, 0.03) 100%),
+      linear-gradient(0deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0));
   }
   .slide__overlay {
     position: absolute;
@@ -265,14 +331,14 @@
   @media (max-width: 991px) {
     .slide__text {
       position: absolute;
-      width: min(82vw, 44rem);
-      top: auto;
-      bottom: 9rem;
+      width: min(64vw, 36rem);
+      top: 50%;
+      bottom: auto;
       left: 6%;
       color: #0f172a;
       transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
       will-change: transform, opacity;
-      transform: translate3d(0, 1rem, 0);
+      transform: translate3d(-1rem, -50%, 0);
       opacity: 0;
     }
   }
@@ -288,7 +354,7 @@
   }
   @media (max-width: 991px) {
     .slide.active .slide__text {
-      transform: translate3d(0, 0, 0);
+      transform: translate3d(0, -50%, 0);
     }
   }
 
@@ -305,6 +371,63 @@
   @media (max-width: 991px) {
     .slide__text-desc {
       display: none;
+    }
+  }
+  @media (max-width: 640px) {
+    .slider-control {
+      display: none;
+    }
+
+    .slider-container {
+      border-radius: 16px;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12);
+    }
+
+    .slide__bg {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: #ffffff;
+    }
+
+    .slide__content:before {
+      background:
+        linear-gradient(90deg, rgba(248, 250, 252, 0.74) 0%, rgba(248, 250, 252, 0.48) 42%, rgba(248, 250, 252, 0.12) 72%, rgba(248, 250, 252, 0) 100%),
+        linear-gradient(0deg, rgba(248, 250, 252, 0.92) 0%, rgba(248, 250, 252, 0.76) 26%, rgba(248, 250, 252, 0.22) 55%, rgba(248, 250, 252, 0) 100%);
+    }
+
+    .slide__text {
+      width: 80vw;
+      top: auto;
+      bottom: 5.2rem;
+      left: 7%;
+      transform: translate3d(-1rem, 0, 0);
+    }
+
+    .slide__text-heading {
+      font-size: 1.18rem;
+      line-height: 1.18;
+      margin-bottom: 0;
+    }
+
+    .bubble_publication_conference {
+      margin-bottom: 0.75rem;
+      padding: 0.45rem 0.8rem 0.42rem;
+      font-size: 0.88rem;
+    }
+
+    .slider-pagi {
+      bottom: 1rem;
+      max-width: 90%;
+      overflow: hidden;
+      padding: 0.75rem 0.8rem;
+    }
+
+    .slider-pagi__elem.active {
+      width: 3rem;
+    }
+
+    .slide.active .slide__text {
+      transform: translate3d(0, 0, 0);
     }
   }
   .slide__text-link {
@@ -501,115 +624,134 @@
           conference: "ICML2026 (Spotlight)",
           title: "Judging What We Cannot Solve: A Consequence-Based Approach for Oracle-Free Evaluation of Research-Level Math",
           authors: "Guijin Son, Donghun Yang, Hitesh Laxmichand Patel, Hyunwoo Ko, Amit Agarwal, Sunghee Ahn, Kyong-Ha Lee and Youngjae Yu",
-          bgImage: "images/papers/CBU.png"
+          bgImage: "images/papers/CBU.png",
+          url: "https://arxiv.org/abs/2602.06291"
         },
         {
           conference: "ACL2026",
           title: "Right at My Level: A Unified Multilingual Framework for Proficiency-Aware Text Simplification",
           authors: "Jinhong Jeong, Junghun Park and Youngjae Yu",
-          bgImage: "images/papers/right_at_my_level.png"
+          bgImage: "images/papers/right_at_my_level.png",
+          url: "https://arxiv.org/abs/2604.05302"
         },
         {
           conference: "ACL2026",
           title: "Mind the Motions: Benchmarking Theory-of-Mind in Everyday Body Language",
           authors: "Seungbeen Lee, Jinhong Jeong, Donghyun Kim, Yejin Son and Youngjae Yu",
-          bgImage: "images/papers/mindthemotion.png"
+          bgImage: "images/papers/mindthemotion.png",
+          url: "https://arxiv.org/pdf/2511.15887"
         },
         {
           conference: "ACL2026",
           title: "Investigating Counterfactual Unfairness in LLMs towards Identities through Humor",
           authors: "Shubin Kim*, Yejin Son*, Junyeong Park, Keummin Ka, Seungbeen Lee, Jaeyoung Lee, Hyeju Jang, Alice Oh and Youngjae Yu",
-          bgImage: "images/papers/humor_bias.png"
+          bgImage: "images/papers/humor_bias.png",
+          url: "https://arxiv.org/abs/2604.18729"
         },
         {
           conference: "ICLR2026",
           title: "TIPO: Text to Image with Text Presampling for Prompt Optimization",
           authors: "Shih-Ying Yeh*, Sang-Hyun Park*, Giyeong Oh, Min Song and Youngjae Yu",
-          bgImage: "images/papers/tipo.png"
+          bgImage: "images/papers/tipo.png",
+          url: "https://arxiv.org/abs/2411.08127"
         },
         {
           conference: "ICLR2026",
           title: "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI",
           authors: "Suwhan Choi*, Jaeyoon Jung*, Haebin Seong*, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu and Yunsung Lee",
-          bgImage: "images/papers/d2e.png"
+          bgImage: "images/papers/d2e.png",
+          url: "https://arxiv.org/abs/2510.05684"
         },
         {
           conference: "ICLR2026",
           title: "Pushing on Multilingual Reasoning Models with Language-Mixed Chain-of-Thought",
           authors: "Guijin Son, Donghun Yang, Hitesh Laxmichand Patel, Amit Agarwal, Hyunwoo Ko, Chanuk Lim, Srikant Panda, Minhyuk Kim, Nikunj Drolia, Dasol Choi, Kyong-Ha Lee and Youngjae Yu",
-          bgImage: "images/papers/multilingual CoT.png"
+          bgImage: "images/papers/multilingual CoT.png",
+          url: "https://arxiv.org/abs/2510.04230"
         },
         {
           conference: "ICLR2026",
           title: "Teaching Metric Distance to Autoregressive Multimodal Foundational Models",
           authors: "Jiwan Chung, Saejin Kim, Yongrae Jo, Jaewoo Park, Dongjun Min and Youngjae Yu",
-          bgImage: "images/papers/dist.png"
+          bgImage: "images/papers/dist.png",
+          url: "https://arxiv.org/abs/2503.02379"
         },
         {
           conference: "AAAI2026 (Oral)",
           title: "Do Language Models Associate Sound with Meaning? A Multimodal Study of Sound Symbolism",
           authors: "Jinhong Jeong*, Sunghyun Lee*, Jaeyoung Lee, Seonah Han and Youngjae Yu",
-          bgImage: "images/papers/sound symbolism.png"
+          bgImage: "images/papers/sound symbolism.png",
+          url: "https://arxiv.org/abs/2511.10045"
         },
         {
           conference: "NeurIPS2025",
           title: "Revisiting Residual Connections: Orthogonal Updates for Stable and Efficient Deep Networks",
           authors: "Giyeong Oh, Woohyun Cho, Siyeol Kim, Suhwan Choi and Youngjae Yu",
-          bgImage: "images/slides/orthogonal.png"
+          bgImage: "images/slides/orthogonal.png",
+          url: "https://arxiv.org/abs/2505.11881"
         },
         {
           conference: "NeurIPS2025",
           title: "KL Penalty Control via Perturbation for Direct Preference Optimization",
           authors: "Sangkyu Lee, Janghoon Han, Hosung Song, Stanley Jungkyu Choi, Honglak Lee and Youngjae Yu",
-          bgImage: "images/slides/kl.png"
+          bgImage: "images/slides/kl.png",
+          url: "https://arxiv.org/abs/2502.13177"
         },
         {
           conference: "EMNLP2025",
           title: "VisEscape: A Benchmark for Evaluating Exploration-driven Decision-making in Virtual Escape Rooms",
           authors: "Seungwon Lim, Sungwoong Kim, Jihwan Yu, Sungjae Lee, Jiwan Chung and Youngjae Yu",
-          bgImage: "images/slides/visescape.png"
+          bgImage: "images/slides/visescape.png",
+          url: "https://arxiv.org/abs/2503.14427"
         },
         {
           conference: "EMNLP2025",
           title: "Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safety of LLMs for Embodied Decision Making",
           authors: "Yejin Son*, Minseo Kim*, Sungwoong Kim, Seungju Han, Jian Kim, Dongju Jang, Youngjae Yu and Chanyoung Park",
-          bgImage: "images/slides/safel.png"
+          bgImage: "images/slides/safel.png",
+          url: "https://arxiv.org/abs/2505.19933"
         },
         {
           conference: "EMNLP2025",
           title: "Zero-shot Multimodal Document Retrieval via Cross-modal Question Generation",
           authors: "Yejin Choi*, Jaewoo Park*, Janghan Yoon, Saejin Kim, Jaehyun Jeon and Youngjae Yu",
-          bgImage: "images/slides/premir.png"
+          bgImage: "images/slides/premir.png",
+          url: "https://arxiv.org/abs/2508.17079"
         },
         {
           conference: "MICCAI2025",
           title: "Scalp Diagnostic System With Label-Free Segmentation and Training-Free Image Translation",
           authors: "Youngmin Kim*, Saejin Kim*, Hoyeon Moon, Youngjae Yu, Junhyug Noh",
-          bgImage: "images/slides/scalp.png"
+          bgImage: "images/slides/scalp.png",
+          url: "https://arxiv.org/abs/2406.17254"
         },
         {
           conference: "ACL2025",
           title: "Speaking Beyond Language: A Large-Scale Multimodal Dataset for Learning Nonverbal Cues from Video-Grounded Dialogues",
           authors: "Youngmin Kim, Jiwan Chung, Jisoo Kim, Sunghyun Lee, Sangkyu Lee, Junhyeok Kim, Cheoljong Yang and Youngjae Yu",
-          bgImage: "images/slides/speaking.png"
+          bgImage: "images/slides/speaking.png",
+          url: "https://arxiv.org/abs/2506.00958"
         },
         {
           conference: "NeurIPS2024",
           title: "Towards Visual Text Design Transfer Across Languages",
           authors: "Yejin Choi*, Jiwan Chung*, Sumin Shim, Giyeong Oh and Youngjae Yu",
-          bgImage: "images/slides/sigil_congratulation.png"
+          bgImage: "images/slides/sigil_congratulation.png",
+          url: "https://arxiv.org/abs/2410.18823v1"
         },
         {
           conference: "EMNLP2024",
           title: "Can visual language models resolve textual ambiguity with visual cues? Let visual puns tell you!",
           authors: "Jiwan Chung, Seungwon Lim, Jaehyun Jeon, Seungbeen Lee and Youngjae Yu",
-          bgImage: "images/slides/visualpun.png"
+          bgImage: "images/slides/visualpun.png",
+          url: "https://arxiv.org/abs/2410.01023"
         },
         {
           conference: "ACL2024",
           title: "Aligning Large Language Models by On-Policy Self-Judgment",
           authors: "Sangkyu Lee, Sungdong Kim, Ashkan Yousefpour, Minjoon Seo, Kang Min Yoo and Youngjae Yu",
-          bgImage: "images/slides/dpo.png"
+          bgImage: "images/slides/dpo.png",
+          url: "https://arxiv.org/abs/2402.11253"
         }
          ];
 
@@ -697,19 +839,20 @@
 
         // Function to generate slide HTML
         function generateSlideHTML(slide, index) {
+            const linkAttrs = slide.url ? `href="${slide.url}" target="_blank" rel="noopener noreferrer"` : "";
             return `
                 <div class="slide slide-${index}">
                     <div class="slide__bg" style="background-image: url('${slide.bgImage}');"></div>
-                    <div class="slide__content">
+                    <a class="slide__content" ${linkAttrs} aria-label="Open ${slide.title}">
                         <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
                             <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
                         </svg>
                         <div class="slide__text">
                             <p class="bubble_publication_conference">${slide.conference}</p>
-                            <h2 style="display:inline" class="slide__text-heading">${slide.title}</h2>
+                            <h2 class="slide__text-heading">${slide.title}</h2>
                             <p class="slide__text-desc">${slide.authors}</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
             `;
         }
@@ -738,7 +881,10 @@
             animTime = 500,
             autoSlideTimeout,
             autoSlideDelay = 6000,
-            $pagination = $(".slider-pagi");
+            $pagination = $(".slider-pagi"),
+            linkStartX = 0,
+            linkStartY = 0,
+            linkWasDragged = false;
 
         // ... (keep all the existing JavaScript functions and event listeners) ...
         function createBullets() {
@@ -817,6 +963,21 @@
           $slideBGs.css("transform", "translate3d("+ (curSlide*50 + diff/2) +"%,0,0)");
           });
       });
+
+      $(document).on("mousedown touchstart", ".slide__content", function(e) {
+          var point = e.originalEvent.touches ? e.originalEvent.touches[0] : e;
+          linkStartX = point.pageX;
+          linkStartY = point.pageY;
+          linkWasDragged = false;
+      });
+
+      $(document).on("mousemove touchmove", function(e) {
+          if (!linkStartX && !linkStartY) return;
+          var point = e.originalEvent.touches ? e.originalEvent.touches[0] : e;
+          if (Math.abs(point.pageX - linkStartX) > 8 || Math.abs(point.pageY - linkStartY) > 8) {
+              linkWasDragged = true;
+          }
+      });
       
       $(document).on("mouseup touchend", function(e) {
           $(document).off("mousemove touchmove");
@@ -848,6 +1009,15 @@
       $(document).on("click", ".slider-pagi__elem", function() {
           curSlide = $(this).data("page");
           changeSlides();
+      });
+
+      $(document).on("click", ".slide__content", function(e) {
+          if (linkWasDragged || animating) {
+              e.preventDefault();
+          }
+          linkStartX = 0;
+          linkStartY = 0;
+          linkWasDragged = false;
       });
       
     });
