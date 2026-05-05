@@ -19,7 +19,7 @@ author:
 
 external:
   - title: Arxiv
-    url: https://arxiv.org/pdf/2602.06291
+    url: https://arxiv.org/abs/2602.06291
   
 
 img: CBU.png

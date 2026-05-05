@@ -120,8 +120,27 @@ $temp_authors" "$selected_file" && rm "${selected_file}.bak"
     6)
         echo "새로운 Arxiv URL을 입력하세요:"
         read -r new_value
-        # external 섹션의 url만 교체
-        sed -i.bak "s|    url: .*|    url: $new_value|" "$selected_file" && rm "${selected_file}.bak"
+        if grep -q "^external:" "$selected_file"; then
+            sed -i.bak "s|    url: .*|    url: $new_value|" "$selected_file" && rm "${selected_file}.bak"
+        else
+            temp_file=$(mktemp)
+            inserted=0
+
+            while IFS= read -r line; do
+                if [[ $inserted -eq 0 && "$line" == "img:"* ]]; then
+                    cat >> "$temp_file" << EOF
+external:
+  - title: Arxiv
+    url: $new_value
+
+EOF
+                    inserted=1
+                fi
+                echo "$line" >> "$temp_file"
+            done < "$selected_file"
+
+            mv "$temp_file" "$selected_file"
+        fi
         ;;
     7)
         echo "새로운 Keywords를 입력하세요 (쉼표로 구분):"
@@ -200,4 +219,3 @@ echo -e "${BLUE}수정된 내용:${NC}"
 echo "----------------------------------------"
 cat "$selected_file"
 echo "----------------------------------------"
-

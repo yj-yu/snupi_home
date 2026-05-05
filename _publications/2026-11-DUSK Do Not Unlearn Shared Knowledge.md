@@ -22,7 +22,7 @@ equal_contributor_idx:
 
 external:
   - title: Arxiv
-    url: https://arxiv.org/pdf/2505.15209
+    url: https://arxiv.org/abs/2505.15209
   
 
 img: dusk.png

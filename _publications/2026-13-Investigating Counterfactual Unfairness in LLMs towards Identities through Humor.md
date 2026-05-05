@@ -22,6 +22,10 @@ equal_contributor_idx:
   - 0
   - 1
 
+external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2604.18729
+
 img: humor_bias.png
 
 keywords:
@@ -31,4 +35,3 @@ keywords:
 
 display: False
 ---
-

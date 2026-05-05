@@ -16,6 +16,10 @@
   path: publications.html
   section_id: publications
 
+- name: Funding
+  path: funding.html
+  section_id: funding
+
 # - name: Teaching
 #   path: teaching.html
 #   section_id: teachings

@@ -10,6 +10,9 @@ author:
   - name: "Junghun Park"
   - name: "Youngjae Yu"
 
+external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2604.05302
 
 img: right_at_my_level.png
 

@@ -24,7 +24,7 @@ equal_contributor_idx:
 
 external:
   - title: Arxiv
-    url: https://arxiv.org/pdf/2503.22968
+    url: https://arxiv.org/abs/2503.22968
   
 
 img: HRET.png
