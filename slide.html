@@ -15,7 +15,7 @@
     <title>CodePen - Fullscreen drag-slider with parallax</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:500,600,700,800&display=swap">
     
   <style>
   @font-face {
@@ -35,7 +35,8 @@
   }
   
   body {
-    background: #000;
+    background: #f6f8fb;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
   
   svg {
@@ -45,34 +46,39 @@
   
   .slider-container {
     position: relative;
-    height: 100%;
+    height: 100vh;
+    min-height: 100%;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    cursor: all-scroll;
+    cursor: grab;
+    background: #f8fafc;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 22px 55px rgba(15, 23, 42, 0.18);
+  }
+  .slider-container:active {
+    cursor: grabbing;
   }
 
   .bubble_publication_conference
   {
   position: relative;
-  font-size:2rem;
-  font-family: verdana, fantasy;
-  
-  width : fit-content;
-  height : fit-content;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-top: 5px;
-  padding-bottom: 3px;
-
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 1.6rem;
+  padding: 0.7rem 1.1rem 0.65rem;
   text-align: center;
-  color:black;
-  font-weight:800;
-  background: rgb(255, 236, 200);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  color: #1d4ed8;
+  font-size: 1.2rem;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0;
+  background: rgba(219, 234, 254, 0.95);
+  border: 1px solid rgba(147, 197, 253, 0.85);
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12);
   }
 
   .slider-control {
@@ -105,22 +111,30 @@
     position: absolute;
     z-index: 3;
     left: 50%;
-    bottom: 2rem;
+    bottom: 1.8rem;
     transform: translateX(-50%);
     font-size: 0;
     list-style-type: none;
     white-space: nowrap;
+    padding: 0.75rem 0.9rem;
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(226, 232, 240, 0.92);
+    border-radius: 999px;
+    box-shadow: 0 12px 34px rgba(15, 23, 42, 0.14);
+    backdrop-filter: blur(12px);
   }
   .slider-pagi__elem {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
+    width: 0.95rem;
+    height: 0.95rem;
+    margin: 0 0.34rem;
     border-radius: 50%;
-    border: 2px solid #4e4e4e;
+    border: 0;
+    background: rgba(100, 116, 139, 0.34);
     cursor: pointer;
+    transition: width 0.25s ease, background 0.25s ease;
   }
   
   @media only screen and (max-width: 640px) {
@@ -129,18 +143,18 @@
       height: 1rem!important;
       margin: 0 0.25rem!important;
       border-radius: 50%!important;
-      border: 1px solid #4e4e4e!important;  }
+    border: 0!important;  }
   }
   .slider-pagi__elem:before {
     content: "";
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 1.2rem;
-    height: 1.2rem;
-    background: #4e4e4e;
-    border-radius: 50%;
-    transition: transform 0.3s;
+    width: 100%;
+    height: 100%;
+    background: #2563eb;
+    border-radius: 999px;
+    transition: transform 0.25s ease;
     transform: translate(-50%, -50%) scale(0);
   }
   @media only screen and (max-width: 640px) {
@@ -149,11 +163,16 @@
       top: 50%!important;
       width: 0.6rem!important;
       height: 0.6rem!important;
-      background: #4e4e4e!important;
+      background: #2563eb!important;
     }
   }
   .slider-pagi__elem.active:before, .slider-pagi__elem:hover:before {
     transform: translate(-50%, -50%) scale(1);
+  }
+  .slider-pagi__elem.active {
+    width: 2.8rem;
+    background: rgba(37, 99, 235, 0.18);
+    border-radius: 999px;
   }
   
   .slider {
@@ -180,7 +199,12 @@
   .slide.active .slide__overlay,
   .slide.active .slide__text {
     opacity: 1;
+  }
+  .slide.active .slide__overlay {
     transform: translateX(0);
+  }
+  .slide.active .slide__text {
+    transform: translate3d(0, -50%, 0);
   }
   .slide__bg {
     position: absolute;
@@ -189,11 +213,12 @@
     width: 100%;
     height: 100%;
     background-size: cover;
+    background-position: center;
     will-change: transform;
   }
   
   .slide__overlay-path {
-    fill: rgb(33, 90, 151);
+    fill: transparent;
   }
 
   .slide__content {
@@ -202,6 +227,14 @@
     left: 0;
     width: 100%;
     height: 100%;
+  }
+  .slide__content:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(248, 250, 252, 0.96) 0%, rgba(248, 250, 252, 0.86) 34%, rgba(248, 250, 252, 0.28) 58%, rgba(248, 250, 252, 0.02) 100%),
+      linear-gradient(0deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
   }
   .slide__overlay {
     position: absolute;
@@ -216,43 +249,57 @@
   }
 
   .slide__overlay path {
-    opacity: 0.8;
+    opacity: 0;
   }
   .slide__text {
     position: absolute;
-    width: 300;
-    top: 20%;
-    left: 5%;
-    color: #fff;
+    width: min(48rem, 44vw);
+    top: 50%;
+    left: 6%;
+    color: #0f172a;
     transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
     will-change: transform, opacity;
-    transform: translateY(-50%);
+    transform: translate3d(-2rem, -50%, 0);
     opacity: 0;
   }
   @media (max-width: 991px) {
     .slide__text {
       position: absolute;
-      width: 300;
-      bottom: 30%;
-      left: 5%;
-      color: #fff;
+      width: min(82vw, 44rem);
+      top: auto;
+      bottom: 9rem;
+      left: 6%;
+      color: #0f172a;
       transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
       will-change: transform, opacity;
-      transform: translateY(-50%);
+      transform: translate3d(0, 1rem, 0);
       opacity: 0;
     }
   }
   .slide__text-heading {
     text-align: left;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: clamp(2.4rem, 3vw, 4.4rem);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: 0;
+    margin-bottom: 1.6rem;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+  @media (max-width: 991px) {
+    .slide.active .slide__text {
+      transform: translate3d(0, 0, 0);
+    }
   }
 
   .slide__text-desc {
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 1.5rem;
+    max-width: 40rem;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: clamp(1.35rem, 1.35vw, 1.65rem);
+    line-height: 1.45;
+    color: rgba(51, 65, 85, 0.92);
     margin-bottom: 0.9rem;
+    text-shadow: none;
     
   }
   @media (max-width: 991px) {
@@ -451,36 +498,124 @@
         // Define the slides data
         const slidesData = [
         {
-          conference: "Neurips2025",
+          conference: "ICML2026 (Spotlight)",
+          title: "Judging What We Cannot Solve: A Consequence-Based Approach for Oracle-Free Evaluation of Research-Level Math",
+          authors: "Guijin Son, Donghun Yang, Hitesh Laxmichand Patel, Hyunwoo Ko, Amit Agarwal, Sunghee Ahn, Kyong-Ha Lee and Youngjae Yu",
+          bgImage: "images/papers/CBU.png"
+        },
+        {
+          conference: "ACL2026",
+          title: "Right at My Level: A Unified Multilingual Framework for Proficiency-Aware Text Simplification",
+          authors: "Jinhong Jeong, Junghun Park and Youngjae Yu",
+          bgImage: "images/papers/right_at_my_level.png"
+        },
+        {
+          conference: "ACL2026",
+          title: "Mind the Motions: Benchmarking Theory-of-Mind in Everyday Body Language",
+          authors: "Seungbeen Lee, Jinhong Jeong, Donghyun Kim, Yejin Son and Youngjae Yu",
+          bgImage: "images/papers/mindthemotion.png"
+        },
+        {
+          conference: "ACL2026",
+          title: "Investigating Counterfactual Unfairness in LLMs towards Identities through Humor",
+          authors: "Shubin Kim*, Yejin Son*, Junyeong Park, Keummin Ka, Seungbeen Lee, Jaeyoung Lee, Hyeju Jang, Alice Oh and Youngjae Yu",
+          bgImage: "images/papers/humor_bias.png"
+        },
+        {
+          conference: "ICLR2026",
+          title: "TIPO: Text to Image with Text Presampling for Prompt Optimization",
+          authors: "Shih-Ying Yeh*, Sang-Hyun Park*, Giyeong Oh, Min Song and Youngjae Yu",
+          bgImage: "images/papers/tipo.png"
+        },
+        {
+          conference: "ICLR2026",
+          title: "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI",
+          authors: "Suwhan Choi*, Jaeyoon Jung*, Haebin Seong*, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu and Yunsung Lee",
+          bgImage: "images/papers/d2e.png"
+        },
+        {
+          conference: "ICLR2026",
+          title: "Pushing on Multilingual Reasoning Models with Language-Mixed Chain-of-Thought",
+          authors: "Guijin Son, Donghun Yang, Hitesh Laxmichand Patel, Amit Agarwal, Hyunwoo Ko, Chanuk Lim, Srikant Panda, Minhyuk Kim, Nikunj Drolia, Dasol Choi, Kyong-Ha Lee and Youngjae Yu",
+          bgImage: "images/papers/multilingual CoT.png"
+        },
+        {
+          conference: "ICLR2026",
+          title: "Teaching Metric Distance to Autoregressive Multimodal Foundational Models",
+          authors: "Jiwan Chung, Saejin Kim, Yongrae Jo, Jaewoo Park, Dongjun Min and Youngjae Yu",
+          bgImage: "images/papers/dist.png"
+        },
+        {
+          conference: "AAAI2026 (Oral)",
+          title: "Do Language Models Associate Sound with Meaning? A Multimodal Study of Sound Symbolism",
+          authors: "Jinhong Jeong*, Sunghyun Lee*, Jaeyoung Lee, Seonah Han and Youngjae Yu",
+          bgImage: "images/papers/sound symbolism.png"
+        },
+        {
+          conference: "NeurIPS2025",
           title: "Revisiting Residual Connections: Orthogonal Updates for Stable and Efficient Deep Networks",
-          authors: "Giyeong Oh, Woohyun Cho, Siyeol Kim, Suhwan Choi, Youngjae Yu",
+          authors: "Giyeong Oh, Woohyun Cho, Siyeol Kim, Suhwan Choi and Youngjae Yu",
           bgImage: "images/slides/orthogonal.png"
         },
         {
-          conference: "Neurips2025",
+          conference: "NeurIPS2025",
           title: "KL Penalty Control via Perturbation for Direct Preference Optimization",
-          authors: "Sangkyu Lee, Janghoon Han, Hosung Song, Stanley Jungkyu Choi, Honglak Lee, Youngjae Yu",
+          authors: "Sangkyu Lee, Janghoon Han, Hosung Song, Stanley Jungkyu Choi, Honglak Lee and Youngjae Yu",
           bgImage: "images/slides/kl.png"
         },
         {
           conference: "EMNLP2025",
           title: "VisEscape: A Benchmark for Evaluating Exploration-driven Decision-making in Virtual Escape Rooms",
-          authors: "Seungwon Lim, Sungwoong Kim, Jihwan Yu, Sungjae Lee, Jiwan Chung, Youngjae Yu",
+          authors: "Seungwon Lim, Sungwoong Kim, Jihwan Yu, Sungjae Lee, Jiwan Chung and Youngjae Yu",
           bgImage: "images/slides/visescape.png"
         },
         {
           conference: "EMNLP2025",
           title: "Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safety of LLMs for Embodied Decision Making",
-          authors: "Yejin Son*, Minseo Kim*, Sungwoong Kim, Seungju Han, Jian Kim, Dongju Jang, Youngjae Yu, Chanyoung Park",
+          authors: "Yejin Son*, Minseo Kim*, Sungwoong Kim, Seungju Han, Jian Kim, Dongju Jang, Youngjae Yu and Chanyoung Park",
           bgImage: "images/slides/safel.png"
         },
         {
           conference: "EMNLP2025",
           title: "Zero-shot Multimodal Document Retrieval via Cross-modal Question Generation",
-          authors: "Yejin Choi*, Jaewoo Park*, Janghan Yoon, Saejin Kim, Jaehyun Jeon, Youngjae Yu",
+          authors: "Yejin Choi*, Jaewoo Park*, Janghan Yoon, Saejin Kim, Jaehyun Jeon and Youngjae Yu",
           bgImage: "images/slides/premir.png"
         },
-                {
+        {
+          conference: "MICCAI2025",
+          title: "Scalp Diagnostic System With Label-Free Segmentation and Training-Free Image Translation",
+          authors: "Youngmin Kim*, Saejin Kim*, Hoyeon Moon, Youngjae Yu, Junhyug Noh",
+          bgImage: "images/slides/scalp.png"
+        },
+        {
+          conference: "ACL2025",
+          title: "Speaking Beyond Language: A Large-Scale Multimodal Dataset for Learning Nonverbal Cues from Video-Grounded Dialogues",
+          authors: "Youngmin Kim, Jiwan Chung, Jisoo Kim, Sunghyun Lee, Sangkyu Lee, Junhyeok Kim, Cheoljong Yang and Youngjae Yu",
+          bgImage: "images/slides/speaking.png"
+        },
+        {
+          conference: "NeurIPS2024",
+          title: "Towards Visual Text Design Transfer Across Languages",
+          authors: "Yejin Choi*, Jiwan Chung*, Sumin Shim, Giyeong Oh and Youngjae Yu",
+          bgImage: "images/slides/sigil_congratulation.png"
+        },
+        {
+          conference: "EMNLP2024",
+          title: "Can visual language models resolve textual ambiguity with visual cues? Let visual puns tell you!",
+          authors: "Jiwan Chung, Seungwon Lim, Jaehyun Jeon, Seungbeen Lee and Youngjae Yu",
+          bgImage: "images/slides/visualpun.png"
+        },
+        {
+          conference: "ACL2024",
+          title: "Aligning Large Language Models by On-Policy Self-Judgment",
+          authors: "Sangkyu Lee, Sungdong Kim, Ashkan Yousefpour, Minjoon Seo, Kang Min Yoo and Youngjae Yu",
+          bgImage: "images/slides/dpo.png"
+        }
+         ];
+
+        /*
+        Hidden older slides kept for future restoration.
+        {
           conference: "EMNLP2025",
           title: "MAVL: A Multilingual Audio-Video Lyrics Dataset for Animated Song Translation",
           authors: "Woohyun Cho, Youngmin Kim, Sunghyun Lee, Youngjae Yu",
@@ -492,25 +627,11 @@
           authors: "Yejin Son*, Saejin Kim*, Dongjun Min, Youngjae Yu",
           bgImage: "images/slides/mun.png"
         },
-
         {
           conference: "COLM2025",
           title: "G1yphD3c0de: Towards Safer Language Models on Visually Perturbed Texts",
           authors: "Yejin Choi, Yejin Yeo, Yejin Son, Seungju Han, Youngjae Yu",
           bgImage: "images/slides/glyphdecode.png"
-        },
-        {
-          conference: "COLM2025",
-          title: "Verifying the Verifiers: Unveiling Pitfalls and Potentials in Fact Verifiers",
-          authors: "Wooseok Seo*, Seungju Han*, Jaehun Jung, Benjamin Newman, Seungwon Lim, Seungbeen Lee, Ximing Lu, Yejin Choi, Youngjae Yu",
-          bgImage: "images/slides/factverifier.png"
-        },
-        
-        {
-          conference: "ICCV2025",
-          title: "V.I.P.: Iterative Online Preference Distillation for Efficient Video Diffusion Models",
-          authors: "Jisoo Kim, Wooseok Seo, Junwan Kim, Seungho Park, Sooyeon Park, Youngjae Yu",
-          bgImage: "images/slides/vip.png"
         },
         {
           conference: "ICCV2025",
@@ -519,93 +640,60 @@
           bgImage: "images/slides/discord.png"
         },
         {
-          conference: "MICCAI2025",
-          title: "Scalp Diagnostic System With Label-Free Segmentation and Training-Free Image Translation",
-          authors: "Youngmin Kim*, Saejin Kim*, Hoyeon Moon, Youngjae Yu, Junhyug Noh",
-          bgImage: "images/slides/scalp.png"
-        },
-        {
-          conference: "ACL2025",
-          title: "Speaking Beyond Language: A Large-Scale Multimodal Dataset for Learning Nonverbal Cues from Video-Grounded Dialogues",
-          authors: "Youngmin Kim, Jiwan Chung, Jisoo Kim, sunghyun lee, Sangkyu Lee, Junhyeok Kim, Cheoljong Yang and Youngjae Yu",
-          bgImage: "images/slides/speaking.png"
-        },
-        {
           conference: "ACL2025",
           title: "Persona Dynamics: Unveiling the Impact of Persona Traits on Agents in Text-Based Games",
           authors: "Seungwon Lim, Seungbeen Lee, Dongjun Min and Youngjae Yu",
           bgImage: "images/slides/panda.png"
         },
         {
-           conference: "NAACL2025",
-           title: "C^2 : Scalable Auto-Feedback for LLM-based Chart Generation",
-           authors: "Woosung Koh*, Janghan Yoon*, Minhyung Lee, Youngjin Song, Jaegwan Cho, Jaehyun Kang, Taehyeon Kim, Seyoung Yun and Youngjae Yu, Bongshin Lee",
-           bgImage: "images/slides/c2.png"
-         },
-         {
-           conference: "NAACL2025",
-           title: "Do LLMs Have Distinct and Consistent Personality? TRAIT: Personality Testset designed for LLMs with Psychometrics",
-           authors: "Seungbeen Lee*, Seungwon Lim*, Seungju Han, Giyeong Oh, Jiwan Chung, Minju Kim, Yeonsoo Lee, Dongha Lee, Jinyoung Yeo and Youngjae Yu",
-           bgImage: "images/slides/trait.png"
-         },
-         {
-           conference: "NAACL2025",
-           title: "EgoSpeak: Learning When to Speak for Egocentric Conversational Agents in the Wild",
-           authors: "Junhyeok Kim, Minsoo Kim, Jiwan Chung, Jungbin Cho, Jisoo Kim, Sungwoong Kim, Gyeongbo Sim and Youngjae Yu",
-           bgImage: "images/slides/egospeak.png"
-         },
-         {
-           conference: "AAAI2025",
-           title: "DEEPTalk: Dynamic Emotion Embedding for Probabilistic Speech-Driven 3D Face Animation",
-           authors: "Jisoo Kim*, Jungbin Cho*, Joonho Park, Soonmin Hwang, Da Eun Kim, Geon Kim and Youngjae Yu",
-           bgImage: "images/slides/aaai25_deeptalk.png"
-         },
-         {
-           conference: "Neurips2024",
-           title: "Towards Visual Text Design Transfer Across Languages",
-           authors: "Yejin Choi*, Jiwan Chung*, Sumin Shim, Giyeong Oh and Youngjae Yu",
-           bgImage: "images/slides/sigil_congratulation.png"
-         },
-         {
-           conference: "EMNLP2024",
-           title: "Can visual language models resolve textual ambiguity with visual cues? Let visual puns tell you!",
-           authors: "Jiwan Chung, Seungwon Lim, Jaehyun Jeon, Seungbeen Lee and Youngjae Yu",
-           bgImage: "images/slides/visualpun.png"
-         },
-         {
-            conference: "EMNLP2024",
-            title: "Selective Vision is the Challenge for Visual Reasoning: A Benchmark for Visual Argument Understanding",
-            authors: "Jiwan Chung*, Sungjae Lee*, Minseo Kim, Seungju Han, Ashkan Yousefpour, Jack Hessel and Youngjae Yu",
-            bgImage: "images/slides/visarg.png"
-          
-         },
-         {
-             conference: "ACL2024",
-             title: "Aligning Large Language Models by On-Policy Self-Judgment",
-             authors: "Sangkyu Lee, Sungdong Kim, Ashkan Yousefpour, Minjoon Seo, Kang Min Yoo and Youngjae Yu",
-             bgImage: "images/slides/dpo.png"
-           
-         },
-         {
-             conference: "EMNLP2023",
-             title: "Reading Books is Great, But Not if You Are Driving! Visually Grounded Reasoning about Defeasible Commonsense Norms",
-             authors: "Seungju Han, Junhyeok Kim, Jack Hessel, Liwei Jiang, Jiwan Chung, Yejin Son, Yejin Choi and Youngjae Yu",
-             bgImage: "images/slides/normlense.png"
-         },
-         {
-             conference: "EMNLP2023",
-             title: "VLIS: Unimodal Language Models Guide Multimodal Language Generation",
-             authors: "Jiwan Chung and Youngjae Yu",
-             bgImage: "images/slides/vlis.png"
-         
-         },
-         {
-             conference: "ICCV2023",
-             title: "CHAMPAGNE: Learning Real-world Conversation from Large-Scale Web Videos",
-             authors: "Seungju Han, Jack Hessel, Nouha Dziri, Yejin Choi and Youngjae Yu",
-             bgImage: "images/slides/champagne.png"
-         }
-         ];
+          conference: "NAACL2025",
+          title: "C^2 : Scalable Auto-Feedback for LLM-based Chart Generation",
+          authors: "Woosung Koh*, Janghan Yoon*, Minhyung Lee, Youngjin Song, Jaegwan Cho, Jaehyun Kang, Taehyeon Kim, Seyoung Yun and Youngjae Yu, Bongshin Lee",
+          bgImage: "images/slides/c2.png"
+        },
+        {
+          conference: "NAACL2025",
+          title: "EgoSpeak: Learning When to Speak for Egocentric Conversational Agents in the Wild",
+          authors: "Junhyeok Kim, Minsoo Kim, Jiwan Chung, Jungbin Cho, Jisoo Kim, Sungwoong Kim, Gyeongbo Sim and Youngjae Yu",
+          bgImage: "images/slides/egospeak.png"
+        },
+        {
+          conference: "NAACL2025",
+          title: "Do LLMs Have Distinct and Consistent Personality? TRAIT: Personality Testset designed for LLMs with Psychometrics",
+          authors: "Seungbeen Lee*, Seungwon Lim*, Seungju Han, Giyeong Oh, Jiwan Chung, Minju Kim, Yeonsoo Lee, Dongha Lee, Jinyoung Yeo and Youngjae Yu",
+          bgImage: "images/slides/trait.png"
+        },
+        {
+          conference: "AAAI2025",
+          title: "DEEPTalk: Dynamic Emotion Embedding for Probabilistic Speech-Driven 3D Face Animation",
+          authors: "Jisoo Kim*, Jungbin Cho*, Joonho Park, Soonmin Hwang, Da Eun Kim, Geon Kim and Youngjae Yu",
+          bgImage: "images/slides/aaai25_deeptalk.png"
+        },
+        {
+          conference: "EMNLP2024",
+          title: "Selective Vision is the Challenge for Visual Reasoning: A Benchmark for Visual Argument Understanding",
+          authors: "Jiwan Chung*, Sungjae Lee*, Minseo Kim, Seungju Han, Ashkan Yousefpour, Jack Hessel and Youngjae Yu",
+          bgImage: "images/slides/visarg.png"
+        },
+        {
+          conference: "EMNLP2023",
+          title: "Reading Books is Great, But Not if You Are Driving! Visually Grounded Reasoning about Defeasible Commonsense Norms",
+          authors: "Seungju Han, Junhyeok Kim, Jack Hessel, Liwei Jiang, Jiwan Chung, Yejin Son, Yejin Choi and Youngjae Yu",
+          bgImage: "images/slides/normlense.png"
+        },
+        {
+          conference: "EMNLP2023",
+          title: "VLIS: Unimodal Language Models Guide Multimodal Language Generation",
+          authors: "Jiwan Chung and Youngjae Yu",
+          bgImage: "images/slides/vlis.png"
+        },
+        {
+          conference: "ICCV2023",
+          title: "CHAMPAGNE: Learning Real-world Conversation from Large-Scale Web Videos",
+          authors: "Seungju Han, Jack Hessel, Nouha Dziri, Yejin Choi and Youngjae Yu",
+          bgImage: "images/slides/champagne.png"
+        }
+        */
 
         // Function to generate slide HTML
         function generateSlideHTML(slide, index) {
@@ -617,9 +705,7 @@
                             <path class="slide__overlay-path" d="M0,0 150,0 250,405 0,405" />
                         </svg>
                         <div class="slide__text">
-                            <br>
                             <p class="bubble_publication_conference">${slide.conference}</p>
-                            <br>
                             <h2 style="display:inline" class="slide__text-heading">${slide.title}</h2>
                             <p class="slide__text-desc">${slide.authors}</p>
                         </div>

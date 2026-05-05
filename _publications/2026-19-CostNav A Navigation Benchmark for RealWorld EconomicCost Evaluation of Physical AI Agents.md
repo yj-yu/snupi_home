@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents"
-conference: CVPR206 Workshop
+conference: CVPR2026 Workshop
 year: 2026
 
 author:
