@@ -11,6 +11,10 @@ social:
 
 
 works: lgai.png
+affiliation:
+  label: Internship at
+  logo_alt: LG AI Research
+  logo_width: 120px
 
 fields:
     - name : Commonsense Reasoning
@@ -20,4 +24,3 @@ social:
   - title: home
     url: https://oddqueue.github.io/
 ---
-

@@ -77,6 +77,39 @@ read -r social_url
 echo -e "${YELLOW}[선택]${NC} Works 이미지 파일명을 입력하세요 (선택사항, 예: cmu.png, Enter로 건너뛰기):"
 read -r works
 
+# 선택 필드: affiliation
+if [ -n "$works" ]; then
+    echo -e "${YELLOW}[선택]${NC} Works 로고 설명을 선택하세요:"
+    echo "  1) Internship at"
+    echo "  2) Visiting Scholar at"
+    echo "  3) Affiliated with"
+    echo "  4) 직접 입력"
+    echo "  Enter) 건너뛰기"
+    read -r affiliation_choice
+
+    case $affiliation_choice in
+        1) affiliation_label="Internship at"; default_logo_width="120px";;
+        2) affiliation_label="Visiting Scholar at"; default_logo_width="80px";;
+        3) affiliation_label="Affiliated with"; default_logo_width="80px";;
+        4)
+            echo "표시할 문구를 입력하세요 (예: Internship at):"
+            read -r affiliation_label
+            default_logo_width="80px"
+            ;;
+        *) affiliation_label="";;
+    esac
+
+    if [ -n "$affiliation_label" ]; then
+        echo "로고 alt 텍스트를 입력하세요 (예: LG AI Research):"
+        read -r affiliation_logo_alt
+        echo "로고 너비를 입력하세요 (기본값: $default_logo_width):"
+        read -r affiliation_logo_width
+        if [ -z "$affiliation_logo_width" ]; then
+            affiliation_logo_width="$default_logo_width"
+        fi
+    fi
+fi
+
 # 파일명 생성 (마지막 파일의 번호를 찾아서 +1)
 last_file=$(ls -1 "${PEOPLE_DIR}/${prefix}-"* 2>/dev/null | tail -1)
 if [ -z "$last_file" ]; then
@@ -114,6 +147,14 @@ EOF
 # works 추가 (있으면)
 if [ -n "$works" ]; then
     echo "works: $works" >> "$filename"
+    if [ -n "$affiliation_label" ]; then
+        cat >> "$filename" << EOF
+affiliation:
+  label: $affiliation_label
+  logo_alt: $affiliation_logo_alt
+  logo_width: $affiliation_logo_width
+EOF
+    fi
 fi
 
 # social 추가 (있으면)
@@ -148,4 +189,3 @@ EOF
 echo ""
 echo -e "${GREEN}✓ 파일이 생성되었습니다: $filename${NC}"
 echo ""
-

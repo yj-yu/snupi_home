@@ -1,0 +1,67 @@
+{% assign member = include.member %}
+{% assign color_list = include.color_list %}
+{% assign homeurl = member.permalink %}
+
+{% for social in member.social %}
+  {% if social.title == "home" %}
+    {% assign homeurl = social.url %}
+  {% endif %}
+{% endfor %}
+
+<div class="small-6 medium-4 large-custom-5 columns wp-block-coblocks-author member-card"
+     style="font-size:15px; text-align: center; display: flex; flex-direction: column; align-items: center; margin: 0; height: 400px; margin-bottom: 100px; background-color: #ffffff; box-shadow: none;">
+  <figure class="wp-block-coblocks-author__avatar" style="margin-left: 30px; margin-bottom: 20px; width: 100%; display: flex; justify-content: center;">
+    <a href="{{homeurl}}" style="width: 100%; display: flex; justify-content: center;">
+      <img class="wp-block-coblocks-author__avatar-img" src="./images/people/{{member.img-filename}}"
+           style="margin: auto; display: block; width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+    </a>
+  </figure>
+
+  <div class="wp-block-coblocks-author__content" style="width: 100%;">
+    <span class="wp-block-coblocks-author__name">
+      <a style="color:black;" href="{{homeurl}}">
+        <strong><strong>{{member.emoji}}&nbsp; {{member.fullname}}</strong></strong>
+      </a>
+    </span>
+    <span class="wp-block-coblocks-author__name"></span>
+      <span style="color:black;">
+        <span style="color: #666666; font-size: 0.9em; font-style: italic;">{{member.position}}</span>
+      </span>
+    </span>
+    <br>
+
+    {% if member.affiliation and member.works %}
+    <div style="margin-top: 5px; display: inline-block;">
+      <span style="color: #666666; font-size: 0.9em; font-style: italic;">{{member.affiliation.label}}</span>
+      <img src="./images/works/{{member.works}}" alt="{{member.affiliation.logo_alt}}" style="width: {{member.affiliation.logo_width | default: '80px'}}; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
+    </div>
+    {% endif %}
+
+    <div>
+    {% if member.fullname contains "Dongha" %}
+      <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://diyonsei.notion.site/Data-Language-Intelligence-Lab-Yonsei-University-7e121249362f42c2bdd1328aeaeb5f4b">  DLI Lab.</a></i>
+    {% endif %}
+    {% if member.fullname contains "Jinyoung" %}
+      <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://jinyeo.weebly.com/">  GLI Lab.</a></i>
+    {% endif %}
+    {% if member.fullname contains "Sungjoon" %}
+      <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://sites.google.com/view/sungjoon-choi/home">  RI Lab.</a></i>
+    {% endif %}
+    </div>
+    <p class="wp-block-coblocks-author__biography" style="margin-top: 5px;">  <!-- Added margin-top here -->
+      {% for field in member.fields %}
+      {% assign color = color_list[forloop.index0] %}
+        {% if field.name == "Multimodal perception for AI" %}
+        <div style="margin-bottom:-3%;">
+        {% else %}
+        <div style="margin-bottom:3.5%;">
+        {% endif %}
+      <span style="font-size:0.9em; font-weight: 300; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}}; color: black;">&nbsp;&nbsp;&nbsp;{{field.name}}&nbsp;&nbsp;&nbsp;</span>
+      </div>
+        {% if field.name == "Multimodal perception for AI" %}
+        <span style="font-size:0.6em; font-weight: 600; border-radius: 5px; white-space: nowrap; margin-left: 5px; background-color: {{color}};">&nbsp;&nbsp;&nbsp;(Video, Speech, Embodied AI, VR/MR)&nbsp;&nbsp;&nbsp;</span>
+        {% endif %}
+      {% endfor %}
+    </p>
+  </div>
+</div>

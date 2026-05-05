@@ -9,6 +9,10 @@ permalink: people/jungbin.html
 email: Whwjdqls99@yonsei.ac.kr
 
 works: cmu.png
+affiliation:
+  label: Visiting Scholar at
+  logo_alt: Carnegie Mellon University
+  logo_width: 80px
 
 
 social:

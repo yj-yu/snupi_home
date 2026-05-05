@@ -9,6 +9,10 @@ permalink: people/taehyun.html
 email: namam3gy@yonsei.ac.kr
 
 works: samsung_electronics.png
+affiliation:
+  label: Affiliated with
+  logo_alt: Samsung Electronics
+  logo_width: 80px
 
 
 fields:
@@ -21,4 +25,3 @@ remarks: "Industry-Affiliated Student"
 publications:
 
 ---
-

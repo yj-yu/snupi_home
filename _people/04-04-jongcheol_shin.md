@@ -9,6 +9,10 @@ permalink: people/jongcheol.html
 email: jongcheol.shin@snu.ac.kr
 
 works: lg_electronics.png
+affiliation:
+  label: Affiliated with
+  logo_alt: LG Electronics
+  logo_width: 80px
 
 
 fields:
@@ -20,4 +24,3 @@ remarks: "Industry-Affiliated Student"
 publications:
 
 ---
-

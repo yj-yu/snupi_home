@@ -10,6 +10,10 @@ email: jisoo6687@yonsei.ac.kr
 
 
 works: lgai.png
+affiliation:
+  label: Internship at
+  logo_alt: LG AI Research
+  logo_width: 120px
 
 
 fields:

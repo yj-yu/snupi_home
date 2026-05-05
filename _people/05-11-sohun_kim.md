@@ -9,6 +9,10 @@ permalink: people/sohun.html
 email: snu14ksh@snu.ac.kr
 
 works: samsung_sdi.jpg
+affiliation:
+  label: Affiliated with
+  logo_alt: Samsung Electronics
+  logo_width: 80px
 
 
 fields:
@@ -21,4 +25,3 @@ remarks: "Industry-Affiliated Student"
 publications:
 
 ---
-

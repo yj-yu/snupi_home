@@ -9,6 +9,10 @@ permalink: people/hanwool_lee.html
 email: 
 
 works: aim_intelligence.jpg
+affiliation:
+  label: Affiliated with
+  logo_alt: AIM Intelligence
+  logo_width: 80px
 
 
 social:

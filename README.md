@@ -60,6 +60,7 @@
 - **Emoji**: 이모지
 - **Personal website URL**: 개인 홈페이지 URL
 - **Works**: 소속 기관 이미지 파일명
+- **Affiliation**: Works 로고 위에 표시할 설명 문구, 로고 alt 텍스트, 로고 너비
 
 **특징:**
 - Permalink는 Full Name의 첫 단어를 소문자로 변환하여 자동 생성
@@ -86,6 +87,7 @@
 7. works
 8. social (website URL)
 9. fields
+10. affiliation (works 로고 설명)
 0. 전체 다시 작성 (에디터로 열기)
 
 **작동 방식:**
@@ -360,4 +362,3 @@
 - **People**: `images/people/`
 - **Publications**: `images/papers/`
 - **Gallery**: `images/gallery/`
-

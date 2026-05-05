@@ -8,6 +8,10 @@ position: "Visiting Scholar"
 permalink: people/wooseok.html
 email: justin_seo@yonsei.ac.kr
 works: lgai.png
+affiliation:
+  label: Internship at
+  logo_alt: LG AI Research
+  logo_width: 120px
 social:
   - title: home
     url: https://just1nseo.github.io/

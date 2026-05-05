@@ -17,6 +17,10 @@ fields:
     - name : Large Language Model
 
 works: NVIDIA.png
+affiliation:
+  label: Internship at
+  logo_alt: NVIDIA
+  logo_width: 120px
 
 
 publications:

@@ -15,6 +15,87 @@ cd "$PROJECT_ROOT"
 
 PEOPLE_DIR="_people"
 
+update_affiliation() {
+    local selected_file="$1"
+
+    echo "Works 이미지 파일명을 같이 수정할까요? 비워두면 기존 works를 유지합니다:"
+    read -r new_works
+
+    echo "Affiliation 표시 문구를 선택하세요:"
+    echo "  1) Internship at"
+    echo "  2) Visiting Scholar at"
+    echo "  3) Affiliated with"
+    echo "  4) 직접 입력"
+    echo "  5) affiliation 삭제"
+    read -r affiliation_choice
+
+    case $affiliation_choice in
+        1) affiliation_label="Internship at"; default_logo_width="120px";;
+        2) affiliation_label="Visiting Scholar at"; default_logo_width="80px";;
+        3) affiliation_label="Affiliated with"; default_logo_width="80px";;
+        4)
+            echo "표시할 문구를 입력하세요:"
+            read -r affiliation_label
+            default_logo_width="80px"
+            ;;
+        5)
+            AFFILIATION_MODE="delete" TARGET_FILE="$selected_file" ruby <<'RUBY'
+path = ENV.fetch("TARGET_FILE")
+text = File.read(path)
+text.gsub!(/^affiliation:\n(?:  .*\n)*/, "")
+File.write(path, text)
+RUBY
+            return
+            ;;
+        *) echo "잘못된 선택입니다."; exit 1;;
+    esac
+
+    echo "로고 alt 텍스트를 입력하세요 (예: LG AI Research):"
+    read -r affiliation_logo_alt
+    echo "로고 너비를 입력하세요 (기본값: $default_logo_width):"
+    read -r affiliation_logo_width
+    if [ -z "$affiliation_logo_width" ]; then
+        affiliation_logo_width="$default_logo_width"
+    fi
+
+    TARGET_FILE="$selected_file" \
+    NEW_WORKS="$new_works" \
+    AFFILIATION_LABEL="$affiliation_label" \
+    AFFILIATION_LOGO_ALT="$affiliation_logo_alt" \
+    AFFILIATION_LOGO_WIDTH="$affiliation_logo_width" \
+    ruby <<'RUBY'
+path = ENV.fetch("TARGET_FILE")
+text = File.read(path)
+
+new_works = ENV["NEW_WORKS"].to_s
+unless new_works.empty?
+  if text.match?(/^works:/)
+    text.sub!(/^works:.*$/, "works: #{new_works}")
+  else
+    text.sub!(/^email:.*\n/, "\\0\nworks: #{new_works}\n")
+  end
+end
+
+block = [
+  "affiliation:",
+  "  label: #{ENV.fetch("AFFILIATION_LABEL")}",
+  "  logo_alt: #{ENV.fetch("AFFILIATION_LOGO_ALT")}",
+  "  logo_width: #{ENV.fetch("AFFILIATION_LOGO_WIDTH")}",
+  ""
+].join("\n")
+
+if text.match?(/^affiliation:\n(?:  .*\n)*/)
+  text.sub!(/^affiliation:\n(?:  .*\n)*/, block)
+elsif text.match?(/^works:.*\n/)
+  text.sub!(/^works:.*\n/, "\\0#{block}")
+else
+  text.sub!(/^email:.*\n/, "\\0\n#{block}")
+end
+
+File.write(path, text)
+RUBY
+}
+
 echo -e "${BLUE}========================================${NC}"
 echo -e "${BLUE}   사람 정보 수정하기${NC}"
 echo -e "${BLUE}========================================${NC}"
@@ -88,6 +169,7 @@ echo "  6) permalink"
 echo "  7) works"
 echo "  8) social (website URL)"
 echo "  9) fields"
+echo "  10) affiliation (works 로고 설명)"
 echo "  0) 전체 다시 작성"
 read -r field_choice
 
@@ -189,6 +271,9 @@ social:\\
         sed -i.bak "/^publications:/i\\
 $temp_fields" "$selected_file" && rm "${selected_file}.bak"
         ;;
+    10)
+        update_affiliation "$selected_file"
+        ;;
     0)
         echo "파일을 에디터로 엽니다..."
         ${EDITOR:-nano} "$selected_file"
@@ -206,4 +291,3 @@ echo -e "${BLUE}수정된 내용:${NC}"
 echo "----------------------------------------"
 cat "$selected_file"
 echo "----------------------------------------"
-

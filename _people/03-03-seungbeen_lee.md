@@ -9,6 +9,10 @@ permalink: people/seungbeen.html
 email: iyy1112@yonsei.ac.kr
 
 works: cmu.png
+affiliation:
+  label: Visiting Scholar at
+  logo_alt: Carnegie Mellon University
+  logo_width: 80px
 social:
   - title: home
     url: https://seunbite.github.io/

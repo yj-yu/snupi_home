@@ -9,6 +9,10 @@ permalink: people/ohjoon.html
 email: ohjoon1209@snu.ac.kr
 
 works: naver.jpg
+affiliation:
+  label: Affiliated with
+  logo_alt: Naver
+  logo_width: 80px
 
 
 fields:
@@ -20,4 +24,3 @@ remarks: "Industry-Affiliated Student"
 publications:
 
 ---
-
