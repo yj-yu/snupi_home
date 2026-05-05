@@ -38,7 +38,7 @@ section_id: home
 
 
   
-  <div class='row'>
+  <div class='row home-news-grid-row'>
     <div class='large-12 columns'>
       {% include section-header.html title="Our Latest Work" %}
     </div>
@@ -63,7 +63,7 @@ section_id: home
   </div>
   <div class='row'>
     <!-- News for papers -->
-    <div class='medium-6 columns'>
+    <div class='medium-6 columns home-news-column'>
       {% assign post_count = 0 %}
       {% for post in site.news reversed %}
         {% if post_count >= 5 %}
@@ -71,10 +71,10 @@ section_id: home
         {% endif %}
         {% for c in post.categories %}
           {% if 'papers' == c %} 
-          <p><a style="color:black; font-family: 'Spoqa Han Sans Neo', Times ,serif, 'Times New Roman';" href="{{post.url}}">
-            - {{post.title}} ({{post.date | date: "%Y-%m-%d" }})
+          <p class="home-news-item"><a class="home-news-link" href="{{post.url}}">
+            {{post.title}} <span class="home-news-date">({{post.date | date: "%Y-%m-%d" }})</span>
           </a><br/>
-            {{post.excerpt}}</p>
+            <span class="home-news-excerpt">{{post.excerpt}}</span></p>
             {% assign post_count = post_count | plus: 1 %}
             {% break %}
           {% endif %}
@@ -83,7 +83,7 @@ section_id: home
     </div>
 
     <!-- News for lab -->
-    <div class='medium-6 columns'>
+    <div class='medium-6 columns home-news-column'>
     {% assign post_count = 0 %}
     {% for post in site.news reversed %}
       {% if post_count >= 5 %}
@@ -92,10 +92,10 @@ section_id: home
       {% for c in post.categories %}
         {% if 'others' == c %}
         
-        <p><a style="color:black; font-family: 'Spoqa Han Sans Neo', Times ,serif, 'Times New Roman';" href="{{post.url}}">
-        - {{post.title}} ({{post.date | date: "%Y-%m-%d" }})
+        <p class="home-news-item"><a class="home-news-link" href="{{post.url}}">
+        {{post.title}} <span class="home-news-date">({{post.date | date: "%Y-%m-%d" }})</span>
         </a><br/>
-          {{post.excerpt}}</p>
+          <span class="home-news-excerpt">{{post.excerpt}}</span></p>
           {% assign post_count = post_count | plus: 1 %}
           {% break %}
         {% endif %}
@@ -105,11 +105,11 @@ section_id: home
   </div>
   <div class='row'>
     <div class='large-12 columns'>
-      <p style="text-align: right;">
+      <p class="home-news-more-wrap">
 
         <!--버튼 비활성화-->
         <!--<a class='button' href='news'>See More</a>-->
-        <a class='button' href='news.html'>See More</a>
+        <a class='button home-news-more' href='news.html'>See More</a>
 
       
       </p>

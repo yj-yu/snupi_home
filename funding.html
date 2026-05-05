@@ -7,19 +7,162 @@ permalink: funding.html
 
 <style>
 .funding-page {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  min-height: 360px;
-  padding: 70px 0;
-  text-align: center;
+  padding: 18px 0 80px;
 }
 
-.funding-coming-soon {
-  color: #555;
-  font-size: 28px;
-  font-weight: 700;
+.funding-section {
+  margin-bottom: 54px;
+}
+
+.funding-section:last-child {
+  margin-bottom: 0;
+}
+
+.funding-section-title {
+  color: #2f343b;
+  font-size: 1.65rem;
+  font-weight: 800;
   letter-spacing: 0;
+  margin: 0 0 18px;
+}
+
+.funding-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.funding-grid.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.funding-card {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(210, 220, 234, 0.95);
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(31, 56, 88, 0.07);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 112px 1fr;
+  min-height: 142px;
+  padding: 22px 24px;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.funding-card:hover {
+  border-color: rgba(96, 165, 250, 0.8);
+  box-shadow: 0 18px 42px rgba(31, 56, 88, 0.12);
+  transform: translateY(-2px);
+}
+
+.funding-logo-wrap {
+  align-items: center;
+  background: linear-gradient(135deg, #f8fbff 0%, #eef6ff 100%);
+  border: 1px solid rgba(219, 234, 254, 0.9);
+  border-radius: 12px;
+  display: flex;
+  height: 84px;
+  justify-content: center;
+  padding: 14px;
+  width: 112px;
+}
+
+.funding-logo-wrap.has-secondary {
+  flex-direction: column;
+  gap: 8px;
+}
+
+.funding-logo {
+  display: block;
+  max-height: 54px;
+  max-width: 86px;
+  object-fit: contain;
+}
+
+.funding-logo-secondary {
+  border-top: 1px solid rgba(203, 213, 225, 0.8);
+  max-height: 22px;
+  max-width: 76px;
+  object-fit: contain;
+  padding-top: 8px;
+}
+
+.funding-name {
+  color: #1f2e4a;
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+
+.funding-meta {
+  color: #607086;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.funding-meta strong {
+  color: #2d6cdf;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 1024px) {
+  .funding-grid,
+  .funding-grid.two-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .funding-page {
+    padding: 0 0 52px;
+  }
+
+  .funding-section {
+    margin-bottom: 38px;
+  }
+
+  .funding-section-title {
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+  }
+
+  .funding-card {
+    gap: 14px;
+    grid-template-columns: 82px 1fr;
+    min-height: 118px;
+    padding: 16px 15px;
+  }
+
+  .funding-logo-wrap {
+    height: 66px;
+    padding: 10px;
+    width: 82px;
+  }
+
+  .funding-logo {
+    max-height: 42px;
+    max-width: 66px;
+  }
+
+  .funding-logo-secondary {
+    max-height: 18px;
+    max-width: 58px;
+    padding-top: 6px;
+  }
+
+  .funding-name {
+    font-size: 0.94rem;
+    line-height: 1.32;
+    margin-bottom: 6px;
+  }
+
+  .funding-meta {
+    font-size: 0.8rem;
+  }
 }
 </style>
 
@@ -35,7 +178,67 @@ permalink: funding.html
 <div class="full no-padding funding-page">
   <div class="row">
     <div class="large-12 columns">
-      <div class="funding-coming-soon">Coming Soon</div>
+      <section class="funding-section">
+        <h2 class="funding-section-title">Grants</h2>
+        <div class="funding-grid">
+          <article class="funding-card">
+            <div class="funding-logo-wrap">
+              <img class="funding-logo" src="images/fundings/NRF.png" alt="NRF">
+            </div>
+            <div>
+              <h3 class="funding-name">Active Learning for Multimodal Action Agents</h3>
+              <p class="funding-meta"><strong>Funding</strong> NRF</p>
+            </div>
+          </article>
+
+          <article class="funding-card">
+            <div class="funding-logo-wrap has-secondary">
+              <img class="funding-logo" src="images/fundings/KETI.png" alt="KETI">
+              <img class="funding-logo-secondary" src="images/fundings/Holiday_Robotics.png" alt="Holiday Robotics">
+            </div>
+            <div>
+              <h3 class="funding-name">Humanoid Robots for Chemical Processes</h3>
+              <p class="funding-meta"><strong>Funding</strong> KETI · <strong>Lead</strong> Holiday Robotics</p>
+            </div>
+          </article>
+
+          <article class="funding-card">
+            <div class="funding-logo-wrap has-secondary">
+              <img class="funding-logo" src="images/fundings/IITP.png" alt="IITP">
+              <img class="funding-logo-secondary" src="images/fundings/lg_electronics.png" alt="LG Electronics">
+            </div>
+            <div>
+              <h3 class="funding-name">World Foundation Model for Physical AI</h3>
+              <p class="funding-meta"><strong>Funding</strong> IITP · <strong>Lead</strong> LG Electronics</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="funding-section">
+        <h2 class="funding-section-title">Industry Collaboration</h2>
+        <div class="funding-grid two-column">
+          <article class="funding-card">
+            <div class="funding-logo-wrap">
+              <img class="funding-logo" src="images/fundings/SK_Hynix.png" alt="SK Hynix">
+            </div>
+            <div>
+              <h3 class="funding-name">Unsafe Action and Procedure Violation Detection</h3>
+              <p class="funding-meta"><strong>Partner</strong> SK Hynix</p>
+            </div>
+          </article>
+
+          <article class="funding-card">
+            <div class="funding-logo-wrap">
+              <img class="funding-logo" src="images/fundings/poscodx.png" alt="POSCO DX">
+            </div>
+            <div>
+              <h3 class="funding-name">LVLM-Based Industrial Anomaly Detection</h3>
+              <p class="funding-meta"><strong>Partner</strong> POSCO DX</p>
+            </div>
+          </article>
+        </div>
+      </section>
     </div>
   </div>
 </div>
