@@ -48,13 +48,13 @@
       <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://sites.google.com/view/sungjoon-choi/home">  RI Lab.</a></i>
     {% endif %}
     </div>
-    <p class="wp-block-coblocks-author__biography" style="margin-top: 4px;">  <!-- Added margin-top here -->
+    <p class="wp-block-coblocks-author__biography" style="margin-top: 5px;">  <!-- Added margin-top here -->
       {% for field in member.fields %}
       {% assign color = color_list[forloop.index0] %}
         {% if field.name == "Multimodal perception for AI" %}
-        <div class="member-field" style="margin-bottom:1px;">
+        <div class="member-field" style="margin-bottom:4px;">
         {% else %}
-        <div class="member-field" style="margin-bottom:2px;">
+        <div class="member-field" style="margin-bottom:4px;">
         {% endif %}
       <span class="member-interest-tag" style="background-color: {{color}};">{{field.name}}</span>
       </div>

@@ -319,30 +319,38 @@
   }
   .slide__text {
     position: absolute;
-    width: min(48rem, 46vw);
-    min-height: 58%;
+    width: min(58rem, 54vw);
+    min-height: 70%;
     top: auto;
     bottom: 0;
     left: 0;
     color: #334155;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.86), rgba(248, 250, 252, 0.72));
+    background: transparent;
     border-radius: 0;
-    clip-path: polygon(0 0, 82% 0, 100% 100%, 0 100%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 2.1rem 7.5rem 2.2rem 6%;
+    justify-content: flex-end;
+    padding: 0 13rem 4.4rem 6%;
     box-shadow: none;
     transition: transform 0.42s 0.22s, opacity 0.42s 0.22s;
     will-change: transform, opacity;
     transform: translate3d(-2rem, 0, 0);
     opacity: 0;
+    isolation: isolate;
+  }
+  .slide__text:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.88), rgba(248, 250, 252, 0.66));
+    clip-path: polygon(0 18%, 78% 100%, 0 100%);
   }
   @media (max-width: 991px) {
     .slide__text {
       position: absolute;
-      width: min(78vw, 34rem);
-      min-height: 58%;
+      width: min(82vw, 36rem);
+      min-height: 68%;
       top: auto;
       bottom: 0;
       left: 0;
@@ -413,23 +421,29 @@
     }
 
     .slide__text {
-      width: 84vw;
+      width: 82vw;
       min-height: auto;
       top: auto;
-      bottom: 4.45rem;
+      bottom: 4.15rem;
       left: 0;
-      text-align: center;
-      clip-path: polygon(0 0, 88% 0, 100% 100%, 0 100%);
-      padding: 0.72rem 2.35rem 0.72rem 1rem;
-      border-radius: 0;
+      text-align: left;
+      padding: 0.72rem 1rem;
+      border-radius: 0 13px 13px 0;
       transform: translate3d(0, 0, 0);
+      justify-content: center;
+    }
+
+    .slide__text:before {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.88), rgba(248, 250, 252, 0.72));
+      border-radius: 0 13px 13px 0;
+      clip-path: none;
     }
 
     .slide__text-heading {
       font-size: 1.06rem;
       line-height: 1.12;
       margin-bottom: 0.36rem;
-      text-align: center;
+      text-align: left;
     }
 
     .slide__text-desc {
@@ -438,7 +452,7 @@
     }
 
     .bubble_publication_conference {
-      margin: 0 auto 0.42rem;
+      margin: 0 0 0.42rem;
       padding: 0.3rem 0.62rem 0.28rem;
       font-size: 0.78rem;
     }
@@ -648,6 +662,7 @@
     $(document).ready(function() {
         // Define the slides data
         const slidesData = [
+        // SLIDE_DATA_START
         {
           conference: "ICML2026 (Spotlight)",
           title: "Judging What We Cannot Solve: A Consequence-Based Approach for Oracle-Free Evaluation of Research-Level Math",
@@ -781,6 +796,7 @@
           bgImage: "images/slides/dpo.png",
           url: "https://arxiv.org/abs/2402.11253"
         }
+        // SLIDE_DATA_END
          ];
 
         /*

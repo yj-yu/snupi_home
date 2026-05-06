@@ -5179,7 +5179,7 @@ svg:not(:root) {
     margin-bottom: var(--site-card-gap) !important;
     box-shadow: 0 1px 4px rgba(31, 56, 88, 0.018) !important;
     display: flex !important; /* 가로 정렬 보정 */
-    align-items: flex-start !important;
+    align-items: center !important;
     font-family: var(--site-font-family) !important;
 }
 
@@ -5258,10 +5258,10 @@ svg:not(:root) {
     color: #2b6fe8 !important;
     display: inline-flex !important;
     font-family: var(--site-font-family) !important;
-    font-size: 0.84rem !important;
+    font-size: 0.96rem !important;
     line-height: 1.25 !important;
     margin: 0 0 6px !important;
-    padding: 4px 10px !important;
+    padding: 3px 8px !important;
 }
 
 .publication-meta-line {
@@ -5362,10 +5362,10 @@ svg:not(:root) {
     }
 
     .publication-venue-line {
-        font-size: 0.78rem !important;
+        font-size: 0.86rem !important;
         line-height: 1.22 !important;
         margin: 5px 0 6px !important;
-        padding: 3px 8px !important;
+        padding: 3px 7px !important;
     }
 
     .publication-conference-text {
