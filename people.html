@@ -206,8 +206,9 @@ input:checked + .slider:before {
 }
 
 .member-grid .wp-block-coblocks-author__avatar {
-  margin-left: 0 !important;
+  margin: 0 auto 8px !important;
   width: 100% !important;
+  height: 200px !important;
   justify-content: center !important;
 }
 
@@ -220,7 +221,33 @@ input:checked + .slider:before {
 }
 
 .wp-block-coblocks-author__content {
-  line-height: 1.25;
+  line-height: 1.38;
+}
+
+.wp-block-coblocks-author__name {
+  margin-bottom: 2px !important;
+}
+
+.member-grid .wp-block-coblocks-author__content > .wp-block-coblocks-author__name {
+  font-size: 1.16rem !important;
+  line-height: 1.16 !important;
+  letter-spacing: -0.01em;
+}
+
+.member-emoji {
+  display: inline-block;
+  margin-right: 0.24rem;
+  font-size: 0.95em;
+  vertical-align: 0.02em;
+}
+
+.member-name-text {
+  display: inline-block;
+}
+
+.member-position {
+  display: inline-block;
+  margin-top: 3px;
 }
 
 .wp-block-coblocks-author__biography {
@@ -242,9 +269,9 @@ input:checked + .slider:before {
   color: #263b5e;
   font-family: var(--site-font-family) !important;
   font-size: 0.82rem;
-  font-weight: 650;
+  font-weight: 520;
   line-height: 1.18;
-  white-space: normal;
+  white-space: nowrap;
   box-shadow: none !important;
   border: 0 !important;
 }
@@ -255,6 +282,14 @@ input:checked + .slider:before {
   font-weight: 600;
   color: #3f5f86;
   background: #eaf4ff;
+}
+
+.member-section-block {
+  margin-top: 34px;
+}
+
+.member-section-block.first-member-section {
+  margin-top: 0;
 }
 
 @media only screen and (max-width: 640px) {
@@ -268,6 +303,18 @@ input:checked + .slider:before {
     margin: 7px 0 11px !important;
   }
 
+  .member-section-block {
+    margin-top: 24px;
+  }
+
+  .member-section-block.first-member-section {
+    margin-top: 0;
+  }
+
+  .member-grid .wp-block-coblocks-author__content > .wp-block-coblocks-author__name {
+    font-size: 1.03rem !important;
+  }
+
   .wp-block-coblocks-author__biography {
     margin-top: 5px !important;
   }
@@ -276,6 +323,7 @@ input:checked + .slider:before {
     padding: 2px 8px;
     font-size: 0.78rem;
     line-height: 1.18;
+    white-space: normal;
   }
 }
 
@@ -296,6 +344,11 @@ input:checked + .slider:before {
 
   .member-grid .member-card {
     padding: 0 4px !important;
+  }
+
+  .member-grid .wp-block-coblocks-author__avatar {
+    height: 150px !important;
+    margin-bottom: 8px !important;
   }
 }
 
@@ -358,7 +411,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class='full no-padding'>
   <!-- Members except alumni -->
   {% for p in page.active_positions %}
-  <div class='row'>
+  <div class='row member-section-block{% if forloop.first %} first-member-section{% endif %}'>
     {% if p == "Professor"  %}
       <div class='medium-12 columns'>
         <h2>{{p}}</h2>
