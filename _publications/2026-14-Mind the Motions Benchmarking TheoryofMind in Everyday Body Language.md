@@ -16,7 +16,7 @@ author:
 
 external:
   - title: Arxiv
-    url: https://arxiv.org/pdf/2511.15887
+    url: https://arxiv.org/abs/2511.15887
   
 
 img: mindthemotion.png
