@@ -4341,15 +4341,57 @@ img {
   color: rgb(255, 255, 255);
 }
 .index_welcome {
-  font-weight: bolder !important;
-  /**font-family: Arial, Helvetica, sans-serif;**/
-  font-family: sans-serif;
   color: rgb(255, 255, 255);
+  font-family: var(--site-display-font-family) !important;
+  font-size: clamp(2.2rem, 4.1vw, 3.55rem);
+  font-weight: 750 !important;
+  letter-spacing: 0.01em;
+  line-height: 1.08;
+  margin: 0 0 1.55rem;
+}
+
+.index_welcome_intro {
+  color: rgba(255, 255, 255, 0.95);
+  font-family: var(--site-font-family) !important;
+  font-size: clamp(1rem, 1.32vw, 1.18rem);
+  font-weight: 450;
+  line-height: 1.55;
+  margin: 0 auto 0.18rem;
+  max-width: 1120px;
+}
+
+.index_welcome_intro b {
+  font-weight: 760;
+}
+
+.index_welcome_more {
+  color: rgba(255, 255, 255, 0.94);
+  font-family: var(--site-font-family) !important;
+  font-size: clamp(1rem, 1.22vw, 1.14rem);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.index_welcome_more a {
+  color: #ffd62e !important;
+  font-weight: 650;
+  text-decoration: none;
 }
 @media screen and (max-width: 600px){
   /* 모바일에 최적화된 예외 CSS 코드*/
   .index_welcome{
-    font-size:1.8rem;
+    font-size: 2.05rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .index_welcome_intro {
+    font-size: 0.98rem;
+    line-height: 1.48;
+    max-width: 92%;
+  }
+
+  .index_welcome_more {
+    font-size: 0.98rem;
   }
 }
 
@@ -4375,8 +4417,8 @@ img {
   
 }
 .header-padding {
-  padding-top: 4.5rem;
-  padding-bottom: 3rem;
+  padding-top: 3.45rem;
+  padding-bottom: 2.65rem;
 }
 
 
