@@ -3934,8 +3934,27 @@ body {
   }
 
   .full.parallax[style] {
-    padding-top: 18px !important;
-    padding-bottom: 10px !important;
+    padding-top: 8px !important;
+    padding-bottom: 0 !important;
+  }
+
+  .full.parallax .spacing {
+    height: 4px !important;
+  }
+
+  .modSectionHeader {
+    margin-bottom: 0 !important;
+  }
+
+  .modSectionHeader .special-title h2 {
+    line-height: 1.04 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .modSectionHeader .special-title h2::after {
+    height: 22px !important;
+    margin-top: 2px !important;
+    background-size: auto 22px !important;
   }
 
   .modDefaultSlider .sequence .title h2 {
@@ -4928,7 +4947,7 @@ svg:not(:root) {
 
 .location-listing:hover .location-image img {
   filter: blur(0.4px);
-  transform: scale(1.006);
+  transform: none;
 }
 
 .news-hero {
@@ -5217,7 +5236,7 @@ svg:not(:root) {
     .publication-year-title {
         font-size: 1.24rem !important;
         letter-spacing: 0.08em !important;
-        margin: 14px 0 11px !important;
+        margin: 7px 0 11px !important;
     }
 
     .publication-card > .columns {

@@ -99,15 +99,11 @@ input:checked + .slider:before {
 
 /* 1. PC 화면 (1024px 이상): 5명씩 + 넓은 간격 */
 @media only screen and (min-width: 1024px) {
-  .people-section-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  
   .member-card {
     box-sizing: border-box !important;
-    flex: 0 0 20% !important;
+    display: flex !important;
+    float: left !important;
+    width: 20% !important;
     max-width: 20% !important;
     min-width: 0 !important;
     padding: 0 12px !important;
@@ -125,15 +121,11 @@ input:checked + .slider:before {
 
 /* 2. 태블릿 화면 (641px ~ 1023px): 3명씩 + 중간 간격 */
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
-  .people-section-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
   .member-card {
     box-sizing: border-box !important;
-    flex: 0 0 33.33% !important;
+    display: flex !important;
+    float: left !important;
+    width: 33.3333% !important;
     max-width: 33.33% !important;
     min-width: 0 !important;
     margin-bottom: 32px !important;
@@ -146,14 +138,10 @@ input:checked + .slider:before {
     overflow-x: hidden !important;
     position: relative;
   }
-  .people-section-row {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: flex-start !important;
-  }
   .member-card {
     box-sizing: border-box !important;
-    flex: 0 0 50% !important;
+    float: left !important;
+    width: 50% !important;
     max-width: 50% !important;
     min-width: 0 !important;
     padding: 0 5px !important;
@@ -192,6 +180,10 @@ input:checked + .slider:before {
 
 .member-card {
   height: auto !important;
+}
+
+.medium-12.columns {
+  clear: both;
 }
 
 .wp-block-coblocks-author__avatar {
@@ -235,7 +227,7 @@ input:checked + .slider:before {
 
 @media only screen and (max-width: 640px) {
   .full.parallax[style] {
-    padding: 18px 0 12px !important;
+    padding: 8px 0 0 !important;
   }
 
   .medium-12.columns h2 {

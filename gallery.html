@@ -124,9 +124,9 @@ count_year_min: 2023
     }
 
     .location-listing:hover {
-      transform: translateY(-2px); /* 살짝 위로 떠오르는 효과 */
-      border-color: rgba(147, 197, 253, 0.9);
-      box-shadow: 0 12px 28px rgba(31, 56, 88, 0.08); /* 그림자 강화 */
+      transform: none;
+      border-color: rgba(209, 220, 235, 0.85);
+      box-shadow: 0 8px 24px rgba(31, 56, 88, 0.06);
     }
 
     .location-title {
@@ -142,8 +142,8 @@ count_year_min: 2023
       
       /* [초기 상태] 숨김 */
       opacity: 0 !important;
-      background: rgba(255, 255, 255, 0.34) !important;
-      color: #18345c !important;
+      background: rgba(15, 23, 42, 0.34) !important;
+      color: #fff !important;
       transition: opacity 0.28s ease;
       pointer-events: none;
       backdrop-filter: blur(1px);
@@ -155,7 +155,7 @@ count_year_min: 2023
       padding: 24px !important;
       font-size: 22px !important;    /* PC에서는 조금 더 크게 */
       line-height: 1.25;
-      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+      text-shadow: 0 1px 8px rgba(15, 23, 42, 0.45);
     }
 
     .location-listing:hover .location-title {
@@ -165,7 +165,7 @@ count_year_min: 2023
 
     .location-listing:hover .location-image img {
       filter: blur(0.4px);
-      transform: scale(1.006);
+      transform: none;
     }
   }
 </style>
