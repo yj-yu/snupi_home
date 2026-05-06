@@ -43,6 +43,19 @@ body :not(i):not([class^="fa"]):not([class*=" fa-"]):not([class^="icon-"]):not([
   letter-spacing: 0.035em;
   color: #3f4248;
 }
+
+.contain-to-grid .top-bar-section li.active:not(.has-form) > a:not(.button),
+.contain-to-grid .top-bar-section li.active:not(.has-form) > a:not(.button):hover,
+.contain-to-grid .top-bar-section ul li.active > a {
+  background: #fff !important;
+  border-bottom-color: #4f91ff !important;
+  color: #2f7df6 !important;
+  font-weight: 720 !important;
+}
+
+.contain-to-grid .top-bar-section li:not(.has-form):not(.active) > a:not(.button):hover {
+  color: #2f7df6 !important;
+}
 @font-face {
   font-family: "Steelfish";
   src: url('../fonts/steelfish/steelfish_bd-webfont.eot');
@@ -5229,11 +5242,17 @@ svg:not(:root) {
 }
 
 .publication-venue-line {
-    color: #2d6cdf !important;
+    align-items: center !important;
+    background: linear-gradient(135deg, rgba(225, 239, 255, 0.92), rgba(240, 247, 255, 0.88)) !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    color: #2b6fe8 !important;
+    display: inline-flex !important;
     font-family: var(--site-font-family) !important;
-    font-size: 0.94rem !important;
+    font-size: 0.84rem !important;
     line-height: 1.25 !important;
-    margin: 0 0 5px !important;
+    margin: 6px 0 6px !important;
+    padding: 4px 10px !important;
 }
 
 .publication-meta-line {
@@ -5245,10 +5264,10 @@ svg:not(:root) {
 }
 
 .publication-conference-text {
-    color: #2d6cdf !important;
+    color: #2b6fe8 !important;
     display: inline !important;
     font-size: inherit !important;
-    font-weight: 700 !important;
+    font-weight: 750 !important;
     margin-right: 0 !important;
 }
 
@@ -5334,9 +5353,10 @@ svg:not(:root) {
     }
 
     .publication-venue-line {
-        font-size: 0.86rem !important;
+        font-size: 0.78rem !important;
         line-height: 1.22 !important;
-        margin-bottom: 4px !important;
+        margin: 5px 0 6px !important;
+        padding: 3px 8px !important;
     }
 
     .publication-conference-text {
