@@ -186,6 +186,36 @@ input:checked + .slider:before {
   clear: both;
 }
 
+.member-grid {
+  clear: both;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  column-gap: 24px;
+  row-gap: 54px;
+  align-items: start;
+  width: 100%;
+}
+
+.member-grid .member-card {
+  float: none !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 8px !important;
+}
+
+.member-grid .wp-block-coblocks-author__avatar {
+  margin-left: 0 !important;
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+.member-grid:after {
+  content: none !important;
+}
+
 .wp-block-coblocks-author__avatar {
   margin-bottom: 16px !important;
 }
@@ -244,6 +274,26 @@ input:checked + .slider:before {
     padding: 5px 9px;
     font-size: 0.8rem;
     line-height: 1.18;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .member-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 18px;
+    row-gap: 42px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .member-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 10px;
+    row-gap: 28px;
+  }
+
+  .member-grid .member-card {
+    padding: 0 4px !important;
   }
 }
 
@@ -369,10 +419,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
       {% if show_member %}
+        {% unless member_grid_open %}
+          <div class="member-grid">
+          {% assign member_grid_open = true %}
+        {% endunless %}
         {% include member-card.html member=member color_list=page.color_list %}
       {% endif %}
     {% endfor %}
-    <div></div>
+    {% if member_grid_open %}
+      </div>
+      {% assign member_grid_open = false %}
+    {% endif %}
   </div>
 
   {% endfor %}

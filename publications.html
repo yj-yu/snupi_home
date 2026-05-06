@@ -53,9 +53,13 @@ count_year_min: 2016
         <div class='small-8 medium-10 columns'>
           <div class='mod modIconText'>
             
+            {% if paper.conference %}
+            <div class="publication-venue-line">
+              <span class='publication-conference-text'>{{paper.conference}}</span>
+            </div>
+            {% endif %}
             <h3>{{paper.name}}</h3>
             <div class="publication-meta-line">
-              {% if paper.conference %}<span class='publication-conference-text'>{{paper.conference}}</span>{% endif %}
               {% if paper.keywords %}
                 {% for keyword in paper.keywords %}
                   <span class="publication-keyword"># {{keyword.name}}</span>
