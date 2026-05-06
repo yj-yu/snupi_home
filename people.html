@@ -99,18 +99,19 @@ input:checked + .slider:before {
 
 /* 1. PC 화면 (1024px 이상): 5명씩 + 넓은 간격 */
 @media only screen and (min-width: 1024px) {
-  .row {
+  .people-section-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* 왼쪽 정렬 */
+    justify-content: flex-start;
   }
   
   .member-card {
-    /* 100 / 5 = 20% 이지만 여백을 위해 약간 조절하거나 정확히 20 */
+    box-sizing: border-box !important;
     flex: 0 0 20% !important;
     max-width: 20% !important;
+    min-width: 0 !important;
     padding: 0 12px !important;
-    margin-bottom: 54px !important;
+    margin-bottom: 36px !important;
   }
 
   .wp-block-coblocks-author__avatar-img {
@@ -124,10 +125,18 @@ input:checked + .slider:before {
 
 /* 2. 태블릿 화면 (641px ~ 1023px): 3명씩 + 중간 간격 */
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .people-section-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
   .member-card {
+    box-sizing: border-box !important;
     flex: 0 0 33.33% !important;
     max-width: 33.33% !important;
-    margin-bottom: 44px !important;
+    min-width: 0 !important;
+    margin-bottom: 32px !important;
   }
 }
 
@@ -137,20 +146,22 @@ input:checked + .slider:before {
     overflow-x: hidden !important;
     position: relative;
   }
-  .row {
+  .people-section-row {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: flex-start !important;
   }
   .member-card {
+    box-sizing: border-box !important;
     flex: 0 0 50% !important;
     max-width: 50% !important;
+    min-width: 0 !important;
     padding: 0 5px !important;
     height: auto !important;
     display: flex !important; 
     flex-direction: column !important;
     align-items: center !important;
-    margin-bottom: 28px !important;
+    margin-bottom: 22px !important;
   }
   .wp-block-coblocks-author__avatar {
     margin: 0 auto 15px auto !important; 
@@ -167,9 +178,15 @@ input:checked + .slider:before {
 }
 
 .medium-12.columns h2 {
-  margin-top: 26px !important; /* 위 섹션과  간격 조절 */
-  margin-bottom: 16px !important; /* 아래쪽 멤버 카드와의 간격 */
-  border-bottom: none !important; /* 선택사항: 구분선 추가 */
+  color: #2f343b !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.32rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.025em;
+  line-height: 1.2;
+  margin-top: 18px !important;
+  margin-bottom: 10px !important;
+  border-bottom: none !important;
   padding-bottom: 0;
 }
 
@@ -186,7 +203,7 @@ input:checked + .slider:before {
 }
 
 .wp-block-coblocks-author__biography {
-  margin-top: 14px !important;
+  margin-top: 10px !important;
 }
 
 .member-field {
@@ -198,10 +215,10 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  padding: 4px 10px;
+  padding: 5px 11px;
   border-radius: 999px;
   color: #263b5e;
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 650;
   line-height: 1.2;
   white-space: normal;
@@ -222,17 +239,18 @@ input:checked + .slider:before {
   }
 
   .medium-12.columns h2 {
-    margin-top: 20px !important;
-    margin-bottom: 14px !important;
+    font-size: 1.04rem !important;
+    margin-top: 14px !important;
+    margin-bottom: 9px !important;
   }
 
   .wp-block-coblocks-author__biography {
-    margin-top: 10px !important;
+    margin-top: 8px !important;
   }
 
   .member-interest-tag {
-    padding: 4px 8px;
-    font-size: 0.74rem;
+    padding: 5px 9px;
+    font-size: 0.8rem;
     line-height: 1.18;
   }
 }
@@ -252,7 +270,7 @@ input:checked + .slider:before {
 </style>
 
 <div class='full parallax' style='padding: 50px 0;'>
-  <div class='row'>
+  <div class='row people-section-row'>
     <div class='twelve columns'>
       {% include section-header.html title="Member" color="#464646" tagline=" " class="big" %}
     </div>

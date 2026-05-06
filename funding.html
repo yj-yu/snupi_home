@@ -7,15 +7,25 @@ permalink: funding.html
 
 <style>
 .funding-page {
-  padding: 18px 0 80px;
+  padding: 10px 0 132px;
+}
+
+.funding-lead {
+  color: #607086;
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.55;
+  margin: -8px auto 36px;
+  max-width: 760px;
+  text-align: center;
 }
 
 .funding-section {
-  margin-bottom: 54px;
+  margin-bottom: 46px;
 }
 
 .funding-section:last-child {
-  margin-bottom: 0;
+  margin-bottom: 42px;
 }
 
 .funding-section-title {
@@ -28,7 +38,7 @@ permalink: funding.html
 
 .funding-grid {
   display: grid;
-  gap: 18px;
+  gap: var(--site-card-gap);
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -39,32 +49,25 @@ permalink: funding.html
 .funding-card {
   align-items: center;
   background: #fff;
-  border: 1px solid rgba(210, 220, 234, 0.95);
-  border-radius: 14px;
-  box-shadow: 0 12px 32px rgba(31, 56, 88, 0.07);
+  border: 1px solid var(--site-card-border);
+  border-radius: var(--site-card-radius);
+  box-shadow: var(--site-card-shadow);
   display: grid;
-  gap: 18px;
+  gap: 16px;
   grid-template-columns: 112px 1fr;
-  min-height: 142px;
-  padding: 22px 24px;
-  transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
-}
-
-.funding-card:hover {
-  border-color: rgba(96, 165, 250, 0.8);
-  box-shadow: 0 18px 42px rgba(31, 56, 88, 0.12);
-  transform: translateY(-2px);
+  min-height: 136px;
+  padding: 20px 22px;
 }
 
 .funding-logo-wrap {
   align-items: center;
-  background: linear-gradient(135deg, #f8fbff 0%, #eef6ff 100%);
-  border: 1px solid rgba(219, 234, 254, 0.9);
-  border-radius: 12px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   display: flex;
   height: 84px;
   justify-content: center;
-  padding: 14px;
+  padding: 0;
   width: 112px;
 }
 
@@ -75,17 +78,19 @@ permalink: funding.html
 
 .funding-logo {
   display: block;
-  max-height: 54px;
-  max-width: 86px;
+  height: 48px;
+  max-width: 96px;
   object-fit: contain;
+  width: 96px;
 }
 
 .funding-logo-secondary {
-  border-top: 1px solid rgba(203, 213, 225, 0.8);
-  max-height: 22px;
-  max-width: 76px;
+  border-top: 0;
+  height: 22px;
+  max-width: 90px;
   object-fit: contain;
-  padding-top: 8px;
+  padding-top: 0;
+  width: 90px;
 }
 
 .funding-name {
@@ -118,11 +123,17 @@ permalink: funding.html
 
 @media only screen and (max-width: 640px) {
   .funding-page {
-    padding: 0 0 52px;
+    padding: 0 0 96px;
+  }
+
+  .funding-lead {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    margin: -2px 0 26px;
   }
 
   .funding-section {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
 
   .funding-section-title {
@@ -131,10 +142,10 @@ permalink: funding.html
   }
 
   .funding-card {
-    gap: 14px;
+    gap: 12px;
     grid-template-columns: 82px 1fr;
-    min-height: 118px;
-    padding: 16px 15px;
+    min-height: 114px;
+    padding: 14px 14px;
   }
 
   .funding-logo-wrap {
@@ -144,14 +155,15 @@ permalink: funding.html
   }
 
   .funding-logo {
-    max-height: 42px;
-    max-width: 66px;
+    height: 38px;
+    max-width: 70px;
+    width: 70px;
   }
 
   .funding-logo-secondary {
-    max-height: 18px;
-    max-width: 58px;
-    padding-top: 6px;
+    height: 17px;
+    max-width: 68px;
+    width: 68px;
   }
 
   .funding-name {
@@ -178,6 +190,7 @@ permalink: funding.html
 <div class="full no-padding funding-page">
   <div class="row">
     <div class="large-12 columns">
+      <p class="funding-lead">Grants and Industry Collaborations Supporting PI Lab Research</p>
       <section class="funding-section">
         <h2 class="funding-section-title">Grants</h2>
         <div class="funding-grid">
@@ -198,7 +211,7 @@ permalink: funding.html
             </div>
             <div>
               <h3 class="funding-name">Humanoid Robots for Chemical Processes</h3>
-              <p class="funding-meta"><strong>Funding</strong> KETI · <strong>Lead</strong> Holiday Robotics</p>
+              <p class="funding-meta"><strong>Funding</strong> KETI<br><strong>Lead</strong> Holiday Robotics</p>
             </div>
           </article>
 
@@ -209,7 +222,7 @@ permalink: funding.html
             </div>
             <div>
               <h3 class="funding-name">World Foundation Model for Physical AI</h3>
-              <p class="funding-meta"><strong>Funding</strong> IITP · <strong>Lead</strong> LG Electronics</p>
+              <p class="funding-meta"><strong>Funding</strong> IITP<br><strong>Lead</strong> LG Electronics</p>
             </div>
           </article>
         </div>

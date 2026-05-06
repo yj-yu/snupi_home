@@ -38,7 +38,7 @@ section_id: home
 
 
   
-  <div class='row home-news-grid-row'>
+  <div class='row'>
     <div class='large-12 columns'>
       {% include section-header.html title="Our Latest Work" %}
     </div>
@@ -47,7 +47,7 @@ section_id: home
     <div class='large-12 columns'>
       <div class="test">
       <p align="middle">
-        <iframe class="latest-work-frame" src="slide.html" title="latest work" width="100%" height="600"></iframe>
+        <iframe class="latest-work-frame" src="slide.html" title="latest work" width="100%" height="490"></iframe>
       </p>
       </div>
     </div>
@@ -55,13 +55,13 @@ section_id: home
 
 </div>
 
-<div class='full no-padding'>
-  <div class='row'>
+<div class='full no-padding home-news-section'>
+  <div class='row home-news-title-row'>
     <div class='large-12 columns'>
       {% include section-header.html title="News" %}
     </div>
   </div>
-  <div class='row'>
+  <div class='row home-news-grid-row'>
     <!-- News for papers -->
     <div class='medium-6 columns home-news-column'>
       {% assign post_count = 0 %}
