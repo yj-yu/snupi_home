@@ -9,8 +9,8 @@
 {% endfor %}
 
 <div class="small-6 medium-4 large-custom-5 columns wp-block-coblocks-author member-card"
-     style="font-size:15px; text-align: center; display: flex; flex-direction: column; align-items: center; margin: 0; height: 400px; margin-bottom: 100px; background-color: #ffffff; box-shadow: none;">
-  <figure class="wp-block-coblocks-author__avatar" style="margin-left: 30px; margin-bottom: 20px; width: 100%; display: flex; justify-content: center;">
+     style="font-size:15px; text-align: center; display: flex; flex-direction: column; align-items: center; margin: 0; height: auto; margin-bottom: 0; background-color: #ffffff; box-shadow: none;">
+  <figure class="wp-block-coblocks-author__avatar" style="margin-left: 0; margin-bottom: 9px; width: 100%; display: flex; justify-content: center;">
     <a href="{{homeurl}}" style="width: 100%; display: flex; justify-content: center;">
       <img class="wp-block-coblocks-author__avatar-img" src="./images/people/{{member.img-filename}}"
            style="margin: auto; display: block; width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
@@ -48,13 +48,13 @@
       <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://sites.google.com/view/sungjoon-choi/home">  RI Lab.</a></i>
     {% endif %}
     </div>
-    <p class="wp-block-coblocks-author__biography" style="margin-top: 5px;">  <!-- Added margin-top here -->
+    <p class="wp-block-coblocks-author__biography" style="margin-top: 4px;">  <!-- Added margin-top here -->
       {% for field in member.fields %}
       {% assign color = color_list[forloop.index0] %}
         {% if field.name == "Multimodal perception for AI" %}
-        <div class="member-field" style="margin-bottom:-3%;">
+        <div class="member-field" style="margin-bottom:1px;">
         {% else %}
-        <div class="member-field" style="margin-bottom:3.5%;">
+        <div class="member-field" style="margin-bottom:2px;">
         {% endif %}
       <span class="member-interest-tag" style="background-color: {{color}};">{{field.name}}</span>
       </div>

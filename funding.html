@@ -7,7 +7,7 @@ permalink: funding.html
 
 <style>
 .funding-page {
-  font-family: var(--site-font-family);
+  font-family: var(--site-font-family) !important;
   padding: 10px 0 132px;
 }
 
@@ -31,7 +31,7 @@ permalink: funding.html
 
 .funding-section-title {
   color: #2f343b;
-  font-family: var(--site-display-font-family);
+  font-family: var(--site-display-font-family) !important;
   font-size: 1.68rem;
   font-weight: 850;
   letter-spacing: 0;
@@ -45,7 +45,7 @@ permalink: funding.html
 }
 
 .funding-grid.two-column {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .funding-card {
@@ -53,11 +53,11 @@ permalink: funding.html
   background: #fff;
   border: 1px solid var(--site-card-border);
   border-radius: var(--site-card-radius);
-  box-shadow: var(--site-card-shadow);
+  box-shadow: 0 2px 8px rgba(31, 56, 88, 0.025);
   display: grid;
   gap: 16px;
   grid-template-columns: 112px 1fr;
-  font-family: var(--site-font-family);
+  font-family: var(--site-font-family) !important;
   min-height: 136px;
   padding: 20px 22px;
 }
@@ -98,16 +98,16 @@ permalink: funding.html
 
 .funding-name {
   color: #1f2e4a;
-  font-family: var(--site-font-family);
+  font-family: var(--site-font-family) !important;
   font-size: 1.16rem;
-  font-weight: 750;
+  font-weight: 700;
   line-height: 1.35;
   margin: 0 0 8px;
 }
 
 .funding-meta {
   color: #607086;
-  font-family: var(--site-font-family);
+  font-family: var(--site-font-family) !important;
   font-size: 0.96rem;
   font-weight: 520;
   line-height: 1.45;
@@ -253,6 +253,16 @@ permalink: funding.html
             <div>
               <h3 class="funding-name">LVLM-Based Industrial Anomaly Detection</h3>
               <p class="funding-meta"><strong>Partner</strong> POSCO DX</p>
+            </div>
+          </article>
+
+          <article class="funding-card">
+            <div class="funding-logo-wrap">
+              <img class="funding-logo" src="images/fundings/google_research.png" alt="Google Research">
+            </div>
+            <div>
+              <h3 class="funding-name">Embodied Commonsense Reasoning</h3>
+              <p class="funding-meta"><strong>Partner</strong> Google Research</p>
             </div>
           </article>
         </div>
