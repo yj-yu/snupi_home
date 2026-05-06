@@ -53,6 +53,11 @@ count_year_min: 2016
         <div class='small-8 medium-10 columns'>
           <div class='mod modIconText'>
             
+            {% if paper.conference %}
+            <div class="publication-venue-line">
+              <span class='publication-conference-text'>{{paper.conference}}</span>
+            </div>
+            {% endif %}
             <h3>{{paper.name}}</h3>
             <div class="publication-meta-line">
               {% if paper.keywords %}
@@ -117,12 +122,6 @@ count_year_min: 2016
                 {% if paper.equal %}
                   (* equal contribution)
                 {% endif%}
-                <br/>
-              {% endif %}
-              {% if paper.conference %}
-                <span class="publication-venue-line">
-                  <span class='publication-conference-text'>{{paper.conference}}</span>
-                </span>
                 <br/>
               {% endif %}
               {{paper.book}}<div class='mod modIconText'></div>

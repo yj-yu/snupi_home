@@ -48,13 +48,13 @@ body :not(i):not([class^="fa"]):not([class*=" fa-"]):not([class^="icon-"]):not([
 .contain-to-grid .top-bar-section li.active:not(.has-form) > a:not(.button):hover,
 .contain-to-grid .top-bar-section ul li.active > a {
   background: #fff !important;
-  border-bottom-color: #4f91ff !important;
-  color: #2f7df6 !important;
+  border-bottom-color: #5d86d7 !important;
+  color: #2f5fae !important;
   font-weight: 720 !important;
 }
 
 .contain-to-grid .top-bar-section li:not(.has-form):not(.active) > a:not(.button):hover {
-  color: #2f7df6 !important;
+  color: #2f5fae !important;
 }
 @font-face {
   font-family: "Steelfish";
@@ -4804,7 +4804,7 @@ svg:not(:root) {
   }
 
   .latest-work-frame {
-    height: 340px;
+    height: 315px;
     border-radius: 16px;
     box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
   }
@@ -5251,7 +5251,7 @@ svg:not(:root) {
     font-family: var(--site-font-family) !important;
     font-size: 0.84rem !important;
     line-height: 1.25 !important;
-    margin: 6px 0 6px !important;
+    margin: 0 0 6px !important;
     padding: 4px 10px !important;
 }
 
