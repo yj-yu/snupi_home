@@ -11,6 +11,20 @@ permalink: funding.html
   padding: 10px 0 132px;
 }
 
+.funding-title-area .modSectionHeader.big h2 {
+  font-family: var(--site-display-font-family) !important;
+  font-size: 4rem;
+  font-weight: 800 !important;
+  letter-spacing: 0.035em;
+  line-height: 1.04;
+}
+
+@media only screen and (max-width: 640px) {
+  .funding-title-area .modSectionHeader.big h2 {
+    font-size: 2rem;
+  }
+}
+
 .funding-lead {
   color: #607086;
   font-size: 1.02rem;
@@ -44,6 +58,10 @@ permalink: funding.html
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.funding-grid.grants-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .funding-grid.two-column {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -60,6 +78,21 @@ permalink: funding.html
   font-family: var(--site-font-family) !important;
   min-height: 136px;
   padding: 20px 22px;
+}
+
+.grants-grid .funding-card {
+  gap: 12px;
+  grid-template-columns: 88px 1fr;
+  padding: 18px 18px;
+}
+
+.grants-grid .funding-logo-wrap {
+  width: 88px;
+}
+
+.grants-grid .funding-logo {
+  max-width: 78px;
+  width: 78px;
 }
 
 .funding-logo-wrap {
@@ -121,6 +154,7 @@ permalink: funding.html
 
 @media only screen and (max-width: 1024px) {
   .funding-grid,
+  .funding-grid.grants-grid,
   .funding-grid.two-column {
     grid-template-columns: 1fr;
   }
@@ -183,7 +217,7 @@ permalink: funding.html
 }
 </style>
 
-<div class='full parallax' style='padding-top: 50px;'>
+<div class='full parallax funding-title-area' style='padding-top: 50px;'>
   <div class='row'>
     <div class='large-12 columns'>
       {% include section-header.html title="Funding" tagline=" " color="#464646" class="big" %}
@@ -198,7 +232,7 @@ permalink: funding.html
       <p class="funding-lead">Grants and Industry Collaborations Supporting PI Lab Research</p>
       <section class="funding-section">
         <h2 class="funding-section-title">Grants</h2>
-        <div class="funding-grid">
+        <div class="funding-grid grants-grid">
           <article class="funding-card">
             <div class="funding-logo-wrap">
               <img class="funding-logo" src="images/fundings/NRF.png" alt="NRF">
@@ -215,6 +249,16 @@ permalink: funding.html
             </div>
             <div>
               <h3 class="funding-name">Multimodal RLHF for Personalized Education</h3>
+              <p class="funding-meta"><strong>Funding</strong> NRF</p>
+            </div>
+          </article>
+
+          <article class="funding-card">
+            <div class="funding-logo-wrap">
+              <img class="funding-logo" src="images/fundings/NRF.png" alt="NRF">
+            </div>
+            <div>
+              <h3 class="funding-name">Collaborative Autonomy for Multi-Humanoid Systems</h3>
               <p class="funding-meta"><strong>Funding</strong> NRF</p>
             </div>
           </article>

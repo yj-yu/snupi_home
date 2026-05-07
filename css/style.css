@@ -4890,19 +4890,21 @@ svg:not(:root) {
 
 @media only screen and (max-width: 640px) {
   .home-news-grid-row {
-    margin-top: -4px;
+    margin-top: -6px;
+    margin-bottom: 0;
   }
 
   .home-news-column {
     padding-left: 1.05rem !important;
     padding-right: 1.05rem !important;
+    margin-bottom: 0 !important;
   }
 
   .home-news-item {
-    margin: 0 0 0.5rem;
-    padding: 0.58rem 0.72rem 0.58rem 0.86rem;
+    margin: 0 0 0.34rem;
+    padding: 0.52rem 0.68rem 0.52rem 0.82rem;
     border-radius: 10px;
-    line-height: 1.34;
+    line-height: 1.3;
   }
 
   .home-news-item:before {
@@ -4927,7 +4929,8 @@ svg:not(:root) {
     display: block;
     font-size: 0.72rem;
     line-height: 1.34;
-    margin-top: 0.2rem;
+    margin-top: 0.14rem;
+    margin-bottom: 0;
   }
 
   .home-news-more {
@@ -4938,7 +4941,12 @@ svg:not(:root) {
 
   .home-news-more-wrap {
     text-align: center;
-    margin-top: 6px;
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+
+  .home-news-section {
+    padding-bottom: 8px !important;
   }
 }
 
