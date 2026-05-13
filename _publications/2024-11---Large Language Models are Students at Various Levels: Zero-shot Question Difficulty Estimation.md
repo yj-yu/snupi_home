@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Large Language Models are Students at Various Levels: Zero-shot Question Difficulty Estimation"
-conference: EMNLP2024 (Findings)
+conference: EMNLP 2024 (Findings)
 year: 2024
 
 

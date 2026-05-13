@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "MASS: Overcoming Language Bias in Image-Text Matching"
-conference: AAAI2025
+conference: AAAI 2025
 year: 2025
 author:
   - name: "Jiwan Chung"

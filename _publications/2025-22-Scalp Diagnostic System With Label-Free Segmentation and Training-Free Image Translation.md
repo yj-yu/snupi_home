@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Scalp Diagnostic System With Label-Free Segmentation and Training-Free Image Translation"
-conference: MICCAI2025
+conference: MICCAI 2025
 year: 2025
 
 author:

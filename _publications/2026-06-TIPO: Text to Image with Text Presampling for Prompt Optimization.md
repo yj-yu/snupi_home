@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "TIPO: Text to Image with Text Presampling for Prompt Optimization"
-conference: ICLR2026
+conference: ICLR 2026
 year: 2026
 
 author:

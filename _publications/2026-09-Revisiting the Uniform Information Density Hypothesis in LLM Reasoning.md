@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Revisiting the Uniform Information Density Hypothesis in LLM Reasoning"
-conference: ACL2026 Findings
+conference: ACL 2026 Findings
 year: 2026
 
 author:

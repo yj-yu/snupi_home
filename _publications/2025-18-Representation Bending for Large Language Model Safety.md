@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Representation Bending for Large Language Model Safety"
-conference: ACL2025
+conference: ACL 2025
 year: 2025
 
 author:

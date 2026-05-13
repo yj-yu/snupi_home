@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Verifying the Verifiers: Unveiling Pitfalls and Potentials in Fact Verifiers"
-conference: COLM2025
+conference: COLM 2025
 year: 2025
 
 

@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Zero-shot Multimodal Document Retrieval via Cross-modal Question Generation"
-conference: EMNLP2025
+conference: EMNLP 2025
 year: 2025
 
 

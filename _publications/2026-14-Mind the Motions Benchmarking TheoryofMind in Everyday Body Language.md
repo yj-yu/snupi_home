@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Mind the Motions: Benchmarking Theory‑of‑Mind in Everyday Body Language"
-conference: ACL2026
+conference: ACL 2026
 year: 2026
 
 author:

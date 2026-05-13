@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "DEEPTalk: Dynamic Emotion Embedding for Probabilistic Speech-Driven 3D Face Animation"
-conference: AAAI2025 
+conference: AAAI 2025
 year: 2025
 
 

@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "WILDGUARD: Open One-stop Moderation Tools for Safety Risks, Jailbreaks, and Refusals of LLMs"
-conference: NeurIPS2024
+conference: NeurIPS 2024
 year: 2024
 
 

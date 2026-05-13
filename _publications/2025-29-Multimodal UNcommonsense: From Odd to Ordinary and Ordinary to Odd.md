@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Multimodal UNcommonsense: From Odd to Ordinary and Ordinary to Odd"
-conference: EMNLP2025 (Findings)
+conference: EMNLP 2025 (Findings)
 year: 2025
 
 

@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "NMIXX: Domain-Adapted Neural Embeddings for Cross-Lingual eXploration of Finance"
-conference: CIKM2025
+conference: CIKM 2025
 year: 2025
 
 author:

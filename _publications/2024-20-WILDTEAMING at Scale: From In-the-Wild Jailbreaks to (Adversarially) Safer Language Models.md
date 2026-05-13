@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "WILDTEAMING at Scale: From In-the-Wild Jailbreaks to (Adversarially) Safer Language Models"
-conference: NeurIPS2024
+conference: NeurIPS 2024
 year: 2024
 author:
   - name: "Liwei Jiang"

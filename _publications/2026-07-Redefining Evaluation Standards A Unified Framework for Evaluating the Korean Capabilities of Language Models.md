@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Redefining Evaluation Standards: A Unified Framework for Evaluating the Korean Capabilities of Language Models"
-conference: LREC2026
+conference: LREC 2026
 year: 2026
 
 author:

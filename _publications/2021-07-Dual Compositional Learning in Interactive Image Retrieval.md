@@ -3,7 +3,7 @@ layout: publications
 section-type: publications
 name: "Dual Compositional Learning in Interactive Image Retrieval"
 year: 2021
-conference: AAAI2021
+conference: AAAI 2021
 author:
   - name: "Jongseok Kim"
   - name: "Youngjae Yu"

@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "ActionSwitch: Class-agnostic Detection of Simultaneous Actions in Streaming Videos"
-conference: ECCV2024
+conference: ECCV 2024
 year: 2024
 author:
   - name: "Hyolim Kang"

@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Do Language Models Associate Sound with Meaning? A Multimodal Study of Sound Symbolism"
-conference: AAAI2026 (Oral)
+conference: AAAI 2026 (Oral)
 year: 2026
 
 author:

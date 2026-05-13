@@ -3,7 +3,7 @@ layout: publications
 section-type: publications
 name: "Self-Supervised Learning of Compressed Video Representations"
 year: 2021
-conference: ICLR2021
+conference: ICLR 2021
 author:
   - name: "Youngjae Yu"
   - name: "Sangho Lee"

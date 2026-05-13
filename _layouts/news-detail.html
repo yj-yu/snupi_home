@@ -18,7 +18,7 @@ section_id: news
 <div class='full news-detail-wrap'>
   <div class='row'>
     <div class='large-12 columns'>
-      <div class='mod modBlogPost big news-detail-card'>
+      <article class='mod modBlogPost big news-detail-card'>
         <div class='images' >
           {% for image in page.images %}
             <div class='image'><img alt="" src="{{site.baseurl}}/{{image}}" /></div>
@@ -29,10 +29,12 @@ section_id: news
             <span>{{page.date | date: "%B %d, %Y" }}</span>
           </p>
           <h3><a href="{{page.url}}">{{page.emoji}}&nbsp; {{page.title}}</a></h3>
-          <div class="news-detail-summary">{{page.summary}}</div>
+          {% if page.summary and page.summary != "" %}
+            <div class="news-detail-summary">{{page.summary}}</div>
+          {% endif %}
           <div class="news-detail-body">{{ page.body | newline_to_br }}</div>
         </div>
-      </div>
+      </article>
       <div class='two spacing'></div>
     </div>
   </div>

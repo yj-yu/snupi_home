@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "What Users Leave Unsaid: Under-Specified Queries Limit Vision-Language Models"
-conference: ACL2026 Findings
+conference: ACL 2026 Findings
 year: 2026
 
 author:

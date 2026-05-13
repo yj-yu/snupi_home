@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Are Any-to-Any Models More Consistent Across Modality Transfers Than Specialists?"
-conference: ACL2025
+conference: ACL 2025
 year: 2025
 
 

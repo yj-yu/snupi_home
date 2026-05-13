@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Can visual language models resolve textual ambiguity with visual cues? Let visual puns tell you!"
-conference: EMNLP2024
+conference: EMNLP 2024
 year: 2024
 
 author:

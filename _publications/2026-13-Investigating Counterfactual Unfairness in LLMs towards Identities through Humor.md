@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Investigating Counterfactual Unfairness in LLMs towards Identities through Humor"
-conference: ACL2026
+conference: ACL 2026
 year: 2026
 
 author:

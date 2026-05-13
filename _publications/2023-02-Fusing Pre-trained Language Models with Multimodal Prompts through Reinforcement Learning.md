@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Fusing Pre-trained Language Models with Multimodal Prompts through Reinforcement Learning"
-conference: CVPR2023
+conference: CVPR 2023
 year: 2023
 author:
   - name: "Youngjae Yu"

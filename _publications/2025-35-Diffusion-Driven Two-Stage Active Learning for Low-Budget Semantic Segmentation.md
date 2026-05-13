@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Diffusion-Driven Two-Stage Active Learning for Low-Budget Semantic Segmentation"
-conference: NeurIPS2025
+conference: NeurIPS 2025
 year: 2025
 
 

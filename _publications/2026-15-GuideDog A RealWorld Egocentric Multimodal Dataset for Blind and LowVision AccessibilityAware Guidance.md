@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "GuideDog: A Real-World Egocentric Multimodal Dataset for Blind and Low-Vision Accessibility-Aware Guidance"
-conference: ACL2026
+conference: ACL 2026
 year: 2026
 
 author:

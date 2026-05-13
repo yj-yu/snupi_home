@@ -3,7 +3,7 @@ layout: publications
 section-type: publications
 name: "Speaking Beyond Language: A Large-Scale Multimodal Dataset for Learning Nonverbal Cues from Video-Grounded Dialogues"
 
-conference: ACL2025
+conference: ACL 2025
 year: 2025
 
 

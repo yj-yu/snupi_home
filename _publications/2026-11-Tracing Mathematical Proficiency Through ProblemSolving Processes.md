@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Tracing Mathematical Proficiency Through Problem-Solving Processes"
-conference: ACL2026 Findings
+conference: ACL 2026 Findings
 year: 2026
 
 author:

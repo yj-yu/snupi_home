@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Long Story Short: a Summarize-then-Search Method for Long Video Question Answering"
-conference: BMVC2023
+conference: BMVC 2023
 year: 2023
 author:
   - name: "Jiwan Chung"

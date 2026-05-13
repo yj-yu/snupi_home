@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "i-SRT: Aligning Large Multimodal Models for Videos by Iterative Self-Retrospective Judgment"
-conference: AAAI2025
+conference: AAAI 2025
 year: 2025
 author:
   - name: "Daechul Ahn"

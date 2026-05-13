@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "DUSK: Do Not Unlearn Shared Knowledge"
-conference: ACL2026 Findings
+conference: ACL 2026 Findings
 year: 2026
 
 author:

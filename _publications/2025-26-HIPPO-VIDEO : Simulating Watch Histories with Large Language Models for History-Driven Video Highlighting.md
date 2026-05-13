@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "HIPPO-VIDEO : Simulating Watch Histories with Large Language Models for History-Driven Video Highlighting"
-conference: COLM2025
+conference: COLM 2025
 year: 2025
 
 

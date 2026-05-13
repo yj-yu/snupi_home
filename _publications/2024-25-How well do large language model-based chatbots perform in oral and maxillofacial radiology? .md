@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "How well do large language model-based chatbots perform in oral and maxillofacial radiology?"
-conference: DMFR2024
+conference: DMFR 2024
 year: 2024
 author:
   - name: "Hui Jeong"

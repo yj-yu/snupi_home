@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Do MLLMs Capture How Interfaces Guide User Behavior? A Benchmark for Multimodal UI/UX Design Understanding"
-conference: ACL2026
+conference: ACL 2026
 year: 2026
 
 author:

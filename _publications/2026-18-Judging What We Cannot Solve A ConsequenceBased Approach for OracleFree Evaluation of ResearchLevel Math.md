@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Judging What We Cannot Solve: A Consequence-Based Approach for Oracle-Free Evaluation of Research-Level Math"
-conference: ICML2026 (Spotlight)
+conference: ICML 2026 (Spotlight)
 year: 2026
 
 author:

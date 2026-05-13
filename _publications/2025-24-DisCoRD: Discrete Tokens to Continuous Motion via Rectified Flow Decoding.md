@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "DisCoRD: Discrete Tokens to Continuous Motion via Rectified Flow Decoding"
-conference: ICCV2025
+conference: ICCV 2025
 year: 2025
 
 

@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "G1yphD3c0de: Towards Safer Language Models on Visually Perturbed Texts"
-conference: COLM2025
+conference: COLM 2025
 year: 2025
 
 

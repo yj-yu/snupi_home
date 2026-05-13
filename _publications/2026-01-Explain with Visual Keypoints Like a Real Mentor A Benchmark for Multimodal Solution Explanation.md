@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Explain with Visual Keypoints Like a Real Mentor! A Benchmark for Multimodal Solution Explanation"
-conference: AAAI2026
+conference: AAAI 2026
 year: 2026
 
 author:

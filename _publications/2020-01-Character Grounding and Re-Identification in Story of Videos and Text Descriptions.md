@@ -3,7 +3,7 @@ layout: publications
 section-type: publications
 name: "Character Grounding and Re-Identification in Story of Videos and Text Descriptions"
 year: 2020
-conference: ECCV2020
+conference: ECCV 2020
 author:
   - name: "Youngjae Yu"
   - name: "Jongseok Kim"

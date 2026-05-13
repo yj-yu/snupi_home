@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Navigating Text-To-Image Customization:From LyCORIS Fine-Tuning to Model Evaluation"
-conference: ICLR2024
+conference: ICLR 2024
 year: 2024
 author:
   - name: "Shin-Ying Yeh"

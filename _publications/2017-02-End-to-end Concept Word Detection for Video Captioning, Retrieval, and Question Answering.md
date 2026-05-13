@@ -3,7 +3,7 @@ layout: publications
 section-type: publications
 name: "End-to-end Concept Word Detection for Video Captioning, Retrieval, and Question Answering"
 year: 2017
-conference: CVPR2017
+conference: CVPR 2017
 author:
   - name: "Youngjae Yu"
   - name: "Hyungjin Ko"

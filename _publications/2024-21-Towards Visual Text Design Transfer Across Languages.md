@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Towards Visual Text Design Transfer Across Languages"
-conference: NeurIPS2024
+conference: NeurIPS 2024
 year: 2024
 
 author:
