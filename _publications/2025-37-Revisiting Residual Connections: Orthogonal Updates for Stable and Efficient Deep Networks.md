@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Revisiting Residual Connections: Orthogonal Updates for Stable and Efficient Deep Networks"
-conference: Neurips2025
+conference: NeurIPS2025
 year: 2025
 
 

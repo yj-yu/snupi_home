@@ -30,7 +30,11 @@ author:
   - name: "Youngjae Yu"
   - name: "Yunsung Lee"
 
+author_display_limit: 3
 
+corresponding_author:
+  - name: "Youngjae Yu"
+  - name: "Yunsung Lee"
 
 equal_contributor_idx:
   - 0
@@ -51,4 +55,3 @@ keywords:
 
 display: False
 ---
-

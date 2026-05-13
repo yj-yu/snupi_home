@@ -94,30 +94,53 @@ count_year_min: 2016
                   contributed.
                 <!--하이퍼클로버 외의 정상적인 상황-->
                 {% else %}
-                  {% for member in paper.author %}
-                    {% assign temp = false %}
-                    {% if member.link %}<a href="{{member.link}}">{% endif %}
-                    {% if member.link == nil %}
-                      {% for member2 in site.people %}
-                        {% if member.name == member2.fullname %}
-                          {% assign person_url = member2.permalink %}
-                          {% for social in member2.social %}
-                            {% if social.title == "home" %}
-                              {% assign person_url = social.url %}
-                            {% endif %}
-                          {% endfor %}
-                          {% assign temp = true %}<a href="{{person_url}}">
-                          {% break %}
-                        {% endif %}
-                      {% endfor %}
+                  {% assign author_limit = paper.author_display_limit | default: paper.author.size %}
+                  {%- for member in paper.author -%}
+                    {% if forloop.index <= author_limit %}
+                      {% assign person_url = member.link | default: "" %}
+                      {% if person_url == "" %}
+                        {% for member2 in site.people %}
+                          {% if member.name == member2.fullname %}
+                            {% assign person_url = member2.permalink %}
+                            {% for social in member2.social %}
+                              {% if social.title == "home" %}
+                                {% assign person_url = social.url %}
+                              {% endif %}
+                            {% endfor %}
+                            {% break %}
+                          {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                      {% assign name = member.name %}
+                      {% if name contains "_" %}
+                        {% assign name = name | remove: "_" %}
+                      {% endif %}
+                      {%- if person_url != "" -%}<a href="{{person_url}}">{{ name }}</a>{%- else -%}{{ name }}{%- endif -%}{%- if paper.equal_contributor_idx contains forloop.index0 -%}*{%- endif -%}{%- if member.school -%}({{member.school}}){%- endif -%}{%- if paper.corresponding_author -%}{%- if forloop.index < author_limit -%}, {%- elsif paper.author.size > author_limit -%}, et al. (Corresponding authors: {%- else -%} (Corresponding authors: {%- endif -%}{%- elsif forloop.rindex > 1 -%}, {% endif %}
                     {% endif %}
-                    {% assign name = member.name %}
-                    {% if name contains "_" %}
-                      {% assign name = name | remove: "_" %}
-                    {% endif %}
-                      {{ name }}{% if member.link or temp %}</a>{% endif %}{% if paper.equal_contributor_idx contains forloop.index0 %}*{% endif %}{% if member.school %}({{member.school}}){% endif %}{% if forloop.rindex > 1 %}, 
-                    {% endif %}
-                  {% endfor %}
+                  {%- endfor -%}
+                  {%- if paper.corresponding_author -%}
+                    {%- for member in paper.corresponding_author -%}
+                      {%- assign person_url = member.link | default: "" -%}
+                      {%- if person_url == "" -%}
+                        {%- for member2 in site.people -%}
+                          {%- if member.name == member2.fullname -%}
+                            {%- assign person_url = member2.permalink -%}
+                            {%- for social in member2.social -%}
+                              {%- if social.title == "home" -%}
+                                {%- assign person_url = social.url -%}
+                              {%- endif -%}
+                            {%- endfor -%}
+                            {%- break -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+                      {%- endif -%}
+                      {%- assign name = member.name -%}
+                      {%- if name contains "_" -%}
+                        {%- assign name = name | remove: "_" -%}
+                      {%- endif -%}
+                      {%- unless forloop.first -%}, {% endunless -%}{%- if person_url != "" -%}<a href="{{person_url}}">{{ name }}</a>{%- else -%}{{ name }}{%- endif -%}
+                    {%- endfor -%})
+                  {%- endif -%}
                 {% endif %}
                 {% if paper.equal %}
                   (* equal contribution)
