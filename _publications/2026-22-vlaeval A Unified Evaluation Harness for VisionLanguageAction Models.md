@@ -3,7 +3,7 @@ layout: publications
 section-type: publications
 name: "vla-eval: A Unified Evaluation Harness for Vision-Language-Action Models"
 year: 2026
-conference: ICLR 2026 Workshop
+conference: ICRA 2026 Workshop
 
 author:
   - name: "Suhwan Choi"
