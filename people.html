@@ -5,6 +5,7 @@ section_id: people
 permalink: people.html
 active_positions:
   - Professor
+  - Postdoctoral Researcher
   - Student
   - Industry-Affiliated Student
   - Visiting Scholar
@@ -111,8 +112,8 @@ input:checked + .slider:before {
   }
 
   .wp-block-coblocks-author__avatar-img {
-    width: 180px !important;
-    height: 180px !important;
+    width: 168px !important;
+    height: 168px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
     margin: 0 auto !important;
@@ -158,8 +159,8 @@ input:checked + .slider:before {
     justify-content: center !important;
   }
   .wp-block-coblocks-author__avatar-img {
-    width: 94px !important;  
-    height: 94px !important; 
+    width: 88px !important;
+    height: 88px !important;
     border-radius: 50% !important; 
     object-fit: cover !important;
   }
@@ -212,9 +213,24 @@ input:checked + .slider:before {
 
 .member-grid .wp-block-coblocks-author__avatar {
   margin: 0 auto 4px !important;
-  width: 100% !important;
-  height: 180px !important;
+  width: 168px !important;
+  height: 168px !important;
+  flex: 0 0 168px !important;
   justify-content: center !important;
+}
+
+.member-grid .wp-block-coblocks-author__avatar-img {
+  aspect-ratio: 1 / 1 !important;
+  display: block !important;
+  flex: 0 0 auto !important;
+  height: 168px !important;
+  max-height: 168px !important;
+  max-width: 168px !important;
+  min-height: 168px !important;
+  min-width: 168px !important;
+  object-fit: cover !important;
+  position: static !important;
+  width: 168px !important;
 }
 
 .member-grid:after {
@@ -352,8 +368,19 @@ input:checked + .slider:before {
   }
 
   .member-grid .wp-block-coblocks-author__avatar {
-    height: 94px !important;
+    width: 88px !important;
+    height: 88px !important;
+    flex-basis: 88px !important;
     margin-bottom: 4px !important;
+  }
+
+  .member-grid .wp-block-coblocks-author__avatar-img {
+    height: 88px !important;
+    max-height: 88px !important;
+    max-width: 88px !important;
+    min-height: 88px !important;
+    min-width: 88px !important;
+    width: 88px !important;
   }
 }
 
@@ -418,6 +445,11 @@ document.addEventListener('DOMContentLoaded', function() {
   {% for p in page.active_positions %}
   <div class='row member-section-block{% if forloop.first %} first-member-section{% endif %}'>
     {% if p == "Professor"  %}
+      <div class='medium-12 columns'>
+        <h2>{{p}}</h2>
+      </div>
+    {% endif %}
+    {% if p == "Postdoctoral Researcher" %}
       <div class='medium-12 columns'>
         <h2>{{p}}</h2>
       </div>

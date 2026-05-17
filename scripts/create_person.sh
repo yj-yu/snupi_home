@@ -42,6 +42,7 @@ echo "  6) Visiting Scholar"
 echo "  7) Alumni"
 echo "  8) Intern"
 echo "  9) Collaborator"
+echo "  10) Postdoctoral Researcher"
 read -r position_choice
 
 case $position_choice in
@@ -54,6 +55,7 @@ case $position_choice in
     7) position="Alumni"; prefix="07";;
     8) position="Intern"; prefix="08";;
     9) position="Collaborator"; prefix="09";;
+    10) position="Postdoctoral Researcher"; prefix="01";;
     *) echo "잘못된 선택입니다."; exit 1;;
 esac
 
@@ -61,8 +63,8 @@ esac
 echo -e "${GREEN}[필수]${NC} Email을 입력하세요:"
 read -r email
 
-# 필수 필드: fields (쉼표로 구분)
-echo -e "${GREEN}[필수]${NC} Fields를 입력하세요 (쉼표로 구분, 예: NLP, Psychology, Multi-agent Problem):"
+# 선택 필드: fields (쉼표로 구분)
+echo -e "${YELLOW}[선택]${NC} Fields를 입력하세요 (쉼표로 구분, 예: NLP, Psychology, Multi-agent Problem, Enter로 건너뛰기):"
 read -r fields_input
 
 # 선택 필드: emoji
@@ -170,12 +172,16 @@ fi
 # fields 추가
 echo "" >> "$filename"
 echo "fields:" >> "$filename"
-IFS=',' read -ra FIELDS <<< "$fields_input"
-for field in "${FIELDS[@]}"; do
-    # trim whitespace
-    field=$(echo "$field" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
-    echo "    - name : $field" >> "$filename"
-done
+if [ -n "$fields_input" ]; then
+    IFS=',' read -ra FIELDS <<< "$fields_input"
+    for field in "${FIELDS[@]}"; do
+        # trim whitespace
+        field=$(echo "$field" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+        if [ -n "$field" ]; then
+            echo "    - name : $field" >> "$filename"
+        fi
+    done
+fi
 
 # publications 필드 (비워두기)
 cat >> "$filename" << EOF
