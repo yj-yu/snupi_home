@@ -5,7 +5,6 @@ section_id: people
 permalink: people.html
 active_positions:
   - Professor
-  - Postdoctoral Researcher
   - Student
   - Industry-Affiliated Student
   - Visiting Scholar
@@ -237,6 +236,47 @@ input:checked + .slider:before {
   content: none !important;
 }
 
+.professor-postdoc-grid {
+  clear: both;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  column-gap: 18px;
+  align-items: start;
+  width: 100%;
+}
+
+.professor-column {
+  grid-column: span 1;
+}
+
+.postdoc-column {
+  grid-column: span 4;
+}
+
+.professor-postdoc-grid .member-grid {
+  clear: none;
+  column-gap: 18px;
+  row-gap: 24px;
+}
+
+.professor-column .member-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.postdoc-column .member-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.professor-postdoc-column-title {
+  color: #1f2e4a;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.68rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  margin: 0 0 14px;
+}
+
 .wp-block-coblocks-author__avatar {
   margin-bottom: 7px !important;
 }
@@ -354,6 +394,22 @@ input:checked + .slider:before {
     column-gap: 18px;
     row-gap: 22px;
   }
+
+  .professor-postdoc-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .professor-column {
+    grid-column: span 1;
+  }
+
+  .postdoc-column {
+    grid-column: span 2;
+  }
+
+  .postdoc-column .member-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -361,6 +417,34 @@ input:checked + .slider:before {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 10px;
     row-gap: 16px;
+  }
+
+  .professor-postdoc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 16px;
+    column-gap: 10px;
+  }
+
+  .professor-column,
+  .postdoc-column {
+    grid-column: span 1;
+  }
+
+  .professor-postdoc-grid .member-grid {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 10px;
+    row-gap: 16px;
+  }
+
+  .professor-column .member-grid,
+  .postdoc-column .member-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .professor-postdoc-column-title {
+    font-size: 1.24rem;
+    letter-spacing: 0.08em;
+    margin: 0 0 11px;
   }
 
   .member-grid .member-card {
@@ -444,16 +528,6 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Members except alumni -->
   {% for p in page.active_positions %}
   <div class='row member-section-block{% if forloop.first %} first-member-section{% endif %}'>
-    {% if p == "Professor"  %}
-      <div class='medium-12 columns'>
-        <h2>{{p}}</h2>
-      </div>
-    {% endif %}
-    {% if p == "Postdoctoral Researcher" %}
-      <div class='medium-12 columns'>
-        <h2>{{p}}</h2>
-      </div>
-    {% endif %}
     {% if p == "Visiting Scholar"%}
       <div class='medium-12 columns'>
         <h2>{{p}}s</h2>
@@ -487,6 +561,32 @@ document.addEventListener('DOMContentLoaded', function() {
       <h2>{{p}}s</h2>
       </div>
     {% endif %}
+    {% if p == "Professor" %}
+      <div class="medium-12 columns">
+        <div class="professor-postdoc-grid">
+          <div class="professor-column">
+            <h2 class="professor-postdoc-column-title">Professor</h2>
+            <div class="member-grid professor-grid">
+              {% for member in site.people %}
+                {% if member.position contains "Professor" %}
+                  {% include member-card.html member=member color_list=page.color_list %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="postdoc-column">
+            <h2 class="professor-postdoc-column-title">Postdoctoral Researcher</h2>
+            <div class="member-grid postdoc-grid">
+              {% for member in site.people %}
+                {% if member.position contains "Postdoctoral Researcher" %}
+                  {% include member-card.html member=member color_list=page.color_list %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% else %}
     {% for member in site.people %}
       {% comment %} 
          중복 방지
@@ -521,6 +621,7 @@ document.addEventListener('DOMContentLoaded', function() {
     {% if member_grid_open %}
       </div>
       {% assign member_grid_open = false %}
+    {% endif %}
     {% endif %}
   </div>
 
