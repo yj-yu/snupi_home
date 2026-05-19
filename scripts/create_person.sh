@@ -4,6 +4,7 @@
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 YELLOW='\033[1;33m'
+RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 # 스크립트 디렉토리 찾기
@@ -109,6 +110,9 @@ if [ -n "$works" ]; then
         if [ -z "$affiliation_logo_width" ]; then
             affiliation_logo_width="$default_logo_width"
         fi
+        if [[ "$affiliation_logo_width" =~ ^[0-9]+$ ]]; then
+            affiliation_logo_width="${affiliation_logo_width}px"
+        fi
     fi
 fi
 
@@ -125,6 +129,13 @@ fi
 snake_name=$(echo "$fullname" | tr '[:upper:]' '[:lower:]' | tr ' ' '_')
 filename="${PEOPLE_DIR}/${prefix}-${number}-${snake_name}.md"
 
+duplicate_file=$(rg -l "^permalink:[[:space:]]*$permalink[[:space:]]*$" "$PEOPLE_DIR" 2>/dev/null | head -1 || true)
+if [ -n "$duplicate_file" ]; then
+    echo -e "${RED}이미 같은 permalink를 가진 파일이 있습니다: $duplicate_file${NC}"
+    echo "동명이인이거나 기존 인물을 수정하는 경우 permalink를 먼저 정리해 주세요: $permalink"
+    exit 1
+fi
+
 # Markdown 파일 생성
 cat > "$filename" << EOF
 ---
@@ -136,7 +147,7 @@ EOF
 
 # emoji 추가 (있으면)
 if [ -n "$emoji" ]; then
-    echo "emoji: $emoji" >> "$filename"
+    echo "emoji: \"$emoji\"" >> "$filename"
 fi
 
 cat >> "$filename" << EOF

@@ -246,11 +246,11 @@ input:checked + .slider:before {
 }
 
 .professor-column {
-  grid-column: span 1;
+  grid-column: span 2;
 }
 
 .postdoc-column {
-  grid-column: span 4;
+  grid-column: span 3;
 }
 
 .professor-postdoc-grid .member-grid {
@@ -260,11 +260,11 @@ input:checked + .slider:before {
 }
 
 .professor-column .member-grid {
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .postdoc-column .member-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .professor-postdoc-column-title {
@@ -410,6 +410,10 @@ input:checked + .slider:before {
   .postdoc-column .member-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .professor-column .member-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -421,30 +425,32 @@ input:checked + .slider:before {
 
   .professor-postdoc-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 16px;
+    row-gap: 22px;
     column-gap: 10px;
   }
 
   .professor-column,
   .postdoc-column {
-    grid-column: span 1;
+    grid-column: 1 / -1;
   }
 
   .professor-postdoc-grid .member-grid {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 10px;
     row-gap: 16px;
   }
 
   .professor-column .member-grid,
   .postdoc-column .member-grid {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .professor-postdoc-column-title {
-    font-size: 1.24rem;
-    letter-spacing: 0.08em;
+    font-size: 1.12rem;
+    letter-spacing: 0.04em;
     margin: 0 0 11px;
+    text-align: left;
+    white-space: nowrap;
   }
 
   .member-grid .member-card {
