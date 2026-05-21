@@ -12,7 +12,7 @@ works: stanford-university.png
 affiliation:
   label: Graduate Student at
   logo_alt: Stanford
-  logo_width: 65px
+  logo_width: 75px
 social:
   - title: home
     url: https://smchoi226.github.io/

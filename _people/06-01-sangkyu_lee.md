@@ -14,7 +14,7 @@ works: lgai.png
 affiliation:
   label: Internship at
   logo_alt: LG AI Research
-  logo_width: 80px
+  logo_width: 90px
 
 fields:
     - name : Commonsense Reasoning

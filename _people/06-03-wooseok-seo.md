@@ -11,7 +11,7 @@ works: lgai.png
 affiliation:
   label: Internship at
   logo_alt: LG AI Research
-  logo_width: 80px
+  logo_width: 90px
 social:
   - title: home
     url: https://just1nseo.github.io/
