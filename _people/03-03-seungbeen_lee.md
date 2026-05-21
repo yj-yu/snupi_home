@@ -12,7 +12,7 @@ works: cmu.png
 affiliation:
   label: Visiting Scholar at
   logo_alt: Carnegie Mellon University
-  logo_width: 80px
+  logo_width: 65px
 social:
   - title: home
     url: https://seunbite.github.io/

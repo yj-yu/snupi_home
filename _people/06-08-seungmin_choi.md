@@ -8,11 +8,11 @@ position: "Visiting Scholar"
 permalink: people/seungmin.html
 email: seungminchoi22@snu.ac.kr
 
-works: stanford.jpg
+works: stanford-university.png
 affiliation:
   label: Graduate Student at
   logo_alt: Stanford
-  logo_width: 55px
+  logo_width: 65px
 social:
   - title: home
     url: https://smchoi226.github.io/
