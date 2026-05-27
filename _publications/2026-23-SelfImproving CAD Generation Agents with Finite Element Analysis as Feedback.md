@@ -25,7 +25,10 @@ external:
 img: cad.png
 
 keywords:
-  - name: CAD Generation FEA
+  - name: LLM Agents
+  - name: CAD Generation
+  - name: FEA
+
 
 display: False
 ---
