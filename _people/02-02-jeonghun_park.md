@@ -2,7 +2,7 @@
 layout: people-detail
 section-type: people
 fullname: "Jeonghun Park"
-img-filename: park_jeonghun.jpg
+img-filename: park_jeonghun.png
 emoji: ⛷️
 position: "MS/Ph.D. Student"
 permalink: people/jeonghun.html
