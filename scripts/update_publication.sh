@@ -15,6 +15,125 @@ cd "$PROJECT_ROOT"
 
 PUBLICATIONS_DIR="_publications"
 
+upsert_front_matter_scalar() {
+    local file="$1"
+    local key="$2"
+    local value="$3"
+    local quote="$4"
+
+    ruby - "$file" "$key" "$value" "$quote" <<'RUBY'
+file, key, value, quote = ARGV
+order = %w[
+  layout section-type name conference year author equal_contributor_idx
+  corresponding_author external img keywords display
+]
+
+lines = File.readlines(file, chomp: true)
+front_start = lines.index("---")
+front_end = nil
+if front_start
+  ((front_start + 1)...lines.length).each do |idx|
+    if lines[idx] == "---"
+      front_end = idx
+      break
+    end
+  end
+end
+front_start ||= 0
+front_end ||= lines.length
+
+formatted_value = quote == "quote" ? value.dump : value
+new_line = "#{key}: #{formatted_value}"
+replaced = false
+
+((front_start + 1)...front_end).each do |idx|
+  if lines[idx] =~ /^#{Regexp.escape(key)}:/
+    lines[idx] = new_line
+    replaced = true
+    break
+  end
+end
+
+unless replaced
+  target_order = order.index(key) || order.length
+  insert_at = front_end
+  ((front_start + 1)...front_end).each do |idx|
+    next unless lines[idx] =~ /^([A-Za-z0-9_-]+):/
+    current_order = order.index($1)
+    next unless current_order && current_order > target_order
+    insert_at = idx
+    break
+  end
+  lines.insert(insert_at, new_line)
+end
+
+File.write(file, lines.join("\n") + "\n")
+RUBY
+}
+
+replace_front_matter_section() {
+    local file="$1"
+    local key="$2"
+    local content="$3"
+
+    ruby - "$file" "$key" "$content" <<'RUBY'
+file, key, content = ARGV
+order = %w[
+  layout section-type name conference year author equal_contributor_idx
+  corresponding_author external img keywords display
+]
+
+lines = File.readlines(file, chomp: true)
+front_start = lines.index("---")
+front_end = nil
+if front_start
+  ((front_start + 1)...lines.length).each do |idx|
+    if lines[idx] == "---"
+      front_end = idx
+      break
+    end
+  end
+end
+front_start ||= 0
+front_end ||= lines.length
+
+section_start = nil
+section_end = nil
+((front_start + 1)...front_end).each do |idx|
+  next unless lines[idx] =~ /^#{Regexp.escape(key)}:/
+  section_start = idx
+  section_end = front_end
+  ((idx + 1)...front_end).each do |j|
+    if lines[j] =~ /^[A-Za-z0-9_-]+:/
+      section_end = j
+      break
+    end
+  end
+  break
+end
+
+new_lines = content.split("\n", -1)
+new_lines.pop while new_lines.last == ""
+
+if section_start
+  lines[section_start...section_end] = new_lines
+else
+  target_order = order.index(key) || order.length
+  insert_at = front_end
+  ((front_start + 1)...front_end).each do |idx|
+    next unless lines[idx] =~ /^([A-Za-z0-9_-]+):/
+    current_order = order.index($1)
+    next unless current_order && current_order > target_order
+    insert_at = idx
+    break
+  end
+  lines.insert(insert_at, *new_lines)
+end
+
+File.write(file, lines.join("\n") + "\n")
+RUBY
+}
+
 echo -e "${BLUE}========================================${NC}"
 echo -e "${BLUE}   논문 정보 수정하기${NC}"
 echo -e "${BLUE}========================================${NC}"
@@ -84,122 +203,71 @@ case $field_choice in
     1)
         echo "새로운 논문 제목을 입력하세요:"
         read -r new_value
-        sed -i.bak "s/^name: .*/name: \"$new_value\"/" "$selected_file" && rm "${selected_file}.bak"
+        upsert_front_matter_scalar "$selected_file" "name" "$new_value" "quote"
         ;;
     2)
         echo "새로운 연도를 입력하세요:"
         read -r new_value
-        sed -i.bak "s/^year: .*/year: $new_value/" "$selected_file" && rm "${selected_file}.bak"
+        upsert_front_matter_scalar "$selected_file" "year" "$new_value" "raw"
         ;;
     3)
         echo "새로운 학회/저널명을 입력하세요:"
         read -r new_value
-        sed -i.bak "s/^conference: .*/conference: $new_value/" "$selected_file" && rm "${selected_file}.bak"
+        upsert_front_matter_scalar "$selected_file" "conference" "$new_value" "raw"
         ;;
     4)
         echo "새로운 저자 목록을 입력하세요 (쉼표로 구분):"
         read -r new_authors
-        # author 섹션 전체를 교체
-        sed -i.bak '/^author:/,/^$/d' "$selected_file" && rm "${selected_file}.bak"
-        # year 다음에 author 섹션 추가
-        temp_authors="author:\n"
+        temp_authors="author:"
         IFS=',' read -ra AUTHORS <<< "$new_authors"
         for author in "${AUTHORS[@]}"; do
             author=$(echo "$author" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
-            temp_authors="${temp_authors}  - name: \"$author\"\n"
+            temp_authors="${temp_authors}
+  - name: \"$author\""
         done
-        sed -i.bak "/^year:/a\\
-\\
-$temp_authors" "$selected_file" && rm "${selected_file}.bak"
+        replace_front_matter_section "$selected_file" "author" "$temp_authors"
         ;;
     5)
         echo "새로운 이미지 경로를 입력하세요:"
         read -r new_value
-        sed -i.bak "s|^img: .*|img: $new_value|" "$selected_file" && rm "${selected_file}.bak"
+        upsert_front_matter_scalar "$selected_file" "img" "$new_value" "raw"
         ;;
     6)
         echo "새로운 Arxiv URL을 입력하세요:"
         read -r new_value
-        if grep -q "^external:" "$selected_file"; then
-            sed -i.bak "s|    url: .*|    url: $new_value|" "$selected_file" && rm "${selected_file}.bak"
-        else
-            temp_file=$(mktemp)
-            inserted=0
-
-            while IFS= read -r line; do
-                if [[ $inserted -eq 0 && "$line" == "img:"* ]]; then
-                    cat >> "$temp_file" << EOF
-external:
+        temp_external="external:
   - title: Arxiv
-    url: $new_value
-
-EOF
-                    inserted=1
-                fi
-                echo "$line" >> "$temp_file"
-            done < "$selected_file"
-
-            mv "$temp_file" "$selected_file"
-        fi
+    url: $new_value"
+        replace_front_matter_section "$selected_file" "external" "$temp_external"
         ;;
     7)
         echo "새로운 Keywords를 입력하세요 (쉼표로 구분):"
         read -r new_keywords
-        
-        # 임시 파일 생성
-        temp_file=$(mktemp)
-        in_keywords=0
-        
-        # 기존 파일을 읽으면서 keywords 섹션 교체
-        while IFS= read -r line; do
-            # keywords: 시작 감지
-            if [[ "$line" == "keywords:" ]]; then
-                in_keywords=1
-                # 새로운 keywords 섹션 작성
-                echo "keywords:" >> "$temp_file"
-                IFS=',' read -ra KEYWORDS <<< "$new_keywords"
-                for keyword in "${KEYWORDS[@]}"; do
-                    keyword=$(echo "$keyword" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
-                    echo "  - name: $keyword" >> "$temp_file"
-                done
-                echo "" >> "$temp_file"
-                continue
+        temp_keywords="keywords:"
+        IFS=',' read -ra KEYWORDS <<< "$new_keywords"
+        for keyword in "${KEYWORDS[@]}"; do
+            keyword=$(echo "$keyword" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+            if [ -n "$keyword" ]; then
+                temp_keywords="${temp_keywords}
+  - name: $keyword"
             fi
-            
-            # keywords 섹션 내부는 건너뛰기
-            if [[ $in_keywords -eq 1 ]]; then
-                # 빈 줄이나 다른 섹션 시작 시 keywords 종료
-                if [[ "$line" =~ ^[[:space:]]*$ ]] || [[ "$line" =~ ^[a-z_]+: ]] || [[ "$line" == "---" ]]; then
-                    in_keywords=0
-                else
-                    continue
-                fi
-            fi
-            
-            echo "$line" >> "$temp_file"
-        done < "$selected_file"
-        
-        mv "$temp_file" "$selected_file"
+        done
+        replace_front_matter_section "$selected_file" "keywords" "$temp_keywords"
         ;;
     8)
         echo "새로운 Equal contributor indices를 입력하세요 (쉼표로 구분, 예: 0,1):"
         read -r new_idx
-        # equal_contributor_idx 섹션 제거
-        sed -i.bak '/^equal_contributor_idx:/,/^$/d' "$selected_file" && rm "${selected_file}.bak"
         if [ -n "$new_idx" ]; then
-            # author 섹션 뒤에 추가
-            temp_idx="equal_contributor_idx:\n"
+            temp_idx="equal_contributor_idx:"
             IFS=',' read -ra INDICES <<< "$new_idx"
             for idx in "${INDICES[@]}"; do
                 idx=$(echo "$idx" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
-                temp_idx="${temp_idx}  - $idx\n"
+                temp_idx="${temp_idx}
+  - $idx"
             done
-            temp_idx="${temp_idx}\n"
-            # author 다음 빈 줄들 뒤에 삽입
-            sed -i.bak "/^author:/,/^$/{
-                /^$/a\\
-$temp_idx
-            }" "$selected_file" && rm "${selected_file}.bak"
+            replace_front_matter_section "$selected_file" "equal_contributor_idx" "$temp_idx"
+        else
+            replace_front_matter_section "$selected_file" "equal_contributor_idx" "equal_contributor_idx:"
         fi
         ;;
     0)

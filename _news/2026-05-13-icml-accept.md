@@ -1,6 +1,6 @@
 ---
 layout: news-detail
-title: Congratulations! Paper Accepted at ICML 2026
+title: Congratulations! 1 Paper Accepted at ICML 2026
 subtitle: icml-accept
 type: papers
 
