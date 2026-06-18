@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Spanning Tree Autoregressive Visual Generation"
-year: 2025
+year: 2026
 
 author:
   - name: "Sangkyu Lee"
