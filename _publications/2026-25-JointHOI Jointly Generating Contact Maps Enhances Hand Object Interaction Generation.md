@@ -20,7 +20,7 @@ author:
 img: comingsoon.jpg
 
 keywords:
-  - name: D Generation
+  - name: 3D Generation
   - name: Vision
   - name: HOI
 
