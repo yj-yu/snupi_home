@@ -4,6 +4,8 @@ section-type: publications
 name: "Spanning Tree Autoregressive Visual Generation"
 year: 2026
 
+conference: ECCV 2026
+
 author:
   - name: "Sangkyu Lee"
   - name: "Changho Lee"

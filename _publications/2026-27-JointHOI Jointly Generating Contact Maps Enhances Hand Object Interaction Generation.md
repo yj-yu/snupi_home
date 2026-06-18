@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "JointHOI: Jointly Generating Contact Maps Enhances Hand Object Interaction Generation"
-conference: ECCV2026
+conference: ECCV 2026
 year: 2026
 
 author:
