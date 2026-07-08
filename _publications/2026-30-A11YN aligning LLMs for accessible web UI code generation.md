@@ -2,7 +2,8 @@
 layout: publications
 section-type: publications
 name: "A11YN: aligning LLMs for accessible web UI code generation"
-year: 2025
+conference: COLM 2026
+year: 2026
 
 author:
   - name: "Janghan Yoon"
