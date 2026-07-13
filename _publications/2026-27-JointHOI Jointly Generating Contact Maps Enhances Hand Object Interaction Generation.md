@@ -17,7 +17,10 @@ author:
 
 
 
-img: comingsoon.jpg
+external:
+  - title: Arxiv
+    url: https://arxiv.org/abs/2607.01768
+img: jointhoi.png
 
 keywords:
   - name: 3D Generation
