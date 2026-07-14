@@ -16,7 +16,7 @@ author:
 
 img: normlense.png
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2310.10418
 
 

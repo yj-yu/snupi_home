@@ -15,7 +15,7 @@ author:
   
   
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2406.11280
 
 img: i-SRT.png

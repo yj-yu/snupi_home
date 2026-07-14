@@ -19,7 +19,7 @@ equal_contributor_idx:
   
   
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2410.18823v1
 img: sigil_congratulation.png
 

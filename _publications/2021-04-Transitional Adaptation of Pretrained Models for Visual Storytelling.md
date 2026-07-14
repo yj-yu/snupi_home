@@ -14,7 +14,7 @@ author:
 
 img: cvpr21-tapm_300x150.png
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://openaccess.thecvf.com/content/CVPR2021/papers/Yu_Transitional_Adaptation_of_Pretrained_Models_for_Visual_Storytelling_CVPR_2021_paper.pdf
   - title: Code
     url: https://github.com/JiwanChung/tapm/

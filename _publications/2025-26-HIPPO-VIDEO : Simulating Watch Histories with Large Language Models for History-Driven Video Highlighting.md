@@ -14,7 +14,7 @@ author:
 
     
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://www.arxiv.org/abs/2507.16873
 
 img: hippo.png

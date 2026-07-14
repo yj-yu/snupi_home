@@ -16,7 +16,7 @@ author:
 
 img: Connecting the Dots between Audio and Text.png
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/pdf/2112.08995.pdf
 
 

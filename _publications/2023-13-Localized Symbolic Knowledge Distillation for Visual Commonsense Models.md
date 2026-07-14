@@ -19,7 +19,7 @@ author:
   - name: "Qiuyuan Huang"
 
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2312.04837
 
 

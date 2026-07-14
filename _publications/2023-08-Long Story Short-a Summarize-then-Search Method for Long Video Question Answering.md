@@ -10,7 +10,7 @@ author:
 
 img: bmvc_lss.PNG
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2311.01233
 keywords:
   - name: VideoQA

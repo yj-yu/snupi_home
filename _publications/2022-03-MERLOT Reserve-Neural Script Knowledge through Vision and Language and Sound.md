@@ -20,7 +20,7 @@ author:
 
 img: merlot reserve.png
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/pdf/2201.02639.pdf
 
 

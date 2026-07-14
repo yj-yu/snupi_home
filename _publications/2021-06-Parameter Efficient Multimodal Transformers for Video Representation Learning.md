@@ -17,7 +17,7 @@ author:
 
 img: iclr21-mt-vrl_300x150.jpg
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/pdf/2012.04124.pdf
   - title: Code
     url: https://github.com/sangho-vision/avbert

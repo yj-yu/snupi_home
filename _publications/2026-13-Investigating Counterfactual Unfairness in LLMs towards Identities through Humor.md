@@ -23,7 +23,7 @@ equal_contributor_idx:
   - 1
 
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2604.18729
 
 img: humor_bias.png

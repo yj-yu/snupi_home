@@ -193,7 +193,7 @@ echo "  2) year (연도)"
 echo "  3) conference (학회/저널)"
 echo "  4) authors (저자 목록)"
 echo "  5) img (이미지)"
-echo "  6) url (Arxiv URL)"
+echo "  6) url (arXiv URL)"
 echo "  7) keywords"
 echo "  8) equal_contributor_idx"
 echo "  0) 전체 다시 작성 (에디터로 열기)"
@@ -233,10 +233,10 @@ case $field_choice in
         upsert_front_matter_scalar "$selected_file" "img" "$new_value" "raw"
         ;;
     6)
-        echo "새로운 Arxiv URL을 입력하세요:"
+        echo "새로운 arXiv URL을 입력하세요:"
         read -r new_value
         temp_external="external:
-  - title: Arxiv
+  - title: arXiv
     url: $new_value"
         replace_front_matter_section "$selected_file" "external" "$temp_external"
         ;;

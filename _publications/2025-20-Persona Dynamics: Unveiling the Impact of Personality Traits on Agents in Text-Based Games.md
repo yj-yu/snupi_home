@@ -14,7 +14,7 @@ author:
 
 
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2504.06868
   
 

@@ -13,7 +13,7 @@ author:
 
 img: eccv18_lsmdc-300x150.png
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/pdf/1808.02559.pdf
   - title: Project
     url: https://github.com/yj-yu/lsmdc

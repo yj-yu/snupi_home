@@ -20,7 +20,7 @@ author:
 
   
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2406.18495v1
     
 

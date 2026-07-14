@@ -24,7 +24,7 @@ equal_contributor_idx:
   - 1
 
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2506.00958
 
 img: speaking.png

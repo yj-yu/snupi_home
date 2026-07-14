@@ -20,7 +20,7 @@ equal_contributor_idx:
   - 1
 
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2508.17079
   
 

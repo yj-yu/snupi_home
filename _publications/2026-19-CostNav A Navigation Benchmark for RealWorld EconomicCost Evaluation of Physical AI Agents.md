@@ -42,7 +42,7 @@ equal_contributor_idx:
   - 2
 
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2511.20216
   
 

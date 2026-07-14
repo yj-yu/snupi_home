@@ -15,7 +15,7 @@ author:
   - name: "Maarten Sap"
 img: emnlp22-prodia-300x150.png
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/pdf/2205.12688.pdf
 
 equal_contributor_idx:

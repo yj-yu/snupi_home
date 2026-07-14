@@ -19,7 +19,7 @@ author:
 
 
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://neurips.cc/virtual/2025/poster/118018
   
 

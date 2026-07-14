@@ -13,7 +13,7 @@ author:
 
 
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2508.06220
 
 img: infocausalQA.png

@@ -17,7 +17,7 @@ author:
   
   
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2411.14137
 
 img: vague.png

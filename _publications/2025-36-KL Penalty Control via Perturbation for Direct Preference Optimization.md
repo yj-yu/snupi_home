@@ -18,7 +18,7 @@ author:
   
   
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2502.13177
 
 img: kl.png

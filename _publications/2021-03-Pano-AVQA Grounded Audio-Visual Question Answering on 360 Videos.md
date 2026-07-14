@@ -12,7 +12,7 @@ author:
 
 img: iccv21_PanoAVQA-300x150.jpeg
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/pdf/2110.05122.pdf
   - title: Code
     url: https://github.com/hs-yn/PanoAVQA

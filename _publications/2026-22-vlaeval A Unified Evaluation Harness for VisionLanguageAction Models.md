@@ -17,7 +17,7 @@ author:
 
 
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://x.com/allen_ai/status/2034715341830672468?s=46
   
 

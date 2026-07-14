@@ -15,7 +15,7 @@ author:
 
 img: aaai21_dcnet-300x150.jpeg
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://ojs.aaai.org/index.php/AAAI/article/view/16271
   - title: Code
     url: https://github.com/ozmig77/dcnet  

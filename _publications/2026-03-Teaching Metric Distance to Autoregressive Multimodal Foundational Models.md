@@ -17,7 +17,7 @@ author:
   
   
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2503.02379
 
 img: dist.png

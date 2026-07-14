@@ -16,7 +16,7 @@ author:
 
 img: eccv20_mabas-300x150.png
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123500528.pdf
   - title: Project
     url: https://github.com/yj-yu/CiSIN/

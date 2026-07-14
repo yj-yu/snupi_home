@@ -19,11 +19,11 @@ equal_contributor_idx:
 
 
 # external:
-#   - title: Arxiv
+#   - title: arXiv
 #     url: https://arxiv.org/abs/2506.13342
 
 external:
-   - title: Arxiv
+   - title: arXiv
      url: https://aclanthology.org/anthology-files/anthology-files/pdf/findings/2025.findings-emnlp.954.pdf
 
      

@@ -13,7 +13,7 @@ author:
 
 img: cvpr17_lsmdc_top-300x185.gif
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/pdf/1610.02947v1.pdf
 
 keywords:

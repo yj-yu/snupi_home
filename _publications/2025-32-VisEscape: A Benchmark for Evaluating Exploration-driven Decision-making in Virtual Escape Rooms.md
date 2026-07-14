@@ -16,7 +16,7 @@ author:
   - name: "Youngjae Yu"
 
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2503.14427
 
   

@@ -16,7 +16,7 @@ author:
 
 
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://oddqueue.github.io/realfast/
 
 img: realtime_policy.png

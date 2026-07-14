@@ -19,7 +19,7 @@ author:
 
 img: esper.png
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/pdf/2205.12630.pdf
 
 keywords:

@@ -16,7 +16,7 @@ equal_contributor_idx:
   - 0
   - 1
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2406.17254
 
 img: scalp.png

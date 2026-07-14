@@ -22,7 +22,7 @@ equal_contributor_idx:
   
   
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2407.09779
 
 img: layoutandretouch.png

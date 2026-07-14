@@ -20,7 +20,7 @@ equal_contributor_idx:
   
   
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2408.06010
 
 img: deeptalk.png

@@ -18,7 +18,7 @@ author:
 
 img: mmc4.jpg
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/pdf/2304.06939.pdf
 keywords:
   - name: Computer Vision

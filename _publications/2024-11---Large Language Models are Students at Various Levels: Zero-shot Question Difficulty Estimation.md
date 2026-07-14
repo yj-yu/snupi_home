@@ -16,7 +16,7 @@ author:
 
   
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://aclanthology.org/2024.findings-emnlp.477/
 
 img: llasa.png

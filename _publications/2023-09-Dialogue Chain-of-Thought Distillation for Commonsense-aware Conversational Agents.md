@@ -15,7 +15,7 @@ author:
   - name: "Dongyeop Kang"
   - name: "Jinyoung Yeo_"
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2310.09343
 
 img: dialog_COT_distillation.png

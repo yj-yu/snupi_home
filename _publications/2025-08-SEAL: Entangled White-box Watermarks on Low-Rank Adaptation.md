@@ -19,7 +19,7 @@ author:
   
   
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2501.09284
 
 img: seal.png

@@ -23,7 +23,7 @@ author:
 
 img: neurologic A esque decoding.png
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/pdf/2112.08726.pdf
 
 

@@ -23,7 +23,7 @@ equal_contributor_idx:
   
   
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://arxiv.org/abs/2411.19527
     
 img: discord.png

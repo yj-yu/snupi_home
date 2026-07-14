@@ -13,7 +13,7 @@ author:
 
 img: iclr21-cvr_300x150.jpg
 external:
-  - title: Arxiv
+  - title: arXiv
     url: https://openreview.net/pdf?id=jMPcEkJpdD
 keywords:
   - name: Computer Vision
