@@ -14,7 +14,7 @@ author:
 
 
 
-img: comingsoon.jpg
+img: xnav.png
 
 keywords:
   - name: Robotics
