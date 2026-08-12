@@ -8,11 +8,16 @@ position: "MS/Ph.D. Student"
 permalink: people/youna.html
 email: youna0720@snu.ac.kr
 
+social:
+  - title: home
+    url: https://royouan.github.io
+
+
 
 fields:
-    - name : Memory & Reasoning
+    - name : World Models
     - name : Embodied AI
-    - name : Time Perception
+    - name : Adaptive Computation
 
 publications:
 
