@@ -10,7 +10,7 @@ email: sukim96@snu.ac.kr
 
 social:
   - title: home
-    url: people/sungwoong.html
+    url: https://sukim96.github.io/
 
 
 fields:
