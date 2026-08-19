@@ -574,7 +574,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <h2 class="professor-postdoc-column-title">Professor</h2>
             <div class="member-grid professor-grid">
               {% for member in site.people %}
-                {% if member.position contains "Professor" %}
+                {% if member.position contains "Professor" and member.display != false %}
                   {% include member-card.html member=member color_list=page.color_list %}
                 {% endif %}
               {% endfor %}
@@ -584,7 +584,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <h2 class="professor-postdoc-column-title">Postdoctoral Researcher</h2>
             <div class="member-grid postdoc-grid">
               {% for member in site.people %}
-                {% if member.position contains "Postdoctoral Researcher" %}
+                {% if member.position contains "Postdoctoral Researcher" and member.display != false %}
                   {% include member-card.html member=member color_list=page.color_list %}
                 {% endif %}
               {% endfor %}
@@ -616,7 +616,7 @@ document.addEventListener('DOMContentLoaded', function() {
       {% endif %}
 
 
-      {% if show_member %}
+      {% if show_member and member.display != false %}
         {% unless member_grid_open %}
           <div class="member-grid">
           {% assign member_grid_open = true %}

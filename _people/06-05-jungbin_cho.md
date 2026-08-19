@@ -8,11 +8,11 @@ position: "Visiting Scholar"
 permalink: people/jungbin.html
 email: Whwjdqls99@yonsei.ac.kr
 
-works: cmu.png
+works: krafton.jpg
 affiliation:
   label: Visiting Scholar at
-  logo_alt: Carnegie Mellon University
-  logo_width: 55px
+  logo_alt: Krafton
+  logo_width: 85px
 
 
 social:

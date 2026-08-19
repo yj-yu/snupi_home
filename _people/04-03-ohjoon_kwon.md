@@ -7,6 +7,7 @@ emoji: 😎
 position: "Ph.D. Student"
 permalink: people/ohjoon.html
 email: ohjoon1209@snu.ac.kr
+display: False
 
 works: naver.jpg
 affiliation:

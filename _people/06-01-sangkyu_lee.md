@@ -10,11 +10,11 @@ emoji: 🤔
 social:
 
 
-works: lgai.png
+works: ai2.png
 affiliation:
-  label: Internship at
-  logo_alt: LG AI Research
-  logo_width: 90px
+  label: Visiting Scholar at
+  logo_alt: AI2
+  logo_width: 70px
 
 fields:
     - name : Commonsense Reasoning

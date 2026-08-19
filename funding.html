@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Funding
+title: Projects
 section_id: funding
 permalink: funding.html
 ---
@@ -152,6 +152,94 @@ permalink: funding.html
   font-weight: 800;
 }
 
+.past-project-list {
+  display: grid;
+  gap: 8px;
+}
+
+.past-project-year {
+  color: #1f2e4a;
+  font-family: var(--site-font-family) !important;
+  font-size: 1.04rem;
+  font-weight: 820;
+  line-height: 1.2;
+  margin: 14px 0 2px;
+}
+
+.past-project-year:first-child {
+  margin-top: 0;
+}
+
+.past-project-item {
+  align-items: start;
+  background: #fff;
+  border: 1px solid var(--site-card-border);
+  border-radius: 8px;
+  box-shadow: none;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 112px 1fr;
+  padding: 10px 16px;
+}
+
+.past-project-logo-wrap {
+  align-items: center;
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  width: 112px;
+}
+
+.past-project-logo {
+  display: block;
+  max-height: 28px;
+  max-width: 104px;
+  object-fit: contain;
+}
+
+.project-logo-text {
+  align-items: center;
+  background: #f3f7fc;
+  border-radius: 7px;
+  color: #2d6cdf;
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 800;
+  height: 30px;
+  justify-content: center;
+  letter-spacing: 0.01em;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.past-project-company {
+  color: #2d6cdf;
+  font-family: var(--site-font-family) !important;
+  font-size: 0.9rem;
+  font-weight: 780;
+  line-height: 1.25;
+  margin: 0 0 3px;
+}
+
+.past-project-names {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.past-project-name {
+  color: #1f2e4a;
+  font-family: var(--site-font-family) !important;
+  font-size: 0.98rem;
+  font-weight: 560;
+  line-height: 1.42;
+  margin: 0 0 2px;
+}
+
+.past-project-name:last-child {
+  margin-bottom: 0;
+}
+
 @media only screen and (max-width: 1024px) {
   .funding-grid,
   .funding-grid.grants-grid,
@@ -214,13 +302,54 @@ permalink: funding.html
   .funding-meta {
     font-size: 0.88rem;
   }
+
+  .past-project-list {
+    gap: 8px;
+  }
+
+  .past-project-year {
+    font-size: 0.98rem;
+    margin: 12px 0 1px;
+  }
+
+  .past-project-item {
+    gap: 10px;
+    grid-template-columns: 76px 1fr;
+    padding: 10px 12px;
+  }
+
+  .past-project-logo-wrap {
+    height: 32px;
+    width: 76px;
+  }
+
+  .past-project-logo {
+    max-height: 24px;
+    max-width: 68px;
+  }
+
+  .project-logo-text {
+    font-size: 0.72rem;
+    height: 28px;
+    padding: 0 7px;
+  }
+
+  .past-project-company {
+    font-size: 0.82rem;
+    margin-bottom: 3px;
+  }
+
+  .past-project-name {
+    font-size: 0.9rem;
+    line-height: 1.36;
+  }
 }
 </style>
 
 <div class='full parallax funding-title-area' style='padding-top: 50px;'>
   <div class='row'>
     <div class='large-12 columns'>
-      {% include section-header.html title="Funding" tagline=" " color="#464646" class="big" %}
+      {% include section-header.html title="Projects" tagline=" " color="#464646" class="big" %}
     </div>
   </div>
   <div class='spacing'></div>
@@ -229,7 +358,7 @@ permalink: funding.html
 <div class="full no-padding funding-page">
   <div class="row">
     <div class="large-12 columns">
-      <p class="funding-lead">Grants and Industry Collaborations Supporting PI Lab Research</p>
+      <p class="funding-lead">Grants, collaborations, and past projects supporting PI Lab research</p>
       <section class="funding-section">
         <h2 class="funding-section-title">Grants</h2>
         <div class="funding-grid grants-grid">
@@ -348,6 +477,200 @@ permalink: funding.html
             <div>
               <h3 class="funding-name">Agent for Vehicle Control</h3>
               <p class="funding-meta"><strong>Partner</strong> Hyundai Motors</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="funding-section">
+        <h2 class="funding-section-title">Project History</h2>
+        <div class="past-project-list">
+          <h3 class="past-project-year">2025</h3>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <img class="past-project-logo" src="images/fundings/kist.jpg" alt="KIST">
+            </div>
+            <div>
+              <p class="past-project-company">KIST</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">Self-evolving embodied AGI platform technology through real-world experience</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <img class="past-project-logo" src="images/fundings/lg_electronics.png" alt="LG Electronics">
+            </div>
+            <div>
+              <p class="past-project-company">LG Electronics</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">Microphone noise reduction and audio quality enhancement</li>
+                <li class="past-project-name">Multimodal-based content recommendation</li>
+                <li class="past-project-name">AI-based automated content curation model development</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <img class="past-project-logo" src="images/works/samsung_electronics.png" alt="Samsung Electronics">
+            </div>
+            <div>
+              <p class="past-project-company">Samsung Electronics</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">Multimodal AI-based display testing technology development</li>
+              </ul>
+            </div>
+          </article>
+
+          <h3 class="past-project-year">2024</h3>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <img class="past-project-logo" src="images/works/samsung_electronics.png" alt="Samsung Electronics">
+            </div>
+            <div>
+              <p class="past-project-company">Samsung Electronics</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">Stable video diffusion model quantization technology development</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <img class="past-project-logo" src="images/fundings/maum_ai.svg" alt="Maum AI">
+            </div>
+            <div>
+              <p class="past-project-company">Maum AI</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">Reinforcement learning-based autonomous driving AI software for optimal decision-making in congested and hazardous driving conditions</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <img class="past-project-logo" src="images/fundings/lg_electronics.png" alt="LG Electronics">
+            </div>
+            <div>
+              <p class="past-project-company">LG Electronics</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">Multimodal chatbot development supporting generative AI-based app development</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <img class="past-project-logo" src="images/fundings/IITP.png" alt="IITP">
+            </div>
+            <div>
+              <p class="past-project-company">IITP</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">AI-based OTT user and content data analysis and video recommendation system development</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <span class="project-logo-text">MCST</span>
+            </div>
+            <div>
+              <p class="past-project-company">Ministry of Culture, Sports and Tourism</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">Multimodal UX evaluation platform for XR space-responsive content optimization</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <img class="past-project-logo" src="images/fundings/gs_enc.jpg" alt="GS E&amp;C">
+            </div>
+            <div>
+              <p class="past-project-company">GS E&amp;C</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">AI-based concrete flowability video analysis program development</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <img class="past-project-logo" src="images/fundings/giantstep.png" alt="Giantstep">
+            </div>
+            <div>
+              <p class="past-project-company">Giantstep</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">Voice-driven digital human generation with lip-sync and emotion matching</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <img class="past-project-logo" src="images/fundings/skt.png" alt="SK Telecom">
+            </div>
+            <div>
+              <p class="past-project-company">SK Telecom</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">Research and development of large multimodal models with video input</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <span class="project-logo-text">AI Hub</span>
+            </div>
+            <div>
+              <p class="past-project-company">AI Research Hub</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">AI Research Hub Project</li>
+              </ul>
+            </div>
+          </article>
+
+          <h3 class="past-project-year">2023</h3>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <img class="past-project-logo" src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV">
+            </div>
+            <div>
+              <p class="past-project-company">Hyundai NGV</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">Multimodal AI combining object recognition and natural language processing</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <img class="past-project-logo" src="images/fundings/ncsoft.png" alt="NCSOFT">
+            </div>
+            <div>
+              <p class="past-project-company">NCSOFT</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">Large multimodal model research for nonverbal dialogue understanding</li>
+                <li class="past-project-name">Autonomous multi-agent game environment development via knowledge distillation</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="past-project-item">
+            <div class="past-project-logo-wrap">
+              <span class="project-logo-text">Yonsei</span>
+            </div>
+            <div>
+              <p class="past-project-company">Yonsei University</p>
+              <ul class="past-project-names">
+                <li class="past-project-name">Digital human counselor for total healthcare and wellness service quality management protocol</li>
+              </ul>
             </div>
           </article>
         </div>

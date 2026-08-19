@@ -962,6 +962,32 @@ ul.shortcode-list i {
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.contain-to-grid .title-area a.site-logo {
+  align-items: center;
+  display: inline-flex;
+  gap: 10px;
+  line-height: 1;
+  padding: 0;
+}
+
+.contain-to-grid .title-area a.site-logo .site-logo-symbol {
+  height: auto !important;
+  margin-top: 0 !important;
+  max-height: 51px !important;
+  vertical-align: middle;
+  width: auto;
+}
+
+.site-logo-text {
+  color: #347af5;
+  font-family: "Raleway", "Inter", "Noto Sans KR", sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .f-topbar-fixed.shrink .contain-to-grid,
 body.shrink .contain-to-grid {
   height: 68px;
@@ -1010,6 +1036,17 @@ body.shrink .top-bar .title-area img, body.shrink .top-bar .title-area li img, b
   max-height: 52px !important;
   height: auto !important;
   margin-top: 8px;
+}
+
+.f-topbar-fixed.shrink .top-bar .title-area a.site-logo .site-logo-symbol,
+body.shrink .top-bar .title-area a.site-logo .site-logo-symbol {
+  margin-top: 0 !important;
+  max-height: 44px !important;
+}
+
+.f-topbar-fixed.shrink .top-bar .site-logo-text,
+body.shrink .top-bar .site-logo-text {
+  font-size: 1.85rem;
 }
 
 .contain-to-grid.fullwidth .top-bar {
@@ -3881,6 +3918,19 @@ body {
     margin-top: 12px !important;
   }
 
+  .contain-to-grid .title-area a.site-logo {
+    gap: 7px;
+  }
+
+  .contain-to-grid .title-area a.site-logo .site-logo-symbol {
+    max-height: 41px !important;
+    margin-top: 0 !important;
+  }
+
+  .site-logo-text {
+    font-size: 1.58rem;
+  }
+
   .top-bar .toggle-topbar.menu-icon {
     top: 18px !important;
     right: 16px !important;
@@ -4007,6 +4057,18 @@ body {
   }
 }
 @media only screen and (max-width: 480px) {
+  .contain-to-grid .title-area a.site-logo {
+    gap: 6px;
+  }
+
+  .contain-to-grid .title-area a.site-logo .site-logo-symbol {
+    max-height: 37px !important;
+  }
+
+  .site-logo-text {
+    font-size: 1.36rem;
+  }
+
   .modDefaultSlider .sequence .title h2 {
     font-size: 3.14286rem;
     line-height: 3.14286rem;
