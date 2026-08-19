@@ -952,6 +952,19 @@ ul.shortcode-list i {
   transition-duration: 0.32s;
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+.contain-to-grid,
+.contain-to-grid .top-bar,
+.contain-to-grid .title-area,
+.contain-to-grid .title-area .name,
+.contain-to-grid .title-area .name h1 {
+  overflow: visible !important;
+}
+
+.contain-to-grid .title-area a.site-logo {
+  min-width: max-content;
+}
+
 .contain-to-grid .title-area img, .contain-to-grid .title-area li img, .contain-to-grid .title-area a img {
   max-height: 62px !important;
   height: auto !important;
@@ -973,7 +986,9 @@ ul.shortcode-list i {
   display: inline-flex;
   gap: 10px;
   line-height: 1;
-  padding: 0;
+  margin-left: 24px;
+  overflow: visible;
+  padding: 0 0 0 10px;
   text-decoration: none !important;
   white-space: nowrap;
 }
@@ -1000,6 +1015,13 @@ ul.shortcode-list i {
   text-decoration: none !important;
   text-rendering: geometricPrecision;
   white-space: nowrap;
+}
+
+.contain-to-grid .title-area a.site-logo:hover,
+.contain-to-grid .title-area a.site-logo:focus,
+.contain-to-grid .title-area a.site-logo:hover .site-logo-text,
+.contain-to-grid .title-area a.site-logo:focus .site-logo-text {
+  text-decoration: none !important;
 }
 
 .f-topbar-fixed.shrink .contain-to-grid,
@@ -3414,6 +3436,7 @@ body {
 .modSectionHeader .special-title h2 {
   text-transform: uppercase;
   display: inline-block;
+  position: relative;
 }
 .modSectionHeader .special-title h2::after {
   display: block;
@@ -3424,6 +3447,40 @@ body {
   background: url(/images/underline2.png) center center no-repeat;
   margin-top: 5px;
   display: block;
+}
+
+.site-page-hero .modSectionHeader .special-title h2,
+.gallery-title-shell .modSectionHeader .special-title h2 {
+  display: inline-block !important;
+  padding-bottom: 25px;
+  position: relative !important;
+}
+
+.site-page-hero .modSectionHeader .special-title h2::before,
+.gallery-title-shell .modSectionHeader .special-title h2::before {
+  background: #ffffff;
+  border: 3px solid #2b6fe8;
+  bottom: 0;
+  content: "";
+  height: 18px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) rotate(45deg);
+  width: 18px;
+  z-index: 2;
+}
+
+.site-page-hero .modSectionHeader .special-title h2::after,
+.gallery-title-shell .modSectionHeader .special-title h2::after {
+  background: #2b6fe8 !important;
+  height: 3px !important;
+  left: 0;
+  margin-top: 15px !important;
+  position: absolute;
+  top: calc(100% - 16px);
+  transform: none !important;
+  width: 100% !important;
+  z-index: 1;
 }
 
 .modSectionHeader.big h2 {
@@ -3462,7 +3519,7 @@ body {
   letter-spacing: -0.03em !important;
   line-height: 1.02 !important;
   margin: 0 !important;
-  text-transform: none !important;
+  text-transform: uppercase !important;
 }
 
 .site-page-hero .modSectionHeader .special-title h2::after {
@@ -3482,7 +3539,6 @@ body {
 
   .site-page-hero .modSectionHeader .special-title h2::after {
     margin-top: 10px;
-    transform: scaleX(0.82);
   }
 }
 
@@ -3988,6 +4044,8 @@ body {
 
   .contain-to-grid .title-area a.site-logo {
     gap: 8px;
+    margin-left: 16px;
+    padding-left: 6px;
   }
 
   .contain-to-grid .title-area a.site-logo .site-logo-symbol {
@@ -4042,6 +4100,17 @@ body {
     top: 72px !important;
     width: 100% !important;
     z-index: 9999 !important;
+  }
+
+  .top-bar:not(.expanded) .top-bar-section {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .top-bar.expanded .top-bar-section {
+    visibility: visible !important;
+    pointer-events: auto !important;
   }
 
   .top-bar.expanded .top-bar-section ul.right {
@@ -4129,6 +4198,8 @@ body {
 @media only screen and (max-width: 480px) {
   .contain-to-grid .title-area a.site-logo {
     gap: 6px;
+    margin-left: 12px;
+    padding-left: 6px;
   }
 
   .contain-to-grid .title-area a.site-logo .site-logo-symbol {
@@ -5155,18 +5226,19 @@ svg:not(:root) {
 }
 
 .news-hero {
-  padding: 18px 0 18px !important;
+  padding: 12px 0 6px !important;
 }
 
 .news-shell {
   background: #ffffff !important;
-  padding-top: 18px !important;
+  padding-top: 2px !important;
 }
 
 .news-list-page {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 0 42px !important;
+  width: 100%;
 }
 
 .news-list-page .medium-12 h2 {
@@ -5196,6 +5268,7 @@ svg:not(:root) {
   position: relative;
   text-decoration: none !important;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  width: 100%;
 }
 
 .news-list-card:hover {
@@ -5232,6 +5305,8 @@ svg:not(:root) {
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.25;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .news-list-badge {
@@ -5292,15 +5367,35 @@ svg:not(:root) {
 
 @media only screen and (max-width: 640px) {
   .news-hero {
-    padding: 8px 0 14px !important;
+    padding: 4px 0 4px !important;
   }
 
   .news-shell {
-    padding-top: 12px !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding-top: 0 !important;
+  }
+
+  .news-shell .row,
+  .news-shell .columns,
+  .news-shell .medium-12.columns {
+    box-sizing: border-box !important;
+    float: none !important;
+    left: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    position: static !important;
+    right: auto !important;
+    width: 100% !important;
   }
 
   .news-list-page {
     padding: 0 10px 30px !important;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .news-list-page .medium-12 h2 {
@@ -5315,26 +5410,35 @@ svg:not(:root) {
 
   .news-list-card.modIconText,
   .news-list-card {
-    grid-template-columns: 42px minmax(0, 1fr) 24px;
+    box-sizing: border-box;
+    grid-template-columns: 36px minmax(0, 1fr);
     column-gap: 10px;
-    min-height: 78px;
-    padding: 12px 12px;
+    max-width: 100%;
+    min-height: 68px;
+    overflow: visible;
+    padding: 10px 12px;
+    width: 100%;
   }
 
   .news-list-icon {
     border-radius: 10px;
-    font-size: 1.04rem;
-    height: 40px;
-    width: 40px;
+    font-size: 0.96rem;
+    height: 36px;
+    width: 36px;
   }
 
   .news-list-main {
     gap: 6px;
+    min-width: 0;
+    overflow: visible;
   }
 
   .news-list-title {
-    font-size: 0.98rem;
-    line-height: 1.2;
+    font-size: 0.94rem;
+    line-height: 1.24;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    word-break: normal;
   }
 
   .news-list-badge {
@@ -5353,12 +5457,44 @@ svg:not(:root) {
 
   .news-list-arrow {
     align-self: center;
-    font-size: 0.95rem;
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    height: 24px;
-    justify-self: end;
-    width: 24px;
+    font-size: 0.82rem;
+    grid-column: 1;
+    grid-row: 2;
+    height: 22px;
+    justify-self: center;
+    margin-top: 1px;
+    width: 22px;
+  }
+}
+
+/* Tighten the dedicated news page so the list starts right after the title. */
+.news-hero.site-page-hero {
+  min-height: 136px !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.news-hero.site-page-hero .section-header {
+  margin-bottom: 0 !important;
+}
+
+.news-shell {
+  padding-top: 0 !important;
+}
+
+.news-list-page {
+  padding-top: 0 !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .news-hero.site-page-hero {
+    min-height: 108px !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .news-list-page {
+    padding-top: 0 !important;
   }
 }
 
@@ -5392,8 +5528,8 @@ svg:not(:root) {
 .publication-card-layout {
     align-items: center;
     display: grid !important;
-    gap: 36px !important;
-    grid-template-columns: 410px minmax(0, 1fr) !important;
+    gap: 28px !important;
+    grid-template-columns: 245px minmax(0, 1fr) !important;
     width: 100% !important;
 }
 
@@ -5403,11 +5539,11 @@ svg:not(:root) {
     border: 0 !important;
     border-radius: 0 !important;
     display: flex !important;
-    height: 220px !important;
+    height: 138px !important;
     justify-content: center;
     overflow: visible;
     padding: 0 !important;
-    width: 410px !important;
+    width: 245px !important;
 }
 
 .publication-figure a {
@@ -5424,9 +5560,9 @@ svg:not(:root) {
 
 .publication-headline {
     align-items: flex-start;
-    display: flex !important;
-    gap: 18px;
-    justify-content: space-between;
+    display: grid !important;
+    gap: 10px 18px;
+    grid-template-columns: auto minmax(0, 1fr);
     margin-bottom: 12px;
     min-width: 0;
 }
@@ -5446,8 +5582,8 @@ svg:not(:root) {
     border-radius: 6px !important;
     box-shadow: none !important;
     display: block !important;
-    max-height: 220px !important;
-    max-width: 410px !important;
+    max-height: 138px !important;
+    max-width: 245px !important;
     object-fit: contain !important;
 }
 
@@ -5536,9 +5672,10 @@ svg:not(:root) {
     gap: 7px 8px !important;
     justify-content: flex-end !important;
     line-height: 1.3 !important;
-    margin: 0 0 0 auto !important;
-    max-width: min(46%, 540px) !important;
+    margin: 0 !important;
+    max-width: 100% !important;
     min-width: 0 !important;
+    overflow: hidden !important;
     text-align: right !important;
     white-space: normal !important;
 }
@@ -5564,7 +5701,7 @@ svg:not(:root) {
     margin: 0 !important;
     max-width: 100% !important;
     overflow-wrap: anywhere !important;
-    padding: 5px 12px !important;
+    padding: 4px 10px !important;
 }
 
 .publication-card a {

@@ -8,12 +8,10 @@ count_year_min: 2023
 
 <style>
 .gallery-page {
-  background:
-    radial-gradient(circle at 80% 8%, rgba(43, 111, 232, 0.055), transparent 28%),
-    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  background: #ffffff;
   color: #1f2e4a;
   font-family: var(--site-font-family) !important;
-  padding: 50px 0 108px;
+  padding: 0 0 108px;
 }
 
 .gallery-page .row {
@@ -21,35 +19,50 @@ count_year_min: 2023
 }
 
 .gallery-hero {
-  margin-bottom: 34px;
-  max-width: 720px;
+  margin: 0 auto 34px;
+  max-width: 820px;
+  text-align: center;
 }
 
 .gallery-eyebrow {
-  color: #2b6fe8;
-  font-family: var(--site-display-font-family) !important;
-  font-size: 0.78rem;
-  font-weight: 850;
-  letter-spacing: 0.06em;
-  margin: 0 0 17px;
-  text-transform: uppercase;
+  display: none;
 }
 
-.gallery-title {
+.gallery-title,
+.gallery-title-shell .modSectionHeader.big h2 {
   color: #1b2944;
+  display: inline-block !important;
   font-family: var(--site-display-font-family) !important;
-  font-size: clamp(3.1rem, 4.55vw, 4.45rem);
+  font-size: clamp(2.9rem, 4.25vw, 3.75rem);
   font-weight: 860;
-  letter-spacing: -0.01em;
-  line-height: 1.03;
-  margin: 0 0 22px;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  margin: 0 0 14px;
+  text-transform: none !important;
+  white-space: nowrap;
+}
+
+.gallery-title-shell .modSectionHeader {
+  margin: 0 !important;
+}
+
+.gallery-title-shell {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 184px;
+}
+
+.gallery-title-shell .modSectionHeader .special-title h2::after {
+  margin-top: 14px;
 }
 
 .gallery-rule {
   align-items: center;
   display: flex;
-  margin: 0 0 26px;
-  max-width: 320px;
+  margin: 0 auto 26px;
+  max-width: 530px;
+  width: 54%;
 }
 
 .gallery-rule::before,
@@ -74,14 +87,15 @@ count_year_min: 2023
   font-size: 1.08rem;
   font-weight: 560;
   line-height: 1.52;
-  margin: 0 0 28px;
-  max-width: 470px;
+  margin: 0 auto 28px;
+  max-width: 560px;
 }
 
 .gallery-filter-bar {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
 }
 
 .gallery-filter {
@@ -192,21 +206,35 @@ count_year_min: 2023
 
 @media only screen and (max-width: 767px) {
   .gallery-page {
-    padding: 30px 0 84px;
+    padding: 0 0 84px;
   }
 
   .gallery-hero {
-    gap: 22px;
     margin-bottom: 24px;
   }
 
+  .gallery-title-shell {
+    min-height: 118px;
+  }
+
   .gallery-title {
-    font-size: 2.16rem;
+    font-size: clamp(2rem, 8.8vw, 2.45rem);
+    letter-spacing: -0.025em;
+  }
+
+  .gallery-title-shell .modSectionHeader.big h2 {
+    font-size: clamp(2rem, 8.8vw, 2.45rem) !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  .gallery-title-shell .modSectionHeader .special-title h2::after {
+    margin-top: 10px;
   }
 
   .gallery-rule {
     margin-bottom: 20px;
-    max-width: 260px;
+    max-width: 300px;
+    width: 82%;
   }
 
   .gallery-lead {
@@ -256,8 +284,9 @@ count_year_min: 2023
       <section class="gallery-hero">
         <div>
           <p class="gallery-eyebrow">Gallery</p>
-          <h1 class="gallery-title">Moments at PI Lab</h1>
-          <div class="gallery-rule"><span></span></div>
+          <div class="gallery-title-shell">
+            {% include section-header.html title="Moments at PI Lab" color="#1b2944" class="big" %}
+          </div>
           <p class="gallery-lead">Research, collaboration, retreats, and everyday moments beyond the lab.</p>
           <div class="gallery-filter-bar" aria-label="Gallery filters">
             <button class="gallery-filter is-active" type="button" data-gallery-filter="all">All</button>

@@ -1,5 +1,7 @@
 {% assign member = include.member %}
 {% assign color_list = include.color_list %}
+{% assign card_variant = include.variant | default: "standard" %}
+{% assign role_label = include.role_label %}
 {% assign homeurl = member.permalink %}
 
 {% for social in member.social %}
@@ -8,60 +10,61 @@
   {% endif %}
 {% endfor %}
 
-<div class="small-6 medium-4 large-custom-5 columns wp-block-coblocks-author member-card"
-     style="font-size:15px; text-align: center; display: flex; flex-direction: column; align-items: center; margin: 0; height: auto; margin-bottom: 0; background-color: #ffffff; box-shadow: none;">
-  <figure class="wp-block-coblocks-author__avatar" style="margin-left: 0; margin-bottom: 9px; width: 100%; display: flex; justify-content: center;">
-    <a href="{{homeurl}}" style="width: 100%; display: flex; justify-content: center;">
-      <img class="wp-block-coblocks-author__avatar-img" src="./images/people/{{member.img-filename}}"
-           style="margin: auto; display: block; width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-    </a>
-  </figure>
+<article class="member-card member-card--{{ card_variant }}">
+  <a class="member-card__avatar-link" href="{{ homeurl }}">
+    <img class="member-card__avatar" src="./images/people/{{ member.img-filename }}" alt="{{ member.fullname }}">
+  </a>
 
-  <div class="wp-block-coblocks-author__content" style="width: 100%;">
-    <span class="wp-block-coblocks-author__name">
-      <a style="color:black;" href="{{homeurl}}">
-        <strong><strong><span class="member-emoji">{{member.emoji}}</span><span class="member-name-text">{{member.fullname}}</span></strong></strong>
+  <div class="member-card__body">
+    {% if role_label %}
+      <div class="member-card__role">{{ role_label }}</div>
+    {% endif %}
+
+    <h3 class="member-card__name">
+      <a href="{{ homeurl }}">
+        <span class="member-emoji">{{ member.emoji }}</span><span class="member-name-text">{{ member.fullname }}</span>
       </a>
-    </span>
-    <span class="wp-block-coblocks-author__name"></span>
-      <span style="color:black;">
-        <span class="member-position" style="color: #666666; font-size: 0.9em; font-style: italic;">{{member.position}}</span>
-      </span>
-    </span>
-    <br>
+    </h3>
+
+    <div class="member-card__position">{{ member.position }}</div>
+
+    {% if member.social %}
+      <div class="member-card__socials" aria-label="{{ member.fullname }} links">
+        {% for social in member.social %}
+          <a class="member-card__social-link" href="{{ social.url }}" aria-label="{{ social.title }}">
+            <span class="member-card__social-glyph" aria-hidden="true">↗</span>
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
 
     {% if member.affiliation and member.works %}
-    <div class="member-affiliation" style="--member-logo-width: {{member.affiliation.logo_width | default: '80px'}};">
-      <span class="member-affiliation-label">{{member.affiliation.label}}</span>
-      <img class="member-affiliation-logo" src="./images/works/{{member.works}}" alt="{{member.affiliation.logo_alt}}">
-    </div>
+      <div class="member-affiliation" style="--member-logo-width: {{ member.affiliation.logo_width | default: '80px' }};">
+        <span class="member-affiliation-label">{{ member.affiliation.label }}</span>
+        <img class="member-affiliation-logo" src="./images/works/{{ member.works }}" alt="{{ member.affiliation.logo_alt }}">
+      </div>
     {% endif %}
 
-    <div>
-    {% if member.fullname contains "Dongha" %}
-      <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://diyonsei.notion.site/Data-Language-Intelligence-Lab-Yonsei-University-7e121249362f42c2bdd1328aeaeb5f4b">  DLI Lab.</a></i>
-    {% endif %}
-    {% if member.fullname contains "Jinyoung" %}
-      <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://jinyeo.weebly.com/">  GLI Lab.</a></i>
-    {% endif %}
-    {% if member.fullname contains "Sungjoon" %}
-      <i class="fas fa-home" style="color: #000000; font-size: 0.9em; margin-left: 5px;"><a href="https://sites.google.com/view/sungjoon-choi/home">  RI Lab.</a></i>
-    {% endif %}
+    <div class="member-card__legacy-links">
+      {% if member.fullname contains "Dongha" %}
+        <a href="https://diyonsei.notion.site/Data-Language-Intelligence-Lab-Yonsei-University-7e121249362f42c2bdd1328aeaeb5f4b"><i class="fa fa-home"></i> DLI Lab.</a>
+      {% endif %}
+      {% if member.fullname contains "Jinyoung" %}
+        <a href="https://jinyeo.weebly.com/"><i class="fa fa-home"></i> GLI Lab.</a>
+      {% endif %}
+      {% if member.fullname contains "Sungjoon" %}
+        <a href="https://sites.google.com/view/sungjoon-choi/home"><i class="fa fa-home"></i> RI Lab.</a>
+      {% endif %}
     </div>
-    <p class="wp-block-coblocks-author__biography" style="margin-top: 5px;">  <!-- Added margin-top here -->
+
+    <div class="member-card__interests">
       {% for field in member.fields %}
-      {% assign color = color_list[forloop.index0] %}
+        {% assign color = color_list[forloop.index0] %}
+        <span class="member-interest-tag" style="background-color: {{ color }};">{{ field.name }}</span>
         {% if field.name == "Multimodal perception for AI" %}
-        <div class="member-field" style="margin-bottom:4px;">
-        {% else %}
-        <div class="member-field" style="margin-bottom:4px;">
-        {% endif %}
-      <span class="member-interest-tag" style="background-color: {{color}};">{{field.name}}</span>
-      </div>
-        {% if field.name == "Multimodal perception for AI" %}
-        <span class="member-interest-tag member-interest-note">(Video, Speech, Embodied AI, VR/MR)</span>
+          <span class="member-interest-tag member-interest-note">(Video, Speech, Embodied AI, VR/MR)</span>
         {% endif %}
       {% endfor %}
-    </p>
+    </div>
   </div>
-</div>
+</article>

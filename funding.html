@@ -16,15 +16,16 @@ permalink: funding.html
 .projects-hero {
   align-items: center;
   display: grid;
-  gap: 46px;
-  grid-template-columns: minmax(560px, 1.1fr) minmax(340px, 0.9fr);
+  gap: 34px;
+  grid-template-columns: minmax(620px, 1.18fr) minmax(300px, 0.82fr);
   margin-bottom: 28px;
 }
 
 .projects-hero-title {
   color: #1b2944;
+  display: inline-block;
   font-family: var(--site-display-font-family) !important;
-  font-size: clamp(3.05rem, 4.35vw, 4.12rem);
+  font-size: clamp(2.78rem, 4vw, 3.86rem);
   font-weight: 860;
   letter-spacing: -0.025em;
   line-height: 1.02;
@@ -32,12 +33,16 @@ permalink: funding.html
   white-space: nowrap;
 }
 
+.projects-title-group {
+  display: inline-block;
+  max-width: 100%;
+}
+
 .projects-hero-rule {
   align-items: center;
   display: flex;
-  margin: 0 auto 30px;
-  max-width: 560px;
-  width: 62%;
+  margin: 0 0 30px;
+  width: 100%;
 }
 
 .projects-hero-rule::before,
@@ -86,7 +91,7 @@ permalink: funding.html
   display: block;
   height: auto;
   margin-left: auto;
-  max-width: 545px;
+  max-width: 500px;
   width: 100%;
 }
 
@@ -105,6 +110,7 @@ permalink: funding.html
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 34px;
   position: relative;
+  transition: gap 0.42s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .projects-panel {
@@ -115,25 +121,18 @@ permalink: funding.html
   max-height: 520px;
   overflow: hidden;
   position: relative;
-  transform-origin: top center;
+  transform-origin: center top;
   transition:
     border-color 0.34s ease,
     box-shadow 0.42s cubic-bezier(0.22, 1, 0.36, 1),
-    max-height 0.58s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.34s ease,
-    transform 0.46s cubic-bezier(0.22, 1, 0.36, 1);
+    max-height 0.66s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.32s ease,
+    transform 0.56s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.32s step-end;
 }
 
 .projects-panel::before {
-  background: linear-gradient(120deg, rgba(235, 244, 255, 0), rgba(235, 244, 255, 0.62), rgba(235, 244, 255, 0));
-  content: "";
-  inset: 0;
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  transform: translateX(-18%);
-  transition: opacity 0.38s ease, transform 0.62s cubic-bezier(0.22, 1, 0.36, 1);
-  z-index: 0;
+  content: none;
 }
 
 .projects-panel > * {
@@ -154,7 +153,7 @@ permalink: funding.html
 }
 
 .projects-panel.is-expanded .projects-panel-summary {
-  background: linear-gradient(100deg, rgba(246, 250, 255, 0.98), rgba(255, 255, 255, 0.94)) !important;
+  background: #fff !important;
 }
 
 .projects-panel.is-wide,
@@ -166,20 +165,19 @@ permalink: funding.html
   max-height: 0;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-12px) scale(0.985);
+  transform: translateY(-10px) scale(0.985);
   visibility: hidden;
 }
 
 .projects-panel.is-expanded {
   border-color: rgba(43, 111, 232, 0.26);
-  box-shadow: 0 18px 42px rgba(38, 63, 100, 0.075);
+  box-shadow: 0 16px 34px rgba(38, 63, 100, 0.07);
   max-height: 3600px;
-  transform: translateY(-3px);
+  transform: translateY(0);
 }
 
 .projects-panel.is-expanded::before {
-  opacity: 1;
-  transform: translateX(18%);
+  content: none;
 }
 
 .projects-panel-summary {
@@ -359,10 +357,10 @@ button.projects-filter {
   padding: 0 26px;
   transform: translateY(-14px);
   transition:
-    max-height 0.82s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.34s ease,
+    max-height 0.78s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease 0.08s,
     padding 0.52s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.54s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.56s cubic-bezier(0.16, 1, 0.3, 1),
     border-color 0.28s ease;
 }
 
@@ -448,6 +446,12 @@ button.projects-filter {
   }
 }
 
+@media only screen and (max-width: 1180px) {
+  .projects-hero-title {
+    white-space: normal;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   .projects-page {
     padding: 24px 0 90px;
@@ -468,8 +472,7 @@ button.projects-filter {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 24px;
-    max-width: 270px;
-    width: 74%;
+    width: 100%;
   }
 
   .projects-hero-lead {
@@ -634,8 +637,10 @@ button.projects-filter {
     <div class="large-12 columns">
       <section class="projects-hero">
         <div>
-          <h1 class="projects-hero-title">Agentic AI to Physical AI</h1>
-          <div class="projects-hero-rule"><span></span></div>
+          <div class="projects-title-group">
+            <h1 class="projects-hero-title">Agentic AI to Physical AI</h1>
+            <div class="projects-hero-rule"><span></span></div>
+          </div>
           <p class="projects-hero-lead">Multimodal agentic AI and world models, extending into physical AI</p>
           <p class="projects-hero-copy">SNU PI Lab aims to become a world leader in multimodal agentic AI and world models, and we are building on this foundation to extend our research into robotics and physical AI.</p>
           <p class="projects-hero-copy">With multimodal understanding and reasoning across language, vision, and action as our core strength, our goal is to carry this intelligence into the physical world.</p>
@@ -672,6 +677,7 @@ button.projects-filter {
               <article class="project-detail-card"><img src="images/fundings/keit.png" alt="KEIT"><div><h3 class="project-detail-title">Humanoid Robots for Chemical Processes</h3><p class="project-detail-meta"><strong>Funding</strong> KEIT<br><strong>Lead</strong> Holiday Robotics</p></div></article>
               <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h3 class="project-detail-title">World Foundation Model for Physical AI</h3><p class="project-detail-meta"><strong>Funding</strong> IITP<br><strong>Lead</strong> LG Electronics</p></div></article>
               <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h3 class="project-detail-title">Open Autonomous Digital Twin</h3><p class="project-detail-meta"><strong>Funding</strong> IITP<br><strong>Lead</strong> KETI</p></div></article>
+              <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h3 class="project-detail-title">AI-Based ADTO Combat Planning Model</h3><p class="project-detail-meta"><strong>Funding</strong> IITP</p></div></article>
             </div>
           </div>
         </section>
