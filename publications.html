@@ -30,8 +30,8 @@ count_year_min: 2016
     {% for paper in site.publications reversed %}
       {% if paper.year == y %}
       <div class='row publication-card'>
-        <div class='small-4 medium-2 columns'>
-          <div class='mod modIconText'>
+        <div class="publication-card-layout">
+          <div class='publication-figure'>
             
             {% if paper.img %}
               {% assign proj_link = "" %}
@@ -45,27 +45,26 @@ count_year_min: 2016
               {% assign img_link = "" %}
               {% if proj_link.size > 0 %} {% assign img_link = proj_link %} {% elsif pdf_link.size > 0 %} {% assign img_link = pdf_link %} {% endif %}
               {% if img_link.size > 0 %}<a href="{{img_link}}">{% endif %}
-                <img src="/images/papers/{{paper.img}}" style="max-width: 100%;"/>
+                <img src="/images/papers/{{paper.img}}" alt="{{paper.name}}"/>
               {% if img_link.size > 0 %}</a>{% endif %}
             {% endif %}
           </div>
-        </div>
-        <div class='small-8 medium-10 columns'>
-          <div class='mod modIconText'>
-            
+          <div class='publication-body'>
+            <div class="publication-headline">
             {% if paper.conference %}
-            <div class="publication-venue-line">
-              <span class='publication-conference-text'>{{paper.conference}}</span>
-            </div>
+              <div class="publication-venue-line">
+                <span class='publication-conference-text'>{{paper.conference}}</span>
+              </div>
             {% endif %}
-            <h3>{{paper.name}}</h3>
-            <div class="publication-meta-line">
-              {% if paper.keywords %}
-                {% for keyword in paper.keywords %}
-                  <span class="publication-keyword"># {{keyword.name}}</span>
-                {% endfor %}
-              {% endif %}
+              <div class="publication-meta-line">
+                {% if paper.keywords %}
+                  {% for keyword in paper.keywords %}
+                    <span class="publication-keyword"># {{keyword.name}}</span>
+                  {% endfor %}
+                {% endif %}
+              </div>
             </div>
+            <h3>{{paper.name}}</h3>
             <p class="publication-authors">
               {% if paper.author %}
                 <!--하이퍼클버만 조금 다르게-->

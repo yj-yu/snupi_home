@@ -7,229 +7,385 @@ count_year_min: 2023
 ---
 
 <style>
-  /* -----------------------------------------------------------
-     1. 전역 설정 및 레이아웃 유지 (PC/모바일 공통)
-  ----------------------------------------------------------- */
-  .grid-container {
-    display: grid;
+.gallery-page {
+  background:
+    radial-gradient(circle at 80% 8%, rgba(43, 111, 232, 0.09), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  color: #1f2e4a;
+  font-family: var(--site-font-family) !important;
+  padding: 56px 0 104px;
+}
+
+.gallery-page .row {
+  max-width: 1180px;
+}
+
+.gallery-hero {
+  align-items: center;
+  display: grid;
+  gap: 48px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+  margin-bottom: 30px;
+}
+
+.gallery-eyebrow {
+  color: #2b6fe8;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  margin: 0 0 17px;
+  text-transform: uppercase;
+}
+
+.gallery-title {
+  color: #1b2944;
+  font-family: var(--site-display-font-family) !important;
+  font-size: clamp(3.1rem, 4.55vw, 4.45rem);
+  font-weight: 860;
+  letter-spacing: -0.01em;
+  line-height: 1.03;
+  margin: 0 0 22px;
+}
+
+.gallery-rule {
+  align-items: center;
+  display: flex;
+  margin: 0 0 26px;
+  max-width: 320px;
+}
+
+.gallery-rule::before,
+.gallery-rule::after {
+  background: #2b6fe8;
+  content: "";
+  display: block;
+  flex: 1;
+  height: 3px;
+}
+
+.gallery-rule span {
+  border: 3px solid #2b6fe8;
+  display: block;
+  height: 15px;
+  transform: rotate(45deg);
+  width: 15px;
+}
+
+.gallery-lead {
+  color: #52637a;
+  font-size: 1.08rem;
+  font-weight: 560;
+  line-height: 1.52;
+  margin: 0 0 28px;
+  max-width: 470px;
+}
+
+.gallery-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gallery-filter {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(198, 215, 238, 0.9);
+  border-radius: 999px;
+  color: #1f2e4a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--site-font-family) !important;
+  font-size: 0.86rem;
+  font-weight: 780;
+  gap: 8px;
+  height: 40px;
+  padding: 0 18px;
+  transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease;
+}
+
+.gallery-filter.is-active {
+  background: #2b6fe8;
+  border-color: #2b6fe8;
+  color: #fff;
+}
+
+.gallery-orbit {
+  min-height: 300px;
+}
+
+.gallery-orbit svg {
+  display: block;
+  height: auto;
+  margin-left: auto;
+  max-width: 520px;
+  width: 100%;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gallery-card {
+  background: #fff;
+  border: 1px solid rgba(209, 220, 235, 0.82);
+  border-radius: 12px;
+  box-shadow: 0 5px 16px rgba(31, 56, 88, 0.045);
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-card.is-hidden {
+  display: none;
+}
+
+.gallery-image {
+  display: block;
+  margin: 0;
+}
+
+.gallery-image img {
+  aspect-ratio: 1.55 / 1;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.gallery-caption {
+  align-items: flex-start;
+  background: linear-gradient(180deg, transparent 0%, rgba(9, 18, 34, 0.68) 100%);
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  left: 0;
+  min-height: 42%;
+  opacity: 0;
+  padding: 52px 18px 16px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  transform: translateY(14px);
+  transition: opacity 0.24s ease, transform 0.24s ease;
+}
+
+.gallery-card:hover .gallery-caption,
+.gallery-card.is-open .gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-caption-title {
+  color: #fff;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 0.98rem;
+  font-weight: 840;
+  line-height: 1.18;
+  margin: 0 0 4px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.42);
+}
+
+.gallery-caption-sub {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.76rem;
+  font-weight: 620;
+  line-height: 1.25;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.38);
+}
+
+@media only screen and (max-width: 1024px) {
+  .gallery-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-orbit {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .gallery-page {
+    padding: 30px 0 84px;
+  }
+
+  .gallery-hero {
     gap: 22px;
-    padding: 10px;
+    margin-bottom: 24px;
   }
 
-  /* 기존의 3열/1열 구조를 유지하는 클래스가 있다고 가정하고 내부 아이템 스타일만 정의 */
-  .location-listing {
-    position: relative;
-    display: block;
-    background: #fff;
-    border: 1px solid rgba(209, 220, 235, 0.85);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(31, 56, 88, 0.06);
-    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
-    text-decoration: none;
+  .gallery-title {
+    font-size: 2.16rem;
   }
 
-  .location-image img {
-    width: 100%;
-    display: block;
-    transition: filter 0.28s ease, transform 0.28s ease;
+  .gallery-rule {
+    margin-bottom: 20px;
+    max-width: 260px;
   }
 
-  /* -----------------------------------------------------------
-     2. 모바일 디자인 (기본): 제목은 탭했을 때만 표시
-  ----------------------------------------------------------- */
-  
-  /* 모바일에서는 hover 시 블러 효과 완전 제거 */
-  .location-listing:hover .location-image img {
-    filter: none !important;
+  .gallery-lead {
+    font-size: 0.98rem;
+    line-height: 1.45;
+    margin-bottom: 20px;
   }
 
-  .location-title {
-    position: absolute !important;
-    opacity: 0 !important;
-    visibility: visible !important;
-    top: auto !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    transform: none !important;
-    display: flex !important;
-    align-items: flex-end;
-    justify-content: center;
-    height: auto !important;
-    width: 100% !important;
-    min-height: 0;
-    background: transparent !important;
-    color: #fff !important;
-    padding: 8px !important;
-    border-top: 0 !important;
-    text-align: center;
-    font-family: var(--site-font-family) !important;
-    font-size: 0.88rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0;
-    line-height: 1.18;
-    pointer-events: none;
-    text-shadow: none;
-    transition: opacity 0.22s ease;
-    }
-
-  @media (max-width: 767px) {
-    .grid-container {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      padding: 0 14px 18px;
-    }
-
-    .location-listing {
-      width: 100%;
-      max-width: none;
-      margin: 0;
-      border: 0;
-      border-radius: 11px;
-      box-shadow: none;
-      background: #f8fafc;
-      cursor: pointer;
-    }
-
-    .location-image img {
-      aspect-ratio: 1 / 0.78;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .location-title {
-      font-size: 1rem !important;
-      line-height: 1.2;
-      padding: 8px !important;
-      background: transparent !important;
-      text-shadow: none !important;
-    }
-
-    .location-listing:not(.is-open) .location-title {
-      opacity: 0 !important;
-    }
-
-    .location-listing.is-open .location-title {
-      opacity: 1 !important;
-    }
-
-    .location-listing.is-open .location-image img {
-      filter: none !important;
-      transform: none !important;
-    }
+  .gallery-filter-bar {
+    gap: 8px;
   }
-    
-  /* -----------------------------------------------------------
-     3. PC 디자인 (768px 이상): 기존의 고급스러운 호버 효과 유지
-  ----------------------------------------------------------- */
-  @media (min-width: 768px) {
-    .grid-container {
-      grid-template-columns: repeat(3, 1fr); /* 3열로 변경 */
-    }
 
-    .location-listing:hover {
-      transform: none;
-      border-color: rgba(209, 220, 235, 0.85);
-      box-shadow: 0 8px 24px rgba(31, 56, 88, 0.06);
-    }
-
-    .location-title {
-      /* [위치 변경] 다시 이미지 위로 올림 */
-      position: absolute !important;
-      top: 0 !important;
-      left: 0;
-      width: 100% !important;
-      height: 100% !important;
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-      
-      /* [초기 상태] 숨김 */
-      opacity: 0 !important;
-      background: rgba(15, 23, 42, 0.34) !important;
-      color: #fff !important;
-      transition: opacity 0.28s ease;
-      pointer-events: none;
-      backdrop-filter: blur(1px);
-      -webkit-backdrop-filter: blur(1px);
-      
-      /* [PC 전용 스타일] 모바일 장식 제거 */
-      border-top: none !important;
-      border-bottom: none !important;
-      padding: 24px !important;
-      font-family: var(--site-font-family) !important;
-      font-size: 18px !important;
-      font-weight: 700 !important;
-      line-height: 1.25;
-      text-shadow: 0 1px 8px rgba(15, 23, 42, 0.45);
-    }
-
-    .location-listing:hover .location-title {
-      /* [호버 상태] 나타남 */
-      opacity: 1 !important;
-    }
-
-    .location-listing:hover .location-image img {
-      filter: blur(0.4px);
-      transform: none;
-    }
+  .gallery-filter {
+    font-size: 0.8rem;
+    height: 33px;
+    padding: 0 11px;
   }
+
+  .gallery-grid {
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-image img {
+    aspect-ratio: 1.2 / 1;
+  }
+
+  .gallery-caption {
+    background: linear-gradient(180deg, transparent 0%, rgba(9, 18, 34, 0.7) 100%);
+    min-height: 54%;
+    padding: 44px 10px 10px;
+  }
+
+  .gallery-caption-title {
+    font-size: 0.88rem;
+  }
+
+  .gallery-caption-sub {
+    display: none;
+  }
+}
 </style>
 
+<div class="full no-padding gallery-page">
+  <div class="row">
+    <div class="large-12 columns">
+      <section class="gallery-hero">
+        <div>
+          <p class="gallery-eyebrow">Gallery</p>
+          <h1 class="gallery-title">Moments at PI Lab</h1>
+          <div class="gallery-rule"><span></span></div>
+          <p class="gallery-lead">Research, collaboration, retreats, and everyday moments beyond the lab.</p>
+          <div class="gallery-filter-bar" aria-label="Gallery filters">
+            <button class="gallery-filter is-active" type="button" data-gallery-filter="all">All</button>
+            <button class="gallery-filter" type="button" data-gallery-filter="lab-life">💻 Lab Life</button>
+            <button class="gallery-filter" type="button" data-gallery-filter="retreats">⛰ Retreats</button>
+            <button class="gallery-filter" type="button" data-gallery-filter="research">🔬 Research</button>
+            <button class="gallery-filter" type="button" data-gallery-filter="events">📅 Events</button>
+          </div>
+        </div>
 
-<div class='full parallax' style='padding-top: 50px;'>
-  <div class='row'>
-    <div class='twelve columns'>
-      {% include section-header.html title="Gallery" color="#464646" tagline=" " class="big" %}
+        <div class="gallery-orbit" aria-hidden="true">
+          <svg viewBox="0 0 560 320" role="img">
+            <defs>
+              <radialGradient id="galleryOrb" cx="50%" cy="45%" r="55%">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="55%" stop-color="#d6e4ff"/>
+                <stop offset="100%" stop-color="#8ab1ff"/>
+              </radialGradient>
+              <filter id="galleryShadow" x="-30%" y="-30%" width="160%" height="160%">
+                <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#2b6fe8" flood-opacity="0.12"/>
+              </filter>
+            </defs>
+            <circle cx="438" cy="62" r="36" fill="#dce9ff" opacity="0.76"/>
+            <circle cx="150" cy="190" r="24" fill="#dce9ff" opacity="0.7"/>
+            <ellipse cx="314" cy="168" rx="218" ry="84" fill="none" stroke="#9dbdff" stroke-width="1.5" opacity="0.46"/>
+            <ellipse cx="334" cy="165" rx="126" ry="126" fill="none" stroke="#9dbdff" stroke-width="1.3" opacity="0.35"/>
+            <path d="M184 142 C260 56, 444 28, 528 84" fill="none" stroke="#9dbdff" stroke-dasharray="6 10" stroke-width="1.5" opacity="0.52"/>
+            <circle cx="306" cy="172" r="76" fill="url(#galleryOrb)" filter="url(#galleryShadow)" opacity="0.36"/>
+            <g fill="#ffffff" stroke="#2b6fe8" stroke-width="2" filter="url(#galleryShadow)">
+              <circle cx="246" cy="84" r="34"/>
+              <circle cx="392" cy="156" r="34"/>
+            </g>
+            <g stroke="#2b6fe8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+              <path d="M232 84 h9 l5 -8 l9 16 l5 -8 h12"/>
+              <rect x="377" y="142" width="30" height="26" rx="3"/>
+              <path d="M381 164 l8 -8 l7 6 l5 -5 l6 7"/>
+              <circle cx="386" cy="150" r="2"/>
+            </g>
+            <g fill="#2b6fe8">
+              <circle cx="492" cy="130" r="5"/>
+              <circle cx="272" cy="46" r="4"/>
+              <circle cx="170" cy="238" r="5"/>
+              <circle cx="360" cy="268" r="4"/>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section class="gallery-grid" aria-label="PI Lab gallery">
+        {% for photo in site.gallery reversed %}
+          {% assign gallery_text = photo.title | append: ' ' | append: photo.description | append: ' ' | append: photo.img-filename | downcase %}
+          {% assign gallery_category = 'lab-life' %}
+          {% if gallery_text contains 'jeju' or gallery_text contains 'mt' or gallery_text contains 'retreat' or gallery_text contains 'ocean' or gallery_text contains 'green tea' %}
+            {% assign gallery_category = 'retreats' %}
+          {% elsif gallery_text contains 'seminar' or gallery_text contains 'robot' or gallery_text contains 'teleoperation' or gallery_text contains '360' or gallery_text contains 'ar team' or gallery_text contains 'humanoids' %}
+            {% assign gallery_category = 'research' %}
+          {% elsif gallery_text contains 'teacher' or gallery_text contains 'birthday' or gallery_text contains 'b-day' or gallery_text contains 'snow' or gallery_text contains 'moving' or gallery_text contains 'conference' or gallery_text contains 'colm' or gallery_text contains 'iccv' or gallery_text contains 'emnlp' or gallery_text contains 'neurips' %}
+            {% assign gallery_category = 'events' %}
+          {% endif %}
+          <article class="gallery-card" data-gallery-card data-gallery-category="{{ gallery_category }}">
+            <figure class="gallery-image">
+              <img src="images/gallery/{{ photo.img-filename }}" alt="{{ photo.description }}">
+            </figure>
+            <div class="gallery-caption">
+              <h2 class="gallery-caption-title">{{ photo.description }}</h2>
+              <p class="gallery-caption-sub">{{ gallery_category | replace: '-', ' ' | capitalize }}</p>
+            </div>
+          </article>
+        {% endfor %}
+      </section>
     </div>
   </div>
-  <div class='spacing'></div>
 </div>
-<div class='full no-padding'>
-  <div class="child-page-listing">
-
-    
-    <div class="row">
-      <div class="grid-container">
-        {% for photo in site.gallery reversed %}
-        <article id="3685" class="location-listing">
-    
-          <div class="location-title" href="#" >
-            {{photo.description}}           </div>
-    
-          <div class="location-image">
-            <img class="avatar" src="images/gallery/{{photo.img-filename}}" alt="{{photo.description}}">
-    
-          </div>
-    
-        </article>
-        {% endfor %}
-    
-      </div>
-      <!-- end grid container -->
-  </div>
-  </div>
-</div>
-<div class='four spacing'></div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    var filters = Array.prototype.slice.call(document.querySelectorAll('[data-gallery-filter]'));
+    var cards = Array.prototype.slice.call(document.querySelectorAll('[data-gallery-card]'));
     var mobileGallery = window.matchMedia('(max-width: 767px)');
-    document.querySelectorAll('.location-listing').forEach(function (card) {
+
+    filters.forEach(function (filter) {
+      filter.addEventListener('click', function () {
+        var selected = filter.getAttribute('data-gallery-filter');
+
+        filters.forEach(function (item) {
+          item.classList.toggle('is-active', item === filter);
+        });
+
+        cards.forEach(function (card) {
+          var category = card.getAttribute('data-gallery-category');
+          card.classList.toggle('is-hidden', selected !== 'all' && category !== selected);
+          card.classList.remove('is-open');
+        });
+      });
+    });
+
+    cards.forEach(function (card) {
       card.addEventListener('click', function () {
-        if (mobileGallery.matches) {
-          card.classList.toggle('is-open');
+        if (!mobileGallery.matches) {
+          return;
         }
+
+        cards.forEach(function (otherCard) {
+          if (otherCard !== card) {
+            otherCard.classList.remove('is-open');
+          }
+        });
+        card.classList.toggle('is-open');
       });
     });
   });
 </script>
-
-<!--
-{% for social in member.social %}
-  {% if social.title == "home" %}
-    {% assign homeurl = social.url %}
-  {% endif %}
-{% endfor %}
--->

@@ -5255,17 +5255,55 @@ svg:not(:root) {
 
 /* --- Publications Custom Design --- */
 
-/* 논문 카드 스타일 */
 .publication-card {
     background: #ffffff !important;
-    border: 1px solid var(--site-card-border) !important;
-    border-radius: var(--site-card-radius) !important;
-    padding: 16px 12px !important;
-    margin-bottom: var(--site-card-gap) !important;
-    box-shadow: 0 1px 4px rgba(31, 56, 88, 0.018) !important;
-    display: flex !important; /* 가로 정렬 보정 */
-    align-items: center !important;
+    border: 1px solid rgba(210, 224, 242, 0.9) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 8px 22px rgba(28, 45, 76, 0.045) !important;
     font-family: var(--site-font-family) !important;
+    margin-bottom: 18px !important;
+    max-width: 1180px !important;
+    padding: 26px 30px !important;
+}
+
+.publication-card-layout {
+    align-items: center;
+    display: grid;
+    gap: 44px;
+    grid-template-columns: 285px minmax(0, 1fr);
+    width: 100%;
+}
+
+.publication-figure {
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(249, 252, 255, 0.88));
+    border: 1px solid rgba(218, 229, 244, 0.82);
+    border-radius: 10px;
+    display: flex;
+    height: 178px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 16px;
+}
+
+.publication-figure a {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.publication-body {
+    min-width: 0;
+}
+
+.publication-headline {
+    align-items: flex-start;
+    display: flex;
+    gap: 18px;
+    justify-content: space-between;
+    margin-bottom: 14px;
 }
 
 .publication-year-title {
@@ -5279,10 +5317,13 @@ svg:not(:root) {
 }
 
 
-/* 이미지 모서리 둥글게 */
 .publication-card img {
-    border-radius: 4px !important;
+    border-radius: 6px !important;
     box-shadow: none !important;
+    display: block !important;
+    max-height: 144px !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
 }
 
 .bubble_publication_conference {
@@ -5304,13 +5345,13 @@ svg:not(:root) {
 /* 논문 제목 스타일 */
 .publication-card h3 {
     font-family: var(--site-font-family) !important;
-    font-weight: 700 !important;
+    font-weight: 760 !important;
     color: #08142f !important;
-    margin-top: 2px !important;
-    margin-bottom: 4px !important;
-    font-size: 1.16rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 14px !important;
+    font-size: 1.42rem !important;
     letter-spacing: -0.01em !important;
-    line-height: 1.28 !important;
+    line-height: 1.34 !important;
 }
 
 .funding-card,
@@ -5325,53 +5366,60 @@ svg:not(:root) {
 /* 저자 및 링크 스타일 */
 .publication-card p {
     font-family: var(--site-font-family) !important;
-    color: #1f2937 !important;
-    font-size: 0.96rem !important;
-    line-height: 1.38 !important;
-    margin-bottom: 4px !important;
+    color: #5d6a7d !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
 }
 
 .publication-authors {
-    margin-top: 3px !important;
+    margin-top: 0 !important;
 }
 
 .publication-venue-line {
     align-items: center !important;
-    background: linear-gradient(135deg, rgba(239, 247, 255, 0.78), rgba(248, 251, 255, 0.72)) !important;
+    background: rgba(238, 246, 255, 0.82) !important;
     border: 0 !important;
-    border-radius: 999px !important;
+    border-radius: 8px !important;
     color: #2b6fe8 !important;
     display: inline-flex !important;
     font-family: var(--site-font-family) !important;
-    font-size: 0.96rem !important;
+    font-size: 1rem !important;
     line-height: 1.25 !important;
-    margin: 0 0 6px -4px !important;
-    padding: 3px 8px 3px 4px !important;
+    margin: 0 !important;
+    padding: 5px 12px !important;
+    white-space: nowrap !important;
 }
 
 .publication-meta-line {
     color: #4f5967 !important;
     font-family: var(--site-font-family) !important;
-    font-size: 0.92rem !important;
+    font-size: 0.88rem !important;
     line-height: 1.3 !important;
-    margin: 0 0 4px !important;
+    margin: 0 !important;
+    text-align: right !important;
+    white-space: nowrap !important;
 }
 
 .publication-conference-text {
     color: #2b6fe8 !important;
     display: inline !important;
     font-size: inherit !important;
-    font-weight: 700 !important;
+    font-weight: 760 !important;
     margin-right: 0 !important;
 }
 
 .publication-keyword {
-    color: #6b7280 !important;
+    background: rgba(255, 255, 255, 0.84) !important;
+    border: 1px solid rgba(218, 229, 244, 0.95) !important;
+    border-radius: 8px !important;
+    color: #566275 !important;
     display: inline-block !important;
     font-size: inherit !important;
-    font-weight: 400 !important;
+    font-weight: 650 !important;
     line-height: 1.2 !important;
-    margin: 0 12px 0 0 !important;
+    margin: 0 0 7px 10px !important;
+    padding: 6px 11px !important;
 }
 
 .publication-card a {
@@ -5383,10 +5431,10 @@ svg:not(:root) {
 .publication-card .publication-external-link {
     display: inline-block !important;
     margin-right: 14px !important;
-    margin-top: 4px !important;
+    margin-top: 13px !important;
     color: #2d6cdf !important;
-    font-size: 0.94rem !important;
-    font-weight: 500 !important;
+    font-size: 0.98rem !important;
+    font-weight: 650 !important;
     line-height: 1.15 !important;
 }
 
@@ -5396,11 +5444,10 @@ svg:not(:root) {
 
 @media only screen and (max-width: 640px) {
     .publication-card {
-        display: block !important;
-        padding: 12px 12px !important;
-        margin: 0 0 12px !important;
-        border-radius: var(--site-card-radius) !important;
-        box-shadow: 0 1px 3px rgba(31, 56, 88, 0.016) !important;
+        border-radius: 12px !important;
+        margin: 0 0 15px !important;
+        padding: 18px 18px 20px !important;
+        box-shadow: 0 6px 18px rgba(28, 45, 76, 0.04) !important;
     }
 
     .publication-year-title {
@@ -5409,27 +5456,27 @@ svg:not(:root) {
         margin: 7px 0 11px !important;
     }
 
-    .publication-card > .columns {
-        float: none !important;
-        width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+    .publication-card-layout {
+        display: block !important;
     }
 
-    .publication-card .small-4 {
-        margin-bottom: 8px !important;
+    .publication-figure {
+        height: auto !important;
+        margin: 0 auto 16px !important;
+        max-width: 330px !important;
+        min-height: 150px !important;
+        padding: 14px !important;
+        width: 100% !important;
     }
 
     .publication-card img {
-        display: block !important;
-        width: min(76%, 230px) !important;
-        max-width: 230px !important;
-        margin: 0 auto 4px !important;
-        border-radius: 10px !important;
+        max-height: 160px !important;
+        width: auto !important;
     }
 
-    .publication-card .modIconText {
-        overflow: visible !important;
+    .publication-headline {
+        display: block !important;
+        margin-bottom: 10px !important;
     }
 
     .bubble_publication_conference {
@@ -5441,16 +5488,18 @@ svg:not(:root) {
     }
 
     .publication-meta-line {
-        font-size: 0.84rem !important;
+        font-size: 0.86rem !important;
         line-height: 1.3 !important;
-        margin-bottom: 4px !important;
+        margin-top: 8px !important;
+        text-align: left !important;
+        white-space: normal !important;
     }
 
     .publication-venue-line {
-        font-size: 0.86rem !important;
+        font-size: 0.92rem !important;
         line-height: 1.22 !important;
-        margin: 5px 0 6px -3px !important;
-        padding: 3px 7px 3px 4px !important;
+        margin: 0 !important;
+        padding: 5px 10px !important;
     }
 
     .publication-conference-text {
@@ -5460,23 +5509,23 @@ svg:not(:root) {
 
     .publication-keyword {
         display: inline-block !important;
-        margin: 0 5px 0 0 !important;
-        color: #6b7280 !important;
+        margin: 0 6px 6px 0 !important;
         font-size: inherit !important;
         line-height: 1.25 !important;
+        padding: 5px 8px !important;
     }
 
     .publication-card h3 {
         margin-top: 0 !important;
-        margin-bottom: 4px !important;
-        font-size: 1.04rem !important;
-        line-height: 1.28 !important;
+        margin-bottom: 9px !important;
+        font-size: 1.14rem !important;
+        line-height: 1.34 !important;
         letter-spacing: 0 !important;
     }
 
     .publication-card p {
-        font-size: 0.86rem !important;
-        line-height: 1.38 !important;
+        font-size: 0.92rem !important;
+        line-height: 1.45 !important;
         color: #374151 !important;
         margin-bottom: 2px !important;
     }
@@ -5486,8 +5535,8 @@ svg:not(:root) {
     }
 
     .publication-card .publication-external-link {
-        margin-top: 3px !important;
-        font-size: 0.86rem !important;
+        margin-top: 8px !important;
+        font-size: 0.92rem !important;
     }
 }
 
