@@ -2,7 +2,7 @@
 layout: news
 title: News
 section_id: news
-count_year_max: 2025
+count_year_max: 2026
 count_year_min: 2023
 ---
 
@@ -25,18 +25,45 @@ count_year_min: 2023
       <div class='row news-list-row'>
 
         <div class='small-12 medium-12 columns'>
-          <div class='mod modIconText news-list-card'>
-            <div class="news-list-title">{{paper.title}}</div>
-            <div class="news-list-date">{{paper.date | date: "%Y-%m-%d"}}</div>
-            
-            <!-- Add the button here -->
-            
-            <a class="news-list-arrow" href="{{paper.url}}">›</a>
-            
-            <!-- Old manual URL construction (deprecated):
-            <a href="../news/{{paper.type}}/{{paper.date | date: '%Y'}}/{{paper.date | date: '%m'}}/{{paper.date | date: '%d'}}/{{paper.subtitle}}.html" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); padding: 5px 10px; background-color: #383838; color: #fff; text-decoration: none;">></a>
-            -->
-          </div>
+          {% assign news_title = paper.title | downcase %}
+          {% if paper.type == "papers" %}
+            {% assign news_icon = "🎉" %}
+            {% assign news_tag = "Achievement" %}
+            {% assign news_tag_class = "achievement" %}
+          {% elsif news_title contains "award" %}
+            {% assign news_icon = "🏆" %}
+            {% assign news_tag = "Award" %}
+            {% assign news_tag_class = "award" %}
+          {% elsif news_title contains "grant" %}
+            {% assign news_icon = "🏆" %}
+            {% assign news_tag = "Award" %}
+            {% assign news_tag_class = "award" %}
+          {% elsif news_title contains "course" %}
+            {% assign news_icon = "🎓" %}
+            {% assign news_tag = "Student News" %}
+            {% assign news_tag_class = "student" %}
+          {% elsif news_title contains "intern" %}
+            {% assign news_icon = "🎓" %}
+            {% assign news_tag = "Student News" %}
+            {% assign news_tag_class = "student" %}
+          {% elsif news_title contains "학생" %}
+            {% assign news_icon = "🎓" %}
+            {% assign news_tag = "Student News" %}
+            {% assign news_tag_class = "student" %}
+          {% else %}
+            {% assign news_icon = "📌" %}
+            {% assign news_tag = "Lab News" %}
+            {% assign news_tag_class = "lab" %}
+          {% endif %}
+          <a class='mod modIconText news-list-card' href="{{paper.url}}">
+            <span class="news-list-icon" aria-hidden="true">{{news_icon}}</span>
+            <span class="news-list-main">
+              <span class="news-list-title">{{paper.title}}</span>
+              <span class="news-list-badge {{news_tag_class}}">{{news_tag}}</span>
+            </span>
+            <time class="news-list-date" datetime="{{paper.date | date: '%Y-%m-%d'}}">{{paper.date | date: "%Y-%m-%d"}}</time>
+            <span class="news-list-arrow" aria-hidden="true">›</span>
+          </a>
         </div>
 
       </div>

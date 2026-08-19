@@ -7,9 +7,7 @@ permalink: funding.html
 
 <style>
 .projects-page {
-  background:
-    radial-gradient(circle at 78% 12%, rgba(43, 111, 232, 0.09), transparent 32%),
-    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  background: #fff;
   color: #1f2e4a;
   font-family: var(--site-font-family) !important;
   padding: 42px 0 88px;
@@ -37,8 +35,9 @@ permalink: funding.html
 .projects-hero-rule {
   align-items: center;
   display: flex;
-  margin: 0 0 30px;
-  max-width: 370px;
+  margin: 0 auto 30px;
+  max-width: 560px;
+  width: 62%;
 }
 
 .projects-hero-rule::before,
@@ -113,9 +112,33 @@ permalink: funding.html
   border: 1px solid rgba(198, 215, 238, 0.78);
   border-radius: 12px;
   box-shadow: 0 10px 28px rgba(38, 63, 100, 0.055);
+  max-height: 520px;
   overflow: hidden;
+  position: relative;
   transform-origin: top center;
-  transition: border-color 0.28s ease, box-shadow 0.32s ease, opacity 0.24s ease, transform 0.32s ease;
+  transition:
+    border-color 0.34s ease,
+    box-shadow 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    max-height 0.58s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.34s ease,
+    transform 0.46s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.projects-panel::before {
+  background: linear-gradient(120deg, rgba(235, 244, 255, 0), rgba(235, 244, 255, 0.62), rgba(235, 244, 255, 0));
+  content: "";
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-18%);
+  transition: opacity 0.38s ease, transform 0.62s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+
+.projects-panel > * {
+  position: relative;
+  z-index: 1;
 }
 
 .projects-panel-summary:hover,
@@ -131,7 +154,7 @@ permalink: funding.html
 }
 
 .projects-panel.is-expanded .projects-panel-summary {
-  background: linear-gradient(180deg, rgba(248, 251, 255, 0.95), rgba(255, 255, 255, 0.92)) !important;
+  background: linear-gradient(100deg, rgba(246, 250, 255, 0.98), rgba(255, 255, 255, 0.94)) !important;
 }
 
 .projects-panel.is-wide,
@@ -140,16 +163,23 @@ permalink: funding.html
 }
 
 .projects-board.has-expanded .projects-panel:not(.is-expanded) {
+  max-height: 0;
   opacity: 0;
   pointer-events: none;
-  position: absolute;
-  transform: translateY(10px) scale(0.985);
+  transform: translateY(-12px) scale(0.985);
+  visibility: hidden;
 }
 
 .projects-panel.is-expanded {
   border-color: rgba(43, 111, 232, 0.26);
-  box-shadow: 0 14px 32px rgba(38, 63, 100, 0.075);
-  transform: translateY(-2px);
+  box-shadow: 0 18px 42px rgba(38, 63, 100, 0.075);
+  max-height: 3600px;
+  transform: translateY(-3px);
+}
+
+.projects-panel.is-expanded::before {
+  opacity: 1;
+  transform: translateX(18%);
 }
 
 .projects-panel-summary {
@@ -311,8 +341,8 @@ button.projects-filter {
 
 .projects-past-logo img {
   display: block;
-  max-height: 44px;
-  max-width: 148px;
+  max-height: 32px;
+  max-width: 116px;
   object-fit: contain;
 }
 
@@ -327,12 +357,12 @@ button.projects-filter {
   opacity: 0;
   overflow: hidden;
   padding: 0 26px;
-  transform: translateY(-10px);
+  transform: translateY(-14px);
   transition:
-    max-height 0.72s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.28s ease,
-    padding 0.42s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    max-height 0.82s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.34s ease,
+    padding 0.52s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.54s cubic-bezier(0.16, 1, 0.3, 1),
     border-color 0.28s ease;
 }
 
@@ -435,8 +465,11 @@ button.projects-filter {
   }
 
   .projects-hero-rule {
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 24px;
     max-width: 270px;
+    width: 74%;
   }
 
   .projects-hero-lead {
@@ -481,6 +514,11 @@ button.projects-filter {
     gap: 18px 18px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 8px 22px 24px;
+  }
+
+  .projects-past-logo img {
+    max-height: 30px;
+    max-width: 104px;
   }
 
   .projects-filter-row {
@@ -556,8 +594,8 @@ button.projects-filter {
               { transform: 'translate(0, 0) scale(1, 1)' }
             ],
             {
-              duration: 360,
-              easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)'
+              duration: 520,
+              easing: 'cubic-bezier(0.16, 1, 0.3, 1)'
             }
           );
         }
