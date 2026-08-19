@@ -2,6 +2,10 @@
   path:
   section_id: home
 
+- name: News
+  path: news.html
+  section_id: news
+
 # - name: About PILAB
 #   path: about.html
 #   section_id: about

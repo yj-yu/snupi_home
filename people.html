@@ -311,6 +311,33 @@ input:checked + .slider:before {
   margin-top: 3px;
 }
 
+.member-affiliation {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 8px 0 7px;
+  min-height: 52px;
+}
+
+.member-affiliation-label {
+  color: #666666;
+  font-size: 0.82em;
+  font-style: italic;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.member-affiliation-logo {
+  border-radius: 0 !important;
+  display: block;
+  height: auto;
+  max-height: 28px;
+  max-width: min(var(--member-logo-width), 112px);
+  object-fit: contain;
+  width: auto;
+}
+
 .wp-block-coblocks-author__biography {
   margin-top: 5px !important;
   margin-bottom: 0 !important;
@@ -378,6 +405,22 @@ input:checked + .slider:before {
 
   .wp-block-coblocks-author__biography {
     margin-top: 5px !important;
+  }
+
+  .member-affiliation {
+    gap: 4px;
+    margin: 6px 0 6px;
+    min-height: 46px;
+  }
+
+  .member-affiliation-label {
+    font-size: 0.76em;
+    white-space: normal;
+  }
+
+  .member-affiliation-logo {
+    max-height: 23px;
+    max-width: min(var(--member-logo-width), 78px);
   }
 
   .member-interest-tag {

@@ -31,9 +31,9 @@
     <br>
 
     {% if member.affiliation and member.works %}
-    <div style="margin-top: 5px; display: inline-block;">
-      <span style="color: #666666; font-size: 0.9em; font-style: italic;">{{member.affiliation.label}}</span>
-      <img src="./images/works/{{member.works}}" alt="{{member.affiliation.logo_alt}}" style="width: {{member.affiliation.logo_width | default: '80px'}}; height: auto; border-radius: 5px; margin-top: 10px; margin-bottom: 10px;">
+    <div class="member-affiliation" style="--member-logo-width: {{member.affiliation.logo_width | default: '80px'}};">
+      <span class="member-affiliation-label">{{member.affiliation.label}}</span>
+      <img class="member-affiliation-logo" src="./images/works/{{member.works}}" alt="{{member.affiliation.logo_alt}}">
     </div>
     {% endif %}
 

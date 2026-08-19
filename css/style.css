@@ -56,6 +56,11 @@ body :not(i):not([class^="fa"]):not([class*=" fa-"]):not([class^="icon-"]):not([
 .contain-to-grid .top-bar-section li:not(.has-form):not(.active) > a:not(.button):hover {
   color: #2f5fae !important;
 }
+
+.contain-to-grid .top-bar-section li:not(.has-form) > a:not(.button) {
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
 @font-face {
   font-family: "Steelfish";
   src: url('../fonts/steelfish/steelfish_bd-webfont.eot');
@@ -965,7 +970,7 @@ ul.shortcode-list i {
 .contain-to-grid .title-area a.site-logo {
   align-items: center;
   display: inline-flex;
-  gap: 10px;
+  gap: 7px;
   line-height: 1;
   padding: 0;
 }
@@ -973,18 +978,19 @@ ul.shortcode-list i {
 .contain-to-grid .title-area a.site-logo .site-logo-symbol {
   height: auto !important;
   margin-top: 0 !important;
-  max-height: 51px !important;
+  max-height: 48px !important;
   vertical-align: middle;
   width: auto;
 }
 
 .site-logo-text {
-  color: #347af5;
-  font-family: "Raleway", "Inter", "Noto Sans KR", sans-serif;
-  font-size: 2.1rem;
-  font-weight: 800;
+  color: #347af5 !important;
+  font-family: "Arial Rounded MT Bold", "Inter", "Raleway", "Noto Sans KR", sans-serif !important;
+  font-size: 2rem;
+  font-weight: 900 !important;
   letter-spacing: 0;
   line-height: 1;
+  text-rendering: geometricPrecision;
   white-space: nowrap;
 }
 
@@ -1046,7 +1052,7 @@ body.shrink .top-bar .title-area a.site-logo .site-logo-symbol {
 
 .f-topbar-fixed.shrink .top-bar .site-logo-text,
 body.shrink .top-bar .site-logo-text {
-  font-size: 1.85rem;
+  font-size: 1.72rem;
 }
 
 .contain-to-grid.fullwidth .top-bar {
@@ -3919,16 +3925,16 @@ body {
   }
 
   .contain-to-grid .title-area a.site-logo {
-    gap: 7px;
+    gap: 6px;
   }
 
   .contain-to-grid .title-area a.site-logo .site-logo-symbol {
-    max-height: 41px !important;
+    max-height: 39px !important;
     margin-top: 0 !important;
   }
 
   .site-logo-text {
-    font-size: 1.58rem;
+    font-size: 1.48rem;
   }
 
   .top-bar .toggle-topbar.menu-icon {
@@ -4066,7 +4072,7 @@ body {
   }
 
   .site-logo-text {
-    font-size: 1.36rem;
+    font-size: 1.3rem;
   }
 
   .modDefaultSlider .sequence .title h2 {
