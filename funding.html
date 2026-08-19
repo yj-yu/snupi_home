@@ -8,46 +8,37 @@ permalink: funding.html
 <style>
 .projects-page {
   background:
-    radial-gradient(circle at 78% 12%, rgba(43, 111, 232, 0.11), transparent 30%),
+    radial-gradient(circle at 78% 12%, rgba(43, 111, 232, 0.09), transparent 32%),
     linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
   color: #1f2e4a;
   font-family: var(--site-font-family) !important;
-  padding: 38px 0 112px;
+  padding: 42px 0 88px;
 }
 
 .projects-hero {
   align-items: center;
   display: grid;
-  gap: 34px;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-  margin-bottom: 22px;
-}
-
-.projects-eyebrow {
-  color: #2b6fe8;
-  font-family: var(--site-display-font-family) !important;
-  font-size: 0.78rem;
-  font-weight: 850;
-  letter-spacing: 0.06em;
-  margin: 0 0 12px;
-  text-transform: uppercase;
+  gap: 46px;
+  grid-template-columns: minmax(560px, 1.1fr) minmax(340px, 0.9fr);
+  margin-bottom: 28px;
 }
 
 .projects-hero-title {
   color: #1b2944;
   font-family: var(--site-display-font-family) !important;
-  font-size: clamp(2.65rem, 4.9vw, 4.5rem);
+  font-size: clamp(3.05rem, 4.35vw, 4.12rem);
   font-weight: 860;
-  letter-spacing: -0.01em;
-  line-height: 0.98;
-  margin: 0 0 18px;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+  margin: 0 0 22px;
+  white-space: nowrap;
 }
 
 .projects-hero-rule {
   align-items: center;
   display: flex;
-  margin: 0 0 24px;
-  max-width: 380px;
+  margin: 0 0 30px;
+  max-width: 370px;
 }
 
 .projects-hero-rule::before,
@@ -71,24 +62,24 @@ permalink: funding.html
 .projects-hero-lead {
   color: #1f2e4a;
   font-family: var(--site-display-font-family) !important;
-  font-size: 1.24rem;
+  font-size: 1.27rem;
   font-weight: 780;
   line-height: 1.36;
-  margin: 0 0 16px;
-  max-width: 620px;
+  margin: 0 0 18px;
+  max-width: 650px;
 }
 
 .projects-hero-copy {
   color: #52637a;
-  font-size: 0.96rem;
+  font-size: 0.98rem;
   font-weight: 500;
-  line-height: 1.58;
-  margin: 0 0 12px;
-  max-width: 600px;
+  line-height: 1.62;
+  margin: 0 0 13px;
+  max-width: 640px;
 }
 
 .projects-orbit {
-  min-height: 300px;
+  min-height: 320px;
   position: relative;
 }
 
@@ -96,7 +87,7 @@ permalink: funding.html
   display: block;
   height: auto;
   margin-left: auto;
-  max-width: 520px;
+  max-width: 545px;
   width: 100%;
 }
 
@@ -113,6 +104,8 @@ permalink: funding.html
   display: grid;
   gap: 26px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 34px;
+  position: relative;
 }
 
 .projects-panel {
@@ -121,7 +114,8 @@ permalink: funding.html
   border-radius: 12px;
   box-shadow: 0 10px 28px rgba(38, 63, 100, 0.055);
   overflow: hidden;
-  transition: border-color 0.28s ease, box-shadow 0.28s ease, transform 0.3s ease;
+  transform-origin: top center;
+  transition: border-color 0.28s ease, box-shadow 0.32s ease, opacity 0.24s ease, transform 0.32s ease;
 }
 
 .projects-panel-summary:hover,
@@ -146,12 +140,16 @@ permalink: funding.html
 }
 
 .projects-board.has-expanded .projects-panel:not(.is-expanded) {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translateY(10px) scale(0.985);
 }
 
 .projects-panel.is-expanded {
   border-color: rgba(43, 111, 232, 0.26);
   box-shadow: 0 14px 32px rgba(38, 63, 100, 0.075);
+  transform: translateY(-2px);
 }
 
 .projects-panel-summary {
@@ -256,7 +254,7 @@ permalink: funding.html
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  padding: 4px 34px 16px;
+  padding: 2px 34px 12px;
 }
 
 .projects-filter {
@@ -299,9 +297,9 @@ button.projects-filter {
 .projects-past-logos {
   align-items: center;
   display: grid;
-  gap: 24px 34px;
+  gap: 22px 34px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  padding: 10px 34px 34px;
+  padding: 6px 34px 28px;
 }
 
 .projects-past-logo {
@@ -329,15 +327,20 @@ button.projects-filter {
   opacity: 0;
   overflow: hidden;
   padding: 0 26px;
-  transform: translateY(-8px);
-  transition: max-height 0.5s ease, opacity 0.28s ease, padding 0.36s ease, transform 0.36s ease, border-color 0.28s ease;
+  transform: translateY(-10px);
+  transition:
+    max-height 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.28s ease,
+    padding 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.28s ease;
 }
 
 .projects-panel.is-expanded .projects-panel-body {
   border-top-color: rgba(214, 224, 238, 0.75);
   max-height: 2600px;
   opacity: 1;
-  padding: 24px 26px 28px;
+  padding: 22px 26px 26px;
   transform: translateY(0);
 }
 
@@ -397,6 +400,10 @@ button.projects-filter {
     grid-template-columns: 1fr;
   }
 
+  .projects-hero-title {
+    white-space: normal;
+  }
+
   .projects-orbit {
     min-height: 300px;
   }
@@ -424,6 +431,7 @@ button.projects-filter {
   .projects-hero-title {
     font-size: 2.34rem;
     line-height: 1.02;
+    white-space: normal;
   }
 
   .projects-hero-rule {
@@ -588,7 +596,6 @@ button.projects-filter {
     <div class="large-12 columns">
       <section class="projects-hero">
         <div>
-          <p class="projects-eyebrow">Projects</p>
           <h1 class="projects-hero-title">Agentic AI to Physical AI</h1>
           <div class="projects-hero-rule"><span></span></div>
           <p class="projects-hero-lead">Multimodal agentic AI and world models, extending into physical AI</p>
