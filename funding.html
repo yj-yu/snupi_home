@@ -12,15 +12,15 @@ permalink: funding.html
     linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
   color: #1f2e4a;
   font-family: var(--site-font-family) !important;
-  padding: 72px 0 128px;
+  padding: 38px 0 112px;
 }
 
 .projects-hero {
   align-items: center;
   display: grid;
-  gap: 56px;
+  gap: 34px;
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-  margin-bottom: 56px;
+  margin-bottom: 22px;
 }
 
 .projects-eyebrow {
@@ -29,24 +29,24 @@ permalink: funding.html
   font-size: 0.78rem;
   font-weight: 850;
   letter-spacing: 0.06em;
-  margin: 0 0 18px;
+  margin: 0 0 12px;
   text-transform: uppercase;
 }
 
 .projects-hero-title {
   color: #1b2944;
   font-family: var(--site-display-font-family) !important;
-  font-size: clamp(3rem, 5.8vw, 5.25rem);
+  font-size: clamp(2.65rem, 4.9vw, 4.5rem);
   font-weight: 860;
   letter-spacing: -0.01em;
   line-height: 0.98;
-  margin: 0 0 24px;
+  margin: 0 0 18px;
 }
 
 .projects-hero-rule {
   align-items: center;
   display: flex;
-  margin: 0 0 34px;
+  margin: 0 0 24px;
   max-width: 380px;
 }
 
@@ -71,30 +71,32 @@ permalink: funding.html
 .projects-hero-lead {
   color: #1f2e4a;
   font-family: var(--site-display-font-family) !important;
-  font-size: 1.34rem;
+  font-size: 1.24rem;
   font-weight: 780;
   line-height: 1.36;
-  margin: 0 0 22px;
+  margin: 0 0 16px;
   max-width: 620px;
 }
 
 .projects-hero-copy {
   color: #52637a;
-  font-size: 1.02rem;
+  font-size: 0.96rem;
   font-weight: 500;
-  line-height: 1.7;
-  margin: 0 0 18px;
+  line-height: 1.58;
+  margin: 0 0 12px;
   max-width: 600px;
 }
 
 .projects-orbit {
-  min-height: 410px;
+  min-height: 300px;
   position: relative;
 }
 
-.projects-orbit svg {
+.projects-orbit img {
   display: block;
   height: auto;
+  margin-left: auto;
+  max-width: 520px;
   width: 100%;
 }
 
@@ -104,7 +106,7 @@ permalink: funding.html
   font-size: 1.52rem;
   font-weight: 850;
   line-height: 1.2;
-  margin: 0 0 18px;
+  margin: 0 0 14px;
 }
 
 .projects-board {
@@ -120,6 +122,22 @@ permalink: funding.html
   box-shadow: 0 10px 28px rgba(38, 63, 100, 0.055);
   overflow: hidden;
   transition: border-color 0.28s ease, box-shadow 0.28s ease, transform 0.3s ease;
+}
+
+.projects-panel-summary:hover,
+.projects-panel-summary:focus,
+.projects-panel-summary:active {
+  background: transparent !important;
+  color: inherit !important;
+  outline: none !important;
+}
+
+.projects-panel-summary:focus-visible {
+  box-shadow: inset 0 0 0 2px rgba(43, 111, 232, 0.22);
+}
+
+.projects-panel.is-expanded .projects-panel-summary {
+  background: linear-gradient(180deg, rgba(248, 251, 255, 0.95), rgba(255, 255, 255, 0.92)) !important;
 }
 
 .projects-panel.is-wide,
@@ -256,10 +274,26 @@ permalink: funding.html
   padding: 0 14px;
 }
 
+button.projects-filter {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.projects-filter:hover,
+.projects-filter:focus,
+.projects-filter:active {
+  background: #f7fbff !important;
+  border-color: rgba(43, 111, 232, 0.38) !important;
+  color: #2b6fe8 !important;
+  outline: none !important;
+}
+
 .projects-filter.is-active {
-  background: #f6f9ff;
-  border-color: rgba(43, 111, 232, 0.72);
-  color: #2b6fe8;
+  background: #eef6ff !important;
+  border-color: rgba(43, 111, 232, 0.54) !important;
+  color: #2b6fe8 !important;
 }
 
 .projects-past-logos {
@@ -282,6 +316,11 @@ permalink: funding.html
   max-height: 44px;
   max-width: 148px;
   object-fit: contain;
+}
+
+.projects-past-logo.is-hidden,
+.project-detail-card.is-hidden {
+  display: none !important;
 }
 
 .projects-panel-body {
@@ -374,12 +413,12 @@ permalink: funding.html
 
 @media only screen and (max-width: 640px) {
   .projects-page {
-    padding: 34px 0 96px;
+    padding: 24px 0 90px;
   }
 
   .projects-hero {
-    gap: 28px;
-    margin-bottom: 38px;
+    gap: 18px;
+    margin-bottom: 22px;
   }
 
   .projects-hero-title {
@@ -516,6 +555,31 @@ permalink: funding.html
         }
       });
     });
+
+    var filters = Array.prototype.slice.call(document.querySelectorAll('[data-project-filter]'));
+    var pastLogos = Array.prototype.slice.call(document.querySelectorAll('[data-project-logo-category]'));
+    var pastCards = Array.prototype.slice.call(document.querySelectorAll('.projects-detail-grid.is-history [data-project-card-category]'));
+
+    filters.forEach(function (filter) {
+      filter.addEventListener('click', function (event) {
+        event.stopPropagation();
+        var category = filter.getAttribute('data-project-filter');
+
+        filters.forEach(function (item) {
+          item.classList.toggle('is-active', item === filter);
+        });
+
+        pastLogos.forEach(function (logo) {
+          var logoCategory = logo.getAttribute('data-project-logo-category');
+          logo.classList.toggle('is-hidden', category !== 'all' && logoCategory !== category);
+        });
+
+        pastCards.forEach(function (card) {
+          var cardCategory = card.getAttribute('data-project-card-category');
+          card.classList.toggle('is-hidden', category !== 'all' && cardCategory !== category);
+        });
+      });
+    });
   });
 </script>
 
@@ -533,45 +597,7 @@ permalink: funding.html
         </div>
 
         <div class="projects-orbit" aria-hidden="true">
-          <svg viewBox="0 0 560 430" role="img">
-            <defs>
-              <radialGradient id="projectOrb" cx="50%" cy="45%" r="55%">
-                <stop offset="0%" stop-color="#ffffff"/>
-                <stop offset="52%" stop-color="#bcd3ff"/>
-                <stop offset="100%" stop-color="#6fa0ff"/>
-              </radialGradient>
-              <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
-                <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#2b6fe8" flood-opacity="0.16"/>
-              </filter>
-            </defs>
-            <circle cx="424" cy="68" r="42" fill="#dce9ff" opacity="0.7"/>
-            <circle cx="116" cy="294" r="42" fill="#dce9ff" opacity="0.82"/>
-            <ellipse cx="298" cy="215" rx="218" ry="122" fill="none" stroke="#8fb5ff" stroke-width="2" opacity="0.55"/>
-            <ellipse cx="298" cy="215" rx="156" ry="84" fill="none" stroke="#8fb5ff" stroke-dasharray="7 9" stroke-width="1.5" opacity="0.55"/>
-            <path d="M48 262 C120 92, 378 64, 512 142" fill="none" stroke="#8fb5ff" stroke-dasharray="7 11" stroke-width="1.5" opacity="0.62"/>
-            <circle cx="304" cy="202" r="78" fill="url(#projectOrb)" filter="url(#softShadow)" opacity="0.96"/>
-            <g stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.4" fill="none">
-              <path d="M247 184 L304 138 L364 176 L346 247 L278 256 Z"/>
-              <path d="M247 184 L304 202 L364 176 M304 202 L346 247 M304 202 L278 256 M304 138 L304 202"/>
-            </g>
-            <g fill="#ffffff" stroke="#2b6fe8" stroke-width="2" filter="url(#softShadow)">
-              <circle cx="88" cy="124" r="36"/>
-              <circle cx="496" cy="204" r="32"/>
-              <circle cx="356" cy="310" r="36"/>
-            </g>
-            <g stroke="#2b6fe8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
-              <path d="M70 124 h18 l10 -15 l18 30 l10 -15 h18"/>
-              <path d="M482 204 q14 -14 28 0 q-14 14 -28 0z"/>
-              <circle cx="496" cy="204" r="5"/>
-              <path d="M347 301 q-10 -12 0 -22 q12 -10 22 0 q10 10 0 22 q12 10 0 22 q-10 10 -22 0 q-10 -10 0 -22z"/>
-            </g>
-            <g fill="#2b6fe8">
-              <circle cx="392" cy="96" r="6"/>
-              <circle cx="496" cy="136" r="6"/>
-              <circle cx="152" cy="348" r="6"/>
-              <circle cx="184" cy="188" r="4"/>
-            </g>
-          </svg>
+          <img src="images/fundings/project-orbit.png" alt="">
         </div>
       </section>
 
@@ -640,42 +666,42 @@ permalink: funding.html
             <span class="projects-panel-title">Past Projects</span>
             <span class="projects-panel-action"></span>
           </button>
-          <div class="projects-filter-row" aria-hidden="true">
-            <span class="projects-filter is-active">All</span>
-            <span class="projects-filter">Government</span>
-            <span class="projects-filter">Industry</span>
-            <span class="projects-filter">Others</span>
+          <div class="projects-filter-row" aria-label="Filter past projects">
+            <button class="projects-filter is-active" type="button" data-project-filter="all">All</button>
+            <button class="projects-filter" type="button" data-project-filter="government">Government</button>
+            <button class="projects-filter" type="button" data-project-filter="industry">Industry</button>
+            <button class="projects-filter" type="button" data-project-filter="others">Others</button>
           </div>
           <div class="projects-past-logos">
-            <div class="projects-past-logo"><img src="images/fundings/kocca.jpg" alt="KOCCA"></div>
-            <div class="projects-past-logo"><img src="images/fundings/kist.jpg" alt="KIST"></div>
-            <div class="projects-past-logo"><img src="images/fundings/yonsei.png" alt="Yonsei University"></div>
-            <div class="projects-past-logo"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"></div>
-            <div class="projects-past-logo"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"></div>
-            <div class="projects-past-logo"><img src="images/fundings/skt.png" alt="SK Telecom"></div>
-            <div class="projects-past-logo"><img src="images/fundings/ncsoft.png" alt="NCSOFT"></div>
-            <div class="projects-past-logo"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"></div>
-            <div class="projects-past-logo"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"></div>
-            <div class="projects-past-logo"><img src="images/fundings/maum_ai.svg" alt="Maum AI"></div>
-            <div class="projects-past-logo"><img src="images/fundings/giantstep.png" alt="Giantstep"></div>
-            <div class="projects-past-logo"><img src="images/fundings/upstage.svg" alt="Upstage"></div>
-            <div class="projects-past-logo"><img src="images/fundings/IITP.png" alt="IITP"></div>
+            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/kocca.jpg" alt="KOCCA"></div>
+            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/kist.jpg" alt="KIST"></div>
+            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/yonsei.png" alt="Yonsei University"></div>
+            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"></div>
+            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"></div>
+            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/skt.png" alt="SK Telecom"></div>
+            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/ncsoft.png" alt="NCSOFT"></div>
+            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"></div>
+            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"></div>
+            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/maum_ai.svg" alt="Maum AI"></div>
+            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/giantstep.png" alt="Giantstep"></div>
+            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/upstage.svg" alt="Upstage"></div>
+            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/IITP.png" alt="IITP"></div>
           </div>
           <div class="projects-panel-body">
             <div class="projects-detail-grid is-history">
-              <article class="project-detail-card"><img src="images/fundings/kocca.jpg" alt="KOCCA"><div><h3 class="project-detail-title">Multimodal UX evaluation platform for XR space-responsive content optimization</h3><p class="project-detail-meta"><strong>National R&amp;D</strong></p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/kist.jpg" alt="KIST"><div><h3 class="project-detail-title">Self-evolving embodied AGI platform technology through real-world experience</h3><p class="project-detail-meta"><strong>National R&amp;D</strong></p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/yonsei.png" alt="Yonsei"><div><h3 class="project-detail-title">Digital human counselor for total healthcare and wellness service quality management protocol</h3><p class="project-detail-meta"><strong>National R&amp;D</strong></p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h3 class="project-detail-title">Microphone noise reduction, content recommendation, automated curation, and app-development chatbot projects</h3><p class="project-detail-meta"><strong>Industry</strong> LG Electronics</p></div></article>
-              <article class="project-detail-card"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h3 class="project-detail-title">Multimodal display testing and stable video diffusion quantization</h3><p class="project-detail-meta"><strong>Industry</strong> Samsung Electronics</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h3 class="project-detail-title">Research and development of large multimodal models with video input</h3><p class="project-detail-meta"><strong>Industry</strong> SK Telecom</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/ncsoft.png" alt="NCSOFT"><div><h3 class="project-detail-title">Nonverbal dialogue understanding and autonomous multi-agent game environments</h3><p class="project-detail-meta"><strong>Industry</strong> NCSOFT</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"><div><h3 class="project-detail-title">Multimodal AI combining object recognition and natural language processing</h3><p class="project-detail-meta"><strong>Industry</strong> Hyundai NGV</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"><div><h3 class="project-detail-title">AI-based concrete flowability video analysis program development</h3><p class="project-detail-meta"><strong>Industry</strong> GS E&amp;C</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/maum_ai.svg" alt="Maum AI"><div><h3 class="project-detail-title">Reinforcement learning-based autonomous driving AI software for hazardous driving conditions</h3><p class="project-detail-meta"><strong>Industry</strong> Maum AI</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/giantstep.png" alt="Giantstep"><div><h3 class="project-detail-title">Voice-driven digital human generation with lip-sync and emotion matching</h3><p class="project-detail-meta"><strong>Industry</strong> Giantstep</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h3 class="project-detail-title">Image-text attention-based object recognition for vision-language models</h3><p class="project-detail-meta"><strong>Industry</strong> Upstage</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h3 class="project-detail-title">AI-based OTT user and content data analysis and video recommendation system development</h3><p class="project-detail-meta"><strong>Public R&amp;D</strong> IITP</p></div></article>
+              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/kocca.jpg" alt="KOCCA"><div><h3 class="project-detail-title">Multimodal UX evaluation platform for XR space-responsive content optimization</h3><p class="project-detail-meta"><strong>National R&amp;D</strong></p></div></article>
+              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/kist.jpg" alt="KIST"><div><h3 class="project-detail-title">Self-evolving embodied AGI platform technology through real-world experience</h3><p class="project-detail-meta"><strong>National R&amp;D</strong></p></div></article>
+              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/yonsei.png" alt="Yonsei"><div><h3 class="project-detail-title">Digital human counselor for total healthcare and wellness service quality management protocol</h3><p class="project-detail-meta"><strong>National R&amp;D</strong></p></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h3 class="project-detail-title">Microphone noise reduction, content recommendation, automated curation, and app-development chatbot projects</h3><p class="project-detail-meta"><strong>Industry</strong> LG Electronics</p></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h3 class="project-detail-title">Multimodal display testing and stable video diffusion quantization</h3><p class="project-detail-meta"><strong>Industry</strong> Samsung Electronics</p></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h3 class="project-detail-title">Research and development of large multimodal models with video input</h3><p class="project-detail-meta"><strong>Industry</strong> SK Telecom</p></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/ncsoft.png" alt="NCSOFT"><div><h3 class="project-detail-title">Nonverbal dialogue understanding and autonomous multi-agent game environments</h3><p class="project-detail-meta"><strong>Industry</strong> NCSOFT</p></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"><div><h3 class="project-detail-title">Multimodal AI combining object recognition and natural language processing</h3><p class="project-detail-meta"><strong>Industry</strong> Hyundai NGV</p></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"><div><h3 class="project-detail-title">AI-based concrete flowability video analysis program development</h3><p class="project-detail-meta"><strong>Industry</strong> GS E&amp;C</p></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/maum_ai.svg" alt="Maum AI"><div><h3 class="project-detail-title">Reinforcement learning-based autonomous driving AI software for hazardous driving conditions</h3><p class="project-detail-meta"><strong>Industry</strong> Maum AI</p></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/giantstep.png" alt="Giantstep"><div><h3 class="project-detail-title">Voice-driven digital human generation with lip-sync and emotion matching</h3><p class="project-detail-meta"><strong>Industry</strong> Giantstep</p></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h3 class="project-detail-title">Image-text attention-based object recognition for vision-language models</h3><p class="project-detail-meta"><strong>Industry</strong> Upstage</p></div></article>
+              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/IITP.png" alt="IITP"><div><h3 class="project-detail-title">AI-based OTT user and content data analysis and video recommendation system development</h3><p class="project-detail-meta"><strong>Public R&amp;D</strong> IITP</p></div></article>
             </div>
           </div>
         </section>
