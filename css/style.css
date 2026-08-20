@@ -6531,7 +6531,7 @@ svg:not(:root) {
   margin-bottom: 16px !important;
   max-width: 1120px !important;
   overflow: hidden !important;
-  padding: 16px 20px !important;
+  padding: 14px 20px 12px !important;
 }
 
 .publication-card-layout {
@@ -6547,7 +6547,7 @@ svg:not(:root) {
   border: 0 !important;
   box-shadow: none !important;
   display: flex !important;
-  height: 150px !important;
+  height: 142px !important;
   justify-content: center !important;
   overflow: visible !important;
   padding: 0 !important;
@@ -6568,12 +6568,12 @@ svg:not(:root) {
 }
 
 .publication-headline {
-  align-items: center !important;
+  align-items: start !important;
   display: grid !important;
   gap: 8px 16px !important;
   grid-template-columns: max-content minmax(0, 1fr) !important;
   min-height: 31px !important;
-  margin-bottom: 14px !important;
+  margin-bottom: 8px !important;
   min-width: 0 !important;
 }
 
@@ -6598,7 +6598,7 @@ svg:not(:root) {
   font-size: 0.94rem !important;
   font-weight: 760 !important;
   line-height: 1.18 !important;
-  margin: 0 !important;
+  margin: 7px 0 0 !important;
   padding: 4px 11px !important;
   white-space: nowrap !important;
 }
@@ -6631,6 +6631,7 @@ svg:not(:root) {
   font-family: var(--site-font-family) !important;
   font-size: 0.93rem !important;
   line-height: 1.42 !important;
+  margin-bottom: 4px !important;
 }
 
 .people-content {
