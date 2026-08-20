@@ -2800,6 +2800,66 @@ input:checked + .slider:before {
   }
 }
 
+/* Final polish: remove detached link arrows and keep member details grouped. */
+.people-content .member-card__socials {
+  display: none !important;
+}
+
+.people-content .member-card {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.people-content .member-card:hover {
+  border-color: rgba(138, 183, 244, 0.78) !important;
+  box-shadow: 0 12px 26px rgba(31, 67, 118, 0.07) !important;
+  transform: translateY(-1px) !important;
+}
+
+.people-content .member-card--feature {
+  gap: 22px !important;
+  grid-template-columns: 126px minmax(0, 1fr) !important;
+  min-height: 166px !important;
+  padding: 20px 28px !important;
+}
+
+.people-content .member-card--feature .member-card__body {
+  align-items: flex-start !important;
+  gap: 4px !important;
+  justify-content: center !important;
+}
+
+.people-content .member-card--feature .member-card__name {
+  margin-bottom: 2px !important;
+}
+
+.people-content .member-card--feature .member-card__interests {
+  align-items: flex-start !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  justify-content: flex-start !important;
+  margin-top: 12px !important;
+  width: auto !important;
+}
+
+.people-content .member-card--standard .member-card__interests {
+  margin-top: 10px !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .people-content .member-card--feature {
+    gap: 14px !important;
+    grid-template-columns: 82px minmax(0, 1fr) !important;
+    min-height: 0 !important;
+    padding: 14px !important;
+  }
+
+  .people-content .member-card--feature .member-card__interests {
+    gap: 5px !important;
+    margin-top: 9px !important;
+  }
+}
+
 </style>
 
 <div class='full parallax site-page-hero'>

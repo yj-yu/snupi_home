@@ -15,7 +15,7 @@ count_year_min: 2016
   <div class='spacing'></div>
 </div>
 
-<div class='full no-padding'>
+<div class='full no-padding publications-list-page'>
   {% for y in (page.count_year_min..page.count_year_max) reversed %}
     {% for paper in site.publications reversed %}
       {% if paper.year == y %}
