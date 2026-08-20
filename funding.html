@@ -16,33 +16,40 @@ permalink: funding.html
 .projects-hero {
   align-items: center;
   display: grid;
-  gap: 34px;
-  grid-template-columns: minmax(620px, 1.18fr) minmax(300px, 0.82fr);
+  gap: 26px 42px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
   margin-bottom: 28px;
+}
+
+.projects-hero-heading {
+  grid-column: 1 / -1;
+  text-align: center;
 }
 
 .projects-hero-title {
   color: #1b2944;
-  display: inline-block;
+  display: block;
   font-family: var(--site-display-font-family) !important;
-  font-size: clamp(2.78rem, 4vw, 3.86rem);
+  font-size: clamp(2.72rem, 4.2vw, 4.1rem);
   font-weight: 860;
   letter-spacing: -0.025em;
-  line-height: 1.02;
-  margin: 0 0 22px;
-  white-space: nowrap;
+  line-height: 1.04;
+  margin: 0;
+  overflow: visible;
+  white-space: normal;
 }
 
 .projects-title-group {
-  display: inline-block;
-  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: min(1100px, 100%);
 }
 
 .projects-hero-rule {
   align-items: center;
   display: flex;
-  margin: 0 0 30px;
-  width: 100%;
+  margin: 22px auto 0;
+  width: min(620px, 66vw);
 }
 
 .projects-hero-rule::before,
@@ -70,7 +77,7 @@ permalink: funding.html
   font-weight: 780;
   line-height: 1.36;
   margin: 0 0 18px;
-  max-width: 650px;
+  max-width: 690px;
 }
 
 .projects-hero-copy {
@@ -79,7 +86,7 @@ permalink: funding.html
   font-weight: 500;
   line-height: 1.62;
   margin: 0 0 13px;
-  max-width: 640px;
+  max-width: 690px;
 }
 
 .projects-orbit {
@@ -90,8 +97,8 @@ permalink: funding.html
 .projects-orbit img {
   display: block;
   height: auto;
-  margin-left: auto;
-  max-width: 500px;
+  margin: 0 auto;
+  max-width: 480px;
   width: 100%;
 }
 
@@ -460,19 +467,24 @@ button.projects-filter {
   .projects-hero {
     gap: 18px;
     margin-bottom: 22px;
+    text-align: left;
   }
 
   .projects-hero-title {
-    font-size: 2.34rem;
-    line-height: 1.02;
+    font-size: 2.15rem;
+    line-height: 1.08;
     white-space: normal;
   }
 
   .projects-hero-rule {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 24px;
-    width: 100%;
+    width: min(100%, 340px);
+  }
+
+  .projects-hero-heading {
+    text-align: center;
   }
 
   .projects-hero-lead {
@@ -636,11 +648,14 @@ button.projects-filter {
   <div class="row">
     <div class="large-12 columns">
       <section class="projects-hero">
-        <div>
+        <div class="projects-hero-heading">
           <div class="projects-title-group">
             <h1 class="projects-hero-title">From Agentic to Physical Intelligence</h1>
             <div class="projects-hero-rule"><span></span></div>
           </div>
+        </div>
+
+        <div class="projects-hero-text">
           <p class="projects-hero-lead">Multimodal agentic AI and world foundation models</p>
           <p class="projects-hero-copy">SNU PI Lab studies multimodal agentic AI and world foundation models. Our work centers on understanding and reasoning across perception and action.</p>
           <p class="projects-hero-copy">We are extending this line of research toward AI safety, autonomous AI for science, and robot learning, with the goal of connecting multimodal intelligence to the real world.</p>

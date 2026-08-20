@@ -2312,6 +2312,133 @@ input:checked + .slider:before {
   }
 }
 
+/* Final feature-card alignment lock: keep PI/Postdoc cards compact and readable. */
+.people-content .professor-postdoc-grid {
+  align-items: start !important;
+  column-gap: 26px !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.people-content .professor-column,
+.people-content .postdoc-column {
+  min-width: 0 !important;
+}
+
+.people-content .professor-grid,
+.people-content .postdoc-grid {
+  display: block !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.people-content .member-card--feature {
+  align-items: center !important;
+  column-gap: 22px !important;
+  display: grid !important;
+  grid-template-columns: 124px minmax(0, 1fr) !important;
+  justify-items: start !important;
+  min-height: 174px !important;
+  padding: 20px 24px !important;
+  text-align: left !important;
+}
+
+.people-content .member-card--feature .member-card__avatar-link {
+  justify-self: center !important;
+  margin: 0 !important;
+}
+
+.people-content .member-card--feature .member-card__avatar,
+.people-content .member-card--feature img.member-card__avatar {
+  height: 112px !important;
+  max-height: 112px !important;
+  max-width: 112px !important;
+  min-height: 112px !important;
+  min-width: 112px !important;
+  width: 112px !important;
+}
+
+.people-content .member-card--feature .member-card__body {
+  align-items: flex-start !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  text-align: left !important;
+  width: 100% !important;
+}
+
+.people-content .member-card--feature .member-card__role,
+.people-content .member-card--feature .member-card__name,
+.people-content .member-card--feature .member-card__position {
+  text-align: left !important;
+}
+
+.people-content .member-card--feature .member-card__name {
+  margin: 0 0 5px !important;
+}
+
+.people-content .member-card--feature .member-card__name a {
+  justify-content: flex-start !important;
+}
+
+.people-content .member-card--feature .member-card__socials,
+.people-content .member-card--feature .member-card__interests {
+  justify-content: flex-start !important;
+}
+
+.people-content .member-card--feature .member-card__interests {
+  gap: 7px !important;
+  margin-top: 12px !important;
+  padding: 0 !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .people-content .professor-postdoc-grid {
+    gap: 24px !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .people-content .member-card--feature {
+    column-gap: 14px !important;
+    grid-template-columns: 82px minmax(0, 1fr) !important;
+    min-height: 0 !important;
+    padding: 15px 14px !important;
+  }
+
+  .people-content .member-card--feature .member-card__avatar,
+  .people-content .member-card--feature img.member-card__avatar {
+    height: 78px !important;
+    max-height: 78px !important;
+    max-width: 78px !important;
+    min-height: 78px !important;
+    min-width: 78px !important;
+    width: 78px !important;
+  }
+
+  .people-content .member-card--feature .member-card__name {
+    font-size: 1rem !important;
+  }
+
+  .people-content .member-card--feature .member-card__position {
+    font-size: 0.78rem !important;
+  }
+
+  .people-content .member-card--feature .member-card__interests {
+    gap: 5px !important;
+    margin-top: 9px !important;
+  }
+
+  .people-content .member-card--feature .member-interest-tag {
+    font-size: 0.62rem !important;
+    padding: 3px 8px !important;
+  }
+}
+
 </style>
 
 <div class='full parallax site-page-hero'>
