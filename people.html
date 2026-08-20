@@ -2273,12 +2273,51 @@ input:checked + .slider:before {
   }
 }
 
+/* Final people page spacing lock */
+.people-content {
+  padding-top: 0 !important;
+}
+
+.people-content .member-section-block {
+  margin-bottom: 36px !important;
+}
+
+.people-content .member-section-block.first-member-section {
+  margin-top: 0 !important;
+}
+
+.people-content .member-section-block > .medium-12.columns > h2,
+.people-content .professor-postdoc-column-title {
+  color: #1b2944 !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.58rem !important;
+  font-weight: 820 !important;
+  letter-spacing: -0.015em !important;
+  line-height: 1.08 !important;
+  margin: 0 0 16px !important;
+  text-align: left !important;
+  text-transform: none !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .people-content .member-section-block {
+    margin-bottom: 30px !important;
+  }
+
+  .people-content .member-section-block > .medium-12.columns > h2,
+  .people-content .professor-postdoc-column-title {
+    font-size: 1.2rem !important;
+    margin-bottom: 13px !important;
+    white-space: nowrap !important;
+  }
+}
+
 </style>
 
 <div class='full parallax site-page-hero'>
   <div class='row people-section-row'>
     <div class='twelve columns'>
-      {% include section-header.html title="Member" color="#464646" tagline=" " class="big" %}
+      {% include section-header.html title="MEMBER" color="#1b2944" tagline=" " class="big" %}
     </div>
   </div>
   <!--

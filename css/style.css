@@ -5958,3 +5958,1368 @@ svg:not(:root) {
     margin-bottom: 16px !important;
   }
 }
+
+/* --- Final site polish: shared page titles, header logo, publication cards --- */
+.contain-to-grid,
+.top-bar,
+.top-bar .title-area,
+.top-bar .name,
+.top-bar .name h1,
+.site-logo {
+  overflow: visible !important;
+}
+
+.site-logo {
+  align-items: center !important;
+  display: inline-flex !important;
+  gap: 10px !important;
+  min-width: max-content !important;
+  padding-left: 8px !important;
+  text-decoration: none !important;
+}
+
+.site-logo-symbol {
+  display: block !important;
+  flex: 0 0 auto !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  transform: none !important;
+  width: 86px !important;
+}
+
+.site-logo-text {
+  color: #347af5 !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.34rem !important;
+  font-weight: 820 !important;
+  letter-spacing: -0.026em !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.site-page-hero {
+  align-items: center !important;
+  background: #fff !important;
+  display: flex !important;
+  min-height: 176px !important;
+  padding: 18px 0 16px !important;
+}
+
+.site-page-hero .modSectionHeader,
+.gallery-title-shell .modSectionHeader {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.site-page-hero .modSectionHeader .special-title,
+.gallery-title-shell .modSectionHeader .special-title {
+  align-items: center !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+  width: auto !important;
+}
+
+.site-page-hero .modSectionHeader .special-title h2,
+.gallery-title-shell .modSectionHeader .special-title h2 {
+  color: var(--section-title-color, #1b2944) !important;
+  display: inline-block !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: clamp(3.05rem, 4.75vw, 4.55rem) !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.038em !important;
+  line-height: 0.96 !important;
+  margin: 0 !important;
+  padding: 0 0 32px !important;
+  position: relative !important;
+  text-align: center !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+}
+
+.site-page-hero .modSectionHeader .special-title h2::after,
+.gallery-title-shell .modSectionHeader .special-title h2::after {
+  background: #2b6fe8 !important;
+  bottom: 10px !important;
+  content: "" !important;
+  height: 4px !important;
+  left: 0 !important;
+  margin: 0 !important;
+  position: absolute !important;
+  top: auto !important;
+  width: 100% !important;
+  z-index: 1 !important;
+}
+
+.site-page-hero .modSectionHeader .special-title h2::before,
+.gallery-title-shell .modSectionHeader .special-title h2::before {
+  background: #fff !important;
+  border: 4px solid #2b6fe8 !important;
+  bottom: 1px !important;
+  box-sizing: border-box !important;
+  content: "" !important;
+  height: 20px !important;
+  left: 50% !important;
+  position: absolute !important;
+  transform: translateX(-50%) rotate(45deg) !important;
+  width: 20px !important;
+  z-index: 2 !important;
+}
+
+.publication-card {
+  border: 1px solid rgba(214, 227, 244, 0.82) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 20px rgba(31, 56, 88, 0.032) !important;
+  margin-bottom: 15px !important;
+  overflow: hidden !important;
+  padding: 18px 24px !important;
+}
+
+.publication-card-layout {
+  align-items: center !important;
+  gap: 30px !important;
+  grid-template-columns: 225px minmax(0, 1fr) !important;
+}
+
+.publication-figure {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  height: 132px !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  width: 225px !important;
+}
+
+.publication-card img {
+  border: 0 !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  max-height: 132px !important;
+  max-width: 225px !important;
+}
+
+.publication-headline {
+  align-items: start !important;
+  display: grid !important;
+  gap: 8px 16px !important;
+  grid-template-columns: auto minmax(0, 1fr) !important;
+  margin-bottom: 10px !important;
+}
+
+.publication-venue-line {
+  background: #f0f6ff !important;
+  border-radius: 999px !important;
+  color: #2b6fe8 !important;
+  font-size: 0.92rem !important;
+  font-weight: 760 !important;
+  line-height: 1.2 !important;
+  padding: 4px 11px !important;
+}
+
+.publication-meta-line {
+  gap: 7px 9px !important;
+  justify-content: flex-end !important;
+  overflow: hidden !important;
+}
+
+.publication-keyword {
+  background: #fff !important;
+  border: 1px solid #dce6f4 !important;
+  border-radius: 8px !important;
+  color: #5e6c7f !important;
+  font-size: 0.78rem !important;
+  font-weight: 650 !important;
+  padding: 4px 9px !important;
+}
+
+.publication-card h3 {
+  font-size: 1.2rem !important;
+  line-height: 1.26 !important;
+}
+
+.publication-card p {
+  font-size: 0.93rem !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .site-page-hero {
+    min-height: 104px !important;
+    padding: 8px 0 10px !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title h2,
+  .gallery-title-shell .modSectionHeader .special-title h2 {
+    font-size: clamp(2.15rem, 8.4vw, 2.65rem) !important;
+    letter-spacing: -0.035em !important;
+    padding-bottom: 27px !important;
+    white-space: normal !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title h2::after,
+  .gallery-title-shell .modSectionHeader .special-title h2::after {
+    bottom: 9px !important;
+    height: 3px !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title h2::before,
+  .gallery-title-shell .modSectionHeader .special-title h2::before {
+    border-width: 3px !important;
+    height: 18px !important;
+    width: 18px !important;
+  }
+
+  .site-logo {
+    gap: 7px !important;
+    padding-left: 2px !important;
+  }
+
+  .site-logo-symbol {
+    width: 76px !important;
+  }
+
+  .site-logo-text {
+    font-size: 1.16rem !important;
+  }
+
+  .publication-card {
+    padding: 15px 16px 17px !important;
+  }
+
+  .publication-card-layout {
+    display: block !important;
+  }
+
+  .publication-figure {
+    height: auto !important;
+    margin: 0 auto 13px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .publication-card img {
+    max-height: 185px !important;
+    max-width: 100% !important;
+  }
+
+  .publication-headline {
+    display: block !important;
+  }
+
+  .publication-meta-line {
+    justify-content: flex-start !important;
+    margin-top: 8px !important;
+    overflow: visible !important;
+  }
+
+  .publication-card h3 {
+    font-size: 1.08rem !important;
+  }
+
+  .publication-card p {
+    font-size: 0.86rem !important;
+  }
+}
+
+/* --- Final alignment pass: page titles, publication cards, and people grid --- */
+.contain-to-grid,
+.top-bar,
+.top-bar .title-area,
+.top-bar .name,
+.top-bar .name h1,
+.site-logo {
+  overflow: visible !important;
+}
+
+.site-logo {
+  align-items: center !important;
+  display: inline-flex !important;
+  gap: 11px !important;
+  min-width: max-content !important;
+  padding: 0 0 0 12px !important;
+  text-decoration: none !important;
+}
+
+.site-logo:hover,
+.site-logo:focus {
+  text-decoration: none !important;
+}
+
+.site-logo-full {
+  display: block !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  width: clamp(178px, 20vw, 258px) !important;
+}
+
+.site-logo-symbol {
+  display: block !important;
+  flex: 0 0 auto !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  overflow: visible !important;
+  transform: none !important;
+  width: 92px !important;
+}
+
+.site-logo-text {
+  color: #347af5 !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.36rem !important;
+  font-weight: 840 !important;
+  letter-spacing: -0.028em !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.site-page-hero,
+.gallery-title-shell {
+  align-items: center !important;
+  background: #fff !important;
+  display: flex !important;
+  justify-content: center !important;
+  min-height: 150px !important;
+  padding: 4px 0 6px !important;
+}
+
+.gallery-title-shell {
+  margin: 0 auto 12px !important;
+}
+
+.site-page-hero .row,
+.gallery-title-shell .modSectionHeader {
+  width: 100% !important;
+}
+
+.site-page-hero .spacing {
+  display: none !important;
+}
+
+.site-page-hero .modSectionHeader,
+.gallery-title-shell .modSectionHeader {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.site-page-hero .modSectionHeader .special-title,
+.gallery-title-shell .modSectionHeader .special-title {
+  display: block !important;
+  margin: 0 auto !important;
+  padding-bottom: 32px !important;
+  position: relative !important;
+  width: max-content !important;
+}
+
+.site-page-hero .modSectionHeader .special-title h2,
+.gallery-title-shell .modSectionHeader .special-title h2,
+.gallery-title {
+  color: var(--section-title-color, #1b2944) !important;
+  display: block !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: clamp(3.05rem, 4.65vw, 4.45rem) !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.038em !important;
+  line-height: 0.96 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+}
+
+.site-page-hero .modSectionHeader .special-title h2::before,
+.site-page-hero .modSectionHeader .special-title h2::after,
+.gallery-title-shell .modSectionHeader .special-title h2::before,
+.gallery-title-shell .modSectionHeader .special-title h2::after {
+  content: none !important;
+  display: none !important;
+}
+
+.site-page-hero .modSectionHeader .special-title::after,
+.gallery-title-shell .modSectionHeader .special-title::after {
+  background: #2b6fe8 !important;
+  bottom: 11px !important;
+  content: "" !important;
+  height: 4px !important;
+  left: 0 !important;
+  position: absolute !important;
+  width: 100% !important;
+  z-index: 1 !important;
+}
+
+.site-page-hero .modSectionHeader .special-title::before,
+.gallery-title-shell .modSectionHeader .special-title::before {
+  background: #fff !important;
+  border: 4px solid #2b6fe8 !important;
+  bottom: 2px !important;
+  box-sizing: border-box !important;
+  content: "" !important;
+  height: 20px !important;
+  left: 50% !important;
+  position: absolute !important;
+  transform: translateX(-50%) rotate(45deg) !important;
+  width: 20px !important;
+  z-index: 2 !important;
+}
+
+.publication-card {
+  background: #fff !important;
+  border: 1px solid rgba(214, 227, 244, 0.86) !important;
+  border-radius: 13px !important;
+  box-shadow: 0 10px 26px rgba(27, 41, 68, 0.026) !important;
+  margin-bottom: 18px !important;
+  overflow: hidden !important;
+  padding: 18px 24px !important;
+}
+
+.publication-card-layout {
+  align-items: center !important;
+  display: grid !important;
+  gap: 26px !important;
+  grid-template-columns: 250px minmax(0, 1fr) !important;
+}
+
+.publication-figure {
+  align-items: center !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  display: flex !important;
+  height: 150px !important;
+  justify-content: center !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  width: 250px !important;
+}
+
+.publication-card img {
+  border: 0 !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  max-height: 150px !important;
+  max-width: 250px !important;
+  object-fit: contain !important;
+}
+
+.publication-body {
+  min-width: 0 !important;
+}
+
+.publication-headline {
+  align-items: start !important;
+  display: grid !important;
+  gap: 8px 16px !important;
+  grid-template-columns: auto minmax(0, 1fr) !important;
+  margin-bottom: 10px !important;
+  min-width: 0 !important;
+}
+
+.publication-meta-line {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 7px 9px !important;
+  justify-content: flex-end !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+.publication-venue-line {
+  background: #eef6ff !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  color: #2b6fe8 !important;
+  display: inline-flex !important;
+  font-size: 0.94rem !important;
+  font-weight: 760 !important;
+  line-height: 1.18 !important;
+  margin: 0 !important;
+  padding: 4px 11px !important;
+  white-space: nowrap !important;
+}
+
+.publication-keyword {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border: 1px solid #dce6f4 !important;
+  border-radius: 8px !important;
+  color: #5e6c7f !important;
+  flex: 0 1 auto !important;
+  font-size: 0.78rem !important;
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+  padding: 4px 9px !important;
+  white-space: nowrap !important;
+}
+
+.publication-card h3 {
+  color: #08142f !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.2rem !important;
+  font-weight: 790 !important;
+  letter-spacing: -0.024em !important;
+  line-height: 1.26 !important;
+  margin: 0 0 10px !important;
+}
+
+.publication-card p {
+  color: #5d6a7d !important;
+  font-family: var(--site-font-family) !important;
+  font-size: 0.93rem !important;
+  line-height: 1.42 !important;
+}
+
+.people-content {
+  padding-top: 0 !important;
+}
+
+.people-content .member-section-block {
+  margin: 0 auto 42px !important;
+  max-width: 1180px !important;
+  padding: 0 22px !important;
+}
+
+.people-content .member-section-block.first-member-section {
+  margin-top: 4px !important;
+}
+
+.people-content .member-section-title,
+.people-content .professor-postdoc-column-title {
+  color: #1b2944 !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.76rem !important;
+  font-weight: 850 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.1 !important;
+  margin: 0 0 18px !important;
+  text-align: left !important;
+}
+
+.people-content .professor-postdoc-grid {
+  align-items: start !important;
+  display: grid !important;
+  gap: 28px !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  width: 100% !important;
+}
+
+.people-content .professor-column {
+  grid-column: span 2 !important;
+  min-width: 0 !important;
+}
+
+.people-content .postdoc-column {
+  grid-column: span 3 !important;
+  min-width: 0 !important;
+}
+
+.people-content .professor-column .member-grid {
+  display: grid !important;
+  gap: 24px !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  justify-items: start !important;
+}
+
+.people-content .postdoc-column .member-grid {
+  display: grid !important;
+  gap: 24px !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  justify-items: start !important;
+}
+
+.people-content .member-section-block > .member-grid:not(.professor-grid):not(.postdoc-grid) {
+  align-items: start !important;
+  display: grid !important;
+  gap: 34px 26px !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  justify-items: stretch !important;
+}
+
+.people-content .member-grid > .member-card {
+  margin: 0 !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.people-content .member-card,
+.people-content .member-card--feature,
+.people-content .member-card--standard {
+  align-items: center !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;
+  text-align: center !important;
+  transform: none !important;
+}
+
+.people-content .member-card__avatar-link {
+  display: block !important;
+  margin: 0 0 9px !important;
+}
+
+.people-content .member-card__avatar {
+  border-radius: 50% !important;
+  display: block !important;
+  height: 126px !important;
+  object-fit: cover !important;
+  transform: none !important;
+  width: 126px !important;
+}
+
+.people-content .member-card--feature .member-card__avatar {
+  height: 130px !important;
+  width: 130px !important;
+}
+
+.people-content .member-card__body {
+  align-items: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.people-content .member-card__role,
+.people-content .member-card__socials,
+.people-content .member-card__legacy-links {
+  display: none !important;
+}
+
+.people-content .member-card__name {
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.08rem !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.14 !important;
+  margin: 0 0 5px !important;
+}
+
+.people-content .member-card__name a {
+  align-items: center !important;
+  color: #111 !important;
+  display: inline-flex !important;
+  gap: 5px !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+}
+
+.people-content .member-emoji {
+  font-size: 1em !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+}
+
+.people-content .member-card__position {
+  color: #707070 !important;
+  font-size: 0.84rem !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+  margin: 0 0 12px !important;
+}
+
+.people-content .member-affiliation {
+  align-items: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  margin: 3px 0 12px !important;
+}
+
+.people-content .member-affiliation-label {
+  color: #707070 !important;
+  font-size: 0.76rem !important;
+  font-style: italic !important;
+}
+
+.people-content .member-affiliation-logo {
+  height: auto !important;
+  max-height: 28px !important;
+  max-width: min(var(--member-logo-width, 70px), 82px) !important;
+  object-fit: contain !important;
+}
+
+.people-content .member-card__interests {
+  align-items: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 7px !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.people-content .member-interest-tag {
+  border: 0 !important;
+  border-radius: 999px !important;
+  color: #21324e !important;
+  display: inline-flex !important;
+  font-size: 0.75rem !important;
+  font-weight: 620 !important;
+  justify-content: center !important;
+  line-height: 1.15 !important;
+  max-width: 100% !important;
+  padding: 4px 12px !important;
+  text-align: center !important;
+  white-space: normal !important;
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  .people-content .professor-postdoc-grid,
+  .people-content .member-section-block > .member-grid:not(.professor-grid):not(.postdoc-grid) {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .people-content .professor-column {
+    grid-column: span 1 !important;
+  }
+
+  .people-content .postdoc-column {
+    grid-column: span 2 !important;
+  }
+
+  .people-content .professor-column .member-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
+  .people-content .postdoc-column .member-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .site-page-hero,
+  .gallery-title-shell {
+    min-height: 82px !important;
+    padding: 2px 0 5px !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title,
+  .gallery-title-shell .modSectionHeader .special-title {
+    padding-bottom: 24px !important;
+    max-width: calc(100vw - 36px) !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title h2,
+  .gallery-title-shell .modSectionHeader .special-title h2,
+  .gallery-title {
+    font-size: clamp(1.95rem, 8vw, 2.42rem) !important;
+    line-height: 0.98 !important;
+    white-space: normal !important;
+  }
+
+  .site-logo-full {
+    width: clamp(156px, 48vw, 230px) !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title::after,
+  .gallery-title-shell .modSectionHeader .special-title::after {
+    bottom: 9px !important;
+    height: 3px !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title::before,
+  .gallery-title-shell .modSectionHeader .special-title::before {
+    border-width: 3px !important;
+    bottom: 1px !important;
+    height: 17px !important;
+    width: 17px !important;
+  }
+
+  .publication-card {
+    margin: 0 0 15px !important;
+    padding: 15px 16px 17px !important;
+  }
+
+  .publication-card-layout {
+    display: block !important;
+  }
+
+  .publication-figure {
+    height: auto !important;
+    margin: 0 auto 13px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .publication-card img {
+    max-height: 185px !important;
+    max-width: 100% !important;
+  }
+
+  .publication-headline {
+    display: block !important;
+  }
+
+  .publication-meta-line {
+    justify-content: flex-start !important;
+    margin-top: 8px !important;
+    overflow: visible !important;
+  }
+
+  .people-content .member-section-block {
+    margin-bottom: 36px !important;
+    padding: 0 18px !important;
+  }
+
+  .people-content .member-section-title,
+  .people-content .professor-postdoc-column-title {
+    font-size: 1.3rem !important;
+    margin-bottom: 15px !important;
+  }
+
+  .people-content .professor-postdoc-grid {
+    gap: 32px !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .people-content .professor-column,
+  .people-content .postdoc-column {
+    grid-column: auto !important;
+  }
+
+  .people-content .professor-column .member-grid,
+  .people-content .postdoc-column .member-grid,
+  .people-content .member-section-block > .member-grid:not(.professor-grid):not(.postdoc-grid) {
+    gap: 28px 16px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    justify-items: stretch !important;
+  }
+
+  .people-content .member-card__avatar {
+    height: 102px !important;
+    width: 102px !important;
+  }
+
+  .people-content .member-card--feature .member-card__avatar {
+    height: 106px !important;
+    width: 106px !important;
+  }
+
+  .people-content .member-card__name {
+    font-size: 0.95rem !important;
+  }
+
+  .people-content .member-card__position {
+    font-size: 0.76rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  .people-content .member-interest-tag {
+    font-size: 0.66rem !important;
+    padding: 3px 9px !important;
+  }
+
+  .people-content .member-affiliation-logo {
+    max-height: 22px !important;
+    max-width: min(var(--member-logo-width, 58px), 62px) !important;
+  }
+}
+
+/* --- Emergency final normalization: shared headers and member spacing --- */
+.top-bar .name h1,
+.top-bar .name h1 a,
+.contain-to-grid .top-bar .name h1 a,
+.site-logo {
+  overflow: visible !important;
+  text-decoration: none !important;
+}
+
+.site-logo {
+  padding: 6px 0 6px 16px !important;
+}
+
+.site-logo-full {
+  display: block !important;
+  height: auto !important;
+  max-height: none !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  overflow: visible !important;
+  width: clamp(190px, 20vw, 270px) !important;
+}
+
+.site-page-hero,
+.gallery-title-shell {
+  background: #fff !important;
+  min-height: 140px !important;
+  padding: 0 0 4px !important;
+}
+
+.site-page-hero .modSectionHeader .special-title,
+.gallery-title-shell .modSectionHeader .special-title {
+  display: table !important;
+  line-height: 1 !important;
+  margin: 0 auto !important;
+  padding: 0 0 30px !important;
+  position: relative !important;
+  width: auto !important;
+}
+
+.site-page-hero .modSectionHeader .special-title h2,
+.gallery-title-shell .modSectionHeader .special-title h2,
+.gallery-title {
+  color: #1b2944 !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: clamp(3.1rem, 4.45vw, 4.35rem) !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.04em !important;
+  line-height: 0.98 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.site-page-hero .modSectionHeader .special-title h2::before,
+.site-page-hero .modSectionHeader .special-title h2::after,
+.gallery-title-shell .modSectionHeader .special-title h2::before,
+.gallery-title-shell .modSectionHeader .special-title h2::after,
+.gallery-title::before,
+.gallery-title::after {
+  content: none !important;
+  display: none !important;
+}
+
+.site-page-hero .modSectionHeader .special-title::after,
+.gallery-title-shell .modSectionHeader .special-title::after {
+  background: #2b6fe8 !important;
+  bottom: 12px !important;
+  content: "" !important;
+  height: 4px !important;
+  left: 0 !important;
+  position: absolute !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1 !important;
+}
+
+.site-page-hero .modSectionHeader .special-title::before,
+.gallery-title-shell .modSectionHeader .special-title::before {
+  background: #fff !important;
+  border: 4px solid #2b6fe8 !important;
+  bottom: 14px !important;
+  box-sizing: border-box !important;
+  content: "" !important;
+  height: 20px !important;
+  left: 50% !important;
+  position: absolute !important;
+  transform: translate(-50%, 50%) rotate(45deg) !important;
+  width: 20px !important;
+  z-index: 2 !important;
+}
+
+.people-content {
+  padding-top: 4px !important;
+}
+
+.people-content .member-section-block {
+  margin-bottom: 38px !important;
+}
+
+.people-content .member-section-block.first-member-section {
+  margin-top: 0 !important;
+}
+
+.people-content .member-section-title,
+.people-content .professor-postdoc-column-title {
+  font-size: 1.62rem !important;
+  margin-bottom: 16px !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .site-logo {
+    padding: 5px 0 5px 10px !important;
+  }
+
+  .site-logo-full {
+    width: clamp(158px, 49vw, 226px) !important;
+  }
+
+  .site-page-hero,
+  .gallery-title-shell {
+    min-height: 74px !important;
+    padding: 0 0 2px !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title,
+  .gallery-title-shell .modSectionHeader .special-title {
+    max-width: calc(100vw - 34px) !important;
+    padding-bottom: 22px !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title h2,
+  .gallery-title-shell .modSectionHeader .special-title h2,
+  .gallery-title {
+    font-size: clamp(1.95rem, 8vw, 2.36rem) !important;
+    line-height: 1 !important;
+    white-space: normal !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title::after,
+  .gallery-title-shell .modSectionHeader .special-title::after {
+    bottom: 8px !important;
+    height: 3px !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title::before,
+  .gallery-title-shell .modSectionHeader .special-title::before {
+    border-width: 3px !important;
+    bottom: 9.5px !important;
+    height: 16px !important;
+    width: 16px !important;
+  }
+
+  .people-content .member-section-block {
+    margin-bottom: 32px !important;
+  }
+
+  .people-content .member-section-title,
+  .people-content .professor-postdoc-column-title {
+    font-size: 1.24rem !important;
+    margin-bottom: 14px !important;
+  }
+}
+
+/* --- Final repair: stable page titles and people spacing --- */
+.site-page-hero,
+.gallery-title-shell {
+  align-items: center !important;
+  background: #fff !important;
+  display: flex !important;
+  justify-content: center !important;
+  min-height: 128px !important;
+  padding: 0 !important;
+}
+
+.site-page-hero .row,
+.gallery-title-shell .row {
+  align-items: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+  min-height: inherit !important;
+  width: 100% !important;
+}
+
+.site-page-hero .columns,
+.gallery-title-shell .columns {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.site-page-hero .spacing,
+.gallery-title-shell .spacing {
+  display: none !important;
+}
+
+.site-page-hero .modSectionHeader,
+.gallery-title-shell .modSectionHeader {
+  display: block !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: center !important;
+  width: auto !important;
+}
+
+.site-page-hero .modSectionHeader .special-title,
+.gallery-title-shell .modSectionHeader .special-title {
+  display: inline-block !important;
+  line-height: 1 !important;
+  margin: 0 auto !important;
+  padding: 0 0 32px !important;
+  position: relative !important;
+  text-align: center !important;
+  width: auto !important;
+}
+
+.site-page-hero .modSectionHeader .special-title h2,
+.gallery-title-shell .modSectionHeader .special-title h2,
+.gallery-title {
+  color: #1b2944 !important;
+  display: block !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: clamp(3rem, 4.35vw, 4.25rem) !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 0.96 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.site-page-hero .modSectionHeader .special-title h2::before,
+.site-page-hero .modSectionHeader .special-title h2::after,
+.gallery-title-shell .modSectionHeader .special-title h2::before,
+.gallery-title-shell .modSectionHeader .special-title h2::after,
+.gallery-title::before,
+.gallery-title::after {
+  content: none !important;
+  display: none !important;
+}
+
+.site-page-hero .modSectionHeader .special-title::after,
+.gallery-title-shell .modSectionHeader .special-title::after {
+  background: #2b6fe8 !important;
+  bottom: 9px !important;
+  content: "" !important;
+  height: 4px !important;
+  left: 0 !important;
+  position: absolute !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1 !important;
+}
+
+.site-page-hero .modSectionHeader .special-title::before,
+.gallery-title-shell .modSectionHeader .special-title::before {
+  background: #fff !important;
+  border: 4px solid #2b6fe8 !important;
+  bottom: 11px !important;
+  box-sizing: border-box !important;
+  content: "" !important;
+  height: 20px !important;
+  left: 50% !important;
+  position: absolute !important;
+  transform: translate(-50%, 50%) rotate(45deg) !important;
+  width: 20px !important;
+  z-index: 2 !important;
+}
+
+.people-content {
+  padding-top: 0 !important;
+}
+
+.people-content .member-section-block {
+  margin-bottom: 34px !important;
+}
+
+.people-content .member-section-block.first-member-section {
+  margin-top: -4px !important;
+}
+
+.people-content .member-section-title,
+.people-content .professor-postdoc-column-title {
+  color: #1b2944 !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.58rem !important;
+  font-weight: 820 !important;
+  letter-spacing: -0.015em !important;
+  line-height: 1.08 !important;
+  margin: 0 0 14px !important;
+  text-align: left !important;
+  text-transform: none !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .site-page-hero,
+  .gallery-title-shell {
+    min-height: 84px !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title,
+  .gallery-title-shell .modSectionHeader .special-title {
+    max-width: calc(100vw - 34px) !important;
+    padding-bottom: 24px !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title h2,
+  .gallery-title-shell .modSectionHeader .special-title h2,
+  .gallery-title {
+    font-size: clamp(1.95rem, 8vw, 2.36rem) !important;
+    letter-spacing: -0.035em !important;
+    line-height: 0.98 !important;
+    white-space: normal !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title::after,
+  .gallery-title-shell .modSectionHeader .special-title::after {
+    bottom: 8px !important;
+    height: 3px !important;
+  }
+
+  .site-page-hero .modSectionHeader .special-title::before,
+  .gallery-title-shell .modSectionHeader .special-title::before {
+    border-width: 3px !important;
+    bottom: 9.5px !important;
+    height: 16px !important;
+    width: 16px !important;
+  }
+
+  .people-content .member-section-block.first-member-section {
+    margin-top: 0 !important;
+  }
+
+  .people-content .member-section-block {
+    margin-bottom: 28px !important;
+  }
+
+  .people-content .member-section-title,
+  .people-content .professor-postdoc-column-title {
+    font-size: 1.18rem !important;
+    margin-bottom: 12px !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* --- Page title lock: isolate shared headers from older special-title rules --- */
+.site-page-hero,
+.gallery-title-shell {
+  align-items: center !important;
+  background: #fff !important;
+  display: flex !important;
+  justify-content: center !important;
+  min-height: 132px !important;
+  overflow: visible !important;
+  padding: 0 !important;
+}
+
+.site-page-hero .row,
+.gallery-title-shell .row {
+  align-items: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+  min-height: inherit !important;
+  width: 100% !important;
+}
+
+.site-page-hero .columns,
+.site-page-hero .twelve.columns,
+.site-page-hero .large-12.columns,
+.gallery-title-shell .columns {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.site-page-hero .spacing,
+.gallery-title-shell .spacing {
+  display: none !important;
+}
+
+.site-page-hero .modSectionHeader,
+.gallery-title-shell .modSectionHeader {
+  display: block !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: center !important;
+  width: auto !important;
+}
+
+.site-page-hero .site-section-title-wrap,
+.gallery-title-shell .site-section-title-wrap {
+  display: inline-block !important;
+  line-height: 1 !important;
+  margin: 0 auto !important;
+  padding: 0 0 30px !important;
+  position: relative !important;
+  text-align: center !important;
+  width: auto !important;
+}
+
+.site-page-hero .site-section-title-wrap .section-title,
+.gallery-title-shell .site-section-title-wrap .section-title,
+.gallery-title {
+  color: #1b2944 !important;
+  display: block !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: clamp(3.45rem, 5vw, 5rem) !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 0.94 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.site-page-hero .site-section-title-wrap .section-title::before,
+.site-page-hero .site-section-title-wrap .section-title::after,
+.gallery-title-shell .site-section-title-wrap .section-title::before,
+.gallery-title-shell .site-section-title-wrap .section-title::after,
+.gallery-title::before,
+.gallery-title::after {
+  content: none !important;
+  display: none !important;
+}
+
+.site-page-hero .site-section-title-wrap::after,
+.gallery-title-shell .site-section-title-wrap::after {
+  background: #2b6fe8 !important;
+  bottom: 8px !important;
+  content: "" !important;
+  height: 4px !important;
+  left: 0 !important;
+  position: absolute !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1 !important;
+}
+
+.site-page-hero .site-section-title-wrap::before,
+.gallery-title-shell .site-section-title-wrap::before {
+  background: #fff !important;
+  border: 4px solid #2b6fe8 !important;
+  bottom: 10px !important;
+  box-sizing: border-box !important;
+  content: "" !important;
+  height: 21px !important;
+  left: 50% !important;
+  position: absolute !important;
+  transform: translate(-50%, 50%) rotate(45deg) !important;
+  width: 21px !important;
+  z-index: 2 !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .site-page-hero,
+  .gallery-title-shell {
+    min-height: 92px !important;
+  }
+
+  .site-page-hero .site-section-title-wrap,
+  .gallery-title-shell .site-section-title-wrap {
+    max-width: calc(100vw - 36px) !important;
+    padding-bottom: 24px !important;
+  }
+
+  .site-page-hero .site-section-title-wrap .section-title,
+  .gallery-title-shell .site-section-title-wrap .section-title,
+  .gallery-title {
+    font-size: clamp(2.15rem, 8.6vw, 2.62rem) !important;
+    letter-spacing: -0.035em !important;
+    line-height: 0.98 !important;
+    white-space: normal !important;
+  }
+
+  .site-page-hero .site-section-title-wrap::after,
+  .gallery-title-shell .site-section-title-wrap::after {
+    bottom: 7px !important;
+    height: 3px !important;
+  }
+
+  .site-page-hero .site-section-title-wrap::before,
+  .gallery-title-shell .site-section-title-wrap::before {
+    border-width: 3px !important;
+    bottom: 8.5px !important;
+    height: 17px !important;
+    width: 17px !important;
+  }
+}

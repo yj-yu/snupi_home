@@ -1,9 +1,9 @@
-<div class="mod modSectionHeader {{include.class}}">
-  <div class="special-title centered-text">
-    <h2 style="font-family: var(--site-display-font-family); color: {{include.color}};" class="section-title">{{ include.title }}</h2>
+<div class="mod modSectionHeader {{include.class}}" style="--section-title-color: {{ include.color | default: '#1b2944' }};">
+  <div class="special-title site-section-title-wrap centered-text">
+    <h2 class="section-title">{{ include.title }}</h2>
   </div>
-  {% if include.tagline %}
-    <h3 class='centered-text' style='color: {{include.color}}'>{{include.tagline}}</h3>
+  {% assign section_tagline = include.tagline | default: "" | strip %}
+  {% if section_tagline != "" %}
+    <h3 class='centered-text' style='color: {{include.color}}'>{{section_tagline}}</h3>
   {% endif %}
 </div>
-
