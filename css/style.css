@@ -6529,8 +6529,9 @@ svg:not(:root) {
   border-radius: 13px !important;
   box-shadow: 0 10px 26px rgba(27, 41, 68, 0.026) !important;
   margin-bottom: 16px !important;
+  max-width: 1120px !important;
   overflow: hidden !important;
-  padding: 16px 24px !important;
+  padding: 16px 20px !important;
 }
 
 .publication-card-layout {
@@ -6583,7 +6584,7 @@ svg:not(:root) {
   grid-column: 2 !important;
   justify-content: flex-end !important;
   justify-self: end !important;
-  max-width: 100% !important;
+  max-width: calc(100% - 14px) !important;
   overflow: hidden !important;
   text-align: right !important;
 }
