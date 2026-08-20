@@ -6534,7 +6534,7 @@ svg:not(:root) {
 }
 
 .publication-card-layout {
-  align-items: center !important;
+  align-items: start !important;
   display: grid !important;
   gap: 26px !important;
   grid-template-columns: 250px minmax(0, 1fr) !important;
@@ -6567,11 +6567,12 @@ svg:not(:root) {
 }
 
 .publication-headline {
-  align-items: start !important;
+  align-items: center !important;
   display: grid !important;
   gap: 8px 16px !important;
   grid-template-columns: max-content minmax(0, 1fr) !important;
-  margin-bottom: 10px !important;
+  min-height: 31px !important;
+  margin-bottom: 14px !important;
   min-width: 0 !important;
 }
 
@@ -7512,14 +7513,14 @@ svg:not(:root) {
   border-top: 1px solid rgba(218, 226, 237, 0.9) !important;
   color: #334155 !important;
   font-family: var(--site-font-family) !important;
-  padding: 18px 0 20px !important;
+  padding: 14px 0 16px !important;
 }
 
 .site-footer__inner {
   align-items: center !important;
   display: grid !important;
-  gap: 28px !important;
-  grid-template-columns: minmax(170px, 0.75fr) minmax(300px, 1.5fr) minmax(110px, 0.45fr) !important;
+  gap: 34px !important;
+  grid-template-columns: minmax(170px, 0.55fr) minmax(360px, 1.2fr) minmax(250px, 0.9fr) !important;
   max-width: 1180px !important;
 }
 
@@ -7534,17 +7535,17 @@ svg:not(:root) {
 .site-footer__logo {
   display: block !important;
   height: auto !important;
-  max-width: 134px !important;
-  width: 134px !important;
+  max-width: 126px !important;
+  width: 126px !important;
 }
 
 .site-footer__tagline {
   color: #64748b !important;
   display: block !important;
-  font-size: 0.62rem !important;
+  font-size: 0.58rem !important;
   font-weight: 600 !important;
   line-height: 1.2 !important;
-  margin-left: 39px !important;
+  margin-left: 34px !important;
   white-space: nowrap !important;
 }
 
@@ -7553,7 +7554,7 @@ svg:not(:root) {
   display: flex !important;
   flex-direction: column !important;
   font-style: normal !important;
-  gap: 5px !important;
+  gap: 3px !important;
   justify-self: start !important;
   line-height: 1.25 !important;
   margin: 0 !important;
@@ -7562,20 +7563,51 @@ svg:not(:root) {
 .site-footer__contact span,
 .site-footer__contact a {
   color: #334155 !important;
-  font-size: 0.68rem !important;
+  font-size: 0.62rem !important;
   font-weight: 560 !important;
   letter-spacing: 0 !important;
   text-decoration: none !important;
 }
 
-.site-footer__contact a:hover {
+.site-footer__contact strong {
+  color: #1e293b !important;
+  font-weight: 760 !important;
+}
+
+.site-footer__right {
+  align-items: flex-end !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  justify-self: end !important;
+  min-width: 0 !important;
+}
+
+.site-footer__affiliations {
+  align-items: flex-end !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+}
+
+.site-footer__affiliations a {
+  color: #334155 !important;
+  font-size: 0.62rem !important;
+  font-weight: 560 !important;
+  line-height: 1.25 !important;
+  text-align: right !important;
+  text-decoration: none !important;
+}
+
+.site-footer__contact a:hover,
+.site-footer__affiliations a:hover {
   color: #2563eb !important;
 }
 
 .site-footer__links {
   align-items: center !important;
   display: flex !important;
-  gap: 18px !important;
+  gap: 15px !important;
   justify-content: flex-end !important;
 }
 
@@ -7583,12 +7615,12 @@ svg:not(:root) {
   align-items: center !important;
   color: #334155 !important;
   display: inline-flex !important;
-  height: 26px !important;
+  height: 22px !important;
   justify-content: center !important;
   opacity: 0.92 !important;
   text-decoration: none !important;
   transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease !important;
-  width: 26px !important;
+  width: 22px !important;
 }
 
 .site-footer__icon-link:hover {
@@ -7600,8 +7632,8 @@ svg:not(:root) {
 .site-footer__icon-link svg,
 .site-footer__icon-link img {
   display: block !important;
-  height: 18px !important;
-  width: 18px !important;
+  height: 16px !important;
+  width: 16px !important;
 }
 
 .site-footer__icon-link svg {
@@ -7621,6 +7653,19 @@ svg:not(:root) {
 
   .site-footer__contact {
     justify-self: stretch !important;
+  }
+
+  .site-footer__right {
+    align-items: flex-start !important;
+    justify-self: stretch !important;
+  }
+
+  .site-footer__affiliations {
+    align-items: flex-start !important;
+  }
+
+  .site-footer__affiliations a {
+    text-align: left !important;
   }
 
   .site-footer__links {
