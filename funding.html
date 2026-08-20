@@ -10,428 +10,268 @@ permalink: funding.html
   background: #fff;
   color: #1f2e4a;
   font-family: var(--site-font-family) !important;
-  padding: 42px 0 88px;
+  padding: 0 0 78px;
 }
 
-.projects-hero {
-  align-items: start;
-  display: grid;
-  gap: 18px 46px;
-  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.78fr);
-  margin-bottom: 26px;
+.projects-page-title {
+  background: #fff;
+  padding: 34px 0 24px;
 }
 
-.projects-hero-heading {
-  align-self: end;
-  grid-column: 1;
-  grid-row: 1;
-  padding-top: 18px;
-  text-align: left;
-}
-
-.projects-hero-title {
-  color: #1b2944;
-  display: block;
-  font-family: var(--site-display-font-family) !important;
-  font-size: clamp(2.72rem, 4.2vw, 4.1rem);
-  font-weight: 860;
-  letter-spacing: -0.025em;
-  line-height: 1.04;
-  margin: 0;
-  overflow: visible;
-  white-space: normal;
-}
-
-.projects-title-group {
-  display: block;
-  margin: 0;
-  max-width: 760px;
-}
-
-.projects-hero-rule {
-  align-items: center;
-  display: flex;
-  margin: 22px 0 0;
-  width: min(560px, 100%);
-}
-
-.projects-hero-rule::before,
-.projects-hero-rule::after {
-  background: #2b6fe8;
-  content: "";
-  display: block;
-  flex: 1;
-  height: 3px;
-}
-
-.projects-hero-rule span {
-  border: 3px solid #2b6fe8;
-  display: block;
-  height: 16px;
-  margin: 0 0;
-  transform: rotate(45deg);
-  width: 16px;
-}
-
-.projects-hero-lead {
-  color: #1f2e4a;
-  font-family: var(--site-display-font-family) !important;
-  font-size: 1.27rem;
-  font-weight: 780;
-  line-height: 1.36;
-  margin: 0 0 18px;
-  max-width: 690px;
-}
-
-.projects-hero-text {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.projects-hero-copy {
-  color: #52637a;
-  font-size: 0.98rem;
-  font-weight: 500;
-  line-height: 1.62;
-  margin: 0 0 13px;
-  max-width: 690px;
-}
-
-.projects-orbit {
-  align-self: start;
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  margin-top: -22px;
-  min-height: 320px;
-  position: relative;
-}
-
-.projects-orbit img {
-  display: block;
-  height: auto;
+.projects-page-title .modSectionHeader {
   margin: 0 auto;
-  max-width: 540px;
+  padding: 0;
+  text-align: center;
+}
+
+.projects-page-title .site-section-title-wrap {
+  display: inline-block;
+  line-height: 1;
+  margin: 0 auto;
+  padding: 0 0 30px;
+  position: relative;
+  text-align: center;
+}
+
+.projects-page-title .section-title {
+  color: #1b2944 !important;
+  display: block;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 4.6rem !important;
+  font-weight: 850 !important;
+  letter-spacing: 0 !important;
+  line-height: 0.94 !important;
+  margin: 0 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.projects-page-title .section-title::before,
+.projects-page-title .section-title::after {
+  content: none !important;
+  display: none !important;
+}
+
+.projects-page-title .site-section-title-wrap::after {
+  background: #2b6fe8;
+  bottom: 8px;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  right: 0;
   width: 100%;
+  z-index: 1;
+}
+
+.projects-page-title .site-section-title-wrap::before {
+  background: #fff;
+  border: 4px solid #2b6fe8;
+  bottom: 10px;
+  box-sizing: border-box;
+  content: "";
+  height: 21px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 50%) rotate(45deg);
+  width: 21px;
+  z-index: 2;
+}
+
+.projects-intro {
+  color: #5f6f85;
+  font-size: 1.08rem;
+  font-weight: 500;
+  line-height: 1.58;
+  margin: 0 auto 36px;
+  max-width: 520px;
+  text-align: center;
 }
 
 .projects-section-heading {
   color: #1f2e4a;
   font-family: var(--site-display-font-family) !important;
-  font-size: 1.52rem;
+  font-size: 1.58rem;
   font-weight: 850;
   line-height: 1.2;
-  margin: 0 0 14px;
+  margin: 0 0 18px;
 }
 
 .projects-board {
   display: grid;
-  gap: 26px;
+  gap: 30px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-bottom: 34px;
+  margin-bottom: 36px;
   position: relative;
-  transition: gap 0.42s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.projects-panel {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(198, 215, 238, 0.78);
-  border-radius: 12px;
-  box-shadow: 0 10px 28px rgba(38, 63, 100, 0.055);
-  max-height: 520px;
+.projects-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(198, 215, 238, 0.92);
+  border-radius: 10px;
+  box-shadow: 0 7px 20px rgba(35, 58, 92, 0.035);
   overflow: hidden;
-  position: relative;
-  transform-origin: center top;
-  transition:
-    border-color 0.34s ease,
-    box-shadow 0.42s cubic-bezier(0.22, 1, 0.36, 1),
-    max-height 0.66s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.32s ease,
-    transform 0.56s cubic-bezier(0.16, 1, 0.3, 1),
-    visibility 0.32s step-end;
 }
 
-.projects-panel::before {
-  content: none;
-}
-
-.projects-panel > * {
-  position: relative;
-  z-index: 1;
-}
-
-.projects-panel-summary:hover,
-.projects-panel-summary:focus,
-.projects-panel-summary:active {
-  background: transparent !important;
-  color: inherit !important;
-  outline: none !important;
-}
-
-.projects-panel-summary:focus-visible {
-  box-shadow: inset 0 0 0 2px rgba(43, 111, 232, 0.22);
-}
-
-.projects-panel.is-expanded .projects-panel-summary {
-  background: #fff !important;
-}
-
-.projects-panel.is-wide,
-.projects-panel.is-expanded {
-  grid-column: 1 / -1;
-}
-
-.projects-board.has-expanded .projects-panel:not(.is-expanded) {
-  max-height: 0;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px) scale(0.985);
-  visibility: hidden;
-}
-
-.projects-panel.is-expanded {
-  border-color: rgba(43, 111, 232, 0.26);
-  box-shadow: 0 16px 34px rgba(38, 63, 100, 0.07);
-  max-height: 3600px;
-  transform: translateY(0);
-}
-
-.projects-panel.is-expanded::before {
-  content: none;
-}
-
-.projects-panel-summary {
+.projects-card-header {
   align-items: center;
-  background: transparent;
-  border: 0;
-  color: inherit;
-  cursor: pointer;
   display: grid;
-  font-family: inherit;
-  gap: 18px;
-  grid-template-columns: 44px 1fr auto;
-  min-height: 90px;
-  padding: 26px 26px 18px;
-  text-align: left;
-  width: 100%;
+  gap: 16px;
+  grid-template-columns: 48px 1fr auto;
+  min-height: 86px;
+  padding: 24px 24px 18px;
 }
 
-.projects-panel-icon {
+.projects-card-icon {
   align-items: center;
   background: #eef5ff;
   border-radius: 999px;
   color: #2b6fe8;
   display: inline-flex;
-  height: 44px;
+  height: 46px;
   justify-content: center;
-  width: 44px;
+  width: 46px;
 }
 
-.projects-panel-title {
+.projects-card-title {
   color: #1f2e4a;
   font-family: var(--site-display-font-family) !important;
-  font-size: 1.36rem;
+  font-size: 1.22rem;
   font-weight: 850;
-  line-height: 1.15;
+  line-height: 1.18;
+  margin: 0;
+  min-width: 0;
 }
 
-.projects-panel-action {
+.projects-view-button {
+  -webkit-appearance: none;
   align-items: center;
-  background: #eef5ff;
-  border-radius: 999px;
-  color: #2b6fe8;
+  appearance: none;
+  background: transparent !important;
+  border: 0;
+  color: #1267f1 !important;
+  cursor: pointer;
   display: inline-flex;
-  font-size: 0.84rem;
-  font-weight: 820;
-  gap: 7px;
-  height: 36px;
-  padding: 0 17px;
+  font-family: var(--site-font-family) !important;
+  font-size: 0.9rem;
+  font-weight: 760;
+  gap: 8px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  padding: 8px 0;
   white-space: nowrap;
 }
 
-.projects-panel-action::after {
+.projects-view-button::after {
   content: "->";
 }
 
-.projects-panel.is-expanded .projects-panel-action::before {
+.projects-card.is-expanded .projects-view-button::before {
   content: "Close";
 }
 
-.projects-panel:not(.is-expanded) .projects-panel-action::before {
+.projects-card:not(.is-expanded) .projects-view-button::before {
   content: "View all";
 }
 
 .projects-logo-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  padding: 0 26px 26px;
+  padding: 8px 24px 26px;
 }
 
 .projects-logo-tile {
   align-items: center;
-  border: 1px solid rgba(214, 224, 238, 0.84);
+  border: 1px solid rgba(214, 224, 238, 0.9);
   display: flex;
-  height: 88px;
+  height: 96px;
   justify-content: center;
   margin-right: -1px;
   margin-top: -1px;
-  padding: 16px;
+  min-width: 0;
+  overflow: hidden;
+  padding: 18px 14px;
 }
 
 .projects-logo-tile img {
   display: block;
-  max-height: 42px;
-  max-width: 132px;
+  max-height: 46px;
+  max-width: min(150px, 90%);
   object-fit: contain;
 }
 
 .projects-logo-more {
   align-items: center;
-  background: #f6f9fd;
-  border-radius: 9px;
-  color: #1f2e4a;
+  background: #f7faff;
+  border-radius: 8px;
+  color: #1267f1;
   display: inline-flex;
-  font-size: 0.92rem;
-  font-weight: 800;
-  height: 46px;
+  font-size: 0.96rem;
+  font-weight: 780;
+  height: 50px;
   justify-content: center;
-  min-width: 112px;
+  min-width: 0;
+  padding: 0 18px;
+  width: min(118px, 90%);
 }
 
-.projects-filter-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 2px 34px 12px;
-}
-
-.projects-filter {
-  align-items: center;
-  background: #fff;
-  border: 1px solid rgba(198, 215, 238, 0.9);
-  border-radius: 7px;
-  color: #52637a;
-  display: inline-flex;
-  font-size: 0.8rem;
-  font-weight: 760;
-  height: 32px;
-  justify-content: center;
-  min-width: 70px;
-  padding: 0 14px;
-}
-
-button.projects-filter {
-  -webkit-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.projects-filter:hover,
-.projects-filter:focus,
-.projects-filter:active {
-  background: #f7fbff !important;
-  border-color: rgba(43, 111, 232, 0.38) !important;
-  color: #2b6fe8 !important;
-  outline: none !important;
-}
-
-.projects-filter.is-active {
-  background: #eef6ff !important;
-  border-color: rgba(43, 111, 232, 0.54) !important;
-  color: #2b6fe8 !important;
-}
-
-.projects-past-logos {
-  align-items: center;
-  display: grid;
-  gap: 22px 34px;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  padding: 6px 34px 28px;
-}
-
-.projects-past-logo {
-  align-items: center;
-  display: flex;
-  min-height: 54px;
-  justify-content: center;
-}
-
-.projects-past-logo img {
-  display: block;
-  max-height: 32px;
-  max-width: 116px;
-  object-fit: contain;
-}
-
-.projects-past-logo.is-hidden,
-.project-detail-card.is-hidden {
-  display: none !important;
-}
-
-.projects-panel-body {
+.projects-card-body {
   border-top: 1px solid transparent;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  padding: 0 26px;
-  transform: translateY(-14px);
-  transition:
-    max-height 0.78s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.3s ease 0.08s,
-    padding 0.52s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.56s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.28s ease;
+  padding: 0 24px;
+  transform: translateY(-10px);
+  transition: max-height 0.44s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.24s ease, padding 0.3s ease, transform 0.3s ease, border-color 0.2s ease;
 }
 
-.projects-panel.is-expanded .projects-panel-body {
-  border-top-color: rgba(214, 224, 238, 0.75);
-  max-height: 2600px;
+.projects-card.is-expanded .projects-card-body {
+  border-top-color: rgba(214, 224, 238, 0.82);
+  max-height: 1600px;
   opacity: 1;
-  padding: 22px 26px 26px;
+  padding: 22px 24px 24px;
   transform: translateY(0);
 }
 
 .projects-detail-grid {
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.projects-detail-grid.is-history {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .project-detail-card {
   align-items: center;
   background: #fff;
-  border: 1px solid rgba(214, 224, 238, 0.76);
-  border-radius: 10px;
+  border: 1px solid rgba(214, 224, 238, 0.82);
+  border-radius: 8px;
   display: grid;
   gap: 14px;
-  grid-template-columns: 90px 1fr;
-  min-height: 104px;
-  padding: 15px;
+  grid-template-columns: 84px 1fr;
+  min-height: 98px;
+  padding: 14px;
 }
 
 .project-detail-card img {
   display: block;
-  max-height: 42px;
-  max-width: 84px;
+  max-height: 40px;
+  max-width: 78px;
   object-fit: contain;
 }
 
 .project-detail-title {
   color: #1f2e4a;
   font-family: var(--site-font-family) !important;
-  font-size: 0.98rem;
-  font-weight: 700;
-  line-height: 1.35;
+  font-size: 0.94rem;
+  font-weight: 720;
+  line-height: 1.34;
   margin: 0 0 4px;
 }
 
 .project-detail-meta {
   color: #63748a;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 540;
   line-height: 1.38;
   margin: 0;
@@ -442,222 +282,290 @@ button.projects-filter {
   font-weight: 800;
 }
 
-@media only screen and (max-width: 1024px) {
-  .projects-hero {
+.projects-history-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(198, 215, 238, 0.92);
+  border-radius: 10px;
+  box-shadow: 0 7px 20px rgba(35, 58, 92, 0.035);
+  padding: 26px 24px 28px;
+}
+
+.projects-history-header {
+  align-items: start;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr auto;
+  margin-bottom: 20px;
+}
+
+.projects-history-title {
+  color: #1f2e4a;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.2rem;
+  font-weight: 850;
+  line-height: 1.18;
+  margin: 0 0 8px;
+}
+
+.projects-history-copy {
+  color: #63748a;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.projects-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.projects-filter {
+  -webkit-appearance: none;
+  align-items: center;
+  appearance: none;
+  background: #fff;
+  border: 1px solid rgba(198, 215, 238, 0.95);
+  border-radius: 6px;
+  color: #52637a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 720;
+  height: 32px;
+  justify-content: center;
+  min-width: 78px;
+  padding: 0 15px;
+}
+
+.projects-filter:hover,
+.projects-filter:focus,
+.projects-filter:active {
+  background: #f7fbff !important;
+  border-color: rgba(43, 111, 232, 0.4) !important;
+  color: #2b6fe8 !important;
+  outline: none !important;
+}
+
+.projects-filter.is-active {
+  background: #fff !important;
+  border-color: rgba(43, 111, 232, 0.7) !important;
+  color: #2b6fe8 !important;
+}
+
+.projects-past-logos {
+  align-items: center;
+  border-top: 1px solid rgba(214, 224, 238, 0.86);
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  padding-top: 20px;
+}
+
+.projects-past-logo {
+  align-items: center;
+  border-right: 1px solid rgba(214, 224, 238, 0.82);
+  display: flex;
+  justify-content: center;
+  min-height: 72px;
+  padding: 12px 18px;
+}
+
+.projects-past-logo:nth-child(6n),
+.projects-past-logo:last-child {
+  border-right: 0;
+}
+
+.projects-past-logo img {
+  display: block;
+  max-height: 34px;
+  max-width: 122px;
+  object-fit: contain;
+}
+
+.projects-past-logo.is-hidden {
+  display: none !important;
+}
+
+@media only screen and (max-width: 1180px) {
+  .projects-board {
     grid-template-columns: 1fr;
   }
+}
 
-  .projects-hero-heading,
-  .projects-hero-text,
-  .projects-orbit {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
-  .projects-hero-heading {
-    padding-top: 0;
-    text-align: center;
-  }
-
-  .projects-title-group {
-    margin: 0 auto;
-  }
-
-  .projects-hero-rule {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .projects-hero-title {
-    white-space: normal;
-  }
-
-  .projects-orbit {
-    margin-top: 0;
-    min-height: 300px;
-  }
-
-  .projects-detail-grid,
-  .projects-detail-grid.is-history {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+@media only screen and (max-width: 1024px) {
 
   .projects-past-logos {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-}
 
-@media only screen and (max-width: 1180px) {
-  .projects-hero-title {
-    white-space: normal;
+  .projects-past-logo:nth-child(6n) {
+    border-right: 1px solid rgba(214, 224, 238, 0.82);
+  }
+
+  .projects-past-logo:nth-child(4n),
+  .projects-past-logo:last-child {
+    border-right: 0;
   }
 }
 
 @media only screen and (max-width: 640px) {
   .projects-page {
-    padding: 24px 0 90px;
+    padding-bottom: 64px;
   }
 
-  .projects-hero {
-    gap: 18px;
-    margin-bottom: 22px;
-    text-align: left;
+  .projects-page-title {
+    padding: 22px 0 16px;
   }
 
-  .projects-hero-title {
-    font-size: 2.15rem;
-    line-height: 1.08;
-    white-space: normal;
+  .projects-page-title .site-section-title-wrap {
+    max-width: calc(100vw - 36px);
+    padding-bottom: 24px;
   }
 
-  .projects-hero-rule {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 24px;
-    width: min(100%, 340px);
+  .projects-page-title .section-title {
+    font-size: 4.6rem !important;
+    line-height: 0.98 !important;
+    white-space: nowrap !important;
   }
 
-  .projects-hero-heading {
-    text-align: center;
+  .projects-page-title .site-section-title-wrap::after {
+    bottom: 7px;
+    height: 3px;
   }
 
-  .projects-hero-lead {
-    font-size: 1.1rem;
+  .projects-page-title .site-section-title-wrap::before {
+    border-width: 3px;
+    bottom: 8.5px;
+    height: 17px;
+    width: 17px;
   }
 
-  .projects-hero-copy {
-    font-size: 0.94rem;
-    line-height: 1.55;
+  .projects-intro {
+    font-size: 0.96rem;
+    margin-bottom: 28px;
   }
 
-  .projects-orbit {
-    min-height: 240px;
+  .projects-section-heading {
+    font-size: 1.28rem;
   }
 
-  .projects-board {
-    grid-template-columns: 1fr;
-  }
-
-  .projects-panel-summary {
+  .projects-card-header {
     gap: 12px;
-    grid-template-columns: 38px 1fr;
+    grid-template-columns: 42px 1fr;
     padding: 20px 18px 14px;
   }
 
-  .projects-panel-action {
+  .projects-card-icon {
+    height: 40px;
+    width: 40px;
+  }
+
+  .projects-card-title {
+    font-size: 1.05rem;
+  }
+
+  .projects-view-button {
     grid-column: 2;
     justify-self: start;
-    margin-top: 4px;
+    padding-top: 2px;
   }
 
   .projects-logo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 0 18px 20px;
+    padding: 6px 18px 22px;
   }
 
   .projects-logo-tile {
-    height: 76px;
+    height: 78px;
+    padding: 14px;
   }
 
-  .projects-past-logos {
-    gap: 18px 18px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 8px 22px 24px;
+  .projects-logo-tile img {
+    max-height: 38px;
+    max-width: 122px;
   }
 
-  .projects-past-logo img {
-    max-height: 30px;
-    max-width: 104px;
-  }
-
-  .projects-filter-row {
-    gap: 8px;
-    padding: 0 22px 14px;
-  }
-
-  .projects-filter {
-    font-size: 0.74rem;
-    height: 30px;
-    min-width: 58px;
-    padding: 0 10px;
-  }
-
-  .projects-detail-grid,
-  .projects-detail-grid.is-history {
+  .projects-detail-grid {
     grid-template-columns: 1fr;
   }
 
   .project-detail-card {
-    grid-template-columns: 76px 1fr;
-    min-height: 92px;
+    grid-template-columns: 74px 1fr;
+    min-height: 88px;
     padding: 13px;
   }
 
-  .project-detail-card img {
-    max-height: 34px;
-    max-width: 72px;
+  .projects-history-card {
+    padding: 22px 18px 24px;
+  }
+
+  .projects-history-header {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-filter-row {
+    justify-content: flex-start;
+  }
+
+  .projects-filter {
+    font-size: 0.74rem;
+    min-width: 62px;
+    padding: 0 10px;
+  }
+
+  .projects-past-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects-past-logo,
+  .projects-past-logo:nth-child(4n),
+  .projects-past-logo:nth-child(6n) {
+    border-right: 1px solid rgba(214, 224, 238, 0.82);
+  }
+
+  .projects-past-logo:nth-child(2n),
+  .projects-past-logo:last-child {
+    border-right: 0;
   }
 }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var board = document.querySelector('[data-projects-board]');
-    var panels = Array.prototype.slice.call(document.querySelectorAll('[data-project-panel]'));
+    var cards = Array.prototype.slice.call(document.querySelectorAll('[data-project-card]'));
 
-    panels.forEach(function (panel) {
-      var toggle = panel.querySelector('[data-project-toggle]');
+    cards.forEach(function (card) {
+      var toggle = card.querySelector('[data-project-toggle]');
 
       if (!toggle) {
         return;
       }
 
       toggle.addEventListener('click', function () {
-        var shouldOpen = !panel.classList.contains('is-expanded');
-        var firstRect = panel.getBoundingClientRect();
+        var shouldOpen = !card.classList.contains('is-expanded');
 
-        panels.forEach(function (otherPanel) {
-          var otherToggle = otherPanel.querySelector('[data-project-toggle]');
-          otherPanel.classList.remove('is-expanded');
+        cards.forEach(function (otherCard) {
+          var otherToggle = otherCard.querySelector('[data-project-toggle]');
+          otherCard.classList.remove('is-expanded');
           if (otherToggle) {
             otherToggle.setAttribute('aria-expanded', 'false');
           }
         });
 
-        if (shouldOpen) {
-          panel.classList.add('is-expanded');
-          toggle.setAttribute('aria-expanded', 'true');
-        }
-
-        if (board) {
-          board.classList.toggle('has-expanded', shouldOpen);
-        }
-
-        if (shouldOpen && panel.animate) {
-          var lastRect = panel.getBoundingClientRect();
-          panel.animate(
-            [
-              {
-                transform: 'translate(' + (firstRect.left - lastRect.left) + 'px, ' + (firstRect.top - lastRect.top) + 'px) scale(' + (firstRect.width / lastRect.width) + ', ' + (firstRect.height / lastRect.height) + ')'
-              },
-              { transform: 'translate(0, 0) scale(1, 1)' }
-            ],
-            {
-              duration: 520,
-              easing: 'cubic-bezier(0.16, 1, 0.3, 1)'
-            }
-          );
-        }
+        card.classList.toggle('is-expanded', shouldOpen);
+        toggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
       });
     });
 
     var filters = Array.prototype.slice.call(document.querySelectorAll('[data-project-filter]'));
     var pastLogos = Array.prototype.slice.call(document.querySelectorAll('[data-project-logo-category]'));
-    var pastCards = Array.prototype.slice.call(document.querySelectorAll('.projects-detail-grid.is-history [data-project-card-category]'));
 
     filters.forEach(function (filter) {
-      filter.addEventListener('click', function (event) {
-        event.stopPropagation();
+      filter.addEventListener('click', function () {
         var category = filter.getAttribute('data-project-filter');
 
         filters.forEach(function (item) {
@@ -668,48 +576,33 @@ button.projects-filter {
           var logoCategory = logo.getAttribute('data-project-logo-category');
           logo.classList.toggle('is-hidden', category !== 'all' && logoCategory !== category);
         });
-
-        pastCards.forEach(function (card) {
-          var cardCategory = card.getAttribute('data-project-card-category');
-          card.classList.toggle('is-hidden', category !== 'all' && cardCategory !== category);
-        });
       });
     });
   });
 </script>
 
 <div class="full no-padding projects-page">
+  <section class="projects-page-title">
+    <div class="row">
+      <div class="large-12 columns">
+        {% include section-header.html title="PROJECTS" color="#1b2944" tagline=" " class="big" %}
+        <p class="projects-intro">Advancing research through government-funded projects and industry collaborations.</p>
+      </div>
+    </div>
+  </section>
+
   <div class="row">
     <div class="large-12 columns">
-      <section class="projects-hero">
-        <div class="projects-hero-heading">
-          <div class="projects-title-group">
-            <h1 class="projects-hero-title">From Agentic to<br>Physical Intelligence</h1>
-            <div class="projects-hero-rule"><span></span></div>
-          </div>
-        </div>
-
-        <div class="projects-hero-text">
-          <p class="projects-hero-lead">Multimodal agentic AI and world foundation models</p>
-          <p class="projects-hero-copy">SNU PI Lab studies multimodal agentic AI and world foundation models. Our work centers on understanding and reasoning across perception and action.</p>
-          <p class="projects-hero-copy">We are extending this line of research toward AI safety, autonomous AI for science, and robot learning, with the goal of connecting multimodal intelligence to the real world.</p>
-        </div>
-
-        <div class="projects-orbit" aria-hidden="true">
-          <img src="images/fundings/project-orbit.png" alt="">
-        </div>
-      </section>
-
       <h2 class="projects-section-heading">Active Projects</h2>
-      <div class="projects-board" data-projects-board>
-        <section class="projects-panel" data-project-panel>
-          <button class="projects-panel-summary" type="button" aria-expanded="false" data-project-toggle>
-            <span class="projects-panel-icon">
+      <div class="projects-board">
+        <section class="projects-card" data-project-card>
+          <div class="projects-card-header">
+            <span class="projects-card-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h16M6 10v8M10 10v8M14 10v8M18 10v8M5 18h14M12 4l8 5H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
             </span>
-            <span class="projects-panel-title">Grants</span>
-            <span class="projects-panel-action"></span>
-          </button>
+            <h3 class="projects-card-title">Government-funded Projects</h3>
+            <button class="projects-view-button" type="button" aria-expanded="false" data-project-toggle></button>
+          </div>
           <div class="projects-logo-grid">
             <div class="projects-logo-tile"><img src="images/fundings/NRF.png" alt="NRF"></div>
             <div class="projects-logo-tile"><img src="images/fundings/keit.png" alt="KEIT"></div>
@@ -718,27 +611,27 @@ button.projects-filter {
             <div class="projects-logo-tile"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"></div>
             <div class="projects-logo-tile"><img src="images/fundings/KETI.png" alt="KETI"></div>
           </div>
-          <div class="projects-panel-body">
+          <div class="projects-card-body">
             <div class="projects-detail-grid">
-              <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h3 class="project-detail-title">Active Learning for Multimodal Action Agents</h3><p class="project-detail-meta"><strong>Funding</strong> NRF</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h3 class="project-detail-title">Multimodal RLHF for Personalized Education</h3><p class="project-detail-meta"><strong>Funding</strong> NRF</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h3 class="project-detail-title">Collaborative Autonomy for Multi-Humanoid Systems</h3><p class="project-detail-meta"><strong>Funding</strong> NRF</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/keit.png" alt="KEIT"><div><h3 class="project-detail-title">Humanoid Robots for Chemical Processes</h3><p class="project-detail-meta"><strong>Funding</strong> KEIT<br><strong>Lead</strong> Holiday Robotics</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h3 class="project-detail-title">World Foundation Model for Physical AI</h3><p class="project-detail-meta"><strong>Funding</strong> IITP<br><strong>Lead</strong> LG Electronics</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h3 class="project-detail-title">Open Autonomous Digital Twin</h3><p class="project-detail-meta"><strong>Funding</strong> IITP<br><strong>Lead</strong> KETI</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h3 class="project-detail-title">AI-Based ADTO Combat Planning Model</h3><p class="project-detail-meta"><strong>Funding</strong> IITP</p></div></article>
+              <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Active Learning for Multimodal Action Agents</h4><p class="project-detail-meta"><strong>Funding</strong> NRF</p></div></article>
+              <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Multimodal RLHF for Personalized Education</h4><p class="project-detail-meta"><strong>Funding</strong> NRF</p></div></article>
+              <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Collaborative Autonomy for Multi-Humanoid Systems</h4><p class="project-detail-meta"><strong>Funding</strong> NRF</p></div></article>
+              <article class="project-detail-card"><img src="images/fundings/keit.png" alt="KEIT"><div><h4 class="project-detail-title">Humanoid Robots for Chemical Processes</h4><p class="project-detail-meta"><strong>Funding</strong> KEIT<br><strong>Lead</strong> Holiday Robotics</p></div></article>
+              <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">World Foundation Model for Physical AI</h4><p class="project-detail-meta"><strong>Funding</strong> IITP<br><strong>Lead</strong> LG Electronics</p></div></article>
+              <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">Open Autonomous Digital Twin</h4><p class="project-detail-meta"><strong>Funding</strong> IITP<br><strong>Lead</strong> KETI</p></div></article>
+              <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based ADTO Combat Planning Model</h4><p class="project-detail-meta"><strong>Funding</strong> IITP</p></div></article>
             </div>
           </div>
         </section>
 
-        <section class="projects-panel" data-project-panel>
-          <button class="projects-panel-summary" type="button" aria-expanded="false" data-project-toggle>
-            <span class="projects-panel-icon">
+        <section class="projects-card" data-project-card>
+          <div class="projects-card-header">
+            <span class="projects-card-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11a4 4 0 1 0-8 0M4 20a6 6 0 0 1 16 0M18 8h3M19.5 6.5v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
             </span>
-            <span class="projects-panel-title">Industry Collaborations</span>
-            <span class="projects-panel-action"></span>
-          </button>
+            <h3 class="projects-card-title">Industry Collaborations</h3>
+            <button class="projects-view-button" type="button" aria-expanded="false" data-project-toggle></button>
+          </div>
           <div class="projects-logo-grid">
             <div class="projects-logo-tile"><img src="images/fundings/skt.png" alt="SK Telecom"></div>
             <div class="projects-logo-tile"><img src="images/fundings/SK_Hynix.png" alt="SK Hynix"></div>
@@ -747,65 +640,46 @@ button.projects-filter {
             <div class="projects-logo-tile"><img src="images/fundings/hyundai.png" alt="Hyundai Motors"></div>
             <div class="projects-logo-tile"><span class="projects-logo-more">+ More</span></div>
           </div>
-          <div class="projects-panel-body">
+          <div class="projects-card-body">
             <div class="projects-detail-grid">
-              <article class="project-detail-card"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h3 class="project-detail-title">Proprietary AI Foundation Model</h3><p class="project-detail-meta"><strong>Partner</strong> SK Telecom</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/SK_Hynix.png" alt="SK Hynix"><div><h3 class="project-detail-title">Unsafe Action and Procedure Violation Detection</h3><p class="project-detail-meta"><strong>Partner</strong> SK Hynix</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/poscodx.png" alt="POSCO DX"><div><h3 class="project-detail-title">LVLM-Based Industrial Anomaly Detection</h3><p class="project-detail-meta"><strong>Partner</strong> POSCO DX</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/google_research.png" alt="Google Research"><div><h3 class="project-detail-title">Embodied Commonsense Reasoning</h3><p class="project-detail-meta"><strong>Partner</strong> Google Research</p></div></article>
-              <article class="project-detail-card"><img src="images/fundings/hyundai.png" alt="Hyundai Motors"><div><h3 class="project-detail-title">Agent for Vehicle Control</h3><p class="project-detail-meta"><strong>Partner</strong> Hyundai Motors</p></div></article>
+              <article class="project-detail-card"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h4 class="project-detail-title">Proprietary AI Foundation Model</h4><p class="project-detail-meta"><strong>Partner</strong> SK Telecom</p></div></article>
+              <article class="project-detail-card"><img src="images/fundings/SK_Hynix.png" alt="SK Hynix"><div><h4 class="project-detail-title">Unsafe Action and Procedure Violation Detection</h4><p class="project-detail-meta"><strong>Partner</strong> SK Hynix</p></div></article>
+              <article class="project-detail-card"><img src="images/fundings/poscodx.png" alt="POSCO DX"><div><h4 class="project-detail-title">LVLM-Based Industrial Anomaly Detection</h4><p class="project-detail-meta"><strong>Partner</strong> POSCO DX</p></div></article>
+              <article class="project-detail-card"><img src="images/fundings/google_research.png" alt="Google Research"><div><h4 class="project-detail-title">Embodied Commonsense Reasoning</h4><p class="project-detail-meta"><strong>Partner</strong> Google Research</p></div></article>
+              <article class="project-detail-card"><img src="images/fundings/hyundai.png" alt="Hyundai Motors"><div><h4 class="project-detail-title">Agent for Vehicle Control</h4><p class="project-detail-meta"><strong>Partner</strong> Hyundai Motors</p></div></article>
             </div>
           </div>
         </section>
+      </div>
 
-        <section class="projects-panel is-wide" data-project-panel>
-          <button class="projects-panel-summary" type="button" aria-expanded="false" data-project-toggle>
-            <span class="projects-panel-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v5l3 2M12 22a9 9 0 1 0 0-18a9 9 0 0 0 0 18z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </span>
-            <span class="projects-panel-title">Past Projects</span>
-            <span class="projects-panel-action"></span>
-          </button>
-          <div class="projects-filter-row" aria-label="Filter past projects">
+      <section class="projects-history-card">
+        <div class="projects-history-header">
+          <div>
+            <h2 class="projects-history-title">Project History</h2>
+            <p class="projects-history-copy">Previous grants and collaborations.</p>
+          </div>
+          <div class="projects-filter-row" aria-label="Filter project history">
             <button class="projects-filter is-active" type="button" data-project-filter="all">All</button>
             <button class="projects-filter" type="button" data-project-filter="government">Government</button>
             <button class="projects-filter" type="button" data-project-filter="industry">Industry</button>
             <button class="projects-filter" type="button" data-project-filter="others">Others</button>
           </div>
-          <div class="projects-past-logos">
-            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/kist.jpg" alt="KIST"></div>
-            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"></div>
-            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"></div>
-            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/skt.png" alt="SK Telecom"></div>
-            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/IITP.png" alt="IITP"></div>
-            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/kocca.jpg" alt="KOCCA"></div>
-            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/maum_ai.svg" alt="Maum AI"></div>
-            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/yonsei.png" alt="Yonsei University"></div>
-            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"></div>
-            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"></div>
-            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/giantstep.png" alt="Giantstep"></div>
-            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/ncsoft.png" alt="NCSOFT"></div>
-            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/upstage.svg" alt="Upstage"></div>
-          </div>
-          <div class="projects-panel-body">
-            <div class="projects-detail-grid is-history">
-              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/kist.jpg" alt="KIST"><div><h3 class="project-detail-title">Self-evolving embodied AGI platform technology through real-world experience</h3></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h3 class="project-detail-title">Microphone noise reduction, content recommendation, automated curation, and app-development chatbot projects</h3></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h3 class="project-detail-title">Multimodal display testing and stable video diffusion quantization</h3></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h3 class="project-detail-title">Research and development of large multimodal models with video input</h3></div></article>
-              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/IITP.png" alt="IITP"><div><h3 class="project-detail-title">AI-based OTT user and content data analysis and video recommendation system development</h3></div></article>
-              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/kocca.jpg" alt="KOCCA"><div><h3 class="project-detail-title">Multimodal UX evaluation platform for XR space-responsive content optimization</h3></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/maum_ai.svg" alt="Maum AI"><div><h3 class="project-detail-title">Reinforcement learning-based autonomous driving AI software for hazardous driving conditions</h3></div></article>
-              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/yonsei.png" alt="Yonsei"><div><h3 class="project-detail-title">Digital human counselor for total healthcare and wellness service quality management protocol</h3></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"><div><h3 class="project-detail-title">Multimodal AI combining object recognition and natural language processing</h3></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"><div><h3 class="project-detail-title">AI-based concrete flowability video analysis program development</h3></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/giantstep.png" alt="Giantstep"><div><h3 class="project-detail-title">Voice-driven digital human generation with lip-sync and emotion matching</h3></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/ncsoft.png" alt="NCSOFT"><div><h3 class="project-detail-title">Nonverbal dialogue understanding and autonomous multi-agent game environments</h3></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h3 class="project-detail-title">Image-text attention-based object recognition for vision-language models</h3></div></article>
-            </div>
-          </div>
-        </section>
-      </div>
+        </div>
+        <div class="projects-past-logos">
+          <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/kocca.jpg" alt="KOCCA"></div>
+          <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/kist.jpg" alt="KIST"></div>
+          <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"></div>
+          <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"></div>
+          <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/skt.png" alt="SK Telecom"></div>
+          <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/ncsoft.png" alt="NCSOFT"></div>
+          <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"></div>
+          <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"></div>
+          <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/maum_ai.svg" alt="Maum AI"></div>
+          <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/giantstep.png" alt="Giantstep"></div>
+          <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/upstage.svg" alt="Upstage"></div>
+          <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/IITP.png" alt="IITP"></div>
+        </div>
+      </section>
     </div>
   </div>
 </div>
