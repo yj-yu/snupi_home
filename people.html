@@ -2860,6 +2860,24 @@ input:checked + .slider:before {
   }
 }
 
+/* Put postdoctoral researchers below the professor instead of beside them. */
+.people-content .professor-postdoc-grid {
+  display: grid !important;
+  gap: 16px !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  max-width: 760px !important;
+}
+
+.people-content .professor-column,
+.people-content .postdoc-column {
+  width: 100% !important;
+}
+
+.people-content .professor-grid,
+.people-content .postdoc-grid {
+  width: 100% !important;
+}
+
 </style>
 
 <div class='full parallax site-page-hero'>
