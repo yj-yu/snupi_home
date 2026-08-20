@@ -4558,58 +4558,204 @@ img {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(255, 255, 255);
 }
-.index_welcome {
-  color: rgb(255, 255, 255);
+
+.home-research-hero {
+  background: #fff;
+  color: #1f2e4a;
+  overflow: hidden;
+  padding: 3.1rem 0 2.55rem;
+}
+
+.home-research-hero-inner {
+  align-items: center;
+  display: grid;
+  gap: 24px 44px;
+  grid-template-columns: minmax(0, 0.92fr) minmax(340px, 0.82fr);
+}
+
+.home-research-hero-copy {
+  max-width: 620px;
+  text-align: left;
+}
+
+.home-research-hero-title {
+  color: #14284a;
   font-family: "Avenir Next", "Inter", "Noto Sans KR", var(--site-display-font-family) !important;
-  font-size: clamp(2.05rem, 3.32vw, 3.05rem);
-  font-weight: 650 !important;
-  letter-spacing: 0.005em;
-  line-height: 1.1;
-  margin: 0 0 1.18rem;
-}
-
-.index_welcome_intro {
-  color: rgba(255, 255, 255, 0.92);
-  font-family: "Avenir Next", "Inter", "Noto Sans KR", var(--site-font-family) !important;
-  font-size: clamp(0.98rem, 1.22vw, 1.1rem);
-  font-weight: 430;
-  line-height: 1.52;
-  margin: 0 auto 0.18rem;
-  max-width: 1120px;
-}
-
-.index_welcome_intro b {
-  font-weight: 660;
-}
-
-.index_welcome_more {
-  color: rgba(255, 255, 255, 0.9);
-  font-family: "Avenir Next", "Inter", "Noto Sans KR", var(--site-font-family) !important;
-  font-size: clamp(0.98rem, 1.14vw, 1.08rem);
-  line-height: 1.45;
+  font-size: clamp(2.42rem, 4.3vw, 4.25rem);
+  font-weight: 820 !important;
+  letter-spacing: 0;
+  line-height: 1.04;
   margin: 0;
 }
 
-.index_welcome_more a {
-  color: #ffd62e !important;
-  font-weight: 620;
-  text-decoration: none;
+.home-research-hero-title br {
+  display: block;
 }
-@media screen and (max-width: 600px){
-  /* 모바일에 최적화된 예외 CSS 코드*/
-  .index_welcome{
-    font-size: 2rem;
-    margin-bottom: 0.95rem;
+
+.home-research-hero-rule {
+  align-items: center;
+  display: flex;
+  margin: 22px 0 24px;
+  width: min(520px, 100%);
+}
+
+.home-research-hero-rule::before,
+.home-research-hero-rule::after {
+  background: #1f6fff;
+  content: "";
+  display: block;
+  flex: 1;
+  height: 2px;
+}
+
+.home-research-hero-rule span {
+  background: #1f6fff;
+  display: block;
+  height: 10px;
+  transform: rotate(45deg);
+  width: 10px;
+}
+
+.home-research-hero-lead {
+  color: #52637a;
+  font-family: "Avenir Next", "Inter", "Noto Sans KR", var(--site-font-family) !important;
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  font-weight: 500;
+  line-height: 1.68;
+  margin: 0 0 26px;
+  max-width: 580px;
+}
+
+.home-research-hero-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.home-research-hero-button {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(31, 111, 255, 0.58);
+  border-radius: 5px;
+  color: #1f6fff !important;
+  display: inline-flex;
+  font-family: "Avenir Next", "Inter", "Noto Sans KR", var(--site-font-family) !important;
+  font-size: 0.94rem;
+  font-weight: 680;
+  justify-content: center;
+  line-height: 1;
+  min-height: 42px;
+  padding: 0 20px;
+  text-decoration: none;
+  transition: background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, color 0.18s ease;
+}
+
+.home-research-hero-button::after {
+  content: "\2192";
+  font-size: 1.05rem;
+  line-height: 1;
+  margin-left: 10px;
+}
+
+.home-research-hero-button:hover,
+.home-research-hero-button:focus {
+  background: #eef5ff;
+  border-color: #1f6fff;
+  box-shadow: 0 8px 18px rgba(31, 111, 255, 0.12);
+}
+
+.home-research-hero-button.is-primary {
+  background: #1267f1;
+  border-color: #1267f1;
+  box-shadow: 0 10px 22px rgba(31, 111, 255, 0.18);
+  color: #fff !important;
+}
+
+.home-research-hero-button.is-primary:hover,
+.home-research-hero-button.is-primary:focus {
+  background: #0f5fdd;
+  border-color: #0f5fdd;
+}
+
+.home-research-hero-figure {
+  justify-self: center;
+  max-width: 560px;
+  width: 100%;
+}
+
+.home-research-hero-figure img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .home-research-hero {
+    padding: 2.65rem 0 2.2rem;
   }
 
-  .index_welcome_intro {
-    font-size: 0.98rem;
-    line-height: 1.48;
-    max-width: 92%;
+  .home-research-hero-inner {
+    gap: 12px;
+    grid-template-columns: 1fr;
   }
 
-  .index_welcome_more {
+  .home-research-hero-copy {
+    margin: 0 auto;
+    max-width: 680px;
+    text-align: center;
+  }
+
+  .home-research-hero-rule {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-research-hero-actions {
+    justify-content: center;
+  }
+
+  .home-research-hero-figure {
+    max-width: 430px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-research-hero {
+    padding: 2.1rem 0 1.8rem;
+  }
+
+  .home-research-hero-inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .home-research-hero-title {
+    font-size: 2.25rem;
+  }
+
+  .home-research-hero-rule {
+    margin-bottom: 18px;
+    margin-top: 18px;
+  }
+
+  .home-research-hero-lead {
     font-size: 0.98rem;
+    line-height: 1.56;
+    margin-bottom: 20px;
+  }
+
+  .home-research-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .home-research-hero-button {
+    width: 100%;
+  }
+
+  .home-research-hero-figure {
+    max-width: 340px;
   }
 }
 

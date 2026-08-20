@@ -14,16 +14,19 @@ permalink: funding.html
 }
 
 .projects-hero {
-  align-items: center;
+  align-items: start;
   display: grid;
-  gap: 26px 42px;
-  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
-  margin-bottom: 28px;
+  gap: 18px 46px;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.78fr);
+  margin-bottom: 26px;
 }
 
 .projects-hero-heading {
-  grid-column: 1 / -1;
-  text-align: center;
+  align-self: end;
+  grid-column: 1;
+  grid-row: 1;
+  padding-top: 18px;
+  text-align: left;
 }
 
 .projects-hero-title {
@@ -41,15 +44,15 @@ permalink: funding.html
 
 .projects-title-group {
   display: block;
-  margin: 0 auto;
-  max-width: min(1100px, 100%);
+  margin: 0;
+  max-width: 760px;
 }
 
 .projects-hero-rule {
   align-items: center;
   display: flex;
-  margin: 22px auto 0;
-  width: min(620px, 66vw);
+  margin: 22px 0 0;
+  width: min(560px, 100%);
 }
 
 .projects-hero-rule::before,
@@ -80,6 +83,11 @@ permalink: funding.html
   max-width: 690px;
 }
 
+.projects-hero-text {
+  grid-column: 1;
+  grid-row: 2;
+}
+
 .projects-hero-copy {
   color: #52637a;
   font-size: 0.98rem;
@@ -90,6 +98,10 @@ permalink: funding.html
 }
 
 .projects-orbit {
+  align-self: start;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin-top: -22px;
   min-height: 320px;
   position: relative;
 }
@@ -98,7 +110,7 @@ permalink: funding.html
   display: block;
   height: auto;
   margin: 0 auto;
-  max-width: 480px;
+  max-width: 540px;
   width: 100%;
 }
 
@@ -435,11 +447,33 @@ button.projects-filter {
     grid-template-columns: 1fr;
   }
 
+  .projects-hero-heading,
+  .projects-hero-text,
+  .projects-orbit {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .projects-hero-heading {
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .projects-title-group {
+    margin: 0 auto;
+  }
+
+  .projects-hero-rule {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .projects-hero-title {
     white-space: normal;
   }
 
   .projects-orbit {
+    margin-top: 0;
     min-height: 300px;
   }
 
@@ -650,7 +684,7 @@ button.projects-filter {
       <section class="projects-hero">
         <div class="projects-hero-heading">
           <div class="projects-title-group">
-            <h1 class="projects-hero-title">From Agentic to Physical Intelligence</h1>
+            <h1 class="projects-hero-title">From Agentic to<br>Physical Intelligence</h1>
             <div class="projects-hero-rule"><span></span></div>
           </div>
         </div>
@@ -739,35 +773,35 @@ button.projects-filter {
             <button class="projects-filter" type="button" data-project-filter="others">Others</button>
           </div>
           <div class="projects-past-logos">
-            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/kocca.jpg" alt="KOCCA"></div>
             <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/kist.jpg" alt="KIST"></div>
-            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/yonsei.png" alt="Yonsei University"></div>
             <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"></div>
             <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"></div>
             <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/skt.png" alt="SK Telecom"></div>
-            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/ncsoft.png" alt="NCSOFT"></div>
+            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/IITP.png" alt="IITP"></div>
+            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/kocca.jpg" alt="KOCCA"></div>
+            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/maum_ai.svg" alt="Maum AI"></div>
+            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/yonsei.png" alt="Yonsei University"></div>
             <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"></div>
             <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"></div>
-            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/maum_ai.svg" alt="Maum AI"></div>
             <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/giantstep.png" alt="Giantstep"></div>
+            <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/ncsoft.png" alt="NCSOFT"></div>
             <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/upstage.svg" alt="Upstage"></div>
-            <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/IITP.png" alt="IITP"></div>
           </div>
           <div class="projects-panel-body">
             <div class="projects-detail-grid is-history">
-              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/kocca.jpg" alt="KOCCA"><div><h3 class="project-detail-title">Multimodal UX evaluation platform for XR space-responsive content optimization</h3><p class="project-detail-meta"><strong>National R&amp;D</strong></p></div></article>
-              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/kist.jpg" alt="KIST"><div><h3 class="project-detail-title">Self-evolving embodied AGI platform technology through real-world experience</h3><p class="project-detail-meta"><strong>National R&amp;D</strong></p></div></article>
-              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/yonsei.png" alt="Yonsei"><div><h3 class="project-detail-title">Digital human counselor for total healthcare and wellness service quality management protocol</h3><p class="project-detail-meta"><strong>National R&amp;D</strong></p></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h3 class="project-detail-title">Microphone noise reduction, content recommendation, automated curation, and app-development chatbot projects</h3><p class="project-detail-meta"><strong>Industry</strong> LG Electronics</p></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h3 class="project-detail-title">Multimodal display testing and stable video diffusion quantization</h3><p class="project-detail-meta"><strong>Industry</strong> Samsung Electronics</p></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h3 class="project-detail-title">Research and development of large multimodal models with video input</h3><p class="project-detail-meta"><strong>Industry</strong> SK Telecom</p></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/ncsoft.png" alt="NCSOFT"><div><h3 class="project-detail-title">Nonverbal dialogue understanding and autonomous multi-agent game environments</h3><p class="project-detail-meta"><strong>Industry</strong> NCSOFT</p></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"><div><h3 class="project-detail-title">Multimodal AI combining object recognition and natural language processing</h3><p class="project-detail-meta"><strong>Industry</strong> Hyundai NGV</p></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"><div><h3 class="project-detail-title">AI-based concrete flowability video analysis program development</h3><p class="project-detail-meta"><strong>Industry</strong> GS E&amp;C</p></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/maum_ai.svg" alt="Maum AI"><div><h3 class="project-detail-title">Reinforcement learning-based autonomous driving AI software for hazardous driving conditions</h3><p class="project-detail-meta"><strong>Industry</strong> Maum AI</p></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/giantstep.png" alt="Giantstep"><div><h3 class="project-detail-title">Voice-driven digital human generation with lip-sync and emotion matching</h3><p class="project-detail-meta"><strong>Industry</strong> Giantstep</p></div></article>
-              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h3 class="project-detail-title">Image-text attention-based object recognition for vision-language models</h3><p class="project-detail-meta"><strong>Industry</strong> Upstage</p></div></article>
-              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/IITP.png" alt="IITP"><div><h3 class="project-detail-title">AI-based OTT user and content data analysis and video recommendation system development</h3><p class="project-detail-meta"><strong>Public R&amp;D</strong> IITP</p></div></article>
+              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/kist.jpg" alt="KIST"><div><h3 class="project-detail-title">Self-evolving embodied AGI platform technology through real-world experience</h3></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h3 class="project-detail-title">Microphone noise reduction, content recommendation, automated curation, and app-development chatbot projects</h3></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h3 class="project-detail-title">Multimodal display testing and stable video diffusion quantization</h3></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h3 class="project-detail-title">Research and development of large multimodal models with video input</h3></div></article>
+              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/IITP.png" alt="IITP"><div><h3 class="project-detail-title">AI-based OTT user and content data analysis and video recommendation system development</h3></div></article>
+              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/kocca.jpg" alt="KOCCA"><div><h3 class="project-detail-title">Multimodal UX evaluation platform for XR space-responsive content optimization</h3></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/maum_ai.svg" alt="Maum AI"><div><h3 class="project-detail-title">Reinforcement learning-based autonomous driving AI software for hazardous driving conditions</h3></div></article>
+              <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/yonsei.png" alt="Yonsei"><div><h3 class="project-detail-title">Digital human counselor for total healthcare and wellness service quality management protocol</h3></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"><div><h3 class="project-detail-title">Multimodal AI combining object recognition and natural language processing</h3></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"><div><h3 class="project-detail-title">AI-based concrete flowability video analysis program development</h3></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/giantstep.png" alt="Giantstep"><div><h3 class="project-detail-title">Voice-driven digital human generation with lip-sync and emotion matching</h3></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/ncsoft.png" alt="NCSOFT"><div><h3 class="project-detail-title">Nonverbal dialogue understanding and autonomous multi-agent game environments</h3></div></article>
+              <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h3 class="project-detail-title">Image-text attention-based object recognition for vision-language models</h3></div></article>
             </div>
           </div>
         </section>
