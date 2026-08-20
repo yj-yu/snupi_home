@@ -2439,6 +2439,367 @@ input:checked + .slider:before {
   }
 }
 
+/* People layout lock: compact PI/Postdoc cards and stable five-column member grid. */
+.people-content {
+  box-sizing: border-box !important;
+  margin: 0 auto !important;
+  max-width: 1180px !important;
+  padding: 0 18px 76px !important;
+}
+
+.people-content .row.member-section-block {
+  box-sizing: border-box !important;
+  margin: 0 auto 28px !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.people-content .row.member-section-block.first-member-section {
+  margin-top: 4px !important;
+  margin-bottom: 26px !important;
+}
+
+.people-content .member-section-block > .medium-12.columns,
+.people-content .member-section-block > .member-grid,
+.people-content .member-section-block .professor-postdoc-grid,
+.people-content .member-section-block .professor-column,
+.people-content .member-section-block .postdoc-column {
+  box-sizing: border-box !important;
+}
+
+.people-content .member-section-block > .medium-12.columns {
+  float: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.people-content .member-section-block > .medium-12.columns > h2 {
+  color: #1b2944 !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.42rem !important;
+  font-weight: 760 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.08 !important;
+  margin: 0 0 12px !important;
+  text-align: left !important;
+}
+
+.people-content .professor-postdoc-column-title {
+  display: none !important;
+}
+
+.people-content .professor-postdoc-grid {
+  display: grid !important;
+  gap: 12px !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.people-content .professor-column,
+.people-content .postdoc-column {
+  display: block !important;
+  grid-column: auto !important;
+  margin: 0 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+}
+
+.people-content .professor-grid,
+.people-content .postdoc-grid {
+  display: block !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.people-content .member-card {
+  box-sizing: border-box !important;
+  float: none !important;
+  overflow: hidden !important;
+}
+
+.people-content .member-card--feature {
+  align-items: center !important;
+  background: rgba(255, 255, 255, 0.97) !important;
+  border: 1px solid rgba(201, 218, 239, 0.86) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 24px rgba(31, 67, 118, 0.05) !important;
+  display: grid !important;
+  gap: 22px !important;
+  grid-template-columns: 112px minmax(0, 1fr) !important;
+  justify-items: start !important;
+  min-height: 148px !important;
+  padding: 18px 26px !important;
+  text-align: left !important;
+  width: 100% !important;
+}
+
+.people-content .member-card--feature .member-card__avatar-link {
+  display: block !important;
+  height: 100px !important;
+  justify-self: center !important;
+  margin: 0 !important;
+  width: 100px !important;
+}
+
+.people-content .member-card--feature .member-card__avatar,
+.people-content .member-card--feature img.member-card__avatar {
+  display: block !important;
+  height: 100px !important;
+  max-height: 100px !important;
+  max-width: 100px !important;
+  min-height: 100px !important;
+  min-width: 100px !important;
+  object-fit: cover !important;
+  width: 100px !important;
+}
+
+.people-content .member-card--feature .member-card__body {
+  align-items: flex-start !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  text-align: left !important;
+  width: 100% !important;
+}
+
+.people-content .member-card--feature .member-card__role {
+  color: #2b6fe8 !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 0.64rem !important;
+  font-weight: 780 !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1.1 !important;
+  margin: 0 !important;
+  text-align: left !important;
+  text-transform: uppercase !important;
+}
+
+.people-content .member-card--feature .member-card__name {
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.08rem !important;
+  font-weight: 760 !important;
+  line-height: 1.12 !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.people-content .member-card--feature .member-card__name a {
+  align-items: center !important;
+  display: inline-flex !important;
+  gap: 5px !important;
+  justify-content: flex-start !important;
+}
+
+.people-content .member-card--feature .member-emoji {
+  margin-right: 0 !important;
+}
+
+.people-content .member-card--feature .member-card__position {
+  color: #5f6b7b !important;
+  font-size: 0.8rem !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.people-content .member-card--feature .member-card__socials,
+.people-content .member-card--feature .member-card__interests {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+.people-content .member-card--feature .member-card__socials {
+  margin-top: 4px !important;
+}
+
+.people-content .member-card--feature .member-card__interests {
+  gap: 7px !important;
+  margin-top: 4px !important;
+  padding: 0 !important;
+}
+
+.people-content .member-section-block > .member-grid:not(.professor-grid):not(.postdoc-grid) {
+  align-items: stretch !important;
+  display: grid !important;
+  gap: 14px !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.people-content .member-section-block > .member-grid:not(.professor-grid):not(.postdoc-grid) > .member-card--standard {
+  align-items: center !important;
+  background: rgba(255, 255, 255, 0.97) !important;
+  border: 1px solid rgba(201, 218, 239, 0.86) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 20px rgba(31, 67, 118, 0.045) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  min-height: 190px !important;
+  padding: 16px 12px 14px !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.people-content .member-card--standard .member-card__avatar-link {
+  display: block !important;
+  height: 88px !important;
+  margin: 0 auto 9px !important;
+  width: 88px !important;
+}
+
+.people-content .member-card--standard .member-card__avatar,
+.people-content .member-card--standard img.member-card__avatar {
+  display: block !important;
+  height: 88px !important;
+  max-height: 88px !important;
+  max-width: 88px !important;
+  min-height: 88px !important;
+  min-width: 88px !important;
+  object-fit: cover !important;
+  width: 88px !important;
+}
+
+.people-content .member-card--standard .member-card__body {
+  align-items: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.people-content .member-card--standard .member-card__name {
+  font-family: var(--site-display-font-family) !important;
+  font-size: 0.96rem !important;
+  font-weight: 740 !important;
+  line-height: 1.14 !important;
+  margin: 0 0 3px !important;
+  max-width: 100% !important;
+}
+
+.people-content .member-card--standard .member-card__name a {
+  align-items: center !important;
+  display: inline-flex !important;
+  gap: 4px !important;
+  justify-content: center !important;
+  max-width: 100% !important;
+}
+
+.people-content .member-card--standard .member-card__position,
+.people-content .member-card--standard .member-card__affiliation-text {
+  color: #5f6b7b !important;
+  font-size: 0.72rem !important;
+  line-height: 1.22 !important;
+  margin: 0 !important;
+}
+
+.people-content .member-card--standard .member-card__socials {
+  margin-top: 7px !important;
+}
+
+.people-content .member-card--standard .member-card__interests {
+  gap: 6px !important;
+  margin-top: 8px !important;
+  padding: 0 !important;
+}
+
+.people-content .member-interest-tag {
+  border: 0 !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 0.66rem !important;
+  font-weight: 620 !important;
+  line-height: 1.15 !important;
+  max-width: 100% !important;
+  padding: 3px 9px !important;
+  white-space: normal !important;
+}
+
+@media only screen and (max-width: 960px) {
+  .people-content .professor-postdoc-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .people-content .member-section-block > .member-grid:not(.professor-grid):not(.postdoc-grid) {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .people-content {
+    padding: 0 14px 56px !important;
+  }
+
+  .people-content .row.member-section-block {
+    margin-bottom: 24px !important;
+  }
+
+  .people-content .member-section-block > .medium-12.columns > h2 {
+    font-size: 1.18rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  .people-content .member-card--feature {
+    gap: 14px !important;
+    grid-template-columns: 82px minmax(0, 1fr) !important;
+    min-height: 0 !important;
+    padding: 14px !important;
+  }
+
+  .people-content .member-card--feature .member-card__avatar-link,
+  .people-content .member-card--feature .member-card__avatar,
+  .people-content .member-card--feature img.member-card__avatar {
+    height: 78px !important;
+    max-height: 78px !important;
+    max-width: 78px !important;
+    min-height: 78px !important;
+    min-width: 78px !important;
+    width: 78px !important;
+  }
+
+  .people-content .member-section-block > .member-grid:not(.professor-grid):not(.postdoc-grid) {
+    gap: 12px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .people-content .member-section-block > .member-grid:not(.professor-grid):not(.postdoc-grid) > .member-card--standard {
+    min-height: 176px !important;
+    padding: 14px 9px 12px !important;
+  }
+
+  .people-content .member-card--standard .member-card__avatar-link,
+  .people-content .member-card--standard .member-card__avatar,
+  .people-content .member-card--standard img.member-card__avatar {
+    height: 78px !important;
+    max-height: 78px !important;
+    max-width: 78px !important;
+    min-height: 78px !important;
+    min-width: 78px !important;
+    width: 78px !important;
+  }
+
+  .people-content .member-card--standard .member-card__name {
+    font-size: 0.88rem !important;
+  }
+
+  .people-content .member-interest-tag {
+    font-size: 0.58rem !important;
+    padding: 3px 7px !important;
+  }
+}
+
 </style>
 
 <div class='full parallax site-page-hero'>
