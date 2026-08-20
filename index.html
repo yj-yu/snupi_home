@@ -12,6 +12,172 @@ section_id: home
 ---
 
 
+<style>
+.home-research-hero {
+  background: #fff;
+  color: #1f2e4a;
+  overflow: hidden;
+  padding: 34px 0 30px;
+}
+
+.home-research-hero .home-research-hero-inner {
+  align-items: center;
+  display: grid !important;
+  gap: 20px 42px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(330px, 0.78fr);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1180px;
+}
+
+.home-research-hero-copy {
+  max-width: 600px;
+  text-align: left;
+}
+
+.home-research-hero-title {
+  color: #14284a !important;
+  font-family: "Avenir Next", "Inter", "Noto Sans KR", var(--site-display-font-family) !important;
+  font-size: clamp(2.3rem, 3.75vw, 3.75rem) !important;
+  font-weight: 820 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.05 !important;
+  margin: 0 !important;
+}
+
+.home-research-hero-rule {
+  align-items: center;
+  display: flex !important;
+  margin: 20px 0 22px;
+  width: min(500px, 100%);
+}
+
+.home-research-hero-rule::before,
+.home-research-hero-rule::after {
+  background: #1f6fff;
+  content: "";
+  display: block;
+  flex: 1;
+  height: 2px;
+}
+
+.home-research-hero-rule span {
+  background: #1f6fff;
+  display: block;
+  height: 10px;
+  transform: rotate(45deg);
+  width: 10px;
+}
+
+.home-research-hero-lead {
+  color: #52637a !important;
+  font-family: "Avenir Next", "Inter", "Noto Sans KR", var(--site-font-family) !important;
+  font-size: 1.04rem !important;
+  font-weight: 500 !important;
+  line-height: 1.62 !important;
+  margin: 0 0 24px !important;
+  max-width: 560px;
+}
+
+.home-research-hero-actions {
+  align-items: center;
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.home-research-hero-button {
+  align-items: center;
+  background: #fff !important;
+  border: 1px solid rgba(31, 111, 255, 0.58) !important;
+  border-radius: 5px;
+  color: #1f6fff !important;
+  display: inline-flex !important;
+  font-family: "Avenir Next", "Inter", "Noto Sans KR", var(--site-font-family) !important;
+  font-size: 0.94rem !important;
+  font-weight: 680 !important;
+  justify-content: center;
+  line-height: 1 !important;
+  min-height: 42px;
+  padding: 0 20px;
+  text-decoration: none !important;
+}
+
+.home-research-hero-button::after {
+  content: "\2192";
+  font-size: 1.05rem;
+  margin-left: 10px;
+}
+
+.home-research-hero-button.is-primary {
+  background: #1267f1 !important;
+  border-color: #1267f1 !important;
+  box-shadow: 0 10px 22px rgba(31, 111, 255, 0.16);
+  color: #fff !important;
+}
+
+.home-research-hero-figure {
+  justify-self: center;
+  max-width: 500px !important;
+  width: 100%;
+}
+
+.home-research-hero-figure img {
+  display: block;
+  height: auto !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 900px) {
+  .home-research-hero {
+    padding: 30px 0 24px;
+  }
+
+  .home-research-hero .home-research-hero-inner {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+
+  .home-research-hero-copy {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home-research-hero-rule {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-research-hero-actions {
+    justify-content: center;
+  }
+
+  .home-research-hero-figure {
+    max-width: 360px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-research-hero-title {
+    font-size: 2.2rem !important;
+  }
+
+  .home-research-hero-lead {
+    font-size: 0.98rem !important;
+  }
+
+  .home-research-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .home-research-hero-button {
+    width: 100%;
+  }
+}
+</style>
+
 <div class='full no-padding'>
 
 
