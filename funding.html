@@ -36,8 +36,8 @@ permalink: funding.html
 
 .projects-board {
   display: grid;
-  gap: 22px;
-  grid-template-columns: 1fr;
+  gap: 30px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 36px;
   position: relative;
 }
@@ -114,7 +114,7 @@ permalink: funding.html
 
 .projects-logo-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   padding: 8px 24px 26px;
 }
 
@@ -134,7 +134,7 @@ permalink: funding.html
 .projects-logo-tile img {
   display: block;
   max-height: 46px;
-  max-width: min(132px, 88%);
+  max-width: min(150px, 90%);
   object-fit: contain;
 }
 
@@ -182,7 +182,7 @@ permalink: funding.html
 .projects-detail-grid {
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .project-detail-card {
