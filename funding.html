@@ -13,72 +13,6 @@ permalink: funding.html
   padding: 0 0 78px;
 }
 
-.projects-page-title {
-  background: #fff;
-  padding: 34px 0 24px;
-}
-
-.projects-page-title .modSectionHeader {
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-}
-
-.projects-page-title .site-section-title-wrap {
-  display: inline-block;
-  line-height: 1;
-  margin: 0 auto;
-  padding: 0 0 30px;
-  position: relative;
-  text-align: center;
-}
-
-.projects-page-title .section-title {
-  color: #1b2944 !important;
-  display: block;
-  font-family: var(--site-display-font-family) !important;
-  font-size: 4.6rem !important;
-  font-weight: 850 !important;
-  letter-spacing: 0 !important;
-  line-height: 0.94 !important;
-  margin: 0 !important;
-  text-align: center !important;
-  text-transform: uppercase !important;
-  white-space: nowrap !important;
-}
-
-.projects-page-title .section-title::before,
-.projects-page-title .section-title::after {
-  content: none !important;
-  display: none !important;
-}
-
-.projects-page-title .site-section-title-wrap::after {
-  background: #2b6fe8;
-  bottom: 8px;
-  content: "";
-  height: 4px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-.projects-page-title .site-section-title-wrap::before {
-  background: #fff;
-  border: 4px solid #2b6fe8;
-  bottom: 10px;
-  box-sizing: border-box;
-  content: "";
-  height: 21px;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, 50%) rotate(45deg);
-  width: 21px;
-  z-index: 2;
-}
-
 .projects-intro {
   color: #5f6f85;
   font-size: 1.08rem;
@@ -235,6 +169,14 @@ permalink: funding.html
   transform: translateY(0);
 }
 
+.projects-history-card.is-expanded .projects-card-body {
+  border-top-color: rgba(214, 224, 238, 0.82);
+  max-height: 1800px;
+  opacity: 1;
+  padding: 22px 0 0;
+  transform: translateY(0);
+}
+
 .projects-detail-grid {
   display: grid;
   gap: 14px;
@@ -296,6 +238,14 @@ permalink: funding.html
   gap: 18px;
   grid-template-columns: 1fr auto;
   margin-bottom: 20px;
+}
+
+.projects-history-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: flex-end;
 }
 
 .projects-history-title {
@@ -386,7 +336,8 @@ permalink: funding.html
   object-fit: contain;
 }
 
-.projects-past-logo.is-hidden {
+.projects-past-logo.is-hidden,
+.project-detail-card.is-hidden {
   display: none !important;
 }
 
@@ -415,33 +366,6 @@ permalink: funding.html
 @media only screen and (max-width: 640px) {
   .projects-page {
     padding-bottom: 64px;
-  }
-
-  .projects-page-title {
-    padding: 22px 0 16px;
-  }
-
-  .projects-page-title .site-section-title-wrap {
-    max-width: calc(100vw - 36px);
-    padding-bottom: 24px;
-  }
-
-  .projects-page-title .section-title {
-    font-size: 4.6rem !important;
-    line-height: 0.98 !important;
-    white-space: nowrap !important;
-  }
-
-  .projects-page-title .site-section-title-wrap::after {
-    bottom: 7px;
-    height: 3px;
-  }
-
-  .projects-page-title .site-section-title-wrap::before {
-    border-width: 3px;
-    bottom: 8.5px;
-    height: 17px;
-    width: 17px;
   }
 
   .projects-intro {
@@ -507,6 +431,10 @@ permalink: funding.html
     grid-template-columns: 1fr;
   }
 
+  .projects-history-controls {
+    justify-content: flex-start;
+  }
+
   .projects-filter-row {
     justify-content: flex-start;
   }
@@ -563,6 +491,7 @@ permalink: funding.html
 
     var filters = Array.prototype.slice.call(document.querySelectorAll('[data-project-filter]'));
     var pastLogos = Array.prototype.slice.call(document.querySelectorAll('[data-project-logo-category]'));
+    var pastCards = Array.prototype.slice.call(document.querySelectorAll('.projects-history-card [data-project-card-category]'));
 
     filters.forEach(function (filter) {
       filter.addEventListener('click', function () {
@@ -576,23 +505,28 @@ permalink: funding.html
           var logoCategory = logo.getAttribute('data-project-logo-category');
           logo.classList.toggle('is-hidden', category !== 'all' && logoCategory !== category);
         });
+
+        pastCards.forEach(function (card) {
+          var cardCategory = card.getAttribute('data-project-card-category');
+          card.classList.toggle('is-hidden', category !== 'all' && cardCategory !== category);
+        });
       });
     });
   });
 </script>
 
 <div class="full no-padding projects-page">
-  <section class="projects-page-title">
+  <section class="projects-page-title site-page-hero">
     <div class="row">
       <div class="large-12 columns">
         {% include section-header.html title="PROJECTS" color="#1b2944" tagline=" " class="big" %}
-        <p class="projects-intro">Advancing research through government-funded projects and industry collaborations.</p>
       </div>
     </div>
   </section>
 
   <div class="row">
     <div class="large-12 columns">
+      <p class="projects-intro">Advancing research through government-funded projects and industry collaborations.</p>
       <h2 class="projects-section-heading">Active Projects</h2>
       <div class="projects-board">
         <section class="projects-card" data-project-card>
@@ -600,7 +534,7 @@ permalink: funding.html
             <span class="projects-card-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h16M6 10v8M10 10v8M14 10v8M18 10v8M5 18h14M12 4l8 5H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
             </span>
-            <h3 class="projects-card-title">Government-funded Projects</h3>
+            <h3 class="projects-card-title">Grants</h3>
             <button class="projects-view-button" type="button" aria-expanded="false" data-project-toggle></button>
           </div>
           <div class="projects-logo-grid">
@@ -652,17 +586,19 @@ permalink: funding.html
         </section>
       </div>
 
-      <section class="projects-history-card">
+      <section class="projects-history-card" data-project-card>
         <div class="projects-history-header">
           <div>
             <h2 class="projects-history-title">Project History</h2>
             <p class="projects-history-copy">Previous grants and collaborations.</p>
           </div>
-          <div class="projects-filter-row" aria-label="Filter project history">
-            <button class="projects-filter is-active" type="button" data-project-filter="all">All</button>
-            <button class="projects-filter" type="button" data-project-filter="government">Government</button>
-            <button class="projects-filter" type="button" data-project-filter="industry">Industry</button>
-            <button class="projects-filter" type="button" data-project-filter="others">Others</button>
+          <div class="projects-history-controls">
+            <div class="projects-filter-row" aria-label="Filter project history">
+              <button class="projects-filter is-active" type="button" data-project-filter="all">All</button>
+              <button class="projects-filter" type="button" data-project-filter="government">Government</button>
+              <button class="projects-filter" type="button" data-project-filter="industry">Industry</button>
+            </div>
+            <button class="projects-view-button" type="button" aria-expanded="false" data-project-toggle></button>
           </div>
         </div>
         <div class="projects-past-logos">
@@ -678,6 +614,22 @@ permalink: funding.html
           <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/giantstep.png" alt="Giantstep"></div>
           <div class="projects-past-logo" data-project-logo-category="industry"><img src="images/fundings/upstage.svg" alt="Upstage"></div>
           <div class="projects-past-logo" data-project-logo-category="government"><img src="images/fundings/IITP.png" alt="IITP"></div>
+        </div>
+        <div class="projects-card-body">
+          <div class="projects-detail-grid">
+            <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/kocca.jpg" alt="KOCCA"><div><h4 class="project-detail-title">Multimodal UX evaluation platform for XR space-responsive content optimization</h4></div></article>
+            <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/kist.jpg" alt="KIST"><div><h4 class="project-detail-title">Self-evolving embodied AGI platform technology through real-world experience</h4></div></article>
+            <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Microphone noise reduction, content recommendation, automated curation, and app-development chatbot projects</h4></div></article>
+            <article class="project-detail-card" data-project-card-category="industry"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h4 class="project-detail-title">Multimodal display testing and stable video diffusion quantization</h4></div></article>
+            <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h4 class="project-detail-title">Research and development of large multimodal models with video input</h4></div></article>
+            <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/ncsoft.png" alt="NCSOFT"><div><h4 class="project-detail-title">Nonverbal dialogue understanding and autonomous multi-agent game environments</h4></div></article>
+            <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"><div><h4 class="project-detail-title">Multimodal AI combining object recognition and natural language processing</h4></div></article>
+            <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"><div><h4 class="project-detail-title">AI-based concrete flowability video analysis program development</h4></div></article>
+            <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/maum_ai.svg" alt="Maum AI"><div><h4 class="project-detail-title">Reinforcement learning-based autonomous driving AI software for hazardous driving conditions</h4></div></article>
+            <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/giantstep.png" alt="Giantstep"><div><h4 class="project-detail-title">Voice-driven digital human generation with lip-sync and emotion matching</h4></div></article>
+            <article class="project-detail-card" data-project-card-category="industry"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h4 class="project-detail-title">Image-text attention-based object recognition for vision-language models</h4></div></article>
+            <article class="project-detail-card" data-project-card-category="government"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-based OTT user and content data analysis and video recommendation system development</h4></div></article>
+          </div>
         </div>
       </section>
     </div>

@@ -17,13 +17,13 @@ section_id: home
   background: #fff;
   color: #1f2e4a;
   font-family: var(--site-font-family) !important;
-  padding: 34px 0 24px;
+  padding: 24px 0 16px;
 }
 
 .home-projects-hero-wrap .projects-hero {
   align-items: center;
   display: grid;
-  gap: 18px 46px;
+  gap: 12px 36px;
   grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.78fr);
   margin: 0;
 }
@@ -40,7 +40,7 @@ section_id: home
   color: #10264a;
   display: block;
   font-family: var(--site-display-font-family) !important;
-  font-size: clamp(2.55rem, 4vw, 4rem);
+  font-size: clamp(2.34rem, 3.55vw, 3.55rem);
   font-weight: 860;
   letter-spacing: 0;
   line-height: 1.06;
@@ -62,8 +62,8 @@ section_id: home
 .home-projects-hero-wrap .projects-hero-rule {
   align-items: center;
   display: flex;
-  margin: 22px 0 22px;
-  width: min(500px, 100%);
+  margin: 16px 0 18px;
+  width: min(450px, 100%);
 }
 
 .home-projects-hero-wrap .projects-hero-rule::before,
@@ -85,18 +85,22 @@ section_id: home
 
 .home-projects-hero-wrap .projects-hero-copy {
   color: #52637a;
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   font-weight: 500;
-  line-height: 1.62;
-  margin: 0 0 24px;
-  max-width: 560px;
+  line-height: 1.48;
+  margin: 0 0 12px;
+  max-width: 540px;
+}
+
+.home-projects-hero-wrap .projects-hero-copy.is-support {
+  margin-bottom: 18px;
 }
 
 .home-projects-hero-actions {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 10px;
 }
 
 .home-projects-hero-button {
@@ -107,20 +111,20 @@ section_id: home
   color: #1f6fff !important;
   display: inline-flex;
   font-family: var(--site-font-family) !important;
-  font-size: 0.92rem;
+  font-size: 0.84rem;
   font-weight: 700;
   justify-content: center;
   line-height: 1;
-  min-height: 42px;
-  min-width: 166px;
-  padding: 0 18px;
+  min-height: 36px;
+  min-width: 148px;
+  padding: 0 15px;
   text-decoration: none !important;
 }
 
 .home-projects-hero-button::after {
   content: "\2192";
-  font-size: 1rem;
-  margin-left: 11px;
+  font-size: 0.94rem;
+  margin-left: 9px;
 }
 
 .home-projects-hero-button.is-primary {
@@ -134,8 +138,8 @@ section_id: home
   align-self: center;
   grid-column: 2;
   grid-row: 1;
-  margin-top: -10px;
-  min-height: 300px;
+  margin-top: -8px;
+  min-height: 240px;
   position: relative;
 }
 
@@ -143,8 +147,12 @@ section_id: home
   display: block;
   height: auto;
   margin: 0 auto;
-  max-width: 520px;
+  max-width: 430px;
   width: 100%;
+}
+
+.home-after-hero-spacing {
+  height: 6px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -182,17 +190,17 @@ section_id: home
 
   .home-projects-hero-wrap .projects-orbit {
     margin-top: 0;
-    min-height: 260px;
+    min-height: 220px;
   }
 
   .home-projects-hero-wrap .projects-orbit img {
-    max-width: 400px;
+    max-width: 340px;
   }
 }
 
 @media only screen and (max-width: 640px) {
   .home-projects-hero-wrap {
-    padding: 24px 0 20px;
+    padding: 18px 0 12px;
   }
 
   .home-projects-hero-wrap .projects-hero {
@@ -200,18 +208,18 @@ section_id: home
   }
 
   .home-projects-hero-wrap .projects-hero-title {
-    font-size: 2.15rem;
+    font-size: 2rem;
     line-height: 1.08;
   }
 
   .home-projects-hero-wrap .projects-hero-rule {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     width: min(100%, 340px);
   }
 
   .home-projects-hero-wrap .projects-hero-copy {
-    font-size: 0.94rem;
-    line-height: 1.55;
+    font-size: 0.88rem;
+    line-height: 1.45;
   }
 
   .home-projects-hero-actions {
@@ -224,7 +232,7 @@ section_id: home
   }
 
   .home-projects-hero-wrap .projects-orbit {
-    min-height: 220px;
+    min-height: 190px;
   }
 }
 </style>
@@ -242,10 +250,13 @@ section_id: home
               <div class="projects-hero-rule"><span></span></div>
             </div>
             <p class="projects-hero-copy">
-              SNU PI Lab studies multimodal agentic AI and world foundation models. Our work centers on understanding and reasoning across perception and action.
+              SNU PI Lab studies multimodal agentic AI and world foundation models.<br>
+              We build systems that understand perception, reason over context,<br>
+              and connect decisions to action.
             </p>
-            <p class="projects-hero-copy">
-              We are extending this line of research toward AI safety, autonomous AI for science, and robot learning, with the goal of connecting multimodal intelligence to the real world.
+            <p class="projects-hero-copy is-support">
+              Our work extends toward AI safety, autonomous AI for science,<br>
+              and robot learning in the real world.
             </p>
             <div class="home-projects-hero-actions">
               <a class="home-projects-hero-button is-primary" href="publications.html">Explore Our Research</a>
@@ -259,7 +270,7 @@ section_id: home
         </div>
     </div>
   </header>
-  <div class='spacing'></div>
+  <div class='home-after-hero-spacing'></div>
 
 
   
