@@ -388,13 +388,13 @@ section_id: home
 }
 
 .home-news-section {
-  padding: 0 0 28px !important;
+  padding: 0 0 24px !important;
 }
 
 .home-news-card-grid {
   display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 0 auto;
   max-width: 1040px;
 }
@@ -403,60 +403,65 @@ section_id: home
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(214, 227, 244, 0.88);
   border-radius: 10px;
-  box-shadow: 0 10px 26px rgba(27, 41, 68, 0.045);
-  min-height: 142px;
-  padding: 18px 18px 16px;
+  box-shadow: 0 8px 20px rgba(27, 41, 68, 0.04);
+  min-height: 116px;
+  padding: 14px 14px 13px;
 }
 
 .home-news-card-head {
   align-items: start;
   display: grid;
-  gap: 14px;
-  grid-template-columns: 44px 1fr;
+  gap: 11px;
+  grid-template-columns: 36px 1fr;
 }
 
 .home-news-icon {
   align-items: center;
   background: #eef5ff;
-  border-radius: 10px;
+  border-radius: 9px;
   color: #1267f1;
   display: inline-flex;
-  height: 44px;
+  height: 36px;
   justify-content: center;
-  width: 44px;
+  width: 36px;
+}
+
+.home-news-icon svg {
+  height: 19px;
+  width: 19px;
 }
 
 .home-news-date {
   color: #6a778a;
   display: block;
-  font-size: 0.74rem;
+  font-size: 0.68rem;
   font-weight: 560;
   line-height: 1;
-  margin-bottom: 9px;
-  text-align: right;
+  margin-bottom: 7px;
+  text-align: left;
 }
 
 .home-news-card-title {
   color: #102550 !important;
   display: block;
   font-family: var(--site-display-font-family) !important;
-  font-size: 0.98rem;
+  font-size: 0.86rem;
   font-weight: 800;
   line-height: 1.28;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   text-decoration: none !important;
 }
 
 .home-news-card-copy {
   color: #5c6a7f;
-  font-size: 0.8rem;
-  line-height: 1.45;
-  margin: 0 0 13px;
+  font-size: 0.72rem;
+  line-height: 1.38;
+  margin: 0 0 9px;
 }
 
 .home-news-read {
   color: #1267f1 !important;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 760;
   text-decoration: none !important;
 }
@@ -478,7 +483,20 @@ section_id: home
   }
 
   .home-news-card-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    gap: 12px;
+    margin-left: -10px;
+    margin-right: -10px;
+    max-width: none;
+    overflow-x: auto;
+    padding: 0 10px 8px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .home-news-card {
+    flex: 0 0 min(290px, 82vw);
+    scroll-snap-align: start;
   }
 }
 
@@ -547,7 +565,7 @@ section_id: home
   <div class='row home-latest-section'>
     <div class='large-12 columns'>
       <div class="home-latest-shell" data-home-latest>
-        {% assign selected_publication_names = "Pushing on Multilingual Reasoning Models with Language-Mixed Chain-of-Thought||Right at My Level: A Unified Multilingual Framework for Proficiency-Aware Text Simplification||A11YN: aligning LLMs for accessible web UI code generation" | split: "||" %}
+        {% assign selected_publication_names = "Pushing on Multilingual Reasoning Models with Language-Mixed Chain-of-Thought||Right at My Level: A Unified Multilingual Framework for Proficiency-Aware Text Simplification||A11YN: aligning LLMs for accessible web UI code generation||ConlangBench: Exploring Language Knowledge and Learning in LLMs through Diverse Constructed Languages||The Wedge Questions: Latent Cultural Boundaries in LLMs via Persona Projection Divergence||D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI||TIPO: Text to Image with Text Presampling for Prompt Optimization||Do MLLMs Capture How Interfaces Guide User Behavior? A Benchmark for Multimodal UI/UX Design Understanding" | split: "||" %}
         {% assign latest_count = 0 %}
         {% for selected_name in selected_publication_names %}
           {% for paper in site.publications %}
@@ -605,9 +623,9 @@ section_id: home
         <button class="home-latest-nav is-prev" type="button" aria-label="Previous latest work" data-home-latest-prev>‹</button>
         <button class="home-latest-nav is-next" type="button" aria-label="Next latest work" data-home-latest-next>›</button>
         <div class="home-latest-dots" aria-label="Latest work slides">
-          <button class="home-latest-dot is-active" type="button" aria-label="Show latest work 1" data-home-latest-dot></button>
-          <button class="home-latest-dot" type="button" aria-label="Show latest work 2" data-home-latest-dot></button>
-          <button class="home-latest-dot" type="button" aria-label="Show latest work 3" data-home-latest-dot></button>
+          {% for i in (1..latest_count) %}
+            <button class="home-latest-dot{% if forloop.first %} is-active{% endif %}" type="button" aria-label="Show latest work {{ i }}" data-home-latest-dot></button>
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -626,7 +644,7 @@ section_id: home
       <div class="home-news-card-grid">
         {% assign post_count = 0 %}
         {% for post in site.news reversed %}
-          {% if post_count >= 3 %}
+          {% if post_count >= 6 %}
             {% break %}
           {% endif %}
           <article class="home-news-card">
