@@ -53,6 +53,15 @@ section_id: home
   white-space: normal;
 }
 
+.home-projects-hero-wrap .projects-hero-subtitle {
+  color: #2b6fe8;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.34rem;
+  font-weight: 780;
+  line-height: 1.22;
+  margin: 8px 0 0;
+}
+
 .home-projects-hero-wrap .projects-title-group {
   display: block;
   margin: 0;
@@ -391,84 +400,45 @@ section_id: home
   padding: 0 0 24px !important;
 }
 
-.home-news-card-grid {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin: 0 auto;
-  max-width: 1040px;
+.home-news-grid-row {
+  margin-top: -2px;
 }
 
-.home-news-card {
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(214, 227, 244, 0.88);
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(27, 41, 68, 0.04);
-  min-height: 116px;
-  padding: 14px 14px 13px;
+.home-news-column {
+  margin-bottom: 0 !important;
 }
 
-.home-news-card-head {
-  align-items: start;
-  display: grid;
-  gap: 11px;
-  grid-template-columns: 36px 1fr;
+.home-news-item {
+  margin-bottom: 8px;
+  padding: 9px 13px 9px 17px;
 }
 
-.home-news-icon {
-  align-items: center;
-  background: #eef5ff;
-  border-radius: 9px;
-  color: #1267f1;
-  display: inline-flex;
-  height: 36px;
-  justify-content: center;
-  width: 36px;
-}
-
-.home-news-icon svg {
-  height: 19px;
-  width: 19px;
+.home-news-link {
+  font-size: 0.92rem;
+  line-height: 1.28;
 }
 
 .home-news-date {
-  color: #6a778a;
-  display: block;
-  font-size: 0.68rem;
-  font-weight: 560;
-  line-height: 1;
-  margin-bottom: 7px;
-  text-align: left;
-}
-
-.home-news-card-title {
-  color: #102550 !important;
-  display: block;
-  font-family: var(--site-display-font-family) !important;
-  font-size: 0.86rem;
-  font-weight: 800;
-  line-height: 1.28;
-  margin-bottom: 6px;
-  text-decoration: none !important;
-}
-
-.home-news-card-copy {
-  color: #5c6a7f;
+  display: inline-block;
   font-size: 0.72rem;
-  line-height: 1.38;
-  margin: 0 0 9px;
+  margin-left: 4px;
 }
 
-.home-news-read {
-  color: #1267f1 !important;
-  font-size: 0.72rem;
-  font-weight: 760;
-  text-decoration: none !important;
+.home-news-excerpt {
+  font-size: 0.78rem;
+  line-height: 1.35;
+  margin-top: 3px;
 }
 
-.home-news-read::after {
-  content: "\2192";
-  margin-left: 8px;
+.home-news-more-wrap {
+  margin-bottom: 0;
+  margin-top: 2px;
+  text-align: right;
+}
+
+.home-news-more {
+  font-size: 0.78rem !important;
+  padding: 0.66rem 1.22rem !important;
 }
 
 @media only screen and (max-width: 900px) {
@@ -482,20 +452,22 @@ section_id: home
     display: none;
   }
 
-  .home-news-card-grid {
+  .home-news-grid-row {
     display: flex;
+    flex-wrap: nowrap;
     gap: 12px;
     margin-left: -10px;
     margin-right: -10px;
-    max-width: none;
     overflow-x: auto;
     padding: 0 10px 8px;
     scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
   }
 
-  .home-news-card {
-    flex: 0 0 min(290px, 82vw);
+  .home-news-column {
+    flex: 0 0 min(330px, 86vw);
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     scroll-snap-align: start;
   }
 }
@@ -529,7 +501,8 @@ section_id: home
         <section class="projects-hero">
           <div class="projects-hero-heading">
             <div class="projects-title-group">
-              <h1 class="projects-hero-title">From Agentic to<br><span>Physical Intelligence</span></h1>
+              <h1 class="projects-hero-title">Welcome to PI Lab</h1>
+              <p class="projects-hero-subtitle">From Agentic to Physical Intelligence</p>
               <div class="projects-hero-rule"><span></span></div>
             </div>
             <p class="projects-hero-copy">
@@ -639,34 +612,43 @@ section_id: home
       {% include section-header.html title="News" %}
     </div>
   </div>
+  <div class='row home-news-grid-row'>
+    <div class='medium-6 columns home-news-column'>
+      {% assign paper_news_count = 0 %}
+      {% for post in site.news reversed %}
+        {% if paper_news_count >= 3 %}
+          {% break %}
+        {% endif %}
+        {% if post.categories contains 'papers' %}
+          <p class="home-news-item">
+            <a class="home-news-link" href="{{post.url}}">{{post.title}} <span class="home-news-date">({{post.date | date: "%Y-%m-%d" }})</span></a>
+            <span class="home-news-excerpt">{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt | strip_html | truncate: 84 }}{% endif %}</span>
+          </p>
+          {% assign paper_news_count = paper_news_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class='medium-6 columns home-news-column'>
+      {% assign lab_news_count = 0 %}
+      {% for post in site.news reversed %}
+        {% if lab_news_count >= 3 %}
+          {% break %}
+        {% endif %}
+        {% if post.categories contains 'others' %}
+          <p class="home-news-item">
+            <a class="home-news-link" href="{{post.url}}">{{post.title}} <span class="home-news-date">({{post.date | date: "%Y-%m-%d" }})</span></a>
+            <span class="home-news-excerpt">{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt | strip_html | truncate: 84 }}{% endif %}</span>
+          </p>
+          {% assign lab_news_count = lab_news_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
   <div class='row'>
     <div class='large-12 columns'>
-      <div class="home-news-card-grid">
-        {% assign post_count = 0 %}
-        {% for post in site.news reversed %}
-          {% if post_count >= 6 %}
-            {% break %}
-          {% endif %}
-          <article class="home-news-card">
-            <div class="home-news-card-head">
-              <span class="home-news-icon" aria-hidden="true">
-                {% if post.categories contains 'papers' %}
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3v4M17 3v4M4 9h16M6 5h12a2 2 0 0 1 2 2v12H4V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 13h3M8 17h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                {% else %}
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 13v-2l12-5v12L4 13Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 14v5M18 10h2M18 14h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                {% endif %}
-              </span>
-              <div>
-                <span class="home-news-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                <a class="home-news-card-title" href="{{ post.url }}">{{ post.title }}</a>
-                <p class="home-news-card-copy">{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt | strip_html | truncate: 96 }}{% endif %}</p>
-                <a class="home-news-read" href="{{ post.url }}">Read more</a>
-              </div>
-            </div>
-          </article>
-          {% assign post_count = post_count | plus: 1 %}
-        {% endfor %}
-      </div>
+      <p class="home-news-more-wrap"><a class='button home-news-more' href='news.html'>See More</a></p>
     </div>
   </div>
   <div class='spacing'></div>
