@@ -6429,7 +6429,7 @@ svg:not(:root) {
   font-size: 0.92rem !important;
   font-weight: 760 !important;
   line-height: 1.2 !important;
-  margin: 10px 0 0 !important;
+  margin: 16px 0 0 !important;
   padding: 4px 11px !important;
 }
 
@@ -6767,7 +6767,7 @@ svg:not(:root) {
   font-size: 0.94rem !important;
   font-weight: 760 !important;
   line-height: 1.18 !important;
-  margin: 10px 0 0 !important;
+  margin: 16px 0 0 !important;
   padding: 4px 11px !important;
   white-space: nowrap !important;
 }
