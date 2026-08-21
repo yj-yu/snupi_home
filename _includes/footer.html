@@ -2,22 +2,23 @@
   <div class="row site-footer__inner">
     <div class="site-footer__brand">
       <img class="site-footer__logo" src="{{ '/images/logo/main-logo-name.png' | prepend: site.baseurl }}" alt="SNU PI Lab">
-      <span class="site-footer__tagline">Physical Intelligence Laboratory</span>
     </div>
 
-    <address class="site-footer__contact">
-      <span><strong>© {{ site.time | date: '%Y' }} SNU PI Lab</strong></span>
-      <span>Seoul National university, 1, Gwanak-ro, Gwanak-gu, Seoul, Republic of Korea</span>
-      <span>Room 319, 302 Building</span>
-      <span>Room 512, 138 Building</span>
-    </address>
+    <div class="site-footer__info">
+      <address class="site-footer__contact">
+        <span><strong>© {{ site.time | date: '%Y' }} SNU PI Lab</strong></span>
+        <span>Seoul National university, 1, Gwanak-ro, Gwanak-gu, Seoul, Republic of Korea</span>
+        <span>Room 319, 302 Building</span>
+        <span>Room 512, 138 Building</span>
+      </address>
 
-    <div class="site-footer__right">
       <nav class="site-footer__affiliations" aria-label="Affiliations">
         <a href="https://cse.snu.ac.kr/">- Department of Computer Science and Engineering</a>
         <a href="https://www.snu.ac.kr/">- Seoul National University</a>
       </nav>
+    </div>
 
+    <div class="site-footer__right">
       <nav class="site-footer__links" aria-label="Footer links">
         <a class="site-footer__icon-link" href="https://github.com/SNU-PI" aria-label="SNU PI Lab GitHub">
           <svg viewBox="0 0 24 24" aria-hidden="true">

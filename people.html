@@ -5,6 +5,7 @@ section_id: people
 permalink: people.html
 active_positions:
   - Professor
+  - Postdoctoral Researcher
   - Student
   - Industry-Affiliated Student
   - Visiting Scholar
@@ -2945,6 +2946,12 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     {% endif %}
 
+    {% if p == "Postdoctoral Researcher" %}
+      <div class='medium-12 columns'>
+        <h2>Postdoctoral Researchers</h2>
+      </div>
+    {% endif %}
+
     {% if p == "Industry-Affiliated Student"%}
     <div class='medium-12 columns'>
       <h2>{{p}}s</h2>
@@ -2970,16 +2977,6 @@ document.addEventListener('DOMContentLoaded', function() {
               {% for member in site.people %}
                 {% if member.position contains "Professor" and member.display != false %}
                   {% include member-card.html member=member color_list=page.color_list variant="feature" role_label="Principal Investigator" %}
-                {% endif %}
-              {% endfor %}
-            </div>
-          </div>
-          <div class="postdoc-column">
-            <h2 class="professor-postdoc-column-title">Postdoctoral Researcher</h2>
-            <div class="member-grid postdoc-grid">
-              {% for member in site.people %}
-                {% if member.position contains "Postdoctoral Researcher" and member.display != false %}
-                  {% include member-card.html member=member color_list=page.color_list variant="feature" role_label="Postdoctoral Researcher" %}
                 {% endif %}
               {% endfor %}
             </div>
