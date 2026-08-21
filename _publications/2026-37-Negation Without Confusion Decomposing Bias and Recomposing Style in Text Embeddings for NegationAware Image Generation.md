@@ -12,12 +12,11 @@ author:
   - name: "Youngjae Yu"
   - name: "Sung-Bae Cho"
 
-img: coming_soon.png
+img: comingsoon.jpg
 
 keywords:
-  - name: Text-to-Image
-  - name: Negation
-  - name: Embeddings
+  - name: Image Generation
+  - name: Multimodal
 
 display: False
 ---

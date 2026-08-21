@@ -16,12 +16,12 @@ author:
   - name: "Youngjae Yu"
   - name: "Albert No"
 
-img: coming_soon.png
+img: comingsoon.jpg
 
 keywords:
+  - name: Vlm
   - name: Robotics
-  - name: VLM
-  - name: Reward Models
+  - name: Benchmark
 
 display: False
 ---

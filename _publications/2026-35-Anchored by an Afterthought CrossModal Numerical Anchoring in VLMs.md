@@ -10,11 +10,12 @@ author:
   - name: "Jeonghun Park"
   - name: "Youngjae Yu"
 
-img: coming_soon.png
+img: comingsoon.jpg
 
 keywords:
-  - name: VLM
-  - name: Numerical Reasoning
+  - name: Vlm
+  - name: Multimodal
+  - name: Reasoning
 
 display: False
 ---

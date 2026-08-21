@@ -12,15 +12,16 @@ author:
   - name: "Yejin Son"
   - name: "Youngjae Yu"
 
-img: mindthemotion.png
+img: comingsoon.jpg
 
 external:
   - title: arXiv
     url: https://arxiv.org/abs/2511.15887
 
 keywords:
-  - name: Theory of Mind
-  - name: Body Language
+  - name: VLM
+  - name: Multimodal
+  - name: Benchmark
 
 display: False
 ---

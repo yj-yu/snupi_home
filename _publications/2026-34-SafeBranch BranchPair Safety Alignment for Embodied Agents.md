@@ -13,11 +13,11 @@ author:
   - name: "Youngjae Yu"
   - name: "Woojin Lee"
 
-img: coming_soon.png
+img: comingsoon.jpg
 
 keywords:
+  - name: Robotics
   - name: Embodied AI
-  - name: Safety
 
 display: False
 ---
