@@ -235,6 +235,271 @@ section_id: home
     min-height: 170px;
   }
 }
+
+.home-latest-section {
+  padding-top: 2px;
+}
+
+.home-latest-shell {
+  margin: 0 auto 28px;
+  max-width: 1040px;
+  position: relative;
+}
+
+.home-latest-card {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(214, 227, 244, 0.88);
+  border-radius: 14px;
+  box-shadow: 0 14px 34px rgba(27, 41, 68, 0.08);
+  display: none;
+  gap: 34px;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1fr);
+  min-height: 268px;
+  padding: 26px 42px;
+}
+
+.home-latest-card.is-active {
+  display: grid;
+}
+
+.home-latest-figure {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 216px;
+}
+
+.home-latest-figure img {
+  border-radius: 8px;
+  display: block;
+  max-height: 220px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.home-latest-body {
+  min-width: 0;
+}
+
+.home-latest-venue {
+  background: #eef5ff;
+  border-radius: 999px;
+  color: #1267f1;
+  display: inline-flex;
+  font-family: var(--site-font-family) !important;
+  font-size: 0.72rem;
+  font-weight: 780;
+  line-height: 1;
+  margin-bottom: 14px;
+  padding: 7px 12px;
+  text-transform: uppercase;
+}
+
+.home-latest-title {
+  color: #102550;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 1.34rem;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+  line-height: 1.22;
+  margin: 0 0 12px;
+}
+
+.home-latest-authors {
+  color: #5c6a7f;
+  font-size: 0.84rem;
+  font-weight: 520;
+  line-height: 1.45;
+  margin: 0 0 18px;
+}
+
+.home-latest-authors a,
+.home-latest-author-highlight {
+  color: #1267f1 !important;
+  font-weight: 720;
+}
+
+.home-latest-link {
+  align-items: center;
+  border: 1px solid rgba(18, 103, 241, 0.58);
+  border-radius: 6px;
+  color: #1267f1 !important;
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 760;
+  gap: 8px;
+  line-height: 1;
+  padding: 9px 12px;
+  text-decoration: none !important;
+}
+
+.home-latest-link::after {
+  content: "\2197";
+  font-size: 0.84rem;
+}
+
+.home-latest-nav {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(214, 227, 244, 0.95);
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(27, 41, 68, 0.08);
+  color: #1267f1;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1.35rem;
+  height: 42px;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  z-index: 2;
+}
+
+.home-latest-nav.is-prev {
+  left: -20px;
+}
+
+.home-latest-nav.is-next {
+  right: -20px;
+}
+
+.home-latest-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.home-latest-dot {
+  background: #c9d3df;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  height: 8px;
+  padding: 0;
+  width: 8px;
+}
+
+.home-latest-dot.is-active {
+  background: #1267f1;
+}
+
+.home-news-section {
+  padding: 0 0 28px !important;
+}
+
+.home-news-card-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0 auto;
+  max-width: 1040px;
+}
+
+.home-news-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(214, 227, 244, 0.88);
+  border-radius: 10px;
+  box-shadow: 0 10px 26px rgba(27, 41, 68, 0.045);
+  min-height: 142px;
+  padding: 18px 18px 16px;
+}
+
+.home-news-card-head {
+  align-items: start;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 44px 1fr;
+}
+
+.home-news-icon {
+  align-items: center;
+  background: #eef5ff;
+  border-radius: 10px;
+  color: #1267f1;
+  display: inline-flex;
+  height: 44px;
+  justify-content: center;
+  width: 44px;
+}
+
+.home-news-date {
+  color: #6a778a;
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 560;
+  line-height: 1;
+  margin-bottom: 9px;
+  text-align: right;
+}
+
+.home-news-card-title {
+  color: #102550 !important;
+  display: block;
+  font-family: var(--site-display-font-family) !important;
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.28;
+  margin-bottom: 8px;
+  text-decoration: none !important;
+}
+
+.home-news-card-copy {
+  color: #5c6a7f;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  margin: 0 0 13px;
+}
+
+.home-news-read {
+  color: #1267f1 !important;
+  font-size: 0.78rem;
+  font-weight: 760;
+  text-decoration: none !important;
+}
+
+.home-news-read::after {
+  content: "\2192";
+  margin-left: 8px;
+}
+
+@media only screen and (max-width: 900px) {
+  .home-latest-card {
+    gap: 22px;
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .home-latest-nav {
+    display: none;
+  }
+
+  .home-news-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .home-latest-card {
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .home-latest-figure {
+    min-height: 0;
+  }
+
+  .home-latest-figure img {
+    max-height: 185px;
+  }
+
+  .home-latest-title {
+    font-size: 1.08rem;
+  }
+}
 </style>
 
 <div class='full no-padding'>
@@ -279,12 +544,71 @@ section_id: home
       {% include section-header.html title="Our Latest Work" %}
     </div>
   </div>
-  <div class='row'>
+  <div class='row home-latest-section'>
     <div class='large-12 columns'>
-      <div class="test">
-      <p align="middle">
-        <iframe class="latest-work-frame" src="slide.html" title="latest work" width="100%" height="490"></iframe>
-      </p>
+      <div class="home-latest-shell" data-home-latest>
+        {% assign selected_publication_names = "Pushing on Multilingual Reasoning Models with Language-Mixed Chain-of-Thought||Right at My Level: A Unified Multilingual Framework for Proficiency-Aware Text Simplification||A11YN: aligning LLMs for accessible web UI code generation" | split: "||" %}
+        {% assign latest_count = 0 %}
+        {% for selected_name in selected_publication_names %}
+          {% for paper in site.publications %}
+            {% if paper.name == selected_name %}
+              {% assign latest_count = latest_count | plus: 1 %}
+              {% assign paper_link = "" %}
+              {% for item in paper.external %}
+                {% if paper_link == "" %}
+                  {% assign paper_link = item.url %}
+                {% endif %}
+              {% endfor %}
+              <article class="home-latest-card{% if latest_count == 1 %} is-active{% endif %}" data-home-latest-card>
+                <div class="home-latest-figure">
+                  {% if paper.img %}
+                    {% if paper_link != "" %}<a href="{{ paper_link }}">{% endif %}
+                    <img src="/images/papers/{{ paper.img }}" alt="{{ paper.name }}">
+                    {% if paper_link != "" %}</a>{% endif %}
+                  {% endif %}
+                </div>
+                <div class="home-latest-body">
+                  <span class="home-latest-venue">{% if paper.conference %}{{ paper.conference }}{% else %}arXiv{% endif %}</span>
+                  <h3 class="home-latest-title">{{ paper.name }}</h3>
+                  <p class="home-latest-authors">
+                    {% assign author_limit = 4 %}
+                    {% for member in paper.author %}
+                      {% if forloop.index <= author_limit %}
+                        {% assign person_url = member.link | default: "" %}
+                        {% if person_url == "" %}
+                          {% for member2 in site.people %}
+                            {% if member.name == member2.fullname %}
+                              {% assign person_url = member2.permalink %}
+                              {% for social in member2.social %}
+                                {% if social.title == "home" %}
+                                  {% assign person_url = social.url %}
+                                {% endif %}
+                              {% endfor %}
+                              {% break %}
+                            {% endif %}
+                          {% endfor %}
+                        {% endif %}
+                        {% if person_url != "" %}<a href="{{ person_url }}">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}{% if forloop.index < author_limit and forloop.index < paper.author.size %}, {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                    {% if paper.author.size > author_limit %}, et al.{% endif %}
+                  </p>
+                  {% if paper_link != "" %}
+                    <a class="home-latest-link" href="{{ paper_link }}">View Paper</a>
+                  {% endif %}
+                </div>
+              </article>
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+        <button class="home-latest-nav is-prev" type="button" aria-label="Previous latest work" data-home-latest-prev>‹</button>
+        <button class="home-latest-nav is-next" type="button" aria-label="Next latest work" data-home-latest-next>›</button>
+        <div class="home-latest-dots" aria-label="Latest work slides">
+          <button class="home-latest-dot is-active" type="button" aria-label="Show latest work 1" data-home-latest-dot></button>
+          <button class="home-latest-dot" type="button" aria-label="Show latest work 2" data-home-latest-dot></button>
+          <button class="home-latest-dot" type="button" aria-label="Show latest work 3" data-home-latest-dot></button>
+        </div>
       </div>
     </div>
   </div>
@@ -297,61 +621,82 @@ section_id: home
       {% include section-header.html title="News" %}
     </div>
   </div>
-  <div class='row home-news-grid-row'>
-    <!-- News for papers -->
-    <div class='medium-6 columns home-news-column'>
-      {% assign post_count = 0 %}
-      {% for post in site.news reversed %}
-        {% if post_count >= 5 %}
-          {% break %}
-        {% endif %}
-        {% for c in post.categories %}
-          {% if 'papers' == c %} 
-          <p class="home-news-item"><a class="home-news-link" href="{{post.url}}">
-            {{post.title}} <span class="home-news-date">({{post.date | date: "%Y-%m-%d" }})</span>
-          </a><br/>
-            <span class="home-news-excerpt">{{post.excerpt}}</span></p>
-            {% assign post_count = post_count | plus: 1 %}
-            {% break %}
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
-    </div>
-
-    <!-- News for lab -->
-    <div class='medium-6 columns home-news-column'>
-    {% assign post_count = 0 %}
-    {% for post in site.news reversed %}
-      {% if post_count >= 5 %}
-        {% break %}
-      {% endif %}
-      {% for c in post.categories %}
-        {% if 'others' == c %}
-        
-        <p class="home-news-item"><a class="home-news-link" href="{{post.url}}">
-        {{post.title}} <span class="home-news-date">({{post.date | date: "%Y-%m-%d" }})</span>
-        </a><br/>
-          <span class="home-news-excerpt">{{post.excerpt}}</span></p>
-          {% assign post_count = post_count | plus: 1 %}
-          {% break %}
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
-    </div>
-  </div>
   <div class='row'>
     <div class='large-12 columns'>
-      <p class="home-news-more-wrap">
-
-        <!--버튼 비활성화-->
-        <!--<a class='button' href='news'>See More</a>-->
-        <a class='button home-news-more' href='news.html'>See More</a>
-
-      
-      </p>
+      <div class="home-news-card-grid">
+        {% assign post_count = 0 %}
+        {% for post in site.news reversed %}
+          {% if post_count >= 3 %}
+            {% break %}
+          {% endif %}
+          <article class="home-news-card">
+            <div class="home-news-card-head">
+              <span class="home-news-icon" aria-hidden="true">
+                {% if post.categories contains 'papers' %}
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3v4M17 3v4M4 9h16M6 5h12a2 2 0 0 1 2 2v12H4V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 13h3M8 17h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                {% else %}
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 13v-2l12-5v12L4 13Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 14v5M18 10h2M18 14h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                {% endif %}
+              </span>
+              <div>
+                <span class="home-news-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <a class="home-news-card-title" href="{{ post.url }}">{{ post.title }}</a>
+                <p class="home-news-card-copy">{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt | strip_html | truncate: 96 }}{% endif %}</p>
+                <a class="home-news-read" href="{{ post.url }}">Read more</a>
+              </div>
+            </div>
+          </article>
+          {% assign post_count = post_count | plus: 1 %}
+        {% endfor %}
+      </div>
     </div>
   </div>
   <div class='spacing'></div>
 </div>
 
-</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var shell = document.querySelector('[data-home-latest]');
+    if (!shell) {
+      return;
+    }
+
+    var cards = Array.prototype.slice.call(shell.querySelectorAll('[data-home-latest-card]'));
+    var dots = Array.prototype.slice.call(shell.querySelectorAll('[data-home-latest-dot]'));
+    var prev = shell.querySelector('[data-home-latest-prev]');
+    var next = shell.querySelector('[data-home-latest-next]');
+    var activeIndex = 0;
+
+    function showSlide(index) {
+      if (!cards.length) {
+        return;
+      }
+
+      activeIndex = (index + cards.length) % cards.length;
+      cards.forEach(function (card, cardIndex) {
+        card.classList.toggle('is-active', cardIndex === activeIndex);
+      });
+      dots.forEach(function (dot, dotIndex) {
+        dot.classList.toggle('is-active', dotIndex === activeIndex);
+      });
+    }
+
+    if (prev) {
+      prev.addEventListener('click', function () {
+        showSlide(activeIndex - 1);
+      });
+    }
+
+    if (next) {
+      next.addEventListener('click', function () {
+        showSlide(activeIndex + 1);
+      });
+    }
+
+    dots.forEach(function (dot, dotIndex) {
+      dot.addEventListener('click', function () {
+        showSlide(dotIndex);
+      });
+    });
+  });
+</script>
