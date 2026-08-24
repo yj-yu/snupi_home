@@ -12,7 +12,7 @@ author:
   - name: "Yejin Son"
   - name: "Youngjae Yu"
 
-img: comingsoon.jpg
+img: mindthemotion.png
 
 external:
   - title: arXiv

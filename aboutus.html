@@ -371,13 +371,13 @@ permalink: aboutus.html
 }
 
 .projects-board.projects-expanded-board {
-  gap: 22px;
+  gap: 18px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-bottom: 0;
 }
 
 .projects-expand-panel {
-  margin-top: 24px;
+  margin-top: 18px;
 }
 
 .projects-expand-panel .projects-card,
@@ -387,15 +387,15 @@ permalink: aboutus.html
 
 .projects-expand-panel .projects-card-header,
 .projects-expand-panel .projects-history-header {
-  min-height: 74px;
-  padding: 20px 20px 14px;
+  min-height: 60px;
+  padding: 16px 18px 10px;
 }
 
 .projects-expand-panel .projects-card-body {
   border-top-color: rgba(214, 224, 238, 0.82);
   max-height: none;
   opacity: 1;
-  padding: 18px 20px 20px;
+  padding: 4px 18px 16px;
   transform: none;
 }
 
@@ -410,11 +410,11 @@ permalink: aboutus.html
 
 .projects-expand-panel .projects-past-logos {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  padding: 18px 20px 20px;
+  padding: 12px 18px 16px;
 }
 
 .projects-expand-panel .projects-past-logo {
-  min-height: 60px;
+  min-height: 52px;
 }
 
 .projects-card {
@@ -564,26 +564,31 @@ permalink: aboutus.html
 
 .projects-detail-grid {
   display: grid;
-  gap: 14px;
+  gap: 0;
   grid-template-columns: 1fr;
 }
 
 .project-detail-card {
   align-items: center;
-  background: #fff;
-  border: 1px solid rgba(214, 224, 238, 0.82);
-  border-radius: 8px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(214, 224, 238, 0.74);
+  border-radius: 0;
   display: grid;
-  gap: 14px;
-  grid-template-columns: 84px 1fr;
-  min-height: 98px;
-  padding: 14px;
+  gap: 12px;
+  grid-template-columns: 58px 1fr;
+  min-height: 0;
+  padding: 9px 0;
+}
+
+.project-detail-card:last-child {
+  border-bottom: 0;
 }
 
 .project-detail-card img {
   display: block;
-  max-height: 40px;
-  max-width: 78px;
+  max-height: 28px;
+  max-width: 52px;
   object-fit: contain;
 }
 
@@ -595,17 +600,17 @@ permalink: aboutus.html
 .project-detail-title {
   color: #1f2e4a;
   font-family: var(--site-font-family) !important;
-  font-size: 0.94rem;
+  font-size: 0.86rem;
   font-weight: 720;
-  line-height: 1.34;
-  margin: 0 0 4px;
+  line-height: 1.28;
+  margin: 0 0 2px;
 }
 
 .project-detail-meta {
   color: #63748a;
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   font-weight: 540;
-  line-height: 1.38;
+  line-height: 1.3;
   margin: 0;
 }
 
@@ -920,9 +925,9 @@ permalink: aboutus.html
   }
 
   .project-detail-card {
-    grid-template-columns: 74px 1fr;
-    min-height: 88px;
-    padding: 13px;
+    grid-template-columns: 52px 1fr;
+    min-height: 0;
+    padding: 9px 0;
   }
 
   .projects-history-card {
@@ -1094,11 +1099,11 @@ permalink: aboutus.html
             </div>
             <div class="projects-logo-grid">
               <span class="projects-logo-tile"><img src="images/fundings/NRF.png" alt="NRF"></span>
+              <span class="projects-logo-tile"><img src="images/fundings/NRF.png" alt="NRF"></span>
+              <span class="projects-logo-tile"><img src="images/fundings/NRF.png" alt="NRF"></span>
               <span class="projects-logo-tile"><img src="images/fundings/IITP.png" alt="IITP"></span>
-              <span class="projects-logo-tile"><img src="images/fundings/KETI.png" alt="KETI"></span>
-              <span class="projects-logo-tile"><img src="images/fundings/Holiday_Robotics.png" alt="Holiday Robotics"></span>
-              <span class="projects-logo-tile"><span class="projects-logo-text">DGIST</span></span>
-              <span class="projects-logo-tile"><span class="projects-logo-more">+ More</span></span>
+              <span class="projects-logo-tile"><img src="images/fundings/IITP.png" alt="IITP"></span>
+              <span class="projects-logo-tile"><img src="images/fundings/IITP.png" alt="IITP"></span>
             </div>
           </article>
 
@@ -1129,12 +1134,12 @@ permalink: aboutus.html
                 </div>
                 <div class="projects-card-body">
                   <div class="projects-detail-grid">
-                    <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based ADPO Combat Planning Model</h4><p class="project-detail-meta"><strong>IITP</strong> · 2026</p></div></article>
-                    <article class="project-detail-card"><span class="projects-logo-text">DGIST</span><div><h4 class="project-detail-title">Autonomous Collaboration for Multi-Humanoid Systems</h4><p class="project-detail-meta"><strong>DGIST</strong> · 2026</p></div></article>
-                    <article class="project-detail-card"><img src="images/fundings/Holiday_Robotics.png" alt="Holiday Robotics"><div><h4 class="project-detail-title">Humanoid Robots for Chemical Processes</h4><p class="project-detail-meta"><strong>Holiday Robotics</strong> · 2025</p></div></article>
-                    <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">World Foundation Model for Physical AI</h4><p class="project-detail-meta"><strong>LG Electronics</strong> · 2025</p></div></article>
                     <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Active Learning for Multimodal Action Agents</h4><p class="project-detail-meta"><strong>NRF</strong> · 2024-2027</p></div></article>
                     <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Multimodal RLHF for Personalized Learning Support</h4><p class="project-detail-meta"><strong>NRF</strong> · 2024-2028</p></div></article>
+                    <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Autonomous Collaboration for Multi-Humanoid Systems</h4><p class="project-detail-meta"><strong>NRF</strong> · 2026</p></div></article>
+                    <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">World Foundation Model for Physical AI</h4><p class="project-detail-meta"><strong>IITP</strong> · 2025</p></div></article>
+                    <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based ADPO Combat Planning Model</h4><p class="project-detail-meta"><strong>IITP</strong> · 2026</p></div></article>
+                    <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based OTT User and Content Data Analysis and Video Recommendation System</h4><p class="project-detail-meta"><strong>IITP</strong> · 2024-2027</p></div></article>
                   </div>
                 </div>
               </article>
