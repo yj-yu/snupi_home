@@ -12,17 +12,17 @@
 
 
 
-- name: Team
-  path: people.html
-  section_id: people
+- name: Members
+  path: members.html
+  section_id: members
 
 - name: Publications
   path: publications.html
   section_id: publications
 
-# - name: About Us
-#   path: funding.html
-#   section_id: funding
+- name: About Us
+  path: aboutus.html
+  section_id: aboutus
 
 # - name: Teaching
 #   path: teaching.html

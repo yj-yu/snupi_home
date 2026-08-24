@@ -1,8 +1,8 @@
 ---
 layout: default
 title: About Us
-section_id: funding
-permalink: funding.html
+section_id: aboutus
+permalink: aboutus.html
 ---
 
 <style>
@@ -370,6 +370,53 @@ permalink: funding.html
   position: relative;
 }
 
+.projects-board.projects-expanded-board {
+  gap: 22px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 0;
+}
+
+.projects-expand-panel {
+  margin-top: 24px;
+}
+
+.projects-expand-panel .projects-card,
+.projects-expand-panel .projects-history-card {
+  height: 100%;
+}
+
+.projects-expand-panel .projects-card-header,
+.projects-expand-panel .projects-history-header {
+  min-height: 74px;
+  padding: 20px 20px 14px;
+}
+
+.projects-expand-panel .projects-card-body {
+  border-top-color: rgba(214, 224, 238, 0.82);
+  max-height: none;
+  opacity: 1;
+  padding: 18px 20px 20px;
+  transform: none;
+}
+
+.projects-expand-panel .projects-history-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.projects-expand-panel .projects-history-header {
+  margin-bottom: 0;
+}
+
+.projects-expand-panel .projects-past-logos {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 18px 20px 20px;
+}
+
+.projects-expand-panel .projects-past-logo {
+  min-height: 60px;
+}
+
 .projects-card {
   background: rgba(255, 255, 255, 0.94);
   border: 1px solid rgba(198, 215, 238, 0.92);
@@ -699,6 +746,10 @@ permalink: funding.html
   }
 
   .projects-board {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-board.projects-expanded-board {
     grid-template-columns: 1fr;
   }
 }
@@ -1035,46 +1086,92 @@ permalink: funding.html
       <section class="projects-work-section">
         <p class="projects-intro">Advancing research through government-funded projects and industry collaborations.</p>
         <h2 class="projects-section-heading">Projects</h2>
+        <div class="projects-board">
+          <article class="projects-card">
+            <div class="projects-card-header">
+              <span class="projects-card-icon" aria-hidden="true"><i class="fa fa-university"></i></span>
+              <h3 class="projects-card-title">Grants</h3>
+            </div>
+            <div class="projects-logo-grid">
+              <span class="projects-logo-tile"><img src="images/fundings/NRF.png" alt="NRF"></span>
+              <span class="projects-logo-tile"><img src="images/fundings/IITP.png" alt="IITP"></span>
+              <span class="projects-logo-tile"><img src="images/fundings/KETI.png" alt="KETI"></span>
+              <span class="projects-logo-tile"><img src="images/fundings/Holiday_Robotics.png" alt="Holiday Robotics"></span>
+              <span class="projects-logo-tile"><span class="projects-logo-text">DGIST</span></span>
+              <span class="projects-logo-tile"><span class="projects-logo-more">+ More</span></span>
+            </div>
+          </article>
+
+          <article class="projects-card">
+            <div class="projects-card-header">
+              <span class="projects-card-icon" aria-hidden="true"><i class="fa fa-handshake"></i></span>
+              <h3 class="projects-card-title">Industry Collaborations</h3>
+            </div>
+            <div class="projects-logo-grid">
+              <span class="projects-logo-tile"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"></span>
+              <span class="projects-logo-tile"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"></span>
+              <span class="projects-logo-tile"><img src="images/fundings/skt.png" alt="SK Telecom"></span>
+              <span class="projects-logo-tile"><img src="images/fundings/upstage.svg" alt="Upstage"></span>
+              <span class="projects-logo-tile"><img src="images/fundings/ncsoft.png" alt="NCSOFT"></span>
+              <span class="projects-logo-tile"><span class="projects-logo-more">+ More</span></span>
+            </div>
+          </article>
+        </div>
+
         <details class="projects-timeline-details">
-          <summary class="projects-timeline-toggle"><span class="open-label">View projects</span><span class="close-label">Close projects</span></summary>
-          <section class="projects-timeline" aria-label="Projects by year">
-            <h3 class="projects-timeline-year">2026</h3>
-            <div class="projects-timeline-grid">
-              <article class="project-timeline-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-timeline-title">AI-Based ADPO Combat Planning Model</h4><p class="project-timeline-meta"><strong>IITP</strong> · Grant</p></div></article>
-              <article class="project-timeline-card"><span class="projects-logo-text">DGIST</span><div><h4 class="project-timeline-title">Autonomous Collaboration for Multi-Humanoid Systems</h4><p class="project-timeline-meta"><strong>DGIST</strong> · Grant</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h4 class="project-timeline-title">GroundedDocVQA</h4><p class="project-timeline-meta"><strong>Upstage</strong> · Industry collaboration · ~2026.03</p></div></article>
-            </div>
+          <summary class="projects-timeline-toggle"><span class="open-label">View project details</span><span class="close-label">Hide project details</span></summary>
+          <section class="projects-expand-panel" aria-label="Project details">
+            <div class="projects-board projects-expanded-board">
+              <article class="projects-card">
+                <div class="projects-card-header">
+                  <span class="projects-card-icon" aria-hidden="true"><i class="fa fa-university"></i></span>
+                  <h3 class="projects-card-title">Grants</h3>
+                </div>
+                <div class="projects-card-body">
+                  <div class="projects-detail-grid">
+                    <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based ADPO Combat Planning Model</h4><p class="project-detail-meta"><strong>IITP</strong> · 2026</p></div></article>
+                    <article class="project-detail-card"><span class="projects-logo-text">DGIST</span><div><h4 class="project-detail-title">Autonomous Collaboration for Multi-Humanoid Systems</h4><p class="project-detail-meta"><strong>DGIST</strong> · 2026</p></div></article>
+                    <article class="project-detail-card"><img src="images/fundings/Holiday_Robotics.png" alt="Holiday Robotics"><div><h4 class="project-detail-title">Humanoid Robots for Chemical Processes</h4><p class="project-detail-meta"><strong>Holiday Robotics</strong> · 2025</p></div></article>
+                    <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">World Foundation Model for Physical AI</h4><p class="project-detail-meta"><strong>LG Electronics</strong> · 2025</p></div></article>
+                    <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Active Learning for Multimodal Action Agents</h4><p class="project-detail-meta"><strong>NRF</strong> · 2024-2027</p></div></article>
+                    <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Multimodal RLHF for Personalized Learning Support</h4><p class="project-detail-meta"><strong>NRF</strong> · 2024-2028</p></div></article>
+                  </div>
+                </div>
+              </article>
 
-            <h3 class="projects-timeline-year">2025</h3>
-            <div class="projects-timeline-grid">
-              <article class="project-timeline-card"><img src="images/fundings/Holiday_Robotics.png" alt="Holiday Robotics"><div><h4 class="project-timeline-title">Humanoid Robots for Chemical Processes</h4><p class="project-timeline-meta"><strong>Holiday Robotics</strong> · Grant</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-timeline-title">World Foundation Model for Physical AI</h4><p class="project-timeline-meta"><strong>LG Electronics</strong> · Grant</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/KETI.png" alt="KETI"><div><h4 class="project-timeline-title">Open Autonomous Digital Twin</h4><p class="project-timeline-meta"><strong>KETI</strong> · Grant</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-timeline-title">Microphone Noise Reduction and Sound Quality Enhancement Model</h4><p class="project-timeline-meta"><strong>LG Electronics</strong> · Industry collaboration</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-timeline-title">Multimodal-Based Content Recommendation System</h4><p class="project-timeline-meta"><strong>LG Electronics</strong> · Industry collaboration</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-timeline-title">AI-Based Automated Content Curation Model</h4><p class="project-timeline-meta"><strong>LG Electronics</strong> · Industry collaboration</p></div></article>
-            </div>
+              <article class="projects-card">
+                <div class="projects-card-header">
+                  <span class="projects-card-icon" aria-hidden="true"><i class="fa fa-handshake"></i></span>
+                  <h3 class="projects-card-title">Industry Collaborations</h3>
+                </div>
+                <div class="projects-card-body">
+                  <div class="projects-detail-grid">
+                    <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Microphone Noise Reduction and Sound Quality Enhancement Model</h4><p class="project-detail-meta"><strong>LG Electronics</strong> · 2025</p></div></article>
+                    <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Multimodal-Based Content Recommendation System</h4><p class="project-detail-meta"><strong>LG Electronics</strong> · 2025</p></div></article>
+                    <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">AI-Based Automated Content Curation Model</h4><p class="project-detail-meta"><strong>LG Electronics</strong> · 2025</p></div></article>
+                    <article class="project-detail-card"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h4 class="project-detail-title">Multimodal AI-Based Display UI Testing Technology</h4><p class="project-detail-meta"><strong>Samsung Electronics</strong> · 2024-2025</p></div></article>
+                    <article class="project-detail-card"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h4 class="project-detail-title">Large Multimodal Model Research and Development with Video Input</h4><p class="project-detail-meta"><strong>SK Telecom</strong> · 2024-2025</p></div></article>
+                    <article class="project-detail-card"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h4 class="project-detail-title">GroundedDocVQA</h4><p class="project-detail-meta"><strong>Upstage</strong> · 2026</p></div></article>
+                  </div>
+                </div>
+              </article>
 
-            <h3 class="projects-timeline-year">2024</h3>
-            <div class="projects-timeline-grid">
-              <article class="project-timeline-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-timeline-title">Active Learning for Multimodal Action Agents</h4><p class="project-timeline-meta"><strong>NRF</strong> · Grant · 2024.04-2027.03</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-timeline-title">Multimodal RLHF for Personalized Learning Support</h4><p class="project-timeline-meta"><strong>NRF</strong> · Grant · 2024.04-2028.03</p></div></article>
-              <article class="project-timeline-card"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h4 class="project-timeline-title">Multimodal Distillation for Long Video Diffusion Model</h4><p class="project-timeline-meta"><strong>Samsung Electronics</strong> · Industry collaboration · 2024.03-2027.02</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-timeline-title">Multimodal Chatbot for App Development Support Using Generative AI</h4><p class="project-timeline-meta"><strong>LG Electronics</strong> · Industry collaboration · 2024.03-2024.12</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/mcst.png" alt="MCST"><div><h4 class="project-timeline-title">Multimodal UX Evaluation Platform for XR Space-Responsive Content Optimization</h4><p class="project-timeline-meta"><strong>MCST</strong> · Grant · 2024.04-2026.12</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-timeline-title">AI-Based OTT User and Content Data Analysis and Video Recommendation System</h4><p class="project-timeline-meta"><strong>IITP</strong> · Grant · 2024.05-2027.12</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h4 class="project-timeline-title">Large Multimodal Model Research and Development with Video Input</h4><p class="project-timeline-meta"><strong>SK Telecom</strong> · Industry collaboration · 2024.07-2025.04</p></div></article>
-              <article class="project-timeline-card"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h4 class="project-timeline-title">Multimodal AI-Based Display UI Testing Technology</h4><p class="project-timeline-meta"><strong>Samsung Electronics</strong> · Industry collaboration · 2024.10-2025.10</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/maum_ai.svg" alt="Maum AI"><div><h4 class="project-timeline-title">RL-Based Autonomous Driving AI for Hazardous Congested-Road Scenarios</h4><p class="project-timeline-meta"><strong>Maum AI</strong> · Industry collaboration</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"><div><h4 class="project-timeline-title">AI-Based Concrete Flowability Video Analysis Program</h4><p class="project-timeline-meta"><strong>GS E&amp;C</strong> · Industry collaboration</p></div></article>
-            </div>
-
-            <h3 class="projects-timeline-year">2023</h3>
-            <div class="projects-timeline-grid">
-              <article class="project-timeline-card"><img src="images/fundings/ncsoft.png" alt="NCSOFT"><div><h4 class="project-timeline-title">Large Multimodal Model for Nonverbal Dialogue Understanding</h4><p class="project-timeline-meta"><strong>NCSOFT</strong> · Industry collaboration · 2023.06-2024.05</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/ncsoft.png" alt="NCSOFT"><div><h4 class="project-timeline-title">Autonomous Multi-Agent Game Environment with Knowledge Distillation</h4><p class="project-timeline-meta"><strong>NCSOFT</strong> · Industry collaboration · 2023.06-2024.06</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/giantstep.png" alt="Giantstep"><div><h4 class="project-timeline-title">Digital Human Generation with Lip-Sync and Emotion Matching from Speech</h4><p class="project-timeline-meta"><strong>Giantstep</strong> · Industry collaboration · 2023.09-2024.09</p></div></article>
-              <article class="project-timeline-card"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"><div><h4 class="project-timeline-title">Multimodal AI Combining Object Recognition and Natural Language Processing</h4><p class="project-timeline-meta"><strong>Hyundai NGV</strong> · Industry collaboration · 2023.12-2024.11</p></div></article>
+              <article class="projects-history-card">
+                <div class="projects-history-header">
+                  <div>
+                    <h3 class="projects-history-title">Project History</h3>
+                    <p class="projects-history-copy">Selected previous grants and collaborations.</p>
+                  </div>
+                </div>
+                <div class="projects-past-logos">
+                  <span class="projects-past-logo"><img src="images/fundings/ncsoft.png" alt="NCSOFT"></span>
+                  <span class="projects-past-logo"><img src="images/fundings/giantstep.png" alt="Giantstep"></span>
+                  <span class="projects-past-logo"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"></span>
+                  <span class="projects-past-logo"><img src="images/fundings/maum_ai.svg" alt="Maum AI"></span>
+                  <span class="projects-past-logo"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"></span>
+                  <span class="projects-past-logo"><img src="images/fundings/mcst.png" alt="MCST"></span>
+                </div>
+              </article>
             </div>
           </section>
         </details>

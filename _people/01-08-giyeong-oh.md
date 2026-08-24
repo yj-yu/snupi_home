@@ -10,7 +10,7 @@ email: hard2251@snu.ac.kr
 
 social:
   - title: home
-    url: https://scholar.google.com/citations?user=LzzcroEAAAAJ
+    url: https://scholar.google.com/citations?user=IqvZV3wAAAAJ
 
 
 fields:
