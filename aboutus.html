@@ -32,6 +32,14 @@ permalink: aboutus.html
   font-size: 1.58rem;
   font-weight: 850;
   line-height: 1.2;
+  margin: 0;
+}
+
+.projects-heading-row {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+  justify-content: flex-start;
   margin: 0 0 18px;
 }
 
@@ -366,18 +374,23 @@ permalink: aboutus.html
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   position: relative;
 }
 
 .projects-board.projects-expanded-board {
   gap: 18px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 0;
 }
 
 .projects-expand-panel {
+  display: none;
   margin-top: 18px;
+}
+
+.projects-work-section.is-expanded .projects-expand-panel {
+  display: block;
 }
 
 .projects-expand-panel .projects-card,
@@ -430,8 +443,8 @@ permalink: aboutus.html
   display: grid;
   gap: 16px;
   grid-template-columns: 48px 1fr auto;
-  min-height: 86px;
-  padding: 24px 24px 18px;
+  min-height: 72px;
+  padding: 18px 24px 14px;
 }
 
 .projects-card-icon {
@@ -490,14 +503,14 @@ permalink: aboutus.html
 .projects-logo-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  padding: 8px 24px 26px;
+  padding: 4px 24px 22px;
 }
 
 .projects-logo-tile {
   align-items: center;
   border: 1px solid rgba(214, 224, 238, 0.9);
   display: flex;
-  height: 96px;
+  height: 74px;
   justify-content: center;
   margin-right: -1px;
   margin-top: -1px;
@@ -511,6 +524,18 @@ permalink: aboutus.html
   max-height: 46px;
   max-width: min(150px, 90%);
   object-fit: contain;
+}
+
+.projects-work-section .projects-view-button .close-label {
+  display: none;
+}
+
+.projects-work-section.is-expanded .projects-view-button .open-label {
+  display: none;
+}
+
+.projects-work-section.is-expanded .projects-view-button .close-label {
+  display: inline;
 }
 
 .projects-logo-more {
@@ -625,6 +650,10 @@ permalink: aboutus.html
   border-radius: 10px;
   box-shadow: 0 7px 20px rgba(35, 58, 92, 0.035);
   padding: 26px 24px 28px;
+}
+
+.projects-expanded-board .projects-history-card {
+  grid-column: 1 / -1;
 }
 
 .projects-history-header {
@@ -865,6 +894,13 @@ permalink: aboutus.html
     font-size: 1.28rem;
   }
 
+  .projects-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
   .projects-timeline-toggle {
     font-size: 0.84rem;
     padding: 10px 15px;
@@ -887,7 +923,7 @@ permalink: aboutus.html
   .projects-card-header {
     gap: 12px;
     grid-template-columns: 42px 1fr;
-    padding: 20px 18px 14px;
+    padding: 16px 18px 12px;
   }
 
   .projects-card-icon {
@@ -907,11 +943,11 @@ permalink: aboutus.html
 
   .projects-logo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 6px 18px 22px;
+    padding: 4px 18px 18px;
   }
 
   .projects-logo-tile {
-    height: 78px;
+    height: 68px;
     padding: 14px;
   }
 
@@ -971,54 +1007,17 @@ permalink: aboutus.html
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var cards = Array.prototype.slice.call(document.querySelectorAll('[data-project-card]'));
+    var projectsSection = document.querySelector('[data-projects-section]');
+    var projectsToggle = document.querySelector('[data-projects-toggle]');
 
-    cards.forEach(function (card) {
-      var toggle = card.querySelector('[data-project-toggle]');
-
-      if (!toggle) {
-        return;
-      }
-
-      toggle.addEventListener('click', function () {
-        var shouldOpen = !card.classList.contains('is-expanded');
-
-        cards.forEach(function (otherCard) {
-          var otherToggle = otherCard.querySelector('[data-project-toggle]');
-          otherCard.classList.remove('is-expanded');
-          if (otherToggle) {
-            otherToggle.setAttribute('aria-expanded', 'false');
-          }
-        });
-
-        card.classList.toggle('is-expanded', shouldOpen);
-        toggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+    if (projectsSection && projectsToggle) {
+      projectsToggle.addEventListener('click', function () {
+        var shouldOpen = !projectsSection.classList.contains('is-expanded');
+        projectsSection.classList.toggle('is-expanded', shouldOpen);
+        projectsToggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
       });
-    });
+    }
 
-    var filters = Array.prototype.slice.call(document.querySelectorAll('[data-project-filter]'));
-    var pastLogos = Array.prototype.slice.call(document.querySelectorAll('[data-project-logo-category]'));
-    var pastCards = Array.prototype.slice.call(document.querySelectorAll('.projects-history-card [data-project-card-category]'));
-
-    filters.forEach(function (filter) {
-      filter.addEventListener('click', function () {
-        var category = filter.getAttribute('data-project-filter');
-
-        filters.forEach(function (item) {
-          item.classList.toggle('is-active', item === filter);
-        });
-
-        pastLogos.forEach(function (logo) {
-          var logoCategory = logo.getAttribute('data-project-logo-category');
-          logo.classList.toggle('is-hidden', category !== 'all' && logoCategory !== category);
-        });
-
-        pastCards.forEach(function (card) {
-          var cardCategory = card.getAttribute('data-project-card-category');
-          card.classList.toggle('is-hidden', category !== 'all' && cardCategory !== category);
-        });
-      });
-    });
   });
 </script>
 
@@ -1088,9 +1087,15 @@ permalink: aboutus.html
 
       </section>
 
-      <section class="projects-work-section">
+      <section class="projects-work-section" data-projects-section>
         <p class="projects-intro">Advancing research through government-funded projects and industry collaborations.</p>
-        <h2 class="projects-section-heading">Projects</h2>
+        <div class="projects-heading-row">
+          <h2 class="projects-section-heading">Projects</h2>
+          <button class="projects-view-button" type="button" aria-expanded="false" data-projects-toggle>
+            <span class="open-label">View all</span>
+            <span class="close-label">Close</span>
+          </button>
+        </div>
         <div class="projects-board">
           <article class="projects-card">
             <div class="projects-card-header">
@@ -1099,11 +1104,8 @@ permalink: aboutus.html
             </div>
             <div class="projects-logo-grid">
               <span class="projects-logo-tile"><img src="images/fundings/NRF.png" alt="NRF"></span>
-              <span class="projects-logo-tile"><img src="images/fundings/NRF.png" alt="NRF"></span>
-              <span class="projects-logo-tile"><img src="images/fundings/NRF.png" alt="NRF"></span>
               <span class="projects-logo-tile"><img src="images/fundings/IITP.png" alt="IITP"></span>
-              <span class="projects-logo-tile"><img src="images/fundings/IITP.png" alt="IITP"></span>
-              <span class="projects-logo-tile"><img src="images/fundings/IITP.png" alt="IITP"></span>
+              <span class="projects-logo-tile"><img src="images/fundings/keit.png" alt="KEIT"></span>
             </div>
           </article>
 
@@ -1116,70 +1118,71 @@ permalink: aboutus.html
               <span class="projects-logo-tile"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"></span>
               <span class="projects-logo-tile"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"></span>
               <span class="projects-logo-tile"><img src="images/fundings/skt.png" alt="SK Telecom"></span>
-              <span class="projects-logo-tile"><img src="images/fundings/upstage.svg" alt="Upstage"></span>
-              <span class="projects-logo-tile"><img src="images/fundings/ncsoft.png" alt="NCSOFT"></span>
-              <span class="projects-logo-tile"><span class="projects-logo-more">+ More</span></span>
             </div>
           </article>
         </div>
 
-        <details class="projects-timeline-details">
-          <summary class="projects-timeline-toggle"><span class="open-label">View project details</span><span class="close-label">Hide project details</span></summary>
-          <section class="projects-expand-panel" aria-label="Project details">
-            <div class="projects-board projects-expanded-board">
-              <article class="projects-card">
-                <div class="projects-card-header">
-                  <span class="projects-card-icon" aria-hidden="true"><i class="fa fa-university"></i></span>
-                  <h3 class="projects-card-title">Grants</h3>
+        <section class="projects-expand-panel" aria-label="Project details">
+          <div class="projects-board projects-expanded-board">
+            <article class="projects-card">
+              <div class="projects-card-header">
+                <span class="projects-card-icon" aria-hidden="true"><i class="fa fa-university"></i></span>
+                <h3 class="projects-card-title">Grants</h3>
+              </div>
+              <div class="projects-card-body">
+                <div class="projects-detail-grid">
+                  <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Active Learning for Multimodal Action Agents</h4><p class="project-detail-meta"><strong>NRF</strong></p></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Multimodal RLHF for Personalized Learning Support</h4><p class="project-detail-meta"><strong>NRF</strong></p></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Autonomous Collaboration for Multi-Humanoid Systems</h4><p class="project-detail-meta"><strong>NRF</strong></p></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">World Foundation Model for Physical AI</h4><p class="project-detail-meta"><strong>IITP</strong></p></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based ADPO Combat Planning Model</h4><p class="project-detail-meta"><strong>IITP</strong></p></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based OTT User and Content Data Analysis and Video Recommendation System</h4><p class="project-detail-meta"><strong>IITP</strong></p></div></article>
                 </div>
-                <div class="projects-card-body">
-                  <div class="projects-detail-grid">
-                    <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Active Learning for Multimodal Action Agents</h4><p class="project-detail-meta"><strong>NRF</strong> · 2024-2027</p></div></article>
-                    <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Multimodal RLHF for Personalized Learning Support</h4><p class="project-detail-meta"><strong>NRF</strong> · 2024-2028</p></div></article>
-                    <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Autonomous Collaboration for Multi-Humanoid Systems</h4><p class="project-detail-meta"><strong>NRF</strong> · 2026</p></div></article>
-                    <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">World Foundation Model for Physical AI</h4><p class="project-detail-meta"><strong>IITP</strong> · 2025</p></div></article>
-                    <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based ADPO Combat Planning Model</h4><p class="project-detail-meta"><strong>IITP</strong> · 2026</p></div></article>
-                    <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based OTT User and Content Data Analysis and Video Recommendation System</h4><p class="project-detail-meta"><strong>IITP</strong> · 2024-2027</p></div></article>
-                  </div>
-                </div>
-              </article>
+              </div>
+            </article>
 
-              <article class="projects-card">
-                <div class="projects-card-header">
-                  <span class="projects-card-icon" aria-hidden="true"><i class="fa fa-handshake"></i></span>
-                  <h3 class="projects-card-title">Industry Collaborations</h3>
+            <article class="projects-card">
+              <div class="projects-card-header">
+                <span class="projects-card-icon" aria-hidden="true"><i class="fa fa-handshake"></i></span>
+                <h3 class="projects-card-title">Industry Collaborations</h3>
+              </div>
+              <div class="projects-card-body">
+                <div class="projects-detail-grid">
+                  <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Microphone Noise Reduction and Sound Quality Enhancement Model</h4><p class="project-detail-meta"><strong>LG Electronics</strong></p></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Multimodal-Based Content Recommendation System</h4><p class="project-detail-meta"><strong>LG Electronics</strong></p></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">AI-Based Automated Content Curation Model</h4><p class="project-detail-meta"><strong>LG Electronics</strong></p></div></article>
+                  <article class="project-detail-card"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h4 class="project-detail-title">Multimodal AI-Based Display UI Testing Technology</h4><p class="project-detail-meta"><strong>Samsung Electronics</strong></p></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h4 class="project-detail-title">Large Multimodal Model Research and Development with Video Input</h4><p class="project-detail-meta"><strong>SK Telecom</strong></p></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h4 class="project-detail-title">GroundedDocVQA</h4><p class="project-detail-meta"><strong>Upstage</strong></p></div></article>
                 </div>
-                <div class="projects-card-body">
-                  <div class="projects-detail-grid">
-                    <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Microphone Noise Reduction and Sound Quality Enhancement Model</h4><p class="project-detail-meta"><strong>LG Electronics</strong> · 2025</p></div></article>
-                    <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Multimodal-Based Content Recommendation System</h4><p class="project-detail-meta"><strong>LG Electronics</strong> · 2025</p></div></article>
-                    <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">AI-Based Automated Content Curation Model</h4><p class="project-detail-meta"><strong>LG Electronics</strong> · 2025</p></div></article>
-                    <article class="project-detail-card"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h4 class="project-detail-title">Multimodal AI-Based Display UI Testing Technology</h4><p class="project-detail-meta"><strong>Samsung Electronics</strong> · 2024-2025</p></div></article>
-                    <article class="project-detail-card"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h4 class="project-detail-title">Large Multimodal Model Research and Development with Video Input</h4><p class="project-detail-meta"><strong>SK Telecom</strong> · 2024-2025</p></div></article>
-                    <article class="project-detail-card"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h4 class="project-detail-title">GroundedDocVQA</h4><p class="project-detail-meta"><strong>Upstage</strong> · 2026</p></div></article>
-                  </div>
-                </div>
-              </article>
+              </div>
+            </article>
 
-              <article class="projects-history-card">
-                <div class="projects-history-header">
-                  <div>
-                    <h3 class="projects-history-title">Project History</h3>
-                    <p class="projects-history-copy">Selected previous grants and collaborations.</p>
-                  </div>
+            <article class="projects-history-card">
+              <div class="projects-history-header">
+                <div>
+                  <h3 class="projects-history-title">Project History</h3>
+                  <p class="projects-history-copy">Selected previous grants and collaborations.</p>
                 </div>
-                <div class="projects-past-logos">
-                  <span class="projects-past-logo"><img src="images/fundings/ncsoft.png" alt="NCSOFT"></span>
-                  <span class="projects-past-logo"><img src="images/fundings/giantstep.png" alt="Giantstep"></span>
-                  <span class="projects-past-logo"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"></span>
-                  <span class="projects-past-logo"><img src="images/fundings/maum_ai.svg" alt="Maum AI"></span>
-                  <span class="projects-past-logo"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"></span>
-                  <span class="projects-past-logo"><img src="images/fundings/mcst.png" alt="MCST"></span>
+              </div>
+              <div class="projects-card-body">
+                <div class="projects-detail-grid">
+                  <article class="project-detail-card"><img src="images/fundings/ncsoft.png" alt="NCSOFT"><div><h4 class="project-detail-title">Large Multimodal Model for Nonverbal Dialogue Understanding</h4></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/ncsoft.png" alt="NCSOFT"><div><h4 class="project-detail-title">Autonomous Multi-Agent Game Environment with Knowledge Distillation</h4></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/giantstep.png" alt="Giantstep"><div><h4 class="project-detail-title">Digital Human Generation with Lip-Sync and Emotion Matching from Speech</h4></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"><div><h4 class="project-detail-title">Multimodal AI Combining Object Recognition and Natural Language Processing</h4></div></article>
+                  <article class="project-detail-card"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h4 class="project-detail-title">Stable Video Diffusion Model Quantization Technology</h4></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Multimodal Chatbot for App Development Support Using Generative AI</h4></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/mcst.png" alt="MCST"><div><h4 class="project-detail-title">Multimodal UX Evaluation Platform for XR Space-Responsive Content Optimization</h4></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h4 class="project-detail-title">Large Multimodal Model Research and Development with Video Input</h4></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/maum_ai.svg" alt="Maum AI"><div><h4 class="project-detail-title">RL-Based Autonomous Driving AI for Hazardous Congested-Road Scenarios</h4></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"><div><h4 class="project-detail-title">AI-Based Concrete Flowability Video Analysis Program</h4></div></article>
+                  <article class="project-detail-card"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h4 class="project-detail-title">Image-Text Attention-Based Object Recognition for Vision-Language Models</h4></div></article>
                 </div>
-              </article>
-            </div>
-          </section>
-        </details>
+              </div>
+            </article>
+          </div>
+        </section>
       </section>
     </div>
   </div>
