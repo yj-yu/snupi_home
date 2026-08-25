@@ -372,7 +372,7 @@ permalink: aboutus.html
 
 .projects-board {
   display: grid;
-  gap: 30px;
+  gap: 24px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 24px;
   position: relative;
@@ -385,12 +385,18 @@ permalink: aboutus.html
 }
 
 .projects-expand-panel {
-  display: none;
-  margin-top: 18px;
+  max-height: 0;
+  margin-top: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-8px);
+  transition: max-height 0.44s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.24s ease, transform 0.3s ease;
 }
 
 .projects-work-section.is-expanded .projects-expand-panel {
-  display: block;
+  max-height: 1600px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .projects-expand-panel .projects-card,
@@ -503,26 +509,26 @@ permalink: aboutus.html
 .projects-logo-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  padding: 4px 24px 22px;
+  padding: 2px 24px 18px;
 }
 
 .projects-logo-tile {
   align-items: center;
   border: 1px solid rgba(214, 224, 238, 0.9);
   display: flex;
-  height: 74px;
+  height: 58px;
   justify-content: center;
   margin-right: -1px;
   margin-top: -1px;
   min-width: 0;
   overflow: hidden;
-  padding: 18px 14px;
+  padding: 12px;
 }
 
 .projects-logo-tile img {
   display: block;
-  max-height: 46px;
-  max-width: min(150px, 90%);
+  max-height: 34px;
+  max-width: min(112px, 88%);
   object-fit: contain;
 }
 
@@ -571,11 +577,12 @@ permalink: aboutus.html
   transition: max-height 0.44s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.24s ease, padding 0.3s ease, transform 0.3s ease, border-color 0.2s ease;
 }
 
+.projects-work-section.is-expanded .projects-card-body,
 .projects-card.is-expanded .projects-card-body {
   border-top-color: rgba(214, 224, 238, 0.82);
   max-height: 1600px;
   opacity: 1;
-  padding: 22px 24px 24px;
+  padding: 6px 24px 18px;
   transform: translateY(0);
 }
 
@@ -780,11 +787,11 @@ permalink: aboutus.html
   }
 
   .projects-board {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .projects-board.projects-expanded-board {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -922,7 +929,7 @@ permalink: aboutus.html
 
   .projects-card-header {
     gap: 12px;
-    grid-template-columns: 42px 1fr;
+    grid-template-columns: 40px 1fr;
     padding: 16px 18px 12px;
   }
 
@@ -942,18 +949,18 @@ permalink: aboutus.html
   }
 
   .projects-logo-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     padding: 4px 18px 18px;
   }
 
   .projects-logo-tile {
-    height: 68px;
-    padding: 14px;
+    height: 52px;
+    padding: 10px;
   }
 
   .projects-logo-tile img {
-    max-height: 38px;
-    max-width: 122px;
+    max-height: 30px;
+    max-width: 88px;
   }
 
   .projects-detail-grid {
@@ -1001,6 +1008,13 @@ permalink: aboutus.html
   .projects-past-logo:nth-child(2n),
   .projects-past-logo:last-child {
     border-right: 0;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .projects-board,
+  .projects-board.projects-expanded-board {
+    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -1107,6 +1121,16 @@ permalink: aboutus.html
               <span class="projects-logo-tile"><img src="images/fundings/IITP.png" alt="IITP"></span>
               <span class="projects-logo-tile"><img src="images/fundings/keit.png" alt="KEIT"></span>
             </div>
+            <div class="projects-card-body">
+              <div class="projects-detail-grid">
+                <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Active Learning for Multimodal Action Agents</h4><p class="project-detail-meta"><strong>NRF</strong></p></div></article>
+                <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Multimodal RLHF for Personalized Learning Support</h4><p class="project-detail-meta"><strong>NRF</strong></p></div></article>
+                <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Autonomous Collaboration for Multi-Humanoid Systems</h4><p class="project-detail-meta"><strong>NRF</strong></p></div></article>
+                <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">World Foundation Model for Physical AI</h4><p class="project-detail-meta"><strong>IITP</strong></p></div></article>
+                <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based ADPO Combat Planning Model</h4><p class="project-detail-meta"><strong>IITP</strong></p></div></article>
+                <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based OTT User and Content Data Analysis and Video Recommendation System</h4><p class="project-detail-meta"><strong>IITP</strong></p></div></article>
+              </div>
+            </div>
           </article>
 
           <article class="projects-card">
@@ -1119,45 +1143,21 @@ permalink: aboutus.html
               <span class="projects-logo-tile"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"></span>
               <span class="projects-logo-tile"><img src="images/fundings/skt.png" alt="SK Telecom"></span>
             </div>
+            <div class="projects-card-body">
+              <div class="projects-detail-grid">
+                <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Microphone Noise Reduction and Sound Quality Enhancement Model</h4><p class="project-detail-meta"><strong>LG Electronics</strong></p></div></article>
+                <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Multimodal-Based Content Recommendation System</h4><p class="project-detail-meta"><strong>LG Electronics</strong></p></div></article>
+                <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">AI-Based Automated Content Curation Model</h4><p class="project-detail-meta"><strong>LG Electronics</strong></p></div></article>
+                <article class="project-detail-card"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h4 class="project-detail-title">Multimodal AI-Based Display UI Testing Technology</h4><p class="project-detail-meta"><strong>Samsung Electronics</strong></p></div></article>
+                <article class="project-detail-card"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h4 class="project-detail-title">Large Multimodal Model Research and Development with Video Input</h4><p class="project-detail-meta"><strong>SK Telecom</strong></p></div></article>
+                <article class="project-detail-card"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h4 class="project-detail-title">GroundedDocVQA</h4><p class="project-detail-meta"><strong>Upstage</strong></p></div></article>
+              </div>
+            </div>
           </article>
         </div>
 
         <section class="projects-expand-panel" aria-label="Project details">
           <div class="projects-board projects-expanded-board">
-            <article class="projects-card">
-              <div class="projects-card-header">
-                <span class="projects-card-icon" aria-hidden="true"><i class="fa fa-university"></i></span>
-                <h3 class="projects-card-title">Grants</h3>
-              </div>
-              <div class="projects-card-body">
-                <div class="projects-detail-grid">
-                  <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Active Learning for Multimodal Action Agents</h4><p class="project-detail-meta"><strong>NRF</strong></p></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Multimodal RLHF for Personalized Learning Support</h4><p class="project-detail-meta"><strong>NRF</strong></p></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/NRF.png" alt="NRF"><div><h4 class="project-detail-title">Autonomous Collaboration for Multi-Humanoid Systems</h4><p class="project-detail-meta"><strong>NRF</strong></p></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">World Foundation Model for Physical AI</h4><p class="project-detail-meta"><strong>IITP</strong></p></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based ADPO Combat Planning Model</h4><p class="project-detail-meta"><strong>IITP</strong></p></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based OTT User and Content Data Analysis and Video Recommendation System</h4><p class="project-detail-meta"><strong>IITP</strong></p></div></article>
-                </div>
-              </div>
-            </article>
-
-            <article class="projects-card">
-              <div class="projects-card-header">
-                <span class="projects-card-icon" aria-hidden="true"><i class="fa fa-handshake"></i></span>
-                <h3 class="projects-card-title">Industry Collaborations</h3>
-              </div>
-              <div class="projects-card-body">
-                <div class="projects-detail-grid">
-                  <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Microphone Noise Reduction and Sound Quality Enhancement Model</h4><p class="project-detail-meta"><strong>LG Electronics</strong></p></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Multimodal-Based Content Recommendation System</h4><p class="project-detail-meta"><strong>LG Electronics</strong></p></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">AI-Based Automated Content Curation Model</h4><p class="project-detail-meta"><strong>LG Electronics</strong></p></div></article>
-                  <article class="project-detail-card"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h4 class="project-detail-title">Multimodal AI-Based Display UI Testing Technology</h4><p class="project-detail-meta"><strong>Samsung Electronics</strong></p></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h4 class="project-detail-title">Large Multimodal Model Research and Development with Video Input</h4><p class="project-detail-meta"><strong>SK Telecom</strong></p></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h4 class="project-detail-title">GroundedDocVQA</h4><p class="project-detail-meta"><strong>Upstage</strong></p></div></article>
-                </div>
-              </div>
-            </article>
-
             <article class="projects-history-card">
               <div class="projects-history-header">
                 <div>
