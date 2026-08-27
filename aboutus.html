@@ -112,7 +112,7 @@ permalink: aboutus.html
 .about-research-grid {
   display: grid;
   gap: 22px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   margin-bottom: 34px;
 }
 
@@ -126,13 +126,13 @@ permalink: aboutus.html
 }
 
 .about-card-head {
-  align-items: center;
+  align-items: start;
   border-bottom: 1px solid rgba(214, 224, 238, 0.9);
   display: grid;
-  gap: 18px;
-  grid-template-columns: 62px 1fr;
+  gap: 14px;
+  grid-template-columns: 54px 1fr;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 }
 
 .about-icon {
@@ -156,7 +156,7 @@ permalink: aboutus.html
 .about-card-title {
   color: #102550;
   font-family: var(--site-display-font-family) !important;
-  font-size: 1.18rem;
+  font-size: 1.06rem;
   font-weight: 850;
   line-height: 1.25;
   margin: 0;
@@ -696,6 +696,68 @@ permalink: aboutus.html
   margin: 0;
 }
 
+.projects-history-logo-grid {
+  border-top: 1px solid rgba(214, 224, 238, 0.82);
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  padding: 10px 18px 8px;
+}
+
+.projects-history-logo {
+  align-items: center;
+  border-right: 1px solid rgba(214, 224, 238, 0.68);
+  display: flex;
+  justify-content: center;
+  min-height: 54px;
+  padding: 10px 14px;
+}
+
+.projects-history-logo:nth-child(6n),
+.projects-history-logo:last-child {
+  border-right: 0;
+}
+
+.projects-history-logo img {
+  display: block;
+  max-height: 30px;
+  max-width: 112px;
+  object-fit: contain;
+}
+
+.projects-keyword-cloud {
+  align-items: center;
+  border-top: 1px solid rgba(214, 224, 238, 0.82);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  justify-content: center;
+  padding: 16px 22px 18px;
+}
+
+.projects-keyword {
+  color: #31425c;
+  font-family: var(--site-display-font-family) !important;
+  font-weight: 780;
+  line-height: 1;
+  opacity: 0.86;
+}
+
+.projects-keyword.is-large {
+  color: #1267f1;
+  font-size: 1.08rem;
+}
+
+.projects-keyword.is-medium {
+  font-size: 0.92rem;
+}
+
+.projects-keyword.is-small {
+  color: #63748a;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 .projects-filter-row {
   display: flex;
   flex-wrap: wrap;
@@ -779,7 +841,7 @@ permalink: aboutus.html
   }
 
   .about-research-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .about-mission {
@@ -981,6 +1043,30 @@ permalink: aboutus.html
     grid-template-columns: 1fr;
   }
 
+  .projects-history-logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 8px 14px 6px;
+  }
+
+  .projects-history-logo {
+    min-height: 48px;
+    padding: 8px 10px;
+  }
+
+  .projects-history-logo:nth-child(6n) {
+    border-right: 1px solid rgba(214, 224, 238, 0.68);
+  }
+
+  .projects-history-logo:nth-child(3n),
+  .projects-history-logo:last-child {
+    border-right: 0;
+  }
+
+  .projects-keyword-cloud {
+    justify-content: flex-start;
+    padding: 14px 16px 16px;
+  }
+
   .projects-history-controls {
     justify-content: flex-start;
   }
@@ -1049,23 +1135,24 @@ permalink: aboutus.html
       <section class="about-overview" aria-label="About SNU PI Lab">
         <div class="about-intro">
           <p class="about-lede">
-            SNU PI Lab develops intelligent systems that <strong>perceive, reason, and act</strong> across digital and physical environments. Our core strength is <strong>multimodal agentic AI</strong>. We build on this to advance world models and extend toward physical intelligence.
+            We investigate how agents can perceive complex environments, reason over what they observe, and act reliably in the real world.<br>
+            Our work extends toward AI safety, autonomous AI for science, and robot learning in the real world.
           </p>
           <div class="about-identity-mark" aria-hidden="true">
             <img src="images/logo/snu_pi_lab_flip.gif" alt="">
           </div>
         </div>
 
-        <h2 class="about-section-title">Our Research Areas</h2>
+        <h2 class="about-section-title">We Mainly Work On</h2>
         <div class="about-research-grid">
           <article class="about-research-card">
             <div class="about-card-head">
               <span class="about-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" fill="none"><circle cx="14" cy="16" r="5" stroke="currentColor" stroke-width="2.4"/><circle cx="34" cy="16" r="5" stroke="currentColor" stroke-width="2.4"/><circle cx="24" cy="34" r="5" stroke="currentColor" stroke-width="2.4"/><path d="M19 17h10M17 20l5 10M31 20l-5 10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
               </span>
-              <h3 class="about-card-title">Multimodal Agentic AI</h3>
+              <h3 class="about-card-title">Multimodal Agents</h3>
             </div>
-            <p class="about-card-copy">Foundation models and agents that integrate language, vision, video, and more to perceive, reason, plan, and solve complex tasks.</p>
+            <p class="about-card-copy">Autonomous agents that perceive across language, vision, video, and audio, grounding reasoning, planning, and tool use in real digital environments.</p>
           </article>
 
           <article class="about-research-card">
@@ -1073,9 +1160,9 @@ permalink: aboutus.html
               <span class="about-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" fill="none"><path d="M24 7 9 15v18l15 8 15-8V15L24 7Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="m9 15 15 8 15-8M24 23v18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
-              <h3 class="about-card-title">World Models</h3>
+              <h3 class="about-card-title">World Foundation Models</h3>
             </div>
-            <p class="about-card-copy">Models that learn environment dynamics and predict the outcome of actions, enabling planning, interaction, and embodied intelligence.</p>
+            <p class="about-card-copy">Generative models that learn how the world evolves under actions, providing the basis for prediction, planning, and embodied decision making.</p>
           </article>
 
           <article class="about-research-card">
@@ -1085,7 +1172,17 @@ permalink: aboutus.html
               </span>
               <h3 class="about-card-title">Physical Intelligence</h3>
             </div>
-            <p class="about-card-copy">Vision-language-action models and robot learning that translate perception and reasoning into real-world action.</p>
+            <p class="about-card-copy">World action models and vision-language-action learning that couple prediction with control, enabling agents to act reliably on system.</p>
+          </article>
+
+          <article class="about-research-card">
+            <div class="about-card-head">
+              <span class="about-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><path d="M11 16h26v16H11z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M17 38h14M20 32v6M28 32v6M17 22h14M17 27h10M38 20h4M38 28h4M6 20h4M6 28h4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </span>
+              <h3 class="about-card-title">Efficient On-Device Intelligence</h3>
+            </div>
+            <p class="about-card-copy">Quantization, distillation, and efficient multimodal architectures that bring agents to edge devices and robots, enabling real-time intelligence beyond the cloud.</p>
           </article>
 
           <article class="about-research-card">
@@ -1093,9 +1190,9 @@ permalink: aboutus.html
               <span class="about-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" fill="none"><path d="M24 6 39 12v11c0 9-5 15-15 19C14 38 9 32 9 23V12l15-6Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="m16 25 5 5 11-12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
-              <h3 class="about-card-title">Reliable & Human-Centered AI</h3>
+              <h3 class="about-card-title">Safe & Human-Centered AI</h3>
             </div>
-            <p class="about-card-copy">Safe, aligned, and human-centered AI systems grounded in AI safety research, ensuring reliability in real-world interaction.</p>
+            <p class="about-card-copy">Safety evaluation and alignment of foundation models, toward AI that stays reliable and beneficial across diverse users and languages.</p>
           </article>
         </div>
 
@@ -1129,6 +1226,7 @@ permalink: aboutus.html
                 <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">World Foundation Model for Physical AI</h4><p class="project-detail-meta"><strong>IITP</strong></p></div></article>
                 <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based ADPO Combat Planning Model</h4><p class="project-detail-meta"><strong>IITP</strong></p></div></article>
                 <article class="project-detail-card"><img src="images/fundings/IITP.png" alt="IITP"><div><h4 class="project-detail-title">AI-Based OTT User and Content Data Analysis and Video Recommendation System</h4><p class="project-detail-meta"><strong>IITP</strong></p></div></article>
+                <article class="project-detail-card"><img src="images/fundings/keit.png" alt="KEIT"><div><h4 class="project-detail-title">Open Autonomous Digital Twin</h4><p class="project-detail-meta"><strong>KEIT</strong></p></div></article>
               </div>
             </div>
           </article>
@@ -1139,18 +1237,13 @@ permalink: aboutus.html
               <h3 class="projects-card-title">Industry Collaborations</h3>
             </div>
             <div class="projects-logo-grid">
-              <span class="projects-logo-tile"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"></span>
               <span class="projects-logo-tile"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"></span>
-              <span class="projects-logo-tile"><img src="images/fundings/skt.png" alt="SK Telecom"></span>
+              <span class="projects-logo-tile"><img src="images/fundings/Holiday_Robotics.png" alt="Holiday Robotics"></span>
             </div>
             <div class="projects-card-body">
               <div class="projects-detail-grid">
-                <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Microphone Noise Reduction and Sound Quality Enhancement Model</h4><p class="project-detail-meta"><strong>LG Electronics</strong></p></div></article>
-                <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Multimodal-Based Content Recommendation System</h4><p class="project-detail-meta"><strong>LG Electronics</strong></p></div></article>
-                <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">AI-Based Automated Content Curation Model</h4><p class="project-detail-meta"><strong>LG Electronics</strong></p></div></article>
-                <article class="project-detail-card"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h4 class="project-detail-title">Multimodal AI-Based Display UI Testing Technology</h4><p class="project-detail-meta"><strong>Samsung Electronics</strong></p></div></article>
-                <article class="project-detail-card"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h4 class="project-detail-title">Large Multimodal Model Research and Development with Video Input</h4><p class="project-detail-meta"><strong>SK Telecom</strong></p></div></article>
-                <article class="project-detail-card"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h4 class="project-detail-title">GroundedDocVQA</h4><p class="project-detail-meta"><strong>Upstage</strong></p></div></article>
+                <article class="project-detail-card"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h4 class="project-detail-title">Multimodal Distillation for Long Video Diffusion Model</h4><p class="project-detail-meta"><strong>Samsung Electronics</strong></p></div></article>
+                <article class="project-detail-card"><img src="images/fundings/Holiday_Robotics.png" alt="Holiday Robotics"><div><h4 class="project-detail-title">Humanoid Robots for Chemical Processes</h4><p class="project-detail-meta"><strong>Holiday Robotics</strong></p></div></article>
               </div>
             </div>
           </article>
@@ -1165,20 +1258,33 @@ permalink: aboutus.html
                   <p class="projects-history-copy">Selected previous grants and collaborations.</p>
                 </div>
               </div>
-              <div class="projects-card-body">
-                <div class="projects-detail-grid">
-                  <article class="project-detail-card"><img src="images/fundings/ncsoft.png" alt="NCSOFT"><div><h4 class="project-detail-title">Large Multimodal Model for Nonverbal Dialogue Understanding</h4></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/ncsoft.png" alt="NCSOFT"><div><h4 class="project-detail-title">Autonomous Multi-Agent Game Environment with Knowledge Distillation</h4></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/giantstep.png" alt="Giantstep"><div><h4 class="project-detail-title">Digital Human Generation with Lip-Sync and Emotion Matching from Speech</h4></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"><div><h4 class="project-detail-title">Multimodal AI Combining Object Recognition and Natural Language Processing</h4></div></article>
-                  <article class="project-detail-card"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"><div><h4 class="project-detail-title">Stable Video Diffusion Model Quantization Technology</h4></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"><div><h4 class="project-detail-title">Multimodal Chatbot for App Development Support Using Generative AI</h4></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/mcst.png" alt="MCST"><div><h4 class="project-detail-title">Multimodal UX Evaluation Platform for XR Space-Responsive Content Optimization</h4></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/skt.png" alt="SK Telecom"><div><h4 class="project-detail-title">Large Multimodal Model Research and Development with Video Input</h4></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/maum_ai.svg" alt="Maum AI"><div><h4 class="project-detail-title">RL-Based Autonomous Driving AI for Hazardous Congested-Road Scenarios</h4></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"><div><h4 class="project-detail-title">AI-Based Concrete Flowability Video Analysis Program</h4></div></article>
-                  <article class="project-detail-card"><img src="images/fundings/upstage.svg" alt="Upstage"><div><h4 class="project-detail-title">Image-Text Attention-Based Object Recognition for Vision-Language Models</h4></div></article>
-                </div>
+              <div class="projects-history-logo-grid">
+                <span class="projects-history-logo"><img src="images/fundings/lg_electronics.png" alt="LG Electronics"></span>
+                <span class="projects-history-logo"><img src="images/fundings/skt.png" alt="SK Telecom"></span>
+                <span class="projects-history-logo"><img src="images/fundings/upstage.svg" alt="Upstage"></span>
+                <span class="projects-history-logo"><img src="images/fundings/ncsoft.png" alt="NCSOFT"></span>
+                <span class="projects-history-logo"><img src="images/fundings/giantstep.png" alt="Giantstep"></span>
+                <span class="projects-history-logo"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"></span>
+                <span class="projects-history-logo"><img src="images/fundings/maum_ai.svg" alt="Maum AI"></span>
+                <span class="projects-history-logo"><img src="images/fundings/gs_enc.jpg" alt="GS E&amp;C"></span>
+                <span class="projects-history-logo"><img src="images/fundings/mcst.png" alt="MCST"></span>
+                <span class="projects-history-logo"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"></span>
+                <span class="projects-history-logo"><img src="images/fundings/kocca.jpg" alt="KOCCA"></span>
+                <span class="projects-history-logo"><img src="images/fundings/kist.jpg" alt="KIST"></span>
+              </div>
+              <div class="projects-keyword-cloud" aria-label="Project history keywords">
+                <span class="projects-keyword is-large">multimodal AI</span>
+                <span class="projects-keyword is-medium">video diffusion</span>
+                <span class="projects-keyword is-large">vision-language models</span>
+                <span class="projects-keyword is-small">nonverbal dialogue</span>
+                <span class="projects-keyword is-medium">digital humans</span>
+                <span class="projects-keyword is-large">autonomous agents</span>
+                <span class="projects-keyword is-medium">content curation</span>
+                <span class="projects-keyword is-small">display testing</span>
+                <span class="projects-keyword is-medium">document VQA</span>
+                <span class="projects-keyword is-small">XR evaluation</span>
+                <span class="projects-keyword is-medium">robotics</span>
+                <span class="projects-keyword is-small">reinforcement learning</span>
               </div>
             </article>
           </div>
