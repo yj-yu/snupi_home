@@ -498,18 +498,14 @@ permalink: aboutus.html
   content: "->";
 }
 
-.projects-card.is-expanded .projects-view-button::before {
-  content: "Close";
-}
-
-.projects-card:not(.is-expanded) .projects-view-button::before {
-  content: "View all";
-}
-
 .projects-logo-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   padding: 2px 24px 18px;
+}
+
+.projects-logo-grid.is-industry {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .projects-logo-tile {
@@ -530,6 +526,16 @@ permalink: aboutus.html
   max-height: 34px;
   max-width: min(112px, 88%);
   object-fit: contain;
+}
+
+.projects-logo-grid.is-industry .projects-logo-tile {
+  height: 58px;
+  padding: 8px;
+}
+
+.projects-logo-grid.is-industry .projects-logo-tile img {
+  max-height: 28px;
+  max-width: min(78px, 88%);
 }
 
 .projects-work-section .projects-view-button .close-label {
@@ -969,6 +975,10 @@ permalink: aboutus.html
     padding: 4px 18px 18px;
   }
 
+  .projects-logo-grid.is-industry {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .projects-logo-tile {
     height: 52px;
     padding: 10px;
@@ -977,6 +987,11 @@ permalink: aboutus.html
   .projects-logo-tile img {
     max-height: 30px;
     max-width: 88px;
+  }
+
+  .projects-logo-grid.is-industry .projects-logo-tile img {
+    max-height: 28px;
+    max-width: 76px;
   }
 
   .projects-detail-grid {
@@ -1186,7 +1201,7 @@ permalink: aboutus.html
               </span>
               <h3 class="projects-card-title">Industry Collaborations</h3>
             </div>
-            <div class="projects-logo-grid">
+            <div class="projects-logo-grid is-industry">
               <span class="projects-logo-tile"><img src="images/fundings/skt.png" alt="SK Telecom"></span>
               <span class="projects-logo-tile"><img src="images/fundings/SK_Hynix.png" alt="SK Hynix"></span>
               <span class="projects-logo-tile"><img src="images/fundings/poscodx.png" alt="POSCO DX"></span>
