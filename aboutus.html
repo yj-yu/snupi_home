@@ -49,12 +49,8 @@ permalink: aboutus.html
 }
 
 .about-intro {
-  align-items: center;
-  display: grid;
-  gap: 46px;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
   margin: 0 auto 50px;
-  max-width: 940px;
+  max-width: 780px;
 }
 
 .about-lede {
@@ -71,21 +67,6 @@ permalink: aboutus.html
 .about-lede strong {
   color: #102550;
   font-weight: 800;
-}
-
-.about-identity-mark {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0;
-  pointer-events: none;
-}
-
-.about-identity-mark img {
-  display: block;
-  height: auto;
-  max-width: min(330px, 100%);
-  opacity: 0.9;
-  width: 100%;
 }
 
 .about-section-title {
@@ -793,11 +774,6 @@ permalink: aboutus.html
 }
 
 @media only screen and (max-width: 1180px) {
-  .about-intro {
-    gap: 32px;
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
-  }
-
   .about-research-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -847,8 +823,6 @@ permalink: aboutus.html
   }
 
   .about-intro {
-    gap: 18px;
-    grid-template-columns: 1fr;
     margin-bottom: 36px;
   }
 
@@ -856,14 +830,6 @@ permalink: aboutus.html
     font-size: 0.98rem;
     line-height: 1.58;
     text-align: left;
-  }
-
-  .about-identity-mark {
-    justify-content: flex-start;
-  }
-
-  .about-identity-mark img {
-    max-width: min(290px, 82vw);
   }
 
   .about-section-title {
@@ -1099,9 +1065,6 @@ permalink: aboutus.html
           <p class="about-lede">
             SNU PI Lab investigates multimodal agentic AI and world foundation models. Our central question is how agents can perceive complex environments, reason over what they observe, and act reliably across digital and physical systems.
           </p>
-          <div class="about-identity-mark" aria-hidden="true">
-            <img src="images/logo/snu_pi_lab_flip.gif" alt="">
-          </div>
         </div>
 
         <h2 class="about-section-title">We Mainly Work On</h2>

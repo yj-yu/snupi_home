@@ -7186,7 +7186,7 @@ svg:not(:root) {
 }
 
 .site-logo-full.site-logo-animated {
-  height: clamp(52px, 5.4vw, 64px) !important;
+  height: clamp(58px, 5.8vw, 74px) !important;
   width: auto !important;
 }
 
