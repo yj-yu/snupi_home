@@ -8019,3 +8019,121 @@ svg:not(:root) {
     gap: 7px !important;
   }
 }
+
+/* Absolute final mobile lock: compact menu and publication cards. */
+@media only screen and (max-width: 767px) {
+  .top-bar.expanded .top-bar-section {
+    max-height: calc(100vh - 72px) !important;
+    overflow-y: auto !important;
+  }
+
+  .top-bar.expanded .top-bar-section ul.right {
+    padding: 8px 0 !important;
+  }
+
+  .top-bar.expanded .top-bar-section ul.right > li {
+    border-bottom: 0 !important;
+    height: 42px !important;
+    min-height: 42px !important;
+  }
+
+  .top-bar.expanded .top-bar-section li:not(.has-form) > a:not(.button) {
+    border-bottom: 0 !important;
+    color: #6b7280 !important;
+    display: flex !important;
+    font-size: 0.96rem !important;
+    font-weight: 500 !important;
+    height: 42px !important;
+    line-height: 42px !important;
+    padding: 0 24px !important;
+  }
+
+  .top-bar.expanded .top-bar-section li.active:not(.has-form) > a:not(.button),
+  .top-bar.expanded .top-bar-section ul li.active > a {
+    background: #f8fbff !important;
+    border-bottom: 0 !important;
+    border-left: 3px solid #5d86d7 !important;
+    color: #2f5fae !important;
+    font-weight: 720 !important;
+    padding-left: 21px !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .publication-card {
+    border-radius: 10px !important;
+    margin: 0 auto 12px !important;
+    max-width: calc(100vw - 26px) !important;
+    padding: 11px 12px 12px !important;
+    width: calc(100vw - 26px) !important;
+  }
+
+  .publication-card-layout {
+    display: block !important;
+    gap: 0 !important;
+  }
+
+  .publication-figure {
+    height: auto !important;
+    margin: 0 auto 9px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .publication-card img {
+    max-height: 132px !important;
+    max-width: 100% !important;
+    width: auto !important;
+  }
+
+  .publication-headline {
+    display: block !important;
+    margin-bottom: 6px !important;
+    min-height: 0 !important;
+    position: static !important;
+  }
+
+  .publication-venue-line {
+    font-size: 0.76rem !important;
+    line-height: 1.15 !important;
+    margin: 0 0 6px !important;
+    padding: 3px 8px !important;
+  }
+
+  .publication-meta-line {
+    display: flex !important;
+    gap: 5px 6px !important;
+    justify-content: flex-start !important;
+    margin: 0 0 7px !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    position: static !important;
+    text-align: left !important;
+  }
+
+  .publication-keyword {
+    border-radius: 7px !important;
+    font-size: 0.64rem !important;
+    line-height: 1.15 !important;
+    padding: 3px 6px !important;
+    white-space: normal !important;
+  }
+
+  .publication-card h3 {
+    font-size: 0.94rem !important;
+    letter-spacing: -0.012em !important;
+    line-height: 1.24 !important;
+    margin: 0 0 6px !important;
+  }
+
+  .publication-card p {
+    font-size: 0.76rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 1px !important;
+  }
+
+  .publication-card .publication-external-link {
+    font-size: 0.76rem !important;
+    margin-top: 5px !important;
+  }
+}

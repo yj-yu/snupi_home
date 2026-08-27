@@ -713,16 +713,26 @@ permalink: aboutus.html
   display: grid;
   gap: 0;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  padding: 10px 18px 8px;
+  padding: 12px 18px 8px;
 }
 
 .projects-history-logo {
   align-items: center;
-  border-right: 1px solid rgba(214, 224, 238, 0.68);
   display: flex;
   justify-content: center;
   min-height: 54px;
   padding: 10px 14px;
+  position: relative;
+}
+
+.projects-history-logo::after {
+  background: rgba(214, 224, 238, 0.68);
+  bottom: 14px;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 14px;
+  width: 1px;
 }
 
 .projects-history-logo:nth-child(6n),
@@ -730,11 +740,20 @@ permalink: aboutus.html
   border-right: 0;
 }
 
+.projects-history-logo:nth-child(6n)::after,
+.projects-history-logo:last-child::after {
+  display: none;
+}
+
 .projects-history-logo img {
   display: block;
+  background: #fff;
   max-height: 30px;
   max-width: 112px;
   object-fit: contain;
+  padding: 0 4px;
+  position: relative;
+  z-index: 1;
 }
 
 .projects-filter-row {
@@ -1078,12 +1097,21 @@ permalink: aboutus.html
   }
 
   .projects-history-logo:nth-child(6n) {
-    border-right: 1px solid rgba(214, 224, 238, 0.68);
+    border-right: 0;
+  }
+
+  .projects-history-logo:nth-child(6n)::after {
+    display: block;
   }
 
   .projects-history-logo:nth-child(3n),
   .projects-history-logo:last-child {
     border-right: 0;
+  }
+
+  .projects-history-logo:nth-child(3n)::after,
+  .projects-history-logo:last-child::after {
+    display: none;
   }
 
   .projects-history-controls {
@@ -1290,7 +1318,6 @@ permalink: aboutus.html
                 <span class="projects-history-logo"><img src="images/fundings/giantstep.png" alt="Giantstep"></span>
                 <span class="projects-history-logo"><img src="images/fundings/hyundai_ngv.jpg" alt="Hyundai NGV"></span>
                 <span class="projects-history-logo"><img src="images/fundings/maum_ai.svg" alt="Maum AI"></span>
-                <span class="projects-history-logo"><img src="images/fundings/mcst.png" alt="MCST"></span>
                 <span class="projects-history-logo"><img src="images/works/samsung_electronics.png" alt="Samsung Electronics"></span>
                 <span class="projects-history-logo"><img src="images/fundings/kocca.jpg" alt="KOCCA"></span>
                 <span class="projects-history-logo"><img src="images/fundings/kist.jpg" alt="KIST"></span>
