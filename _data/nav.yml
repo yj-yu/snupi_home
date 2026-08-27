@@ -2,6 +2,10 @@
   path:
   section_id: home
 
+- name: About Us
+  path: aboutus.html
+  section_id: aboutus
+
 - name: News
   path: news.html
   section_id: news
@@ -19,10 +23,6 @@
 - name: Publications
   path: publications.html
   section_id: publications
-
-- name: About Us
-  path: aboutus.html
-  section_id: aboutus
 
 # - name: Teaching
 #   path: teaching.html

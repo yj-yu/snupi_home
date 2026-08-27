@@ -2881,6 +2881,24 @@ input:checked + .slider:before {
   width: 100% !important;
 }
 
+/* Keep member cards quiet and static. */
+.people-content .member-card,
+.people-content .member-card--feature,
+.people-content .member-section-block > .member-grid:not(.professor-grid):not(.postdoc-grid) > .member-card--standard {
+  background: #fff !important;
+  border-color: rgba(201, 218, 239, 0.82) !important;
+  box-shadow: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.people-content .member-card:hover,
+.people-content .member-card:focus-within {
+  border-color: rgba(201, 218, 239, 0.82) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
 </style>
 
 <div class='full parallax site-page-hero'>

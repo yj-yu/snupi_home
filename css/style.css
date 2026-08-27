@@ -4279,6 +4279,37 @@ body {
   }
 }
 
+/* Mobile publication typography lock. */
+@media only screen and (max-width: 640px) {
+  .publication-year-title {
+    font-size: 1.12rem !important;
+  }
+
+  .publication-venue-line {
+    font-size: 0.78rem !important;
+    padding: 3px 9px !important;
+  }
+
+  .publication-keyword {
+    font-size: 0.68rem !important;
+    padding: 3px 7px !important;
+  }
+
+  .publication-card h3 {
+    font-size: 0.98rem !important;
+    line-height: 1.26 !important;
+  }
+
+  .publication-card p {
+    font-size: 0.78rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .publication-card .publication-external-link {
+    font-size: 0.78rem !important;
+  }
+}
+
 /* Final footer lock: compact, aligned, and not split across the page. */
 #footer.site-footer {
   padding: 16px 0 !important;
@@ -7186,7 +7217,7 @@ svg:not(:root) {
 }
 
 .site-logo-full.site-logo-animated {
-  height: clamp(58px, 5.8vw, 74px) !important;
+  height: clamp(64px, 6.4vw, 84px) !important;
   width: auto !important;
 }
 
