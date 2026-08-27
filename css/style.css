@@ -7185,6 +7185,11 @@ svg:not(:root) {
   width: clamp(190px, 20vw, 270px) !important;
 }
 
+.site-logo-full.site-logo-animated {
+  height: clamp(52px, 5.4vw, 64px) !important;
+  width: auto !important;
+}
+
 .site-page-hero,
 .gallery-title-shell {
   background: #fff !important;
