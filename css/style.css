@@ -7206,6 +7206,21 @@ svg:not(:root) {
   padding: 6px 0 6px 16px !important;
 }
 
+.contain-to-grid,
+.contain-to-grid .top-bar,
+.contain-to-grid .title-area,
+.contain-to-grid .title-area li,
+.contain-to-grid .title-area a {
+  height: 104px !important;
+  line-height: 104px !important;
+}
+
+.contain-to-grid .title-area img,
+.contain-to-grid .title-area li img,
+.contain-to-grid .title-area a img {
+  max-height: none !important;
+}
+
 .site-logo-full {
   display: block !important;
   height: auto !important;
@@ -7217,7 +7232,7 @@ svg:not(:root) {
 }
 
 .site-logo-full.site-logo-animated {
-  height: clamp(76px, 7.2vw, 104px) !important;
+  height: clamp(88px, 8.2vw, 118px) !important;
   width: auto !important;
 }
 
@@ -7315,12 +7330,21 @@ svg:not(:root) {
     padding: 5px 0 5px 10px !important;
   }
 
+  .contain-to-grid,
+  .contain-to-grid .top-bar,
+  .contain-to-grid .title-area,
+  .contain-to-grid .title-area li,
+  .contain-to-grid .title-area a {
+    height: 82px !important;
+    line-height: 82px !important;
+  }
+
   .site-logo-full {
     width: clamp(158px, 49vw, 226px) !important;
   }
 
   .site-logo-full.site-logo-animated {
-    height: clamp(58px, 13.5vw, 72px) !important;
+    height: clamp(66px, 15vw, 78px) !important;
     width: auto !important;
   }
 
