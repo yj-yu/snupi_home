@@ -7211,8 +7211,8 @@ svg:not(:root) {
 .contain-to-grid .title-area,
 .contain-to-grid .title-area li,
 .contain-to-grid .title-area a {
-  height: 104px !important;
-  line-height: 104px !important;
+  height: 80px !important;
+  line-height: 80px !important;
 }
 
 .contain-to-grid .title-area img,
@@ -7232,8 +7232,16 @@ svg:not(:root) {
 }
 
 .site-logo-full.site-logo-animated {
-  height: clamp(88px, 8.2vw, 118px) !important;
-  width: auto !important;
+  height: auto !important;
+  max-height: 70px !important;
+  width: clamp(250px, 19vw, 318px) !important;
+}
+
+.contain-to-grid .title-area a img.site-logo-full.site-logo-animated {
+  height: auto !important;
+  margin-top: 5px !important;
+  max-height: 70px !important;
+  width: clamp(250px, 19vw, 318px) !important;
 }
 
 .site-page-hero,
@@ -7335,8 +7343,8 @@ svg:not(:root) {
   .contain-to-grid .title-area,
   .contain-to-grid .title-area li,
   .contain-to-grid .title-area a {
-    height: 82px !important;
-    line-height: 82px !important;
+    height: 76px !important;
+    line-height: 76px !important;
   }
 
   .site-logo-full {
@@ -7344,8 +7352,16 @@ svg:not(:root) {
   }
 
   .site-logo-full.site-logo-animated {
-    height: clamp(66px, 15vw, 78px) !important;
-    width: auto !important;
+    height: auto !important;
+    max-height: 62px !important;
+    width: clamp(185px, 54vw, 238px) !important;
+  }
+
+  .contain-to-grid .title-area a img.site-logo-full.site-logo-animated {
+    height: auto !important;
+    margin-top: 7px !important;
+    max-height: 62px !important;
+    width: clamp(185px, 54vw, 238px) !important;
   }
 
   .site-page-hero,
