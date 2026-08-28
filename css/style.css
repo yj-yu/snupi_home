@@ -7217,7 +7217,7 @@ svg:not(:root) {
 }
 
 .site-logo-full.site-logo-animated {
-  height: clamp(64px, 6.4vw, 84px) !important;
+  height: clamp(76px, 7.2vw, 104px) !important;
   width: auto !important;
 }
 
@@ -7317,6 +7317,11 @@ svg:not(:root) {
 
   .site-logo-full {
     width: clamp(158px, 49vw, 226px) !important;
+  }
+
+  .site-logo-full.site-logo-animated {
+    height: clamp(58px, 13.5vw, 72px) !important;
+    width: auto !important;
   }
 
   .site-page-hero,
