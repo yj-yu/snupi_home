@@ -2,13 +2,16 @@
 layout: people-detail
 section-type: people
 fullname: "Yumin Lim"
-img-filename: random.png
-emoji: ""
+img-filename: lim_yumin.jpg
+emoji: 🌵
 position: "Ph.D. Student"
 permalink: people/yumin.html
-email:
+email: ckrgksakdmac@snu.ac.kr
 
 fields:
+    - name: "Robot Manipulation"
+    - name: "Imitation Learning"
+    - name: "Representation Learning"
 
 publications:
 ---
