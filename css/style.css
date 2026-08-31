@@ -8203,3 +8203,72 @@ svg:not(:root) {
     margin-top: 5px !important;
   }
 }
+
+/* --- Header logo sizing repair --- */
+@media only screen and (min-width: 1181px) {
+  .contain-to-grid,
+  .contain-to-grid .top-bar,
+  .contain-to-grid .title-area,
+  .contain-to-grid .title-area li,
+  .contain-to-grid .title-area a.site-logo {
+    height: 88px !important;
+    line-height: 88px !important;
+  }
+
+  .contain-to-grid .title-area a.site-logo {
+    align-items: flex-start !important;
+    margin-left: 12px !important;
+    padding: 6px 0 0 !important;
+  }
+
+  .contain-to-grid .title-area a img.site-logo-full.site-logo-animated {
+    height: auto !important;
+    margin-top: 0 !important;
+    max-height: 82px !important;
+    width: clamp(330px, 23vw, 390px) !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1180px) {
+  .contain-to-grid .title-area a.site-logo {
+    align-items: flex-start !important;
+    margin-left: 12px !important;
+    padding: 8px 0 0 !important;
+  }
+
+  .contain-to-grid .title-area a img.site-logo-full.site-logo-animated {
+    height: auto !important;
+    margin-top: 0 !important;
+    max-height: 66px !important;
+    width: clamp(250px, 25vw, 300px) !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contain-to-grid,
+  .contain-to-grid .top-bar,
+  .contain-to-grid .title-area,
+  .contain-to-grid .title-area li,
+  .contain-to-grid .title-area a.site-logo {
+    height: 82px !important;
+    line-height: 82px !important;
+  }
+
+  .contain-to-grid .title-area a.site-logo {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    margin-left: 12px !important;
+    padding: 8px 0 0 !important;
+  }
+
+  .contain-to-grid .title-area a img.site-logo-full.site-logo-animated {
+    height: auto !important;
+    margin-top: 0 !important;
+    max-height: 68px !important;
+    width: min(67vw, 282px) !important;
+  }
+
+  .top-bar .toggle-topbar.menu-icon {
+    top: 20px !important;
+  }
+}
