@@ -4,7 +4,7 @@ section-type: people
 fullname: "Jihun Moon"
 img-filename: moon_jihun.jpg
 emoji: 🌕
-position: "MS/Ph.D. Student"
+position: "MS Student"
 permalink: people/jihun.html
 email: mnjihun@snu.ac.kr
 
