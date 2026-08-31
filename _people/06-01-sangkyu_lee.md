@@ -7,6 +7,7 @@ position: "Visiting Scholar"
 permalink: people/sangkyu.html
 email: oddqueue@gmail.com
 emoji: 🤔
+display: False
 social:
 
 

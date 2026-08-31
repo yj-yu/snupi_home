@@ -7,6 +7,7 @@ img-filename: son_yejin.jpg
 position: "MS Student"
 permalink: people/yejin_son.html
 email: yejinhand@yonsei.ac.kr
+display: False
 fields:
     - name : Cross-culture AI
     - name : Multimodal learning

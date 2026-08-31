@@ -7,6 +7,7 @@ emoji: "👽"
 position: "Postdoctoral Researcher"
 permalink: people/yeaji.html
 email: 
+display: False
 
 social:
   - title: home

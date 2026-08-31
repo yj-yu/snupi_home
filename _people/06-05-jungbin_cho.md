@@ -7,6 +7,7 @@ emoji: 🐖
 position: "Visiting Scholar"
 permalink: people/jungbin.html
 email: Whwjdqls99@yonsei.ac.kr
+display: False
 
 works: krafton.jpg
 affiliation:

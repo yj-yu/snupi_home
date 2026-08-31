@@ -7,6 +7,7 @@ emoji: 😎
 position: "Visiting Scholar"
 permalink: people/wooseok.html
 email: justin_seo@yonsei.ac.kr
+display: False
 works: microsoft.png
 affiliation:
   label: Visiting Scholar at
