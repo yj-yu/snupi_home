@@ -6932,6 +6932,7 @@ svg:not(:root) {
   display: block !important;
   height: 126px !important;
   object-fit: cover !important;
+  object-position: var(--member-image-position, center) !important;
   transform: none !important;
   width: 126px !important;
 }

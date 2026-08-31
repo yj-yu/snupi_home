@@ -3,6 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Junhyeok Choi"
 img-filename: choi_junhyeok.jpg
+image_position: center 62%
 emoji: 🎵
 position: "MS/Ph.D. Student"
 permalink: people/junhyeok_choi.html

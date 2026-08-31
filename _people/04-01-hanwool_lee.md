@@ -3,6 +3,7 @@ layout: people-detail
 section-type: people
 fullname: "Hanwool Lee"
 img-filename: lee_hanwool.jpg
+image_position: center 60%
 emoji: 🔥
 position: "MS/Ph.D. Student"
 permalink: people/hanwool_lee.html

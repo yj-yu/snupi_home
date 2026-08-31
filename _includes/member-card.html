@@ -12,7 +12,7 @@
 
 <article class="member-card member-card--{{ card_variant }}">
   <a class="member-card__avatar-link" href="{{ homeurl }}">
-    <img class="member-card__avatar" src="./images/people/{{ member.img-filename }}" alt="{{ member.fullname }}">
+    <img class="member-card__avatar" src="./images/people/{{ member.img-filename }}" alt="{{ member.fullname }}"{% if member.image_position %} style="--member-image-position: {{ member.image_position }};"{% endif %}>
   </a>
 
   <div class="member-card__body">
