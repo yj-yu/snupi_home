@@ -6,7 +6,7 @@ img-filename: lee_hanwool.jpg
 emoji: 🔥
 position: "MS/Ph.D. Student"
 permalink: people/hanwool_lee.html
-email: 
+email: albertmade@snu.ac.kr
 
 works: aim_intelligence.jpg
 affiliation:
@@ -20,9 +20,9 @@ social:
     url: https://www.linkedin.com/in/hanwoolalbert/?locale=en_US
 
 fields:
-    - name: "Safety"
-    - name: "Representation Learning"
-    - name: "Interpretability"
+    - name: "Egocentric Vision"
+    - name: "Agent Safety"
+    - name: "Embodied Safety"
 
 remarks: "Industry-Affiliated Student"
 
