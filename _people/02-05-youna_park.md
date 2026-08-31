@@ -15,11 +15,10 @@ social:
 
 
 fields:
-    - name : World Models
-    - name : Embodied AI
-    - name : Adaptive Computation
+    - name : Video Understanding
+    - name : World Model
+    - name : Adaptive Computing
 
 publications:
 
 ---
-
