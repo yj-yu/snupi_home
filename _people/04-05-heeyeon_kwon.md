@@ -8,6 +8,8 @@ position: "Ph.D. Student"
 permalink: people/heeyeon.html
 email: 
 
+remarks: "Industry-Affiliated Student"
+
 
 fields:
     - name : Robotics
@@ -17,4 +19,3 @@ fields:
 publications:
 
 ---
-
