@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control"
-conference: arXiv
+conference:
 year: 2026
 
 author:

@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "Small Models Scout Bottleneck Order for Large-Model Data Control"
-conference: arXiv
+conference:
 year: 2026
 
 author:

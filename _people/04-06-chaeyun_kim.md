@@ -4,7 +4,7 @@ section-type: people
 fullname: "Chaeyun Kim"
 img-filename: random.png
 emoji: ""
-position: "Student"
+position: "Ph.D. Student"
 permalink: people/chaeyun.html
 email:
 
