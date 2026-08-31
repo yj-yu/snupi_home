@@ -2,7 +2,7 @@
 layout: publications
 section-type: publications
 name: "SafeBranch: Branch-Pair Safety Alignment for Embodied Agents"
-conference:
+conference: EMNLP 2026 Findings
 year: 2026
 
 author:
