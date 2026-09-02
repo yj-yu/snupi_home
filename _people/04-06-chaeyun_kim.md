@@ -8,6 +8,12 @@ position: "Ph.D. Student"
 permalink: people/chaeyun.html
 email: golddohyun@snu.ac.kr
 
+works: aim_intelligence.png
+affiliation:
+  label: Affiliated with
+  logo_alt: AIM Intelligence
+  logo_width: 80px
+
 remarks: "Industry-Affiliated Student"
 
 fields:
