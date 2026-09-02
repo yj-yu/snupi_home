@@ -9,7 +9,7 @@ position: "MS/Ph.D. Student"
 permalink: people/hanwool_lee.html
 email: albertmade@snu.ac.kr
 
-works: aim_intelligence.jpg
+works: aim_intelligence.png
 affiliation:
   label: Affiliated with
   logo_alt: AIM Intelligence
