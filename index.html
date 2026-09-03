@@ -618,10 +618,13 @@ section_id: home
           {% break %}
         {% endif %}
         {% if post.categories contains 'papers' %}
-          <p class="home-news-item">
-            <a class="home-news-link" href="{{post.url}}">{{post.title}} <span class="home-news-date">({{post.date | date: "%Y-%m-%d" }})</span></a>
+          <article class="home-news-item">
+            <div class="home-news-meta">
+              <a class="home-news-link" href="{{post.url}}">{{post.title}}</a>
+              <time class="home-news-date" datetime="{{post.date | date: '%Y-%m-%d'}}">{{post.date | date: "%Y-%m-%d" }}</time>
+            </div>
             <span class="home-news-excerpt">{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt | strip_html | truncate: 84 }}{% endif %}</span>
-          </p>
+          </article>
           {% assign paper_news_count = paper_news_count | plus: 1 %}
         {% endif %}
       {% endfor %}
@@ -634,10 +637,13 @@ section_id: home
           {% break %}
         {% endif %}
         {% if post.categories contains 'others' %}
-          <p class="home-news-item">
-            <a class="home-news-link" href="{{post.url}}">{{post.title}} <span class="home-news-date">({{post.date | date: "%Y-%m-%d" }})</span></a>
+          <article class="home-news-item">
+            <div class="home-news-meta">
+              <a class="home-news-link" href="{{post.url}}">{{post.title}}</a>
+              <time class="home-news-date" datetime="{{post.date | date: '%Y-%m-%d'}}">{{post.date | date: "%Y-%m-%d" }}</time>
+            </div>
             <span class="home-news-excerpt">{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt | strip_html | truncate: 84 }}{% endif %}</span>
-          </p>
+          </article>
           {% assign lab_news_count = lab_news_count | plus: 1 %}
         {% endif %}
       {% endfor %}
