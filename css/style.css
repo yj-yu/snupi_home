@@ -8293,3 +8293,97 @@ svg:not(:root) {
     top: 20px !important;
   }
 }
+
+/* Desktop nav guard: Foundation's top-bar can keep an expanded mobile state
+   when a desktop window is narrowed. Above mobile width, always restore the
+   horizontal navigation and hide the hamburger. */
+@media only screen and (min-width: 768px) {
+  :root {
+    --desktop-nav-height: 80px;
+  }
+
+  .top-bar .toggle-topbar.menu-icon {
+    display: none !important;
+  }
+
+  .top-bar,
+  .top-bar.expanded {
+    height: var(--desktop-nav-height) !important;
+    min-height: var(--desktop-nav-height) !important;
+    overflow: visible !important;
+  }
+
+  .top-bar .title-area {
+    float: left !important;
+  }
+
+  .top-bar .top-bar-section,
+  .top-bar.expanded .top-bar-section {
+    display: block !important;
+    left: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: static !important;
+    right: auto !important;
+    top: auto !important;
+    visibility: visible !important;
+    width: auto !important;
+  }
+
+  .top-bar .top-bar-section ul.right,
+  .top-bar.expanded .top-bar-section ul.right {
+    align-items: center !important;
+    background: transparent !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+    display: flex !important;
+    float: right !important;
+    gap: clamp(12px, 1.6vw, 28px) !important;
+    height: var(--desktop-nav-height) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+  }
+
+  .top-bar .top-bar-section ul.right > li,
+  .top-bar.expanded .top-bar-section ul.right > li {
+    display: block !important;
+    float: none !important;
+    height: var(--desktop-nav-height) !important;
+    min-height: var(--desktop-nav-height) !important;
+    width: auto !important;
+  }
+
+  .top-bar .top-bar-section li:not(.has-form) > a:not(.button),
+  .top-bar.expanded .top-bar-section li:not(.has-form) > a:not(.button) {
+    align-items: center !important;
+    background: transparent !important;
+    border: 0 !important;
+    color: #8a8a8a !important;
+    display: flex !important;
+    font-size: clamp(0.9rem, 1.15vw, 1.08rem) !important;
+    font-weight: 500 !important;
+    height: var(--desktop-nav-height) !important;
+    line-height: var(--desktop-nav-height) !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .top-bar .top-bar-section li.active:not(.has-form) > a:not(.button),
+  .top-bar .top-bar-section ul li.active > a,
+  .top-bar.expanded .top-bar-section li.active:not(.has-form) > a:not(.button),
+  .top-bar.expanded .top-bar-section ul li.active > a {
+    background: transparent !important;
+    border-bottom: 3px solid #5d86d7 !important;
+    border-left: 0 !important;
+    color: #2f5fae !important;
+    font-weight: 720 !important;
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 1181px) {
+  :root {
+    --desktop-nav-height: 88px;
+  }
+}

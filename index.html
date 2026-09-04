@@ -400,6 +400,32 @@ section_id: home
   background: #1267f1;
 }
 
+@media only screen and (max-width: 640px) {
+  .home-latest-nav {
+    display: inline-flex !important;
+    font-size: 1.06rem;
+    height: 34px;
+    top: auto;
+    bottom: 10px;
+    transform: none;
+    width: 34px;
+    z-index: 5;
+  }
+
+  .home-latest-nav.is-prev {
+    left: 12px;
+  }
+
+  .home-latest-nav.is-next {
+    right: 12px;
+  }
+
+  .home-latest-dots {
+    margin-top: 10px;
+    padding: 0 46px;
+  }
+}
+
 .home-news-section {
   padding: 0 0 24px !important;
 }
