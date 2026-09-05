@@ -2,6 +2,7 @@
 layout: publications
 section-type: publications
 name: "Real-Time Execution with Autoregressive Policies"
+conference: CoRL 2026
 year: 2026
 
 author:
@@ -26,6 +27,5 @@ keywords:
   - name: Real-Time Execution
   - name: Robot Learning
 
-display: False
+display: True
 ---
-
