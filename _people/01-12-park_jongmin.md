@@ -6,11 +6,11 @@ img-filename: park_jongmin.jpg
 emoji: "⚽"
 position: "Postdoctoral Researcher"
 permalink: people/jongmin.html
-email: jm.park@kaist.ac.kr
+email: jm.park@snu.ac.kr
 
 social:
   - title: home
-    url: https://sites.google.com/view/jongmin-park
+    url: https://imjongminpark.github.io/
 
 fields:
     - name : 3D Scene Reconstruction
