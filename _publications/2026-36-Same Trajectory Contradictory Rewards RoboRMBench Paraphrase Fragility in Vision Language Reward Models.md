@@ -16,7 +16,10 @@ author:
   - name: "Youngjae Yu"
   - name: "Albert No"
 
-img: comingsoon.jpg
+external:
+  - title: arXiv
+    url: https://arxiv.org/abs/2609.05401
+img: RoboRMBench.png
 
 keywords:
   - name: Vlm
