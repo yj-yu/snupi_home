@@ -2,7 +2,8 @@
 layout: publications
 section-type: publications
 name: "What MLLMs Learn about When they Learn about Multimodal Reasoning"
-year: 2025
+conference: NeurIPS 2026
+year: 2026
 
 author:
   - name: "Jiwan Chung"

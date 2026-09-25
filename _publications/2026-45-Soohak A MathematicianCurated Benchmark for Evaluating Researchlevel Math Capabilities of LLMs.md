@@ -2,6 +2,7 @@
 layout: publications
 section-type: publications
 name: "Soohak: A Mathematician-Curated Benchmark for Evaluating Research-level Math Capabilities of LLMs"
+conference: NeurIPS 2026
 year: 2026
 
 
