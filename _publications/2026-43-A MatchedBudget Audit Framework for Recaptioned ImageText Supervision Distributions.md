@@ -13,7 +13,7 @@ author:
 
 
 
-img: comingsoon.png
+img: comingsoon.jpg
 
 keywords:
   - name: Multimodal
