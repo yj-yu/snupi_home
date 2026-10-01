@@ -267,11 +267,22 @@ section_id: home
 
   .home-projects-hero-actions {
     align-items: stretch;
-    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 8px;
   }
 
   .home-projects-hero-button {
-    width: 100%;
+    flex: 1 1 0;
+    font-size: clamp(0.63rem, 2.95vw, 0.73rem);
+    min-width: 0;
+    padding: 0 7px;
+    white-space: nowrap;
+    width: auto;
+  }
+
+  .home-projects-hero-button::after {
+    font-size: 0.82rem;
+    margin-left: 6px;
   }
 
   .home-projects-hero-wrap .projects-orbit {
