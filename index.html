@@ -145,21 +145,25 @@ section_id: home
 
 .home-projects-hero-wrap .projects-orbit {
   align-self: center;
+  background: #fff;
+  border: 1px solid rgba(194, 215, 246, 0.9);
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(27, 41, 68, 0.08);
   grid-column: 2;
   grid-row: 1;
   margin-top: -8px;
   min-height: 210px;
+  padding: 8px;
   position: relative;
 }
 
 .home-projects-hero-wrap .projects-orbit img {
-  border-radius: 12px;
-  box-shadow: 0 12px 28px rgba(27, 41, 68, 0.12);
+  border-radius: 10px;
   display: block;
   aspect-ratio: 16 / 9;
   height: auto;
   margin: 0 0 0 auto;
-  max-width: 700px;
+  max-width: 100%;
   object-fit: cover;
   object-position: 50% 54%;
   width: 100%;
@@ -214,7 +218,11 @@ section_id: home
   .home-projects-hero-wrap .projects-orbit img {
     margin-left: auto;
     margin-right: auto;
-    max-width: 340px;
+  }
+
+  .home-projects-hero-wrap .projects-orbit {
+    max-width: 356px;
+    padding: 7px;
   }
 }
 
