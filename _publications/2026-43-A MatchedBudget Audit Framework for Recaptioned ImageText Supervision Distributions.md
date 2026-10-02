@@ -13,11 +13,14 @@ author:
 
 
 
-img: comingsoon.jpg
-
+img: arxiv-2610.00952-a-matched-budget-audit-framework-for-recaption.png
 keywords:
-  - name: Multimodal
-  - name: Synthetic Captioning
+  - name: "Multimodal"
+  - name: "NLP"
+  - name: "Computer Vision"
+external:
+  - title: arXiv
+    url: https://arxiv.org/abs/2610.00952
 
 display: False
 ---

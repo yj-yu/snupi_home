@@ -12,6 +12,11 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PROJECT_ROOT="$( cd "$SCRIPT_DIR/.." && pwd )"
 cd "$PROJECT_ROOT"
 
+if [[ "${1:-}" == "--arxiv" ]]; then
+    shift
+    exec python3 "$SCRIPT_DIR/sync_arxiv_publications.py" "$@"
+fi
+
 PUBLICATIONS_DIR="_publications"
 
 echo -e "${BLUE}========================================${NC}"
@@ -141,4 +146,3 @@ EOF
 echo ""
 echo -e "${GREEN}✓ 파일이 생성되었습니다: $filename${NC}"
 echo ""
-
