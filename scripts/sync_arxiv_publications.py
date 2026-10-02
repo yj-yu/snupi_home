@@ -233,9 +233,6 @@ def write_draft(paper: ArxivPaper, figure_path: Path, figure_note: str, keywords
         "author:",
         *[f"  - name: {yaml_string(author)}" for author in paper.authors],
         "",
-        "corresponding_author:",
-        f"  - name: {yaml_string(TARGET_NAME)}",
-        "",
         "external:",
         "  - title: arXiv",
         f"    url: {paper.abs_url}",
@@ -273,7 +270,6 @@ def update_existing_draft(
     figure_path: Path,
     figure_note: str,
     keywords: list[str],
-    corresponding_confirmed: bool,
 ) -> Path:
     text = destination.read_text(encoding="utf-8")
     parts = text.split("---", 2)
@@ -283,8 +279,6 @@ def update_existing_draft(
     lines = replace_front_matter_section(lines, "external", ["external:", "  - title: arXiv", f"    url: {paper.abs_url}"])
     lines = replace_front_matter_section(lines, "img", [f"img: {figure_path.name}"])
     lines = replace_front_matter_section(lines, "keywords", ["keywords:", *[f"  - name: {yaml_string(keyword)}" for keyword in keywords]])
-    if corresponding_confirmed:
-        lines = replace_front_matter_section(lines, "corresponding_author", ["corresponding_author:", f"  - name: {yaml_string(TARGET_NAME)}"])
     destination.write_text("---\n" + "\n".join(lines).rstrip() + "\n---" + parts[2], encoding="utf-8")
     print(f"Updated existing draft: {destination.relative_to(ROOT)}")
     print(f"  Figure source: {figure_note}")
@@ -389,7 +383,7 @@ def main() -> int:
                 figure_note = extract_figure(result["pdf_path"], figure_path)  # type: ignore[arg-type]
                 if destination:
                     update_existing_draft(
-                        destination, paper, figure_path, figure_note, result["keywords"], result["corresponding_confirmed"]  # type: ignore[arg-type]
+                        destination, paper, figure_path, figure_note, result["keywords"]  # type: ignore[arg-type]
                     )
                 else:
                     write_draft(paper, figure_path, figure_note, result["keywords"])  # type: ignore[arg-type]

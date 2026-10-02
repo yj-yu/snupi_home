@@ -18,12 +18,10 @@ author:
   - name: "Jongmin Park"
   - name: "Youngjae Yu"
 
-corresponding_author:
-  - name: "Youngjae Yu"
 external:
   - title: arXiv
     url: https://arxiv.org/abs/2610.02089
-img: arxiv-2610.02089-humanoidtoolbench-benchmarking-humanoid-tool-u.png
+img: humanoidtoolbench-overview.png
 keywords:
   - name: "Robotics"
   - name: "Benchmark"

@@ -13,7 +13,7 @@ author:
 
 
 
-img: arxiv-2610.00952-a-matched-budget-audit-framework-for-recaption.png
+img: matched-budget-audit-results.png
 keywords:
   - name: "Multimodal"
   - name: "NLP"
@@ -24,4 +24,3 @@ external:
 
 display: False
 ---
-
