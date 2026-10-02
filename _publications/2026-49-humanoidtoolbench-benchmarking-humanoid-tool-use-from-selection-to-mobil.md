@@ -25,6 +25,6 @@ img: humanoidtoolbench-overview.png
 keywords:
   - name: "Robotics"
   - name: "Benchmark"
-  - name: "Machine Learning"
+  - name: "Humanoid"
 display: False
 ---
