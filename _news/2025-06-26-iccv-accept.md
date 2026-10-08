@@ -7,7 +7,7 @@ type: papers
 emoji: 🎉
 year: 2025
 date: 2025-06-26
-summary: "세 편의 논문이 ICCV2025에 accept되었습니다."
+summary: "Three papers were accepted to ICCV 2025."
 body: "
 
 V.I.P.: Iterative Online Preference Distillation for Efficient Video Diffusion Models
@@ -23,10 +23,9 @@ VAGUE: Visual Contexts Clarify Ambiguous Expressions
 - Heejeong Nam, Jinwoo Ahn, Keummin Ka, Jiwan Chung, Youngjae Yu
 
 
-이 세 편의 논문이 ICCV2025에 accept되었습니다. 진심으로 축하드립니다! 🥳👍
+These three papers were accepted to ICCV 2025. Congratulations! 🥳👍
 
   "
 excerpt: >
 categories: news papers
 ---
-

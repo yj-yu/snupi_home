@@ -7,17 +7,16 @@ type: papers
 emoji: 🎉
 year: 2024
 date: 2024-09-26
-summary: "최예진 학생의 논문이 NeurIPS2024에 accept되었습니다."
+summary: "A paper by Yejin Choi was accepted to NeurIPS 2024."
 body: "
 
 Towards Visual Text Design Transfer Across Languages
  - Yejin Choi, Jiwan Chung, Sumin Shim, Giyeong Oh, Youngjae Yu
 
 
-이 NeurIPS2024에 accept되었습니다. 진심으로 축하드립니다! 😃🥳👍
+This paper was accepted to NeurIPS 2024. Congratulations! 😃🥳👍
 
   "
 excerpt: >
 categories: news papers
 ---
-

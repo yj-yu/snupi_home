@@ -5773,12 +5773,14 @@ svg:not(:root) {
   .news-list-card.modIconText,
   .news-list-card {
     box-sizing: border-box;
-    grid-template-columns: 36px minmax(0, 1fr);
-    column-gap: 10px;
+    column-gap: 8px;
+    grid-template-columns: 36px minmax(0, 1fr) 22px;
+    grid-template-rows: auto 22px;
+    row-gap: 4px;
     max-width: 100%;
-    min-height: 68px;
+    min-height: 0;
     overflow: visible;
-    padding: 10px 12px;
+    padding: 9px 10px;
     width: 100%;
   }
 
@@ -5787,45 +5789,50 @@ svg:not(:root) {
     font-size: 0.96rem;
     height: 36px;
     width: 36px;
+    align-self: start;
+    grid-column: 1;
+    grid-row: 1;
   }
 
   .news-list-main {
     gap: 6px;
     min-width: 0;
     overflow: visible;
+    grid-column: 2 / 4;
+    grid-row: 1;
   }
 
   .news-list-title {
-    font-size: 0.94rem;
-    line-height: 1.24;
+    font-size: 0.89rem;
+    line-height: 1.2;
     overflow-wrap: anywhere;
     white-space: normal;
     word-break: normal;
   }
 
   .news-list-badge {
-    font-size: 0.66rem;
-    padding: 4px 8px;
+    font-size: 0.63rem;
+    padding: 4px 7px;
   }
 
   .news-list-date {
     color: #8a94a3;
-    font-size: 0.74rem;
+    font-size: 0.7rem;
     grid-column: 2;
     grid-row: 2;
-    justify-self: start;
-    margin-top: 0;
+    justify-self: end;
+    margin: 0;
   }
 
   .news-list-arrow {
-    align-self: center;
-    font-size: 0.82rem;
-    grid-column: 1;
+    align-self: end;
+    font-size: 0.76rem;
+    grid-column: 3;
     grid-row: 2;
-    height: 22px;
-    justify-self: center;
-    margin-top: 1px;
-    width: 22px;
+    height: 20px;
+    justify-self: end;
+    margin: 0;
+    width: 20px;
   }
 }
 

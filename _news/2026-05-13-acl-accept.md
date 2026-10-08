@@ -7,7 +7,7 @@ type: papers
 emoji: 🎉
 year: 2026
 date: 2026-05-13
-summary: "아홉 편의 논문이 ACL 2026에 accept되었습니다."
+summary: "Nine papers were accepted to ACL 2026."
 body: "
 
 GuideDog: A Real-World Egocentric Multimodal Dataset for Blind and Low-Vision Accessibility-Aware Guidance
@@ -46,7 +46,7 @@ Tracing Mathematical Proficiency Through Problem-Solving Processes
 
 - Jungyang Park, Suho Kang, Jaewoo Park, Jae Hong Kim, Jaewoo Shin, Seonjoon Park, Youngjae Yu
 
-이 아홉 편의 논문이 ACL 2026에 accept되었습니다. 진심으로 축하드립니다! 🥳👍
+These nine papers were accepted to ACL 2026. Congratulations! 🥳👍
 
   "
 excerpt: >

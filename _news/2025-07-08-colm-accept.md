@@ -7,7 +7,7 @@ type: papers
 emoji: 🎉
 year: 2025
 date: 2025-07-08
-summary: "세 편의 논문이 COLM2025에 accept되었습니다."
+summary: "Three papers were accepted to COLM 2025."
 body: "
 
 Verifying the Verifiers: Unveiling Pitfalls and Potentials in Fact Verifiers
@@ -23,10 +23,9 @@ HIPPO-VIDEO : Simulating Watch Histories with Large Language Models for History-
 - Jeongeun Lee, Youngjae Yu, Dongha Lee
 
 
-이 세 편의 논문이 COLM2025에 accept되었습니다. 진심으로 축하드립니다! 🥳👍👍👍👍👍
+These three papers were accepted to COLM 2025. Congratulations! 🥳👍👍👍👍👍
 
   "
 excerpt: >
 categories: news papers
 ---
-

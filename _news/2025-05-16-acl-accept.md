@@ -7,7 +7,7 @@ type: papers
 emoji: 🎉
 year: 2025
 date: 2025-05-16
-summary: "네 편의 논문이 ACL2025에 accept되었습니다."
+summary: "Four papers were accepted to ACL 2025."
 body: "
 
 Speaking Beyond Language: A Large-Scale Multimodal Dataset for Learning Nonverbal Cues from Video-Grounded Dialogues
@@ -25,10 +25,9 @@ Representation Bending for Large Language Model Safety
 - Persona Dynamics: Unveiling the Impact of Persona Traits on Agents in Text-Based Games
 Seungwon Lim, Seungbeen Lee, Dongjun Min, Youngjae Yu
 
-이 네 편의 논문이 ACL2025에 accept되었습니다. 진심으로 축하드립니다! 🥳👍
+These four papers were accepted to ACL 2025. Congratulations! 🥳👍
 
   "
 excerpt: >
 categories: news papers
 ---
-

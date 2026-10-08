@@ -6,7 +6,7 @@ type: papers
 emoji: 🎉
 year: 2023
 date: 2023-10-08
-summary: "정지완, 한승주 학생의 논문이 EMNLP 2023에 accept되었습니다."
+summary: "Papers by Jiwan Chung and Seungju Han were accepted to EMNLP 2023."
 body: "
 
 
@@ -19,7 +19,7 @@ SODA: Million-scale Dialogue Distillation with Social Commonsense Contextualizat
 Dialogue Chain-of-Thought Distillation for Commonsense-aware Conversational Agents
 -Hyungjoo Chae, Yongho Song, Kai Tzu-iunn Ong, Taeyoon Kwon, Minjin Kim, Youngjae Yu, Dongha Lee, Dongyeop Kang, Jinyoung Yeo
 
-이 EMNLP2023에 accept되었습니다. 진심으로 축하드립니다!
+These papers were accepted to EMNLP 2023. Congratulations!
 
   "
 excerpt: >

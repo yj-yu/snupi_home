@@ -7,12 +7,12 @@ type: papers
 emoji: 🎉
 year: 2024
 date: 2024-08-15
-summary: "유영재 교수님이 참여지도한 논문이 ACL2024에서 Outstanding Paper에 선정되었습니다!"
+summary: "A paper co-advised by Professor Youngjae Yu received an Outstanding Paper Award at ACL 2024."
 body: "
 
 Can Large Language Models be Good Emotional Supporter? Mitigating Preference Bias on Emotional Support Conversation 
 
-유영재 교수님이 참여지도한 논문이 ACL2024에서 Outstanding Paper에 선정되었습니다. 축하드립니다!
+A paper co-advised by Professor Youngjae Yu received an Outstanding Paper Award at ACL 2024. Congratulations!
 
   "
 excerpt: >

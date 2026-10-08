@@ -7,7 +7,7 @@ type: papers
 emoji: 🎉
 year: 2025
 date: 2025-08-21
-summary: "다섯 편의 논문이 EMNLP2025에 accept되었습니다."
+summary: "Five papers were accepted to EMNLP 2025."
 body: "
 
 Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safety of LLMs for Embodied Decision Making
@@ -29,10 +29,9 @@ MAVL: A Multilingual Audio-Video Lyrics Dataset for Animated Song Translation
 Multimodal UNcommonsense: From Odd to Ordinary and Ordinary to Odd
 - Yejin Son*, Saejin Kim*, Dongjun Min, Youngjae Yu
 
-이 다섯 편의 논문이 EMNLP2025에 accept되었습니다. 진심으로 축하드립니다! 🥳👍🎉🎉🎉🎉
+These five papers were accepted to EMNLP 2025. Congratulations! 🥳👍🎉🎉🎉🎉
 
   "
 excerpt: >
 categories: news papers
 ---
-

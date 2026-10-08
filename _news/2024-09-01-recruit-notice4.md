@@ -1,16 +1,16 @@
 ---
 layout: news-detail
-title: 입학을 축하합니다!
+title: Welcome Our New Members!
 subtitle: recruit-notice4
 type: others
 emoji: 🏫
 year: 2024
 date: 2024-09-01
-summary: "다섯 학생이 연구실에 합류했습니다. 입학을 축하드립니다!"
+summary: "Five students joined PI Lab. Welcome!"
 body: "
 
-석박통합과정 조우현, 김민서, 송인성
-석사과정 조정빈, 황순민
+MS/Ph.D. Students: Woohyun Cho, Minseo Kim, Inseong Song
+M.S. Students: Jungbin Cho, Soonmin Hwang
   "
 excerpt: >
 categories: news others

@@ -7,7 +7,7 @@ type: papers
 emoji: 🎉
 year: 2025
 date: 2025-06-18
-summary: "김영민, 김세진 학생의 논문이 MICCAI2025에 accept되었습니다."
+summary: "A paper by Youngmin Kim and Saejin Kim was accepted to MICCAI 2025."
 body: "
 
 Scalp Diagnostic System With Label-Free Segmentation and Training-Free Image Translation
@@ -15,11 +15,10 @@ Scalp Diagnostic System With Label-Free Segmentation and Training-Free Image Tra
 - Youngmin Kim*, Saejin Kim*, Hoyeon Moon, Youngjae Yu, Junhyug Noh
 
 
-이 MICCAI2025에 accept되었습니다.
-우리 연구실의 첫 Medical Conference 논문입니다! 진심으로 축하드립니다! 🥳👍
+This paper was accepted to MICCAI 2025.
+This is PI Lab's first paper at a medical conference. Congratulations! 🥳👍
 
   "
 excerpt: >
 categories: news papers
 ---
-

@@ -7,7 +7,7 @@ type: papers
 emoji: 🎉
 year: 2025
 date: 2025-01-23
-summary: "세 편의 논문이 NAACL2025에 accept되었습니다."
+summary: "Three papers were accepted to NAACL 2025."
 body: "
 
 Do LLMs Have Distinct and Consistent Personality? TRAIT: Personality Testset designed for LLMs with Psychometrics
@@ -20,10 +20,9 @@ C2: Scalable Auto-Feedback for LLM-based Chart Generation
  - Woosung Koh*, Jang Han Yoon*, MinHyung Lee, Youngjin Song, Jaegwan Cho, Jaehyun Kang, Taehyeon Kim, Se-young Yun, Youngjae Yu, Bongshin Lee
 
 
-이 NAACL2025에 accept되었습니다. 진심으로 축하드립니다! 🥳👍
+These papers were accepted to NAACL 2025. Congratulations! 🥳👍
 
   "
 excerpt: >
 categories: news papers
 ---
-

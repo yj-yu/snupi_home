@@ -1,17 +1,17 @@
 ---
 layout: news-detail
-title: 입학을 축하합니다!
+title: Welcome Our New Members!
 subtitle: recruit-notice
 type: others
 emoji: 🏫
 year: 2023
 date: 2023-02-24
-summary: "다섯 학생이 연구실에 합류했습니다. 입학을 축하드립니다!"
+summary: "Five students joined PI Lab. Welcome!"
 body: "
 
-박사과정 정지완, 김준혁
-석박통합과정 김세진, 임승원
-석사과정 이상규
+Ph.D. Students: Jiwan Chung, Junhyeok Kim
+MS/Ph.D. Students: Saejin Kim, Seungwon Lim
+M.S. Student: Sangkyu Lee
   "
 excerpt: >
 categories: news others

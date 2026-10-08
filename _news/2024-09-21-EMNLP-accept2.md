@@ -7,7 +7,7 @@ type: papers
 emoji: 🎉
 year: 2024
 date: 2024-09-21
-summary: "다섯 편의 논문이 EMNLP2024에 accept되었습니다."
+summary: "Five papers were accepted to EMNLP 2024."
 body: "
 
 Can visual language models resolve textual ambiguity with visual cues? Let visual puns tell you!
@@ -21,10 +21,9 @@ How to Train Your Fact Verifier: Knowledge Transfer with Multimodal Open Models
 Cactus: Towards Psychological Counseling Conversations using Cognitive Behavioral Theory
 
 
-이 EMNLP2024에 accept되었습니다. 진심으로 축하드립니다!
+These papers were accepted to EMNLP 2024. Congratulations!
 
   "
 excerpt: >
 categories: news papers
 ---
-

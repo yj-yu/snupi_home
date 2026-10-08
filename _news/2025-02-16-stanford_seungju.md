@@ -1,15 +1,15 @@
 ---
 layout: news-detail
-title: 한승주 학생이 Stanford Computer Science 전공 Ph.D Course에 합격했습니다!
+title: Seungju Han Admitted to Stanford's Ph.D. Program in Computer Science
 subtitle: stanford_seungju
 type: others
 emoji: 🥳
 year: 2025
 date: 2025-02-16
-summary: "한승주 학생이 Stanford Computer Science 전공 Ph.D Course에 합격했습니다!"
+summary: "Seungju Han was admitted to Stanford's Ph.D. program in Computer Science."
 body: "
 
-한승주 학생이 스탠퍼드 대학교 Computer Science 전공 박사과정에 합격했습니다! 축하합니다 🥳🥳
+Seungju Han was admitted to Stanford University's Ph.D. program in Computer Science. Congratulations! 🥳🥳
 
   "
 excerpt: >

@@ -20,4 +20,3 @@ fields:
 publications:
 
 ---
-

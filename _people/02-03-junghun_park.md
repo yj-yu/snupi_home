@@ -16,4 +16,3 @@ fields:
 publications:
 
 ---
-

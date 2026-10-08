@@ -7,7 +7,7 @@ type: papers
 emoji: 🎉
 year: 2026
 date: 2026-06-18
-summary: "두 편의 논문이 ECCV 2026에 accept되었습니다."
+summary: "Two papers were accepted to ECCV 2026."
 body: "
 
 Spanning Tree Autoregressive Visual Generation
@@ -18,7 +18,7 @@ JointHOI: Jointly Generating Contact Maps Enhances Hand Object Interaction Gener
 
 - Mingyeong Song, Jungbin Cho, Jisoo Kim, Ananya Bal, Kartik Sharma, Youngjae Yu, Laszlo A. Jeni, Junhyug Noh
 
-이 두 편의 논문이 ECCV 2026에 accept되었습니다. 진심으로 축하드립니다! 🥳👍
+These two papers were accepted to ECCV 2026. Congratulations! 🥳👍
 
   "
 excerpt: >

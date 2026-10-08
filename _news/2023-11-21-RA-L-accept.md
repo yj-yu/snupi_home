@@ -7,14 +7,14 @@ type: papers
 emoji: 🎉
 year: 2023
 date: 2023-11-21
-summary: "임승원 학생이 참여한 논문이 RA-L/ICRA2024에 accept되었습니다."
+summary: "A paper co-authored by Seungwon Lim was accepted to RA-L/ICRA 2024."
 body: "
 
 
 CLARA: Classifying and Disambiguating User Commands for Reliable
 Interactive Robotic Agents
 
-이 RA-L/ICRA2024에 accept되었습니다. 진심으로 축하드립니다!🥳🥳🥳👍
+This paper was accepted to RA-L/ICRA 2024. Congratulations! 🥳🥳🥳👍
 
   "
 excerpt: >
