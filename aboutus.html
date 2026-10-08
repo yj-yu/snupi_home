@@ -18,7 +18,8 @@ permalink: aboutus.html
   background:
     radial-gradient(circle at 50% 12%, rgba(247, 251, 255, 0.72) 0 18%, rgba(247, 251, 255, 0) 46%),
     linear-gradient(180deg, #fff 0%, #f9fbfe 100%) !important;
-  min-height: 260px !important;
+  min-height: 224px !important;
+  padding: 28px 0 30px !important;
   overflow: hidden !important;
   position: relative;
 }
@@ -140,17 +141,24 @@ permalink: aboutus.html
 }
 
 .about-hero-layout {
-  align-items: center;
-  display: grid;
-  gap: 42px;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
-  margin: 14px auto 0;
-  max-width: 1040px;
+  isolation: isolate;
+  margin: 16px auto 0;
+  max-width: 860px;
+  min-height: 104px;
+  overflow: hidden;
+  padding: 18px 118px 18px 26px;
+  position: relative;
 }
 
 .about-hero-orbit {
+  bottom: -146px;
   margin: 0;
-  width: 100%;
+  opacity: 0.15;
+  pointer-events: none;
+  position: absolute;
+  right: -68px;
+  width: 348px;
+  z-index: 0;
 }
 
 .about-hero-orbit img {
@@ -158,6 +166,12 @@ permalink: aboutus.html
   height: auto;
   max-width: 100%;
   width: 100%;
+}
+
+.about-hero-layout .about-intro {
+  max-width: 640px;
+  position: relative;
+  z-index: 1;
 }
 
 .about-lede strong {
@@ -982,6 +996,7 @@ permalink: aboutus.html
 
   .projects-page-title.site-page-hero {
     min-height: 218px !important;
+    padding: 8px 0 14px !important;
   }
 
   .about-overview {
@@ -1009,6 +1024,7 @@ permalink: aboutus.html
     opacity: 0.12;
     pointer-events: none;
     position: absolute;
+    width: auto;
     z-index: 0;
   }
 

@@ -62,8 +62,10 @@ count_year_min: 2023
             </span>
             <span class="news-list-meta">
               <span class="news-list-badge {{news_tag_class}}">{{news_tag}}</span>
-              <time class="news-list-date" datetime="{{paper.date | date: '%Y-%m-%d'}}">{{paper.date | date: "%Y-%m-%d"}}</time>
-              <span class="news-list-arrow">View →</span>
+              <span class="news-list-actions">
+                <time class="news-list-date" datetime="{{paper.date | date: '%Y-%m-%d'}}">{{paper.date | date: "%Y-%m-%d"}}</time>
+                <span class="news-list-arrow">Read more →</span>
+              </span>
             </span>
           </a>
         </div>

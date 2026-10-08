@@ -5668,10 +5668,17 @@ svg:not(:root) {
 .news-list-meta {
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px 10px;
+  gap: 10px;
   grid-column: 2;
   grid-row: 2;
+  min-width: 0;
+}
+
+.news-list-actions {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
   min-width: 0;
 }
 
@@ -5824,11 +5831,14 @@ svg:not(:root) {
   }
 
   .news-list-meta {
-    flex-wrap: nowrap;
     gap: 7px;
     grid-column: 2;
     grid-row: 2;
     min-width: 0;
+  }
+
+  .news-list-actions {
+    gap: 8px;
   }
 
   .news-list-date {
