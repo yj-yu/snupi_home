@@ -59,10 +59,12 @@ count_year_min: 2023
             <span class="news-list-icon" aria-hidden="true">{{news_icon}}</span>
             <span class="news-list-main">
               <span class="news-list-title">{{paper.title}}</span>
-              <span class="news-list-badge {{news_tag_class}}">{{news_tag}}</span>
             </span>
-            <time class="news-list-date" datetime="{{paper.date | date: '%Y-%m-%d'}}">{{paper.date | date: "%Y-%m-%d"}}</time>
-            <span class="news-list-arrow" aria-hidden="true">›</span>
+            <span class="news-list-meta">
+              <span class="news-list-badge {{news_tag_class}}">{{news_tag}}</span>
+              <time class="news-list-date" datetime="{{paper.date | date: '%Y-%m-%d'}}">{{paper.date | date: "%Y-%m-%d"}}</time>
+              <span class="news-list-arrow">View →</span>
+            </span>
           </a>
         </div>
 

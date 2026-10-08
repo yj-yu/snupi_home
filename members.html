@@ -2899,6 +2899,49 @@ input:checked + .slider:before {
   transform: none !important;
 }
 
+@media only screen and (max-width: 640px) {
+  .people-content {
+    padding-bottom: 44px !important;
+  }
+
+  .people-content .row.member-section-block {
+    margin-bottom: 20px !important;
+  }
+
+  .people-content .row.member-section-block.first-member-section {
+    margin-bottom: 16px !important;
+  }
+
+  .people-content .member-section-block > .medium-12.columns > h2 {
+    margin-bottom: 8px !important;
+  }
+
+  .people-content .member-section-block > .member-grid:not(.professor-grid):not(.postdoc-grid) {
+    gap: 10px !important;
+  }
+
+  .people-content .member-section-block > .member-grid:not(.professor-grid):not(.postdoc-grid) > .member-card--standard {
+    min-height: 166px !important;
+    padding: 10px 8px !important;
+  }
+
+  .people-content .member-card--standard .member-card__avatar-link,
+  .people-content .member-card--standard .member-card__avatar,
+  .people-content .member-card--standard img.member-card__avatar {
+    height: 72px !important;
+    max-height: 72px !important;
+    max-width: 72px !important;
+    min-height: 72px !important;
+    min-width: 72px !important;
+    width: 72px !important;
+  }
+
+  .people-content .member-card--feature {
+    gap: 12px !important;
+    padding: 12px !important;
+  }
+}
+
 </style>
 
 <div class='full parallax site-page-hero'>
