@@ -8419,3 +8419,23 @@ svg:not(:root) {
     padding: 0 !important;
   }
 }
+
+/* Keep paper titles as the primary reading cue and distinguish PI Lab authors
+   without competing with the title color. */
+.publication-card h3 {
+  font-size: 1.38rem !important;
+  font-weight: 800 !important;
+  line-height: 1.28 !important;
+}
+
+.publication-card .publication-lab-author {
+  color: inherit !important;
+  font-weight: 750 !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .publication-card h3 {
+    font-size: 1.06rem !important;
+    line-height: 1.28 !important;
+  }
+}
