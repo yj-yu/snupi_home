@@ -1,7 +1,7 @@
 ---
 layout: people-detail
 section-type: people
-fullname: "Linus"
+fullname: "Linus & Sally"
 img-filename: ur12e.webp
 emoji: "🦾"
 position: "Lab Robot"
