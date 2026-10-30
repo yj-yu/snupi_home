@@ -2,7 +2,7 @@
 layout: people-detail
 section-type: people
 fullname: "Snoopy"
-img-filename: robot-placeholder.svg
+img-filename: snoopy.png
 emoji: "🤖"
 position: "Lab Robot"
 permalink: "#"

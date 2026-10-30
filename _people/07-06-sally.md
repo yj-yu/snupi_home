@@ -2,7 +2,7 @@
 layout: people-detail
 section-type: people
 fullname: "Sally"
-img-filename: robot-placeholder.svg
+img-filename: ur12e.webp
 emoji: "🦾"
 position: "Lab Robot"
 permalink: "#"

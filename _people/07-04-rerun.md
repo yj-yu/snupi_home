@@ -2,7 +2,7 @@
 layout: people-detail
 section-type: people
 fullname: "Rerun"
-img-filename: robot-placeholder.svg
+img-filename: franka_research_3.png
 emoji: "🦾"
 position: "Lab Robot"
 permalink: "#"
