@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">PI Lab robot placeholder</title>
+  <desc id="desc">A simple blue robot illustration on a light background.</desc>
+  <rect width="512" height="512" fill="#eef6ff"/>
+  <circle cx="256" cy="256" r="190" fill="#dcecff"/>
+  <path d="M256 83v48M229 83h54" fill="none" stroke="#2769b4" stroke-linecap="round" stroke-width="16"/>
+  <rect x="126" y="130" width="260" height="195" rx="42" fill="#fff" stroke="#2769b4" stroke-width="14"/>
+  <circle cx="205" cy="220" r="26" fill="#2769b4"/>
+  <circle cx="307" cy="220" r="26" fill="#2769b4"/>
+  <path d="M194 275c33 24 91 24 124 0" fill="none" stroke="#5e91cb" stroke-linecap="round" stroke-width="14"/>
+  <path d="M156 340h200l31 88H125z" fill="#76a7dd" stroke="#2769b4" stroke-linejoin="round" stroke-width="14"/>
+  <path d="M164 381H92M348 381h72" fill="none" stroke="#2769b4" stroke-linecap="round" stroke-width="18"/>
+  <text x="256" y="475" fill="#2769b4" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="3" text-anchor="middle">PI LAB ROBOT</text>
+</svg>
