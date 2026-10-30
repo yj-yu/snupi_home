@@ -8,7 +8,7 @@ position: "Lab Robot"
 permalink: "#"
 
 fields:
-  - name: "Universal Robots UR12e #2"
+  - name: "UR12e"
 
 publications:
 ---

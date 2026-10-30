@@ -8,7 +8,7 @@ position: "Lab Robot"
 permalink: "#"
 
 fields:
-  - name: "Franka Panda (Legacy)"
+  - name: "Franka Emika Panda"
 
 publications:
 ---
