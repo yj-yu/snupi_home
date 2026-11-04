@@ -15,8 +15,9 @@ social:
 
 
 fields:
-    - name : On-Device sVLM
-    - name : Visual Grounding
+    - name : Physical Agentic AI
+    - name : Action Generation
+    - name : Humanoid
 
 publications:
 ---
