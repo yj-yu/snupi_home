@@ -35,7 +35,7 @@ section_id: home
 .winter-home #main {
   background: transparent;
   isolation: isolate;
-  padding-bottom: clamp(240px, 28vw, 450px);
+  padding-bottom: clamp(200px, 22vw, 340px);
   position: relative;
 }
 
@@ -227,13 +227,13 @@ section_id: home
 .winter-snow-dots {
   color: #aac8de;
   inset: 0;
-  opacity: 0.56;
+  opacity: 0.5;
   position: absolute;
 }
 
 .winter-snow-dots span {
   font-family: "Helvetica Neue", "Segoe UI Symbol", sans-serif;
-  font-size: calc(var(--s, 17px) * 1.9);
+  font-size: calc(var(--s, 17px) * 2.25);
   font-variant-emoji: text;
   left: var(--x);
   line-height: 1;
@@ -244,6 +244,19 @@ section_id: home
 .winter-snow-dots span:nth-child(3n) { opacity: 0.7; transform: rotate(20deg); }
 .winter-snow-dots span:nth-child(4n) { transform: rotate(-15deg) scale(1.15); }
 .winter-snow-dots span:nth-child(5n) { opacity: 0.65; }
+
+.winter-snow-dots .snow-dot {
+  background: currentColor;
+  border-radius: 50%;
+  height: var(--s, 6px);
+  width: var(--s, 6px);
+  opacity: 0.55;
+}
+
+.winter-snow-dots .snow-dot:nth-child(even) {
+  box-shadow: 0 0 8px rgba(170, 200, 222, 0.25);
+  opacity: 0.8;
+}
 
 .winter-home .contain-to-grid,
 .winter-home .contain-to-grid .top-bar {
@@ -868,7 +881,7 @@ section_id: home
 }
 
 .home-news-section {
-  padding: 0 0 24px !important;
+  padding: 0 0 12px !important;
 }
 
 .home-news-grid-row {
