@@ -993,6 +993,66 @@ ul.shortcode-list i {
   white-space: nowrap;
 }
 
+.site-logo-winter-wrap {
+  display: inline-block;
+  height: 62px;
+  position: relative;
+}
+
+.contain-to-grid .title-area a.site-logo img.site-logo-winter-base {
+  display: block;
+  margin-top: 0 !important;
+}
+
+.contain-to-grid .title-area a.site-logo img.site-logo-santa-hat {
+  height: auto !important;
+  left: -7px;
+  margin: 0 !important;
+  max-height: none !important;
+  pointer-events: none;
+  position: absolute;
+  top: -4px;
+  width: 46px !important;
+  z-index: 2;
+}
+
+.winter-header {
+  position: relative;
+}
+
+.winter-header .winter-header-pine {
+  height: auto;
+  max-width: 200px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 13vw;
+  z-index: 3;
+}
+
+.projects-orbit .projects-orbit-holly {
+  aspect-ratio: auto !important;
+  border-radius: 0 !important;
+  display: block;
+  height: auto;
+  left: -8px;
+  margin: 0 !important;
+  max-width: none !important;
+  pointer-events: none;
+  position: absolute;
+  top: -9px;
+  width: 67px !important;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 640px) {
+  .winter-header .winter-header-pine,
+  .projects-orbit .projects-orbit-holly {
+    display: none;
+  }
+}
+
 .contain-to-grid .title-area a.site-logo .site-logo-symbol {
   flex: 0 0 auto;
   height: 48px !important;
