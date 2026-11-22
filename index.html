@@ -136,9 +136,9 @@ section_id: home
   .winter-classic-santa { bottom: 110px; right: 0; width: 165px; height: 85px; background-size: 460px auto; background-position: right -55px; }
   .home-winter-scene .edge-teddies { bottom: 125px; width: 72px; }
   .winter-restored-snowman { bottom: 110px; width: 94px; height: 125px; background-size: 330px auto; }
-  .home-winter-scene .edge-ladder { bottom: 10px; }
-  .home-winter-scene .edge-running { bottom: 6px; }
-  .home-winter-scene .edge-plush { bottom: 6px; left: 20%; }
+  .home-winter-scene .edge-ladder { bottom: 12px; right: 1%; width: 28px; height: 62px; }
+  .home-winter-scene .edge-running { bottom: 4px; left: auto; right: 17%; width: 26px; height: 32px; }
+  .home-winter-scene .edge-plush { bottom: 4px; left: auto; right: 9%; width: 26px; height: 32px; }
   .home-winter-scene .edge-humanoid-cookie { top: 50px; }
 }
 
@@ -225,19 +225,25 @@ section_id: home
 }
 
 .winter-snow-dots {
-  color: #91b6d5;
+  color: #aac8de;
   inset: 0;
-  opacity: 0.72;
+  opacity: 0.56;
   position: absolute;
 }
 
 .winter-snow-dots span {
-  font-size: calc(var(--s, 17px) * 1.65);
+  font-family: "Helvetica Neue", "Segoe UI Symbol", sans-serif;
+  font-size: calc(var(--s, 17px) * 1.9);
+  font-variant-emoji: text;
   left: var(--x);
   line-height: 1;
   position: absolute;
   top: var(--y);
 }
+
+.winter-snow-dots span:nth-child(3n) { opacity: 0.7; transform: rotate(20deg); }
+.winter-snow-dots span:nth-child(4n) { transform: rotate(-15deg) scale(1.15); }
+.winter-snow-dots span:nth-child(5n) { opacity: 0.65; }
 
 .winter-home .contain-to-grid,
 .winter-home .contain-to-grid .top-bar {
@@ -266,6 +272,7 @@ section_id: home
 
 .home-winter-scene::before {
   background-position: left top;
+  filter: saturate(0.65) contrast(0.92) brightness(1.04);
   height: 185px;
   top: 0;
   mask-image: linear-gradient(#000 72%, transparent);
@@ -273,6 +280,7 @@ section_id: home
 
 .winter-scene-top-right {
   background-position: right top;
+  filter: saturate(0.65) contrast(0.92) brightness(1.04);
   height: 70px;
   left: auto;
   right: 0;

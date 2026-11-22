@@ -1006,15 +1006,15 @@ ul.shortcode-list i {
 
 .contain-to-grid .title-area a.site-logo img.site-logo-santa-hat {
   height: auto !important;
-  left: -1.5%;
+  left: -1%;
   margin: 0 !important;
   max-height: none !important;
   pointer-events: none;
   position: absolute;
   top: 0;
-  transform: translateY(-33%) rotate(-8deg);
+  transform: translateY(-33%) rotate(8deg);
   transform-origin: 70% 80%;
-  width: 18% !important;
+  width: 22% !important;
   z-index: 2;
 }
 
