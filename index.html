@@ -15,20 +15,21 @@ section_id: home
 <style>
 .winter-home {
   background: #f7fbff;
+  isolation: isolate;
 }
 
 .winter-home #main {
-  background: #f7fbff;
-  isolation: isolate;
+  background: transparent;
   position: relative;
 }
 
 .home-winter-scene {
-  inset: 0;
+  background: #f7fbff url('./images/home/christmas-village-wallpaper.png') center / 100% 100% no-repeat;
+  inset: 80px 0 0;
   overflow: hidden;
   pointer-events: none;
   position: fixed;
-  z-index: 0;
+  z-index: -1;
 }
 
 .home-winter-scene img {
@@ -62,6 +63,7 @@ section_id: home
 .home-winter-scene .winter-flake.ten { left: 54%; top: 77%; width: 17px; }
 
 .winter-home #main > .full {
+  background-color: transparent;
   position: relative;
   z-index: 1;
 }
@@ -73,6 +75,7 @@ section_id: home
 }
 
 .winter-home .home-projects-hero-wrap::after {
+  display: none;
   background: linear-gradient(105deg, rgba(240, 247, 255, 0.72), rgba(255, 255, 255, 0.08) 42%, rgba(234, 244, 255, 0.72));
   border-radius: 50% 50% 0 0 / 30% 30% 0 0;
   bottom: -18px;
@@ -96,6 +99,9 @@ section_id: home
 }
 
 @media only screen and (max-width: 640px) {
+  .home-winter-scene {
+    inset: 82px 0 0;
+  }
   .home-winter-scene .winter-snowman,
   .home-winter-scene .winter-left-trees,
   .home-winter-scene .winter-right-tree,
@@ -660,23 +666,6 @@ section_id: home
   }
 }
 </style>
-
-<div class="home-winter-scene" aria-hidden="true">
-  <img class="winter-left-trees" src="images/home/christmas/04_left_snowy_trees.png" alt="">
-  <img class="winter-snowman" src="images/home/christmas/03_snowman_left.png" alt="">
-  <img class="winter-right-tree" src="images/home/christmas/05_right_snowy_tree.png" alt="">
-  <img class="winter-gifts" src="images/home/christmas/07_bottom_right_gifts_tree.png" alt="">
-  <img class="winter-flake one" src="images/home/christmas/08_snowflake_large.png" alt="">
-  <img class="winter-flake two" src="images/home/christmas/09_snowflake_medium.png" alt="">
-  <img class="winter-flake three" src="images/home/christmas/10_snowflake_small.png" alt="">
-  <img class="winter-flake four" src="images/home/christmas/12_snowflake_tiny.png" alt="">
-  <img class="winter-flake five" src="images/home/christmas/12_snowflake_tiny.png" alt="">
-  <img class="winter-flake six" src="images/home/christmas/10_snowflake_small.png" alt="">
-  <img class="winter-flake seven" src="images/home/christmas/08_snowflake_large.png" alt="">
-  <img class="winter-flake eight" src="images/home/christmas/09_snowflake_medium.png" alt="">
-  <img class="winter-flake nine" src="images/home/christmas/10_snowflake_small.png" alt="">
-  <img class="winter-flake ten" src="images/home/christmas/12_snowflake_tiny.png" alt="">
-</div>
 
 <div class='full no-padding'>
 
