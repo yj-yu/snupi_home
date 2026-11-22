@@ -14,7 +14,9 @@ section_id: home
 
 <style>
 .winter-home {
-  --winter-art-width: clamp(380px, 40vw, 560px);
+  --winter-art-width: clamp(380px, 36vw, 500px);
+  --winter-decoration-size: clamp(72px, 6vw, 94px);
+  --winter-edge-inset: 12px;
   background: #fff;
   isolation: isolate;
 }
@@ -38,16 +40,16 @@ section_id: home
 .winter-side-garland {
   background-image: url('./images/home/christmas-felt-white.png');
   background-repeat: no-repeat;
-  background-size: var(--winter-art-width) auto;
+  background-size: clamp(440px, 46vw, 640px) auto;
   height: 135px;
   position: absolute;
-  width: calc(var(--winter-art-width) / 2);
+  width: 145px;
   max-width: 30%;
 }
 
 .garland-left {
   background-position: left 48%;
-  left: 0;
+  left: var(--winter-edge-inset);
   top: 48%;
   mask-image: linear-gradient(transparent, #000 20%, #000 80%, transparent), linear-gradient(to right, #000 60%, transparent);
   mask-composite: intersect;
@@ -55,23 +57,45 @@ section_id: home
 
 .garland-right {
   background-position: right 48%;
-  right: 0;
+  right: var(--winter-edge-inset);
   top: 65%;
   mask-image: linear-gradient(transparent, #000 20%, #000 80%, transparent), linear-gradient(to left, #000 60%, transparent);
   mask-composite: intersect;
 }
 
 .home-winter-scene .winter-edge {
-  height: auto;
+  height: var(--winter-decoration-size);
   object-fit: contain;
   position: absolute;
-  width: clamp(36px, 5vw, 76px);
+  width: var(--winter-decoration-size);
 }
 
-.home-winter-scene .edge-running { left: 0; top: 39%; }
-.home-winter-scene .edge-ladder { right: -6px; top: 41%; width: clamp(50px, 6vw, 85px); }
-.home-winter-scene .edge-plush { left: 0; top: 64%; width: clamp(36px, 4vw, 60px); }
-.home-winter-scene .edge-globe { right: 0; top: 25%; }
+.home-winter-scene .edge-running { left: var(--winter-edge-inset); top: 39%; }
+.home-winter-scene .edge-ladder { right: var(--winter-edge-inset); top: 41%; height: calc(var(--winter-decoration-size) * 1.3); }
+.home-winter-scene .edge-plush { left: var(--winter-edge-inset); top: 64%; }
+.home-winter-scene .edge-globe { right: var(--winter-edge-inset); top: 25%; height: calc(var(--winter-decoration-size) * 1.15); width: calc(var(--winter-decoration-size) * 1.15); }
+.home-winter-scene .edge-humanoid-cookie { left: var(--winter-edge-inset); top: 22%; }
+
+.home-winter-scene .winter-robot-sleigh {
+  height: auto;
+  position: absolute;
+  right: 8px;
+  top: 65px;
+  width: clamp(140px, 13vw, 200px);
+}
+
+.home-winter-scene .winter-scene-top-right { height: 50px; }
+
+.winter-classic-santa {
+  background: url('./images/home/christmas-felt-white.png') right -60px / 500px auto no-repeat;
+  bottom: clamp(200px, 20vw, 340px);
+  height: 90px;
+  mask-image: linear-gradient(transparent, #000 18%, #000 82%, transparent), linear-gradient(to left, transparent, #000 15%);
+  mask-composite: intersect;
+  position: absolute;
+  right: 8px;
+  width: 180px;
+}
 .home-winter-scene .edge-teddies { right: 0; bottom: clamp(210px, 23vw, 350px); width: 100px; }
 
 .winter-restored-snowman {
@@ -86,15 +110,19 @@ section_id: home
 }
 
 @media only screen and (max-width: 767px) {
+  .winter-home { --winter-decoration-size: 48px; --winter-edge-inset: 4px; }
+  .home-winter-scene .winter-robot-sleigh { top: 50px; right: 4px; width: 105px; }
+  .winter-home #main .home-projects-hero-wrap { padding-top: 130px; }
+  .winter-classic-santa { bottom: 115px; right: 0; width: 135px; height: 70px; background-size: 380px auto; background-position: right -46px; }
   .home-winter-scene .edge-teddies { bottom: 125px; width: 72px; }
   .winter-restored-snowman { bottom: 110px; width: 94px; height: 125px; background-size: 330px auto; }
-  .home-winter-scene .edge-ladder { top: 39%; width: 45px; }
+  .home-winter-scene .edge-ladder { top: 39%; }
 }
 
 .winter-scene-footer {
-  background: url('./images/home/christmas-snowfield-story.png') center bottom / 100% auto no-repeat;
+  background: url('./images/home/christmas-snowfield-robots.png') center bottom / 100% auto no-repeat;
   bottom: 0;
-  height: clamp(240px, 34vw, 560px);
+  height: clamp(260px, 38vw, 700px);
   left: 0;
   position: absolute;
   width: 100%;
@@ -222,7 +250,7 @@ section_id: home
 
 .winter-scene-top-right {
   background-position: right top;
-  height: 185px;
+  height: 70px;
   left: auto;
   right: 0;
   top: 0;
@@ -327,7 +355,7 @@ section_id: home
 }
 
 .winter-home .home-latest-card {
-  background: rgba(255, 255, 255, 0.9);
+  background: #fff;
   border-color: rgba(191, 217, 246, 0.9);
   box-shadow: 0 14px 34px rgba(73, 120, 173, 0.12);
 }
