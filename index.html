@@ -22,7 +22,7 @@ section_id: home
 .winter-home #main {
   background: transparent;
   isolation: isolate;
-  padding-bottom: clamp(210px, 23vw, 350px);
+  padding-bottom: clamp(240px, 28vw, 450px);
   position: relative;
 }
 
@@ -33,6 +33,32 @@ section_id: home
   pointer-events: none;
   position: absolute;
   z-index: -1;
+}
+
+.winter-side-garland {
+  background-image: url('./images/home/christmas-felt-white.png');
+  background-repeat: no-repeat;
+  background-size: var(--winter-art-width) auto;
+  height: 135px;
+  position: absolute;
+  width: calc(var(--winter-art-width) / 2);
+  max-width: 30%;
+}
+
+.garland-left {
+  background-position: left 48%;
+  left: 0;
+  top: 48%;
+  mask-image: linear-gradient(transparent, #000 20%, #000 80%, transparent), linear-gradient(to right, #000 60%, transparent);
+  mask-composite: intersect;
+}
+
+.garland-right {
+  background-position: right 48%;
+  right: 0;
+  top: 65%;
+  mask-image: linear-gradient(transparent, #000 20%, #000 80%, transparent), linear-gradient(to left, #000 60%, transparent);
+  mask-composite: intersect;
 }
 
 .home-winter-scene .winter-edge {
@@ -66,14 +92,13 @@ section_id: home
 }
 
 .winter-scene-footer {
-  background: url('./images/home/christmas-felt-village.png') center bottom / 100% auto no-repeat;
+  background: url('./images/home/christmas-snowfield-story.png') center bottom / 100% auto no-repeat;
   bottom: 0;
-  height: clamp(200px, 22vw, 340px);
+  height: clamp(240px, 34vw, 560px);
   left: 0;
   position: absolute;
   width: 100%;
-  mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent), linear-gradient(to bottom, transparent, #000 18%);
-  mask-composite: intersect;
+  mask-image: linear-gradient(to bottom, transparent, #000 15%);
 }
 
 .home-winter-scene::after,
@@ -170,7 +195,7 @@ section_id: home
 }
 
 @media only screen and (max-width: 767px) {
-  .winter-scene-footer { height: 150px; background-size: 100% auto; }
+  .winter-scene-footer { height: 180px; background-size: 100% auto; }
 }
 
 .home-winter-scene::before,
