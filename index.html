@@ -20,9 +20,10 @@ section_id: home
 .winter-home #main {
   background-color: #f7fbff;
   background-image: url("./images/home/winter-home-frame.png");
-  background-position: center top;
+  background-attachment: fixed;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .winter-home .home-projects-hero-wrap {
@@ -56,6 +57,8 @@ section_id: home
 
 @media only screen and (max-width: 640px) {
   .winter-home #main {
+    background-attachment: scroll;
+    background-position: center top;
     background-size: auto 760px;
   }
 }
