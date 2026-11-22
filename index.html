@@ -14,28 +14,25 @@ section_id: home
 
 <style>
 .winter-home {
-  background: #f8fbff;
+  background: #f7fbff;
 }
 
 .winter-home #main {
-  background:
-    radial-gradient(circle at 8% 16%, rgba(181, 214, 250, 0.45) 0 3px, transparent 4px),
-    radial-gradient(circle at 84% 10%, rgba(181, 214, 250, 0.38) 0 4px, transparent 5px),
-    radial-gradient(circle at 74% 49%, rgba(181, 214, 250, 0.34) 0 3px, transparent 4px),
-    linear-gradient(180deg, #f7fbff 0%, #ffffff 52%, #f8fbff 100%);
+  background-color: #f7fbff;
+  background-image: url("./images/home/winter-home-frame.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .winter-home .home-projects-hero-wrap {
-  background:
-    radial-gradient(circle at 3% 80%, rgba(209, 228, 249, 0.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 94% 17%, rgba(197, 221, 249, 0.54) 0 3px, transparent 4px),
-    linear-gradient(180deg, rgba(247, 251, 255, 0.98), rgba(255, 255, 255, 0.92));
-  border-bottom: 1px solid rgba(212, 228, 247, 0.66);
+  background: transparent;
+  border-bottom: 0;
   position: relative;
 }
 
 .winter-home .home-projects-hero-wrap::after {
-  background: linear-gradient(105deg, rgba(226, 239, 253, 0.72), rgba(255, 255, 255, 0.18) 40%, rgba(221, 237, 252, 0.68));
+  background: linear-gradient(105deg, rgba(240, 247, 255, 0.72), rgba(255, 255, 255, 0.08) 42%, rgba(234, 244, 255, 0.72));
   border-radius: 50% 50% 0 0 / 30% 30% 0 0;
   bottom: -18px;
   content: "";
@@ -46,24 +43,21 @@ section_id: home
   right: -5%;
 }
 
-.winter-home .projects-orbit::before {
-  color: #78a9e9;
-  content: "❄";
-  font-size: 1.2rem;
-  left: -16px;
-  line-height: 1;
-  position: absolute;
-  top: -16px;
-}
-
 .winter-home .home-latest-section,
 .winter-home .home-news-section {
-  background: rgba(255, 255, 255, 0.7);
+  background: transparent;
 }
 
 .winter-home .home-latest-card {
-  border-color: rgba(191, 217, 246, 0.88);
-  box-shadow: 0 14px 34px rgba(73, 120, 173, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(191, 217, 246, 0.9);
+  box-shadow: 0 14px 34px rgba(73, 120, 173, 0.12);
+}
+
+@media only screen and (max-width: 640px) {
+  .winter-home #main {
+    background-size: auto 760px;
+  }
 }
 
 .home-projects-hero-wrap {
