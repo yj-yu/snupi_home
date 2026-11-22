@@ -14,8 +14,8 @@ section_id: home
 
 <style>
 .winter-home {
-  --winter-art-width: clamp(380px, 36vw, 500px);
-  --winter-decoration-size: clamp(72px, 6vw, 94px);
+  --winter-art-width: clamp(400px, 40vw, 580px);
+  --winter-decoration-size: clamp(90px, 7.5vw, 116px);
   --winter-edge-inset: 12px;
   background: #fff;
   isolation: isolate;
@@ -40,17 +40,17 @@ section_id: home
 .winter-side-garland {
   background-image: url('./images/home/christmas-felt-white.png');
   background-repeat: no-repeat;
-  background-size: clamp(440px, 46vw, 640px) auto;
-  height: 135px;
+  background-size: clamp(600px, 58vw, 820px) auto;
+  height: 170px;
   position: absolute;
-  width: 145px;
+  width: 190px;
   max-width: 30%;
 }
 
 .garland-left {
   background-position: left 48%;
   left: var(--winter-edge-inset);
-  top: 48%;
+  top: 43%;
   mask-image: linear-gradient(transparent, #000 20%, #000 80%, transparent), linear-gradient(to right, #000 60%, transparent);
   mask-composite: intersect;
 }
@@ -58,9 +58,15 @@ section_id: home
 .garland-right {
   background-position: right 48%;
   right: var(--winter-edge-inset);
-  top: 65%;
+  top: 43%;
   mask-image: linear-gradient(transparent, #000 20%, #000 80%, transparent), linear-gradient(to left, #000 60%, transparent);
   mask-composite: intersect;
+}
+
+.winter-side-garland.garland-lower { top: 65%; }
+
+@media only screen and (max-width: 767px) {
+  .winter-side-garland { width: 90px; background-size: 480px auto; height: 110px; }
 }
 
 .home-winter-scene .winter-edge {
@@ -70,25 +76,25 @@ section_id: home
   width: var(--winter-decoration-size);
 }
 
-.home-winter-scene .edge-running { left: var(--winter-edge-inset); top: 39%; }
-.home-winter-scene .edge-ladder { right: var(--winter-edge-inset); top: 41%; height: calc(var(--winter-decoration-size) * 1.3); }
-.home-winter-scene .edge-plush { left: var(--winter-edge-inset); top: 64%; }
-.home-winter-scene .edge-globe { right: var(--winter-edge-inset); top: 25%; height: calc(var(--winter-decoration-size) * 1.15); width: calc(var(--winter-decoration-size) * 1.15); }
-.home-winter-scene .edge-humanoid-cookie { left: var(--winter-edge-inset); top: 22%; }
+.home-winter-scene .edge-running { left: 5%; bottom: 240px; }
+.home-winter-scene .edge-ladder { right: 5%; bottom: 180px; height: calc(var(--winter-decoration-size) * 1.3); }
+.home-winter-scene .edge-plush { left: 15%; bottom: 260px; }
+.home-winter-scene .edge-globe { right: var(--winter-edge-inset); top: 245px; height: calc(var(--winter-decoration-size) * 1.15); width: calc(var(--winter-decoration-size) * 1.15); }
+.home-winter-scene .edge-humanoid-cookie { left: var(--winter-edge-inset); top: 105px; }
 
 .home-winter-scene .winter-robot-sleigh {
   height: auto;
   position: absolute;
   right: 8px;
-  top: 65px;
-  width: clamp(140px, 13vw, 200px);
+  top: 0;
+  width: clamp(175px, 16vw, 245px);
 }
 
 .home-winter-scene .winter-scene-top-right { height: 50px; }
 
 .winter-classic-santa {
   background: url('./images/home/christmas-felt-white.png') right -60px / 500px auto no-repeat;
-  bottom: clamp(200px, 20vw, 340px);
+  bottom: clamp(290px, 25vw, 400px);
   height: 90px;
   mask-image: linear-gradient(transparent, #000 18%, #000 82%, transparent), linear-gradient(to left, transparent, #000 15%);
   mask-composite: intersect;
@@ -110,17 +116,21 @@ section_id: home
 }
 
 @media only screen and (max-width: 767px) {
-  .winter-home { --winter-decoration-size: 48px; --winter-edge-inset: 4px; }
+  .winter-home { --winter-decoration-size: 60px; --winter-edge-inset: 4px; }
   .home-winter-scene .winter-robot-sleigh { top: 50px; right: 4px; width: 105px; }
   .winter-home #main .home-projects-hero-wrap { padding-top: 130px; }
   .winter-classic-santa { bottom: 115px; right: 0; width: 135px; height: 70px; background-size: 380px auto; background-position: right -46px; }
   .home-winter-scene .edge-teddies { bottom: 125px; width: 72px; }
   .winter-restored-snowman { bottom: 110px; width: 94px; height: 125px; background-size: 330px auto; }
-  .home-winter-scene .edge-ladder { top: 39%; }
+  .home-winter-scene .edge-ladder { bottom: 135px; }
+  .home-winter-scene .edge-running { bottom: 150px; }
+  .home-winter-scene .edge-plush { bottom: 155px; left: 22%; }
+  .home-winter-scene .edge-humanoid-cookie { top: 50px; }
+  .home-winter-scene .edge-globe { top: 60px; right: 120px; }
 }
 
 .winter-scene-footer {
-  background: url('./images/home/christmas-snowfield-robots.png') center bottom / 100% auto no-repeat;
+  background: url('./images/home/christmas-snowfield-robots-v2.png') center bottom / 100% auto no-repeat;
   bottom: 0;
   height: clamp(260px, 38vw, 700px);
   left: 0;
@@ -202,14 +212,14 @@ section_id: home
 }
 
 .winter-snow-dots {
-  color: #c5dceb;
+  color: #91b6d5;
   inset: 0;
-  opacity: 0.55;
+  opacity: 0.72;
   position: absolute;
 }
 
 .winter-snow-dots span {
-  font-size: var(--s, 17px);
+  font-size: calc(var(--s, 17px) * 1.3);
   left: var(--x);
   line-height: 1;
   position: absolute;
@@ -332,7 +342,7 @@ section_id: home
 .winter-home .home-projects-hero-wrap {
   background: transparent;
   border-bottom: 0;
-  padding-top: 55px;
+  padding-top: 165px;
   position: relative;
 }
 
