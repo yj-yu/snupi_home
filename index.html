@@ -22,7 +22,7 @@ section_id: home
 .winter-home #main {
   background: transparent;
   isolation: isolate;
-  padding-bottom: 210px;
+  padding-bottom: clamp(210px, 23vw, 350px);
   position: relative;
 }
 
@@ -36,22 +36,99 @@ section_id: home
 }
 
 .winter-scene-footer {
-  background: url('./images/home/christmas-felt-footer.png') center bottom / contain no-repeat;
-  bottom: 5px;
-  height: 210px;
-  left: 25%;
+  background: url('./images/home/christmas-felt-village.png') center bottom / 100% auto no-repeat;
+  bottom: 0;
+  height: clamp(200px, 22vw, 340px);
+  left: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
+}
+
+.home-winter-scene::after,
+.home-winter-scene .winter-scene-bottom-right { display: none; }
+
+.winter-cookie-interlude {
+  height: 85px;
+  margin: -12px auto 4px;
+  max-width: 1160px;
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+}
+
+.winter-cookie-interlude img {
+  height: auto;
+  object-fit: contain;
+  position: absolute;
+}
+
+.winter-cookie-interlude .cookie-running { bottom: 6px; left: 12%; width: 76px; transform: rotate(-8deg); }
+.winter-cookie-interlude .cookie-ladder { bottom: -22px; right: 5%; width: 100px; }
+
+.home-news-section { position: relative; }
+
+.winter-plush-ornament {
+  left: max(12px, calc((100% - 1240px) / 2 - 72px));
+  pointer-events: none;
+  position: absolute;
+  top: 72px;
+  transform: rotate(9deg);
+  width: 66px;
+}
+
+.winter-plush-ornament img { display: block; height: auto; width: 100%; }
+
+.winter-teddy-pair {
+  display: block;
+  height: auto;
+  margin: 0 0 -38px 13%;
+  pointer-events: none;
+  position: relative;
+  width: 112px;
+  z-index: 2;
+}
+
+.winter-hero-interlude {
+  height: 64px;
+  margin: -18px auto 0;
+  max-width: 1240px;
+  pointer-events: none;
+  position: relative;
+}
+
+.winter-hero-interlude img {
+  bottom: 0;
+  height: auto;
+  position: absolute;
+  right: 9%;
+  width: 82px;
+}
+
+@media only screen and (max-width: 767px) {
+  .winter-plush-ornament { display: none; }
+  .home-winter-scene::before,
+  .winter-scene-top-right { height: 70px; }
+  .winter-teddy-pair { margin-left: 7%; width: 82px; }
+  .winter-hero-interlude { height: 45px; }
+  .winter-hero-interlude img { right: 7%; width: 58px; }
+  .winter-cookie-interlude { height: 65px; }
+  .winter-cookie-interlude .cookie-running { left: 4%; width: 52px; }
+  .winter-cookie-interlude .cookie-ladder { right: 3%; width: 65px; bottom: -12px; }
 }
 
 .winter-snow-dots {
   color: #c5dceb;
-  font-size: 20px;
-  left: 4%;
-  opacity: 0.65;
+  inset: 0;
+  opacity: 0.55;
   position: absolute;
-  top: 30%;
-  text-shadow: 14vw 100px #d6e6f1, 42vw -15px #d6e6f1, 88vw 60px #c5dceb, 7vw 380px #c5dceb, 81vw 430px #d6e6f1, 31vw 650px #d6e6f1, 65vw 730px #c5dceb;
+}
+
+.winter-snow-dots span {
+  font-size: var(--s, 17px);
+  left: var(--x);
+  line-height: 1;
+  position: absolute;
+  top: var(--y);
 }
 
 .winter-home .contain-to-grid,
@@ -61,7 +138,7 @@ section_id: home
 }
 
 @media only screen and (max-width: 767px) {
-  .winter-scene-footer { display: none; }
+  .winter-scene-footer { height: 125px; background-size: auto 180px; }
 }
 
 .home-winter-scene::before,
@@ -800,6 +877,7 @@ section_id: home
         </div>
     </div>
   </header>
+  <div class="winter-hero-interlude" aria-hidden="true"><img src="images/home/christmas-snow-globe.png" alt=""></div>
   <div class='home-after-hero-spacing'></div>
 
 
@@ -880,7 +958,13 @@ section_id: home
 
 </div>
 
+<div class="winter-cookie-interlude" aria-hidden="true">
+  <img class="cookie-running" src="images/home/christmas-cookie-running.png" alt="">
+  <img class="cookie-ladder" src="images/home/christmas-cookie-ladder.png" alt="">
+</div>
+
 <div class='full no-padding home-news-section'>
+  <span class="winter-plush-ornament" aria-hidden="true"><img src="images/home/christmas-cookie-plush.png" alt=""></span>
   <div class='row home-news-title-row'>
     <div class='large-12 columns'>
       {% include section-header.html title="News" %}
@@ -933,6 +1017,8 @@ section_id: home
   </div>
   <div class='spacing'></div>
 </div>
+
+<img class="winter-teddy-pair" src="images/home/christmas-teddy-pair.png" alt="" aria-hidden="true">
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {

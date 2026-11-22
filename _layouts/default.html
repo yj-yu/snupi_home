@@ -9,7 +9,21 @@
     {% include header.html %}
 
     <div id='main' role='main'>
-      {% if page.section_id == 'home' %}<div class="home-winter-scene" aria-hidden="true"><span class="winter-scene-top-right"></span><span class="winter-scene-bottom-right"></span><span class="winter-scene-footer"></span><span class="winter-snow-dots">❄</span></div>{% endif %}
+      {% if page.section_id == 'home' %}
+      <div class="home-winter-scene" aria-hidden="true">
+        <span class="winter-scene-top-right"></span><span class="winter-scene-bottom-right"></span><span class="winter-scene-footer"></span>
+        <div class="winter-snow-dots">
+          <span style="--x:4%;--y:12%;--s:21px">❄</span><span style="--x:34%;--y:8%;--s:13px">❄</span>
+          <span style="--x:63%;--y:18%;--s:16px">❄</span><span style="--x:94%;--y:23%;--s:20px">❄</span>
+          <span style="--x:18%;--y:28%;--s:14px">❄</span><span style="--x:47%;--y:32%;--s:19px">❄</span>
+          <span style="--x:79%;--y:36%;--s:13px">❄</span><span style="--x:6%;--y:43%;--s:18px">❄</span>
+          <span style="--x:92%;--y:48%;--s:14px">❄</span><span style="--x:29%;--y:53%;--s:17px">❄</span>
+          <span style="--x:66%;--y:59%;--s:20px">❄</span><span style="--x:11%;--y:65%;--s:13px">❄</span>
+          <span style="--x:86%;--y:70%;--s:17px">❄</span><span style="--x:43%;--y:75%;--s:15px">❄</span>
+          <span style="--x:22%;--y:83%;--s:19px">❄</span><span style="--x:74%;--y:88%;--s:14px">❄</span>
+        </div>
+      </div>
+      {% endif %}
       {{ content }}
     </div>
 
