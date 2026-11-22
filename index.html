@@ -35,6 +35,35 @@ section_id: home
   z-index: -1;
 }
 
+.winter-scene-footer {
+  background: url('./images/home/christmas-felt-footer.png') center bottom / contain no-repeat;
+  bottom: 5px;
+  height: 210px;
+  left: 25%;
+  position: absolute;
+  width: 50%;
+}
+
+.winter-snow-dots {
+  color: #c5dceb;
+  font-size: 20px;
+  left: 4%;
+  opacity: 0.65;
+  position: absolute;
+  top: 30%;
+  text-shadow: 14vw 100px #d6e6f1, 42vw -15px #d6e6f1, 88vw 60px #c5dceb, 7vw 380px #c5dceb, 81vw 430px #d6e6f1, 31vw 650px #d6e6f1, 65vw 730px #c5dceb;
+}
+
+.winter-home .contain-to-grid,
+.winter-home .contain-to-grid .top-bar {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .winter-scene-footer { display: none; }
+}
+
 .home-winter-scene::before,
 .home-winter-scene::after,
 .winter-scene-top-right,
