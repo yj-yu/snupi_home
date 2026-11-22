@@ -5,11 +5,11 @@
 
   <body class="{% if page.section_id == 'home' %}winter-home{% endif %}">
 
-    {% if page.section_id == 'home' %}<div class="home-winter-scene" aria-hidden="true"></div>{% endif %}
 
     {% include header.html %}
 
     <div id='main' role='main'>
+      {% if page.section_id == 'home' %}<div class="home-winter-scene" aria-hidden="true"><span class="winter-scene-middle"></span></div>{% endif %}
       {{ content }}
     </div>
 

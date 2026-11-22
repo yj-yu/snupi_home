@@ -20,16 +20,52 @@ section_id: home
 
 .winter-home #main {
   background: transparent;
+  isolation: isolate;
+  padding-bottom: clamp(170px, 23vw, 330px);
   position: relative;
 }
 
 .home-winter-scene {
-  background: #f7fbff url('./images/home/christmas-village-wallpaper.png') center / 100% 100% no-repeat;
-  inset: 80px 0 0;
+  background: #e5f1f8;
+  inset: 0;
   overflow: hidden;
   pointer-events: none;
-  position: fixed;
+  position: absolute;
   z-index: -1;
+}
+
+.home-winter-scene::before,
+.home-winter-scene::after,
+.winter-scene-middle {
+  background-image: url('./images/home/christmas-felt-scene.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  content: "";
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.home-winter-scene::before {
+  background-position: center top;
+  height: min(34vw, 460px);
+  top: 0;
+  mask-image: linear-gradient(#000 72%, transparent);
+}
+
+.winter-scene-middle {
+  background-position: center 48%;
+  height: min(23vw, 310px);
+  top: 43%;
+  mask-image: linear-gradient(transparent, #000 23%, #000 77%, transparent);
+}
+
+.home-winter-scene::after {
+  background-position: center bottom;
+  bottom: 0;
+  height: min(43vw, 580px);
+  mask-image: linear-gradient(transparent, #000 24%);
 }
 
 .home-winter-scene img {
@@ -71,6 +107,7 @@ section_id: home
 .winter-home .home-projects-hero-wrap {
   background: transparent;
   border-bottom: 0;
+  padding-top: clamp(100px, 10vw, 145px);
   position: relative;
 }
 
@@ -100,7 +137,7 @@ section_id: home
 
 @media only screen and (max-width: 640px) {
   .home-winter-scene {
-    inset: 82px 0 0;
+    inset: 0;
   }
   .home-winter-scene .winter-snowman,
   .home-winter-scene .winter-left-trees,
