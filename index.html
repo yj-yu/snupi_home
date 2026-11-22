@@ -24,7 +24,6 @@ section_id: home
 }
 
 .home-winter-scene {
-  background: url('./images/home/winter-home-frame.png') center / 100% 100% no-repeat;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
@@ -33,7 +32,6 @@ section_id: home
 }
 
 .home-winter-scene img {
-  display: none;
   height: auto;
   object-fit: contain;
   position: absolute;
@@ -43,7 +41,7 @@ section_id: home
 .home-winter-scene .winter-left-trees { bottom: 142px; left: 0; width: clamp(135px, 13vw, 197px); }
 .home-winter-scene .winter-right-tree { bottom: 145px; right: 0; width: clamp(112px, 11vw, 163px); }
 .home-winter-scene .winter-gifts { bottom: 16px; right: 0; width: clamp(138px, 13vw, 193px); }
-.home-winter-scene .winter-flake { color: #9bbfe6; font-size: 24px; line-height: 1; opacity: 0.38; position: absolute; }
+.home-winter-scene .winter-flake { opacity: 0.38; width: 26px; }
 .home-winter-scene .winter-flake.one { left: 4%; top: 9%; width: 50px; }
 .home-winter-scene .winter-flake.two { left: 16%; top: 19%; width: 29px; }
 .home-winter-scene .winter-flake.three { right: 12%; top: 28%; width: 35px; }
@@ -67,7 +65,6 @@ section_id: home
 }
 
 .winter-home .home-projects-hero-wrap::after {
-  display: none;
   background: linear-gradient(105deg, rgba(240, 247, 255, 0.72), rgba(255, 255, 255, 0.08) 42%, rgba(234, 244, 255, 0.72));
   border-radius: 50% 50% 0 0 / 30% 30% 0 0;
   bottom: -18px;
@@ -91,9 +88,6 @@ section_id: home
 }
 
 @media only screen and (max-width: 640px) {
-  .home-winter-scene {
-    background-size: auto 100%;
-  }
   .home-winter-scene .winter-snowman,
   .home-winter-scene .winter-left-trees,
   .home-winter-scene .winter-right-tree,
@@ -660,12 +654,20 @@ section_id: home
 </style>
 
 <div class="home-winter-scene" aria-hidden="true">
-  <span class="winter-flake five">❄</span>
-  <span class="winter-flake six">❄</span>
-  <span class="winter-flake seven">❄</span>
-  <span class="winter-flake eight">❄</span>
-  <span class="winter-flake nine">❄</span>
-  <span class="winter-flake ten">❄</span>
+  <img class="winter-left-trees" src="images/home/christmas/04_left_snowy_trees.png" alt="">
+  <img class="winter-snowman" src="images/home/christmas/03_snowman_left.png" alt="">
+  <img class="winter-right-tree" src="images/home/christmas/05_right_snowy_tree.png" alt="">
+  <img class="winter-gifts" src="images/home/christmas/07_bottom_right_gifts_tree.png" alt="">
+  <img class="winter-flake one" src="images/home/christmas/08_snowflake_large.png" alt="">
+  <img class="winter-flake two" src="images/home/christmas/09_snowflake_medium.png" alt="">
+  <img class="winter-flake three" src="images/home/christmas/10_snowflake_small.png" alt="">
+  <img class="winter-flake four" src="images/home/christmas/12_snowflake_tiny.png" alt="">
+  <img class="winter-flake five" src="images/home/christmas/12_snowflake_tiny.png" alt="">
+  <img class="winter-flake six" src="images/home/christmas/10_snowflake_small.png" alt="">
+  <img class="winter-flake seven" src="images/home/christmas/08_snowflake_large.png" alt="">
+  <img class="winter-flake eight" src="images/home/christmas/09_snowflake_medium.png" alt="">
+  <img class="winter-flake nine" src="images/home/christmas/10_snowflake_small.png" alt="">
+  <img class="winter-flake ten" src="images/home/christmas/12_snowflake_tiny.png" alt="">
 </div>
 
 <div class='full no-padding'>
@@ -690,6 +692,7 @@ section_id: home
             </div>
           </div>
           <div class="projects-orbit">
+            <img class="projects-orbit-holly" src="images/home/christmas/06_photo_holly_corner.png" alt="" aria-hidden="true">
             <img src="images/home/pi-lab-group-photo.jpg" alt="PI Lab members">
             <p class="projects-orbit-caption">PI LAB · AUTUMN 2026</p>
           </div>
