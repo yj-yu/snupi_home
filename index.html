@@ -14,19 +14,20 @@ section_id: home
 
 <style>
 .winter-home {
-  background: #f7fbff;
+  --winter-art-width: clamp(380px, 40vw, 560px);
+  background: #fff;
   isolation: isolate;
 }
 
 .winter-home #main {
   background: transparent;
   isolation: isolate;
-  padding-bottom: clamp(200px, 22vw, 300px);
+  padding-bottom: 210px;
   position: relative;
 }
 
 .home-winter-scene {
-  background: #e5f1f8;
+  background: #fff;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
@@ -38,27 +39,27 @@ section_id: home
 .home-winter-scene::after,
 .winter-scene-top-right,
 .winter-scene-bottom-right {
-  background-image: url('./images/home/christmas-felt-scene.png');
+  background-image: url('./images/home/christmas-felt-white.png');
   background-repeat: no-repeat;
-  background-size: clamp(440px, 65vw, 900px) auto;
+  background-size: var(--winter-art-width) auto;
   content: "";
   left: 0;
   pointer-events: none;
   position: absolute;
-  width: clamp(220px, 32.5vw, 450px);
+  width: calc(var(--winter-art-width) / 2);
   max-width: 50%;
 }
 
 .home-winter-scene::before {
   background-position: left top;
-  height: clamp(180px, 23vw, 300px);
+  height: 185px;
   top: 0;
   mask-image: linear-gradient(#000 72%, transparent);
 }
 
 .winter-scene-top-right {
   background-position: right top;
-  height: clamp(180px, 23vw, 300px);
+  height: 185px;
   left: auto;
   right: 0;
   top: 0;
@@ -68,7 +69,7 @@ section_id: home
 .home-winter-scene::after {
   background-position: left bottom;
   bottom: 0;
-  height: clamp(200px, 22vw, 300px);
+  height: 210px;
   mask-image: linear-gradient(transparent, #000 24%);
 }
 
@@ -95,7 +96,7 @@ section_id: home
 .winter-scene-bottom-right {
   background-position: right bottom;
   bottom: 0;
-  height: clamp(200px, 22vw, 300px);
+  height: 210px;
   left: auto;
   right: 0;
   mask-image: linear-gradient(transparent, #000 24%);
@@ -140,7 +141,7 @@ section_id: home
 .winter-home .home-projects-hero-wrap {
   background: transparent;
   border-bottom: 0;
-  padding-top: clamp(65px, 7vw, 100px);
+  padding-top: 55px;
   position: relative;
 }
 
@@ -169,6 +170,9 @@ section_id: home
 }
 
 @media only screen and (max-width: 640px) {
+  .winter-home {
+    --winter-art-width: 440px;
+  }
   .home-winter-scene {
     inset: 0;
   }
