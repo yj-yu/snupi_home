@@ -35,6 +35,36 @@ section_id: home
   z-index: -1;
 }
 
+.home-winter-scene .winter-edge {
+  height: auto;
+  object-fit: contain;
+  position: absolute;
+  width: clamp(36px, 5vw, 76px);
+}
+
+.home-winter-scene .edge-running { left: 0; top: 39%; }
+.home-winter-scene .edge-ladder { right: -6px; top: 41%; width: clamp(50px, 6vw, 85px); }
+.home-winter-scene .edge-plush { left: 0; top: 64%; width: clamp(36px, 4vw, 60px); }
+.home-winter-scene .edge-globe { right: 0; top: 25%; }
+.home-winter-scene .edge-teddies { right: 0; bottom: clamp(210px, 23vw, 350px); width: 100px; }
+
+.winter-restored-snowman {
+  background: url('./images/home/christmas-felt-white.png') left bottom / 460px auto no-repeat;
+  bottom: clamp(155px, 17vw, 255px);
+  height: 170px;
+  left: 0;
+  mask-image: linear-gradient(to right, #000 70%, transparent), linear-gradient(to bottom, transparent, #000 22%, #000 80%, transparent);
+  mask-composite: intersect;
+  position: absolute;
+  width: 140px;
+}
+
+@media only screen and (max-width: 767px) {
+  .home-winter-scene .edge-teddies { bottom: 125px; width: 72px; }
+  .winter-restored-snowman { bottom: 110px; width: 94px; height: 125px; background-size: 330px auto; }
+  .home-winter-scene .edge-ladder { top: 39%; width: 45px; }
+}
+
 .winter-scene-footer {
   background: url('./images/home/christmas-felt-village.png') center bottom / 100% auto no-repeat;
   bottom: 0;
@@ -42,6 +72,8 @@ section_id: home
   left: 0;
   position: absolute;
   width: 100%;
+  mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent), linear-gradient(to bottom, transparent, #000 18%);
+  mask-composite: intersect;
 }
 
 .home-winter-scene::after,
@@ -138,7 +170,7 @@ section_id: home
 }
 
 @media only screen and (max-width: 767px) {
-  .winter-scene-footer { height: 125px; background-size: auto 180px; }
+  .winter-scene-footer { height: 150px; background-size: 100% auto; }
 }
 
 .home-winter-scene::before,
@@ -877,7 +909,6 @@ section_id: home
         </div>
     </div>
   </header>
-  <div class="winter-hero-interlude" aria-hidden="true"><img src="images/home/christmas-snow-globe.png" alt=""></div>
   <div class='home-after-hero-spacing'></div>
 
 
@@ -958,13 +989,7 @@ section_id: home
 
 </div>
 
-<div class="winter-cookie-interlude" aria-hidden="true">
-  <img class="cookie-running" src="images/home/christmas-cookie-running.png" alt="">
-  <img class="cookie-ladder" src="images/home/christmas-cookie-ladder.png" alt="">
-</div>
-
 <div class='full no-padding home-news-section'>
-  <span class="winter-plush-ornament" aria-hidden="true"><img src="images/home/christmas-cookie-plush.png" alt=""></span>
   <div class='row home-news-title-row'>
     <div class='large-12 columns'>
       {% include section-header.html title="News" %}
@@ -1018,7 +1043,6 @@ section_id: home
   <div class='spacing'></div>
 </div>
 
-<img class="winter-teddy-pair" src="images/home/christmas-teddy-pair.png" alt="" aria-hidden="true">
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
