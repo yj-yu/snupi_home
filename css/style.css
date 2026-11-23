@@ -1018,6 +1018,13 @@ ul.shortcode-list i {
   z-index: 2;
 }
 
+@media only screen and (min-width: 961px) {
+  .contain-to-grid .title-area a.site-logo img.site-logo-santa-hat {
+    left: -2%;
+    transform: translateY(-38%) rotate(-28deg);
+  }
+}
+
 .winter-header {
   position: relative;
 }
