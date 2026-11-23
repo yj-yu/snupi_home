@@ -5,8 +5,7 @@
         <h1>
           <a class="site-logo" href='{{site.baseurl}}/'>
             <span class="site-logo-winter-wrap">
-              <img class="site-logo-full site-logo-animated site-logo-winter-base" alt="SNU PI Lab" src="{{site.baseurl}}/images/logo/snu_pi_lab_flip_header.gif"/>
-              {% if page.section_id == "home" %}<img class="site-logo-santa-hat" alt="" aria-hidden="true" src="{{site.baseurl}}/images/logo/winter-santa-hat-trim.png"/>{% endif %}
+              <img class="site-logo-full site-logo-animated site-logo-winter-base" alt="SNU PI Lab" src="{{site.baseurl}}/images/logo/{% if page.section_id == 'home' %}snu_pi_lab_christmas.svg{% else %}snu_pi_lab_flip_header.gif{% endif %}"/>
             </span>
           </a>
         </h1>

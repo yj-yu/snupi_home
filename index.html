@@ -85,9 +85,9 @@ section_id: home
   width: var(--winter-decoration-size);
 }
 
-.home-winter-scene .edge-running { left: 1%; bottom: 12px; }
+.home-winter-scene .edge-running { left: auto; right: 10%; bottom: min(0.8vw, 12px); width: min(6vw, 90px); height: min(7.4vw, 110px); }
 .home-winter-scene .edge-ladder { right: 32%; bottom: 28px; height: calc(var(--winter-decoration-size) * 1.3); }
-.home-winter-scene .edge-plush { left: 20%; bottom: 12px; }
+.home-winter-scene .edge-plush { left: auto; right: 2%; bottom: min(0.8vw, 12px); width: min(6vw, 90px); height: min(7.4vw, 110px); }
 .home-winter-scene .edge-humanoid-cookie { left: var(--winter-edge-inset); top: 105px; }
 
 .home-winter-scene .winter-robot-sleigh {
@@ -106,14 +106,14 @@ section_id: home
 }
 
 .winter-classic-santa {
-  background: url('./images/home/christmas-felt-white.png') right -84px / 700px auto no-repeat;
-  bottom: clamp(155px, 13vw, 235px);
-  height: 126px;
+  background: url('./images/home/christmas-felt-white.png') right calc(-1 * min(6vw, 84px)) / min(50vw, 700px) auto no-repeat;
+  bottom: min(13vw, 235px);
+  height: min(9vw, 126px);
   mask-image: linear-gradient(transparent, #000 18%, #000 82%, transparent), linear-gradient(to left, transparent, #000 15%);
   mask-composite: intersect;
   position: absolute;
   right: 2%;
-  width: 252px;
+  width: min(18vw, 252px);
 }
 .home-winter-scene .edge-teddies { right: 0; bottom: clamp(210px, 23vw, 350px); width: 100px; }
 
@@ -133,12 +133,12 @@ section_id: home
   .home-winter-scene .winter-robot-sleigh { top: 80px; right: 4px; width: 105px; }
   .home-winter-scene .winter-scene-top-right { height: 85px; }
   .winter-home #main .home-projects-hero-wrap { padding-top: 160px; }
-  .winter-classic-santa { bottom: 110px; right: 0; width: 165px; height: 85px; background-size: 460px auto; background-position: right -55px; }
+  .winter-classic-santa { right: 0; }
   .home-winter-scene .edge-teddies { bottom: 125px; width: 72px; }
   .winter-restored-snowman { bottom: 110px; width: 94px; height: 125px; background-size: 330px auto; }
   .home-winter-scene .edge-ladder { bottom: 12px; right: 1%; width: 28px; height: 62px; }
-  .home-winter-scene .edge-running { bottom: 4px; left: auto; right: 17%; width: 26px; height: 32px; }
-  .home-winter-scene .edge-plush { bottom: 4px; left: auto; right: 9%; width: 26px; height: 32px; }
+  .home-winter-scene .edge-running { right: 10%; }
+  .home-winter-scene .edge-plush { right: 2%; }
   .home-winter-scene .edge-humanoid-cookie { top: 50px; }
 }
 

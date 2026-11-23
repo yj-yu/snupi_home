@@ -1004,27 +1004,6 @@ ul.shortcode-list i {
   margin-top: 0 !important;
 }
 
-.contain-to-grid .title-area a.site-logo img.site-logo-santa-hat {
-  height: auto !important;
-  left: -4%;
-  margin: 0 !important;
-  max-height: none !important;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  transform: translateY(-26%) rotate(-28deg);
-  transform-origin: 70% 80%;
-  width: 22% !important;
-  z-index: 2;
-}
-
-@media only screen and (min-width: 961px) {
-  .contain-to-grid .title-area a.site-logo img.site-logo-santa-hat {
-    left: -2%;
-    transform: translateY(-38%) rotate(-28deg);
-  }
-}
-
 .winter-header {
   position: relative;
 }
