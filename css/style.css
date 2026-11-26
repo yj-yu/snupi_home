@@ -1011,24 +1011,33 @@ ul.shortcode-list i {
 }
 .christmas-toggle {
   align-items: center;
-  background: transparent;
-  border: 0;
-  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(220, 228, 235, 0.8);
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(56, 77, 100, 0.05);
   display: inline-flex;
   font-family: inherit;
   font-size: 25px;
-  height: 48px;
+  height: 44px;
   justify-content: center;
   line-height: 1;
   margin: 0;
-  padding: 0;
+  gap: 5px;
+  padding: 3px 11px 3px 6px;
   position: relative;
-  width: 48px;
+  width: auto;
 }
-.christmas-toggle::before { background: radial-gradient(circle, rgba(255, 218, 137, 0.3), rgba(255, 238, 197, 0.12) 50%, transparent 72%); border-radius: 50%; content: ''; inset: -3px; position: absolute; pointer-events: none; }
-.christmas-toggle:hover, .christmas-toggle:focus { background: transparent; }
+.christmas-toggle::before { background: radial-gradient(circle, rgba(255, 218, 137, 0.3), transparent 72%); border-radius: 50%; content: ''; height: 40px; left: 3px; top: 1px; width: 40px; position: absolute; pointer-events: none; }
+.christmas-toggle:hover, .christmas-toggle:focus { background: rgba(255, 255, 255, 0.95); }
 .christmas-toggle:focus-visible { outline: 2px solid #739be5; outline-offset: 3px; }
-.christmas-bell { display: block; filter: drop-shadow(0 2px 3px rgba(172, 126, 51, 0.18)); height: 42px; object-fit: contain; position: relative; transition: transform 180ms ease, filter 180ms ease; width: 42px; }
+.christmas-bell { display: block; filter: drop-shadow(0 2px 3px rgba(172, 126, 51, 0.18)); height: 34px; object-fit: contain; position: relative; transition: transform 180ms ease, filter 180ms ease; width: 34px; }
+.christmas-toggle-state { color: #8a6936; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; position: relative; min-width: 23px; text-align: center; }
+.christmas-state-off { display: none; }
+.christmas-off .christmas-state-on { display: none; }
+.christmas-off .christmas-state-off { display: inline; }
+.christmas-off .christmas-toggle-state { color: #85909d; }
 .christmas-toggle:hover .christmas-bell { transform: rotate(-7deg) scale(1.06); }
 .christmas-off .christmas-bell { filter: grayscale(0.85); opacity: 0.6; }
 .christmas-off .christmas-toggle:hover .christmas-bell { opacity: 0.85; }
