@@ -999,6 +999,49 @@ ul.shortcode-list i {
   position: relative;
 }
 
+.contain-to-grid .title-area a img.site-logo-standard { display: none !important; }
+.christmas-off .contain-to-grid .title-area a img.site-logo-winter-base { display: none !important; }
+.christmas-off .contain-to-grid .title-area a img.site-logo-standard { display: block !important; }
+
+.christmas-toolbar {
+  position: absolute;
+  right: max(16px, calc((100% - 1200px) / 2));
+  top: 10px;
+  z-index: 4;
+}
+.christmas-toggle {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #dfe7ef;
+  border-radius: 20px;
+  color: #526b87;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 500;
+  gap: 6px;
+  line-height: 1;
+  margin: 0;
+  padding: 7px 10px;
+}
+.christmas-toggle:hover, .christmas-toggle:focus { background: #f5f9ff; color: #315a85; }
+.christmas-toggle:focus-visible { outline: 2px solid #739be5; outline-offset: 3px; }
+.christmas-toggle-track { background: #7197bd; border-radius: 12px; height: 13px; position: relative; width: 24px; }
+.christmas-toggle-track::after { background: #fff; border-radius: 50%; content: ''; height: 9px; left: 13px; position: absolute; top: 2px; width: 9px; }
+.christmas-off .christmas-toggle-track { background: #b6c0cb; }
+.christmas-off .christmas-toggle-track::after { left: 2px; }
+.christmas-off .home-winter-scene,
+.christmas-off .winter-welcome-row .winter-title-character,
+.christmas-off .projects-orbit .projects-orbit-holly { display: none !important; }
+.christmas-off .winter-home #main { padding-bottom: 28px; }
+.christmas-off .winter-welcome-row { display: block; }
+
+@media only screen and (max-width: 767px) {
+  .christmas-toolbar { right: 12px; top: 8px; }
+  .christmas-toggle { font-size: 10px; padding: 7px 9px; }
+  .christmas-off .winter-home #main .winter-welcome-row .projects-hero-title { font-size: clamp(24px, 7vw, 34px); }
+}
+
 .contain-to-grid .title-area a.site-logo img.site-logo-winter-base {
   display: block;
   margin-top: 0 !important;

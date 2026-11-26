@@ -10,6 +10,12 @@
 
     <div id='main' role='main'>
       {% if page.section_id == 'home' %}
+      <div class="christmas-toolbar">
+        <button class="christmas-toggle" type="button" aria-pressed="true" aria-label="Christmas theme" data-christmas-toggle>
+          <span aria-hidden="true">❄︎</span> Christmas <span class="christmas-toggle-track" aria-hidden="true"></span><span data-christmas-state>ON</span>
+        </button>
+      </div>
+      <script src="{{site.baseurl}}/javascripts/christmas-theme.js" defer></script>
       <div class="home-winter-scene" aria-hidden="true">
         <span class="winter-scene-top-right"></span><span class="winter-scene-footer"></span>
         <img class="winter-robot-sleigh" src="{{site.baseurl}}/images/home/christmas-robot-sleigh.png" alt="">
