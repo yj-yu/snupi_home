@@ -5,7 +5,9 @@
   function render() {
     var enabled = !root.classList.contains('christmas-off');
     button.setAttribute('aria-pressed', String(enabled));
-    button.querySelector('[data-christmas-state]').textContent = enabled ? 'ON' : 'OFF';
+    var label = enabled ? 'Turn off Christmas theme' : 'Turn on Christmas theme';
+    button.setAttribute('aria-label', label);
+    button.title = label;
   }
   render();
   button.addEventListener('click', function () {
